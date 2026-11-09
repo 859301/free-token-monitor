@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>免费 Token 监控平台 · 给 Agent 的免费口粮</title>
+<style>
+  :root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+  header { background:#111827; color:#fff; padding:28px 20px 22px; }
+  header .wrap, main .wrap, footer .wrap { max-width:1080px; margin:0 auto; }
+  header h1 { margin:0 0 6px; font-size:26px; }
+  header p { margin:0; color:#d1d5db; font-size:14px; }
+  .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-top:18px; }
+  .stat { background:#1f2937; border:1px solid #374151; border-radius:10px; padding:12px 14px; }
+  .stat .num { font-size:26px; font-weight:700; line-height:1.2; }
+  .stat .label { font-size:12px; color:#9ca3af; }
+  main { padding:20px; }
+  .controls { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:14px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:16px; }
+  .controls input[type="search"], .controls select { padding:8px 10px; border:1px solid var(--border); border-radius:8px; font-size:14px; background:#fff; }
+  .controls input[type="search"] { flex:1 1 220px; min-width:180px; }
+  .controls label.chk { font-size:14px; display:inline-flex; gap:5px; align-items:center; white-space:nowrap; }
+  .controls button { padding:8px 14px; border-radius:8px; border:1px solid var(--border); background:#fff; cursor:pointer; font-size:14px; }
+  .controls button:hover { border-color:var(--accent); color:var(--accent); }
+  #count { font-size:14px; color:var(--muted); margin:0 0 12px; }
+  #error { display:none; background:var(--danger-bg); color:var(--danger); border:1px solid #fecaca; border-radius:10px; padding:12px 14px; margin-bottom:14px; font-size:14px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:14px; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px; display:flex; flex-direction:column; gap:8px; }
+  .card.claimed { border-color:#86efac; background:#f0fdf4; }
+  .card.expired { opacity:.65; }
+  .card h2 { margin:0; font-size:17px; line-height:1.4; }
+  .provider { font-size:13px; color:var(--muted); }
+  .quota { font-size:15px; font-weight:600; }
+  .tags { display:flex; flex-wrap:wrap; gap:6px; }
+  .tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+  .tag.gray { background:#f3f4f6; color:#4b5563; }
+  .tag.warn { background:var(--warn-bg); color:var(--warn); }
+  .tag.danger { background:var(--danger-bg); color:var(--danger); }
+  .tag.ok { background:var(--ok-bg); color:var(--ok); }
+  .card p { margin:0; font-size:13px; color:#374151; }
+  .card p b { color:var(--text); }
+  .risks { color:var(--warn); font-size:13px; }
+  .actions { display:flex; gap:8px; margin-top:auto; padding-top:6px; }
+  .actions a, .actions button { flex:1; text-align:center; padding:9px 10px; border-radius:8px; font-size:14px; text-decoration:none; cursor:pointer; }
+  .go { background:var(--accent); color:#fff; }
+  .go:hover { background:#1d4ed8; }
+  .claim { background:#fff; border:1px solid var(--border); color:var(--text); }
+  .claim.done { background:var(--ok-bg); border-color:#86efac; color:var(--ok); }
+  footer { padding:20px; font-size:13px; color:var(--muted); }
+  footer a { color:var(--accent); }
+  @media (max-width:560px) { header h1 { font-size:21px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>免费 Token 监控平台</h1>
+    <p>给 Agent 的免费口粮：只收厂商官方核对过的免费额度。数据来自 data/offers.json，领取前请以厂商官方页为准。</p>
+    <div class="stats">
+      <div class="stat"><div class="num" id="stat-today">–</div><div class="label">今日可领（本周期未领）</div></div>
+      <div class="stat"><div class="num" id="stat-daily">–</div><div class="label">每日口粮条数</div></div>
+      <div class="stat"><div class="num" id="stat-expiring">–</div><div class="label">7 天内到期</div></div>
+      <div class="stat"><div class="num" id="stat-claimed">–</div><div class="label">今日已领</div></div>
+      <div class="stat"><div class="num" id="stat-streak">–</div><div class="label">连续领取天数</div></div>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <div class="controls">
+      <input type="search" id="q" placeholder="搜索标题或厂商…" aria-label="搜索">
+      <select id="cat" aria-label="分类">
+        <option value="">全部分类</option>
+        <option value="llm">大模型</option>
+        <option value="coding">编程</option>
+        <option value="search">搜索</option>
+        <option value="compute">算力</option>
+        <option value="browser">浏览器</option>
+        <option value="data">数据</option>
+        <option value="speech">语音</option>
+      </select>
+      <select id="cad" aria-label="领取节奏">
+        <option value="">全部节奏</option>
+        <option value="daily">每天</option>
+        <option value="weekly">每周</option>
+        <option value="monthly">每月</option>
+        <option value="once">一次</option>
+        <option value="permanent">长期</option>
+      </select>
+      <select id="sort" aria-label="排序">
+        <option value="expiry">按到期时间排序</option>
+        <option value="verified">按核实时间排序</option>
+      </select>
+      <label class="chk"><input type="checkbox" id="f-api"> 只看 API 直调</label>
+      <label class="chk"><input type="checkbox" id="f-nocard"> 免绑卡</label>
+      <label class="chk"><input type="checkbox" id="f-cn"> 国内直连</label>
+      <label class="chk"><input type="checkbox" id="f-unclaimed"> 只看未领</label>
+      <button id="clear" type="button">清除筛选</button>
+    </div>
+    <p id="count"></p>
+    <div id="error"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p>数据仅供参考，以厂商官方页为准。额度随时可能调整或结束；领取前请看清对方条款，用完记得开「用完即停」防扣费。本站不含邀请链接、API 中转站、二手积分、共享账号等内容。数据来源：蓝蓝仓库、freetokens.fyi，均经厂商官方页核对。领取记录只保存在本浏览器（localStorage），换浏览器或清理数据会重置。</p>
+    <p id="meta"></p>
+  </div>
+</footer>
+<script>
+(function () {
+  'use strict';
+  var LEDGER_KEY = 'free-token-monitor-ledger-v1';
+  var CAD_LABEL = { daily: '每天', weekly: '每周', monthly: '每月', once: '一次', permanent: '长期' };
+  var CAT_LABEL = { llm: '大模型', coding: '编程', search: '搜索', compute: '算力', browser: '浏览器', data: '数据', speech: '语音' };
+  var ACCESS_LABEL = { api: 'API 直调', client: '仅客户端', web: '网页 / 云端' };
+
+  function loadLedger() {
+    try { return JSON.parse(localStorage.getItem(LEDGER_KEY) || '{"claims":{},"history":[]}'); }
+    catch (e) { return { claims: {}, history: [] }; }
+  }
+  function saveLedger(l) { try { localStorage.setItem(LEDGER_KEY, JSON.stringify(l)); } catch (e) {} }
+  var ledger = loadLedger();
+
+  // 北京时间（UTC+8）日期
+  function beijingNow() { return new Date(Date.now() + 8 * 3600 * 1000); }
+  function fmtDate(d) { return d.getUTCFullYear() + '-' + String(d.getUTCMonth() + 1).padStart(2, '0') + '-' + String(d.getUTCDate()).padStart(2, '0'); }
+  function beijingToday() { return fmtDate(beijingNow()); }
+  function mondayOf(d) {
+    var day = d.getUTCDay(); // 0=周日
+    var diff = (day + 6) % 7; // 到周一的天数
+    var m = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate() - diff));
+    return fmtDate(m);
+  }
+  function periodKey(cadence) {
+    var now = beijingNow();
+    if (cadence === 'daily') return 'd:' + fmtDate(now);
+    if (cadence === 'weekly') return 'w:' + mondayOf(now);
+    if (cadence === 'monthly') return 'm:' + now.getUTCFullYear() + '-' + String(now.getUTCMonth() + 1).padStart(2, '0');
+    return 'ever';
+  }
+  function isClaimed(o) {
+    var c = ledger.claims[o.slug];
+    return !!c && c.periodKey === periodKey(o.cadence);
+  }
+  function daysLeft(o) {
+    if (!o.endsAt) return null;
+    var today = new Date(beijingToday() + 'T00:00:00Z');
+    var end = new Date(o.endsAt + 'T00:00:00Z');
+    return Math.round((end - today) / 86400000);
+  }
+  function isExpired(o) { var d = daysLeft(o); return d !== null && d < 0; }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+
+  function streakDays() {
+    var days = new Set(ledger.history || []);
+    var count = 0;
+    var cur = beijingNow();
+    // 今天还没领也算：从昨天往前数，再看今天
+    for (var i = 0; i < 370; i++) {
+      var d = new Date(Date.UTC(cur.getUTCFullYear(), cur.getUTCMonth(), cur.getUTCDate() - i));
+      if (days.has(fmtDate(d))) count++;
+      else if (i === 0) continue; // 今天未领不中断
+      else break;
+    }
+    return count;
+  }
+  function claimedTodayCount(offers) {
+    var today = beijingToday();
+    return offers.filter(function (o) {
+      var c = ledger.claims[o.slug];
+      return c && c.claimedDate === today;
+    }).length;
+  }
+
+  var offers = [];
+  var meta = null;
+
+  function render() {
+    var q = (document.getElementById('q').value || '').trim().toLowerCase();
+    var cat = document.getElementById('cat').value;
+    var cad = document.getElementById('cad').value;
+    var sort = document.getElementById('sort').value;
+    var fApi = document.getElementById('f-api').checked;
+    var fNocard = document.getElementById('f-nocard').checked;
+    var fCn = document.getElementById('f-cn').checked;
+    var fUnclaimed = document.getElementById('f-unclaimed').checked;
+
+    var list = offers.filter(function (o) { return o.status === 'active'; });
+    var dailyCount = list.filter(function (o) { return o.cadence === 'daily'; }).length;
+    var expiring = list.filter(function (o) { var d = daysLeft(o); return d !== null && d >= 0 && d <= 7; }).length;
+    var todayClaimable = list.filter(function (o) { return !isClaimed(o) && !isExpired(o); }).length;
+
+    document.getElementById('stat-today').textContent = todayClaimable;
+    document.getElementById('stat-daily').textContent = dailyCount;
+    document.getElementById('stat-expiring').textContent = expiring;
+    document.getElementById('stat-claimed').textContent = claimedTodayCount(offers);
+    document.getElementById('stat-streak').textContent = streakDays();
+
+    var filtered = list.filter(function (o) {
+      if (q && (o.title + ' ' + o.provider).toLowerCase().indexOf(q) === -1) return false;
+      if (cat && o.category !== cat) return false;
+      if (cad && o.cadence !== cad) return false;
+      if (fApi && o.accessType !== 'api') return false;
+      if (fNocard && (o.requirements || []).indexOf('绑卡') !== -1) return false;
+      if (fCn && o.region !== 'cn') return false;
+      if (fUnclaimed && isClaimed(o)) return false;
+      return true;
+    });
+    filtered.sort(function (a, b) {
+      if (sort === 'verified') return (b.verifiedAt || '').localeCompare(a.verifiedAt || '');
+      var da = daysLeft(a), db = daysLeft(b);
+      if (da === null && db === null) return (b.verifiedAt || '').localeCompare(a.verifiedAt || '');
+      if (da === null) return 1;
+      if (db === null) return -1;
+      return da - db;
+    });
+
+    document.getElementById('count').textContent = '共 ' + list.length + ' 条在架，当前筛选出 ' + filtered.length + ' 条（北京时间 ' + beijingToday() + '）。';
+    var grid = document.getElementById('grid');
+    grid.innerHTML = filtered.map(function (o) {
+      var claimed = isClaimed(o);
+      var d = daysLeft(o);
+      var exp = o.endsAt ? (d === null ? '' : (d < 0 ? '已到期' : d === 0 ? '今天到期' : '剩 ' + d + ' 天')) : '无固定截止日';
+      var expCls = d !== null && d <= 7 ? (d < 0 ? 'danger' : 'warn') : 'gray';
+      var tags = '<span class="tag">' + esc(CAT_LABEL[o.category] || o.category) + '</span>'
+        + '<span class="tag">' + esc(CAD_LABEL[o.cadence] || o.cadence) + '</span>'
+        + '<span class="tag">' + esc(ACCESS_LABEL[o.accessType] || o.accessType) + '</span>'
+        + '<span class="tag ' + (o.openaiCompat ? 'ok' : 'gray') + '">' + (o.openaiCompat ? 'OpenAI 兼容' : '非 OpenAI 兼容') + '</span>'
+        + '<span class="tag ' + (o.region === 'cn' ? 'ok' : 'gray') + '">' + (o.region === 'cn' ? '国内直连' : '全球') + '</span>'
+        + '<span class="tag ' + expCls + '">' + esc(exp) + '</span>';
+      var req = (o.requirements && o.requirements.length) ? '<p><b>门槛：</b>' + esc(o.requirements.join('、')) + '</p>' : '<p><b>门槛：</b>无</p>';
+      var risks = (o.risks && o.risks.length) ? '<p class="risks"><b>注意：</b>' + esc(o.risks.join('；')) + '</p>' : '';
+      return '<article class="card' + (claimed ? ' claimed' : '') + (isExpired(o) ? ' expired' : '') + '">'
+        + '<h2>' + esc(o.title) + '</h2>'
+        + '<div class="provider">' + esc(o.provider) + '</div>'
+        + '<div class="quota">' + esc(o.quotaText) + '</div>'
+        + '<div class="tags">' + tags + '</div>'
+        + req
+        + '<p><b>领取步骤：</b>' + esc(o.steps) + '</p>'
+        + '<p><b>重置：</b>' + esc(o.resetNote || '以厂商说明为准') + '</p>'
+        + risks
+        + '<p>核实于 ' + esc(o.verifiedAt) + ' · 来源：' + esc(o.sourceName) + (o.endsAt ? ' · 截止 ' + esc(o.endsAt) : '') + '</p>'
+        + '<div class="actions"><a class="go" href="' + esc(o.claimUrl) + '" target="_blank" rel="noopener noreferrer">去领取</a>'
+        + '<button type="button" class="claim' + (claimed ? ' done' : '') + '" data-slug="' + esc(o.slug) + '">' + (claimed ? '已领（点撤销）' : '标记已领') + '</button></div>'
+        + '</article>';
+    }).join('') || '<p>没有符合条件的条目，试试清除筛选。</p>';
+
+    grid.querySelectorAll('button.claim').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var slug = btn.getAttribute('data-slug');
+        var o = offers.find(function (x) { return x.slug === slug; });
+        if (!o) return;
+        if (isClaimed(o)) {
+          delete ledger.claims[slug];
+        } else {
+          ledger.claims[slug] = { periodKey: periodKey(o.cadence), claimedDate: beijingToday(), claimedAt: new Date().toISOString() };
+          if (ledger.history.indexOf(beijingToday()) === -1) ledger.history.push(beijingToday());
+        }
+        saveLedger(ledger);
+        render();
+      });
+    });
+  }
+
+  ['q', 'cat', 'cad', 'sort', 'f-api', 'f-nocard', 'f-cn', 'f-unclaimed'].forEach(function (id) {
+    document.getElementById(id).addEventListener('input', render);
+    document.getElementById(id).addEventListener('change', render);
+  });
+  document.getElementById('clear').addEventListener('click', function () {
+    document.getElementById('q').value = '';
+    document.getElementById('cat').value = '';
+    document.getElementById('cad').value = '';
+    document.getElementById('sort').value = 'expiry';
+    ['f-api', 'f-nocard', 'f-cn', 'f-unclaimed'].forEach(function (id) { document.getElementById(id).checked = false; });
+    render();
+  });
+
+  fetch('data/offers.json')
+    .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function (data) {
+      meta = data.meta || null;
+      offers = (data.offers || []).filter(function (o) { return o && o.slug && o.title && o.claimUrl; });
+      document.getElementById('meta').textContent = meta
+        ? ('数据生成于 ' + (meta.generatedAt || '') + '，共 ' + (meta.count || offers.length) + ' 条；来源：' + (meta.sources || []).join('、') + '。')
+        : ('共 ' + offers.length + ' 条。');
+      render();
+    })
+    .catch(function (err) {
+      var el = document.getElementById('error');
+      el.style.display = 'block';
+      el.textContent = '没能加载 data/offers.json（' + err.message + '）。如果是直接双击打开本文件，浏览器可能拦截了本地文件读取：请用本地服务器打开，例如在仓库根目录运行 python3 -m http.server 8000，再访问 http://localhost:8000/ ；或部署到 GitHub Pages 后打开。';
+    });
+})();
+</script>
+</body>
+</html>
