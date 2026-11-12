@@ -1,0 +1,28 @@
+# 免费 Token 监控平台 robots.txt
+# 允许 AI 搜索爬虫（OAI-SearchBot、Claude-SearchBot、PerplexityBot）、Googlebot 与 Bytespider（豆包）。
+# GPTBot / ClaudeBot（训练爬虫）同样放行：本站内容为公开的厂商额度事实，目标是被 AI 搜索与引用；如需调整，改这里即可。
+User-agent: *
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://859301.github.io/free-token-monitor/sitemap.xml

@@ -1,0 +1,47 @@
+# 免费 Token 监控平台
+
+> 给 Agent 的免费口粮：43 条经厂商官方核对的免费额度，含领取步骤、到期倒计时与领取台账。额度随时可能调整或结束，领取前请以厂商官方页为准。
+
+## 主要页面
+
+- [首页](https://859301.github.io/free-token-monitor/): 全部 43 条额度的筛选总览与领取台账。
+- [额度详情](https://859301.github.io/free-token-monitor/offers/): 15 条最常被问到的额度详情页。
+- [对比](https://859301.github.io/free-token-monitor/compare/): 8 篇对比：不绑卡大模型 API、额度形态、国内直连、编程工具、搜索、语音、沙箱、向量。
+- [指南](https://859301.github.io/free-token-monitor/guides/): 领取第一个免费 Key、401/402/429 报错排查、接入编程工具。
+- [常见问题](https://859301.github.io/free-token-monitor/faq/): 18 个常见问题与回答。
+- [额度数据（JSON）](https://859301.github.io/free-token-monitor/data/offers.json): 全部 43 条额度的机器可读数据，含额度原文、门槛、步骤、重置时间、核实日期。
+
+## 额度详情页
+
+- [:free 免费模型（OpenRouter）](https://859301.github.io/free-token-monitor/offers/openrouter-free/): 20 RPM / 50 次每天；账户充过 $10 后 1000 次每天。门槛：账号。核实于 2026-10-27。
+- [Gemini API 免费层（Google AI Studio）](https://859301.github.io/free-token-monitor/offers/gemini-free-tier/): Gemini Flash 等模型免费层，5–30 RPM / 按模型限日额。门槛：账号。核实于 2026-11-08。
+- [Free Plan 高速推理（Groq）](https://859301.github.io/free-token-monitor/offers/groq-free-plan/): 每模型 30 RPM / 1,000 次每天 / 20 万 Token 每天。门槛：账号。核实于 2026-11-08。
+- [每日免费 Neurons（Cloudflare Workers AI）](https://859301.github.io/free-token-monitor/offers/cloudflare-workers-ai/): 每天 10,000 Neurons。门槛：账号。核实于 2026-11-01。
+- [GLM-4.5-Flash / GLM-4.7-Flash 免费模型（智谱 BigModel）](https://859301.github.io/free-token-monitor/offers/zhipu-glm-flash-free/): 官方标注完全免费，并发按账号显示。门槛：账号。核实于 2026-11-08。
+- [新用户 Token 礼包（智谱 BigModel）](https://859301.github.io/free-token-monitor/offers/zhipu-newuser-pack/): 2000 万 Token + 120 次图像/视频生成。门槛：账号、实名。核实于 2026-11-08。
+- [新人免费额度（多模型合计超 7000 万）（阿里云百炼）](https://859301.github.io/free-token-monitor/offers/aliyun-bailian-newuser/): 每模型约 100 万 Token，90 天有效。门槛：账号、实名。核实于 2026-11-01。
+- [注册免费额度 + 实名代金券（硅基流动 SiliconFlow）](https://859301.github.io/free-token-monitor/offers/siliconflow-signup/): 注册 14 元额度；邀请+实名再得 16 元券（180 天）。门槛：账号、实名。核实于 2026-10-27。
+- [语音 API 注册额度（Deepgram）](https://859301.github.io/free-token-monitor/offers/deepgram-signup/): $200 免费额度，免绑卡、不过期。门槛：账号。核实于 2026-11-01。
+- [语音转写注册额度（AssemblyAI）](https://859301.github.io/free-token-monitor/offers/assemblyai-signup/): $50 免费额度，免绑卡。门槛：账号。核实于 2026-11-01。
+- [搜索 API 免费层（Tavily）](https://859301.github.io/free-token-monitor/offers/tavily-monthly/): 每月 1,000 API credits，免绑卡。门槛：账号。核实于 2026-11-01。
+- [搜索 API Starter 免费额度（Exa）](https://859301.github.io/free-token-monitor/offers/exa-starter/): 每月 $10 + 注册赠 $10，免绑卡。门槛：账号。核实于 2026-11-01。
+- [抓取/搜索免费层（Firecrawl）](https://859301.github.io/free-token-monitor/offers/firecrawl-free/): 每月 1,000 credits，免绑卡。门槛：账号。核实于 2026-11-01。
+- [代码沙箱 Hobby 额度（E2B）](https://859301.github.io/free-token-monitor/offers/e2b-hobby/): $100 一次性用量额度，免绑卡。门槛：账号。核实于 2026-11-01。
+- [Starter 每月免费算力（Modal）](https://859301.github.io/free-token-monitor/offers/modal-starter/): 每月 $30 免费 credits。门槛：账号。核实于 2026-11-01。
+
+## 对比
+
+- [不绑卡的最佳免费大模型 API 对比](https://859301.github.io/free-token-monitor/compare/best-free-llm-api-no-card/): 6 条不绑卡的免费大模型 API 对比：Gemini、Groq、OpenRouter、Cloudflare、智谱 GLM Flash、硅基流动。额度、限速、重置时间照录本站核对数据。
+- [免费额度形态对比：长期免费层 vs 注册赠金 vs 周期重置 vs 限时活动](https://859301.github.io/free-token-monitor/compare/free-tier-types/): 免费额度分四种形态：长期免费层、注册赠金、周期重置、限时活动。43 条在架额度的完整分组，照录本站核对数据。
+- [国内可直连的免费额度对比](https://859301.github.io/free-token-monitor/compare/china-accessible/): 18 条标注国内直连的免费额度完整清单，含大模型、编程、搜索、算力；海外厂商可用性说法不一，需要实时测试。
+- [免费编程工具额度对比：Qoder / WorkBuddy / TRAE / Kiro / Dify](https://859301.github.io/free-token-monitor/compare/free-coding-tools/): 7 条编程类免费额度对比：Qoder、WorkBuddy、CodeBuddy、TRAE、Kiro 学生计划、Dify Cloud。均为客户端或云端内积分，照录本站核对数据。
+- [免费搜索与抓取 API 对比：Tavily / Exa / Firecrawl / You.com](https://859301.github.io/free-token-monitor/compare/free-search-apis/): 4 条搜索与抓取类免费额度对比：Tavily、Exa、Firecrawl、You.com。每月额度与每日额度的区别，照录本站核对数据。
+- [免费语音 API 对比：Deepgram / AssemblyAI](https://859301.github.io/free-token-monitor/compare/free-speech-apis/): 2 条语音类免费额度对比：Deepgram（$200，不过期）与 AssemblyAI（$50）。均为一次性额度、免绑卡，照录本站核对数据。
+- [免费沙箱与浏览器自动化额度对比：E2B / Modal / Steel](https://859301.github.io/free-token-monitor/compare/free-sandbox-browser/): 3 条沙箱与浏览器类免费额度对比：E2B（$100 一次性）、Modal（每月 $30）、Steel（$30 一次性）。均免绑卡，照录本站核对数据。
+- [免费向量与 Embedding 额度对比：Pinecone / Voyage / Jina](https://859301.github.io/free-token-monitor/compare/free-vector-embedding/): 3 条向量与 Embedding 类免费额度对比：Pinecone、Voyage AI、Jina AI。计费单位不同，按你的向量化与检索量选。
+
+## 指南
+
+- [领取第一个免费 Key 并完成第一次调用](https://859301.github.io/free-token-monitor/guides/first-free-key/): 从选额度、注册、创建 Key 到第一次调用，含一个零 Key 示例。
+- [401 / 402 / 429 报错排查](https://859301.github.io/free-token-monitor/guides/fix-401-402-429/): 三个状态码分别改什么，分钟级与日级限速的区别，重置时间对照表。
+- [把免费 Key 接入 Claude Code / Codex / Cline / OpenCode](https://859301.github.io/free-token-monitor/guides/connect-coding-agents/): 协议对照、通用接入步骤、两个常见坑、本站 OpenAI 兼容额度清单。
