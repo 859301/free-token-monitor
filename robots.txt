@@ -25,4 +25,4 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 
-Sitemap: https://859301.github.io/free-token-monitor/sitemap.xml
+Sitemap: https://tokens.yangtokent.com/sitemap.xml
