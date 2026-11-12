@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>免费 VPS 账单避坑：如何不被扣费（通用 + 分厂商）</title>
+<meta name="description" content="免费 VPS 账单避坑：分厂商到期处理对照、预算提醒入口、超限计量点（流量/磁盘/IP）、到期前检查清单。核实于 2026-11-12。">
+<link rel="canonical" href="https://tokens.yangtokent.com/vps/guides/billing-pitfalls/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "免费 VPS 账单避坑：如何不被扣费（通用 + 分厂商）",
+  "description": "免费 VPS 账单避坑：分厂商到期处理对照、预算提醒入口、超限计量点（流量/磁盘/IP）、到期前检查清单。核实于 2026-11-12。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/vps/guides/billing-pitfalls/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：只收厂商官方核对过的免费额度。领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">免费 VPS</a><a href="../../offers/">VPS 详情</a><a href="../../compare/">VPS 对比</a><a href="../" aria-current="page">VPS 指南</a><a href="../../faq/">VPS 问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">免费 VPS</a> / <a href="../">VPS 指南</a> / 免费 VPS 账单避坑</p>
+<h1>免费 VPS 账单避坑</h1>
+<p class="meta">本页更新于 2026-11-13</p>
+<div class="answer"><p>避免扣费靠三件事：开资源前确认免费范围、开预算提醒、到期前处理资源。本页按官方页对照 7 家厂商的到期处理（停用、删除、转计费各不相同），并附到期前检查清单。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#rules">1. 通用规则</a></li><li><a href="#vendors">2. 分厂商到期处理</a></li><li><a href="#alerts">3. 预算提醒</a></li><li><a href="#meters">4. 超限计量点</a></li><li><a href="#checklist">5. 到期前检查清单</a></li></ul></div>
+<h2 id="rules">1. 通用规则：免费不等于无限</h2>
+<p>所有免费优惠都有边界：规格上限、流量上限、时长上限、额度上限。开资源之前先确认三点：这项资源在免费范围内吗？用量超过免费量会怎样（停用、删除、还是计费）？到期日是哪天？把到期日记下来，到期前处理，是避免扣费最有效的一步。</p>
+<h2 id="vendors">2. 分厂商到期处理（按官方页）</h2>
+<div class="tablewrap"><table><thead><tr><th>厂商</th><th>到期 / 超限后（官方页原文要点）</th></tr></thead><tbody>
+<tr><td>甲骨文</td><td>试用结束：付费实例被回收；A1 超限则停用、30 天后删除；升级 PAYG 后只对超出免费限额的使用收费</td></tr>
+<tr><td>Google Cloud</td><td>试用结束未升级：资源停止，30 天宽限期后永久删除；升级后超出额度与免费层的用量开始计费</td></tr>
+<tr><td>AWS</td><td>免费计划到期：账户暂停，数据保留 90 天，逾期永久删除；付费计划可设支出上限（$20 起）</td></tr>
+<tr><td>Azure</td><td>须 30 天内转按量付费，否则停用；12 个月后服务继续运行并按量计费</td></tr>
+<tr><td>阿里云</td><td>超上限/用尽/过期按量计费；到期后实例不自动释放，须手动处理</td></tr>
+<tr><td>腾讯云</td><td>到期前在控制台续费（云服务器续费最低 3.5 折）；蜂驰型试用后 2.7 折新购</td></tr>
+<tr><td>Kamatera</td><td>到期前终止服务器即取消；未取消则开始按使用量收费</td></tr>
+</tbody></table></div>
+<h2 id="alerts">3. 预算提醒：各家控制台里都有</h2>
+<p>Google Cloud：Cloud Billing 预算（budgets）可对比实际支出与计划支出，账单报告可查看用量与剩余额度。AWS：控制台首页的 Cost and Usage 小部件可查看剩余额度与剩余天数，另有定期邮件提醒；升级为付费计划后可设每月支出上限并收到 50%/75%/90% 通知。Azure：剩余额度可在门户的 Microsoft Cost Management 中查看。甲骨文：文档提到可用 compartment quotas（ compartment 配额）控制账户内资源消耗。开通后第一件事就是去控制台确认这些入口。</p>
+<h2 id="meters">4. 超限计量点：流量、磁盘、IP</h2>
+<p>最容易超限的是出站流量：GCP 免费层每月只有 1 GB，超出即计费；甲骨文每月 10 TB，相对宽松。磁盘：GCP 30 GB·月、甲骨文 200 GB 总量，超出部分计费。Azure 虚拟机的磁盘、IP 与出站流量免费量官方页面未注明，以官方页面为准；阿里云的每小时抵扣上限与流量额度以登录后卡片显示为准。开资源前看清计量单位，别按「免费」两个字估算。</p>
+<h2 id="checklist">5. 到期前检查清单</h2>
+<ol>
+<li>记下每个优惠的到期日（试用结束日、额度过期日、12 个月到期日）。</li>
+<li>到期前一周：确认要保留的资源是否在免费范围内，超限的降规格或删除。</li>
+<li>到期前一天：备份数据；决定升级、续费还是删除/终止。</li>
+<li>试用类优惠：到期前终止或删除不需要的资源（Kamatera 必须终止服务器才算取消；阿里云到期不自动释放）。</li>
+<li>升级类优惠：确认升级后的计费规则（Azure 12 个月后继续计费、甲骨文 PAYG 超限收费）。</li>
+<li>每月初：查看一次账单与用量，确认没有意外收费。</li>
+</ol>
+<div class="note"><b>提醒：</b>各厂商的到期处理与计费规则以官方页为准；本页对照表照录核查时官方页的要点，条款可能调整，领取前请再核对。</div>
+<div class="related"><h2>相关页面</h2><ul><li><a href="../../compare/best-free-vps/">最佳免费 VPS 对比</a></li><li><a href="../../offers/">VPS 详情页总览</a></li><li><a href="../oracle-signup/">甲骨文注册与开机全流程</a></li><li><a href="../../faq/">VPS 常见问题</a></li><li><a href="../../">返回免费 VPS 列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">免费 VPS</a> · <a href="../../offers/">VPS 详情</a> · <a href="../../compare/">VPS 对比</a> · <a href="../">VPS 指南</a> · <a href="../../faq/">VPS 问答</a></p><p>数据仅供参考，以厂商官方页为准。VPS 板块各条目均经厂商官方页核对，核实日期见各页；额度随时可能调整或结束，领取前请看清对方条款。本站不含邀请链接、API 中转站、二手积分、共享账号等内容。</p></div></footer>
+</body>
+</html>
