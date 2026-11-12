@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>免费 VPS 能跑什么？按用途选（博客 / Bot / Minecraft / AI Agent）</title>
+<meta name="description" content="按用途选免费 VPS：博客、学习、Bot、Minecraft、AI Agent、Windows/MT4、生产业务，按已核实规格（内存、架构、出站流量、回收规则）对照。核实于 2026-11-12。">
+<link rel="canonical" href="https://tokens.yangtokent.com/vps/compare/use-cases/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "免费 VPS 能跑什么？按用途选（博客 / Bot / Minecraft / AI Agent）",
+  "description": "按用途选免费 VPS：博客、学习、Bot、Minecraft、AI Agent、Windows/MT4、生产业务，按已核实规格（内存、架构、出站流量、回收规则）对照。核实于 2026-11-12。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/vps/compare/use-cases/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "免费 VPS 能跑 Minecraft 吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "社区有在甲骨文免费层上跑 Minecraft 的指南（社区报告，非本站实测）。按官方规格对照：甲骨文 A1 有 12 GB 内存；GCP e2-micro 的内存规格官方表格未注明，无法对照。请注意甲骨文的闲置回收规则。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "免费 VPS 能用来跑生产业务吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不建议。甲骨文 Always Free 无 SLA，GCP 免费层可提前 30 天通知变更，试用类优惠到期会停用或删除。重要服务请用付费方案并做好备份。核实于 2026-11-12。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：只收厂商官方核对过的免费额度。领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">免费 VPS</a><a href="../../offers/">VPS 详情</a><a href="../" aria-current="page">VPS 对比</a><a href="../../guides/">VPS 指南</a><a href="../../faq/">VPS 问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">免费 VPS</a> / <a href="../">VPS 对比</a> / 按用途选</p>
+<h1>按用途选</h1>
+<p class="meta">本页更新于 2026-11-13 · 表格数据照录本站核对的厂商官方页信息（核实于 2026-11-12）</p>
+<div class="answer"><p>按用途对照已核实规格选：内存看甲骨文的 12 GB，出站流量看 GCP 的 1 GB 与甲骨文的 10 TB，在线时长看甲骨文的闲置回收规则；社区教程只作参考，本站未实测。</p></div>
+<h2 id="table">对比表</h2>
+<div class="tablewrap"><table><thead><tr><th>用途</th><th>关键约束（已核实规格）</th><th>对照已核实优惠</th></tr></thead><tbody>
+<tr><td>博客 / 轻量网站</td><td>出站流量：GCP 每月 1 GB 非常紧张；甲骨文每月 10 TB 宽松</td><td>甲骨文 A1（流量宽松）或腾讯云轻量（带流量包，1 个月试用）</td></tr>
+<tr><td>学习 Linux / 建站</td><td>试用期长度：阿里云 3 个月额度制、腾讯云 1 个月、GCP 90 天试用 + 长期免费层</td><td>阿里云（3 个月）、腾讯云（中文控制台）、GCP 免费层（长期）</td></tr>
+<tr><td>Bot / 定时任务</td><td>持续在线：甲骨文有 7 天闲置回收规则，低负载 Bot 可能被判闲置；GCP 无官方闲置回收规则</td><td>GCP e2-micro（长期在线）或甲骨文（需真实负载，见防回收指南）</td></tr>
+<tr><td>Minecraft 服务器</td><td>内存：甲骨文 A1 有 12 GB（官方文档）；社区指南在甲骨文免费层上跑 Minecraft（社区报告，非本站实测）</td><td>甲骨文 A1；GCP e2-micro 内存规格官方表格未注明，无法对照</td></tr>
+<tr><td>AI Agent（如 OpenClaw）</td><td>社区指南称 OpenClaw 至少需要 2 GB 内存（社区说法）；甲骨文 12 GB 在纸面上满足，GCP e2-micro 内存未注明无法对照</td><td>甲骨文 A1；注意 Arm 架构兼容性与闲置回收规则</td></tr>
+<tr><td>Windows / MT4</td><td>无永久免费 Windows 虚拟机；Azure 12 个月内可选 Windows</td><td>Azure 免费账户；见 <a href="../windows-honest-answer/">免费 Windows VPS</a></td></tr>
+<tr><td>生产业务 / 正式服务</td><td>无 SLA：甲骨文 Always Free 无 SLA；免费层随时可能变更（GCP 可 30 天通知变更）</td><td>不建议把免费层当生产环境；重要服务请用付费方案并做好备份</td></tr>
+</tbody></table></div>
+<h2 id="how">怎么选</h2>
+<ul>
+<li><strong>先看约束，再选优惠：</strong>内存看甲骨文的 12 GB（官方文档明确）；出站流量看 GCP 的 1 GB 与甲骨文的 10 TB；架构看 Arm（甲骨文 A1、Azure B2pts v2）与 x86 的区别；在线时长看甲骨文的闲置回收规则。</li>
+<li><strong>社区说法与官方事实分开：</strong>Minecraft、OpenClaw 等跑在免费机上的教程是社区报告，本站未实测，只作需求参考；规格对照以官方页为准。</li>
+<li><strong>遵守条款：</strong>各厂商均禁止违规用途（如挖矿、滥用），请遵守厂商使用条款与当地法律；本站不提供绕过地区、支付或身份规则的方法。</li>
+</ul>
+<h2 id="faq">常见问题</h2><details><summary>免费 VPS 能跑 Minecraft 吗？</summary><p>社区有在甲骨文免费层上跑 Minecraft 的指南（社区报告，非本站实测）。按官方规格对照：甲骨文 A1 有 12 GB 内存；GCP e2-micro 的内存规格官方表格未注明，无法对照。请注意甲骨文的闲置回收规则。核实于 2026-11-12。</p></details><details><summary>免费 VPS 能用来跑生产业务吗？</summary><p>不建议。甲骨文 Always Free 无 SLA，GCP 免费层可提前 30 天通知变更，试用类优惠到期会停用或删除。重要服务请用付费方案并做好备份。核实于 2026-11-12。</p></details>
+<div class="note"><b>免责：</b>本页信息照录本站核对时厂商官方页的内容（核实于 2026-11-12），额度随时可能调整或结束；领取前请以厂商官方页为准。</div>
+<div class="related"><h2>其他对比</h2><ul><li><a href="../best-free-vps/">最佳免费 VPS 对比</a></li><li><a href="../oracle-vs-gcp/">Oracle vs GCP</a></li><li><a href="../aws-azure-gcp/">AWS vs Azure vs GCP</a></li><li><a href="../no-card-audit/">无需信用卡核查</a></li><li><a href="../domestic-clouds/">国内免费试用对比</a></li><li><a href="../student-routes/">学生版对比</a></li><li><a href="../windows-honest-answer/">免费 Windows VPS</a></li><li><a href="./">按用途选</a></li><li><a href="../../">返回免费 VPS 列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">免费 VPS</a> · <a href="../../offers/">VPS 详情</a> · <a href="../">VPS 对比</a> · <a href="../../guides/">VPS 指南</a> · <a href="../../faq/">VPS 问答</a></p><p>数据仅供参考，以厂商官方页为准。VPS 板块各条目均经厂商官方页核对，核实日期见各页；额度随时可能调整或结束，领取前请看清对方条款。本站不含邀请链接、API 中转站、二手积分、共享账号等内容。</p></div></footer>
+</body>
+</html>
