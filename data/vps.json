@@ -1,0 +1,257 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-13",
+    "count": 8,
+    "sources": [
+      "厂商官方页（逐条核对）"
+    ],
+    "note": "规格与条款照录厂商官方页面原文；官方页面未注明的字段写「以官方页面为准」，不编造。领取前请以厂商官方页为准。"
+  },
+  "offers": [
+    {
+      "id": 1,
+      "slug": "oracle-always-free",
+      "title": "Always Free 永久免费云服务器（甲骨文 Oracle Cloud）",
+      "provider": "Oracle Cloud（甲骨文）",
+      "category": "vps",
+      "group": "always-free",
+      "specText": "Ampere A1 (Arm)：每月前 1,500 OCPU 小时 + 9,000 GB 小时（Always Free 租户相当于 2 OCPU / 12 GB 内存）；最多 2 台 VM.Standard.E2.1.Micro (AMD)；200 GB 块存储；每月 10 TB 出站流量；另有 US$300 试用额度（30 天）",
+      "durationText": "Always Free 无固定期限（账户有效期内）；US$300 试用额度最多 30 天或用完为止",
+      "cardRequired": true,
+      "cardNote": "注册需提供信用卡/借记卡用于身份验证；会定期做临时授权预扣，通常 3–5 天内由银行解除。不接受带 PIN 的借记卡、虚拟卡、一次性卡、预付卡。",
+      "regions": "Always Free 计算实例只能建在主区域（Home Region）；A1 机型不在韩国北部（春川）提供；Free Tier 在所有商用 OCI 区域提供。",
+      "risks": [
+        "闲置回收：7 天内 CPU 95 分位利用率低于 20%、网络利用率低于 20%、内存利用率低于 20%（仅 A1 机型）可能被回收",
+        "Out of host capacity：主区域 Always Free 机型容量不足时需换可用区或等待，官方 FAQ 称可能需要数日",
+        "账户闲置 30 天以上可能被视为弃用并暂停或终止",
+        "超出 Always Free 限额的 A1 实例在试用结束后会被停用，30 天后删除（除非升级为付费账户）",
+        "PAYG 账户 4 OCPU / 24 GB 免费的说法存在争议：官方文档写明 1,500/9,000 小时适用于所有租户，不得作为承诺",
+        "无 SLA；仅使用 Always Free 资源的客户不能获得 Oracle 技术支持"
+      ],
+      "steps": "在 Oracle Cloud Free Tier 官方页注册 → 提供信用卡/借记卡完成身份验证 → 选定主区域 → 在主区域创建 A1 Flex 实例（2 OCPU / 12 GB 以内）或 E2.1.Micro 实例 → 配置 SSH 密钥与安全规则后使用。",
+      "claimUrl": "https://www.oracle.com/cloud/free/",
+      "verifiedAt": "2026-11-12",
+      "sourceName": "Oracle 官方文档 · 官方核对",
+      "sourceUrl": "https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm",
+      "status": "active",
+      "flags": [
+        "disputed-payg-4c24g",
+        "idle-reclaim",
+        "capacity-shortage"
+      ],
+      "notes": "官方文档页标注 Updated 2026-06-12；2026 年 6 月起 Always Free 的 A1 额度为 2 OCPU / 12 GB，旧教程所写的 4 OCPU / 24 GB 已不适用于 Always Free 租户。"
+    },
+    {
+      "id": 2,
+      "slug": "gcp-free-tier",
+      "title": "Google Cloud 免费层：e2-micro 永久免费 + $300 试用",
+      "provider": "Google Cloud",
+      "category": "vps",
+      "group": "always-free",
+      "specText": "每月 1 台非抢占式 e2-micro 虚拟机；30 GB·月标准持久磁盘；每月 1 GB 从北美到所有目的地的出站流量（不含中国/澳大利亚）；另有 $300 迎新额度（90 天）",
+      "durationText": "免费层无结束日期（Google 保留提前 30 天通知后变更或取消的权利）；$300 试用 90 天",
+      "cardRequired": true,
+      "cardNote": "注册试用时必须提供信用卡或其他付款方式；临时预扣 $0.00–$1.00，不是实际扣费。使用免费层需要一个有效的 Cloud Billing 账号。",
+      "regions": "e2-micro 免费仅限 us-west1（俄勒冈）、us-central1（爱荷华）、us-east1（南卡罗来纳）三个美国区域；用量在三个区域合并计算。",
+      "risks": [
+        "未用完的免费层限额不结转到下月",
+        "试用结束未升级：资源停止，30 天宽限期后永久删除",
+        "试用期内不能加 GPU、不能用 Marketplace、不能建 Windows Server 镜像实例",
+        "$300 额度不能支付 AI Studio 的 Gemini API 费用；2026 年 11 月 16 日起也不能支付 Gemini 平台服务费用",
+        "e2-micro 的 vCPU 规格官方免费层表格未注明，以官方页面为准"
+      ],
+      "steps": "注册 Google Cloud 免费试用 → 提供付款方式完成验证 → 在三个免费区域之一创建 e2-micro 实例（30 GB 标准磁盘以内）→ 注意出站流量限额。",
+      "claimUrl": "https://cloud.google.com/free",
+      "verifiedAt": "2026-11-12",
+      "sourceName": "Google Cloud 官方文档 · 官方核对",
+      "sourceUrl": "https://cloud.google.com/free/docs/free-cloud-features",
+      "status": "active",
+      "flags": [
+        "region-restricted",
+        "egress-1gb"
+      ],
+      "notes": "免费层 e2-micro 限额按时间而非实例数计算：每月所有 e2-micro 实例的免费时长合计不超过当月总小时数。"
+    },
+    {
+      "id": 3,
+      "slug": "aws-free-tier",
+      "title": "AWS 免费套餐：最高 $200 额度 / 6 个月（新账户）",
+      "provider": "Amazon Web Services (AWS)",
+      "category": "vps",
+      "group": "trial",
+      "specText": "最高 $200 AWS 额度：注册时 $100 + 探索基础服务最多再得 $100；30+ 项长期免费服务；无固定的免费 EC2 虚拟机（EC2 用量从额度中抵扣）",
+      "durationText": "最长 6 个月，或额度用完为止（以先到者为准）；不可延长",
+      "cardRequired": false,
+      "cardNote": "官方 FAQ：大多数新客户注册时不需要付款方式；某些情况下可能要求提供付款方式等信息以验证身份。",
+      "regions": "额度适用于全球区域；中国（宁夏/北京）区域与 GovCloud 区域不可用（个别服务除外）。",
+      "risks": [
+        "新账户专属：已有或曾经有过 AWS 账户则无资格",
+        "免费计划到期后账户暂停，数据保留 90 天，逾期未升级则永久删除",
+        "官方 FAQ 对额度到期时间的表述存在 6 个月与 12 个月两种说法（见详情页），以官方页面与账单页面显示为准",
+        "免费计划只能访问部分服务；加入 Organizations 或搭建 Control Tower 后即失去赚取额外额度的资格"
+      ],
+      "steps": "在线创建 AWS 账户（自动加入免费计划）→ 在控制台首页 Explore AWS 小部件中完成活动赚取额外 $100 → 用额度开 EC2 等服务 → 在控制台查看剩余额度与剩余天数。",
+      "claimUrl": "https://aws.amazon.com/free/",
+      "verifiedAt": "2026-11-12",
+      "sourceName": "AWS 官方 FAQ · 官方核对",
+      "sourceUrl": "https://aws.amazon.com/free/free-tier-faqs/",
+      "status": "active",
+      "flags": [
+        "credit-expiry-wording-conflict",
+        "no-fixed-free-vm"
+      ],
+      "notes": "旧的 12 个月免费 EC2 套餐已不再面向新账户；本页只写信用额度模型。"
+    },
+    {
+      "id": 4,
+      "slug": "azure-free-account",
+      "title": "Azure 免费账户：$200 额度 + 750 小时虚拟机 / 12 个月",
+      "provider": "Microsoft Azure",
+      "category": "vps",
+      "group": "trial",
+      "specText": "$200 额度；B1s、B2pts v2 (Arm)、B2ats v2 (AMD) 三种突发型虚拟机每月各 750 小时（Linux 或 Windows）；20+ 项热门服务的每月免费量 + 65+ 项长期免费服务",
+      "durationText": "$200 额度 30 天；虚拟机与服务免费量 12 个月（仅新客户）",
+      "cardRequired": true,
+      "cardNote": "注册需电话号码 + 信用卡/借记卡（非预付卡）用于身份验证；可能出现 1 美元（或等值）临时授权，验证后解除。中国香港与巴西仅接受信用卡。",
+      "regions": "各区域虚拟机可用性官方页面未注明，以官方页面为准。",
+      "risks": [
+        "需在 30 天内或额度用完后转按量付费，否则无法继续获得 12 个月免费服务；不转则账户与服务停用",
+        "12 个月到期后，正在使用的服务会继续运行并按按量付费价格计费",
+        "虚拟机的磁盘/IP/出站流量免费量官方页面未注明，以官方页面为准",
+        "每位新客户限一个免费账户"
+      ],
+      "steps": "注册 Azure 免费账户 → 完成电话与银行卡验证 → 在 30 天内使用 $200 额度 → 转按量付费以继续获得 12 个月免费量 → 每月在门户中查看免费服务用量。",
+      "claimUrl": "https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account/",
+      "verifiedAt": "2026-11-12",
+      "sourceName": "Microsoft Azure 官方页 · 官方核对",
+      "sourceUrl": "https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account/",
+      "status": "active",
+      "flags": [
+        "requires-payg-upgrade",
+        "disk-ip-egress-unstated"
+      ],
+      "notes": "$200 额度不可用于 Azure Marketplace；转按量付费后剩余额度在 30 天内仍可用。"
+    },
+    {
+      "id": 5,
+      "slug": "azure-for-students",
+      "title": "Azure for Students：$100 额度 / 12 个月，无需信用卡",
+      "provider": "Microsoft Azure",
+      "category": "vps",
+      "group": "student",
+      "specText": "$100 Azure 额度（12 个月内使用）+ 部分免费服务（服务内容可能变化）",
+      "durationText": "12 个月；额度用完订阅停用",
+      "cardRequired": false,
+      "cardNote": "注册时不需要信用卡。",
+      "regions": "官方优惠详情页未注明地域限制，以官方页面为准。",
+      "risks": [
+        "仅限年满 18 周岁、在经认证的两年制/四年制学位授予机构全日制就读的学生，需用学校组织邮箱验证学术身份",
+        "每位客户限一个订阅；MOOC 与营利性机构职业培训不可用",
+        "额度不可用于购买支持计划、DevOps、Marketplace 产品等",
+        "未用完的额度不可结转到下月、不可转让；激活名额有限，先到先得"
+      ],
+      "steps": "在 Azure for Students 官方页申请 → 用学校组织邮箱验证学生身份 → 获得 $100 额度 → 在 12 个月内使用。",
+      "claimUrl": "https://azure.microsoft.com/en-us/pricing/offers/ms-azr-0170p",
+      "verifiedAt": "2026-11-12",
+      "sourceName": "Microsoft Azure 官方优惠详情页 · 官方核对",
+      "sourceUrl": "https://azure.microsoft.com/en-us/pricing/offers/ms-azr-0170p",
+      "status": "active",
+      "flags": [
+        "no-card",
+        "student-only"
+      ],
+      "notes": "本站已核实的各大厂商优惠中，唯一明确无需信用卡的额度优惠。"
+    },
+    {
+      "id": 6,
+      "slug": "aliyun-ecs-trial",
+      "title": "阿里云 ECS 免费试用：个人 300 元 / 企业 660 元，3 个月额度制",
+      "provider": "阿里云",
+      "category": "vps",
+      "group": "trial",
+      "specText": "个人版总额度 300 元；企业版总额度 660 元；额度制：同时受总额度、每小时抵扣上限、有效期约束",
+      "durationText": "3 个月有效期",
+      "cardRequired": null,
+      "cardNote": "活动页正文未说明绑卡要求；页面按账号实名认证类型展示对应卡片，资格与细则以登录后卡片显示与官方页面为准。",
+      "regions": "可选地域活动页正文未列出，以登录后卡片显示与官方页面为准。",
+      "risks": [
+        "超出每小时抵扣上限、总额度用尽、有效期结束或使用不在抵扣范围内的资源时，相关费用按量计费",
+        "试用到期后实例不会自动释放，系统会在到期前发送提醒；不处理可能继续计费",
+        "个人版与企业版权益不同享；每小时抵扣上限、公网流量额度、最大规格以登录后卡片显示为准",
+        "帮助中心规则提到仅限计算产品新用户，具体资格以官方页面为准"
+      ],
+      "steps": "打开阿里云 ECS 免费试用活动页 → 登录并完成实名认证 → 按卡片显示领取对应版本 → 在有效期内创建 ECS 实例 → 关注额度与到期提醒。",
+      "claimUrl": "https://www.aliyun.com/activity/ecs/ecs/freetrial",
+      "verifiedAt": "2026-11-12",
+      "sourceName": "阿里云官方活动页 · 官方核对",
+      "sourceUrl": "https://www.aliyun.com/activity/ecs/ecs/freetrial",
+      "status": "active",
+      "flags": [
+        "card-level-details-unstated",
+        "not-auto-released"
+      ],
+      "notes": "每小时抵扣上限、公网流量额度、最大规格与地域列表仅见于官方页搜索摘要与社区文章，未在活动页正文中核实，本站不将其作为已核实条款列出。阿里云学生版 300 元优惠券未在官方优惠页核实，不列为已核实优惠。"
+    },
+    {
+      "id": 7,
+      "slug": "tencent-free-trial",
+      "title": "腾讯云免费体验馆：轻量/CVM 1 个月 + 蜂驰型 7 天",
+      "provider": "腾讯云",
+      "category": "vps",
+      "group": "trial",
+      "specText": "轻量应用服务器：2核2G 3Mbps 40GB + 200G流量包（个人）/ 4核8G 12Mbps 180GB + 2000G流量包（企业，每日限量）/ 2核4G 5Mbps 60GB + 500G流量包（个企同享）；云服务器 CVM：2核2G 3Mbps 50GB / 2核4G 3Mbps 50GB；CVM 蜂驰型 BF1：2核4G 3M 50GB / 4核8G 3M 50GB",
+      "durationText": "轻量/CVM 1 个月；CVM 蜂驰型 7 天",
+      "cardRequired": null,
+      "cardNote": "活动页正文未说明绑卡要求，以官方页面为准。",
+      "regions": "活动页正文未注明地域，以官方页面为准。",
+      "risks": [
+        "仅限产品新用户：已购买、体验过对应产品（含同实名认证主体下其他账号）不能参加",
+        "每日限量，先到先得；订单提交未支付会占用体验资格",
+        "各卡片规格会变动，以活动页当前卡片为准",
+        "如需备案，须保持服务器包月时长 3 个月及以上且备案期间剩余有效期大于等于 1 个月",
+        "不要把中国站与国际站的试用条款混为一谈"
+      ],
+      "steps": "打开腾讯云免费体验馆 → 按个人/企业认证筛选卡片 → 选择轻量/CVM/蜂驰型卡片领取 → 在体验期内使用 → 到期前在控制台续费（云服务器续费最低 3.5 折）。",
+      "claimUrl": "https://cloud.tencent.com/act/pro/free",
+      "verifiedAt": "2026-11-12",
+      "sourceName": "腾讯云官方活动页 · 官方核对",
+      "sourceUrl": "https://cloud.tencent.com/act/pro/free",
+      "status": "active",
+      "flags": [
+        "per-card-specs",
+        "daily-limited",
+        "product-new-user-only"
+      ],
+      "notes": "规格为活动页卡片所写，卡片会变动；国际站（tencentcloud.com）条款不同，本页只写中国站。"
+    },
+    {
+      "id": 8,
+      "slug": "kamatera-trial",
+      "title": "Kamatera 30 天试用：1 台服务器，配置最高 $100（需信用卡）",
+      "provider": "Kamatera",
+      "category": "vps",
+      "group": "trial",
+      "specText": "30 天内可创建 1 台服务器，配置费用最高 $100；1 TB 免费流量（含入站与出站）；无固定 vCPU/内存规格（自选配置）",
+      "durationText": "30 天；到期未取消则开始计费",
+      "cardRequired": true,
+      "cardNote": "开始试用需提供有效信用卡；在限额内不扣费。",
+      "regions": "官方 FAQ 页未注明数据中心列表，以官方页面为准。",
+      "risks": [
+        "这是试用，不是永久免费：到期前需终止服务器取消，否则开始按使用量收费",
+        "试用仅限 1 台服务器",
+        "所谓约 $2 验证扣费的说法未见于官方 FAQ，以官方页面为准"
+      ],
+      "steps": "打开 Kamatera 免费试用 FAQ 页 → 提供有效信用卡开始试用 → 创建 1 台最高 $100 配置的服务器 → 30 天到期前终止服务器取消试用。",
+      "claimUrl": "https://www.kamatera.com/faq/answer/what-are-the-terms-of-the-free-trial/",
+      "verifiedAt": "2026-11-12",
+      "sourceName": "Kamatera 官方 FAQ · 官方核对",
+      "sourceUrl": "https://www.kamatera.com/faq/answer/what-are-the-terms-of-the-free-trial/",
+      "status": "active",
+      "flags": [
+        "trial-only",
+        "auto-charges-if-not-cancelled"
+      ],
+      "notes": "独立厂商试用，与前述云厂商免费层分开标注。"
+    }
+  ]
+}
