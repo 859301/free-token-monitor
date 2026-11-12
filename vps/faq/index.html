@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>常见问题：免费 VPS 的 20 个问题</title>
+<meta name="description" content="免费 VPS 的 20 个常见问题：永久免费、绑卡、甲骨文 2 核 12G、注册失败、容量、回收、流量、到期扣费、学生、Windows 等，答案以厂商官方页核对信息为准。">
+<link rel="canonical" href="https://tokens.yangtokent.com/vps/faq/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "免费VPS真的能永久免费吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "只有 2 个是永久免费的：甲骨文 Always Free 与 Google Cloud 免费层 e2-micro，都无固定结束日期。但两个都要绑卡；甲骨文有 7 天闲置回收规则，GCP 保留提前 30 天通知后变更限额的权利。其余 5 个是限时试用或额度，1 个是学生专属。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "免费VPS不用绑卡可以吗？有没有不需要信用卡的免费VPS？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "明确免绑卡的只有 Azure for Students（限全日制在校学生）；AWS 官方写明大多数新客户注册时不需要付款方式，但个别情况可能要求验证身份。两个永久免费虚拟机（甲骨文、GCP）都要绑卡。阿里云与腾讯云的活动页正文未说明绑卡要求，以官方页面为准。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "甲骨文免费VPS现在是4核24G还是2核12G？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Always Free 租户是 2 OCPU / 12 GB：官方文档（Updated 2026-06-12）写明每月前 1,500 OCPU 小时 + 9,000 GB 小时，相当于 2 OCPU 与 12 GB 内存。4 OCPU / 24 GB 是旧额度，已不适用于 Always Free 租户；PAYG 账户的 4 核 24G 免费说法存在争议，本站不将其作为承诺。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "甲骨文注册失败、被ABC了怎么办？信用卡验证不过怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "先核对官方要求：卡种须为信用卡或像信用卡一样使用的借记卡，不接受带 PIN 的借记卡、虚拟卡、一次性卡、预付卡；信息须准确、每人限一户。社区讨论报告的常见原因包括发卡行风控拦截、账单地址与注册信息不一致、注册时网络出口与地址不符（均为社区说法）。可联系发卡行、核对信息后重试，或按官方 FAQ 指引通过 Chat 联系 Oracle Cloud 支持。本站不提供绕过身份验证的方法。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "甲骨文 ARM 总提示 Out of host capacity、抢不到容量怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "这是主区域 Always Free 容量不足，官方建议：换一个可用区、等一段时间再试，或升级到 PAYG 获得更多计算资源；官方 FAQ 称补充容量可能需要数日。社区经验（非官方保证）还包括错峰重试、改开 1 OCPU 小规格、改开 AMD 的 E2 Micro。本站不推荐抢容量脚本。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "甲骨文免费实例会被回收吗？怎么保活 / 防回收？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "会。按官方文档，7 天内 CPU 95 分位利用率低于 20%、网络利用率低于 20%、内存利用率低于 20%（仅 A1 机型）即可能被判闲置回收；账户闲置 30 天以上也可能被视为弃用。最稳妥的保活是真实负载 + 定期备份；刷负载脚本是灰色地带，可能违反使用政策，本站不推荐。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "甲骨文主区域（Home Region）选错了能改吗？选哪个区？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Always Free 计算实例必须建在主区域；社区教程普遍指出主区域选定后无法更改（社区说法，请以官方文档为准），因此注册时就要选好。A1 实例不在韩国北部（春川）提供。社区有按运营商整理的区域延迟报告（社区报告、非本站实测），选区时可作参考，实际以你自己的测试为准。本站不发布延迟数据。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ARM和x86免费机有什么区别？软件能跑吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "架构不同：甲骨文 A1 是 Arm，另有 2 台 AMD (x86) 的 E2 Micro；GCP e2-micro 是 x86；Azure B2pts v2 是 Arm、B2ats v2 是 AMD。部分软件（尤其闭源与 Windows 生态）对 Arm 支持不同，部署前请确认你要跑的软件有 Arm 版本或可正常运行。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "免费 VPS 流量 / 带宽有多少？GCP 真的每月 200G 吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不是。按官方免费层表格，GCP Compute Engine 免费出站流量是每月 1 GB（从北美出发，不含中国/澳大利亚）；论坛里每月 200G 的说法与官方表格矛盾，以官方表格为准。甲骨文是每月 10 TB 出站流量；腾讯云卡片自带流量包（200G/500G/2000G 按卡片）；Kamatera 试用含 1 TB 流量。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "试用额度用完 / 到期后会扣费吗？机器会被删吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "分厂商，各不相同：AWS 到期暂停、数据保留 90 天、逾期永久删除；GCP 试用结束未升级则资源停止、30 天宽限期后删除；Azure 12 个月后服务继续运行并按量计费；阿里云到期后实例不自动释放、超限按量计费；腾讯云到期前在控制台续费；Kamatera 到期未取消则开始计费；甲骨文试用付费实例会被回收。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "学生没有信用卡，怎么领免费云服务器？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "已核实的路线是 Azure for Students：$100 额度、12 个月，注册时不需要信用卡，条件是年满 18 周岁全日制在校学生 + 学校组织邮箱验证。阿里云学生版 300 元优惠券只见于社区文章，未在官方优惠页核实，本站不将其列为已核实优惠。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "国内阿里云/腾讯云免费试用需要实名吗？每天限量怎么抢？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "阿里云活动页按账号实名认证类型展示对应卡片，个人版与企业版权益不同享。腾讯云仅限产品新用户（含同实名主体下其他账号用过的），部分卡片每日限量、先到先得；订单提交未支付会占用体验资格。华为云本次未能在官方页确认条款，状态未核实。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "免费VPS能用来跑生产业务 / 挂网站吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不建议。甲骨文 Always Free 无 SLA，GCP 免费层可提前 30 天通知变更，试用类优惠到期会停用、删除或转计费。轻量网站与学习用途可参考按用途对照；重要服务请用付费方案并做好备份。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "免费 Windows VPS 有吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "没有永久免费的 Windows 虚拟机。最接近的已核实路线是 Azure 免费账户：12 个月内每月 750 小时 × 3 种机型可选 Windows，需绑卡并转按量付费。GCP 试用期内明确不能创建 Windows Server 镜像实例；甲骨文未核实到免费 Windows 方案。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "升级到 PAYG / 按量付费后，甲骨文4核24G还免费吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "有争议，不可作为承诺。官方文档写明每月 1,500 OCPU 小时 + 9,000 GB 小时适用于所有租户；但社区有 PAYG 账户 4 OCPU / 24 GB 零账单的报告，两者冲突。本站将其列为有争议，最终以你的账单为准；升级前请确认限额，超出免费限额的使用会收费。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get a free VPS without a credit card?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "已核实的 8 条里，明确免绑卡的只有 Azure for Students（限全日制在校学生）。AWS 官方写明大多数新客户注册时不需要付款方式，但个别情况可能要求验证身份。两个永久免费虚拟机（甲骨文、GCP）都要绑卡。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Oracle Cloud Always Free really free forever?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Always Free 无固定结束日期，但有条件：需绑卡验证、计算资源只能建在主区域、7 天闲置规则可能回收实例、账户闲置 30 天以上可能被视为弃用，且无 SLA。规格为 2 OCPU / 12 GB（官方文档 2026-06-12 更新）。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do I get \"Out of host capacity\" for VM.Standard.A1.Flex?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "这是主区域 Always Free 容量不足。官方建议：换一个可用区、等一段时间再试，或升级到 PAYG；官方 FAQ 称补充容量可能需要数日。社区经验还包括错峰重试、小规格与 AMD 备选（非官方保证）。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will Oracle reclaim my idle Always Free instance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可能。官方文档的闲置判定是：7 天内 CPU 95 分位利用率低于 20%、网络利用率低于 20%、内存利用率低于 20%（仅 A1 机型）。请用真实负载并定期备份；刷负载脚本是灰色地带，本站不推荐。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is AWS Free Tier still 12 months free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不是。新账户只有额度模型：最高 $200 额度、最长 6 个月（或额度用完），不可延长；官方 FAQ 没有写固定的免费 EC2 虚拟机。旧的 12 个月免费 EC2 已不再面向新账户。核实于 2026-11-12。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：只收厂商官方核对过的免费额度。领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../">首页</a><a href="../">免费 VPS</a><a href="../offers/">VPS 详情</a><a href="../compare/">VPS 对比</a><a href="../guides/">VPS 指南</a><a href="./" aria-current="page">VPS 问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../">首页</a> / <a href="../">免费 VPS</a> / VPS 问答</p>
+<h1>VPS 常见问题：20 个问题</h1>
+<p class="meta">本页更新于 2026-11-13 · 答案以厂商官方页核对信息为准（核实于 2026-11-12）</p>
+<p>按用户在论坛与教程里的实际提问措辞整理，每个答案先给直接结论，再写官方依据。英文问题配中文回答。</p>
+<h2>中文问题</h2>
+<details><summary>免费VPS真的能永久免费吗？</summary><p>只有 2 个是永久免费的：甲骨文 Always Free 与 Google Cloud 免费层 e2-micro，都无固定结束日期。但两个都要绑卡；甲骨文有 7 天闲置回收规则，GCP 保留提前 30 天通知后变更限额的权利。其余 5 个是限时试用或额度，1 个是学生专属。核实于 2026-11-12。</p><p>详见：<a href="../compare/best-free-vps/">最佳免费 VPS 对比</a></p></details><details><summary>免费VPS不用绑卡可以吗？有没有不需要信用卡的免费VPS？</summary><p>明确免绑卡的只有 Azure for Students（限全日制在校学生）；AWS 官方写明大多数新客户注册时不需要付款方式，但个别情况可能要求验证身份。两个永久免费虚拟机（甲骨文、GCP）都要绑卡。阿里云与腾讯云的活动页正文未说明绑卡要求，以官方页面为准。核实于 2026-11-12。</p><p>详见：<a href="../compare/no-card-audit/">无需信用卡核查</a></p></details><details><summary>甲骨文免费VPS现在是4核24G还是2核12G？</summary><p>Always Free 租户是 2 OCPU / 12 GB：官方文档（Updated 2026-06-12）写明每月前 1,500 OCPU 小时 + 9,000 GB 小时，相当于 2 OCPU 与 12 GB 内存。4 OCPU / 24 GB 是旧额度，已不适用于 Always Free 租户；PAYG 账户的 4 核 24G 免费说法存在争议，本站不将其作为承诺。核实于 2026-11-12。</p><p>详见：<a href="../offers/oracle-always-free/">甲骨文详情页</a></p></details><details><summary>甲骨文注册失败、被ABC了怎么办？信用卡验证不过怎么办？</summary><p>先核对官方要求：卡种须为信用卡或像信用卡一样使用的借记卡，不接受带 PIN 的借记卡、虚拟卡、一次性卡、预付卡；信息须准确、每人限一户。社区讨论报告的常见原因包括发卡行风控拦截、账单地址与注册信息不一致、注册时网络出口与地址不符（均为社区说法）。可联系发卡行、核对信息后重试，或按官方 FAQ 指引通过 Chat 联系 Oracle Cloud 支持。本站不提供绕过身份验证的方法。核实于 2026-11-12。</p><p>详见：<a href="../guides/oracle-signup/">甲骨文注册与开机全流程</a></p></details><details><summary>甲骨文 ARM 总提示 Out of host capacity、抢不到容量怎么办？</summary><p>这是主区域 Always Free 容量不足，官方建议：换一个可用区、等一段时间再试，或升级到 PAYG 获得更多计算资源；官方 FAQ 称补充容量可能需要数日。社区经验（非官方保证）还包括错峰重试、改开 1 OCPU 小规格、改开 AMD 的 E2 Micro。本站不推荐抢容量脚本。核实于 2026-11-12。</p><p>详见：<a href="../guides/out-of-capacity/">Out of host capacity 排查指南</a></p></details><details><summary>甲骨文免费实例会被回收吗？怎么保活 / 防回收？</summary><p>会。按官方文档，7 天内 CPU 95 分位利用率低于 20%、网络利用率低于 20%、内存利用率低于 20%（仅 A1 机型）即可能被判闲置回收；账户闲置 30 天以上也可能被视为弃用。最稳妥的保活是真实负载 + 定期备份；刷负载脚本是灰色地带，可能违反使用政策，本站不推荐。核实于 2026-11-12。</p><p>详见：<a href="../guides/anti-reclaim/">甲骨文防回收与备份</a></p></details><details><summary>甲骨文主区域（Home Region）选错了能改吗？选哪个区？</summary><p>Always Free 计算实例必须建在主区域；社区教程普遍指出主区域选定后无法更改（社区说法，请以官方文档为准），因此注册时就要选好。A1 实例不在韩国北部（春川）提供。社区有按运营商整理的区域延迟报告（社区报告、非本站实测），选区时可作参考，实际以你自己的测试为准。本站不发布延迟数据。核实于 2026-11-12。</p><p>详见：<a href="../guides/oracle-signup/">甲骨文注册与开机全流程</a></p></details><details><summary>ARM和x86免费机有什么区别？软件能跑吗？</summary><p>架构不同：甲骨文 A1 是 Arm，另有 2 台 AMD (x86) 的 E2 Micro；GCP e2-micro 是 x86；Azure B2pts v2 是 Arm、B2ats v2 是 AMD。部分软件（尤其闭源与 Windows 生态）对 Arm 支持不同，部署前请确认你要跑的软件有 Arm 版本或可正常运行。核实于 2026-11-12。</p><p>详见：<a href="../compare/oracle-vs-gcp/">Oracle vs GCP 对比</a></p></details><details><summary>免费 VPS 流量 / 带宽有多少？GCP 真的每月 200G 吗？</summary><p>不是。按官方免费层表格，GCP Compute Engine 免费出站流量是每月 1 GB（从北美出发，不含中国/澳大利亚）；论坛里每月 200G 的说法与官方表格矛盾，以官方表格为准。甲骨文是每月 10 TB 出站流量；腾讯云卡片自带流量包（200G/500G/2000G 按卡片）；Kamatera 试用含 1 TB 流量。核实于 2026-11-12。</p><p>详见：<a href="../offers/gcp-free-tier/">GCP 详情页</a> · <a href="../offers/oracle-always-free/">甲骨文详情页</a></p></details><details><summary>试用额度用完 / 到期后会扣费吗？机器会被删吗？</summary><p>分厂商，各不相同：AWS 到期暂停、数据保留 90 天、逾期永久删除；GCP 试用结束未升级则资源停止、30 天宽限期后删除；Azure 12 个月后服务继续运行并按量计费；阿里云到期后实例不自动释放、超限按量计费；腾讯云到期前在控制台续费；Kamatera 到期未取消则开始计费；甲骨文试用付费实例会被回收。核实于 2026-11-12。</p><p>详见：<a href="../guides/billing-pitfalls/">免费 VPS 账单避坑</a></p></details><details><summary>学生没有信用卡，怎么领免费云服务器？</summary><p>已核实的路线是 Azure for Students：$100 额度、12 个月，注册时不需要信用卡，条件是年满 18 周岁全日制在校学生 + 学校组织邮箱验证。阿里云学生版 300 元优惠券只见于社区文章，未在官方优惠页核实，本站不将其列为已核实优惠。核实于 2026-11-12。</p><p>详见：<a href="../compare/student-routes/">学生版对比</a></p></details><details><summary>国内阿里云/腾讯云免费试用需要实名吗？每天限量怎么抢？</summary><p>阿里云活动页按账号实名认证类型展示对应卡片，个人版与企业版权益不同享。腾讯云仅限产品新用户（含同实名主体下其他账号用过的），部分卡片每日限量、先到先得；订单提交未支付会占用体验资格。华为云本次未能在官方页确认条款，状态未核实。核实于 2026-11-12。</p><p>详见：<a href="../compare/domestic-clouds/">国内免费试用对比</a></p></details><details><summary>免费VPS能用来跑生产业务 / 挂网站吗？</summary><p>不建议。甲骨文 Always Free 无 SLA，GCP 免费层可提前 30 天通知变更，试用类优惠到期会停用、删除或转计费。轻量网站与学习用途可参考按用途对照；重要服务请用付费方案并做好备份。核实于 2026-11-12。</p><p>详见：<a href="../compare/use-cases/">按用途选</a></p></details><details><summary>免费 Windows VPS 有吗？</summary><p>没有永久免费的 Windows 虚拟机。最接近的已核实路线是 Azure 免费账户：12 个月内每月 750 小时 × 3 种机型可选 Windows，需绑卡并转按量付费。GCP 试用期内明确不能创建 Windows Server 镜像实例；甲骨文未核实到免费 Windows 方案。核实于 2026-11-12。</p><p>详见：<a href="../compare/windows-honest-answer/">免费 Windows VPS</a></p></details><details><summary>升级到 PAYG / 按量付费后，甲骨文4核24G还免费吗？</summary><p>有争议，不可作为承诺。官方文档写明每月 1,500 OCPU 小时 + 9,000 GB 小时适用于所有租户；但社区有 PAYG 账户 4 OCPU / 24 GB 零账单的报告，两者冲突。本站将其列为有争议，最终以你的账单为准；升级前请确认限额，超出免费限额的使用会收费。核实于 2026-11-12。</p><p>详见：<a href="../offers/oracle-always-free/">甲骨文详情页</a></p></details>
+<h2>English questions（中文回答）</h2>
+<details><summary>Can I get a free VPS without a credit card?</summary><p>已核实的 8 条里，明确免绑卡的只有 Azure for Students（限全日制在校学生）。AWS 官方写明大多数新客户注册时不需要付款方式，但个别情况可能要求验证身份。两个永久免费虚拟机（甲骨文、GCP）都要绑卡。核实于 2026-11-12。</p><p>详见：<a href="../compare/no-card-audit/">无需信用卡核查</a></p></details><details><summary>Is Oracle Cloud Always Free really free forever?</summary><p>Always Free 无固定结束日期，但有条件：需绑卡验证、计算资源只能建在主区域、7 天闲置规则可能回收实例、账户闲置 30 天以上可能被视为弃用，且无 SLA。规格为 2 OCPU / 12 GB（官方文档 2026-06-12 更新）。核实于 2026-11-12。</p><p>详见：<a href="../offers/oracle-always-free/">甲骨文详情页</a></p></details><details><summary>Why do I get "Out of host capacity" for VM.Standard.A1.Flex?</summary><p>这是主区域 Always Free 容量不足。官方建议：换一个可用区、等一段时间再试，或升级到 PAYG；官方 FAQ 称补充容量可能需要数日。社区经验还包括错峰重试、小规格与 AMD 备选（非官方保证）。核实于 2026-11-12。</p><p>详见：<a href="../guides/out-of-capacity/">Out of host capacity 排查指南</a></p></details><details><summary>Will Oracle reclaim my idle Always Free instance?</summary><p>可能。官方文档的闲置判定是：7 天内 CPU 95 分位利用率低于 20%、网络利用率低于 20%、内存利用率低于 20%（仅 A1 机型）。请用真实负载并定期备份；刷负载脚本是灰色地带，本站不推荐。核实于 2026-11-12。</p><p>详见：<a href="../guides/anti-reclaim/">甲骨文防回收与备份</a></p></details><details><summary>Is AWS Free Tier still 12 months free?</summary><p>不是。新账户只有额度模型：最高 $200 额度、最长 6 个月（或额度用完），不可延长；官方 FAQ 没有写固定的免费 EC2 虚拟机。旧的 12 个月免费 EC2 已不再面向新账户。核实于 2026-11-12。</p><p>详见：<a href="../offers/aws-free-tier/">AWS 详情页</a></p></details>
+<h2>为什么本站不收录某些「免费 VPS」</h2>
+<p>华为云（状态未核实）、Vultr / DigitalOcean（说法矛盾且未见官方页）、Cloudways（转售型托管层）、任务续费型主机、退款保证类「试用」，均不符合本站「官方页可核实 + 厂商直营 + 条款清晰」的收录标准，暂不列为已核实优惠，完整原因见 <a href="../">免费 VPS 列表</a> 的未收录说明。</p>
+<div class="note"><b>免责：</b>本页信息照录本站核对时厂商官方页的内容（核实于 2026-11-12），额度随时可能调整或结束；领取前请以厂商官方页为准。</div>
+<div class="related"><h2>相关页面</h2><ul><li><a href="../">免费 VPS 列表</a></li><li><a href="../offers/">VPS 详情页总览</a></li><li><a href="../compare/">VPS 对比总览</a></li><li><a href="../guides/">VPS 指南总览</a></li><li><a href="../../">返回免费 Token 总览</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../">首页</a> · <a href="../">免费 VPS</a> · <a href="../offers/">VPS 详情</a> · <a href="../compare/">VPS 对比</a> · <a href="../guides/">VPS 指南</a> · <a href="./">VPS 问答</a></p><p>数据仅供参考，以厂商官方页为准。VPS 板块各条目均经厂商官方页核对，核实日期见各页；额度随时可能调整或结束，领取前请看清对方条款。本站不含邀请链接、API 中转站、二手积分、共享账号等内容。</p></div></footer>
+</body>
+</html>
