@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oracle vs GCP：免费 VPS 二选一（ARM 2核12G vs x86 e2-micro）</title>
+<meta name="description" content="甲骨文 Always Free 与 Google Cloud 免费层逐项对比：规格、出站流量（10 TB vs 1 GB）、区域、回收规则、绑卡。核实于 2026-11-12。">
+<link rel="canonical" href="https://tokens.yangtokent.com/vps/compare/oracle-vs-gcp/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Oracle vs GCP：免费 VPS 二选一（ARM 2核12G vs x86 e2-micro）",
+  "description": "甲骨文 Always Free 与 Google Cloud 免费层逐项对比：规格、出站流量（10 TB vs 1 GB）、区域、回收规则、绑卡。核实于 2026-11-12。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/vps/compare/oracle-vs-gcp/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "甲骨文和 GCP 哪个免费 VPS 更好？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "看用途：甲骨文规格与出站流量大得多（2 OCPU / 12 GB、10 TB/月），但有闲置回收与容量问题，且是 Arm 架构；GCP e2-micro 规格小、出站流量每月 1 GB，但没有官方闲置回收规则。两个都要绑卡。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ARM 和 x86 免费机有什么区别？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "甲骨文 A1 是 Arm 架构，GCP e2-micro 是 x86。部分软件（尤其闭源与 Windows 生态）对 Arm 支持不同，部署前请确认你要跑的软件有 Arm 版本或可正常运行；甲骨文另有 2 台 AMD 的 E2 Micro 可选。核实于 2026-11-12。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：只收厂商官方核对过的免费额度。领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">免费 VPS</a><a href="../../offers/">VPS 详情</a><a href="../" aria-current="page">VPS 对比</a><a href="../../guides/">VPS 指南</a><a href="../../faq/">VPS 问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">免费 VPS</a> / <a href="../">VPS 对比</a> / Oracle vs GCP</p>
+<h1>Oracle vs GCP</h1>
+<p class="meta">本页更新于 2026-11-13 · 表格数据照录本站核对的厂商官方页信息（核实于 2026-11-12）</p>
+<div class="answer"><p>两个永久免费虚拟机二选一：甲骨文规格与流量大得多，但有闲置回收与容量问题、且是 Arm 架构；GCP 省心但规格小、流量每月只有 1 GB。两个都要绑卡。</p></div>
+<h2 id="table">对比表</h2>
+<div class="tablewrap"><table><thead><tr><th>项目</th><th>甲骨文 Always Free</th><th>Google Cloud 免费层</th></tr></thead><tbody>
+<tr><th>免费机型 / 架构</th><td>Ampere A1 (Arm) + E2.1.Micro (AMD x86)</td><td>e2-micro (x86)；vCPU 数官方表格未注明</td></tr>
+<tr><th>计算规格</th><td>A1：每月 1,500 OCPU 小时 + 9,000 GB 小时（相当于 2 OCPU / 12 GB）；最多 2 台 E2 Micro</td><td>每月 1 台 e2-micro；限额按时间计算</td></tr>
+<tr><th>磁盘</th><td>200 GB 块存储总量；最小启动卷 47 GB</td><td>30 GB·月标准持久磁盘</td></tr>
+<tr><th>出站流量</th><td>每月 10 TB</td><td>每月 1 GB（北美出发，不含中国/澳大利亚）</td></tr>
+<tr><th>区域</th><td>只能建在主区域；A1 不在韩国北部（春川）提供</td><td>仅 us-west1、us-central1、us-east1 三个美国区</td></tr>
+<tr><th>绑卡</th><td>要：信用卡/借记卡身份验证；不接受 PIN 借记卡、虚拟卡、预付卡</td><td>要：信用卡或其他付款方式；$0–$1 临时预扣</td></tr>
+<tr><th>回收规则</th><td>有：7 天闲置规则 + 30 天账户弃用规则</td><td>官方免费层表格未写闲置回收规则；试用结束未升级则宽限期后删除</td></tr>
+<tr><th>试用额度（另计）</th><td>US$300，30 天</td><td>$300，90 天</td></tr>
+<tr><th>容量问题</th><td>常见 Out of host capacity，官方称补充容量可能需要数日</td><td>官方页未提 e2-micro 容量问题</td></tr>
+<tr><th>支持 / SLA</th><td>无 SLA；仅 Always Free 资源不能获得 Oracle 支持</td><td>Cloud Billing 支持包含在所有账单账号内</td></tr>
+</tbody></table></div>
+<h2 id="how">怎么选</h2>
+<ul>
+<li><strong>要规格与流量：</strong>选甲骨文。2 OCPU / 12 GB 与 10 TB 出站流量是 GCP e2-micro 的免费量无法比的；但要接受 Arm 架构（部分软件需确认兼容性）、闲置回收与抢容量。</li>
+<li><strong>要省心稳定：</strong>选 GCP。没有官方闲置回收规则，区域与流量限制写得清楚；但 e2-micro 规格小、出站流量每月只有 1 GB，不适合对外流量大的用途。</li>
+<li><strong>两个都注册：</strong>不少用户同时持有两个免费账户分工使用（例如甲骨文跑服务、GCP 做备用）。各自遵守各家条款即可；甲骨文每人限一个免费账户。</li>
+</ul>
+<h2 id="faq">常见问题</h2><details><summary>甲骨文和 GCP 哪个免费 VPS 更好？</summary><p>看用途：甲骨文规格与出站流量大得多（2 OCPU / 12 GB、10 TB/月），但有闲置回收与容量问题，且是 Arm 架构；GCP e2-micro 规格小、出站流量每月 1 GB，但没有官方闲置回收规则。两个都要绑卡。核实于 2026-11-12。</p></details><details><summary>ARM 和 x86 免费机有什么区别？</summary><p>甲骨文 A1 是 Arm 架构，GCP e2-micro 是 x86。部分软件（尤其闭源与 Windows 生态）对 Arm 支持不同，部署前请确认你要跑的软件有 Arm 版本或可正常运行；甲骨文另有 2 台 AMD 的 E2 Micro 可选。核实于 2026-11-12。</p></details>
+<div class="note"><b>免责：</b>本页信息照录本站核对时厂商官方页的内容（核实于 2026-11-12），额度随时可能调整或结束；领取前请以厂商官方页为准。</div>
+<div class="related"><h2>其他对比</h2><ul><li><a href="../best-free-vps/">最佳免费 VPS 对比</a></li><li><a href="./">Oracle vs GCP</a></li><li><a href="../aws-azure-gcp/">AWS vs Azure vs GCP</a></li><li><a href="../no-card-audit/">无需信用卡核查</a></li><li><a href="../domestic-clouds/">国内免费试用对比</a></li><li><a href="../student-routes/">学生版对比</a></li><li><a href="../windows-honest-answer/">免费 Windows VPS</a></li><li><a href="../use-cases/">按用途选</a></li><li><a href="../../">返回免费 VPS 列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">免费 VPS</a> · <a href="../../offers/">VPS 详情</a> · <a href="../">VPS 对比</a> · <a href="../../guides/">VPS 指南</a> · <a href="../../faq/">VPS 问答</a></p><p>数据仅供参考，以厂商官方页为准。VPS 板块各条目均经厂商官方页核对，核实日期见各页；额度随时可能调整或结束，领取前请看清对方条款。本站不含邀请链接、API 中转站、二手积分、共享账号等内容。</p></div></footer>
+</body>
+</html>
