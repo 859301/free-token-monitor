@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>甲骨文防回收与备份：闲置规则、真实负载、PAYG说明</title>
+<meta name="description" content="甲骨文防回收指南：7 天闲置规则原文、监控、真实负载、备份清单、PAYG 升级利弊；不推荐刷负载脚本（灰色地带警告）。核实于 2026-11-12。">
+<link rel="canonical" href="https://tokens.yangtokent.com/vps/guides/anti-reclaim/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "甲骨文防回收与备份：闲置规则、真实负载、PAYG说明",
+  "description": "甲骨文防回收指南：7 天闲置规则原文、监控、真实负载、备份清单、PAYG 升级利弊；不推荐刷负载脚本（灰色地带警告）。核实于 2026-11-12。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/vps/guides/anti-reclaim/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：只收厂商官方核对过的免费额度。领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">免费 VPS</a><a href="../../offers/">VPS 详情</a><a href="../../compare/">VPS 对比</a><a href="../" aria-current="page">VPS 指南</a><a href="../../faq/">VPS 问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">免费 VPS</a> / <a href="../">VPS 指南</a> / 甲骨文防回收与备份</p>
+<h1>甲骨文防回收与备份</h1>
+<p class="meta">本页更新于 2026-11-13</p>
+<div class="answer"><p>甲骨文闲置回收规则是官方文档明文：7 天内三项利用率同时低于阈值即可能回收。最稳妥的保活是真实负载 + 定期备份；刷负载脚本是灰色地带，本站不推荐。升级 PAYG 的利弊与未证实之处一并说明。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#rule">1. 闲置规则原文</a></li><li><a href="#monitor">2. 监控利用率</a></li><li><a href="#real">3. 真实负载</a></li><li><a href="#payg">4. 升级 PAYG</a></li><li><a href="#backup">5. 备份清单</a></li></ul></div>
+<h2 id="rule">1. 闲置规则原文（官方文档）</h2>
+<p>官方文档写明：闲置的 Always Free 计算实例可能被 Oracle 回收。判定标准是，在 7 天期间内同时满足：CPU 利用率 95 分位低于 20%、网络利用率低于 20%、内存利用率低于 20%（仅 A1 机型）。另按官方 FAQ，账户闲置 30 天以上可能被视为弃用，有资格被暂停或终止。两条规则针对的对象不同（实例 vs 账户），都要留意。</p>
+<h2 id="monitor">2. 监控利用率，别等回收通知</h2>
+<p>监控（Monitoring）在官方 FAQ 的 Always Free 服务清单内，可在控制台查看实例的 CPU、网络、内存利用率。建议定期查看：长期低于阈值的实例就是回收候选。发现利用率长期偏低时，优先考虑「这台实例是不是真的不需要」，而不是立刻想办法刷高利用率。</p>
+<h2 id="real">3. 用真实负载，而不是刷负载</h2>
+<p>最稳妥的保活是让实例真的在干活：跑你的网站、Bot、定时任务、同步备份等真实服务。真实负载天然高于闲置阈值，也符合厂商的使用政策。反之，长期空跑一台实例本身就说明它可能不需要存在。</p>
+<div class="note"><b>灰色地带警告：</b>社区里有「刷负载脚本」「定时跑分保活」的做法，但多篇社区指南明确警告这是灰色地带——例如 Fumora 的指南写道 “Do not run artificial load… gray area… read acceptable-use policy”（不要跑人为负载……灰色地带……请读可接受使用政策）。人为制造负载冒充真实使用可能违反厂商使用政策，导致账户处理。本站不推荐任何刷负载脚本，也不提供相关配置。</div>
+<h2 id="payg">4. 升级 PAYG：利弊与未证实之处</h2>
+<p>升级到 PAYG（按量付费）后可获得客户支持、不同的容量限制，以及超出免费限额的使用能力；Always Free 资源仍不收费，只对超出免费限额的使用收费。但请注意两点：第一，超出限额的使用会向你的卡收费，升级前请确认限额与账单设置；第二，官方文档没有写明「升级 PAYG 后不再受闲置回收影响」，社区有此说法，但本站未在官方文档中找到这句保证，不要把它当作官方承诺。</p>
+<h2 id="backup">5. 备份清单：回收前把数据拿出来</h2>
+<p>无论是否升级，都请定期备份：Always Free 包含 200 GB 块存储与 5 个卷备份（官方文档）；重要数据另存一份到对象存储或本地。试用结束前、实例调整前、长期离线前，都先备份再操作。被回收的资源无法恢复——官方 FAQ 写明，回收的资源是永久删除。</p>
+<div class="note"><b>提醒：</b>闲置规则以官方文档为准；社区的保活经验只作参考，刷负载脚本可能违反厂商使用政策，本站不推荐。</div>
+<div class="related"><h2>相关页面</h2><ul><li><a href="../../offers/oracle-always-free/">Always Free 永久免费云服务器（甲骨文）详情</a></li><li><a href="../oracle-signup/">甲骨文注册与开机全流程</a></li><li><a href="../out-of-capacity/">Out of host capacity 怎么办</a></li><li><a href="../../faq/">VPS 常见问题</a></li><li><a href="../../">返回免费 VPS 列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">免费 VPS</a> · <a href="../../offers/">VPS 详情</a> · <a href="../../compare/">VPS 对比</a> · <a href="../">VPS 指南</a> · <a href="../../faq/">VPS 问答</a></p><p>数据仅供参考，以厂商官方页为准。VPS 板块各条目均经厂商官方页核对，核实日期见各页；额度随时可能调整或结束，领取前请看清对方条款。本站不含邀请链接、API 中转站、二手积分、共享账号等内容。</p></div></footer>
+</body>
+</html>
