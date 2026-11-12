@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Azure 免费账户详解：$200/30天 + 750小时/12个月</title>
+<meta name="description" content="Azure 免费账户：$200 额度 30 天，B1s/B2pts v2/B2ats v2 每月各 750 小时（12 个月）；需在 30 天内转按量付费；12 个月后服务继续运行并计费。核实于 2026-11-12。">
+<link rel="canonical" href="https://tokens.yangtokent.com/vps/offers/azure-free-account/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Azure 免费账户详解：$200/30天 + 750小时/12个月",
+  "description": "Azure 免费账户：$200 额度 30 天，B1s/B2pts v2/B2ats v2 每月各 750 小时（12 个月）；需在 30 天内转按量付费；12 个月后服务继续运行并计费。核实于 2026-11-12。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/vps/offers/azure-free-account/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Azure 的 $200 额度能用多久？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "30 天。$200 额度须在开户后 30 天内使用；虚拟机与服务的免费量为期 12 个月，但需在 30 天内或额度用完后转按量付费才能继续获得。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "750 小时是三种机型各 750 小时吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "按官方页：B1s、B2pts v2 (Arm)、B2ats v2 (AMD) 三种突发型虚拟机每月各 750 小时（Linux 或 Windows）。磁盘、IP 与出站流量的免费量官方页面未注明，以官方页面为准。核实于 2026-11-12。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "12 个月后服务会自动停吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不会。按官方页，12 个月到期后正在使用的服务会继续运行，并按按量付费价格计费。到期前请决定继续付费还是停用/删除。核实于 2026-11-12。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：只收厂商官方核对过的免费额度。领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">免费 VPS</a><a href="../" aria-current="page">VPS 详情</a><a href="../../compare/">VPS 对比</a><a href="../../guides/">VPS 指南</a><a href="../../faq/">VPS 问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">免费 VPS</a> / <a href="../">VPS 详情</a> / Azure 免费账户：$200 额度 + 750 小时虚拟机 / 12 个月</p>
+<h1>Azure 免费账户：$200 额度 + 750 小时虚拟机 / 12 个月</h1>
+<p class="meta">Microsoft Azure · 核实于 2026-11-12 · 本页更新于 2026-11-13</p>
+<p><span class="tag">试用额度</span><span class="tag warn">需绑卡</span><span class="tag">12 个月</span><span class="tag warn">需转按量付费</span></p>
+<div class="answer"><p>Microsoft Azure「Azure 免费账户：$200 额度 + 750 小时虚拟机 / 12 个月」：$200 额度；B1s、B2pts v2 (Arm)、B2ats v2 (AMD) 三种突发型虚拟机每月各 750 小时（Linux 或 Windows）；20+ 项热门服务的每月免费量 + 65+ 项长期免费服务。时长：$200 额度 30 天；虚拟机与服务免费量 12 个月（仅新客户）。绑卡：注册需电话号码 + 信用卡/借记卡（非预付卡）用于身份验证；可能出现 1 美元（或等值）临时授权，验证后解除。中国香港与巴西仅接受信用卡。 核实于 2026-11-12，领取前请以厂商官方页为准。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#facts">规格速览</a></li><li><a href="#what">免费的是什么</a></li><li><a href="#requirements">需要什么条件</a></li><li><a href="#payg">必须转按量付费</a></li><li><a href="#end">12 个月后会怎样</a></li><li><a href="#steps">怎么领取</a></li><li><a href="#risks">注意事项</a></li><li><a href="#faq">常见问题</a></li></ul></div>
+<h2 id="facts">规格速览</h2>
+<div class="tablewrap"><table class="fact"><tbody><tr><th>免费内容</th><td>$200 额度；B1s、B2pts v2 (Arm)、B2ats v2 (AMD) 三种突发型虚拟机每月各 750 小时（Linux 或 Windows）；20+ 项热门服务的每月免费量 + 65+ 项长期免费服务</td></tr><tr><th>提供方</th><td>Microsoft Azure</td></tr><tr><th>分组</th><td>试用 / 额度</td></tr><tr><th>时长</th><td>$200 额度 30 天；虚拟机与服务免费量 12 个月（仅新客户）</td></tr><tr><th>绑卡与验证</th><td>注册需电话号码 + 信用卡/借记卡（非预付卡）用于身份验证；可能出现 1 美元（或等值）临时授权，验证后解除。中国香港与巴西仅接受信用卡。</td></tr><tr><th>区域</th><td>各区域虚拟机可用性官方页面未注明，以官方页面为准。</td></tr><tr><th>核实日期</th><td>2026-11-12</td></tr><tr><th>来源</th><td>Microsoft Azure 官方页 · 官方核对（<a href="https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account/" target="_blank" rel="noopener noreferrer">官方页</a>）</td></tr></tbody></table></div>
+<h2 id="what">免费的是什么</h2>
+<p>按官方页，Azure 免费账户包括：$200 额度（30 天内使用）；B1s、B2pts v2 (Arm)、B2ats v2 (AMD) 三种突发型虚拟机每月各 750 小时（Linux 或 Windows），为期 12 个月；20+ 项热门服务的每月免费量；65+ 项长期免费服务。虚拟机的磁盘、IP 与出站流量免费量官方页面未注明，以官方页面为准。$200 额度不可用于 Azure Marketplace。</p>
+<h2 id="requirements">需要什么条件</h2>
+<p>注册需要电话号码、信用卡或借记卡（非预付卡），以及 Microsoft 账号或 GitHub 账号；电话与银行卡用于身份验证，注册时不扣费，但可能出现 1 美元（或等值）临时授权，验证后解除。中国香港与巴西仅接受信用卡。每位新客户限一个带免费服务与 $200 额度的账户。「国家/地区」字段须选择与账单地址一致的地点；若你的国家不在列表中，该优惠在你所在区域不可用。</p>
+<h2 id="payg">必须转按量付费（关键步骤）</h2>
+<p>官方页写明：注册 Azure 免费账户后，需在 30 天内或额度用完后（以先到者为准）转按量付费，才能继续获得免费服务；不转的，账户与服务会被停用，恢复使用也需转按量付费。在 30 天结束前转按量付费不会丢失额度，剩余额度在开户后 30 天内仍可用。转按量付费后，只对超出每月免费量的使用收费，可在门户中查看免费服务用量。</p>
+<h2 id="end">12 个月后会怎样</h2>
+<p>按官方页：对于 12 个月免费的服务，12 个月到期后你正在使用的服务会继续运行，并按按量付费价格计费——不会自动停用。因此 12 个月到期前，请决定是继续付费使用还是停用/删除资源，避免意外账单。详见指南 <a href="../../guides/billing-pitfalls/">免费 VPS 账单避坑</a>。</p>
+<h2 id="steps">怎么领取</h2>
+<p>注册 Azure 免费账户 → 完成电话与银行卡验证 → 在 30 天内使用 $200 额度 → 转按量付费以继续获得 12 个月免费量 → 每月在门户中查看免费服务用量。</p>
+<p><a class="btn" href="https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account/" target="_blank" rel="noopener noreferrer">去厂商官方页领取</a></p>
+<h2 id="risks">注意事项</h2><ul><li>需在 30 天内或额度用完后转按量付费，否则无法继续获得 12 个月免费服务；不转则账户与服务停用</li><li>12 个月到期后，正在使用的服务会继续运行并按按量付费价格计费</li><li>虚拟机的磁盘/IP/出站流量免费量官方页面未注明，以官方页面为准</li><li>每位新客户限一个免费账户</li></ul>
+<h2 id="faq">常见问题</h2><details><summary>Azure 的 $200 额度能用多久？</summary><p>30 天。$200 额度须在开户后 30 天内使用；虚拟机与服务的免费量为期 12 个月，但需在 30 天内或额度用完后转按量付费才能继续获得。核实于 2026-11-12。</p></details><details><summary>750 小时是三种机型各 750 小时吗？</summary><p>按官方页：B1s、B2pts v2 (Arm)、B2ats v2 (AMD) 三种突发型虚拟机每月各 750 小时（Linux 或 Windows）。磁盘、IP 与出站流量的免费量官方页面未注明，以官方页面为准。核实于 2026-11-12。</p></details><details><summary>12 个月后服务会自动停吗？</summary><p>不会。按官方页，12 个月到期后正在使用的服务会继续运行，并按按量付费价格计费。到期前请决定继续付费还是停用/删除。核实于 2026-11-12。</p></details>
+<div class="note"><b>免责：</b>本页信息照录本站核对时厂商官方页的内容（核实于 2026-11-12），额度随时可能调整或结束；领取前请以厂商官方页为准。</div>
+<div class="related"><h2>相关页面</h2><ul><li><a href="../azure-for-students/">Azure for Students：$100 额度 / 12 个月，无需信用卡</a></li><li><a href="../aws-free-tier/">AWS 免费套餐：最高 $200 额度 / 6 个月</a></li><li><a href="../../compare/aws-azure-gcp/">AWS vs Azure vs GCP 免费层对比</a></li><li><a href="../../compare/windows-honest-answer/">免费 Windows VPS：有吗？</a></li><li><a href="../../guides/billing-pitfalls/">免费 VPS 账单避坑</a></li><li><a href="../../faq/">VPS 常见问题</a></li><li><a href="../../">返回免费 VPS 列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">免费 VPS</a> · <a href="../">VPS 详情</a> · <a href="../../compare/">VPS 对比</a> · <a href="../../guides/">VPS 指南</a> · <a href="../../faq/">VPS 问答</a></p><p>数据仅供参考，以厂商官方页为准。VPS 板块各条目均经厂商官方页核对，核实日期见各页；额度随时可能调整或结束，领取前请看清对方条款。本站不含邀请链接、API 中转站、二手积分、共享账号等内容。</p></div></footer>
+</body>
+</html>
