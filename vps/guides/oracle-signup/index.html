@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>甲骨文注册与开机全流程：绑卡、选主区域、开ARM、防踩坑</title>
+<meta name="description" content="甲骨文注册开机全流程：卡种要求、主区域选择、A1 开机、双层防火墙、容量重试、试用与 Always Free 分离。规则以官方文档为准，社区经验均标注来源。">
+<link rel="canonical" href="https://tokens.yangtokent.com/vps/guides/oracle-signup/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "甲骨文注册与开机全流程：绑卡、选主区域、开ARM、防踩坑",
+  "description": "甲骨文注册开机全流程：卡种要求、主区域选择、A1 开机、双层防火墙、容量重试、试用与 Always Free 分离。规则以官方文档为准，社区经验均标注来源。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/vps/guides/oracle-signup/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：只收厂商官方核对过的免费额度。领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">免费 VPS</a><a href="../../offers/">VPS 详情</a><a href="../../compare/">VPS 对比</a><a href="../" aria-current="page">VPS 指南</a><a href="../../faq/">VPS 问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">免费 VPS</a> / <a href="../">VPS 指南</a> / 甲骨文注册与开机全流程</p>
+<h1>甲骨文注册与开机全流程</h1>
+<p class="meta">本页更新于 2026-11-13</p>
+<div class="answer"><p>注册甲骨文免费层分七步：备卡、注册验证、选主区域、开 A1 实例、放行双层防火墙、处理容量报错、分清试用额度与 Always Free。规则以官方文档与 FAQ 为准，社区经验均标注为社区说法。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#prep">1. 准备</a></li><li><a href="#signup">2. 注册与身份验证</a></li><li><a href="#region">3. 选主区域</a></li><li><a href="#create">4. 开 A1 实例</a></li><li><a href="#firewall">5. 双层防火墙</a></li><li><a href="#capacity">6. 抢不到容量</a></li><li><a href="#trial">7. 分清试用与 Always Free</a></li></ul></div>
+<h2 id="prep">1. 准备：一张能用的卡与准确的信息</h2>
+<p>按官方 FAQ，注册需提供信用卡或借记卡用于身份验证；Oracle 接受信用卡与「像信用卡一样使用的借记卡」，不接受带 PIN 的借记卡、虚拟卡、一次性卡、预付卡。注册时会产生临时授权预扣，通常 3–5 天内由银行解除，不会实际扣费。每人限一个免费账户；联系与账单信息必须准确、有效并经本人同意使用。准备好邮箱（用于验证与通知）与一张符合要求的卡再开始。</p>
+<h2 id="signup">2. 注册与身份验证</h2>
+<p>在 Oracle Cloud Free Tier 官方页注册，按页面流程填写信息并完成卡验证。验证失败是常见卡点：社区讨论里报告的常见原因包括发卡行风控拦截、账单地址与注册信息不一致、注册时网络出口与地址不符（以上均为社区说法，非官方说明）。可尝试的办法：联系发卡行确认拦截、核对账单地址与注册信息一致、换个网络环境后重试；仍有问题可按官方 FAQ 指引，通过菜单栏的 Chat 联系 Oracle Cloud 支持团队。本站不提供绕过身份验证的方法。</p>
+<h2 id="region">3. 选主区域：注册时就要选好</h2>
+<p>Always Free 计算实例必须建在主区域（Home Region）。社区教程普遍指出主区域选定后无法更改（社区说法，请以官方文档为准），因此注册时就要认真选：A1 实例除韩国北部（春川）外可在任一可用区创建；不同区域的 Always Free 容量不同，容量紧张时开不出实例。社区有按运营商（电信/移动/联通）整理的区域延迟报告（例如 Linux.do 的讨论帖），那是社区报告、非本站实测，选区时可作参考，实际以你自己的测试为准。</p>
+<h2 id="create">4. 开 A1 实例：规格别超限</h2>
+<p>在主区域创建实例，机型选 VM.Standard.A1.Flex，OCPU 与内存总量控制在免费限额内（Always Free 租户相当于 2 OCPU / 12 GB；可开 1 台 2 OCPU 或 2 台各 1 OCPU，取决于启动卷分配）。每个实例的最小启动卷为 47 GB，账户共 200 GB 块存储。也可以开最多 2 台 E2.1.Micro (AMD) 实例。创建时配置 SSH 密钥对（私钥保存好），并确认实例被标记为 Always Free——用试用额度开的付费规格实例会在试用结束时被回收。</p>
+<h2 id="firewall">5. 双层防火墙：云端与系统内都要放行</h2>
+<p>社区教程提醒：甲骨文实例有两层防火墙——云端的安全列表（VCN Security List）与系统内的防火墙（如 iptables/firewalld），两边都要放行端口服务才能从外网访问（社区教程内容，配置细节以官方文档为准）。另有社区教程提到出站 25 端口（邮件发送）默认受限，如需发邮件请查官方文档确认。</p>
+<h2 id="capacity">6. 抢不到容量：换可用区、等、降规格</h2>
+<p>报 Out of host capacity 时，官方建议是换一个可用区、等一段时间再试，或升级到 PAYG 获得更多计算资源。社区经验（非官方保证）还包括：错峰重试、改开 1 OCPU 的小规格、改开 AMD 的 E2 Micro（社区报告称 AMD 机型通常有货）。详见指南 <a href="../out-of-capacity/">Out of host capacity 怎么办</a>。</p>
+<h2 id="trial">7. 分清试用额度与 Always Free</h2>
+<p>US$300 试用额度（30 天）与 Always Free 是两回事：用额度创建的付费实例会在试用结束时被回收；试用结束时 A1 总量若超出 Always Free 限额，全部 A1 实例会被停用、30 天后删除。试用结束前，请把 A1 总量降到限额以内，并确认要保留的实例都是 Always Free 标记。试用结束后不升级也能继续用 Always Free 资源，但无法获得 Oracle 技术支持。</p>
+<div class="note"><b>提醒：</b>注册流程、卡种要求、区域与容量规则以厂商官方文档与 FAQ 为准；社区经验只作参考，本站不提供绕过身份验证、地区或支付规则的方法。</div>
+<div class="related"><h2>相关页面</h2><ul><li><a href="../../offers/oracle-always-free/">Always Free 永久免费云服务器（甲骨文）详情</a></li><li><a href="../anti-reclaim/">甲骨文防回收与备份</a></li><li><a href="../out-of-capacity/">Out of host capacity 怎么办</a></li><li><a href="../billing-pitfalls/">免费 VPS 账单避坑</a></li><li><a href="../../faq/">VPS 常见问题</a></li><li><a href="../../">返回免费 VPS 列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">免费 VPS</a> · <a href="../../offers/">VPS 详情</a> · <a href="../../compare/">VPS 对比</a> · <a href="../">VPS 指南</a> · <a href="../../faq/">VPS 问答</a></p><p>数据仅供参考，以厂商官方页为准。VPS 板块各条目均经厂商官方页核对，核实日期见各页；额度随时可能调整或结束，领取前请看清对方条款。本站不含邀请链接、API 中转站、二手积分、共享账号等内容。</p></div></footer>
+</body>
+</html>
