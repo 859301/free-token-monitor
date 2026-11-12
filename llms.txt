@@ -45,3 +45,42 @@
 - [领取第一个免费 Key 并完成第一次调用](https://tokens.yangtokent.com/guides/first-free-key/): 从选额度、注册、创建 Key 到第一次调用，含一个零 Key 示例。
 - [401 / 402 / 429 报错排查](https://tokens.yangtokent.com/guides/fix-401-402-429/): 三个状态码分别改什么，分钟级与日级限速的区别，重置时间对照表。
 - [把免费 Key 接入 Claude Code / Codex / Cline / OpenCode](https://tokens.yangtokent.com/guides/connect-coding-agents/): 协议对照、通用接入步骤、两个常见坑、本站 OpenAI 兼容额度清单。
+
+
+## 免费 VPS 板块
+
+- [免费 VPS](https://tokens.yangtokent.com/vps/): 8 条经厂商官方页核实的免费云服务器：2 个永久免费、5 个试用额度、1 个学生专属；含未收录说明与变化记录。
+- [VPS 详情](https://tokens.yangtokent.com/vps/offers/): 8 条 VPS 优惠详情页。
+- [VPS 对比](https://tokens.yangtokent.com/vps/compare/): 8 篇对比：总对比、Oracle vs GCP、三家免费层、免绑卡核查、国内试用、学生版、Windows、按用途选。
+- [VPS 指南](https://tokens.yangtokent.com/vps/guides/): 甲骨文注册开机、防回收与备份、容量排查、账单避坑。
+- [VPS 常见问题](https://tokens.yangtokent.com/vps/faq/): 20 个常见问题与回答。
+- [VPS 数据（JSON）](https://tokens.yangtokent.com/data/vps.json): 全部 8 条 VPS 优惠的机器可读数据，含规格原文、绑卡、区域、风险、核实日期。
+
+## VPS 详情页
+
+- [Always Free 永久免费云服务器（甲骨文 Oracle Cloud）](https://tokens.yangtokent.com/vps/offers/oracle-always-free/): A1 每月 1,500 OCPU 小时 + 9,000 GB 小时（相当于 2 OCPU / 12 GB），200 GB 存储，10 TB 出站流量。需绑卡。核实于 2026-11-12。
+- [Google Cloud 免费层：e2-micro 永久免费 + $300 试用](https://tokens.yangtokent.com/vps/offers/gcp-free-tier/): 每月 1 台 e2-micro，30 GB 磁盘，1 GB 出站流量，仅限 3 个美国区域。需绑卡。核实于 2026-11-12。
+- [AWS 免费套餐：最高 $200 额度 / 6 个月（新账户）](https://tokens.yangtokent.com/vps/offers/aws-free-tier/): $100 + 最多再得 $100，无固定免费 EC2 虚拟机。大多数新客户不用付款方式。核实于 2026-11-12。
+- [Azure 免费账户：$200 额度 + 750 小时虚拟机 / 12 个月](https://tokens.yangtokent.com/vps/offers/azure-free-account/): B1s/B2pts v2/B2ats v2 每月各 750 小时。需绑卡。核实于 2026-11-12。
+- [Azure for Students：$100 额度 / 12 个月，无需信用卡](https://tokens.yangtokent.com/vps/offers/azure-for-students/): $100 额度，限全日制在校学生。免绑卡。核实于 2026-11-12。
+- [阿里云 ECS 免费试用：个人 300 元 / 企业 660 元，3 个月额度制](https://tokens.yangtokent.com/vps/offers/aliyun-ecs-trial/): 总额度 + 每小时抵扣上限 + 有效期三重约束。核实于 2026-11-12。
+- [腾讯云免费体验馆：轻量/CVM 1 个月 + 蜂驰型 7 天](https://tokens.yangtokent.com/vps/offers/tencent-free-trial/): 按卡片规格领取，仅限产品新用户。核实于 2026-11-12。
+- [Kamatera 30 天试用：1 台服务器，配置最高 $100（需信用卡）](https://tokens.yangtokent.com/vps/offers/kamatera-trial/): 30 天试用，1 TB 流量，到期未取消则计费。需绑卡。核实于 2026-11-12。
+
+## VPS 对比
+
+- [最佳免费 VPS 对比：永久免费 vs 试用额度](https://tokens.yangtokent.com/vps/compare/best-free-vps/): 8 条总表与诚实结论。
+- [Oracle vs GCP：免费 VPS 二选一](https://tokens.yangtokent.com/vps/compare/oracle-vs-gcp/): 规格、出站流量、区域、回收规则逐项比。
+- [AWS vs Azure vs GCP 免费层对比（2026 新规则）](https://tokens.yangtokent.com/vps/compare/aws-azure-gcp/): 额度模型、时长、到期处理、绑卡规则。
+- [免费 VPS 无需信用卡：真正不用绑卡的有哪些？](https://tokens.yangtokent.com/vps/compare/no-card-audit/): 逐条核对绑卡要求，含 Kamatera 辟谣。
+- [阿里云 vs 腾讯云 vs 华为云：国内免费试用对比](https://tokens.yangtokent.com/vps/compare/domestic-clouds/): 额度制 vs 固定实例；华为云状态未核实。
+- [免费 VPS 学生版：Azure for Students vs 阿里云学生优惠](https://tokens.yangtokent.com/vps/compare/student-routes/): 学生路线的已核实与未核实部分分开写。
+- [免费 Windows VPS：有吗？](https://tokens.yangtokent.com/vps/compare/windows-honest-answer/): 诚实回答：没有永久免费的 Windows 虚拟机。
+- [免费 VPS 能跑什么？按用途选](https://tokens.yangtokent.com/vps/compare/use-cases/): 博客、Bot、Minecraft、AI Agent 等按已核实规格对照。
+
+## VPS 指南
+
+- [甲骨文注册与开机全流程](https://tokens.yangtokent.com/vps/guides/oracle-signup/): 绑卡、选主区域、开 ARM、防踩坑。
+- [甲骨文防回收与备份](https://tokens.yangtokent.com/vps/guides/anti-reclaim/): 闲置规则、真实负载、PAYG 说明；不推荐刷负载脚本。
+- [Out of host capacity 怎么办](https://tokens.yangtokent.com/vps/guides/out-of-capacity/): 官方解释、换可用区、等待、AMD 备选。
+- [免费 VPS 账单避坑](https://tokens.yangtokent.com/vps/guides/billing-pitfalls/): 分厂商到期处理、预算提醒、到期前检查清单。

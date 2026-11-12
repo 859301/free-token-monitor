@@ -11,6 +11,13 @@
 - 每条数据只照录官方原文，不做自创人民币折算。额度原文、领取链接、门槛、风险、领取步骤、核实日期都在 `data/offers.json` 里。
 - 本站不含邀请链接、API 中转站、二手积分、共享账号、接码多开等内容。
 
+## 免费 VPS 板块
+
+- 共 8 条（核实于 2026-11-12），分三组：永久免费 2 条（甲骨文、Google Cloud）、试用/额度 5 条（AWS、Azure、阿里云、腾讯云、Kamatera）、学生专属 1 条（Azure for Students）。
+- 数据在 `data/vps.json` 里，字段与 `data/offers.json` 对应（另有 `group`、`specText`、`durationText`、`cardNote`、`flags`、`notes` 字段；`cardRequired` 为 `null` 表示官方页未说明）。
+- 板块页面在 `vps/` 下：列表页、8 篇详情页、8 篇对比、4 篇指南、1 个问答页（20 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+- 未收录说明：华为云（状态未核实）、Vultr / DigitalOcean（说法矛盾）、任务续费型主机、退款保证类「试用」等暂不收录，原因写在 `vps/index.html` 的「未收录及原因」一节。
+
 ## 使用方法
 
 ### 本地打开
