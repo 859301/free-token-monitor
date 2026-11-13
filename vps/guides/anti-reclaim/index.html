@@ -85,14 +85,14 @@ footer a { color:var(--accent); }
 </script>
 </head>
 <body>
-<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：只收厂商官方核对过的免费额度。领取前请以厂商官方页为准。</p></div></header>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：额度信息来自厂商官方页。领取前请以厂商官方页为准。</p></div></header>
 <nav><div class="wrap"><a href="../../../">首页</a><a href="../../">免费 VPS</a><a href="../../offers/">VPS 详情</a><a href="../../compare/">VPS 对比</a><a href="../" aria-current="page">VPS 指南</a><a href="../../faq/">VPS 问答</a></div></nav>
 <main><div class="wrap">
 <article>
 <p class="crumb"><a href="../../../">首页</a> / <a href="../../">免费 VPS</a> / <a href="../">VPS 指南</a> / 甲骨文防回收与备份</p>
 <h1>甲骨文防回收与备份</h1>
 <p class="meta">本页更新于 2026-11-13</p>
-<div class="answer"><p>甲骨文闲置回收规则是官方文档明文：7 天内三项利用率同时低于阈值即可能回收。最稳妥的保活是真实负载 + 定期备份；刷负载脚本是灰色地带，本站不推荐。升级 PAYG 的利弊与未证实之处一并说明。</p></div>
+<div class="answer"><p>甲骨文闲置回收规则是官方文档明文：7 天内三项利用率同时低于阈值即可能回收。最稳妥的保活是真实负载 + 定期备份；刷负载脚本是灰色地带，不推荐。升级 PAYG 的利弊与未证实之处一并说明。</p></div>
 <div class="toc"><b>本页内容</b><ul><li><a href="#rule">1. 闲置规则原文</a></li><li><a href="#monitor">2. 监控利用率</a></li><li><a href="#real">3. 真实负载</a></li><li><a href="#payg">4. 升级 PAYG</a></li><li><a href="#backup">5. 备份清单</a></li></ul></div>
 <h2 id="rule">1. 闲置规则原文（官方文档）</h2>
 <p>官方文档写明：闲置的 Always Free 计算实例可能被 Oracle 回收。判定标准是，在 7 天期间内同时满足：CPU 利用率 95 分位低于 20%、网络利用率低于 20%、内存利用率低于 20%（仅 A1 机型）。另按官方 FAQ，账户闲置 30 天以上可能被视为弃用，有资格被暂停或终止。两条规则针对的对象不同（实例 vs 账户），都要留意。</p>
@@ -100,15 +100,15 @@ footer a { color:var(--accent); }
 <p>监控（Monitoring）在官方 FAQ 的 Always Free 服务清单内，可在控制台查看实例的 CPU、网络、内存利用率。建议定期查看：长期低于阈值的实例就是回收候选。发现利用率长期偏低时，优先考虑「这台实例是不是真的不需要」，而不是立刻想办法刷高利用率。</p>
 <h2 id="real">3. 用真实负载，而不是刷负载</h2>
 <p>最稳妥的保活是让实例真的在干活：跑你的网站、Bot、定时任务、同步备份等真实服务。真实负载天然高于闲置阈值，也符合厂商的使用政策。反之，长期空跑一台实例本身就说明它可能不需要存在。</p>
-<div class="note"><b>灰色地带警告：</b>社区里有「刷负载脚本」「定时跑分保活」的做法，但多篇社区指南明确警告这是灰色地带——例如 Fumora 的指南写道 “Do not run artificial load… gray area… read acceptable-use policy”（不要跑人为负载……灰色地带……请读可接受使用政策）。人为制造负载冒充真实使用可能违反厂商使用政策，导致账户处理。本站不推荐任何刷负载脚本，也不提供相关配置。</div>
+<div class="note"><b>灰色地带警告：</b>社区里有「刷负载脚本」「定时跑分保活」的做法，但多篇社区指南明确警告这是灰色地带——例如 Fumora 的指南写道 “Do not run artificial load… gray area… read acceptable-use policy”（不要跑人为负载……灰色地带……请读可接受使用政策）。人为制造负载冒充真实使用可能违反厂商使用政策，导致账户处理。不推荐任何刷负载脚本。</div>
 <h2 id="payg">4. 升级 PAYG：利弊与未证实之处</h2>
-<p>升级到 PAYG（按量付费）后可获得客户支持、不同的容量限制，以及超出免费限额的使用能力；Always Free 资源仍不收费，只对超出免费限额的使用收费。但请注意两点：第一，超出限额的使用会向你的卡收费，升级前请确认限额与账单设置；第二，官方文档没有写明「升级 PAYG 后不再受闲置回收影响」，社区有此说法，但本站未在官方文档中找到这句保证，不要把它当作官方承诺。</p>
+<p>升级到 PAYG（按量付费）后可获得客户支持、不同的容量限制，以及超出免费限额的使用能力；Always Free 资源仍不收费，只对超出免费限额的使用收费。但请注意两点：第一，超出限额的使用会向你的卡收费，升级前请确认限额与账单设置；第二，官方文档没有写明「升级 PAYG 后不再受闲置回收影响」，社区有此说法，但官方文档中未见这句保证，不要把它当作官方承诺。</p>
 <h2 id="backup">5. 备份清单：回收前把数据拿出来</h2>
 <p>无论是否升级，都请定期备份：Always Free 包含 200 GB 块存储与 5 个卷备份（官方文档）；重要数据另存一份到对象存储或本地。试用结束前、实例调整前、长期离线前，都先备份再操作。被回收的资源无法恢复——官方 FAQ 写明，回收的资源是永久删除。</p>
-<div class="note"><b>提醒：</b>闲置规则以官方文档为准；社区的保活经验只作参考，刷负载脚本可能违反厂商使用政策，本站不推荐。</div>
+<div class="note"><b>提醒：</b>闲置规则以官方文档为准；社区的保活经验只作参考，刷负载脚本可能违反厂商使用政策，不推荐。</div>
 <div class="related"><h2>相关页面</h2><ul><li><a href="../../offers/oracle-always-free/">Always Free 永久免费云服务器（甲骨文）详情</a></li><li><a href="../oracle-signup/">甲骨文注册与开机全流程</a></li><li><a href="../out-of-capacity/">Out of host capacity 怎么办</a></li><li><a href="../../faq/">VPS 常见问题</a></li><li><a href="../../">返回免费 VPS 列表</a></li></ul></div>
 </article>
 </div></main>
-<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">免费 VPS</a> · <a href="../../offers/">VPS 详情</a> · <a href="../../compare/">VPS 对比</a> · <a href="../">VPS 指南</a> · <a href="../../faq/">VPS 问答</a></p><p>数据仅供参考，以厂商官方页为准。VPS 板块各条目均经厂商官方页核对，核实日期见各页；额度随时可能调整或结束，领取前请看清对方条款。本站不含邀请链接、API 中转站、二手积分、共享账号等内容。</p></div></footer>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">免费 VPS</a> · <a href="../../offers/">VPS 详情</a> · <a href="../../compare/">VPS 对比</a> · <a href="../">VPS 指南</a> · <a href="../../faq/">VPS 问答</a></p><p>数据仅供参考，以厂商官方页为准。VPS 板块各条目信息来自厂商官方页，核实日期见各页；额度随时可能调整或结束，领取前请看清对方条款。无邀请链接、无 API 中转站、无二手积分、无共享账号内容。</p></div></footer>
 </body>
 </html>
