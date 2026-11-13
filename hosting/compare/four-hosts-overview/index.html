@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>四家免费虚拟主机对比：InfinityFree vs Byet vs x10 vs AwardSpace</title>
+<meta name="description" content="四家免费虚拟主机逐项对比：空间、流量、数据库、PHP、SSL、广告、域名、绑卡、限额、闲置政策、面板、安装器；含 unlimited 带宽与 hits 上限的解读。核实于 2026-11-13。">
+<link rel="canonical" href="https://tokens.yangtokent.com/hosting/compare/four-hosts-overview/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "四家免费虚拟主机对比：InfinityFree vs Byet vs x10 vs AwardSpace",
+  "description": "四家免费虚拟主机逐项对比：空间、流量、数据库、PHP、SSL、广告、域名、绑卡、限额、闲置政策、面板、安装器；含 unlimited 带宽与 hits 上限的解读。核实于 2026-11-13。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/hosting/compare/four-hosts-overview/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "四家免费虚拟主机哪家空间最大？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "InfinityFree 与 Byet.host 都是 5 GB（Byet 为 NVMe）。AwardSpace 1 GB，x10Hosting 500 MB 初始空间。核实于 2026-11-13。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Unlimited 带宽是不是流量无限？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不是。InfinityFree 写 Unlimited 带宽，同时每天限 50,000 hits，超限下线 24 小时。Byet.host 写 Unlimited 带宽，但 TOS 未给 hits 数字。AwardSpace 的流量是明确的每月 5 GB。核实于 2026-11-13。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "四家都要绑卡吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "InfinityFree、Byet.host、x10Hosting 官网写明无需信用卡。AwardSpace 绑卡要求在官网已读页面中未述，以官方页面为准。核实于 2026-11-13。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">免费虚拟主机</a><a href="../../offers/">主机详情</a><a href="../" aria-current="page">主机对比</a><a href="../../guides/">主机指南</a><a href="../../faq/">主机问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">免费虚拟主机</a> / <a href="../">主机对比</a> / 四家总对比</p>
+<h1>四家免费虚拟主机对比</h1>
+<p class="meta">核实于 2026-11-13 · 本页更新于 2026-11-13</p>
+<div class="answer"><p>四家都能装 WordPress，差异在空间、数据库数量、限额透明度与闲置规则：InfinityFree 与 Byet.host 都是 5 GB，x10Hosting 只有 500 MB 初始空间，AwardSpace 1 GB 但流量与数据库限制最严。InfinityFree、Byet.host、x10Hosting 官网写明无需信用卡；AwardSpace 绑卡要求在已读页面中未述。四家的限额写法差别很大：InfinityFree 的 hits 上限是明确数字，Byet 的 TOS 未给数字，x10 的带宽未述，AwardSpace 的流量是明确的 5 GB/月。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#table">对比表</a></li><li><a href="#unlimited">“Unlimited 带宽”与 hits 上限</a></li><li><a href="#how">怎么选</a></li><li><a href="#faq">常见问题</a></li></ul></div>
+<h2 id="table">对比表</h2><div class="tablewrap"><table><thead><tr><th>项目</th><th>InfinityFree</th><th>Byet.host</th><th>x10Hosting</th><th>AwardSpace</th></tr></thead><tbody>
+<tr><th>空间</th><td>5 GB</td><td>5 GB NVMe</td><td>500 MB 初始空间</td><td>1 GB</td></tr>
+<tr><th>流量 / 带宽</th><td>Unlimited（但 50,000 hits/日）</td><td>Unlimited（官网称无隐藏流量上限）</td><td>官网首页未述数值</td><td>每月 5 GB；约 5,000 visits/月</td></tr>
+<tr><th>数据库</th><td>400 个 MySQL</td><td>无限 MySQL 8 / MariaDB 11.4</td><td>2 个 MySQL</td><td>1 个 MySQL（30 MB）</td></tr>
+<tr><th>PHP</th><td>PHP 8.4</td><td>PHP 8.3</td><td>官网首页未述版本</td><td>官网已读页面未述版本</td></tr>
+<tr><th>SSL</th><td>免费 SSL 证书</td><td>子域名自动；自有域名面板自装</td><td>官网首页未述</td><td>官网已读页面未述</td></tr>
+<tr><th>广告</th><td>网站上无广告</td><td>无广告</td><td>官网首页未述</td><td>100% 无广告</td></tr>
+<tr><th>域名</th><td>免费子域名 25+ 后缀；可自带域名</td><td>24 个免费子域名后缀；无限附加/停放/子域名</td><td>3 个域名；4 个免费子域名后缀</td><td>1 个域名 + 3 个子域名；最多 4 站共享 1 库</td></tr>
+<tr><th>绑卡</th><td>无需信用卡</td><td>无需信用卡</td><td>无需信用卡</td><td>官网已读页面未述</td></tr>
+<tr><th>限额</th><td>50,000 hits/日，超限下线 24 小时</td><td>hits 未给数字；单文件最大 10 MB</td><td>大于 10 MB 文件自动移除；cron 1 个/5 分钟</td><td>每小时最多 12,000 查询；最多 30 并发连接</td></tr>
+<tr><th>闲置政策</th><td>30 天内少于 5 hits 停用；停用 20–60 天后删除</td><td>TOS 仅原则性条款，未给天数</td><td>30 天登录 + 5 天进展；停用 21 天后移除</td><td>12 个月无流量设为闲置；1 年登录续期</td></tr>
+<tr><th>面板</th><td>官网首页未命名</td><td>VistaPanel</td><td>DirectAdmin</td><td>自有 control panel（未命名品牌）</td></tr>
+<tr><th>安装器</th><td>Softaculous 400+</td><td>Softaculous 400+</td><td>300+ 应用安装器</td><td>Zacky</td></tr>
+<tr><th>核实日期</th><td>2026-11-13</td><td>2026-11-13</td><td>2026-11-13</td><td>2026-11-13（KB 页面更新于 2024-07-13）</td></tr>
+</tbody></table></div><h2 id="unlimited">“Unlimited 带宽”与 hits 上限</h2><p>“Unlimited 带宽”不等于无限访问量。InfinityFree 写 Unlimited 带宽，同时官网 KB 写每天 50,000 hits 上限：hit 是对网站文件的每次请求，1 个页面含 2 个 CSS + 3 个 JS + 5 张图片，加载一次产生 11 hits；达到上限后账户下线 24 小时。Byet.host 写 Unlimited 带宽、“No hidden traffic caps”，但 TOS 未给出 hits/日数字，同时保留对超量资源使用不经通知停用的权利。x10Hosting 官网首页未述带宽数值。AwardSpace 的流量是明确数字：每月 5 GB、约 5,000 visits/月。看流量够不够用，要同时看带宽写法与 hits/访问量上限。</p><h2 id="how">怎么选</h2><p>需要大空间与多数据库：InfinityFree（5 GB、400 个库）与 Byet.host（5 GB NVMe、无限库）的数字最大。需要明确的限额数字：InfinityFree 的 hits 上限与闲置规则都有明确数字；AwardSpace 的流量与数据库限制也是明确数字（1 GB、5 GB/月、1 个库 30 MB）。需要 DirectAdmin 面板：x10Hosting。空间需求小、能接受 30 天登录一次：x10Hosting 的 500 MB 初始空间、2 个库、3 个域名。SSL 必须免费且零配置：InfinityFree 的免费 SSL 与 Byet.host 的子域名自动 SSL；x10Hosting 与 AwardSpace 的 SSL 在官网已读页面中未述。</p>
+<h2 id="faq">常见问题</h2><details><summary>四家免费虚拟主机哪家空间最大？</summary><p>InfinityFree 与 Byet.host 都是 5 GB（Byet 为 NVMe）。AwardSpace 1 GB，x10Hosting 500 MB 初始空间。核实于 2026-11-13。</p></details><details><summary>Unlimited 带宽是不是流量无限？</summary><p>不是。InfinityFree 写 Unlimited 带宽，同时每天限 50,000 hits，超限下线 24 小时。Byet.host 写 Unlimited 带宽，但 TOS 未给 hits 数字。AwardSpace 的流量是明确的每月 5 GB。核实于 2026-11-13。</p></details><details><summary>四家都要绑卡吗？</summary><p>InfinityFree、Byet.host、x10Hosting 官网写明无需信用卡。AwardSpace 绑卡要求在官网已读页面中未述，以官方页面为准。核实于 2026-11-13。</p></details>
+<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，领取前请以厂商官方页为准。</div>
+<div class="related"><h2>其他对比</h2><ul><li><a href="../infinityfree-vs-byet/">InfinityFree vs Byet.host</a></li><li><a href="../all-hosts-table/">免费虚拟主机总表</a></li><li><a href="../hosting-vs-vps-vs-static/">虚拟主机 vs VPS vs 静态托管</a></li><li><a href="../small-space-trio/">GoogieHost vs FreeHosting.com vs FreeHostia</a></li><li><a href="../../">返回免费虚拟主机列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">免费虚拟主机</a> · <a href="../../offers/">主机详情</a> · <a href="../">主机对比</a> · <a href="../../guides/">主机指南</a> · <a href="../../faq/">主机问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
