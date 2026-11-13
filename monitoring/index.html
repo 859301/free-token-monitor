@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>监控分析：6 个免费层与 1 个 30 天试用</title>
+<meta name="description" content="监控分析 7 条：UptimeRobot、Sentry、Umami、PostHog、Microsoft Clarity、Google Analytics 4 免费层，Plausible 30 天试用；另有自托管监控路线指南。核实于 2026-11-13。">
+<link rel="canonical" href="https://tokens.yangtokent.com/monitoring/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "监控分析：6 个免费层与 1 个 30 天试用",
+  "description": "监控分析 7 条：UptimeRobot、Sentry、Umami、PostHog、Microsoft Clarity、Google Analytics 4 免费层，Plausible 30 天试用；另有自托管监控路线指南。核实于 2026-11-13。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/monitoring/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../">首页</a><a href="./" aria-current="page">监控分析</a><a href="./offers/">监控详情</a><a href="./compare/">监控对比</a><a href="./guides/">监控指南</a><a href="./faq/">监控问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../">首页</a> / 监控分析</p>
+<h1>监控分析：6 个免费层与 1 个 30 天试用</h1>
+<p class="meta">本页更新于 2026-11-13 · 7 条（核实于 2026-11-13）· 规格与条款照录厂商官方页</p>
+<div class="answer"><p>6 个免费层：UptimeRobot（宕机监控）、Sentry Developer（错误追踪）、Umami Hobby、PostHog、Microsoft Clarity、Google Analytics 4 标准版（数据分析）。1 个试用：Plausible（30 天免费试用，云端无永久免费计划）。自托管监控软件（Uptime Kuma、UptimeFlare、哪吒探针）不是托管额度，路线见自托管指南。</p></div>
+<p>监控分析指上线后看住服务状态的三类工具：宕机监控（网站挂了提醒）、错误追踪（代码报错定位）、数据分析（访问量与用户行为）。与运行服务的部署平台不同（见<a href="../deploy/">部署与托管列表</a>），监控工具通常以监控器数量、事件数、保留期限计量。</p>
+<p><button type="button" data-filter="all" aria-pressed="true" style="padding:8px 14px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;font-size:14px;margin:0 6px 6px 0">全部 7 条</button><button type="button" data-filter="nocard" aria-pressed="false" style="padding:8px 14px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;font-size:14px;margin:0 6px 6px 0">免绑卡</button><button type="button" data-filter="uptime" aria-pressed="false" style="padding:8px 14px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;font-size:14px;margin:0 6px 6px 0">宕机监控</button><button type="button" data-filter="error" aria-pressed="false" style="padding:8px 14px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;font-size:14px;margin:0 6px 6px 0">错误追踪</button><button type="button" data-filter="analytics" aria-pressed="false" style="padding:8px 14px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;font-size:14px;margin:0 6px 6px 0">数据分析</button><button type="button" data-filter="trial" aria-pressed="false" style="padding:8px 14px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;font-size:14px;margin:0 6px 6px 0">试用</button></p>
+<p id="filter-note" class="meta">显示全部 7 条。</p>
+<section class="monitoring-group">
+<h2>第一组：免费层（6 条）</h2>
+<p>免费内容、关键限制与绑卡要求按各家官网列出；官网已读页面中未述的字段，表里写明。</p>
+<div class="tablewrap"><table><thead><tr><th>服务</th><th>类型</th><th>免费内容（官方原文）</th><th>关键限制</th><th>绑卡？</th><th>核实</th></tr></thead><tbody>
+<tr data-tags="uptime nocard"><td><a href="offers/uptimerobot/">UptimeRobot 免费层</a><br><span class="meta">UptimeRobot</span></td><td>宕机监控</td><td>$0/月、50 个监控器、5 分钟间隔、HTTP/port/ping、keyword、API、UDP、DNS</td><td>仅 5 个集成、3 个月保留、1 个状态页；SSL 监控两种说法并列</td><td>无需信用卡</td><td>2026-11-13 · <a href="https://uptimerobot.com/pricing/" target="_blank" rel="noopener noreferrer">官方页</a></td></tr><tr data-tags="error uptime"><td><a href="offers/sentry/">Sentry Developer 免费层</a><br><span class="meta">Sentry</span></td><td>错误追踪</td><td>$0、限 1 名用户、无限项目、5 GB logs、1 个 uptime monitor、1 个 cron monitor、30 天 lookback；5k errors、5M spans、50 replays（未标注周期）</td><td>限 1 名用户</td><td>官网已读页面未述（Developer 计划）</td><td>2026-11-13 · <a href="https://sentry.io/pricing/" target="_blank" rel="noopener noreferrer">官方页</a></td></tr><tr data-tags="analytics"><td><a href="offers/umami/">Umami Hobby 免费层</a><br><span class="meta">Umami</span></td><td>数据分析</td><td>$0、100,000 事件、3 个网站、6 个月保留、完整报告套件、数据导出</td><td>无团队成员、无 API、无邮件报告、无 session replay、无 heatmap</td><td>定价页无绑卡表述</td><td>2026-11-13 · <a href="https://umami.is/pricing" target="_blank" rel="noopener noreferrer">官方页</a></td></tr><tr data-tags="analytics error nocard"><td><a href="offers/posthog/">PostHog 免费层</a><br><span class="meta">PostHog</span></td><td>数据分析与错误追踪</td><td>无需信用卡、不是试用；Analytics 1M events/月、Session replay 5K recordings/月、Feature flags 1M requests/月、Error tracking 100K exceptions/月、Surveys 1500 responses/月、Logs 10 GB/月、AI Observability 100K events/月</td><td>1 个项目、1 年保留</td><td>无需信用卡</td><td>2026-11-13 · <a href="https://posthog.com/pricing" target="_blank" rel="noopener noreferrer">官方页</a></td></tr><tr data-tags="analytics"><td><a href="offers/clarity/">Microsoft Clarity</a><br><span class="meta">Microsoft</span></td><td>数据分析</td><td>永久免费、无流量限制、无采样、网站数量无限制</td><td>保留期限等数字在官方 FAQ 已读页面中未述</td><td>官网已读页面未述</td><td>2026-11-13 · <a href="https://learn.microsoft.com/clarity/faq" target="_blank" rel="noopener noreferrer">官方页</a></td></tr><tr data-tags="analytics"><td><a href="offers/google-analytics-4/">Google Analytics 4 标准版</a><br><span class="meta">Google</span></td><td>数据分析</td><td>标准版 free of charge；用户级保留 2 或 14 个月、事件级保留 2/14/26/38/50 个月</td><td>26/38/50 个月保留仅限 360；大型资源限 2 个月；事件级查询 1,000 万事件</td><td>官网已读页面未述</td><td>2026-11-13 · <a href="https://marketingplatform.google.com/about/analytics/" target="_blank" rel="noopener noreferrer">官方页</a></td></tr>
+</tbody></table></div>
+</section>
+<section class="monitoring-group">
+<h2>第二组：试用（1 条）</h2>
+<p>Plausible 是 30 天试用，不是永久免费；云端没有永久免费计划。</p>
+<div class="tablewrap"><table><thead><tr><th>服务</th><th>类型</th><th>试用（官方原文）</th><th>试用后或限制</th><th>绑卡？</th><th>核实</th></tr></thead><tbody>
+<tr data-tags="analytics trial nocard"><td><a href="offers/plausible-trial/">Plausible 试用</a><br><span class="meta">Plausible</span></td><td>数据分析（试用）</td><td>30 天免费试用；计划 $9/月起；Starter 1 个网站、Growth 至多 3 个、Business 至多 10 个</td><td>云端无永久免费计划；试用后需预付费方可继续使用</td><td>试用无需信用卡</td><td>2026-11-13 · <a href="https://plausible.io/docs/subscription-plans" target="_blank" rel="noopener noreferrer">官方页</a></td></tr>
+</tbody></table></div>
+</section>
+<h2>自托管路线说明</h2>
+<p>Uptime Kuma、UptimeFlare、哪吒探针是开源自托管监控方案，需要自己准备运行环境；路线与概念见<a href="guides/self-hosted-monitoring/">自托管监控路线</a>。UptimeRobot 的托管免费层与自托管路线的对照见<a href="compare/uptime-monitoring/">宕机监控对照</a>。</p>
+<h2>不在列表中的服务及原因</h2>
+<p>以下服务不在上面的列表里，原因按事实列出。</p>
+<ul>
+<li><strong>自托管软件（Uptime Kuma、UptimeFlare、哪吒探针、HertzBeat）：</strong>软件本身不是托管额度；自托管路线见<a href="guides/self-hosted-monitoring/">自托管监控路线</a>。</li>
+<li><strong>Better Stack、Axiom、Grafana Cloud、healthchecks.io：</strong>只在 2026-07-06 核查的一份免费监控指南二手汇总中出现，未读取其官网定价页，参数未确认。</li>
+<li><strong>Cloudflare Web Analytics：</strong>只在二手核查中提及免费，官网页面未读取确认。</li>
+<li><strong>部署与托管、数据库、域名服务：</strong>不在监控分析列表范围内，见<a href="../deploy/">部署与托管列表</a>、<a href="../database/">数据库列表</a>、<a href="../domain/">域名列表</a>。</li>
+</ul>
+<h2>变化记录（按官方页与官方文档日期）</h2>
+<ul>
+<li><strong>2026-09：</strong>Plausible 服务条款最后更新；条款写明试用期结束后需预付费方可继续使用。</li>
+</ul>
+<div class="related"><h2>相关页面</h2><ul><li><a href="offers/">监控详情总览（6 个免费层、1 个 30 天试用）</a></li><li><a href="compare/analytics-tools/">Umami vs PostHog vs Plausible vs GA4 vs Clarity</a></li><li><a href="compare/all-monitoring-table/">监控分析总表</a></li><li><a href="guides/">监控指南：自托管、选型、额度口径、超额、状态页</a></li><li><a href="faq/">监控分析常见问题（16 问）</a></li><li><a href="../deploy/">部署与托管列表</a></li><li><a href="../">返回免费 Token 总览</a></li></ul></div>
+<p class="meta">机器可读数据：<a href="../data/monitoring.json">data/monitoring.json</a>（7 条，含免费内容、绑卡、超额行为、数据保留、核实日期）。</p>
+<script>
+(function () {
+  var chips = document.querySelectorAll('[data-filter]');
+  var groups = document.querySelectorAll('.monitoring-group');
+  var note = document.getElementById('filter-note');
+  var notes = {
+    'all': '显示全部 7 条。',
+    'nocard': '只显示官网写明无需信用卡的 3 条：UptimeRobot、PostHog、Plausible（试用）。Sentry 的 Business 试用无需信用卡，但 Developer 计划的绑卡要求在官网已读页面中未述，不计入。',
+    'uptime': '只显示含宕机监控的 2 条：UptimeRobot（50 个监控器）、Sentry（1 个 uptime monitor）。',
+    'error': '只显示含错误追踪的 2 条：Sentry Developer、PostHog（Error tracking）。',
+    'analytics': '只显示数据分析的 5 条：Umami、PostHog、Plausible（试用）、Microsoft Clarity、Google Analytics 4。',
+    'trial': '只显示试用的 1 条：Plausible（30 天免费试用，云端无永久免费计划）。'
+  };
+  function paint(c, on) {
+    c.style.background = on ? '#2563eb' : '#fff';
+    c.style.color = on ? '#fff' : '#1a1d21';
+    c.style.borderColor = on ? '#2563eb' : '#e5e7eb';
+  }
+  function apply(f) {
+    groups.forEach(function (g) {
+      var any = false;
+      g.querySelectorAll('tbody tr').forEach(function (tr) {
+        var show = f === 'all' || (tr.getAttribute('data-tags') || '').split(' ').indexOf(f) !== -1;
+        tr.style.display = show ? '' : 'none';
+        if (show) any = true;
+      });
+      g.style.display = any ? '' : 'none';
+    });
+    chips.forEach(function (c) { var on = c.getAttribute('data-filter') === f; c.setAttribute('aria-pressed', on ? 'true' : 'false'); paint(c, on); });
+    note.textContent = notes[f];
+  }
+  chips.forEach(function (c) { c.addEventListener('click', function () { apply(c.getAttribute('data-filter')); }); });
+  paint(chips[0], true);
+})();
+</script>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../">首页</a> · <a href="./">监控分析</a> · <a href="./offers/">监控详情</a> · <a href="./compare/">监控对比</a> · <a href="./guides/">监控指南</a> · <a href="./faq/">监控问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
