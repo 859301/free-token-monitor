@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InstaBox 免费层：1 台 4 vCPU / 8 GB 沙箱机器（非传统 VPS）</title>
+<meta name="description" content="InstaBox 官网定价文档：免费层 $0，1 台 4 vCPU / 8 GiB 机器，20 GiB 磁盘，5 个快照，每月 100 GiB 出站流量，无用量上限；闲置 30 分钟暂停，单次最长运行 120 分钟（随使用至 480 分钟）。Beta 产品，非传统 VPS。">
+<link rel="canonical" href="https://tokens.yangtokent.com/vps/offers/instabox/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "InstaBox 免费层：1 台 4 vCPU / 8 GB 沙箱机器（非传统 VPS）",
+  "description": "InstaBox 官网定价文档：免费层 $0，1 台 4 vCPU / 8 GiB 机器，20 GiB 磁盘，5 个快照，每月 100 GiB 出站流量，无用量上限；闲置 30 分钟暂停，单次最长运行 120 分钟（随使用至 480 分钟）。Beta 产品，非传统 VPS。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/vps/offers/instabox/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "InstaBox 免费层真的免费吗？有用量上限吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "免费层 1 台 4 vCPU / 8 GB 机器、无用量上限；闲置 30 分钟暂停，单次最长 120 分钟（随使用至 480 分钟）。核实于 2026-11-13。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "30 分钟暂停是什么意思？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "闲置 30 分钟自动暂停，1 秒内恢复、状态保留。核实于 2026-11-13。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "能当 VPS 24/7 挂机吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不能：暂停与最长运行限制是产品设计，不适合 24/7 服务。核实于 2026-11-13。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：只收厂商官方核对过的免费额度。领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">免费 VPS</a><a href="../" aria-current="page">VPS 详情</a><a href="../../compare/">VPS 对比</a><a href="../../guides/">VPS 指南</a><a href="../../faq/">VPS 问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">免费 VPS</a> / <a href="../">VPS 详情</a> / InstaBox 免费层</p>
+<h1>InstaBox 免费层：1 台 4 vCPU / 8 GB 沙箱机器（非传统 VPS）</h1>
+<p class="meta">InstaBox · 核实于 2026-11-13 · 本页更新于 2026-11-13</p>
+<p><span class="tag ok">免费层</span> <span class="tag gray">沙箱 · 非传统 VPS</span> <span class="tag warn">Beta</span> <span class="tag gray">30 分钟暂停</span> </p>
+<div class="answer"><p>InstaBox 免费层是 1 台 4 vCPU / 8 GiB 的沙箱机器，$0、无用量上限——但它不是传统 VPS：官方博客原话 an InstaBox machine isn't a VPS。机器闲置 30 分钟自动暂停（1 秒内恢复），单次最长运行 120 分钟、随使用增长至 480 分钟；对外访问通过端口发布的公开 HTTPS 链接，官方文档未提及独立入站 IPv4。产品 2026 年 10 月 14 日上线、仍在 Beta；官方博客承诺坚持免费层，但也说明定价是 v1、会继续调整。</p></div>
+<div class="toc"><b>目录</b><ul><li><a href="#specs">规格速览</a></li><li><a href="#free">免费层内容</a></li><li><a href="#pause">暂停与运行限制</a></li><li><a href="#notvps">为什么不是传统 VPS</a></li><li><a href="#beta">Beta 与定价 v1</a></li><li><a href="#paid">付费档（参考）</a></li><li><a href="#notes">注意事项</a></li><li><a href="#claim">怎么领取</a></li><li><a href="#faq">常见问题</a></li></ul></div>
+<h2 id="specs">规格速览</h2>
+<div class="tablewrap"><table class="fact"><tbody><tr><th>免费内容</th><td>1 台机器：4 vCPU / 8 GiB，Firecracker microVM，Debian 13</td></tr><tr><th>磁盘与快照</th><td>20 GiB 持久磁盘（/data，固定）；16 GiB 系统盘；5 个快照；200 GiB 存储数据上限</td></tr><tr><th>流量</th><td>每月 100 GiB 出站流量；入站始终免费</td></tr><tr><th>暂停规则</th><td>闲置 30 分钟自动暂停（免费层固定，不可改）；1 秒内恢复，内存状态保留</td></tr><tr><th>最长运行</th><td>单次最长 120 分钟，随使用增长至 480 分钟</td></tr><tr><th>系统与模板</th><td>默认 agent-browser 模板（Debian、Docker、Node、Python、Go、Rust、桌面 + Chromium）；免费层可用 agent-browser、android、omarchy、ci 模板</td></tr><tr><th>升级后</th><td>免费机器保留，成为付费计划的一台机器，计入计划限额并按用量计费（先扣计划内额度）</td></tr><tr><th>早期用户</th><td>2026-10-20 前注册且 2026-10-25 07:45 UTC 前激活的账户，5 台免费沙箱截至 2026-12-01 00:00 UTC；之后仅 1 台同时运行，其余暂停不删除</td></tr><tr><th>绑卡</th><td>官方定价文档未说明，以官方页面为准</td></tr><tr><th>核实来源</th><td>InstaBox 官网定价文档与定价博客，核实于 2026-11-13</td></tr></tbody></table></div>
+<h2 id="free">免费层内容</h2>
+<p>官网定价文档的 Free 卡片原文：$0；1 machine, 4 vCPU / 8 GiB；20 GiB disk (fixed)；5 snapshots；100 GiB egress / month。官网定价博客（2026-10-19）写明：Free gives you one 4 vCPU / 8 GB machine with no usage limit——没有用量上限。存储方面：免费层磁盘免费包含；快照免费。</p>
+<h2 id="pause">暂停与运行限制</h2>
+<p>免费层的闲置暂停固定为 30 分钟，不可更改（付费档可改 5–30 分钟或关闭）。官方博客说明：只暂停真正闲置的机器（Agent 完成任务、你去吃午饭时）；正在用的机器保持运行；暂停后 1 秒内恢复，文件、内存与运行进程保留。</p><p>单次最长运行：免费层每次运行最长 120 分钟，随使用增长至 480 分钟（官网文档索引）。这是沙箱的工作方式，不是 24/7 服务器。</p>
+<h2 id="notvps">为什么不是传统 VPS</h2>
+<p>官方博客原话：an InstaBox machine isn't a VPS。VPS 要 24/7 开机保持状态，而 InstaBox 机器是 microVM，可以暂停、保留全部状态、1 秒内恢复——这是为突发式 Agent 工作设计的。官方文档未提及独立入站 IPv4；对外访问通过端口发布（instabox port publish）生成公开 HTTPS 链接。第三方实测称无独立入站 IPv4、共享 NAT 出口 IP（第三方说法，未经官方页核实）。上传速度每台虚拟机约 50 Mbit/s（官方文档索引）。</p>
+<h2 id="beta">Beta 与定价 v1</h2>
+<p>InstaBox 于 2026 年 10 月 14 日上线。官方博客写明：we'll stick with our free tier, and it will keep getting better（会坚持免费层）；同时说明 this is just v1 of our pricing. We'll keep adjusting it（这只是定价 v1，会继续调整）。免费层是 Beta 阶段政策，条款可能变化，请以官网页面为准。</p><p>早期用户安排（官网定价文档）：2026-10-20 前注册且 2026-10-25 07:45 UTC 前激活的账户，5 台免费沙箱截至 2026-12-01 00:00 UTC；之后仅 1 台同时运行，其余暂停（不删除），最近活跃的一台保持运行；厂商会在 2026-11-26 发邮件通知受影响账户。新用户免费层为 1 台机器。</p>
+<h2 id="paid">付费档（参考）</h2>
+<p>官网定价文档：Pro $20/月 + 用量（含 $20/月额度，最多 100 台并发，最大 8 vCPU / 16 GiB）；Builder $100/月 + 用量；Team $500/月 + 用量；Enterprise 定制。用量单价：vCPU $0.004/核·小时，内存 $0.00225/GiB·小时，存储 $0.00011/GiB·小时，出站流量 $0.02/GiB；运行按秒计费，仅运行时计费。GPU 机器仅限付费档。本段为参考信息，免费层用户不需要付费。</p>
+<h2 id="notes">注意事项</h2>
+<ul><li>邀请制 Beta：2026 年 10 月 14 日以邀请制 Beta 上线（第三方报道）；当前注册是否仍需邀请码，以官网注册页为准。</li><li>免费层只能从 agent-browser、android、omarchy、ci 模板创建（或从快照创建）。</li><li>机器删除才清空文件；暂停、停止、重启都保留 /data 磁盘内容。</li><li>不要把 InstaBox 当 24/7 服务器：暂停与最长运行限制是产品设计，不是故障。</li></ul>
+<h2 id="claim">怎么领取</h2>
+<ol><li>打开 InstaBox 官网，注册账户（是否仍需邀请码以官网注册页为准）。</li><li>用 npx instabox@latest sh 快速开始（登录、安装 CLI、启动一台机器），或在控制台创建机器。</li><li>在账户内确认免费层：1 台 4 vCPU / 8 GiB 机器、20 GiB 磁盘、5 个快照、每月 100 GiB 出站流量。</li><li>留意 30 分钟闲置暂停与单次最长运行限制；重要文件及时备份。</li></ol>
+<p><a class="btn" href="https://instabox.sh/pricing" target="_blank" rel="noopener noreferrer">去 InstaBox 官网定价页 →</a></p>
+<h2 id="faq">常见问题</h2>
+<details><summary>InstaBox 免费层真的免费吗？有用量上限吗？</summary><p>官网定价博客写明免费层 1 台 4 vCPU / 8 GB 机器、无用量上限；但闲置 30 分钟暂停、单次最长运行 120 分钟（随使用至 480 分钟）。定价为 v1、可能调整。</p></details>
+<details><summary>30 分钟暂停是什么意思？</summary><p>机器闲置 30 分钟自动暂停，1 秒内恢复，文件、内存与运行进程保留；正在用的机器不暂停。免费层暂停时间固定不可改。</p></details>
+<details><summary>能当 VPS 24/7 挂机吗？</summary><p>不能。官方博客原话：InstaBox 机器不是 VPS；暂停与最长运行限制是产品设计。适合突发式 Agent 工作，不适合 24/7 服务。</p></details>
+<div class="note"><b>免责：</b>本页信息照录本站核对时 InstaBox 官网定价文档与定价博客的内容（核实于 2026-11-13），Beta 阶段条款可能调整；领取前请以厂商官方页为准。第三方说法已标注来源。</div>
+<div class="related"><h2>相关页面</h2><ul><li><a href="../../">免费 VPS 列表</a></li><li><a href="../">VPS 详情页总览</a></li><li><a href="../../../wool/compare/sandbox-boxes-compared/">Simular Box vs InstaBox 对比</a></li><li><a href="../../../wool/offers/simular-box/">Simular Box（羊毛区）</a></li><li><a href="../../faq/">VPS 常见问题</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">免费 VPS</a> · <a href="../">VPS 详情</a> · <a href="../../compare/">VPS 对比</a> · <a href="../../guides/">VPS 指南</a> · <a href="../../faq/">VPS 问答</a></p><p>数据仅供参考，以厂商官方页为准。VPS 板块各条目均经厂商官方页核对，核实日期见各页；额度随时可能调整或结束，领取前请看清对方条款。本站不含邀请链接、API 中转站、二手积分、共享账号等内容。</p></div></footer>
+</body>
+</html>
