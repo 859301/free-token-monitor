@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turso 免费档详解：100 个数据库、5GB、每月 5 亿行读、免绑卡、被 Supabase 收购</title>
+<meta name="description" content="Turso 免费档：100 个数据库、5GB 存储、每月 500M 行读 / 10M 行写、3GB 同步、1 天 PITR；官网写明无需信用卡；Supabase 2026-10-02 宣布收购 Turso。核实于 2026-11-13。">
+<link rel="canonical" href="https://tokens.yangtokent.com/database/offers/turso/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Turso 免费档详解：100 个数据库、5GB、每月 5 亿行读、免绑卡、被 Supabase 收购",
+  "description": "Turso 免费档：100 个数据库、5GB 存储、每月 500M 行读 / 10M 行写、3GB 同步、1 天 PITR；官网写明无需信用卡；Supabase 2026-10-02 宣布收购 Turso。核实于 2026-11-13。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/database/offers/turso/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Turso 被 Supabase 收购后，免费层变了吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Supabase 官方博客 2026-10-02 宣布收购 Turso，原文称现有用户不受影响、Turso 继续运行，未宣布定价或免费层政策变化。核实于 2026-11-13。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Turso 免费档需要绑信用卡吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "官网原文：Start free, no credit card required.核实于 2026-11-13。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Turso 免费档超限会怎样？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "官网 FAQ：Free plan 超限需升级/阻塞。核实于 2026-11-13。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">免费数据库</a><a href="../" aria-current="page">数据库详情</a><a href="../../compare/">数据库对比</a><a href="../../guides/">数据库指南</a><a href="../../faq/">数据库问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">免费数据库</a> / <a href="../">数据库详情</a> / Turso 免费档</p>
+<h1>Turso 免费档</h1><p class="meta">Turso · 核实于 2026-11-13 · 本页更新于 2026-11-13</p><p><span class="tag ok">免绑卡</span><span class="tag">100 个数据库</span><span class="tag warn">超限需升级/阻塞</span><span class="tag gray">被 Supabase 收购</span></p><div class="answer"><p>Turso 免费档 $0/month：100 个数据库、5GB 存储、每月行读取 500 Million、每月行写入 10 Million、每月同步 3GB、Point-In-Time Restore 1 天；Audit Logs 与 Restore Deleted DBs 不包含；Community 支持。官网原文：Start free, no credit card required.（免费开始，无需信用卡。）FAQ：Free plan 超限需升级/阻塞。Supabase 官方博客 2026-10-02 宣布收购 Turso，博客原文称现有用户不受影响、Turso 继续运行，未宣布定价或免费层政策变化。核实于 2026-11-13，领取前请以厂商官方页为准。</p></div><div class="toc"><b>本页内容</b><ul><li><a href="#facts">规格速览</a></li><li><a href="#what">免费档包括什么</a></li><li><a href="#acquisition">收购是怎么回事</a></li><li><a href="#overage">超限行为</a></li><li><a href="#steps">怎么领取</a></li><li><a href="#risks">注意事项</a></li><li><a href="#faq">常见问题</a></li></ul></div><h2 id="facts">规格速览</h2><div class="tablewrap"><table class="fact"><tbody><tr><th>免费内容</th><td>100 个数据库；5GB 存储；每月行读取 500 Million；每月行写入 10 Million；每月同步 3GB；Point-In-Time Restore 1 天；Community 支持</td></tr><tr><th>提供方</th><td>Turso</td></tr><tr><th>免费档</th><td>Free $0/month</td></tr><tr><th>时长</th><td>定价页写 Start free，未写永久措辞，以官方页面为准</td></tr><tr><th>绑卡与验证</th><td>Start free, no credit card required.（官网原文）</td></tr><tr><th>不包含</th><td>Audit Logs、Restore Deleted DBs</td></tr><tr><th>egress</th><td>定价页 Free 列无单独 egress 行</td></tr><tr><th>超限行为</th><td>FAQ：Free plan 超限需升级/阻塞</td></tr><tr><th>收购</th><td>Supabase 官方博客 2026-10-02 宣布收购 Turso</td></tr><tr><th>升级</th><td>Developer $4.99/月（年付）、Scaler $24.92/月（年付）、Pro $416.58/月（年付）</td></tr><tr><th>核实日期</th><td>2026-11-13</td></tr><tr><th>来源</th><td>Turso 官网定价页（渲染复核）（<a href="https://turso.tech/pricing" target="_blank" rel="noopener noreferrer">官方页</a>）；Supabase 官方博客</td></tr></tbody></table></div><h2 id="what">免费档包括什么</h2><p>按官网定价页（渲染复核），Free $0/month 包括：Databases 100、Storage 5GB、Monthly Rows Read 500 Million、Monthly Rows Written 10 Million、Monthly Syncs 3GB、Point-In-Time Restore 1 天；Audit Logs 与 Restore Deleted DBs 不包含；Support 为 Community。定价页 Free 列无单独 egress 行。</p><h2 id="acquisition">收购是怎么回事</h2><p>Supabase 官方博客 2026-10-02 宣布收购 Turso。博客原文：For existing users, nothing changes... Turso will continue operating.（现有用户不受影响，Turso 继续运行。）博客未宣布任何定价或免费层政策变化。收购后的政策变化，以官方页面为准。</p><h2 id="overage">超限行为</h2><p>官网 FAQ：Free plan 超限需升级/阻塞。闲置暂停规则在官网已读页面中未述，以官方页面为准。</p><h2 id="steps">怎么领取</h2><p>在 Turso 官网定价页确认 Free 档条款 → 注册账户（无需信用卡）→ 创建数据库 → 在控制台查看行读写与同步用量。</p><p><a class="btn" href="https://turso.tech/pricing" target="_blank" rel="noopener noreferrer">去厂商官方页</a></p><h2 id="risks">注意事项</h2><ul><li>Free plan 超限需升级/阻塞（FAQ）</li><li>2026-10-02 Supabase 官方博客宣布收购 Turso；未宣布定价或免费层政策变化，以官方页面为准</li><li>定价页未写永久措辞，以官方页面为准</li><li>Audit Logs 与 Restore Deleted DBs 不包含在 Free 档</li></ul><h2 id="faq">常见问题</h2><details><summary>Turso 被 Supabase 收购后，免费层变了吗？</summary><p>Supabase 官方博客 2026-10-02 宣布收购 Turso，原文称现有用户不受影响、Turso 继续运行，未宣布定价或免费层政策变化。核实于 2026-11-13。</p></details><details><summary>Turso 免费档需要绑信用卡吗？</summary><p>官网原文：Start free, no credit card required.（免费开始，无需信用卡。）核实于 2026-11-13。</p></details><details><summary>Turso 免费档超限会怎样？</summary><p>官网 FAQ：Free plan 超限需升级/阻塞。核实于 2026-11-13。</p></details><div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，领取前请以厂商官方页为准。</div><div class="related"><h2>相关页面</h2><ul><li><a href="../supabase/">Supabase 免费档</a></li><li><a href="../../compare/supabase-vs-neon-vs-turso/">Supabase vs Neon vs Turso 对比</a></li><li><a href="../../guides/migration-and-overage/">超额与迁移指南</a></li><li><a href="../../faq/">数据库常见问题</a></li><li><a href="../../">返回免费数据库列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">免费数据库</a> · <a href="../">数据库详情</a> · <a href="../../compare/">数据库对比</a> · <a href="../../guides/">数据库指南</a> · <a href="../../faq/">数据库问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
