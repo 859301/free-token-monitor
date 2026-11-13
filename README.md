@@ -13,10 +13,17 @@
 
 ## 免费 VPS 板块
 
-- 共 9 条（8 条核实于 2026-11-12，InstaBox 核实于 2026-11-13），分四组：永久免费 2 条（甲骨文、Google Cloud）、试用/额度 5 条（AWS、Azure、阿里云、腾讯云、Kamatera）、学生专属 1 条（Azure for Students）、免费沙箱 1 条（InstaBox，非传统 VPS）。
-- 数据在 `data/vps.json` 里，字段与 `data/offers.json` 对应（另有 `group`、`specText`、`durationText`、`cardNote`、`flags`、`notes` 字段；`cardRequired` 为 `null` 表示官方页未说明）。
-- 板块页面在 `vps/` 下：列表页、9 篇详情页、8 篇对比、4 篇指南、1 个问答页（20 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+- 共 10 条（8 条核实于 2026-11-12，InstaBox 与 EUserv 核实于 2026-11-13），分五组：永久免费 2 条（甲骨文、Google Cloud）、试用/额度 5 条（AWS、Azure、阿里云、腾讯云、Kamatera）、学生专属 1 条（Azure for Students）、免费沙箱 1 条（InstaBox，非传统 VPS）、免费但需手动续期 1 条（EUserv VS2-free，IPv6-only）。
+- 数据在 `data/vps.json` 里，字段与 `data/offers.json` 对应（另有 `group`、`specText`、`durationText`、`cardNote`、`flags`、`notes` 字段；`cardRequired` 为 `null` 表示官方页未说明；`group` 新增 `manual-renew`，表示免费但需手动续期）。
+- 板块页面在 `vps/` 下：列表页、10 篇详情页、8 篇对比、4 篇指南、1 个问答页（20 问），均已加入 `sitemap.xml` 与 `llms.txt`。
 - 未收录说明：华为云（状态未核实）、Vultr / DigitalOcean（说法矛盾）、任务续费型主机、退款保证类「试用」等暂不收录，原因写在 `vps/index.html` 的「未收录及原因」一节。试用额度与任务主机现已在羊毛板块按羊毛规则收录，见下「羊毛 VPS 板块」一节。
+
+## 免费虚拟主机板块
+
+- 共 11 条（核实于 2026-11-13）：10 家免费虚拟主机（8 家参数较完整、2 家部分信息未确认）+ 000webhost 已停服档案。
+- 数据在 `data/hosting.json` 里，字段与 `data/vps.json` 对应（另有 `disk`、`bandwidth`、`databases`、`php`、`ssl`、`ads`、`idlePolicy`、`panel`、`installer` 字段；`group` 取值：`verified` / `conditional` / `archive`；`status` 取值：`active` / `conditional` / `dead`；`cardRequired` 为 `null` 表示官方页未说明）。
+- 板块页面在 `hosting/` 下：列表页、11 篇详情页与档案页、5 篇对比、6 篇指南、1 个问答页（18 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+- EUserv VS2-free 是 VPS 形态，归在免费 VPS 板块（`group` 为 `manual-renew`），续期任务属性在羊毛板块说明。
 
 ## 羊毛 VPS 板块
 
