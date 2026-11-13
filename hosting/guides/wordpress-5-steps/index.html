@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 步用免费虚拟主机建 WordPress：从选主机到上线</title>
+<meta name="description" content="5 步用免费虚拟主机建 WordPress：选主机、注册、建站、一键安装、SSL 与域名；分主机差异写明（FreeHosting.com 需先有域名、HelioHost 需等名额、AwardSpace 1 个数据库）。">
+<link rel="canonical" href="https://tokens.yangtokent.com/hosting/guides/wordpress-5-steps/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "5 步用免费虚拟主机建 WordPress：从选主机到上线",
+  "description": "5 步用免费虚拟主机建 WordPress：选主机、注册、建站、一键安装、SSL 与域名；分主机差异写明（FreeHosting.com 需先有域名、HelioHost 需等名额、AwardSpace 1 个数据库）。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/hosting/guides/wordpress-5-steps/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">免费虚拟主机</a><a href="../../offers/">主机详情</a><a href="../../compare/">主机对比</a><a href="../" aria-current="page">主机指南</a><a href="../../faq/">主机问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">免费虚拟主机</a> / <a href="../">主机指南</a> / 5 步建 WordPress</p>
+<h1>5 步用免费虚拟主机建 WordPress</h1>
+<p class="meta">核实于 2026-11-13 · 本页更新于 2026-11-13</p>
+<div class="answer"><p>5 步：选主机、注册、创建网站、装 WordPress、上线检查。分主机差异：FreeHosting.com 需要先有自己控制的域名；HelioHost 的 Johnny 服务器名额有限；AwardSpace 只有 1 个数据库；ProFreeHost 的 SSL 是自签名证书。各家的参数与限制以详情页为准。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#s1">第 1 步：按需求选主机</a></li><li><a href="#s2">第 2 步：注册账户</a></li><li><a href="#s3">第 3 步：创建网站、选域名</a></li><li><a href="#s4">第 4 步：装 WordPress</a></li><li><a href="#s5">第 5 步：SSL、备份与上线检查</a></li><li><a href="#perhost">分主机差异</a></li></ul></div>
+<h2 id="s1">第 1 步：按需求选主机</h2><p>看 4 个参数：空间、数据库数量、PHP 版本、闲置规则。空间 5 GB 级：InfinityFree、Byet.host、ProFreeHost、TinkerHost。数据库多：Byet.host 无限、InfinityFree 400 个。1 个数据库：AwardSpace、FreeHosting.com、FreeHostia。PHP 版本：InfinityFree 8.4、Byet.host 8.3、GoogieHost 7.4–8.3 可切换、HelioHost 5/7/8。参数总表见 <a href="../../compare/all-hosts-table/">免费虚拟主机总表</a>。</p><h2 id="s2">第 2 步：注册账户</h2><p>各家注册方式不同：InfinityFree 只需邮箱、无审批；Byet.host 即时开通、无审批；x10Hosting 注册时可选择子域名；AwardSpace 可用 Facebook/Google/邮箱注册；HelioHost 需邮箱注册（一次性邮箱不可用）、13+、Johnny/Tommy 限非商业。7 家官网写明无需信用卡：InfinityFree、Byet.host、x10Hosting、GoogieHost、FreeHosting.com、ProFreeHost、TinkerHost。GoogieHost 的 TOS 写明 18+、可能要求政府照片身份证件。</p><h2 id="s3">第 3 步：创建网站、选域名</h2><p>先用免费子域名起步：InfinityFree（25+ 后缀）、Byet.host（24 个后缀）、x10Hosting（4 个后缀）、GoogieHost（后缀三处写法不一致）、ProFreeHost（免费子域名）。需要自有域名：FreeHosting.com 必须自有域名，设置域名服务器 NS1.FREEHOSTING.COM 与 NS2.FREEHOSTING.COM；InfinityFree 与 Byet.host 可自带域名。HelioHost 的域名数量在官网已读页面中未述。</p><h2 id="s4">第 4 步：装 WordPress</h2><p>一键安装器：InfinityFree、Byet.host、HelioHost、GoogieHost、ProFreeHost、TinkerHost 用 Softaculous；x10Hosting 用 300+ 应用安装器；AwardSpace 用 Zacky；FreeHostia 用 1-click 安装器。装之前看数据库数量：AwardSpace 最多 4 个网站共享 1 个数据库；FreeHosting.com 1 个库、无查询数限制；FreeHostia 1 个库（10 MB 存储）。</p><h2 id="s5">第 5 步：SSL、备份与上线检查</h2><p>SSL：InfinityFree 免费 SSL；Byet.host 子域名自动、自有域名面板自装；GoogieHost 自动激活；FreeHostia 列出 Let's Encrypt；TinkerHost 免费 SSL；FreeHosting.com 需 $29.95 附加包；ProFreeHost 是自签名 SSL。备份：各家 TOS 多写备份由账户持有人负责，见<a href="../pitfalls-backups/">避坑与备份指南</a>。上线前看闲置规则：GoogieHost 15 天停用、22 天终止；x10Hosting 30 天登录；HelioHost 30 天登录续期；FreeHosting.com 90 天无访客移除；AwardSpace 12 个月无流量闲置 + 1 年登录续期；FreeHostia 1 年有效期 + 免费续期。</p><h2 id="perhost">分主机差异</h2><p>FreeHosting.com：需要先有自己控制的域名，不托管免费子域名；SSL 需付费附加包。HelioHost：Johnny 服务器名额有限，每 12 小时（UTC 午夜与中午）重置；Tommy 需一次性 $2 捐赠；Johnny/Tommy 限非商业用途；登录必须在 heliohost.org 或 /login 页面。AwardSpace：只有 1 个数据库（30 MB），最多 4 个网站共享；文件类型受限（TOS 禁止 .zip/.rar/.gz 等）；部分 PHP 函数禁用。ProFreeHost：SSL 是自签名证书。x10Hosting：大于 10 MB 的文件自动移除。</p>
+<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，领取前请以厂商官方页为准。</div>
+<div class="related"><h2>相关指南</h2><ul><li><a href="../pitfalls-backups/">免费虚拟主机避坑与备份</a></li><li><a href="../subdomain-vs-domain/">免费子域名 vs 自有域名</a></li><li><a href="../../compare/all-hosts-table/">免费虚拟主机总表</a></li><li><a href="../../">返回免费虚拟主机列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">免费虚拟主机</a> · <a href="../../offers/">主机详情</a> · <a href="../../compare/">主机对比</a> · <a href="../">主机指南</a> · <a href="../../faq/">主机问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
