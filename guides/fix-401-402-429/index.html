@@ -85,7 +85,7 @@ footer a { color:var(--accent); }
 </script>
 </head>
 <body>
-<header><div class="wrap"><h1><a href="../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：只收厂商官方核对过的免费额度。领取前请以厂商官方页为准。</p></div></header>
+<header><div class="wrap"><h1><a href="../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：额度信息来自厂商官方页。领取前请以厂商官方页为准。</p></div></header>
 <nav><div class="wrap"><a href="../../">首页</a><a href="../../offers/">额度详情</a><a href="../../compare/">对比</a><a href="../../guides/" aria-current="page">指南</a><a href="../../faq/">常见问题</a></div></nav>
 <main><div class="wrap">
 <article>
@@ -93,8 +93,8 @@ footer a { color:var(--accent); }
 <h1>401 / 402 / 429 报错排查</h1>
 <p class="meta">本页更新于 2026-11-12</p>
 <div class="answer"><p>401 是鉴权问题（Key 无效、过期或没带对），402 是余额/付费状态问题，429 是限速——先分清撞的是分钟级还是日级限速：分钟级等一会儿再试，日级等到重置时间，不要无脑重试。</p></div>
-<div class="toc"><b>本页内容</b><ul><li><a href="#table">先看表</a></li><li><a href="#401">401：鉴权失败</a></li><li><a href="#402">402：余额 / 付费状态</a></li><li><a href="#429">429：限速</a></li><li><a href="#backoff">退避与分流</a></li><li><a href="#other">其他：404 / 模型名错误</a></li></ul></div>
-<h2 id="table">先看表：三个状态码分别改什么</h2>
+<div class="toc"><b>本页内容</b><ul><li><a href="#table">对照表</a></li><li><a href="#401">401：鉴权失败</a></li><li><a href="#402">402：余额 / 付费状态</a></li><li><a href="#429">429：限速</a></li><li><a href="#backoff">退避与分流</a></li><li><a href="#other">其他：404 / 模型名错误</a></li></ul></div>
+<h2 id="table">对照表：三个状态码分别改什么</h2>
 <div class="tablewrap"><table><thead><tr><th>状态码</th><th>通常含义</th><th>先查什么</th></tr></thead><tbody>
 <tr><td>401</td><td>鉴权失败：Key 无效、过期或没带对</td><td>Key 是否复制完整、是否过期/被撤销、请求头格式、是否选错了项目/账号</td></tr>
 <tr><td>402</td><td>余额/付费状态问题</td><td>控制台的余额与免费额度状态、是否需要绑卡或开通后付费</td></tr>
@@ -109,11 +109,11 @@ footer a { color:var(--accent); }
 <li>是否把 Key 填到了错误的字段（例如把 Key 当成了模型名）。</li>
 </ul>
 <h2 id="402">402：余额 / 付费状态</h2>
-<p>先去控制台看余额与免费额度状态：是免费额度用完了，还是账户需要绑卡/开通后付费。有的厂商在免费额度用完后直接停用，有的转按量计费（见本站每条的「注意」事项）。不要反复重试，402 不是重试能解决的。</p>
+<p>先去控制台看余额与免费额度状态：是免费额度用完了，还是账户需要绑卡/开通后付费。有的厂商在免费额度用完后直接停用，有的转按量计费（见每条的「注意」事项）。不要反复重试，402 不是重试能解决的。</p>
 <h2 id="429">429：限速——先分清分钟级还是日级</h2>
-<p>限速有四个轴：RPM（每分钟请求数）、TPM（每分钟 Token 数）、RPD（每天请求数）、TPD（每天 Token 数）。四个轴同时生效，撞上任何一个都返回 429。本站额度原文的例子：Groq 是「每模型 30 RPM / 1,000 次每天 / 20 万 Token 每天」，OpenRouter 免费模型是「20 RPM / 50 次每天」，Gemini 免费层是「5–30 RPM / 按模型限日额」。</p>
+<p>限速有四个轴：RPM（每分钟请求数）、TPM（每分钟 Token 数）、RPD（每天请求数）、TPD（每天 Token 数）。四个轴同时生效，撞上任何一个都返回 429。额度原文的例子：Groq 是「每模型 30 RPM / 1,000 次每天 / 20 万 Token 每天」，OpenRouter 免费模型是「20 RPM / 50 次每天」，Gemini 免费层是「5–30 RPM / 按模型限日额」。</p>
 <p>分钟级限速等一会儿再试；日级限速要等到重置时间。有的厂商会在响应头里给 Retry-After（建议等待秒数），以该值为准。注意：OpenRouter 的注意事项明确写明「失败请求也计入每日上限」，无脑重试会加速耗尽日额。</p>
-<h3>每天重置的额度：重置时间对照（照录本站数据）</h3>
+<h3>每天重置的额度：重置时间对照</h3>
 <div class="tablewrap"><table><thead><tr><th>额度</th><th>重置说明（照录）</th></tr></thead><tbody><tr><td>API-Inference 每日免费额度（ModelScope 魔搭）</td><td>每天重置，当日不用不结转</td></tr><tr><td>每日免费 Token（蚂蚁百灵 Ling Studio）</td><td>每天 02:00 前发放，当日不结转</td></tr><tr><td>促销模型每日免费 Token（华为云码道 CodeArts）</td><td>每天 24:00（UTC+8）重置，先到先得</td></tr><tr><td>Token Factory 免费模型 API（AMD Radeon Cloud）</td><td>北京时间 0 点重置，每日额度因账号而异</td></tr><tr><td>K2-Horizon 每日免费额度（IFM）</td><td>UTC 0 点重置</td></tr><tr><td>:free 免费模型（OpenRouter）</td><td>每天重置，模型 ID 以 :free 结尾</td></tr><tr><td>Free Plan 高速推理（Groq）</td><td>按模型分别限速，每天重置</td></tr><tr><td>Gemini API 免费层（Google AI Studio）</td><td>每天重置，实际限额以 AI Studio 限额面板为准</td></tr><tr><td>每日免费 Neurons（Cloudflare Workers AI）</td><td>00:00 UTC 重置，北京时间 08:00</td></tr><tr><td>桌面端每日领 Credits（Qoder）</td><td>每天在 Qoder 桌面应用内领取</td></tr><tr><td>混元 Hy4 限时免费（WorkBuddy / CodeBuddy）</td><td>活动期内每日赠送，订阅用户额度更高</td></tr><tr><td>每日签到积分（TRAE CN（字节跳动））</td><td>每天签到刷新，另有邀请积分</td></tr><tr><td>Web Search API（MCP）每日免费（You.com）</td><td>每天重置，通过 MCP 服务器调用</td></tr></tbody></table></div>
 <h2 id="backoff">退避与分流</h2>
 <p>分钟级限速可以用指数退避：每次等待时间翻倍，并加一点随机抖动，避免多个客户端同时重试撞在一起。下面是通用写法（伪代码）：</p>
@@ -130,10 +130,10 @@ for attempt in range(5):
 <p>长期缓解办法：降低并发、把请求分散到多个厂商的额度（不要违反厂商条款，不要用多账号刷额度）。</p>
 <h2 id="other">其他：404 / 模型名错误</h2>
 <p>404 常见于 Base URL 路径重复（<code>/chat/completions</code> 加了两次）或模型名写错。先按厂商文档核对 Base URL 与模型名，再看是不是把 Key 填错了位置。</p>
-<div class="note"><b>提醒：</b>各厂商的控制台入口、Key 创建位置、Base URL 与模型 ID 以厂商官方文档为准；各工具的配置方式以各工具官方文档为准。本站不提供绕过地区或支付规则的方法。</div>
+<div class="note"><b>提醒：</b>各厂商的控制台入口、Key 创建位置、Base URL 与模型 ID 以厂商官方文档为准；各工具的配置方式以各工具官方文档为准。请遵守厂商条款，不要绕过地区或支付规则。</div>
 <div class="related"><h2>相关页面</h2><ul><li><a href="../first-free-key/">领取第一个免费 Key 并完成第一次调用</a></li><li><a href="../connect-coding-agents/">把免费 Key 接入 Claude Code / Codex / Cline / OpenCode</a></li><li><a href="../../faq/">常见问题（Q2、Q9）</a></li><li><a href="../../">返回额度总览</a></li></ul></div>
 </article>
 </div></main>
-<footer><div class="wrap"><p><a href="../../">首页</a> · <a href="../../offers/">额度详情</a> · <a href="../../compare/">对比</a> · <a href="../../guides/">指南</a> · <a href="../../faq/">常见问题</a></p><p>数据仅供参考，以厂商官方页为准。额度随时可能调整或结束；领取前请看清对方条款，用完记得开「用完即停」防扣费。本站不含邀请链接、API 中转站、二手积分、共享账号等内容。数据来源：蓝蓝仓库、freetokens.fyi，均经厂商官方页核对。</p></div></footer>
+<footer><div class="wrap"><p><a href="../../">首页</a> · <a href="../../offers/">额度详情</a> · <a href="../../compare/">对比</a> · <a href="../../guides/">指南</a> · <a href="../../faq/">常见问题</a></p><p>数据仅供参考，以厂商官方页为准。额度随时可能调整或结束；领取前请看清对方条款，用完记得开「用完即停」防扣费。无邀请链接、无 API 中转站、无二手积分、无共享账号内容。数据来源：蓝蓝仓库、freetokens.fyi；额度信息以厂商官方页为准。</p></div></footer>
 </body>
 </html>
