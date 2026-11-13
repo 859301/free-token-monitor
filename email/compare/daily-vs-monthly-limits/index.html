@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>邮件日限 vs 月限：Resend、Mailgun、Brevo、Postmark 限额结构对照</title>
+<meta name="description" content="邮件限额结构对照：Resend 日限加月限双重上限，Mailgun 与 Brevo 按天计量、每日重置，Postmark 按月计量 100 封、未用不结转。核实于 2026-11-13。">
+<link rel="canonical" href="https://tokens.yangtokent.com/email/compare/daily-vs-monthly-limits/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "邮件日限 vs 月限：Resend、Mailgun、Brevo、Postmark 限额结构对照",
+  "description": "邮件限额结构对照：Resend 日限加月限双重上限，Mailgun 与 Brevo 按天计量、每日重置，Postmark 按月计量 100 封、未用不结转。核实于 2026-11-13。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/email/compare/daily-vs-monthly-limits/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "按天计量的额度，用不完能留到第二天吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Brevo 写明每日重置，不结转。Mailgun 的重置与结转规则在官网已读页面中未述，以官方页面为准。核实于 2026-11-13。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Resend 的日限和月限，哪个说了算？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "定价页同时列出 100 封/天与 3,000 封/月两个数字，两个上限同时存在。核实于 2026-11-13。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">邮件通知</a><a href="../../offers/">邮件详情</a><a href="../../compare/" aria-current="page">邮件对比</a><a href="../../guides/">邮件指南</a><a href="../../faq/">邮件问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">邮件通知</a> / <a href="../">邮件对比</a> / 日限 vs 月限</p>
+<h1>日限 vs 月限</h1>
+<p class="meta">核实于 2026-11-13 · 本页更新于 2026-11-13</p>
+<div class="answer"><p>四家的限额结构分三种：Resend 是日限加月限双重上限；Mailgun 与 Brevo 按天计量，额度每天重置；Postmark 按月计量，每月 100 封，未用额度不结转。看免费额度时，分清按天还是按月计量。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#table">限额结构对照表</a></li><li><a href="#daily">按天计量：每天重置</a></li><li><a href="#monthly">按月计量：每月配额</a></li><li><a href="#dual">双重上限：日限加月限</a></li><li><a href="#faq">常见问题</a></li></ul></div>
+<h2 id="table">限额结构对照表</h2><div class="tablewrap"><table><thead><tr><th>服务</th><th>计量方式</th><th>上限数字</th><th>重置与结转</th></tr></thead><tbody><tr><td><a href="../../offers/resend/">Resend</a></td><td>日限 + 月限</td><td>100 封/天；3,000 封/月</td><td>以官方页面为准</td></tr><tr><td><a href="../../offers/mailgun/">Mailgun</a></td><td>按天计量</td><td>100 封/天</td><td>以官方页面为准</td></tr><tr><td><a href="../../offers/brevo/">Brevo</a></td><td>按天计量</td><td>300 封/天</td><td>每日重置，不结转</td></tr><tr><td><a href="../../offers/postmark/">Postmark</a></td><td>按月计量</td><td>100 封/月</td><td>未用额度不结转</td></tr></tbody></table></div><h2 id="daily">按天计量：每天重置</h2><p>Mailgun 100 封/天、Brevo 300 封/天，都是按天计量的上限。Brevo 官方帮助中心写明每日重置，不结转：当天未用完的额度不留到下一天。Mailgun 的重置与结转规则在官网已读页面中未述，以官方页面为准。按天计量的特点是单日发送量受日限约束，一天发不出一个月的量。</p><h2 id="monthly">按月计量：每月配额</h2><p>Postmark 免费 Developer 计划 100 封/月，按月计量；FAQ 写明未用额度不结转。按月计量的特点是一个月内的发送可以集中在某几天，但总量受月限约束。</p><h2 id="dual">双重上限：日限加月限</h2><p>Resend 定价页同时列出 100 封/天与 3,000 封/月两个数字。两个上限同时存在时，单日发送受日限约束，整月发送受月限约束。算法细节与示例见<a href="../../guides/daily-vs-monthly-limits/">日限与月限怎么算</a>。</p>
+<h2 id="faq">常见问题</h2><details><summary>按天计量的额度，用不完能留到第二天吗？</summary><p>Brevo 写明每日重置，不结转。Mailgun 的重置与结转规则在官网已读页面中未述，以官方页面为准。核实于 2026-11-13。</p></details><details><summary>Resend 的日限和月限，哪个说了算？</summary><p>定价页同时列出 100 封/天与 3,000 封/月两个数字，两个上限同时存在。核实于 2026-11-13。</p></details>
+<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，领取前请以厂商官方页为准。</div>
+<div class="related"><h2>其他对比</h2><ul><li><a href="../resend-sendgrid-mailgun/">Resend vs SendGrid vs Mailgun</a></li><li><a href="../sendgrid-trial-vs-free-plans/">SendGrid 试用 vs 免费层</a></li><li><a href="../all-email-table/">邮件总表</a></li><li><a href="../../guides/daily-vs-monthly-limits/">日限与月限怎么算</a></li><li><a href="../../">返回邮件通知列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">邮件通知</a> · <a href="../../offers/">邮件详情</a> · <a href="../../compare/">邮件对比</a> · <a href="../../guides/">邮件指南</a> · <a href="../../faq/">邮件问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
