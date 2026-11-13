@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>超售与 CPU 争抢：怎么验一台廉价 VPS</title>
+<meta name="description" content="超售与公平共享科普：HostEONS Fair Share 与 DigitalOcean Basic 共享 CPU 的官方说法；验机方法（基准测试、steal 指标、长期观察）与预期管理。">
+<link rel="canonical" href="https://tokens.yangtokent.com/cheap/guides/overselling-checks/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "超售与 CPU 争抢：怎么验一台廉价 VPS",
+  "description": "超售与公平共享科普：HostEONS Fair Share 与 DigitalOcean Basic 共享 CPU 的官方说法；验机方法（基准测试、steal 指标、长期观察）与预期管理。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/cheap/guides/overselling-checks/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "steal 高怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "排除自身负载后持续高 steal，说明超售严重，联系客服或换机。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "基准测试跑多少分算好？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "看同价位横向对比与自身需求；够用、波动小就是好。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：只收厂商官方核对过的免费额度。领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">低价 VPS</a><a href="../../offers/">低价详情</a><a href="../../compare/">低价对比</a><a href="../" aria-current="page">低价指南</a><a href="../../faq/">低价问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">低价 VPS</a> / <a href="../">低价指南</a> / 超售检查</p>
+<h1>超售与 CPU 争抢：怎么验一台廉价 VPS</h1>
+<p class="meta">本页更新于 2026-11-13</p>
+<div class="answer"><p>便宜 VPS 的 CPU 通常是共享的：HostEONS 套餐表写 Fair Share（公平共享），DigitalOcean 定价页写 Basic 是共享 CPU、适合突发负载。验机方法：基准测试看单核性能，steal 指标看 CPU 争抢程度，长期观察看稳定性。持续高 steal、IO 极不稳定，就是超售严重的信号——该换就换。</p></div>
+<p>本指南是验机方法，不含基准测试数值（数值随机器与时间变化，无法核实）。厂商说法照录官网页原文。</p>
+<h2 id="terms">三种 CPU 说法</h2>
+<p>HostEONS 套餐表：Fair Share（公平共享）——CPU 资源与其他用户共享，繁忙时性能波动。DigitalOcean 定价页：Basic 是共享 CPU，适合突发负载（bursty workloads）——短时爆发可以，持续满载不行。RackNerd specials 页：称 Full KVM for dedicated resources（厂商说法，未独立验证）。三种说法，两种明确共享、一种厂商自称独占——预期按「共享」放，心态最稳。</p>
+<h2 id="howto">怎么验</h2>
+<ul><li><strong>基准测试：</strong>YABS、Geekbench 等工具跑单核与多核分数、磁盘 IO、网络速度——同一台机器不同时段跑 3 次，看波动范围。</li><li><strong>steal 指标：</strong>top 或 vmstat 里看 %steal——持续高于 10% 说明 CPU 争抢严重；偶尔 spike 正常，长期高位不正常。</li><li><strong>长期观察：</strong>跑 7 天日常负载，记录响应时间与宕机；便宜机器的稳定性，7 天能看出大半。</li></ul>
+<h2 id="expect">预期管理</h2>
+<p>$21/年的机器，合理预期是：轻量服务稳定跑、突发负载能顶、偶尔波动可接受。不合理预期是：持续满载、7×24 高性能、零波动。需求超过预期的，加钱上更高档或换独占 CPU——不要指望 $21/年跑出 $200/年的性能。</p>
+<h2 id="faq">常见问题</h2>
+<details><summary>steal 高怎么办？</summary><p>先确认是不是自己的负载问题；排除后持续高 steal，说明宿主机超售严重——联系客服或换机。</p></details>
+<details><summary>基准测试跑多少分算好？</summary><p>没有统一标准：看同价位横向对比与自身需求。分数够用、波动小，就是好机器。</p></details>
+<div class="note"><b>免责：</b>本指南为本站编辑方法；厂商说法照录官网页原文，核实于 2026-11-13。</div>
+<div class="related"><h2>相关页面</h2><ul><li><a href="../../compare/racknerd-hosteons-do/">三家对比</a></li><li><a href="../backup-monthly-first/">先按月、再年付指南</a></li><li><a href="../../">低价 VPS 列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">低价 VPS</a> · <a href="../../offers/">低价详情</a> · <a href="../../compare/">低价对比</a> · <a href="../">低价指南</a> · <a href="../../faq/">低价问答</a></p><p>数据仅供参考，以厂商官方页为准。低价区只收常态价，续费条件以厂商官方页为准；价格随时可能调整，购买前请在厂商页面确认续费价。本站不含邀请链接。</p></div></footer>
+</body>
+</html>
