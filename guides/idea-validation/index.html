@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>立项验证：不写代码先确认有没有人需要</title>
+<meta name="description" content="立项验证的三种低成本方法：着陆页与等候名单、人工代办、访谈问过去的行为；判断信号与常见误区；验证之后再进入开发。">
+<link rel="canonical" href="https://tokens.yangtokent.com/guides/idea-validation/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "立项验证：不写代码先确认有没有人需要",
+  "description": "立项验证的三种低成本方法：着陆页与等候名单、人工代办、访谈问过去的行为；判断信号与常见误区；验证之后再进入开发。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/guides/idea-validation/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../">首页</a><a href="../../offers/">额度详情</a><a href="../../compare/">对比</a><a href="../../guides/" aria-current="page">指南</a><a href="../../faq/">常见问题</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../">首页</a> / <a href="../">指南</a> / 立项验证</p>
+<h1>立项验证：不写代码先确认有没有人需要</h1>
+<p class="meta">本页更新于 2026-11-13</p>
+<div class="answer"><p>验证的意思是：在写代码之前，确认有没有人愿意为这个想法花时间、花钱或留联系方式。三种低成本方法：着陆页与等候名单、人工代办、访谈。验证通过的信号是具体的行动，不是客套的肯定。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#why">为什么先验证</a></li><li><a href="#methods">三种低成本验证方法</a></li><li><a href="#signals">判断信号</a></li><li><a href="#mistakes">常见误区</a></li><li><a href="#next">验证之后</a></li></ul></div>
+<h2 id="why">为什么先验证</h2>
+<p>做出来没人用，是个人项目最常见的结局。验证的成本是一页说明加几次对话；不验证的成本是几周甚至几个月的开发时间。验证不是保证成功，是把“没人需要”这个结局提前发现。</p>
+<h2 id="methods">三种低成本验证方法</h2>
+<h3>着陆页与等候名单</h3>
+<p>一页说明：解决什么问题、给谁用、怎么用，留一个邮箱输入框。把链接发到目标用户出没的地方，看有没有人留邮箱。留邮箱的人数与来源，是第一批用户的线索。</p>
+<h3>人工代办</h3>
+<p>不用先写产品，手动替用户完成服务：用户提需求，人在后台手工处理。手动跑几单，就能知道需求是不是真实存在、流程里哪些步骤最费时间。手动跑不动的量，才值得写代码自动化。</p>
+<h3>访谈：问过去的行为</h3>
+<p>问对方过去是怎么解决这个问题的：上次遇到这个问题是什么时候、当时怎么处理的、花了多少钱或多少时间。过去的行为比未来的表态可靠。</p>
+<h2 id="signals">判断信号</h2>
+<ul>
+<li><strong>愿意留联系方式：</strong>留了邮箱或加了联系方式，等产品出来愿意试用。</li>
+<li><strong>愿意付定金或预付：</strong>愿意先付一部分钱，是最强的信号。</li>
+<li><strong>反复追问：</strong>主动问什么时候能用、支不支持某种情况。</li>
+<li><strong>已经在用替代方案：</strong>对方已经在为类似方案花钱或花时间，说明问题真实存在。</li>
+</ul>
+<p>反信号同样要认：只说“不错”“有需要”却没有任何行动；问“多少钱”之后再无下文；点赞和转发很多，留邮箱的很少。</p>
+<h2 id="mistakes">常见误区</h2>
+<ul>
+<li><strong>问“会不会用”：</strong>对方出于客气会说会用，回答没有参考价值。改问过去的行为。</li>
+<li><strong>做完整产品再验证：</strong>功能越多，验证越晚。先验证需求，再决定做多少功能。</li>
+<li><strong>把点赞当需求：</strong>点赞的成本是零，留邮箱、付定金的成本是真的。</li>
+<li><strong>只问身边的人：</strong>朋友的肯定最不可靠，目标用户本人的行动才算数。</li>
+</ul>
+<h2 id="next">验证之后</h2>
+<p>验证通过后，定下最小可用的第一版范围：一个核心功能，解决验证中确认的那个问题。其他功能等第一批用户用起来再加。进入开发的环节见<a href="../../workflow/">工作流总览</a>，代码托管见<a href="../../code/">代码托管列表</a>，部署方式见<a href="../../deploy/">部署与托管列表</a>。</p>
+<div class="related"><h2>相关页面</h2><ul><li><a href="../../workflow/">工作流总览：14 个环节</a></li><li><a href="../../code/">代码托管列表</a></li><li><a href="../../deploy/">部署与托管列表</a></li><li><a href="../">指南总览</a></li><li><a href="../../">返回额度总览</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../">首页</a> · <a href="../../offers/">额度详情</a> · <a href="../../compare/">对比</a> · <a href="../../guides/">指南</a> · <a href="../../faq/">常见问题</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
