@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>部署与托管常见问题：17 问（商用、休眠、绑卡、超额、试用）</title>
+<meta name="description" content="部署与托管 17 个常见问题：商用限制、休眠、绑卡、超额、试用、免费层真假、GitHub Pages、Heroku。含 2 条 V2EX 原话标题与 2 个英文问题原文。">
+<link rel="canonical" href="https://tokens.yangtokent.com/deploy/faq/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "推荐一下大伙用过的免费好用的服务",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "部署与托管：Vercel Hobby、Netlify Free、Cloudflare Workers、Cloudflare Pages、Render 免费层、Northflank Sandbox、EdgeOne 免费计划为免费层；Railway 为 30 天试用；Fly.io 与 Koyeb 没有免费层。免费虚拟主机与免费 VPS 见对应列表。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "不租服务器部署混合搜索引擎",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不租服务器的路线：静态托管（Vercel Hobby、Netlify Free、Cloudflare Pages）、边缘计算与 CDN（Cloudflare Workers、EdgeOne）、容器与后端（Render、Northflank、Railway 试用、Fly.io、Koyeb）。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vercel 免费版能商用吗？超了会怎样？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "服务条款 §4 写明 Hobby 计划只能用于个人或非商业用途。官网定价页写明免费 Hobby 账户受用量上限约束、不能购买额外用量；Hobby 文档页写明超限后 30 天等待期。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "免费实例会休眠吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Render 免费实例 15 分钟无入站流量后 spin down，唤醒约 1 分钟。Northflank Sandbox 常开不休眠。其余服务的休眠政策在官网已读页面中未述。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Render 免费 Postgres 多久过期？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "创建后 30 天到期；到期后 14 天宽限期，之后连数据一起删除。每个工作区 1 个，1 GB。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Railway 试用结束后会怎样？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "试用后 $1/月起，缩减为 1 个项目/3 个服务、0 个自定义域名，每服务至多 1 vCPU / 0.5 GB RAM。试用为一次性 $5 额度、30 天过期。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Fly.io 还有免费额度吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "没有免费层。官网定价文档写明“Is there a free tier? No.”只有 $1/7 天试用与个人组织月账单低于 $5 的豁免。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Koyeb 还有免费层吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "没有。定价页只列 Pro、Scale、Enterprise 三个计划，整页无 Starter/免费计划。2026 年新用户无免费层。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "部署服务需要绑信用卡吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Northflank 必须添加支付方式；Render $1 验证扣款（退还）；EdgeOne 无需信用卡；Railway 可无卡试用；Fly.io 试用开始无需绑卡、之后需要；Vercel、Netlify、Workers、Pages、Koyeb 在官网已读页面中未述。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Netlify 的 credits 怎么算？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Free 计划每月 300 credits。生产部署 15 credits/次、计算 10 credits/GB-hour、带宽 20 credits/GB、Web 请求 2 credits/10K。官网写 $0 forever。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cloudflare Workers 和 Pages 有什么区别？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "计量口径不同：Workers 按请求与 CPU 计量（100,000 请求/天、每次调用 10 ms CPU）；Pages 按构建与文件设限（500 构建/月、20,000 文件/站、单文件 25 MiB）。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "EdgeOne 免费计划有什么限制？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "有限内测中、无 SLA、仅限标准 Web 内容（不含视频/大文件分发）；配额：200 个子域名、20 条规则引擎、1 个实时日志任务、1 条限速规则、0 条自定义精确匹配规则；不限量、无超额费用；可接入站点数量未确认。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Heroku 免费层还在吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不在。Heroku 免费 tier 已于 2022-11-28 移除，现 Eco $5/月起（多源二手说法一致）；2026-02 转 sustaining engineering。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "GitHub Pages 为什么不在列表里？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GitHub Pages 的参数来自援引 GitHub Docs 的二手核查（2026-09 至 2026-10-30），本次未做官网页面直接核实。GitHub Student Pack 官网页确认的一句为：Get one site per GitHub account and organization, and unlimited project sites."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "部署在这些平台上，国内访问快吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "没有速度实测数据。各家官网页未述国内访问速度，以官方页面为准。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Best free hosting for a Next.js app? Does the free tier sleep?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "这是调研中的归纳问法（英文）。休眠政策：Render 免费实例 15 分钟无流量 spin down，Northflank Sandbox 常开不休眠，其余服务在官网已读页面中未述。各家官网定价页未述框架支持情况，以官方页面为准。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a free tier?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "这是 Fly.io 官网定价文档的原问句。回答是 No：没有免费层。只有 $1/7 天试用与个人组织月账单低于 $5 的豁免。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../">首页</a><a href="../">部署与托管</a><a href="../offers/">部署详情</a><a href="../compare/">部署对比</a><a href="../guides/">部署指南</a><a href="../faq/" aria-current="page">部署问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../">首页</a> / <a href="../">部署与托管</a> / 常见问题</p>
+<h1>部署与托管常见问题</h1>
+<p class="meta">核实于 2026-11-13 · 本页更新于 2026-11-13</p>
+<div class="answer"><p>17 个问题：15 个中文问题（2 条为 V2EX 帖子标题原话，其余为按常见问法整理），2 个英文问题原文、中文回答。答案里的参数以各家官网为准，核实于 2026-11-13。</p></div>
+<h2 id="zh">中文问题</h2><details><summary>推荐一下大伙用过的免费好用的服务</summary><p>这是 V2EX 帖子标题原话。部署与托管：<a href="../">7 个免费层</a>（Vercel Hobby、Netlify Free、Cloudflare Workers、Cloudflare Pages、Render、Northflank Sandbox、EdgeOne），Railway 为 30 天试用，Fly.io 与 Koyeb 没有免费层。免费虚拟主机见<a href="../../hosting/">免费虚拟主机列表</a>，免费 VPS 见<a href="../../vps/">免费 VPS 列表</a>。</p></details><details><summary>不租服务器部署混合搜索引擎</summary><p>这是 V2EX 帖子标题原话。不租服务器的路线有三条：静态托管、边缘计算与 CDN、容器与后端，各条限制见<a href="../guides/no-server-deploy/">不租服务器怎么部署</a>。</p></details><details><summary>Vercel 免费版能商用吗？超了会怎样？</summary><p>不能。服务条款 §4 写明 Hobby 计划只能用于个人或非商业用途，公平使用两列清单见<a href="../guides/vercel-hobby-commercial/">Vercel Hobby 商业限制说明</a>。超了：官网定价页写明免费 Hobby 账户受用量上限约束、不能购买额外用量；Hobby 文档页写明超限后 30 天等待期。详情见<a href="../offers/vercel-hobby/">Vercel Hobby 详情页</a>。</p></details><details><summary>免费实例会休眠吗？</summary><p>Render 免费实例 15 分钟无入站流量后 spin down，唤醒约 1 分钟；Northflank Sandbox 常开不休眠。其余服务的休眠政策在官网已读页面中未述。完整对照见<a href="../guides/sleep-cold-start/">免费实例休眠与冷启动</a>。</p></details><details><summary>Render 免费 Postgres 多久过期？</summary><p>创建后 30 天到期；到期后 14 天宽限期，之后连数据一起删除。每个工作区 1 个，1 GB。详情见<a href="../offers/render-free/">Render 详情页</a>。</p></details><details><summary>Railway 试用结束后会怎样？</summary><p>试用后 $1/月起，缩减为 1 个项目/3 个服务、0 个自定义域名，每服务至多 1 vCPU / 0.5 GB RAM。试用为一次性 $5 额度、30 天过期。详情见<a href="../offers/railway-trial/">Railway 详情页</a>。</p></details><details><summary>Fly.io 还有免费额度吗？</summary><p>没有免费层。官网定价文档写明“Is there a free tier? No.”只有 $1/7 天试用与个人组织月账单低于 $5 的豁免。详情见<a href="../offers/fly-io/">Fly.io 详情页</a>。</p></details><details><summary>Koyeb 还有免费层吗？</summary><p>没有。定价页只列 Pro、Scale、Enterprise 三个计划，整页无 Starter/免费计划。详情见<a href="../offers/koyeb/">Koyeb 详情页</a>。</p></details><details><summary>部署服务需要绑信用卡吗？</summary><p>逐家不同：Northflank 必须添加支付方式；Render $1 验证扣款（退还）；EdgeOne 无需信用卡；Railway 可无卡试用；Fly.io 试用开始无需绑卡、之后需要；Vercel、Netlify、Workers、Pages、Koyeb 在官网已读页面中未述。完整对照见<a href="../guides/card-required-check/">部署服务要绑卡吗</a>。</p></details><details><summary>Netlify 的 credits 怎么算？</summary><p>Free 计划每月 300 credits，官网写 $0 forever。生产部署 15 credits/次、计算 10 credits/GB-hour、带宽 20 credits/GB、Web 请求 2 credits/10K。详情见<a href="../offers/netlify-free/">Netlify 详情页</a>。</p></details><details><summary>Cloudflare Workers 和 Pages 有什么区别？</summary><p>计量口径不同：Workers 按请求与 CPU 计量，Pages 按构建与文件设限。完整对照见<a href="../compare/workers-vs-pages/">Cloudflare Workers vs Pages</a>。</p></details><details><summary>EdgeOne 免费计划有什么限制？</summary><p>有限内测中、无 SLA、仅限标准 Web 内容（不含视频/大文件分发）；配额见<a href="../offers/edgeone-free/">EdgeOne 详情页</a>。用量不限量、无超额费用；可接入站点数量在官方页面中未确认。</p></details><details><summary>Heroku 免费层还在吗？</summary><p>不在。Heroku 免费 tier 已于 2022-11-28 移除，现 Eco $5/月起；2026-02 转 sustaining engineering。见<a href="../">部署与托管列表</a>页末尾的说明框。</p></details><details><summary>GitHub Pages 为什么不在列表里？</summary><p>GitHub Pages 的参数来自援引 GitHub Docs 的二手核查（2026-09 至 2026-10-30），本次未做官网页面直接核实。见<a href="../">部署与托管列表</a>页末尾的说明框。</p></details><details><summary>部署在这些平台上，国内访问快吗？</summary><p>没有速度实测数据。各家官网页未述国内访问速度，以官方页面为准。</p></details>
+<h2 id="en">English questions（中文回答）</h2><details><summary>Best free hosting for a Next.js app? Does the free tier sleep?</summary><p>这是调研中的归纳问法（英文）。休眠政策：Render 免费实例 15 分钟无流量 spin down，Northflank Sandbox 常开不休眠，其余服务在官网已读页面中未述，见<a href="../guides/sleep-cold-start/">免费实例休眠与冷启动</a>。各家官网定价页未述框架支持情况，以官方页面为准。</p></details><details><summary>Is there a free tier?</summary><p>这是 Fly.io 官网定价文档的原问句。回答是 No：没有免费层。只有 $1/7 天试用与个人组织月账单低于 $5 的豁免。详情见<a href="../offers/fly-io/">Fly.io 详情页</a>。</p></details>
+<h2 id="not-listed">不在列表中的服务</h2>
+<p>不在列表中的服务及原因见<a href="../">部署与托管列表</a>页末尾的说明框。</p>
+<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，领取前请以厂商官方页为准。</div>
+<div class="related"><h2>相关页面</h2><ul><li><a href="../">部署与托管列表</a></li><li><a href="../offers/">部署详情总览</a></li><li><a href="../compare/all-deploy-table/">部署与托管总表</a></li><li><a href="../guides/overage-stop-vs-charge/">免费额度超了怎么办</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../">首页</a> · <a href="../">部署与托管</a> · <a href="../offers/">部署详情</a> · <a href="../compare/">部署对比</a> · <a href="../guides/">部署指南</a> · <a href="../faq/">部署问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
