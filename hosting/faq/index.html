@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>免费虚拟主机常见问题：18 问（绑卡、删站、SSL、广告、域名、闲置）</title>
+<meta name="description" content="免费虚拟主机 18 个常见问题：真的免费吗、要绑卡吗、会删站吗、国内能访问吗、WordPress、hits、SSL、广告、域名、闲置、备份、虚拟主机 vs VPS。含 5 条官网英文 FAQ 原文。">
+<link rel="canonical" href="https://tokens.yangtokent.com/hosting/faq/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "推荐免费的虚拟主机和云服务器？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "免费虚拟主机（PHP + MySQL、可装 WordPress）：InfinityFree、Byet.host、x10Hosting、AwardSpace、HelioHost、GoogieHost、FreeHosting.com、FreeHostia、ProFreeHost、TinkerHost。免费云服务器（VPS，有 root 权限、自运维）见免费 VPS 列表，包括甲骨文 Always Free、GCP e2-micro 与 EUserv VS2-free。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "真的免费吗？以后会收费吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10 家官网都写了免费措辞，但条件不同：InfinityFree 写 Free forever, not a trial；Byet.host 写 No ads, no card, no expiration；x10Hosting 写 $0 / month, forever；FreeHosting.com 写 does not automatically turn into a paid subscription；FreeHostia 写可用任意时长且不收费，但 TOS 写免费账户默认有效期 1 年、可免费续期。FreeHosting.com 的 SSL、PHP 选择器、cron、额外数据库是付费附加包；TinkerHost 的代为备份收费 $14.99；Byet.host 的代为备份收费 $9.99。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "需要绑卡、实名或手机验证吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7 家官网写明无需信用卡：InfinityFree、Byet.host、x10Hosting、GoogieHost、FreeHosting.com、ProFreeHost、TinkerHost。AwardSpace、HelioHost、FreeHostia 的绑卡要求在官网已读页面中未述，以官方页面为准。GoogieHost 的 TOS 写明 18+、可能要求政府照片身份证件；HelioHost 要求 13+、不接受一次性邮箱；x10Hosting 的 TOS 写每人/每户限 1 个账户。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "会突然删站、停用或跑路吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "停用与删站规则写在各家官网与 TOS 里，天数不同：GoogieHost 15 天闲置停用、22 天永久终止；x10Hosting 30 天登录一次、停用 21 天后移除；HelioHost 30 天登录一次；InfinityFree 30 天内少于 5 hits 停用、停用 20–60 天后删除；FreeHosting.com 连续 90 天无访客可能移除；AwardSpace 12 个月无流量设为闲置、1 年登录续期；FreeHostia 1 年有效期、可免费续期；Byet.host 的 TOS 未给天数；ProFreeHost 与 TinkerHost 的闲置政策在官网已读页面中未述。000webhost 已于 2024-10-14 全面停服。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "国内能访问吗？速度怎么样？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "没有速度实测数据。服务器位置：Byet.host 的 TOS 写加州、俄亥俄、英国；HelioHost 官网写硅谷数据中心；InfinityFree 的英国服务器位置为论坛用户说法。Cloudflare：InfinityFree 论坛指南写免费子域名上不能用、自有域名可以；ProFreeHost 的 Features 页列出 Cloudflare 支持；TinkerHost 免费页写 Cloudflare 兼容。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "能装 WordPress 吗？数据库有几个？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10 家都能装 WordPress（PHP + MySQL + 一键安装器）。数据库数量：Byet.host 无限；InfinityFree 400 个；ProFreeHost 10 个；x10Hosting 2 个；AwardSpace 1 个（30 MB，最多 4 站共享）；FreeHosting.com 1 个（无查询数限制）；FreeHostia 1 个（10 MB 存储）；HelioHost MySQL + PostgreSQL + SQLite（数量未述）；GoogieHost 两页表述不一致；TinkerHost 数量未述。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "流量 / hits 是什么意思？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "hit 是对网站文件的每次请求，不是访问量：1 个页面含 2 个 CSS + 3 个 JS + 5 张图片，加载一次产生 11 hits。InfinityFree 每天限 50,000 hits，超限下线 24 小时。Unlimited 带宽不等于无限访问量。HelioHost 用负载单位：内存 200 GB/天 + CPU 10,000/天，每 60 秒采样一次。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "有 SSL / HTTPS 吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "免费 SSL：InfinityFree、Byet.host（子域名自动、自有域名面板自装）、GoogieHost（自动激活）、FreeHostia（Let's Encrypt）、TinkerHost（免费 SSL）。ProFreeHost 写为自动自签名 SSL。FreeHosting.com 的 SSL 是 $29.95 一次性附加包，免费档不含。x10Hosting、AwardSpace、HelioHost 的 SSL 在官网已读页面中未述，以官方页面为准。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "会放广告吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "InfinityFree：网站上无广告。Byet.host：无广告。AwardSpace：100% 无广告。GoogieHost：不注入广告。FreeHosting.com：无强制广告。ProFreeHost：无强制广告。FreeHostia：无顶部/底部横幅广告。TinkerHost：支持页 FAQ 写不在用户网站上投放自有广告，客户区内有广告。x10Hosting 与 HelioHost 的广告政策在官网已读页面中未述，以官方页面为准。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "没有域名怎么办？免费子域名和自有域名有什么区别？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "免费子域名零成本起步：InfinityFree（25+ 后缀）、Byet.host（24 个后缀）、x10Hosting（4 个后缀）、GoogieHost（后缀三处写法不一致）、ProFreeHost（免费子域名）。自有域名自己控制、可迁移。FreeHosting.com 必须自有域名，不托管免费子域名。Cloudflare 在 InfinityFree 的免费子域名上不能用、自有域名可以。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "闲置多久会被收回？要登录保活吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "各家天数不同：GoogieHost 15 天停用、22 天终止；x10Hosting 30 天登录一次、5 天内有建站进展；HelioHost 30 天登录一次（28 天警告邮件）；InfinityFree 30 天内少于 5 hits 停用；FreeHosting.com 连续 90 天无访客可能移除；AwardSpace 12 个月无流量闲置、1 年登录续期；FreeHostia 1 年有效期、可免费续期；Byet.host 未给天数；ProFreeHost 与 TinkerHost 在官网已读页面中未述。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "数据会丢吗？备份怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "多家 TOS 写明备份由账户持有人负责：Byet.host（代为创建备份 $9.99）、x10Hosting（违规停用不保证备份）、TinkerHost（不做自动备份，代为备份 $14.99）、GoogieHost（无自动文件备份）、HelioHost（官方不保留备份）。FreeHosting.com 的 FUP 写明备份文件下载后需立即删除。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "虚拟主机和 VPS 选哪个？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "虚拟主机给一块能跑 PHP、连 MySQL 的空间，带面板与一键安装器，可装 WordPress，免运维；VPS 给一台有 root 权限的服务器，环境自己装、自运维，能跑 Discourse、Node 应用等虚拟主机跑不了的程序。静态托管只发 HTML/CSS/JS，没有 PHP 与 MySQL，WordPress 跑不了。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is your hosting really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "这是 InfinityFree 官网首页的原问题。InfinityFree 官网写 Free forever, not a trial、无需信用卡。10 家的免费条件各不相同，闲置停用、删站规则、附加包收费见各家详情页。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will you put ads on my site?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "这是 InfinityFree 官网首页的原问题。InfinityFree 官网写网站上无广告。Byet.host 无广告；AwardSpace 100% 无广告；GoogieHost 不注入广告；FreeHosting.com 无强制广告；ProFreeHost 无强制广告；FreeHostia 无顶部/底部横幅广告；TinkerHost 不在用户网站上投放自有广告；x10Hosting 与 HelioHost 在官网已读页面中未述。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I install WordPress?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "这是 x10Hosting 官网的原问题。x10Hosting 官网写可以，用 300+ 应用安装器安装。10 家都能装 WordPress。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does GoogieHost free PHP hosting support PHP 8?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "这是 GoogieHost PHP 页的原问题。GoogieHost 官网写 PHP 7.4、8.0、8.1、8.2、8.3 可在 DirectAdmin 中切换；PHP 页标题写 PHP 8.4 Ready，与正文/FAQ 的 8.3 上限不一致。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I host a site on a free subdomain?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "这是 FreeHosting.com 官网的原问题。FreeHosting.com 的回答是不能：必须使用自己控制的注册域名，不托管免费子域名，不接受 .TK/.ML/.GA 等免费域名。有免费子域名的：InfinityFree、Byet.host、x10Hosting、GoogieHost、ProFreeHost。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../">首页</a><a href="../">免费虚拟主机</a><a href="../offers/">主机详情</a><a href="../compare/">主机对比</a><a href="../guides/">主机指南</a><a href="./" aria-current="page">主机问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../">首页</a> / <a href="../">免费虚拟主机</a> / 常见问题</p>
+<h1>免费虚拟主机常见问题</h1>
+<p class="meta">核实于 2026-11-13 · 本页更新于 2026-11-13</p>
+<div class="answer"><p>18 个问题：13 个中文问题（1 条为知乎原标题，其余为按常见问法整理），5 个英文问题原文来自各家官网 FAQ 页、中文回答。答案里的参数以各家官网为准，核实于 2026-11-13。</p></div>
+<h2 id="zh">中文问题</h2><details><summary>推荐免费的虚拟主机和云服务器？</summary><p>免费虚拟主机（PHP + MySQL、可装 WordPress）：InfinityFree、Byet.host、x10Hosting、AwardSpace、HelioHost、GoogieHost、FreeHosting.com、FreeHostia、ProFreeHost、TinkerHost，参数见<a href="../">免费虚拟主机列表</a>。免费云服务器（VPS，有 root 权限、自运维）见<a href="../../vps/">免费 VPS 列表</a>，包括甲骨文 Always Free、GCP e2-micro 与 EUserv VS2-free。两类服务能力不同，见<a href="../compare/hosting-vs-vps-vs-static/">虚拟主机 vs VPS vs 静态托管</a>。</p></details><details><summary>真的免费吗？以后会收费吗？</summary><p>10 家官网都写了免费措辞，但条件不同：InfinityFree 写“Free forever, not a trial”；Byet.host 写“No ads, no card, no expiration”；x10Hosting 写“$0 / month, forever”；FreeHosting.com 写“does not automatically turn into a paid subscription”；FreeHostia 写“可用任意时长且不收费”，但 TOS 写免费账户默认有效期 1 年、可免费续期。需要留意：FreeHosting.com 的 SSL、PHP 选择器、cron、额外数据库是付费附加包；TinkerHost 的代为备份收费 $14.99；Byet.host 的代为备份收费 $9.99。闲置停用与删站规则见<a href="../guides/pitfalls-backups/">避坑与备份指南</a>。</p></details><details><summary>需要绑卡、实名或手机验证吗？</summary><p>7 家官网写明无需信用卡：InfinityFree、Byet.host、x10Hosting、GoogieHost、FreeHosting.com、ProFreeHost、TinkerHost。AwardSpace、HelioHost、FreeHostia 的绑卡要求在官网已读页面中未述，以官方页面为准。身份与年龄要求：GoogieHost 的 TOS 写明 18+、可能要求政府照片身份证件；HelioHost 要求 13+、不接受一次性邮箱；x10Hosting 的 TOS 写每人/每户限 1 个账户。手机验证要求在官网已读页面中未述，以官方页面为准。</p></details><details><summary>会突然删站、停用或跑路吗？</summary><p>停用与删站规则写在各家官网与 TOS 里，天数不同：GoogieHost 15 天闲置停用、22 天永久终止；x10Hosting 30 天登录一次、停用 21 天后移除；HelioHost 30 天登录一次；InfinityFree 30 天内少于 5 hits 停用、停用 20–60 天后删除；FreeHosting.com 连续 90 天无访客可能移除；AwardSpace 12 个月无流量设为闲置、1 年登录续期；FreeHostia 1 年有效期、可免费续期；Byet.host 的 TOS 未给天数；ProFreeHost 与 TinkerHost 的闲置政策在官网已读页面中未述。000webhost 已于 2024-10-14 全面停服。完整天数表见<a href="../guides/pitfalls-backups/">避坑与备份指南</a>。</p></details><details><summary>国内能访问吗？速度怎么样？</summary><p>没有速度实测数据。服务器位置：Byet.host 的 TOS 写加州、俄亥俄、英国；HelioHost 官网写硅谷数据中心；InfinityFree 的英国服务器位置为论坛用户说法。Cloudflare：InfinityFree 论坛指南写免费子域名上不能用、自有域名可以；ProFreeHost 的 Features 页列出 Cloudflare 支持；TinkerHost 免费页写 Cloudflare 兼容。详情见<a href="../guides/china-access/">国内访问指南</a>。</p></details><details><summary>能装 WordPress 吗？数据库有几个？</summary><p>10 家都能装 WordPress（PHP + MySQL + 一键安装器）。数据库数量：Byet.host 无限；InfinityFree 400 个；ProFreeHost 10 个；x10Hosting 2 个；AwardSpace 1 个（30 MB，最多 4 站共享）；FreeHosting.com 1 个（无查询数限制）；FreeHostia 1 个（10 MB 存储）；HelioHost MySQL + PostgreSQL + SQLite（数量未述）；GoogieHost 两页表述不一致（套餐表 1 个 vs PHP 页多个）；TinkerHost 数量未述。步骤见<a href="../guides/wordpress-5-steps/">5 步建 WordPress 指南</a>。</p></details><details><summary>流量 / hits 是什么意思？</summary><p>hit 是对网站文件的每次请求，不是访问量：1 个页面含 2 个 CSS + 3 个 JS + 5 张图片，加载一次产生 11 hits（InfinityFree 官网 KB 示例）。InfinityFree 每天限 50,000 hits，超限下线 24 小时。“Unlimited 带宽”不等于无限访问量。HelioHost 用负载单位：内存 200 GB/天 + CPU 10,000/天，每 60 秒采样一次。详情见<a href="../guides/hits-cpu-limits/">hits 与 CPU 限额指南</a>。</p></details><details><summary>有 SSL / HTTPS 吗？</summary><p>免费 SSL：InfinityFree（免费 SSL 证书）、Byet.host（子域名自动、自有域名面板自装）、GoogieHost（自动激活）、FreeHostia（Let's Encrypt）、TinkerHost（免费 SSL）。ProFreeHost 写为自动自签名 SSL（是否为受信任 CA 证书，官网未说明）。FreeHosting.com 的 SSL 是 $29.95 一次性附加包，免费档不含。x10Hosting、AwardSpace、HelioHost 的 SSL 在官网已读页面中未述，以官方页面为准。</p></details><details><summary>会放广告吗？</summary><p>InfinityFree：网站上无广告。Byet.host：无广告。AwardSpace：100% 无广告。GoogieHost：不注入广告。FreeHosting.com：无强制广告。ProFreeHost：无强制广告。FreeHostia：无顶部/底部横幅广告。TinkerHost：支持页 FAQ 写不在用户网站上投放自有广告，客户区内有广告。x10Hosting 与 HelioHost 的广告政策在官网已读页面中未述，以官方页面为准。</p></details><details><summary>没有域名怎么办？免费子域名和自有域名有什么区别？</summary><p>免费子域名零成本起步：InfinityFree（25+ 后缀）、Byet.host（24 个后缀）、x10Hosting（4 个后缀）、GoogieHost（后缀三处写法不一致）、ProFreeHost（免费子域名）。自有域名自己控制、可迁移。FreeHosting.com 必须自有域名，不托管免费子域名。Cloudflare 在 InfinityFree 的免费子域名上不能用、自有域名可以（论坛指南）。详情见<a href="../guides/subdomain-vs-domain/">子域名 vs 自有域名指南</a>。</p></details><details><summary>闲置多久会被收回？要登录保活吗？</summary><p>各家天数不同：GoogieHost 15 天停用、22 天终止；x10Hosting 30 天登录一次、5 天内有建站进展；HelioHost 30 天登录一次（28 天警告邮件，登录必须在 heliohost.org 或 /login 页面）；InfinityFree 30 天内少于 5 hits 停用；FreeHosting.com 连续 90 天无访客可能移除；AwardSpace 12 个月无流量闲置、1 年登录续期；FreeHostia 1 年有效期、可免费续期；Byet.host 未给天数；ProFreeHost 与 TinkerHost 在官网已读页面中未述。完整天数表见<a href="../guides/pitfalls-backups/">避坑与备份指南</a>。</p></details><details><summary>数据会丢吗？备份怎么办？</summary><p>多家 TOS 写明备份由账户持有人负责：Byet.host（代为创建备份 $9.99）、x10Hosting（违规停用不保证备份）、TinkerHost（不做自动备份，代为备份 $14.99）、GoogieHost（无自动文件备份）、HelioHost（官方不保留备份）。FreeHosting.com 的 FUP 写明备份文件下载后需立即删除。定期下载网站文件与数据库，存到自己手里。详情见<a href="../guides/pitfalls-backups/">避坑与备份指南</a>。</p></details><details><summary>虚拟主机和 VPS 选哪个？</summary><p>虚拟主机给一块能跑 PHP、连 MySQL 的空间，带面板与一键安装器，可装 WordPress，免运维；VPS 给一台有 root 权限的服务器，环境自己装、自运维，能跑 Discourse、Node 应用等虚拟主机跑不了的程序。静态托管只发 HTML/CSS/JS，没有 PHP 与 MySQL，WordPress 跑不了。能力边界对照见<a href="../compare/hosting-vs-vps-vs-static/">虚拟主机 vs VPS vs 静态托管</a>，免费 VPS 见<a href="../../vps/">免费 VPS 列表</a>。</p></details>
+<h2 id="en">English questions（中文回答）</h2><details><summary>Is your hosting really free?</summary><p>这是 InfinityFree 官网首页的原问题。InfinityFree 官网写“Free forever, not a trial”、无需信用卡。10 家的免费条件各不相同：闲置停用、删站规则、附加包收费见各家<a href="../">详情页</a>与<a href="../guides/pitfalls-backups/">避坑与备份指南</a>。</p></details><details><summary>Will you put ads on my site?</summary><p>这是 InfinityFree 官网首页的原问题。InfinityFree 官网写网站上无广告。其他各家的广告政策：Byet.host 无广告；AwardSpace 100% 无广告；GoogieHost 不注入广告；FreeHosting.com 无强制广告；ProFreeHost 无强制广告；FreeHostia 无顶部/底部横幅广告；TinkerHost 不在用户网站上投放自有广告（客户区内有广告）；x10Hosting 与 HelioHost 在官网已读页面中未述。</p></details><details><summary>Can I install WordPress?</summary><p>这是 x10Hosting 官网的原问题。x10Hosting 官网写可以，用 300+ 应用安装器安装。10 家都能装 WordPress，数据库数量与安装器见<a href="../compare/all-hosts-table/">总表</a>，步骤见<a href="../guides/wordpress-5-steps/">5 步建 WordPress 指南</a>。</p></details><details><summary>Does GoogieHost free PHP hosting support PHP 8?</summary><p>这是 GoogieHost PHP 页的原问题。GoogieHost 官网写 PHP 7.4、8.0、8.1、8.2、8.3 可在 DirectAdmin 中切换；PHP 页标题写“PHP 8.4 Ready”，与正文/FAQ 的 8.3 上限不一致。详情见<a href="../offers/googiehost/">GoogieHost 详情页</a>。</p></details><details><summary>Can I host a site on a free subdomain?</summary><p>这是 FreeHosting.com 官网的原问题。FreeHosting.com 的回答是不能：必须使用自己控制的注册域名，不托管免费子域名，不接受 .TK/.ML/.GA 等免费域名。有免费子域名的：InfinityFree、Byet.host、x10Hosting、GoogieHost、ProFreeHost。详情见<a href="../guides/subdomain-vs-domain/">子域名 vs 自有域名指南</a>。</p></details>
+<h2 id="not-listed">不在列表中的服务</h2>
+<p>不在列表中的服务及原因见<a href="../">免费虚拟主机列表</a>页末尾的说明框。</p>
+<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，领取前请以厂商官方页为准。</div>
+<div class="related"><h2>相关页面</h2><ul><li><a href="../">免费虚拟主机列表</a></li><li><a href="../offers/">虚拟主机详情总览</a></li><li><a href="../compare/all-hosts-table/">免费虚拟主机总表</a></li><li><a href="../guides/pitfalls-backups/">免费虚拟主机避坑与备份</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../">首页</a> · <a href="../">免费虚拟主机</a> · <a href="../offers/">主机详情</a> · <a href="../compare/">主机对比</a> · <a href="../guides/">主机指南</a> · <a href="./">主机问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
