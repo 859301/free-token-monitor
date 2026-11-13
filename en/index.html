@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Token Monitor · Free AI credits for agents</title>
+<meta name="description" content="43 verified free AI credits for agents: LLM, coding, search, compute, browser, data, and speech. Only vendor-verified offers, with claim steps, reset times, and requirements. English edition.">
+<link rel="canonical" href="https://tokens.yangtokent.com/en/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Free Token Monitor",
+      "url": "https://tokens.yangtokent.com/",
+      "description": "Free credits for agents: only vendor-verified offers."
+    },
+    {
+      "@type": "WebSite",
+      "name": "Free Token Monitor",
+      "url": "https://tokens.yangtokent.com/en/",
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+<style>
+  :root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+  header { background:#111827; color:#fff; padding:28px 20px 22px; }
+  header .wrap, main .wrap, footer .wrap { max-width:1080px; margin:0 auto; }
+  header h1 { margin:0 0 6px; font-size:26px; }
+  header p { margin:0; color:#d1d5db; font-size:14px; }
+  .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-top:18px; }
+  .stat { background:#1f2937; border:1px solid #374151; border-radius:10px; padding:12px 14px; }
+  .stat .num { font-size:26px; font-weight:700; line-height:1.2; }
+  .stat .label { font-size:12px; color:#9ca3af; }
+  main { padding:20px; }
+  .controls { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:14px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:16px; }
+  .controls input[type="search"], .controls select { padding:8px 10px; border:1px solid var(--border); border-radius:8px; font-size:14px; background:#fff; }
+  .controls input[type="search"] { flex:1 1 220px; min-width:180px; }
+  .controls label.chk { font-size:14px; display:inline-flex; gap:5px; align-items:center; white-space:nowrap; }
+  .controls button { padding:8px 14px; border-radius:8px; border:1px solid var(--border); background:#fff; cursor:pointer; font-size:14px; }
+  .controls button:hover { border-color:var(--accent); color:var(--accent); }
+  #count { font-size:14px; color:var(--muted); margin:0 0 12px; }
+  #error { display:none; background:var(--danger-bg); color:var(--danger); border:1px solid #fecaca; border-radius:10px; padding:12px 14px; margin-bottom:14px; font-size:14px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:14px; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px; display:flex; flex-direction:column; gap:8px; }
+  .card.claimed { border-color:#86efac; background:#f0fdf4; }
+  .card.expired { opacity:.65; }
+  .card h2 { margin:0; font-size:17px; line-height:1.4; }
+  .provider { font-size:13px; color:var(--muted); }
+  .quota { font-size:15px; font-weight:600; }
+  .tags { display:flex; flex-wrap:wrap; gap:6px; }
+  .tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+  .tag.gray { background:#f3f4f6; color:#4b5563; }
+  .tag.warn { background:var(--warn-bg); color:var(--warn); }
+  .tag.danger { background:var(--danger-bg); color:var(--danger); }
+  .tag.ok { background:var(--ok-bg); color:var(--ok); }
+  .card p { margin:0; font-size:13px; color:#374151; }
+  .card p b { color:var(--text); }
+  .risks { color:var(--warn); font-size:13px; }
+  .actions { display:flex; gap:8px; margin-top:auto; padding-top:6px; }
+  .actions a, .actions button { flex:1; text-align:center; padding:9px 10px; border-radius:8px; font-size:14px; text-decoration:none; cursor:pointer; }
+  .go { background:var(--accent); color:#fff; }
+  .go:hover { background:#1d4ed8; }
+  .claim { background:#fff; border:1px solid var(--border); color:var(--text); }
+  .claim.done { background:var(--ok-bg); border-color:#86efac; color:var(--ok); }
+  footer { padding:20px; font-size:13px; color:var(--muted); }
+  footer a { color:var(--accent); }
+  @media (max-width:560px) { header h1 { font-size:21px; } }
+
+  nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+  nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+  nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+  nav a:hover { color:var(--accent); }
+  nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+  .faq-section { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px 22px; margin:18px 0; }
+  .faq-section h2 { margin:0 0 8px; font-size:19px; }
+  .faq-section details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+  .faq-section summary { cursor:pointer; font-weight:600; }
+  .faq-section p { margin:8px 0; font-size:14px; color:#374151; }
+  .vps-banner { background:var(--accent-soft); border:1px solid #bfdbfe; border-radius:12px; padding:16px 18px; margin-bottom:16px; }
+  .vps-banner h2 { margin:0 0 6px; font-size:18px; }
+  .vps-banner p { margin:6px 0; font-size:14px; color:#374151; }
+  .vps-banner a { color:var(--accent); font-weight:600; }
+
+  .card h2 a { color:inherit; text-decoration:none; }
+  .card h2 a:hover { color:var(--accent); text-decoration:underline; }
+  .intro { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:18px 20px; margin-bottom:16px; }
+  .intro h2 { margin:0 0 8px; font-size:19px; }
+  .intro p { margin:8px 0; font-size:14px; color:#374151; }
+  .intro a { color:var(--accent); }
+</style>
+</head>
+<body>
+<header><div class="wrap"><h1>Free Token Monitor</h1>
+<p>Free credits for agents: only vendor-verified offers. Check the official page before claiming.</p>
+<div class="stats">
+<div class="stat"><div class="num">43</div><div class="label">Verified offers</div></div>
+<div class="stat"><div class="num">23</div><div class="label">OpenAI-compatible</div></div>
+<div class="stat"><div class="num">2</div><div class="label">Require a card</div></div>
+<div class="stat"><div class="num">18</div><div class="label">China direct</div></div>
+<div class="stat"><div class="num">13</div><div class="label">Reset daily</div></div>
+</div></div></header>
+<nav><div class="wrap"><a href="./" aria-current="page">Home</a><a href="vps/">Free VPS</a><a href="wool/">VPS Deals</a><a href="cheap/">Cheap VPS</a><a href="offers/">Offer details</a><a href="compare/">Comparisons</a><a href="faq/">FAQ</a><a href="../">中文</a></div></nav>
+<main><div class="wrap">
+
+<div class="intro">
+<h2>Free credits for agents, verified against official pages</h2>
+<p>This is the English edition of the Free Token Monitor. All 43 offers below were
+checked against vendor official pages; quota wording is transcribed from the vendor,
+with claim steps, reset times, requirements, and verification dates. Allowances can
+change or end at any time — check the official page before claiming.</p>
+<p>Free allowances come in four shapes: <b>long-term free tiers</b> (no end date, rate-limited),
+<b>signup credits</b> (one-time, with an expiry), <b>periodic resets</b> (daily, weekly, or monthly),
+and <b>limited-time campaigns</b> (a fixed end date). Mixing them up is the most common
+source of confusion — see the <a href="compare/free-tier-types/">free-tier types comparison</a>.</p>
+<p>This English edition is a curated first batch: 6 offer detail pages, 6 comparisons, and a
+combined FAQ. The full Chinese edition has 15 detail pages, 8 comparisons, and 3 guides —
+<a href="../">中文版 (Chinese edition)</a>.</p>
+</div>
+<div class="vps-banner">
+<h2>Beyond tokens: free VPS, VPS deals, and cheap VPS</h2>
+<p><a href="vps/">Free VPS</a>: 9 verified free cloud servers — 2 always-free, 5 trials, 1 students-only, 1 free sandbox.</p>
+<p><a href="wool/">VPS Deals</a>: 6 live trial credits, task-renewal hosts, and sandbox credits, plus 1 historical promo archive. Deals are not free — expiry dates and risks are stated per entry.</p>
+<p><a href="cheap/">Cheap VPS</a>: 3 standing-price vendors from $21/year, with renewal prices stated, plus 1 sold-out watch.</p>
+</div>
+<div class="controls">
+<input type="search" id="q" placeholder="Search offers, vendors, quotas…" aria-label="Search offers">
+<select id="cat" aria-label="Category"><option value="">All categories</option><option value="llm">LLM</option><option value="coding">Coding</option><option value="search">Search</option><option value="compute">Compute</option><option value="browser">Browser</option><option value="data">Data</option><option value="speech">Speech</option></select>
+<select id="cad" aria-label="Cadence"><option value="">All cadences</option><option value="once">One-time</option><option value="daily">Daily</option><option value="weekly">Weekly</option><option value="monthly">Monthly</option><option value="permanent">Ongoing</option></select>
+<select id="sort" aria-label="Sort"><option value="default">Default order</option><option value="expiry">Expiring first</option><option value="verified">Recently verified</option></select>
+<label class="chk"><input type="checkbox" id="f-api"> API only</label>
+<label class="chk"><input type="checkbox" id="f-nocard"> No card required</label>
+<label class="chk"><input type="checkbox" id="f-cn"> China direct</label>
+<label class="chk"><input type="checkbox" id="f-compat"> OpenAI-compatible</label>
+<button type="button" id="clear">Clear filters</button>
+</div>
+<p id="count">Showing all 43 verified offers.</p>
+<div class="grid" id="grid">
+<article class="card" data-cat="llm" data-cad="once" data-access="api" data-compat="1" data-cn="1" data-nocard="1" data-ends="" data-verified="2026-11-05" data-text="spark-x2.6 free trial credits iflytek spark · spark maas 1 billion tokens">
+<h2>Spark-X2.6 free trial credits</h2>
+<div class="provider">iFlytek Spark · Spark MaaS</div>
+<div class="quota">1 billion tokens</div>
+<div class="tags"><span class="tag">LLM</span><span class="tag">One-time</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag ok">China direct</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account, Real-name verification</p>
+<p><b>How to claim:</b> Open the Spark MaaS platform → register and complete real-name verification → claim the Spark-X2.6 free trial credits on the platform → create an API key and call the API.</p>
+<p><b>Reset:</b> One-time claim; credit validity as shown in the console</p>
+<p class="risks"><b>Notes:</b> Only designated models such as Spark-X2.6</p>
+<p>Verified 2026-11-05 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://maas.xfyun.cn/overview" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="llm" data-cad="once" data-access="api" data-compat="1" data-cn="1" data-nocard="1" data-ends="" data-verified="2026-11-01" data-text="new-user free credits (over 70m tokens across models) alibaba cloud bailian about 1m tokens per model, valid 90 days">
+<h2>New-user free credits (over 70M tokens across models)</h2>
+<div class="provider">Alibaba Cloud Bailian</div>
+<div class="quota">About 1M tokens per model, valid 90 days</div>
+<div class="tags"><span class="tag">LLM</span><span class="tag">One-time</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag ok">China direct</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account, Real-name verification</p>
+<p><b>How to claim:</b> Complete Alibaba Cloud real-name verification → enable Bailian (choose the North China 2 / Beijing region) → credits are issued automatically → turn on “stop when exhausted” in the console to avoid charges.</p>
+<p><b>Reset:</b> Issued automatically after activation; each model counted separately; expires after 90 days</p>
+<p class="risks"><b>Notes:</b> Free credits only in the North China 2 (Beijing) region; Switches to pay-as-you-go when exhausted by default — turn on “stop when exhausted”</p>
+<p>Verified 2026-11-01 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://help.aliyun.com/zh/model-studio/new-free-quota" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="llm" data-cad="once" data-access="api" data-compat="1" data-cn="1" data-nocard="1" data-ends="" data-verified="2026-11-08" data-text="new-user token gift pack zhipu bigmodel 20m tokens + 120 image/video generations">
+<h2>New-user token gift pack</h2>
+<div class="provider">Zhipu BigModel</div>
+<div class="quota">20M tokens + 120 image/video generations</div>
+<div class="tags"><span class="tag">LLM</span><span class="tag">One-time</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag ok">China direct</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account, Real-name verification</p>
+<p><b>How to claim:</b> Open the Zhipu open platform → register with a phone number → complete real-name verification → the gift pack is issued to your account automatically → create an API key.</p>
+<p><b>Reset:</b> One-time gift pack; validity as shown in the console</p>
+
+<p>Verified 2026-11-08 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://open.bigmodel.cn/" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="llm" data-cad="permanent" data-access="api" data-compat="1" data-cn="1" data-nocard="1" data-ends="" data-verified="2026-11-08" data-text="glm-4.5-flash / glm-4.7-flash free models zhipu bigmodel officially marked fully free; concurrency shown per account">
+<h2>GLM-4.5-Flash / GLM-4.7-Flash free models</h2>
+<div class="provider">Zhipu BigModel</div>
+<div class="quota">Officially marked fully free; concurrency shown per account</div>
+<div class="tags"><span class="tag">LLM</span><span class="tag">Ongoing</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag ok">China direct</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Register on the Zhipu open platform → create an API key → set the model name to glm-4.5-flash or glm-4.7-flash and call directly.</p>
+<p><b>Reset:</b> Long-term free models; no claim needed; call right after registering</p>
+<p class="risks"><b>Notes:</b> Only the Flash series is free; flagship models are paid</p>
+<p>Verified 2026-11-08 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://open.bigmodel.cn/" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="llm" data-cad="once" data-access="api" data-compat="1" data-cn="1" data-nocard="1" data-ends="2026-12-31" data-verified="2026-11-01" data-text="new-user 1m tokens per model trial pack tencent cloud tokenhub 1m tokens per model, valid 1 year">
+<h2>New-user 1M tokens per model trial pack</h2>
+<div class="provider">Tencent Cloud TokenHub</div>
+<div class="quota">1M tokens per model, valid 1 year</div>
+<div class="tags"><span class="tag">LLM</span><span class="tag">One-time</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag ok">China direct</span><span class="tag warn">Ends 2026-12-31</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Log in to Tencent Cloud → open the TokenHub console model square → claim under “New user benefits”, or claim automatically on first call.</p>
+<p><b>Reset:</b> Once per master account; campaign runs until 2026-12-31</p>
+<p class="risks"><b>Notes:</b> Once the free credits run out, postpaid billing must be enabled to continue</p>
+<p>Verified 2026-11-01 · Source: Lanlan repo · verified against official page · Ends 2026-12-31</p>
+<div class="actions"><a class="go" href="https://cloud.tencent.com/document/product/1823/130053" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="llm" data-cad="once" data-access="api" data-compat="1" data-cn="1" data-nocard="1" data-ends="" data-verified="2026-10-29" data-text="new-user all-model resource pack qiniu ai inference 3m tokens">
+<h2>New-user all-model resource pack</h2>
+<div class="provider">Qiniu AI Inference</div>
+<div class="quota">3M tokens</div>
+<div class="tags"><span class="tag">LLM</span><span class="tag">One-time</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag ok">China direct</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Register on Qiniu Cloud → open AI Inference → create your first API key → the 3M-token resource pack is issued automatically (may take a while).</p>
+<p><b>Reset:</b> Issued automatically after creating your first API key or first trial</p>
+<p class="risks"><b>Notes:</b> Switches to pay-as-you-go when used up — watch your balance</p>
+<p>Verified 2026-10-29 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://s.qiniu.com/AN3MZf" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="llm" data-cad="once" data-access="api" data-compat="1" data-cn="1" data-nocard="1" data-ends="" data-verified="2026-10-27" data-text="signup credits + real-name verification voucher siliconflow ¥14 credit on signup; invite + real-name verification earns a ¥16 voucher (180 days)">
+<h2>Signup credits + real-name verification voucher</h2>
+<div class="provider">SiliconFlow</div>
+<div class="quota">¥14 credit on signup; invite + real-name verification earns a ¥16 voucher (180 days)</div>
+<div class="tags"><span class="tag">LLM</span><span class="tag">One-time</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag ok">China direct</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account, Real-name verification</p>
+<p><b>How to claim:</b> Register on SiliconFlow → complete real-name verification → the ¥14 credit is issued; claim the ¥16 voucher on the campaign page.</p>
+<p><b>Reset:</b> One-time credit; voucher valid 180 days</p>
+
+<p>Verified 2026-10-27 · Source: freetokens.fyi · verified against official page</p>
+<div class="actions"><a class="go" href="https://llck.top/free" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="llm" data-cad="once" data-access="api" data-compat="1" data-cn="1" data-nocard="1" data-ends="" data-verified="2026-10-27" data-text="new-user free trial benefit kimi open platform ¥15 voucher, valid 3 months">
+<h2>New-user free trial benefit</h2>
+<div class="provider">Kimi Open Platform</div>
+<div class="quota">¥15 voucher, valid 3 months</div>
+<div class="tags"><span class="tag">LLM</span><span class="tag">One-time</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag ok">China direct</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account, Real-name verification, Phone number</p>
+<p><b>How to claim:</b> Register on the Kimi open platform → complete real-name verification → the ¥15 voucher applies to API calls automatically.</p>
+<p><b>Reset:</b> Issued to the API account automatically after real-name verification</p>
+<p class="risks"><b>Notes:</b> Voucher does not apply to the K3 model</p>
+<p>Verified 2026-10-27 · Source: freetokens.fyi · verified against official page</p>
+<div class="actions"><a class="go" href="https://freetokens.fyi/zh/offers" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="llm" data-cad="weekly" data-access="api" data-compat="1" data-cn="1" data-nocard="1" data-ends="" data-verified="2026-11-05" data-text="public-beta shared credit pool sensetime sensenova 120,000 credits per rolling 5 hours / 1,200,000 per week">
+<h2>Public-beta shared credit pool</h2>
+<div class="provider">SenseTime SenseNova</div>
+<div class="quota">120,000 credits per rolling 5 hours / 1,200,000 per week</div>
+<div class="tags"><span class="tag">LLM</span><span class="tag">Weekly</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag ok">China direct</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account, Phone number</p>
+<p><b>How to claim:</b> Register on the SenseNova platform → verify your phone number → create an sk- API key in the console → call models such as DeepSeek V4.1 Flash.</p>
+<p><b>Reset:</b> Dual limits: rolling 5-hour window + weekly window; public-beta benefit</p>
+<p class="risks"><b>Notes:</b> Public-beta benefit; may change later</p>
+<p>Verified 2026-11-05 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://platform.sensenova.cn/docs" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="llm" data-cad="daily" data-access="api" data-compat="1" data-cn="1" data-nocard="1" data-ends="" data-verified="2026-10-27" data-text="api-inference daily free credits modelscope 250 magic particles per day (200 check-in + 50 for binding alibaba cloud)">
+<h2>API-Inference daily free credits</h2>
+<div class="provider">ModelScope</div>
+<div class="quota">250 magic particles per day (200 check-in + 50 for binding Alibaba Cloud)</div>
+<div class="tags"><span class="tag">LLM</span><span class="tag">Daily</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag ok">China direct</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account, Real-name verification</p>
+<p><b>How to claim:</b> Log in to ModelScope → check in to get 200 magic particles → bind an Alibaba Cloud account for 50 more → call API-Inference with an access token.</p>
+<p><b>Reset:</b> Resets daily; unused credits do not roll over</p>
+
+<p>Verified 2026-10-27 · Source: freetokens.fyi · verified against official page</p>
+<div class="actions"><a class="go" href="https://www.modelscope.cn/docs/model-service/API-Inference/intro" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="llm" data-cad="daily" data-access="api" data-compat="1" data-cn="1" data-nocard="1" data-ends="" data-verified="2026-10-16" data-text="daily free tokens ant ling studio 500,000 tokens per day (input + output)">
+<h2>Daily free tokens</h2>
+<div class="provider">Ant Ling Studio</div>
+<div class="quota">500,000 tokens per day (input + output)</div>
+<div class="tags"><span class="tag">LLM</span><span class="tag">Daily</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag ok">China direct</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account, Phone number</p>
+<p><b>How to claim:</b> Register on the Ling developer platform with a +86 phone number → daily credits are issued automatically → call the API per the docs.</p>
+<p><b>Reset:</b> Issued before 02:00 daily; no rollover</p>
+<p class="risks"><b>Notes:</b> Verified a while ago — check the actual credits in the console before claiming</p>
+<p>Verified 2026-10-16 · Source: freetokens.fyi · verified against official page</p>
+<div class="actions"><a class="go" href="https://developer.ant-ling.com/zh-CN/docs/" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="llm" data-cad="daily" data-access="api" data-compat="1" data-cn="1" data-nocard="1" data-ends="" data-verified="2026-10-09" data-text="promo models daily free tokens huawei cloud codearts 10m tokens per day, first come first served">
+<h2>Promo models daily free tokens</h2>
+<div class="provider">Huawei Cloud CodeArts</div>
+<div class="quota">10M tokens per day, first come first served</div>
+<div class="tags"><span class="tag">LLM</span><span class="tag">Daily</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag ok">China direct</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Log in to Huawei Cloud CodeArts → pick a promo model (DeepSeek / GLM Flash series) → call directly within the daily credits.</p>
+<p><b>Reset:</b> Resets at 24:00 (UTC+8) daily, first come first served</p>
+<p class="risks"><b>Notes:</b> Verified a while ago; may have changed; First come, first served until gone</p>
+<p>Verified 2026-10-09 · Source: freetokens.fyi · verified against official page</p>
+<div class="actions"><a class="go" href="https://freetokens.fyi/zh/offers" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="llm" data-cad="daily" data-access="api" data-compat="1" data-cn="1" data-nocard="1" data-ends="" data-verified="2026-11-01" data-text="token factory free model api amd radeon cloud free calls within the daily pts usage cap">
+<h2>Token Factory free model API</h2>
+<div class="provider">AMD Radeon Cloud</div>
+<div class="quota">Free calls within the daily pts usage cap</div>
+<div class="tags"><span class="tag">LLM</span><span class="tag">Daily</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag ok">China direct</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Register and log in at developer.amd.com.cn → open Token Factory → copy the rc- API key and call.</p>
+<p><b>Reset:</b> Resets at 00:00 Beijing time; daily credits vary by account</p>
+<p class="risks"><b>Notes:</b> Trial-oriented; not for production; Exact credits as shown under “Points &amp; usage” in the console</p>
+<p>Verified 2026-11-01 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://developer.amd.com.cn/radeon/modelapis" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="llm" data-cad="daily" data-access="api" data-compat="1" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-10-31" data-text="k2-horizon daily free credits ifm 10m tokens per key per day (input + output)">
+<h2>K2-Horizon daily free credits</h2>
+<div class="provider">IFM</div>
+<div class="quota">10M tokens per key per day (input + output)</div>
+<div class="tags"><span class="tag">LLM</span><span class="tag">Daily</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Register on the IFM platform → create an API key → call K2-Horizon in OpenAI format.</p>
+<p><b>Reset:</b> Resets at 00:00 UTC</p>
+<p class="risks"><b>Notes:</b> Console display and docs occasionally differ — go by your account</p>
+<p>Verified 2026-10-31 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://platform.ifm.ai/" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="llm" data-cad="daily" data-access="api" data-compat="1" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-10-27" data-text=":free free models openrouter 20 rpm / 50 requests per day; 1,000 per day after the account has been topped up $10">
+<h2><a href="offers/openrouter-free/">:free free models</a></h2>
+<div class="provider">OpenRouter</div>
+<div class="quota">20 RPM / 50 requests per day; 1,000 per day after the account has been topped up $10</div>
+<div class="tags"><span class="tag">LLM</span><span class="tag">Daily</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Register on OpenRouter → create an API key → call models whose IDs end in :free; one key works across many providers’ models.</p>
+<p><b>Reset:</b> Resets daily; model IDs end in :free</p>
+<p class="risks"><b>Notes:</b> Failed requests also count toward the daily cap; The free model list changes</p>
+<p>Verified 2026-10-27 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://openrouter.ai/models?max_price=0" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="llm" data-cad="daily" data-access="api" data-compat="1" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-11-08" data-text="free plan fast inference groq per model: 30 rpm / 1,000 requests per day / 200k tokens per day">
+<h2><a href="offers/groq-free-plan/">Free Plan fast inference</a></h2>
+<div class="provider">Groq</div>
+<div class="quota">Per model: 30 RPM / 1,000 requests per day / 200K tokens per day</div>
+<div class="tags"><span class="tag">LLM</span><span class="tag">Daily</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Register on GroqCloud → create an API key → call open models such as gpt-oss and Qwen; speed is its selling point.</p>
+<p><b>Reset:</b> Per-model rate limits; resets daily</p>
+<p class="risks"><b>Notes:</b> Limits are calculated per organization and per model</p>
+<p>Verified 2026-11-08 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://console.groq.com/" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="llm" data-cad="daily" data-access="api" data-compat="1" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-11-08" data-text="gemini api free tier google ai studio free tier for gemini flash and other models, 5–30 rpm / per-model daily caps">
+<h2><a href="offers/gemini-free-tier/">Gemini API free tier</a></h2>
+<div class="provider">Google AI Studio</div>
+<div class="quota">Free tier for Gemini Flash and other models, 5–30 RPM / per-model daily caps</div>
+<div class="tags"><span class="tag">LLM</span><span class="tag">Daily</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Log in to AI Studio → create an API key → call Gemini Flash / Flash-Lite; long context up to 1M.</p>
+<p><b>Reset:</b> Resets daily; actual limits as shown in the AI Studio quota panel</p>
+<p class="risks"><b>Notes:</b> Free-tier data may be used to improve Google products; Requires network access to Google</p>
+<p>Verified 2026-11-08 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://aistudio.google.com/" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="llm" data-cad="daily" data-access="api" data-compat="1" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-11-01" data-text="daily free neurons cloudflare workers ai 10,000 neurons per day">
+<h2><a href="offers/cloudflare-workers-ai/">Daily free Neurons</a></h2>
+<div class="provider">Cloudflare Workers AI</div>
+<div class="quota">10,000 Neurons per day</div>
+<div class="tags"><span class="tag">LLM</span><span class="tag">Daily</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Enable Cloudflare Workers AI → call per the docs; both free and paid plans include 10,000 Neurons per day.</p>
+<p><b>Reset:</b> Resets at 00:00 UTC (08:00 Beijing time)</p>
+<p class="risks"><b>Notes:</b> Some newer models require a payment method first</p>
+<p>Verified 2026-11-01 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://developers.cloudflare.com/workers-ai/platform/pricing/" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="llm" data-cad="once" data-access="api" data-compat="1" data-cn="0" data-nocard="0" data-ends="" data-verified="2026-10-27" data-text="inference trial credits cerebras $5 free credit, expires in 30 days">
+<h2>Inference trial credits</h2>
+<div class="provider">Cerebras</div>
+<div class="quota">$5 free credit, expires in 30 days</div>
+<div class="tags"><span class="tag">LLM</span><span class="tag">One-time</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account, Card required</p>
+<p><b>How to claim:</b> Register on Cerebras Inference → bind a payment method for verification → call public models once the $5 credit is issued.</p>
+<p><b>Reset:</b> One-time trial credit, expires 30 days after grant; daily cap 1M tokens</p>
+<p class="risks"><b>Notes:</b> Card required; No long-term free tier — don’t treat it as daily credits</p>
+<p>Verified 2026-10-27 · Source: freetokens.fyi · verified against official page</p>
+<div class="actions"><a class="go" href="https://freetokens.fyi/zh/offers" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="llm" data-cad="once" data-access="api" data-compat="1" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-10-27" data-text="new-user sandbox promo credits novita ai $100 promo credit, valid 90 days (sandbox only)">
+<h2>New-user Sandbox promo credits</h2>
+<div class="provider">Novita AI</div>
+<div class="quota">$100 promo credit, valid 90 days (Sandbox only)</div>
+<div class="tags"><span class="tag">LLM</span><span class="tag">One-time</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Register on Novita AI → promo credits are issued automatically → call the full model catalog in the Sandbox environment.</p>
+<p><b>Reset:</b> One-time credit, usable only in the Novita Sandbox</p>
+<p class="risks"><b>Notes:</b> Sandbox only — not a general balance</p>
+<p>Verified 2026-10-27 · Source: freetokens.fyi · verified against official page</p>
+<div class="actions"><a class="go" href="https://freetokens.fyi/zh/offers" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="llm" data-cad="monthly" data-access="api" data-compat="1" data-cn="0" data-nocard="0" data-ends="" data-verified="2026-10-27" data-text="free tier monthly credits vercel ai gateway $5 gateway credits per month">
+<h2>Free tier monthly credits</h2>
+<div class="provider">Vercel AI Gateway</div>
+<div class="quota">$5 Gateway credits per month</div>
+<div class="tags"><span class="tag">LLM</span><span class="tag">Monthly</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account, Card required</p>
+<p><b>How to claim:</b> Enable AI Gateway with a Vercel team account → the monthly $5 free credits start counting after the first request.</p>
+<p><b>Reset:</b> Monthly cycle counted from the first Gateway request</p>
+<p class="risks"><b>Notes:</b> Card required; Available models are a subset, with rate limits</p>
+<p>Verified 2026-10-27 · Source: freetokens.fyi · verified against official page</p>
+<div class="actions"><a class="go" href="https://vercel.com/docs/ai-gateway/pricing" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="llm" data-cad="permanent" data-access="api" data-compat="1" data-cn="1" data-nocard="1" data-ends="" data-verified="2026-11-03" data-text="free public translation api bilibili index-translate call directly with no registration; no cap stated on the official site">
+<h2>Free public translation API</h2>
+<div class="provider">Bilibili Index-Translate</div>
+<div class="quota">Call directly with no registration; no cap stated on the official site</div>
+<div class="tags"><span class="tag">LLM</span><span class="tag">Ongoing</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag ok">China direct</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> None stated</p>
+<p><b>How to claim:</b> Point the Base URL to index-translate.bilibili.com/v1 in OpenAI format, model name Index-Translate-35B-A3B; callable without a key.</p>
+<p><b>Reset:</b> Long-term free; no registration, no key needed</p>
+<p class="risks"><b>Notes:</b> Translation only (150 languages) — not a general chat model</p>
+<p>Verified 2026-11-03 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://index-translate.bilibili.com/" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="coding" data-cad="daily" data-access="client" data-compat="0" data-cn="1" data-nocard="1" data-ends="" data-verified="2026-10-27" data-text="daily credits in the desktop app qoder 100 credits per day, each batch valid 30 days">
+<h2>Daily credits in the desktop app</h2>
+<div class="provider">Qoder</div>
+<div class="quota">100 credits per day, each batch valid 30 days</div>
+<div class="tags"><span class="tag">Coding</span><span class="tag">Daily</span><span class="tag">Client app</span><span class="tag gray">Not OpenAI-compatible</span><span class="tag ok">China direct</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Open the Qoder desktop app → claim today’s 100 credits at the campaign entry → each day’s batch is usable for 30 days.</p>
+<p><b>Reset:</b> Claim daily inside the Qoder desktop app</p>
+<p class="risks"><b>Notes:</b> Usable only inside the Qoder client</p>
+<p>Verified 2026-10-27 · Source: freetokens.fyi · verified against official page</p>
+<div class="actions"><a class="go" href="https://docs.qoder.com/zh/events/flashoffer" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="coding" data-cad="monthly" data-access="client" data-compat="0" data-cn="1" data-nocard="1" data-ends="" data-verified="2026-10-28" data-text="trial edition free credits workbuddy (tencent) 500 credits/month, valid within the month, no rollover">
+<h2>Trial edition free credits</h2>
+<div class="provider">WorkBuddy (Tencent)</div>
+<div class="quota">500 credits/month, valid within the month, no rollover</div>
+<div class="tags"><span class="tag">Coding</span><span class="tag">Monthly</span><span class="tag">Client app</span><span class="tag gray">Not OpenAI-compatible</span><span class="tag ok">China direct</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Download WorkBuddy → log in with WeChat or a phone number → the trial edition gets 500 credits per month automatically.</p>
+<p><b>Reset:</b> Issued monthly; unused credits expire at month end</p>
+<p class="risks"><b>Notes:</b> Usable only inside the client</p>
+<p>Verified 2026-10-28 · Source: freetokens.fyi · verified against official page</p>
+<div class="actions"><a class="go" href="https://www.workbuddy.cn/" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="coding" data-cad="daily" data-access="client" data-compat="0" data-cn="1" data-nocard="1" data-ends="2026-11-15" data-verified="2026-11-04" data-text="hunyuan hy4 limited-time free access workbuddy / codebuddy free credits gifted daily, nov 4–15">
+<h2>Hunyuan Hy4 limited-time free access</h2>
+<div class="provider">WorkBuddy / CodeBuddy</div>
+<div class="quota">Free credits gifted daily, Nov 4–15</div>
+<div class="tags"><span class="tag">Coding</span><span class="tag">Daily</span><span class="tag">Client app</span><span class="tag gray">Not OpenAI-compatible</span><span class="tag ok">China direct</span><span class="tag warn">Ends 2026-11-15</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Download WorkBuddy or CodeBuddy → log in → pick “Hunyuan Hy4” in the model selector to use the free credits.</p>
+<p><b>Reset:</b> Gifted daily during the campaign; subscribers get more</p>
+<p class="risks"><b>Notes:</b> Limited-time campaign, ends Nov 15</p>
+<p>Verified 2026-11-04 · Source: Lanlan repo · verified against official page · Ends 2026-11-15</p>
+<div class="actions"><a class="go" href="https://www.workbuddy.cn/" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="coding" data-cad="once" data-access="client" data-compat="0" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-10-28" data-text="new-user credits codebuddy (international) 250 credits on first login, valid 14 days">
+<h2>New-user credits</h2>
+<div class="provider">CodeBuddy (International)</div>
+<div class="quota">250 credits on first login, valid 14 days</div>
+<div class="tags"><span class="tag">Coding</span><span class="tag">One-time</span><span class="tag">Client app</span><span class="tag gray">Not OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Register on CodeBuddy International → first login → 250 credits are issued automatically.</p>
+<p><b>Reset:</b> One-time new-user gift, expires after 14 days</p>
+<p class="risks"><b>Notes:</b> Usable only inside the app</p>
+<p>Verified 2026-10-28 · Source: freetokens.fyi · verified against official page</p>
+<div class="actions"><a class="go" href="https://freetokens.fyi/zh/offers" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="coding" data-cad="daily" data-access="client" data-compat="0" data-cn="1" data-nocard="1" data-ends="" data-verified="2026-10-27" data-text="daily check-in credits trae cn (bytedance) 100 per daily check-in + 500 per monthly login + 2,000 on registration">
+<h2>Daily check-in credits</h2>
+<div class="provider">TRAE CN (ByteDance)</div>
+<div class="quota">100 per daily check-in + 500 per monthly login + 2,000 on registration</div>
+<div class="tags"><span class="tag">Coding</span><span class="tag">Daily</span><span class="tag">Client app</span><span class="tag gray">Not OpenAI-compatible</span><span class="tag ok">China direct</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Open TRAE CN → check in daily for 100 credits → use GLM and Seed series models for coding.</p>
+<p><b>Reset:</b> Check-in refreshes daily; invite credits also available</p>
+<p class="risks"><b>Notes:</b> Usable only inside the client</p>
+<p>Verified 2026-10-27 · Source: freetokens.fyi · verified against official page</p>
+<div class="actions"><a class="go" href="https://freetokens.fyi/zh/offers" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="coding" data-cad="monthly" data-access="client" data-compat="0" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-11-01" data-text="student plan free for one year amazon kiro 1,000 credits/month × 12 months, no rollover">
+<h2>Student plan free for one year</h2>
+<div class="provider">Amazon Kiro</div>
+<div class="quota">1,000 credits/month × 12 months, no rollover</div>
+<div class="tags"><span class="tag">Coding</span><span class="tag">Monthly</span><span class="tag">Client app</span><span class="tag gray">Not OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account, Student status, Real-name verification</p>
+<p><b>How to claim:</b> Register on Kiro → pick your school under Settings → Students → verify student status via SheerID → 1,000 credits per month are issued.</p>
+<p><b>Reset:</b> Issued monthly, no rollover across months; no card required</p>
+<p class="risks"><b>Notes:</b> Students only, must be 18 or older; Schools not on the list can register interest</p>
+<p>Verified 2026-11-01 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://kiro.dev/students/" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="coding" data-cad="once" data-access="web" data-compat="0" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-11-04" data-text="sandbox free-edition model message credits dify cloud 200 model message credits + 5,000 api calls per month">
+<h2>Sandbox free-edition model message credits</h2>
+<div class="provider">Dify Cloud</div>
+<div class="quota">200 model message credits + 5,000 API calls per month</div>
+<div class="tags"><span class="tag">Coding</span><span class="tag">One-time</span><span class="tag">Web / Cloud</span><span class="tag gray">Not OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Register on Dify Cloud → Sandbox edition by default → use the 200 message credits to try OpenAI, Gemini, Qwen and other models to build apps.</p>
+<p><b>Reset:</b> Sandbox free edition by default on registration; bring your own key when credits run out</p>
+<p class="risks"><b>Notes:</b> Credits are deducted by model type; flagship models cost more</p>
+<p>Verified 2026-11-04 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://dify.ai/pricing" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="search" data-cad="monthly" data-access="api" data-compat="0" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-11-01" data-text="search api free tier tavily 1,000 api credits per month, no card required">
+<h2><a href="offers/tavily-monthly/">Search API free tier</a></h2>
+<div class="provider">Tavily</div>
+<div class="quota">1,000 API credits per month, no card required</div>
+<div class="tags"><span class="tag">Search</span><span class="tag">Monthly</span><span class="tag">API</span><span class="tag gray">Not OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Register on Tavily → get an API key in the console → plug web search and page extraction into your agent.</p>
+<p><b>Reset:</b> Resets on the 1st of each month</p>
+
+<p>Verified 2026-11-01 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://www.tavily.com/pricing" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="search" data-cad="monthly" data-access="api" data-compat="0" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-11-01" data-text="scrape/search free tier firecrawl 1,000 credits per month, no card required">
+<h2>Scrape/search free tier</h2>
+<div class="provider">Firecrawl</div>
+<div class="quota">1,000 credits per month, no card required</div>
+<div class="tags"><span class="tag">Search</span><span class="tag">Monthly</span><span class="tag">API</span><span class="tag gray">Not OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Register on Firecrawl → get an API key → use the scrape/search endpoints to feed web content to your agent.</p>
+<p><b>Reset:</b> Resets monthly; roughly 1,000 pages</p>
+
+<p>Verified 2026-11-01 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://www.firecrawl.dev/pricing" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="search" data-cad="monthly" data-access="api" data-compat="0" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-11-01" data-text="search api starter free credits exa $10 per month + $10 signup gift, no card required">
+<h2>Search API Starter free credits</h2>
+<div class="provider">Exa</div>
+<div class="quota">$10 per month + $10 signup gift, no card required</div>
+<div class="tags"><span class="tag">Search</span><span class="tag">Monthly</span><span class="tag">API</span><span class="tag gray">Not OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Click “Start for free” on the Exa pricing page → register and get an API key → credits offset search and content endpoints on a metered basis.</p>
+<p><b>Reset:</b> $10 credits per month, plus a $10 onboarding bonus on signup</p>
+
+<p>Verified 2026-11-01 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://exa.ai/pricing" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="search" data-cad="daily" data-access="api" data-compat="0" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-11-05" data-text="web search api (mcp) free daily you.com 100 searches per day, no account, no key">
+<h2>Web Search API (MCP) free daily</h2>
+<div class="provider">You.com</div>
+<div class="quota">100 searches per day, no account, no key</div>
+<div class="tags"><span class="tag">Search</span><span class="tag">Daily</span><span class="tag">API</span><span class="tag gray">Not OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> None stated</p>
+<p><b>How to claim:</b> Add the You.com MCP server to your AI client per the official docs → 100 free web searches per day, no registration.</p>
+<p><b>Reset:</b> Resets daily; called via the MCP server</p>
+<p class="risks"><b>Notes:</b> Overage billed at $5 per 1,000 searches</p>
+<p>Verified 2026-11-05 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://you.com/pricing" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="compute" data-cad="once" data-access="api" data-compat="0" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-11-01" data-text="code sandbox hobby credits e2b $100 one-time usage credits, no card required">
+<h2>Code sandbox Hobby credits</h2>
+<div class="provider">E2B</div>
+<div class="quota">$100 one-time usage credits, no card required</div>
+<div class="tags"><span class="tag">Compute</span><span class="tag">One-time</span><span class="tag">API</span><span class="tag gray">Not OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Click “Start for Free” on the E2B pricing page → register for Hobby → $100 sandbox credits are issued for running agent code.</p>
+<p><b>Reset:</b> One-time credits, until used up</p>
+
+<p>Verified 2026-11-01 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://e2b.dev/pricing" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="compute" data-cad="monthly" data-access="api" data-compat="0" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-11-01" data-text="starter monthly free compute modal $30 free credits per month">
+<h2>Starter monthly free compute</h2>
+<div class="provider">Modal</div>
+<div class="quota">$30 free credits per month</div>
+<div class="tags"><span class="tag">Compute</span><span class="tag">Monthly</span><span class="tag">API</span><span class="tag gray">Not OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Register on Modal → choose Starter → $30 compute credits per month take effect automatically; good for inference and batch jobs.</p>
+<p><b>Reset:</b> Issued monthly; overage billed at GPU/CPU list prices</p>
+
+<p>Verified 2026-11-01 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://modal.com/pricing" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="browser" data-cad="once" data-access="api" data-compat="0" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-11-01" data-text="browser automation launch credits steel $30 one-time credits, no card required">
+<h2>Browser automation Launch credits</h2>
+<div class="provider">Steel</div>
+<div class="quota">$30 one-time credits, no card required</div>
+<div class="tags"><span class="tag">Browser</span><span class="tag">One-time</span><span class="tag">API</span><span class="tag gray">Not OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Open the Steel pricing page → start the free Launch plan → $30 credits for agent browser sessions.</p>
+<p><b>Reset:</b> One-time credits, with concurrent session limits</p>
+
+<p>Verified 2026-11-01 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://steel.dev/pricing" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="data" data-cad="once" data-access="api" data-compat="0" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-11-01" data-text="free tokens with a new api key jina ai 10m tokens per new key (shared across reader/embedding/reranker)">
+<h2>Free tokens with a new API key</h2>
+<div class="provider">Jina AI</div>
+<div class="quota">10M tokens per new key (shared across Reader/Embedding/Reranker)</div>
+<div class="tags"><span class="tag">Data</span><span class="tag">One-time</span><span class="tag">API</span><span class="tag gray">Not OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Open Jina → get an API key → 10M free tokens are attached to the key automatically, usable for Reader web fetching and embedding models.</p>
+<p><b>Reset:</b> One-time credits; check balance under API Key &amp; Billing</p>
+
+<p>Verified 2026-11-01 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://jina.ai/reader/" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="data" data-cad="once" data-access="api" data-compat="0" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-11-01" data-text="first embedding tokens free voyage ai first 200m embedding tokens per account free">
+<h2>First embedding tokens free</h2>
+<div class="provider">Voyage AI</div>
+<div class="quota">First 200M embedding tokens per account free</div>
+<div class="tags"><span class="tag">Data</span><span class="tag">One-time</span><span class="tag">API</span><span class="tag gray">Not OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Register on Voyage (MongoDB account) → call voyage-4 series embedding models → the first 200M tokens are not billed.</p>
+<p><b>Reset:</b> One-time credits; 50M for some older models</p>
+
+<p>Verified 2026-11-01 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://docs.voyageai.com/docs/pricing" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="data" data-cad="monthly" data-access="api" data-compat="0" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-11-01" data-text="document parsing free tier llamaparse (llamaindex) 10,000 credits per month">
+<h2>Document parsing free tier</h2>
+<div class="provider">LlamaParse (LlamaIndex)</div>
+<div class="quota">10,000 credits per month</div>
+<div class="tags"><span class="tag">Data</span><span class="tag">Monthly</span><span class="tag">API</span><span class="tag gray">Not OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Click “Start for free” on the pricing page → register → 10,000 credits per month for parsing PDFs/documents for your agent.</p>
+<p><b>Reset:</b> Resets monthly; basic parsing from 1 credit/page</p>
+
+<p>Verified 2026-11-01 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://www.llamaindex.ai/pricing" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="data" data-cad="monthly" data-access="api" data-compat="0" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-11-01" data-text="inference starter free credits pinecone 5m embedding tokens per model per month + 500 reranks/month">
+<h2>Inference Starter free credits</h2>
+<div class="provider">Pinecone</div>
+<div class="quota">5M embedding tokens per model per month + 500 reranks/month</div>
+<div class="tags"><span class="tag">Data</span><span class="tag">Monthly</span><span class="tag">API</span><span class="tag gray">Not OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Click “Start for Free” to open Starter → call inference models such as llama-text-embed-v2; monthly free credits offset automatically.</p>
+<p><b>Reset:</b> Issued monthly, separately per model</p>
+
+<p>Verified 2026-11-01 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://www.pinecone.io/pricing/" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="speech" data-cad="once" data-access="api" data-compat="0" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-11-01" data-text="speech api signup credits deepgram $200 free credits, no card required, never expire">
+<h2><a href="offers/deepgram-signup/">Speech API signup credits</a></h2>
+<div class="provider">Deepgram</div>
+<div class="quota">$200 free credits, no card required, never expire</div>
+<div class="tags"><span class="tag">Speech</span><span class="tag">One-time</span><span class="tag">API</span><span class="tag gray">Not OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Open the Deepgram pricing page → register for free → $200 credits are issued for STT/TTS/Voice Agent.</p>
+<p><b>Reset:</b> One-time credits, never expire; roughly hundreds of hours of transcription</p>
+
+<p>Verified 2026-11-01 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://deepgram.com/pricing" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="speech" data-cad="once" data-access="api" data-compat="0" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-11-01" data-text="speech transcription signup credits assemblyai $50 free credits, no card required">
+<h2>Speech transcription signup credits</h2>
+<div class="provider">AssemblyAI</div>
+<div class="quota">$50 free credits, no card required</div>
+<div class="tags"><span class="tag">Speech</span><span class="tag">One-time</span><span class="tag">API</span><span class="tag gray">Not OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Open the AssemblyAI pricing page → register and get an API key → $50 credits for transcription and Speech Understanding.</p>
+<p><b>Reset:</b> One-time credits; lower concurrency on the free tier</p>
+
+<p>Verified 2026-11-01 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://www.assemblyai.com/pricing" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article><article class="card" data-cat="compute" data-cad="once" data-access="api" data-compat="1" data-cn="0" data-nocard="1" data-ends="" data-verified="2026-11-05" data-text="builder bundle credits nebius ai builder program $25 inference credits + $25 tavily + $100 langsmith, etc.">
+<h2>Builder bundle credits</h2>
+<div class="provider">Nebius AI Builder Program</div>
+<div class="quota">$25 inference credits + $25 Tavily + $100 LangSmith, etc.</div>
+<div class="tags"><span class="tag">Compute</span><span class="tag">One-time</span><span class="tag">API</span><span class="tag ok">OpenAI-compatible</span><span class="tag gray">Global</span><span class="tag gray">No fixed end date</span></div>
+<p><b>Requirements:</b> Account</p>
+<p><b>How to claim:</b> Open the Nebius Builder page → fill in the form to join for free → verify your email → claim inference, search, LangSmith and other partner credits in the dashboard.</p>
+<p><b>Reset:</b> One-time bundle; claim each item in the dashboard after email verification</p>
+<p class="risks"><b>Notes:</b> Credits are mainly for learning, testing, and experiments</p>
+<p>Verified 2026-11-05 · Source: Lanlan repo · verified against official page</p>
+<div class="actions"><a class="go" href="https://dev.nebius.com/builders" target="_blank" rel="noopener noreferrer">Claim →</a></div>
+</article>
+</div>
+<div class="faq-section">
+<h2>Start here</h2>
+<p><a href="faq/">FAQ: 23 questions</a> in English users’ own wording — are free APIs really free, do they need a credit card, what happens at the limit, and more.</p>
+<p><a href="compare/best-free-llm-api-no-card/">Best free LLM APIs with no credit card</a> · <a href="compare/free-search-apis/">Free search APIs compared</a> · <a href="offers/">Offer details</a></p>
+<p>Machine-readable data: <a href="../data/offers-en.json">data/offers-en.json</a> (43 offers, English text, facts identical to the Chinese data file).</p>
+</div>
+<script>
+(function () {
+  var grid = document.getElementById('grid');
+  var cards = Array.prototype.slice.call(grid.querySelectorAll('.card'));
+  var count = document.getElementById('count');
+  function apply() {
+    var q = document.getElementById('q').value.trim().toLowerCase();
+    var cat = document.getElementById('cat').value;
+    var cad = document.getElementById('cad').value;
+    var fApi = document.getElementById('f-api').checked;
+    var fNocard = document.getElementById('f-nocard').checked;
+    var fCn = document.getElementById('f-cn').checked;
+    var fCompat = document.getElementById('f-compat').checked;
+    var sort = document.getElementById('sort').value;
+    var shown = 0;
+    cards.forEach(function (c) {
+      var show = true;
+      if (q && c.getAttribute('data-text').indexOf(q) === -1) show = false;
+      if (cat && c.getAttribute('data-cat') !== cat) show = false;
+      if (cad && c.getAttribute('data-cad') !== cad) show = false;
+      if (fApi && c.getAttribute('data-access') !== 'api') show = false;
+      if (fNocard && c.getAttribute('data-nocard') !== '1') show = false;
+      if (fCn && c.getAttribute('data-cn') !== '1') show = false;
+      if (fCompat && c.getAttribute('data-compat') !== '1') show = false;
+      c.style.display = show ? '' : 'none';
+      if (show) shown++;
+    });
+    var order = cards.slice();
+    if (sort === 'expiry') {
+      order.sort(function (a, b) {
+        var ea = a.getAttribute('data-ends'), eb = b.getAttribute('data-ends');
+        if (!ea && !eb) return 0; if (!ea) return 1; if (!eb) return -1;
+        return ea < eb ? -1 : ea > eb ? 1 : 0;
+      });
+    } else if (sort === 'verified') {
+      order.sort(function (a, b) {
+        var va = a.getAttribute('data-verified'), vb = b.getAttribute('data-verified');
+        return va < vb ? 1 : va > vb ? -1 : 0;
+      });
+    }
+    order.forEach(function (c) { grid.appendChild(c); });
+    count.textContent = 'Showing ' + shown + ' of 43 verified offers.';
+  }
+  ['q', 'cat', 'cad', 'sort', 'f-api', 'f-nocard', 'f-cn', 'f-compat'].forEach(function (id) {
+    var el = document.getElementById(id);
+    el.addEventListener('input', apply);
+    el.addEventListener('change', apply);
+  });
+  document.getElementById('clear').addEventListener('click', function () {
+    document.getElementById('q').value = '';
+    document.getElementById('cat').value = '';
+    document.getElementById('cad').value = '';
+    document.getElementById('sort').value = 'default';
+    ['f-api', 'f-nocard', 'f-cn', 'f-compat'].forEach(function (id) {
+      document.getElementById(id).checked = false;
+    });
+    apply();
+  });
+})();
+</script>
+
+</div></main>
+<footer><div class="wrap"><p><a href="./">Home</a> · <a href="vps/">Free VPS</a> · <a href="wool/">VPS Deals</a> · <a href="cheap/">Cheap VPS</a> · <a href="offers/">Offer details</a> · <a href="compare/">Comparisons</a> · <a href="faq/">FAQ</a> · <a href="../">中文</a></p><p>Data is for reference only — check the vendor’s official page. Allowances can change or end at any time; read the vendor’s terms before claiming, and turn on “stop when exhausted” where available to avoid charges. This site contains no invite links, API resellers, second-hand credits, or shared accounts. Data sources: Lanlan repo, freetokens.fyi — all verified against vendor official pages.</p></div></footer>
+</body>
+</html>
