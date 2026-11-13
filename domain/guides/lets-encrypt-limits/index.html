@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Let's Encrypt 限流详解：50 证/7 天、5 张同标识集与 ARI 续期</title>
+<meta name="description" content="Let's Encrypt 限流：50 证/注册域/7 天、5 张相同标识集/7 天、5 次验证失败/小时、300 订单/账户/3 小时、每证至多 100 标识；ARI 续期免于全部限流。核实于 2026-11-13。">
+<link rel="canonical" href="https://tokens.yangtokent.com/domain/guides/lets-encrypt-limits/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Let's Encrypt 限流详解：50 证/7 天、5 张同标识集与 ARI 续期",
+  "description": "Let's Encrypt 限流：50 证/注册域/7 天、5 张相同标识集/7 天、5 次验证失败/小时、300 订单/账户/3 小时、每证至多 100 标识；ARI 续期免于全部限流。核实于 2026-11-13。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/domain/guides/lets-encrypt-limits/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>域名、DNS、CDN 与 SSL 的价格和条款信息，以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">域名·DNS·CDN·SSL</a><a href="../../offers/">域名详情</a><a href="../../compare/">域名对比</a><a href="../" aria-current="page">域名指南</a><a href="../../faq/">域名问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">域名·DNS·CDN·SSL</a> / <a href="../">域名指南</a> / Let's Encrypt 限流详解</p>
+<h1>Let's Encrypt 限流详解</h1>
+<p class="meta">核实于 2026-11-13 · 本页更新于 2026-11-13</p>
+<div class="answer"><p>Let's Encrypt 限流：50 证/注册域/7 天、5 张相同标识集/7 天、5 次验证失败/账户/主机名/小时、300 新订单/账户/3 小时、每证至多 100 标识。ARI 续期免于全部限流。证书有效期以官方页面为准。核实于 2026-11-13。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#table">限流表</a></li><li><a href="#meaning">每条限流是什么意思</a></li><li><a href="#ari">ARI 续期免限流</a></li><li><a href="#hit">触及限流后</a></li><li><a href="#related">与 Cloudflare Universal SSL 的关系</a></li></ul></div>
+<h2 id="table">限流表</h2><div class="tablewrap"><table><thead><tr><th>限流项</th><th>数值（官网限流文档）</th></tr></thead><tbody><tr><td>每注册域</td><td>50 证 / 7 天</td></tr><tr><td>相同标识集</td><td>5 张 / 7 天</td></tr><tr><td>验证失败</td><td>5 次 / 账户 / 主机名 / 小时</td></tr><tr><td>新订单</td><td>300 个 / 账户 / 3 小时</td></tr><tr><td>每证标识数</td><td>至多 100 个标识</td></tr><tr><td>ARI 续期</td><td>免于全部限流</td></tr></tbody></table></div>
+<h2 id="meaning">每条限流是什么意思</h2><p>每注册域 50 证/7 天：同一注册域下，7 天内最多签发 50 张证书。相同标识集 5 张/7 天：同一组标识（域名组合），7 天内最多签发 5 张。验证失败 5 次/小时：同一账户、同一主机名，1 小时内验证失败最多 5 次。新订单 300 个/3 小时：同一账户，3 小时内最多新建 300 个订单。每证至多 100 个标识：一张证书最多含 100 个标识。</p>
+<h2 id="ari">ARI 续期免限流</h2><p>官网限流文档写明，ARI 续期免于全部限流。续期流程与 ACME 客户端设置以官方页面为准。</p>
+<h2 id="hit">触及限流后</h2><p>限流按 7 天、3 小时、1 小时的窗口计算，窗口过去后计数重置。反复失败的申请会继续计入验证失败次数。证书有效期以官方页面为准；有效期过渡说法为二手说法，未在限流文档页确认。</p>
+<h2 id="related">与 Cloudflare Universal SSL 的关系</h2><p>Cloudflare Free 计划含 Universal SSL，与 Let's Encrypt 是两条不同的免费 SSL 路线，对照见<a href="../../compare/ssl-routes/">两种免费 SSL 路线</a>。Let's Encrypt 的限流数字不能套用到 Cloudflare。</p>
+<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，办理前请以厂商官方页为准。</div>
+<div class="related"><h2>相关指南</h2><ul><li><a href="../dns-cdn-ssl-basics/">域名、DNS、CDN、SSL 各管什么</a></li><li><a href="../../compare/ssl-routes/">两种免费 SSL 路线</a></li><li><a href="../../offers/lets-encrypt/">Let's Encrypt 详情页</a></li><li><a href="../../">返回域名 / DNS / CDN / SSL 列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">域名·DNS·CDN·SSL</a> · <a href="../../offers/">域名详情</a> · <a href="../../compare/">域名对比</a> · <a href="../">域名指南</a> · <a href="../../faq/">域名问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，办理前请看清对方条款。</p></div></footer>
+</body>
+</html>
