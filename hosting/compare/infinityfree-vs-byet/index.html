@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InfinityFree vs Byet.host：同为 5GB 免费主机，差异逐项对比</title>
+<meta name="description" content="InfinityFree 与 Byet.host 逐项对比：数据库数量（400 vs 无限）、PHP（8.4 vs 8.3）、SSL、面板、限额透明度、闲置政策、账户上限。核实于 2026-11-13。">
+<link rel="canonical" href="https://tokens.yangtokent.com/hosting/compare/infinityfree-vs-byet/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "InfinityFree vs Byet.host：同为 5GB 免费主机，差异逐项对比",
+  "description": "InfinityFree 与 Byet.host 逐项对比：数据库数量（400 vs 无限）、PHP（8.4 vs 8.3）、SSL、面板、限额透明度、闲置政策、账户上限。核实于 2026-11-13。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/hosting/compare/infinityfree-vs-byet/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "InfinityFree 和 Byet.host 哪个更好？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "参数接近：同为 5 GB、无广告、无需信用卡。差异：数据库 400 vs 无限、PHP 8.4 vs 8.3、面板未命名 vs VistaPanel、限额透明度（InfinityFree hits 50,000/日明确，Byet 未给数字）、闲置政策（InfinityFree 30 天 5 hits 明确，Byet 未给天数）。核实于 2026-11-13。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Byet.host 的 hits 上限也是 50,000 吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TOS 全文未给出 hits/日数字，以官方页面为准。InfinityFree 的 50,000 hits/日不能套用到 Byet。核实于 2026-11-13。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">免费虚拟主机</a><a href="../../offers/">主机详情</a><a href="../" aria-current="page">主机对比</a><a href="../../guides/">主机指南</a><a href="../../faq/">主机问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">免费虚拟主机</a> / <a href="../">主机对比</a> / InfinityFree vs Byet.host</p>
+<h1>InfinityFree vs Byet.host</h1>
+<p class="meta">核实于 2026-11-13 · 本页更新于 2026-11-13</p>
+<div class="answer"><p>两家同为 5 GB、无广告、无需信用卡，差异在数据库数量（400 vs 无限）、PHP 版本（8.4 vs 8.3）、SSL 流程、面板、限额透明度与闲置政策：InfinityFree 的 hits 上限（50,000/日）与闲置规则（30 天 5 hits）都有明确数字；Byet.host 的 TOS 未给出 hits 数字与闲置天数，但写明每人限 3 个账户与备份收费 $9.99。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#table">对比表</a></li><li><a href="#limits">限额透明度</a></li><li><a href="#idle">闲置政策</a></li><li><a href="#relation">两家是什么关系</a></li><li><a href="#how">怎么选</a></li><li><a href="#faq">常见问题</a></li></ul></div>
+<h2 id="table">对比表</h2><div class="tablewrap"><table><thead><tr><th>项目</th><th>InfinityFree</th><th>Byet.host</th></tr></thead><tbody>
+<tr><th>空间</th><td>5 GB</td><td>5 GB NVMe</td></tr>
+<tr><th>带宽</th><td>Unlimited（但 50,000 hits/日）</td><td>Unlimited（官网称无隐藏流量上限）</td></tr>
+<tr><th>数据库</th><td>400 个 MySQL，MySQL 8.0 / MariaDB 11.4</td><td>无限 MySQL 8 / MariaDB 11.4</td></tr>
+<tr><th>PHP</th><td>PHP 8.4</td><td>PHP 8.3（Zend &amp; ionCube）</td></tr>
+<tr><th>SSL</th><td>免费 SSL 证书</td><td>子域名自动；自有域名面板自装</td></tr>
+<tr><th>广告</th><td>网站上无广告</td><td>无广告</td></tr>
+<tr><th>域名</th><td>免费子域名 25+ 后缀；可自带域名</td><td>24 个免费子域名后缀；无限附加/停放/子域名</td></tr>
+<tr><th>绑卡</th><td>无需信用卡</td><td>无需信用卡</td></tr>
+<tr><th>面板</th><td>官网首页未命名</td><td>VistaPanel</td></tr>
+<tr><th>安装器</th><td>Softaculous 400+</td><td>Softaculous 400+</td></tr>
+<tr><th>限额</th><td>50,000 hits/日，超限下线 24 小时</td><td>hits 未给数字；单文件最大 10 MB</td></tr>
+<tr><th>闲置政策</th><td>30 天内少于 5 hits 停用；停用 20–60 天后删除</td><td>TOS 仅原则性条款，未给天数</td></tr>
+<tr><th>账户上限</th><td>官网已读页面未述</td><td>每人限 3 个免费账户</td></tr>
+<tr><th>备份</th><td>官网已读页面未述备份收费</td><td>客户自负；代为创建备份 $9.99</td></tr>
+<tr><th>核实日期</th><td>2026-11-13</td><td>2026-11-13</td></tr>
+</tbody></table></div><h2 id="limits">限额透明度</h2><p>InfinityFree 的 hits 上限是明确数字：50,000/日，超限下线 24 小时后自动恢复，免费档配额不可申请提高。Byet.host 的 TOS 全文未给出 hits/日数字；官网免费页称 Unlimited 带宽、“No hidden traffic caps”，同时 TOS 保留对超量资源使用不经通知停用的权利。两家的 hits 数字不能互套。</p><h2 id="idle">闲置政策</h2><p>InfinityFree：30 天内少于 5 hits 停用，可在客户端重新激活；停用账户 20–60 天后自动删除（KB 另一处只写“some time”，未给天数）。Byet.host：TOS 只写保留制定闲置保留天数的权利、保留登出长期闲置账户的权利、长期闲置可不经通知终止，未给具体天数。</p><h2 id="relation">两家是什么关系</h2><p>同属 iFastNet 生态为二手说法，未经官网直读确认。旁证：Byet TOS 隐私政策链接指向 ifastnet.com。ProFreeHost 官网首页标注 Powered by iFastNet.com。</p><h2 id="how">怎么选</h2><p>需要明确的限额与闲置数字：InfinityFree 的 hits 上限与闲置规则都有明确数字。需要无限数据库与 VistaPanel：Byet.host。需要自有域名 SSL 零配置：InfinityFree 的免费 SSL；Byet.host 的自有域名 SSL 需要在面板自行安装。需要 3 个以上免费账户：Byet.host 限每人 3 个，InfinityFree 的账户上限在官网已读页面中未述。</p>
+<h2 id="faq">常见问题</h2><details><summary>InfinityFree 和 Byet.host 哪个更好？</summary><p>参数接近：同为 5 GB、无广告、无需信用卡。差异：数据库 400 vs 无限、PHP 8.4 vs 8.3、面板未命名 vs VistaPanel、限额透明度（InfinityFree hits 50,000/日明确，Byet 未给数字）、闲置政策（InfinityFree 30 天 5 hits 明确，Byet 未给天数）。核实于 2026-11-13。</p></details><details><summary>Byet.host 的 hits 上限也是 50,000 吗？</summary><p>TOS 全文未给出 hits/日数字，以官方页面为准。InfinityFree 的 50,000 hits/日不能套用到 Byet。核实于 2026-11-13。</p></details>
+<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，领取前请以厂商官方页为准。</div>
+<div class="related"><h2>其他对比</h2><ul><li><a href="../four-hosts-overview/">四家免费虚拟主机对比</a></li><li><a href="../all-hosts-table/">免费虚拟主机总表</a></li><li><a href="../../offers/infinityfree/">InfinityFree 详情页</a></li><li><a href="../../offers/byet-host/">Byet.host 详情页</a></li><li><a href="../../">返回免费虚拟主机列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">免费虚拟主机</a> · <a href="../../offers/">主机详情</a> · <a href="../">主机对比</a> · <a href="../../guides/">主机指南</a> · <a href="../../faq/">主机问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
