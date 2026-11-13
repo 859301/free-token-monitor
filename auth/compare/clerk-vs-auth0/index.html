@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clerk vs Auth0：MRU 与 MAU、社交登录、组织与超额对照</title>
+<meta name="description" content="Clerk Hobby 与 Auth0 Free 逐项对照：50,000 MRUs 与 25,000 MAU 口径不同、社交登录与企业连接、组织数量、绑卡、日志保留、超限规则。核实于 2026-11-13。">
+<link rel="canonical" href="https://tokens.yangtokent.com/auth/compare/clerk-vs-auth0/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Clerk vs Auth0：MRU 与 MAU、社交登录、组织与超额对照",
+  "description": "Clerk Hobby 与 Auth0 Free 逐项对照：50,000 MRUs 与 25,000 MAU 口径不同、社交登录与企业连接、组织数量、绑卡、日志保留、超限规则。核实于 2026-11-13。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/auth/compare/clerk-vs-auth0/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">认证与用户管理</a><a href="../../offers/">认证详情</a><a href="../../compare/" aria-current="page">认证对比</a><a href="../../guides/">认证指南</a><a href="../../faq/">认证问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">认证与用户管理</a> / <a href="../">认证对比</a> / Clerk vs Auth0</p>
+
+<h1>Clerk vs Auth0</h1>
+<p class="meta">核实于 2026-11-13 · 本页更新于 2026-11-13</p>
+<div class="answer"><p>口径不同：Clerk 按 MRU 计（50,000 MRUs/应用，用户注册 24 小时后回访即计为 retained），Auth0 按 MAU 计（至多 25,000 MAU，官网表述为 External Active Users）。两个数字不能直接比大小。社交登录：Clerk 至多 3 个；Auth0 为 1 个企业连接。组织：Clerk 100 MROs/应用，Auth0 5 个组织。绑卡：Clerk 无需信用卡；Auth0 注册无需绑卡，自定义域名需绑卡验证。日志保留都是 1 天。超限：Clerk 写明须升级与 1 个月宽限期；Auth0 超限行为在官网已读页面中未述。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#table">对比表</a></li><li><a href="#metering">口径不同</a></li><li><a href="#social">社交登录与企业连接</a></li><li><a href="#orgs">组织</a></li><li><a href="#card">绑卡与自定义域名</a></li><li><a href="#overage">超限规则</a></li><li><a href="#how">怎么选</a></li><li><a href="#faq">常见问题</a></li></ul></div>
+<h2 id="table">对比表</h2><div class="tablewrap"><table><thead><tr><th>项目</th><th>Clerk Hobby</th><th>Auth0 Free</th></tr></thead><tbody><tr><th>免费档</th><td>Hobby Free</td><td>Free $0</td></tr><tr><th>计量口径</th><td>MRU（每月留存用户）</td><td>MAU（External Active Users，外部活跃用户）</td></tr><tr><th>免费用户量</th><td>50,000 MRUs/应用</td><td>至多 25,000 MAU</td></tr><tr><th>组织</th><td>100 MROs/应用</td><td>5 个组织</td></tr><tr><th>社交登录 / 企业连接</th><td>至多 3 个社交登录</td><td>1 个企业连接</td></tr><tr><th>应用数量</th><td>无限应用</td><td>以官方页面为准</td></tr><tr><th>Dashboard seats</th><td>3 个</td><td>以官方页面为准</td></tr><tr><th>会话</th><td>固定 7 天 session</td><td>以官方页面为准</td></tr><tr><th>日志保留</th><td>1 天</td><td>1 天</td></tr><tr><th>API / M2M</th><td>API Keys 每月 1,000 创建、100,000 验证；M2M Tokens 每月 2,500 创建、100,000 验证；每月 5 次用户模拟</td><td>1,000 个 M2M token；5 个 Actions</td></tr><tr><th>自定义域名</th><td>含自定义域名</td><td>1 个，需绑卡验证</td></tr><tr><th>绑卡</th><td>无需信用卡</td><td>注册无需绑卡；自定义域名需绑卡验证</td></tr><tr><th>不包括</th><td>以官方页面为准</td><td>Pro MFA / 角色管理</td></tr><tr><th>超限规则</th><td>超 50,000 MRU 须升级 Pro；超 100 MRO 须升级 B2B 附加项；1 个月宽限期（FAQ）</td><td>官网已读页面未述，以官方页面为准</td></tr><tr><th>付费档</th><td>Pro $20/月（年付），含 50,000 MRUs，超出 $0.02/个；Business $250/月（年付）</td><td>Essentials $35/月、Professional $240/月</td></tr><tr><th>核实日期</th><td>2026-11-13</td><td>2026-11-13</td></tr></tbody></table></div><h2 id="metering">口径不同</h2><p>Clerk 的 MRU 定义：用户在注册 24 小时后回访即计为 retained。官网原文：“A user is counted as retained when they return 24+ hours after signing up.”Auth0 的 MAU 表述为 “External Active Users”（外部活跃用户），活跃的判定细节在官网已读页面中未述。口径不同，50,000 与 25,000 两个数字不能直接比大小。完整口径对照见<a href="../../guides/mru-vs-mau/">MRU 与 MAU 有什么不同</a>。</p><h2 id="social">社交登录与企业连接</h2><p>Clerk Hobby 至多 3 个社交登录；Auth0 Free 有 1 个企业连接。社交登录与企业连接针对的登录场景不同，通用配置步骤见<a href="../../guides/social-login-basics/">社交登录基础</a>。</p><h2 id="orgs">组织</h2><p>Clerk 的组织口径是 MRO：组织至少 2 名成员，且至少 1 名为当月 retained 用户；Hobby 每应用 100 MROs。Auth0 Free 有 5 个组织。两个口径不同，数字不能直接比大小。</p><h2 id="card">绑卡与自定义域名</h2><p>Clerk 官网写明 “No credit card required”（无需信用卡），含自定义域名。Auth0 注册无需绑卡，1 个自定义域名需绑卡验证。Clerk 自定义域名的绑卡要求在官网已读页面中未述，以官方页面为准。</p><h2 id="overage">超限规则</h2><p>Clerk 写明了超限规则：超 50,000 MRU 须升级 Pro，超 100 MRO 须升级 B2B 附加项，FAQ 写明 1 个月宽限期。Auth0 超过 25,000 MAU 后的行为在官网已读页面中未述，以官方页面为准。完整对照见<a href="../../guides/auth-overage-rules/">认证额度超了怎么办</a>。</p><h2 id="how">怎么选</h2><p>看口径：Clerk 按留存用户计，Auth0 按外部活跃用户计，定义原文见上。看社交登录与企业连接的数量：Clerk 至多 3 个社交登录，Auth0 1 个企业连接。看组织数量：Clerk 100 MROs/应用，Auth0 5 个组织。看绑卡：两家注册都不需要信用卡，Auth0 的自定义域名需绑卡验证。看超限：Clerk 写明强制升级与宽限期，Auth0 超限行为以官方页面为准。</p>
+<h2 id="faq">常见问题</h2><details><summary>Clerk 的 50,000 比 Auth0 的 25,000 大一倍吗？</summary><p>不能这样比。Clerk 的 50,000 是 MRUs（留存用户，用户注册 24 小时后回访即计为 retained），Auth0 的 25,000 是 MAU（External Active Users，外部活跃用户）。口径不同，数字不能直接比大小。核实于 2026-11-13。</p></details><details><summary>两家免费版都要绑信用卡吗？</summary><p>都不需要注册绑卡：Clerk 官网写明 “No credit card required”；Auth0 注册无需绑卡。区别在自定义域名：Auth0 的 1 个自定义域名需绑卡验证；Clerk 自定义域名的绑卡要求在官网已读页面中未述。核实于 2026-11-13。</p></details>
+<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，领取前请以厂商官方页为准。</div>
+<div class="related"><h2>其他对比</h2><ul><li><a href="../auth-included/">独立认证与数据库附带认证对照</a></li><li><a href="../all-auth-table/">认证总表</a></li><li><a href="../../offers/clerk/">Clerk Hobby 详情页</a></li><li><a href="../../offers/auth0/">Auth0 Free 详情页</a></li><li><a href="../../">返回认证与用户管理列表</a></li></ul></div>
+
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">认证与用户管理</a> · <a href="../../offers/">认证详情</a> · <a href="../../compare/">认证对比</a> · <a href="../../guides/">认证指南</a> · <a href="../../faq/">认证问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
