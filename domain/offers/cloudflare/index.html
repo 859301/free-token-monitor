@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cloudflare 免费计划详解：DNS、CDN、Universal SSL 与成本价域名注册</title>
+<meta name="description" content="Cloudflare Free 计划 $0：DNS、Unmetered DDoS、CDN、Universal SSL、Free Managed Ruleset、WAF；Pro $20/月（年付）；Registrar 成本价注册、无加价。核实于 2026-11-13。">
+<link rel="canonical" href="https://tokens.yangtokent.com/domain/offers/cloudflare/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cloudflare 免费计划详解：DNS、CDN、Universal SSL 与成本价域名注册",
+  "description": "Cloudflare Free 计划 $0：DNS、Unmetered DDoS、CDN、Universal SSL、Free Managed Ruleset、WAF；Pro $20/月（年付）；Registrar 成本价注册、无加价。核实于 2026-11-13。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/domain/offers/cloudflare/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cloudflare 免费计划包括什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Free 计划 $0 包括 DNS、Unmetered DDoS Protection、CDN、Universal SSL、Free Managed Ruleset、WAF，官网 plans 页定位为个人/业余项目。核实于 2026-11-13。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cloudflare Registrar 的 .com 多少钱？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "官网 plans 页只写成本价注册、无加价（At-cost domain registration with no markup pricing），未给出 .com 具体价格，以官方页面为准。核实于 2026-11-13。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cloudflare 免费计划需要绑卡吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "绑卡要求在官网已读页面中未述，以官方页面为准。核实于 2026-11-13。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>域名、DNS、CDN 与 SSL 的价格和条款信息，以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">域名·DNS·CDN·SSL</a><a href="../" aria-current="page">域名详情</a><a href="../../compare/">域名对比</a><a href="../../guides/">域名指南</a><a href="../../faq/">域名问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">域名·DNS·CDN·SSL</a> / <a href="../">域名详情</a> / Cloudflare 免费计划</p>
+<h1>Cloudflare 免费计划</h1>
+<p class="meta">Cloudflare · 核实于 2026-11-13 · 本页更新于 2026-11-13</p>
+<p><span class="tag ok">$0 免费计划</span><span class="tag">DNS</span><span class="tag">CDN</span><span class="tag">SSL</span><span class="tag">成本价注册</span></p>
+<div class="answer"><p>Cloudflare Free 计划 $0，包括 DNS、Unmetered DDoS Protection、CDN、Universal SSL、Free Managed Ruleset、WAF，官网 plans 页定位为个人/业余项目。Pro 为 $20/月（年付）或 $25/月（月付），Business 为 $200/月（年付）或 $250/月（月付）。Cloudflare Registrar 为成本价注册、无加价（At-cost domain registration with no markup pricing），.com 具体价格在 plans 页未给出数字，以官方页面为准。绑卡要求在官网已读页面中未述，以官方页面为准。核实于 2026-11-13。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#facts">规格速览</a></li><li><a href="#free">免费计划包括什么</a></li><li><a href="#registrar">Registrar：成本价注册</a></li><li><a href="#upgrade">升级价格</a></li><li><a href="#unconfirmed">未确认的信息</a></li><li><a href="#steps">怎么开始</a></li><li><a href="#risks">注意事项</a></li><li><a href="#faq">常见问题</a></li></ul></div>
+<h2 id="facts">规格速览</h2>
+<div class="tablewrap"><table class="fact"><tbody><tr><th>免费内容</th><td>DNS、Unmetered DDoS Protection、CDN、Universal SSL、Free Managed Ruleset、WAF</td></tr><tr><th>提供方</th><td>Cloudflare</td></tr><tr><th>价格</th><td>Free 计划 $0/月；Pro $20/月（年付）或 $25/月（月付）；Business $200/月（年付）或 $250/月（月付）</td></tr><tr><th>适用对象</th><td>Free 计划：个人/业余项目（官网 plans 页）</td></tr><tr><th>时长</th><td>Free 计划 $0；是否永久，官网已读页面未明示，以官方页面为准</td></tr><tr><th>Registrar</th><td>At-cost domain registration with no markup pricing（成本价注册、无加价）；.com 具体价格在 plans 页未给出数字</td></tr><tr><th>绑卡与验证</th><td>官网已读页面未述，以官方页面为准</td></tr><tr><th>核实日期</th><td>2026-11-13</td></tr><tr><th>来源</th><td>Cloudflare 官网 plans 页（<a href="https://www.cloudflare.com/plans/" target="_blank" rel="noopener noreferrer">官方页</a>）</td></tr></tbody></table></div>
+<h2 id="free">免费计划包括什么</h2><p>按官网 plans 页，Free 计划 $0 包括：DNS、Unmetered DDoS Protection（不限量 DDoS 防护）、CDN、Universal SSL（通用 SSL）、Free Managed Ruleset（免费托管规则集）、WAF。plans 页定位 Free 计划面向个人/业余项目。具体配额与规则以官方页面为准。</p>
+<h2 id="registrar">Registrar：成本价注册</h2><p>官网 plans 页写明 Registrar 为“At-cost domain registration with no markup pricing”，即按成本价注册、无加价。plans 页未给出 .com 的具体注册价、续费价与转入价，以官方页面为准。与三家注册商的价格对照见<a href="../../compare/cloudflare-registrar/">Cloudflare Registrar 与三家注册商</a>。</p>
+<h2 id="upgrade">升级价格</h2><p>Pro：$20/月（年付）或 $25/月（月付）。Business：$200/月（年付）或 $250/月（月付）。各计划包含的内容差异以官方页面为准。</p>
+<h2 id="unconfirmed">未确认的信息</h2><p>绑卡要求：在官网已读页面中未述，以官方页面为准。Registrar 的 .com 具体价格：在 plans 页未给出数字，以官方页面为准。.com 成本价数字（约 $10.46→$11.17）为二手说法，未在 plans 页确认。</p>
+<h2 id="steps">怎么开始</h2>
+<p>在 Cloudflare 官网创建账户 → 添加域名 → 按官方页指引完成 DNS 与 SSL 设置。</p>
+<p><a class="btn" href="https://www.cloudflare.com/plans/" target="_blank" rel="noopener noreferrer">去厂商官方页</a></p>
+<h2 id="risks">注意事项</h2><ul><li>Free 计划包含的 DNS、CDN、Universal SSL 以 plans 页所列为准，具体配额以官方页面为准</li><li>Registrar 的 .com 价格在 plans 页未给出数字，以官方页面为准</li><li>绑卡要求在官网已读页面中未述，以官方页面为准</li><li>域名、DNS、CDN、SSL 各管一段，见<a href="../../guides/dns-cdn-ssl-basics/">域名、DNS、CDN、SSL 各管什么</a></li></ul>
+<h2 id="faq">常见问题</h2><details><summary>Cloudflare 免费计划包括什么？</summary><p>Free 计划 $0 包括 DNS、Unmetered DDoS Protection、CDN、Universal SSL、Free Managed Ruleset、WAF，官网 plans 页定位为个人/业余项目。核实于 2026-11-13。</p></details><details><summary>Cloudflare Registrar 的 .com 多少钱？</summary><p>官网 plans 页只写成本价注册、无加价（At-cost domain registration with no markup pricing），未给出 .com 具体价格，以官方页面为准。核实于 2026-11-13。</p></details><details><summary>Cloudflare 免费计划需要绑卡吗？</summary><p>绑卡要求在官网已读页面中未述，以官方页面为准。核实于 2026-11-13。</p></details>
+<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，办理前请以厂商官方页为准。</div>
+<div class="related"><h2>相关页面</h2><ul><li><a href="../lets-encrypt/">Let's Encrypt 免费 DV 证书</a></li><li><a href="../../compare/ssl-routes/">两种免费 SSL 路线</a></li><li><a href="../../compare/cloudflare-registrar/">Cloudflare Registrar 与三家注册商</a></li><li><a href="../../guides/dns-cdn-ssl-basics/">域名、DNS、CDN、SSL 各管什么</a></li><li><a href="../../faq/">域名常见问题</a></li><li><a href="../../">返回域名 / DNS / CDN / SSL 列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">域名·DNS·CDN·SSL</a> · <a href="../">域名详情</a> · <a href="../../compare/">域名对比</a> · <a href="../../guides/">域名指南</a> · <a href="../../faq/">域名问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，办理前请看清对方条款。</p></div></footer>
+</body>
+</html>
