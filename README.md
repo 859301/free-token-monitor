@@ -100,6 +100,11 @@
 - 板块页面在 `code/` 下：列表页、2 篇详情页、3 篇对比、4 篇指南、1 个问答页（15 问），均已加入 `sitemap.xml` 与 `llms.txt`。
 - 已死服务指南在 `guides/dead-services/` 下：Heroku、PlanetScale、SendGrid 永久免费计划、Freenom、Upstash Kafka、Google Domains 的现状与替代，时间线来自多家公开报道。
 
+## 工作流总览
+
+- 工作流总览页在 `workflow/` 下：14 个环节的阶段地图、从零上线检查清单与 3 套 $0 组合，已加入 `sitemap.xml` 与 `llms.txt`。
+- 方法论指南在 `guides/` 下新增 3 篇：`idea-validation`（立项验证）、`peripheral-capabilities`（周边能力）、`launch-operations`（上线运营），均为概念与检查清单，不含厂商参数。
+
 ## 使用方法
 
 ### 本地打开
