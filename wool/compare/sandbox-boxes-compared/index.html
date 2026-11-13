@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Simular Box vs InstaBox：沙箱/云电脑对比</title>
-<meta name="description" content="Simular Box 与 InstaBox 对比：一个是 $5 额度 + 按量计费的共享云电脑（说法冲突），一个是 $0 免费层的独立沙箱机器（30 分钟暂停）。用途、价格、删除规则逐项比，另附已收录的 E2B 沙箱额度。">
+<meta name="description" content="Simular Box 与 InstaBox 对比：一个是 $5 额度 + 按量计费的共享云电脑（说法冲突），一个是 $0 免费层的独立沙箱机器（30 分钟暂停）。用途、价格、删除规则逐项比，另附 E2B 沙箱额度。">
 <link rel="canonical" href="https://tokens.yangtokent.com/wool/compare/sandbox-boxes-compared/">
 <style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
 * { box-sizing:border-box; }
@@ -66,7 +66,7 @@ footer a { color:var(--accent); }
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Simular Box vs InstaBox：沙箱/云电脑对比",
-  "description": "Simular Box 与 InstaBox 对比：一个是 $5 额度 + 按量计费的共享云电脑（说法冲突），一个是 $0 免费层的独立沙箱机器（30 分钟暂停）。用途、价格、删除规则逐项比，另附已收录的 E2B 沙箱额度。",
+  "description": "Simular Box 与 InstaBox 对比：一个是 $5 额度 + 按量计费的共享云电脑（说法冲突），一个是 $0 免费层的独立沙箱机器（30 分钟暂停）。用途、价格、删除规则逐项比，另附 E2B 沙箱额度。",
   "inLanguage": "zh-CN",
   "datePublished": "2026-11-13",
   "dateModified": "2026-11-13",
@@ -110,13 +110,13 @@ footer a { color:var(--accent); }
 </script>
 </head>
 <body>
-<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：只收厂商官方核对过的免费额度。领取前请以厂商官方页为准。</p></div></header>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：额度信息来自厂商官方页。领取前请以厂商官方页为准。</p></div></header>
 <nav><div class="wrap"><a href="../../../">首页</a><a href="../../">羊毛 VPS</a><a href="../../offers/">羊毛详情</a><a href="../" aria-current="page">羊毛对比</a><a href="../../guides/">羊毛指南</a><a href="../../faq/">羊毛问答</a></div></nav>
 <main><div class="wrap">
 <article>
 <p class="crumb"><a href="../../../">首页</a> / <a href="../../">羊毛 VPS</a> / <a href="../">羊毛对比</a> / 沙箱对比</p>
 <h1>Simular Box vs InstaBox：沙箱/云电脑对比</h1>
-<p class="meta">本页更新于 2026-11-13 · 数据照录本站核对的厂商官方页内容</p>
+<p class="meta">本页更新于 2026-11-13 · 数据来自厂商官方页</p>
 <div class="answer"><p>两者都是给 AI Agent 用的云电脑，但模型完全不同：InstaBox 是 $0 免费层、每账户 1 台独立沙箱机器（4 vCPU / 8 GiB），闲置 30 分钟暂停；Simular Box 是多个 Agent 共享 1 台云电脑，$5 额度 + 按量计费，且条款说法冲突。要独立机器、自己跑 Agent 选 InstaBox；要多个现成 Agent 共享一台电脑、共用登录状态，才考虑 Simular Box——先按 $5 额度规划。</p></div>
 <p>下表照录两家官网页内容；Simular Box 的价格行标注了说法冲突。两者都不是传统 VPS，都不适合 24/7 挂机。</p>
 <div class="tablewrap"><table><thead><tr><th>维度</th><th>Simular Box</th><th>InstaBox</th></tr></thead><tbody><tr><td>形态</td><td>1 台云电脑，多个 Agent 共享（同一份文件与登录状态）</td><td>每账户 1 台独立沙箱机器（Firecracker microVM）</td></tr><tr><td>价格</td><td>$5 额度 + 按量 $0.10/小时起；Small $19/月、Medium $39/月（官方博客；首页称 box 免费，说法冲突）</td><td>免费层 $0；付费档 Pro $20/月起 + 用量</td></tr><tr><td>免费内容</td><td>$5 额度每账户一次（约 50 小时）</td><td>1 台 4 vCPU / 8 GiB 机器，无用量上限</td></tr><tr><td>规格</td><td>2 vCPU / 4 GB 或 4 vCPU / 8 GB（博客）</td><td>4 vCPU / 8 GiB，20 GiB 磁盘，5 快照，100 GiB 出站/月</td></tr><tr><td>暂停 / 删除</td><td>闲置休眠；连续 14 天未唤醒删机删数据</td><td>闲置 30 分钟暂停（1 秒恢复）；单次最长 120 分钟（随使用至 480 分钟）</td></tr><tr><td>系统</td><td>Linux 桌面 + Chrome（仅 Linux）</td><td>Debian 13 + 桌面 + Chromium（多模板）</td></tr><tr><td>接入</td><td>远程 MCP 服务器（Claude、ChatGPT、Codex 等）</td><td>CLI、API、SSH、桌面</td></tr><tr><td>适合</td><td>多个现成 Agent 共享一台电脑</td><td>独立跑 Agent、构建、实验</td></tr></tbody></table></div>
@@ -124,8 +124,8 @@ footer a { color:var(--accent); }
 <p>Simular Box 的核心是共享：Claude Code 开的任务，Codex 或 ChatGPT 可以接着做，因为文件、打开的应用与登录状态都在同一台 box 上。InstaBox 的核心是独立：每台机器是你自己的沙箱，Agent 在里面跑，互不干扰。共享适合「多个 Agent 协作」，独立适合「一台机器干一件事」。</p>
 <h2 id="deletion">删除规则差异</h2>
 <p>Simular Box 的 14 天删除规则最严厉：连续 14 天未唤醒，box 连同文件一并删除。InstaBox 的暂停不删文件：暂停、停止、重启都保留 /data 磁盘，只有删除机器才清空。长期不用的项目放 InstaBox 更安全；Simular Box 必须定期唤醒或备份。</p>
-<h2 id="e2b">同类：E2B 沙箱额度（已收录）</h2>
-<p>本站免费 Token 板块已收录 E2B Hobby 额度：$100 一次性用量额度，免绑卡（核实于 2026-11-01），见<a href="../../../offers/e2b-hobby/">E2B 详情页</a>。E2B 是面向开发者的代码沙箱（SDK 驱动），与上面两者的「云电脑」定位不同：要写代码调用沙箱选 E2B，要给现成 Agent 一台电脑选 Simular Box 或 InstaBox。Daytona、Orgo 等同类产品本次未在各自官网页核实条款，暂不收录。</p>
+<h2 id="e2b">同类：E2B 沙箱额度</h2>
+<p>免费 Token 板块有 E2B Hobby 额度：$100 一次性用量额度，免绑卡（核实于 2026-11-01），见<a href="../../../offers/e2b-hobby/">E2B 详情页</a>。E2B 是面向开发者的代码沙箱（SDK 驱动），与上面两者的「云电脑」定位不同：要写代码调用沙箱选 E2B，要给现成 Agent 一台电脑选 Simular Box 或 InstaBox。Daytona、Orgo 等同类产品本次未在各自官网页核实条款。</p>
 <h2 id="faq">常见问题</h2>
 <details><summary>哪个更适合跑 Claude Code？</summary><p>两者都能接 Claude Code：InstaBox 是独立机器、CLI/API 接入；Simular Box 是 MCP 接入、多 Agent 共享。要独立环境选 InstaBox，要多 Agent 接力选 Simular Box。</p></details>
 <details><summary>能互相替代吗？</summary><p>部分能：都是给 Agent 的云电脑。但共享模型与独立模型不同，删除规则也不同；按你的用法选，不要只看价格。</p></details>
@@ -133,6 +133,6 @@ footer a { color:var(--accent); }
 <div class="related"><h2>相关页面</h2><ul><li><a href="../../offers/simular-box/">Simular Box 详情页</a></li><li><a href="../../../vps/offers/instabox/">InstaBox 详情页</a></li><li><a href="../../">羊毛 VPS 列表</a></li><li><a href="../../../vps/">免费 VPS 列表</a></li><li><a href="../../../offers/e2b-hobby/">E2B Hobby 额度</a></li></ul></div>
 </article>
 </div></main>
-<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">羊毛 VPS</a> · <a href="../../offers/">羊毛详情</a> · <a href="../">羊毛对比</a> · <a href="../../guides/">羊毛指南</a> · <a href="../../faq/">羊毛问答</a></p><p>数据仅供参考，以厂商官方页为准。羊毛板块各条目均经厂商官方页核对，核实日期见各页；额度与促销随时可能调整或结束，领取前请看清对方条款。本站不含邀请链接，不刊登优惠码字符串。</p></div></footer>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">羊毛 VPS</a> · <a href="../../offers/">羊毛详情</a> · <a href="../">羊毛对比</a> · <a href="../../guides/">羊毛指南</a> · <a href="../../faq/">羊毛问答</a></p><p>数据仅供参考，以厂商官方页为准。羊毛板块各条目信息来自厂商官方页，核实日期见各页；额度与促销随时可能调整或结束，领取前请看清对方条款。无邀请链接；优惠码以官网页面显示为准。</p></div></footer>
 </body>
 </html>
