@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>免费额度超了怎么办：停服、暂停、等待与扣费对照</title>
+<meta name="description" content="部署免费层超额行为对照：Vercel 不可加购与 30 天等待期、Render 暂停不计费、EdgeOne 无超额费用、Fly.io 按量计价、Railway 试用后缩减。核实于 2026-11-13。">
+<link rel="canonical" href="https://tokens.yangtokent.com/deploy/guides/overage-stop-vs-charge/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "免费额度超了怎么办：停服、暂停、等待与扣费对照",
+  "description": "部署免费层超额行为对照：Vercel 不可加购与 30 天等待期、Render 暂停不计费、EdgeOne 无超额费用、Fly.io 按量计价、Railway 试用后缩减。核实于 2026-11-13。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/deploy/guides/overage-stop-vs-charge/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">部署与托管</a><a href="../../offers/">部署详情</a><a href="../../compare/">部署对比</a><a href="../../guides/" aria-current="page">部署指南</a><a href="../../faq/">部署问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">部署与托管</a> / <a href="../">部署指南</a> / 免费额度超了怎么办：停服、暂停、等待与扣费对照</p>
+<h1>免费额度超了怎么办：停服、暂停、等待与扣费对照</h1>
+<p class="meta">核实于 2026-11-13 · 本页更新于 2026-11-13</p>
+<div class="answer"><p>超额后的结果分四种：暂停（Render）、等待（Vercel 30 天等待期）、收费（Fly.io、Railway、Koyeb）、无超额费用（EdgeOne）。Netlify、Workers、Pages、Northflank 的超额后行为在官网已读页面中未述。超额前看清上限口径、超额后行为、到期与删除规则。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#table">超额行为对照表</a></li><li><a href="#kinds">超额后的四种结果</a></li><li><a href="#quotas">用量不限量不等于配额无限</a></li><li><a href="#expiry">到期与删除</a></li><li><a href="#migrate">超额后迁移</a></li></ul></div>
+<h2 id="table">超额行为对照表</h2><div class="tablewrap"><table><thead><tr><th>服务</th><th>上限</th><th>超额后（官网写明）</th></tr></thead><tbody><tr><td><a href="../../offers/vercel-hobby/">Vercel Hobby</a></td><td>分项用量上限（传输、请求、函数调用、CPU 小时）</td><td>达上限不可加购；Hobby 文档页写明超限后 30 天等待期</td></tr><tr><td><a href="../../offers/netlify-free/">Netlify Free</a></td><td>每月 300 credits</td><td>超额后的具体行为在官网已读页面中未述，以官方页面为准</td></tr><tr><td><a href="../../offers/cloudflare-workers/">Cloudflare Workers</a></td><td>100,000 请求/天、每次调用 10 ms CPU</td><td>免费档超额后的行为在官网已读页面中未述，以官方页面为准</td></tr><tr><td><a href="../../offers/cloudflare-pages/">Cloudflare Pages</a></td><td>500 构建/月、20,000 文件/站</td><td>超额后的行为在官网已读页面中未述，以官方页面为准</td></tr><tr><td><a href="../../offers/render-free/">Render 免费层</a></td><td>750 实例小时/工作区/月；免费 Postgres 30 天到期</td><td>实例小时用完即暂停；无支付方式超带宽：服务暂停，不计费；Postgres 到期后 14 天宽限期，之后连数据删除</td></tr><tr><td><a href="../../offers/northflank-sandbox/">Northflank Sandbox</a></td><td>至多 $20/月资源</td><td>超额后的行为在官网已读页面中未述，以官方页面为准</td></tr><tr><td><a href="../../offers/edgeone-free/">EdgeOne 免费计划</a></td><td>用量不限量；配额另有上限（200 子域名等）</td><td>不限量、无超额费用（官方指南）</td></tr><tr><td><a href="../../offers/railway-trial/">Railway 试用</a></td><td>$5 credits、30 天过期</td><td>试用后 $1/月起，缩减为 1 项目/3 服务、0 自定义域名</td></tr><tr><td><a href="../../offers/fly-io/">Fly.io</a></td><td>无免费层；试用 $1/7 天</td><td>账单低于 $5 豁免，超出按量计价</td></tr><tr><td><a href="../../offers/koyeb/">Koyeb</a></td><td>无免费层</td><td>按计划价计费（Pro $29/月起）</td></tr></tbody></table></div><h2 id="kinds">超额后的四种结果</h2><p><b>停用或暂停：</b>Render 实例小时用完即暂停；无支付方式超带宽时服务暂停，不计费。<b>等待：</b>Vercel Hobby 达上限不可加购，超限后 30 天等待期。<b>收费：</b>Fly.io 超出 $5 豁免后按量计价；Railway 试用后 $1/月起；Koyeb 按计划价计费。<b>无超额费用：</b>EdgeOne 官方指南写明不限量、无超额费用。Netlify、Workers、Pages、Northflank 的超额后行为在官网已读页面中未述，以官方页面为准。</p><h2 id="quotas">用量不限量不等于配额无限</h2><p>EdgeOne 的不限量指的是安全流量、请求、边缘函数请求、免费 SSL 等用量项；子域名（200 个）、规则引擎（20 条）、实时日志任务（1 个）、限速规则（1 条）等配额另有上限。Vercel 的分项用量、Netlify 的 credits、Pages 的构建与文件数、Render 的实例小时，都是各自的上限口径。</p><h2 id="expiry">到期与删除</h2><p>Render 免费 Postgres 创建后 30 天到期，到期后 14 天宽限期，之后连数据一起删除。Railway 试用 $5 额度 30 天过期。Vercel Hobby 超限后 30 天等待期。其余服务的到期与删除规则在官网已读页面中未述，以官方页面为准。</p><h2 id="migrate">超额后迁移</h2><p>超额是常见问题：论坛上有用户发帖称 Vercel 与 Supabase 相继超出免费额度后迁至腾讯云轻量（<a href="https://www.v2ex.com/t/1138425" target="_blank" rel="noopener noreferrer">V2EX 帖子标题</a>）。超额前看清三点：上限口径（分项用量、credits、构建数、实例小时）、超额后行为（暂停、等待、收费、无超额费用）、到期与删除规则（Postgres 30 天、试用 30 天、等待期 30 天）。</p>
+<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，领取前请以厂商官方页为准。</div>
+<div class="related"><h2>其他指南</h2><ul><li><a href="../vercel-hobby-commercial/">Vercel Hobby 商业限制说明</a></li><li><a href="../sleep-cold-start/">免费实例休眠与冷启动</a></li><li><a href="../../compare/all-deploy-table/">部署与托管总表</a></li><li><a href="../">部署指南总览</a></li><li><a href="../../">返回部署与托管列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">部署与托管</a> · <a href="../../offers/">部署详情</a> · <a href="../../compare/">部署对比</a> · <a href="../../guides/">部署指南</a> · <a href="../../faq/">部署问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
