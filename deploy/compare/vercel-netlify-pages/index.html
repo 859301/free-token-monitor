@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vercel vs Netlify vs Cloudflare Pages：静态托管三家对照</title>
+<meta name="description" content="Vercel Hobby、Netlify Free、Cloudflare Pages 逐项对比：计量方式（分项用量、credits、构建与文件）、构建、商业限制、超额行为、绑卡。核实于 2026-11-13。">
+<link rel="canonical" href="https://tokens.yangtokent.com/deploy/compare/vercel-netlify-pages/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Vercel vs Netlify vs Cloudflare Pages：静态托管三家对照",
+  "description": "Vercel Hobby、Netlify Free、Cloudflare Pages 逐项对比：计量方式（分项用量、credits、构建与文件）、构建、商业限制、超额行为、绑卡。核实于 2026-11-13。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/deploy/compare/vercel-netlify-pages/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "三家都要绑卡吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "三家的绑卡要求在官网已读页面中均未述，以官方页面为准。核实于 2026-11-13。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "哪家对构建限制写得最明确？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pages：1 并发构建、500 构建/月、20 分钟构建超时、无限预览部署。Netlify：1 并发构建，生产部署 15 credits/次。Vercel：Basic machines、部署存储 10 GB。核实于 2026-11-13。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">部署与托管</a><a href="../../offers/">部署详情</a><a href="../../compare/" aria-current="page">部署对比</a><a href="../../guides/">部署指南</a><a href="../../faq/">部署问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">部署与托管</a> / <a href="../">部署对比</a> / Vercel vs Netlify vs Cloudflare Pages</p>
+<h1>Vercel vs Netlify vs Cloudflare Pages</h1>
+<p class="meta">核实于 2026-11-13 · 本页更新于 2026-11-13</p>
+<div class="answer"><p>三家计量方式不同：Vercel 按分项用量（100 GB 传输、1M 请求、1M 函数调用、4 CPU 小时），Netlify 按 credits（每月 300），Pages 按构建与文件（500 构建/月、20,000 文件）。只有 Vercel 写明 Hobby 仅限个人或非商业用途与超限后 30 天等待期；三家的绑卡要求在官网已读页面中均未述。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#table">对比表</a></li><li><a href="#metering">计量方式不同</a></li><li><a href="#builds">构建对照</a></li><li><a href="#commercial">商业限制</a></li><li><a href="#how">怎么选</a></li><li><a href="#faq">常见问题</a></li></ul></div>
+<h2 id="table">对比表</h2><div class="tablewrap"><table><thead><tr><th>项目</th><th>Vercel Hobby</th><th>Netlify Free</th><th>Cloudflare Pages</th></tr></thead><tbody><tr><th>免费写法</th><td>Hobby 计划免费（未明示永久）</td><td>$0 forever</td><td>Free 限制文档（未明示永久）</td></tr><tr><th>计量方式</th><td>分项用量（传输、请求、函数调用、CPU 小时）</td><td>credits（每月 300）</td><td>构建次数与文件数</td></tr><tr><th>传输 / 请求</th><td>100 GB Fast Data Transfer、1M CDN 请求</td><td>带宽 20 credits/GB、请求 2 credits/10K</td><td>静态请求与带宽是否免费无限，未在限制文档页出现</td></tr><tr><th>函数 / 计算</th><td>1M 函数调用、4 CPU 小时</td><td>Functions 包含在 Free 内；计算 10 credits/GB-hour</td><td>以官方页面为准</td></tr><tr><th>构建</th><td>Basic machines、部署存储 10 GB</td><td>1 并发构建；生产部署 15 credits/次</td><td>1 并发构建、500 构建/月、20 分钟超时</td></tr><tr><th>自定义域名</th><td>以官方页面为准</td><td>自定义域名 + SSL</td><td>100 个自定义域名/项目</td></tr><tr><th>文件限制</th><td>以官方页面为准</td><td>以官方页面为准</td><td>20,000 文件/站、单文件 25 MiB</td></tr><tr><th>商业限制</th><td>仅限个人或非商业用途（服务条款 §4）</td><td>官网已读页面未述</td><td>官网已读页面未述</td></tr><tr><th>超额行为</th><td>达上限不可加购；超限后 30 天等待期</td><td>每月 300 credits 上限；超额后行为未述</td><td>构建与文件上限；超额后行为未述</td></tr><tr><th>绑卡</th><td>官网已读页面未述</td><td>官网已读页面未述</td><td>官网已读页面未述</td></tr><tr><th>核实日期</th><td>2026-11-13</td><td>2026-11-13</td><td>2026-11-13</td></tr></tbody></table></div><h2 id="metering">计量方式不同</h2><p>Vercel 按分项用量计量：传输、请求、函数调用、CPU 小时各有数字。Netlify 按 credits 计量：每月 300 credits，部署、计算、带宽、请求都消耗 credits。Pages 按构建与文件设限：构建次数、文件数、单文件大小有明确数字，请求与带宽是否免费无限未在限制文档页出现。</p><h2 id="builds">构建对照</h2><p>Vercel：Basic machines、部署存储 10 GB。Netlify：1 并发构建，生产部署 15 credits/次。Pages：1 并发构建、500 构建/月、20 分钟构建超时、无限预览部署。</p><h2 id="commercial">商业限制</h2><p>三家之中，只有 Vercel 在服务条款中写明 Hobby 计划仅限个人或非商业用途（§4），并有公平使用两列清单。Netlify 与 Pages 的商业用途限制在官网已读页面中未述，以官方页面为准。</p><h2 id="how">怎么选</h2><p>看计量方式选：需要分项用量数字的，看 Vercel 的传输、请求、函数调用与 CPU 小时；接受 credits 概念的，看 Netlify 的 300 credits 与消耗表；需要明确构建与文件数字的，看 Pages 的 500 构建/月与 20,000 文件。需要商用：Vercel Hobby 限定个人或非商业用途，Netlify 与 Pages 的商用限制以官方页面为准。需要明确超额后果：Vercel 写明不可加购与 30 天等待期，Netlify 与 Pages 的超额后行为在官网已读页面中未述。</p>
+<h2 id="faq">常见问题</h2><details><summary>三家都要绑卡吗？</summary><p>三家的绑卡要求在官网已读页面中均未述，以官方页面为准。核实于 2026-11-13。</p></details><details><summary>哪家对构建限制写得最明确？</summary><p>Pages：1 并发构建、500 构建/月、20 分钟构建超时、无限预览部署。Netlify：1 并发构建，生产部署 15 credits/次。Vercel：Basic machines、部署存储 10 GB。核实于 2026-11-13。</p></details>
+<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，领取前请以厂商官方页为准。</div>
+<div class="related"><h2>其他对比</h2><ul><li><a href="../render-northflank-railway/">Render vs Northflank vs Railway</a></li><li><a href="../all-deploy-table/">部署与托管总表</a></li><li><a href="../../offers/vercel-hobby/">Vercel Hobby 详情页</a></li><li><a href="../../offers/netlify-free/">Netlify Free 详情页</a></li><li><a href="../../offers/cloudflare-pages/">Cloudflare Pages 详情页</a></li><li><a href="../../">返回部署与托管列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">部署与托管</a> · <a href="../../offers/">部署详情</a> · <a href="../../compare/">部署对比</a> · <a href="../../guides/">部署指南</a> · <a href="../../faq/">部署问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
