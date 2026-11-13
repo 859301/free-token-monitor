@@ -92,10 +92,16 @@
   .faq-section details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
   .faq-section summary { cursor:pointer; font-weight:600; }
   .faq-section p { margin:8px 0; font-size:14px; color:#374151; }
-  .vps-banner { background:var(--accent-soft); border:1px solid #bfdbfe; border-radius:12px; padding:16px 18px; margin-bottom:16px; }
-  .vps-banner h2 { margin:0 0 6px; font-size:18px; }
-  .vps-banner p { margin:6px 0; font-size:14px; color:#374151; }
-  .vps-banner a { color:var(--accent); font-weight:600; }
+  .stages { margin-bottom:20px; }
+  .stages > h2 { margin:0 0 6px; font-size:20px; }
+  .stages .intro { margin:0 0 14px; font-size:14px; color:var(--muted); }
+  .stages .intro a { color:var(--accent); }
+  .stages .card h2 { font-size:16px; }
+  .stages .card h2 a { color:var(--text); text-decoration:none; }
+  .stages .card h2 a:hover { color:var(--accent); text-decoration:underline; }
+  .stages .card .tag { align-self:flex-start; }
+  .ledger-title { margin:4px 0 6px; font-size:20px; }
+  .ledger-note { margin:0 0 14px; font-size:14px; color:var(--muted); }
 </style>
 </head>
 <body>
@@ -115,80 +121,88 @@
 <nav><div class="wrap"><a href="./" aria-current="page">首页</a><a href="workflow/">工作流总览</a><a href="vps/">免费 VPS</a><a href="wool/">羊毛 VPS</a><a href="cheap/">低价 VPS</a><a href="hosting/">免费虚拟主机</a><a href="deploy/">部署与托管</a><a href="database/">免费数据库</a><a href="domain/">域名·DNS·CDN·SSL</a><a href="email/">邮件通知</a><a href="monitoring/">监控分析</a><a href="payments/">支付变现</a><a href="auth/">认证</a><a href="storage/">对象存储</a><a href="code/">代码托管</a><a href="offers/">额度详情</a><a href="compare/">对比</a><a href="guides/">指南</a><a href="faq/">常见问题</a><a href="en/">English</a></div></nav>
 <main>
   <div class="wrap">
-    <div class="vps-banner">
-      <h2>新增：免费 VPS 板块</h2>
-      <p>9 条经厂商官方页核实：2 个永久免费（甲骨文、Google Cloud）、5 个试用额度、1 个学生专属、1 个免费沙箱（InstaBox，非传统 VPS）。绑卡、区域、回收与到期规则逐条写明，试用绝不写成永久。</p>
-      <p><a href="vps/">查看免费 VPS →</a></p>
-    </div>
-    <div class="vps-banner">
-      <h2>新增：羊毛 VPS 板块</h2>
-      <p>6 条羊毛：4 个试用额度（Vultr、Hetzner、Akamai、DigitalOcean）、1 个任务续费主机（三丰云，仅规格已核实）、1 个沙箱额度（Simular Box，条款说法冲突）。有效期、绑卡、争议与风险逐条写明。</p>
-      <p><a href="wool/">查看羊毛 VPS →</a></p>
-    </div>
-    <div class="vps-banner">
-      <h2>新增：低价 VPS 板块</h2>
-      <p>3 家常态价：RackNerd（$21.99/年起，终身同价续费）、HostEONS（$21/年起，续费价未注明）、DigitalOcean（$4/月起，按月封顶）。均为常态价，续费条件写明；限时促销见羊毛区。</p>
-      <p><a href="cheap/">查看低价 VPS →</a></p>
-    </div>
-    <div class="vps-banner">
-      <h2>新增：免费虚拟主机板块</h2>
-      <p>10 家免费虚拟主机（PHP + MySQL，可装 WordPress）：空间、流量、数据库、PHP 版本、SSL、闲置与删站政策逐条列出；2 家部分信息未确认，另有 000webhost 已停服档案。</p>
-      <p><a href="hosting/">查看免费虚拟主机 →</a></p>
-    </div>
-    <div class="vps-banner">
-      <h2>新增：部署与托管板块</h2>
-      <p>10 条：7 个免费层（Vercel、Netlify、Cloudflare Workers、Cloudflare Pages、Render、Northflank、EdgeOne）、1 个 30 天试用（Railway）、2 个没有免费层（Fly.io、Koyeb）。超额行为、休眠与商用限制逐条写明。</p>
-      <p><a href="deploy/">查看部署与托管 →</a></p>
-    </div>
-    <div class="vps-banner">
-      <h2>新增：免费数据库板块</h2>
-      <p>6 个免费数据库：Supabase、Neon、Turso、Upstash Redis、MongoDB Atlas、Firebase。容量、暂停与超限规则逐条写明。</p>
-      <p><a href="database/">查看免费数据库 →</a></p>
-    </div>
-    <div class="vps-banner">
-      <h2>新增：域名 / DNS / CDN / SSL 板块</h2>
-      <p>Cloudflare 免费计划、Let's Encrypt、is-a.dev（部分信息未确认）与 3 家低价注册商（Porkbun、Namecheap、Spaceship），首年价与续费价分开列出。</p>
-      <p><a href="domain/">查看域名 / DNS / CDN / SSL →</a></p>
-    </div>
-    <div class="vps-banner">
-      <h2>新增：邮件通知板块</h2>
-      <p>3 个免费层（Resend、Brevo、Postmark）、1 个官网未明示永久（Mailgun）、1 个 60 天试用（SendGrid）。日限与月限、超额规则逐条写明。</p>
-      <p><a href="email/">查看邮件通知 →</a></p>
-    </div>
-    <div class="vps-banner">
-      <h2>新增：监控分析板块</h2>
-      <p>6 个免费层（UptimeRobot、Sentry、Umami、PostHog、Clarity、Google Analytics 4）与 1 个 30 天试用（Plausible）。监控器数量、事件额度与保留期限逐条写明。</p>
-      <p><a href="monitoring/">查看监控分析 →</a></p>
-    </div>
-    <div class="vps-banner">
-      <h2>新增：支付变现板块</h2>
-      <p>1 个支付处理（Stripe）与 3 个 Merchant of Record（Paddle、Lemon Squeezy、Polar）。费率、税务代管与大陆个人注册限制逐条写明。</p>
-      <p><a href="payments/">查看支付变现 →</a></p>
-    </div>
-    <div class="vps-banner">
-      <h2>新增：认证板块</h2>
-      <p>2 个独立认证免费档（Clerk、Auth0）与 2 个数据库附带认证（Supabase Auth、Firebase Auth）。MRU/MAU 计数与超限规则逐条写明。</p>
-      <p><a href="auth/">查看认证 →</a></p>
-    </div>
-    <div class="vps-banner">
-      <h2>新增：对象存储板块</h2>
-      <p>1 个免费层（Cloudflare R2）、1 个按量付费（Backblaze B2）与 2 个数据库附带存储说明。出站流量规则逐条写明。</p>
-      <p><a href="storage/">查看对象存储 →</a></p>
-    </div>
-    <div class="vps-banner">
-      <h2>新增：代码托管板块</h2>
-      <p>GitHub Free 与 GitLab Free：仓库、CI 分钟数与存储额度逐条写明。</p>
-      <p><a href="code/">查看代码托管 →</a></p>
-    </div>
-    <div class="vps-banner">
-      <h2>新增：工作流总览</h2>
-      <p>14 个环节的阶段地图：从立项验证、代码托管、模型 API、数据库、认证，到部署托管、服务器、域名、对象存储、邮件、监控分析、周边能力、支付变现、上线运营；附从零上线检查清单与 3 套 $0 组合。</p>
-      <p><a href="workflow/">查看工作流总览 →</a></p>
-    </div>
-    <div class="controls">
+    <section class="stages" aria-label="全部环节">
+      <h2>全部环节</h2>
+      <p class="intro">按个人开发者从立项到上线的顺序排列，每个环节列出免费、低价与试用额度的选择。完整阶段地图、从零上线检查清单与 3 套 $0 组合见<a href="workflow/">工作流总览</a>。</p>
+      <div class="grid">
+        <div class="card">
+          <span class="tag">环节 1</span>
+          <h2><a href="guides/idea-validation/">立项验证</a></h2>
+          <p>着陆页与等候名单、人工代办、访谈三种验证方法，附判断信号与常见误区。</p>
+        </div>
+        <div class="card">
+          <span class="tag">环节 2</span>
+          <h2><a href="code/">代码托管</a></h2>
+          <p>GitHub Free 与 GitLab Free：仓库、CI 分钟数与存储额度逐条写明。</p>
+        </div>
+        <div class="card">
+          <span class="tag">环节 3</span>
+          <h2><a href="#ledger">模型 / API 额度</a></h2>
+          <p>43 条额度：大模型、编程、搜索、算力、浏览器、数据、语音，在本页下方筛选领取。</p>
+        </div>
+        <div class="card">
+          <span class="tag">环节 4</span>
+          <h2><a href="database/">数据库</a></h2>
+          <p>6 个免费数据库：Supabase、Neon、Turso、Upstash Redis、MongoDB Atlas、Firebase。容量、暂停与超限规则逐条写明。</p>
+        </div>
+        <div class="card">
+          <span class="tag">环节 5</span>
+          <h2><a href="auth/">认证</a></h2>
+          <p>2 个独立认证免费档（Clerk、Auth0）与 2 个数据库附带认证（Supabase Auth、Firebase Auth）。MRU/MAU 计数与超限规则逐条写明。</p>
+        </div>
+        <div class="card">
+          <span class="tag">环节 6</span>
+          <h2><a href="deploy/">部署与托管</a></h2>
+          <p>10 条：7 个免费层（Vercel、Netlify、Cloudflare Workers、Cloudflare Pages、Render、Northflank、EdgeOne）、1 个 30 天试用（Railway）、2 个没有免费层（Fly.io、Koyeb）。超额行为、休眠与商用限制逐条写明。PHP 虚拟主机路线见<a href="hosting/">免费虚拟主机</a>。</p>
+        </div>
+        <div class="card">
+          <span class="tag">环节 7</span>
+          <h2><a href="vps/">服务器 / VPS</a></h2>
+          <p>10 条：2 个永久免费（甲骨文、Google Cloud）、5 个试用额度、1 个学生专属、1 个免费沙箱（InstaBox，非传统 VPS）、1 个需手动续期（EUserv，IPv6-only 容器服务器）。绑卡、区域、回收与到期规则逐条写明。<a href="wool/">羊毛 VPS</a>与<a href="cheap/">低价 VPS</a>另有列表。</p>
+        </div>
+        <div class="card">
+          <span class="tag">环节 8</span>
+          <h2><a href="domain/">域名 / DNS / CDN / SSL</a></h2>
+          <p>Cloudflare 免费计划、Let's Encrypt、is-a-dev（部分信息未确认）与 3 家低价注册商（Porkbun、Namecheap、Spaceship），首年价与续费价分开列出。</p>
+        </div>
+        <div class="card">
+          <span class="tag">环节 9</span>
+          <h2><a href="storage/">对象存储</a></h2>
+          <p>1 个免费层（Cloudflare R2）、1 个按量付费（Backblaze B2）与 2 个数据库附带存储说明。出站流量规则逐条写明。</p>
+        </div>
+        <div class="card">
+          <span class="tag">环节 10</span>
+          <h2><a href="email/">邮件通知</a></h2>
+          <p>3 个免费层（Resend、Brevo、Postmark）、1 个官网未明示永久（Mailgun）、1 个 60 天试用（SendGrid）。日限与月限、超额规则逐条写明。</p>
+        </div>
+        <div class="card">
+          <span class="tag">环节 11</span>
+          <h2><a href="monitoring/">监控分析</a></h2>
+          <p>6 个免费层（UptimeRobot、Sentry、Umami、PostHog、Clarity、Google Analytics 4）与 1 个 30 天试用（Plausible）。监控器数量、事件额度与保留期限逐条写明。</p>
+        </div>
+        <div class="card">
+          <span class="tag">环节 12</span>
+          <h2><a href="guides/peripheral-capabilities/">周边能力</a></h2>
+          <p>定时任务、队列、搜索与缓存的概念与安排：主栈自带优先，附各环节已有选项的去向。</p>
+        </div>
+        <div class="card">
+          <span class="tag">环节 13</span>
+          <h2><a href="payments/">支付变现</a></h2>
+          <p>1 个支付处理（Stripe）与 3 个 Merchant of Record（Paddle、Lemon Squeezy、Polar）。费率、税务代管与大陆个人注册限制逐条写明。</p>
+        </div>
+        <div class="card">
+          <span class="tag">环节 14</span>
+          <h2><a href="guides/launch-operations/">上线运营</a></h2>
+          <p>上线前检查（监控、状态页、备份、账单、邮件、域名证书、定时任务）与上线后日常。</p>
+        </div>
+      </div>
+    </section>
+    <h2 class="ledger-title">免费额度领取台账</h2>
+    <p class="ledger-note">下面的搜索与筛选只针对这 43 条额度；服务器、域名等其他环节见上方「全部环节」。</p>
+    <div class="controls" id="ledger">
       <input type="search" id="q" placeholder="搜索标题或厂商…" aria-label="搜索">
-      <select id="cat" aria-label="分类">
-        <option value="">全部分类</option>
+      <select id="cat" aria-label="额度分类">
+        <option value="">全部额度分类</option>
         <option value="llm">大模型</option>
         <option value="coding">编程</option>
         <option value="search">搜索</option>
