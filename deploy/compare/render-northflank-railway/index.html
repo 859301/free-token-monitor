@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Render vs Northflank vs Railway：休眠、常开与试用对照</title>
+<meta name="description" content="Render、Northflank、Railway 逐项对比：15 分钟 spin down、常开不休眠、30 天试用，资源上限、绑卡、生产用途说明。核实于 2026-11-13。">
+<link rel="canonical" href="https://tokens.yangtokent.com/deploy/compare/render-northflank-railway/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Render vs Northflank vs Railway：休眠、常开与试用对照",
+  "description": "Render、Northflank、Railway 逐项对比：15 分钟 spin down、常开不休眠、30 天试用，资源上限、绑卡、生产用途说明。核实于 2026-11-13。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/deploy/compare/render-northflank-railway/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "哪个不会休眠？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Northflank Sandbox：官方原话为“Always on, no sleeping”。Render 15 分钟无流量 spin down。Railway 的休眠政策在官网已读页面中未述。核实于 2026-11-13。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Railway 试用后还能用吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "试用后 $1/月起，缩减为 1 个项目/3 个服务、0 个自定义域名，每服务至多 1 vCPU / 0.5 GB RAM。核实于 2026-11-13。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">部署与托管</a><a href="../../offers/">部署详情</a><a href="../../compare/" aria-current="page">部署对比</a><a href="../../guides/">部署指南</a><a href="../../faq/">部署问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">部署与托管</a> / <a href="../">部署对比</a> / Render vs Northflank vs Railway</p>
+<h1>Render vs Northflank vs Railway</h1>
+<p class="meta">核实于 2026-11-13 · 本页更新于 2026-11-13</p>
+<div class="answer"><p>休眠是核心差异：Render 15 分钟无流量 spin down、唤醒约 1 分钟；Northflank 常开不休眠；Railway 的休眠政策未述。绑卡也不同：Render $1 验证扣款、Northflank 必须绑卡、Railway 可无卡试用。Railway 是 30 天试用，试用后缩减。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#table">对比表</a></li><li><a href="#sleep">休眠是核心差异</a></li><li><a href="#card">绑卡三态</a></li><li><a href="#production">生产用途说明</a></li><li><a href="#how">怎么选</a></li><li><a href="#faq">常见问题</a></li></ul></div>
+<h2 id="table">对比表</h2><div class="tablewrap"><table><thead><tr><th>项目</th><th>Render 免费层</th><th>Northflank Sandbox</th><th>Railway 试用</th></tr></thead><tbody><tr><th>形态</th><td>免费层</td><td>免费层（Sandbox）</td><td>30 天试用，不是永久免费</td></tr><tr><th>规格</th><td>0.1 CPU / 512 MB RAM</td><td>2 服务、2 任务、1 数据库；1 个 BYOC 集群（12 vCPU / 48 GB）</td><td>试用期每服务至多 2 vCPU / 1 GB；之后 1 vCPU / 0.5 GB；0.5 GB volume</td></tr><tr><th>休眠</th><td>15 分钟无流量 spin down；唤醒约 1 分钟</td><td>常开不休眠（Always on, no sleeping）</td><td>官网已读页面未述</td></tr><tr><th>资源上限</th><td>750 实例小时/工作区/月，用完暂停</td><td>至多 $20/月资源</td><td>$5 credits（一次性、30 天过期）</td></tr><tr><th>数据库</th><td>免费 Postgres：每工作区 1 个、1 GB、30 天到期；Key Value 每工作区 1 个、仅内存</td><td>1 个数据库</td><td>以官方页面为准</td></tr><tr><th>绑卡</th><td>$1 验证扣款（退还）</td><td>必须添加支付方式</td><td>可无卡试用</td></tr><tr><th>生产用途</th><td>官方明确不要用于生产</td><td>Sandbox 不宜用于生产应用</td><td>官网已读页面未述</td></tr><tr><th>试用后</th><td>不适用</td><td>不适用</td><td>$1/月起；1 项目/3 服务、0 自定义域名</td></tr><tr><th>核实日期</th><td>2026-11-13</td><td>2026-11-13</td><td>2026-11-13</td></tr></tbody></table></div><h2 id="sleep">休眠是核心差异</h2><p>Render 免费实例 15 分钟无入站流量后 spin down，唤醒约 1 分钟；Northflank Sandbox 常开不休眠。Railway 的休眠政策在官网已读页面中未述。</p><h2 id="card">绑卡三态</h2><p>Render：$1 绑卡验证扣款，会退还。Northflank：计费文档写明所有用户必须添加支付方式。Railway：FAQ 写明可无卡试用。</p><h2 id="production">生产用途说明</h2><p>Render 官方明确免费实例不要用于生产；Northflank 官方写明 Sandbox 不宜用于生产应用。Railway 的生产用途说明在官网已读页面中未述。</p><h2 id="how">怎么选</h2><p>需要常开不休眠：Northflank Sandbox，但必须绑卡、每月至多 $20 资源。接受休眠：Render 免费层，但免费 Postgres 30 天到期、750 小时用完暂停。需要先试用：Railway 可无卡试用 30 天，但试用后缩减为 1 项目/3 服务、0 自定义域名。</p>
+<h2 id="faq">常见问题</h2><details><summary>哪个不会休眠？</summary><p>Northflank Sandbox：官方原话为“Always on, no sleeping”。Render 15 分钟无流量 spin down。Railway 的休眠政策在官网已读页面中未述。核实于 2026-11-13。</p></details><details><summary>Railway 试用后还能用吗？</summary><p>试用后 $1/月起，缩减为 1 个项目/3 个服务、0 个自定义域名，每服务至多 1 vCPU / 0.5 GB RAM。核实于 2026-11-13。</p></details>
+<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，领取前请以厂商官方页为准。</div>
+<div class="related"><h2>其他对比</h2><ul><li><a href="../vercel-netlify-pages/">Vercel vs Netlify vs Cloudflare Pages</a></li><li><a href="../all-deploy-table/">部署与托管总表</a></li><li><a href="../../offers/render-free/">Render 详情页</a></li><li><a href="../../offers/northflank-sandbox/">Northflank 详情页</a></li><li><a href="../../offers/railway-trial/">Railway 详情页</a></li><li><a href="../../">返回部署与托管列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">部署与托管</a> · <a href="../../offers/">部署详情</a> · <a href="../../compare/">部署对比</a> · <a href="../../guides/">部署指南</a> · <a href="../../faq/">部署问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
