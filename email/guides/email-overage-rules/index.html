@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>邮件超额规则：Postmark 无超额、Resend 付费计划按量、SendGrid 超额可能收费</title>
+<meta name="description" content="邮件超额规则对照：Postmark 免费计划不允许超额，Resend 的 pay-as-you-go 仅限付费计划，SendGrid 超额可能收费，Mailgun 与 Brevo 以官方页面为准。核实于 2026-11-13。">
+<link rel="canonical" href="https://tokens.yangtokent.com/email/guides/email-overage-rules/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "邮件超额规则：Postmark 无超额、Resend 付费计划按量、SendGrid 超额可能收费",
+  "description": "邮件超额规则对照：Postmark 免费计划不允许超额，Resend 的 pay-as-you-go 仅限付费计划，SendGrid 超额可能收费，Mailgun 与 Brevo 以官方页面为准。核实于 2026-11-13。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/email/guides/email-overage-rules/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">邮件通知</a><a href="../../offers/">邮件详情</a><a href="../../compare/">邮件对比</a><a href="../../guides/" aria-current="page">邮件指南</a><a href="../../faq/">邮件问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">邮件通知</a> / <a href="../">邮件指南</a> / 邮件超额规则</p>
+<h1>邮件超额规则</h1>
+<p class="meta">核实于 2026-11-13 · 本页更新于 2026-11-13</p>
+<div class="answer"><p>超额后的结果分三种：不允许超额（Postmark）、通知并可选择升级（Resend，未开启 pay-as-you-go 时）、超额可能收费（SendGrid）。Mailgun 与 Brevo 免费计划的超额行为在官网已读页面中未述，以官方页面为准。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#table">超额行为对照表</a></li><li><a href="#postmark">不允许超额：Postmark</a></li><li><a href="#resend">通知并可选择升级：Resend</a></li><li><a href="#sendgrid">超额可能收费：SendGrid</a></li><li><a href="#unconfirmed">未述的两家</a></li><li><a href="#paid">付费计划的超量单价</a></li></ul></div>
+<h2 id="table">超额行为对照表</h2><div class="tablewrap"><table><thead><tr><th>服务</th><th>上限</th><th>超额后（官网写明）</th></tr></thead><tbody><tr><td><a href="../../offers/postmark/">Postmark</a></td><td>100 封/月</td><td>“No overages allowed in this plan”（不允许超额）</td></tr><tr><td><a href="../../offers/resend/">Resend</a></td><td>3,000 封/月、100 封/天</td><td>Pay-as-you-go 仅限付费计划；未开启时超限会收到通知并可选择升级</td></tr><tr><td><a href="../../offers/sendgrid-trial/">SendGrid</a></td><td>试用 100 封/天</td><td>“overage charges may apply”（超额可能收费，细则见计划详情）</td></tr><tr><td><a href="../../offers/mailgun/">Mailgun</a></td><td>100 封/天</td><td>以官方页面为准</td></tr><tr><td><a href="../../offers/brevo/">Brevo</a></td><td>300 封/天</td><td>以官方页面为准</td></tr></tbody></table></div><h2 id="postmark">不允许超额：Postmark</h2><p>Postmark 定价页写明免费 Developer 计划 “No overages allowed in this plan”。达到 100 封/月上限后，免费计划内没有超额发送的选项；继续发送要升级到 10,000 封起步的付费计划，100 封/月与 10,000 封/月之间没有中间档位。</p><h2 id="resend">通知并可选择升级：Resend</h2><p>Resend 的 pay-as-you-go 仅限付费计划。未开启 pay-as-you-go 时，超限会收到通知并可选择升级（FAQ 原文）。付费计划的超量单价为 $0.90/1,000 封。</p><h2 id="sendgrid">超额可能收费：SendGrid</h2><p>SendGrid 定价页写明 “overage charges may apply”（超额可能收费，细则见计划详情）。官方定价 PDF 与定价网页的超额费率数值不同，并列呈现见<a href="../../offers/sendgrid-trial/">SendGrid 试用详情页</a>：PDF 中 Essentials 为 $0.00133/封与 $0.00088/封、Pro 五档为 $0.00110 至 $0.00047/封；网页显示 Essentials $0.00075/封、Pro $0.000575/封。</p><h2 id="unconfirmed">未述的两家</h2><p>Mailgun 与 Brevo 免费计划的超额行为在官网已读页面中未述，以官方页面为准。Brevo 的重置规则写明每日重置、不结转；Mailgun 的重置与结转规则在官网已读页面中未述。</p><h2 id="paid">付费计划的超量单价</h2><div class="tablewrap"><table><thead><tr><th>服务</th><th>付费计划超量单价（官网写明）</th></tr></thead><tbody><tr><td>Resend</td><td>$0.90/1,000 封</td></tr><tr><td>Postmark</td><td>Basic $1.80/1,000 封；Pro $1.30/1,000 封；Platform $1.20/1,000 封</td></tr><tr><td>SendGrid</td><td>PDF 与网页数值不同，并列呈现见详情页</td></tr><tr><td>Mailgun</td><td>以官方页面为准</td></tr><tr><td>Brevo</td><td>以官方页面为准</td></tr></tbody></table></div>
+<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，领取前请以厂商官方页为准。</div>
+<div class="related"><h2>相关页面</h2><ul><li><a href="../../compare/all-email-table/">邮件总表</a></li><li><a href="../choosing-transactional-email/">事务邮件怎么选</a></li><li><a href="../../offers/postmark/">Postmark 免费 Developer</a></li><li><a href="../../offers/resend/">Resend 免费层</a></li><li><a href="../../faq/">邮件常见问题</a></li><li><a href="../../">返回邮件通知列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">邮件通知</a> · <a href="../../offers/">邮件详情</a> · <a href="../../compare/">邮件对比</a> · <a href="../../guides/">邮件指南</a> · <a href="../../faq/">邮件问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
