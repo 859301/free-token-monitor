@@ -97,7 +97,7 @@ footer a { color:var(--accent); }
       "name": "甲骨文免费 VPS 现在是 2 核 12G 还是 4 核 24G？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Always Free 租户是 2 OCPU / 12 GB：官方文档（Updated 2026-06-12）写明每月前 1,500 OCPU 小时 + 9,000 GB 小时，相当于 2 OCPU 与 12 GB 内存。4 OCPU / 24 GB 是旧额度，已不适用于 Always Free 租户；PAYG 账户的 4 核 24G 免费说法存在争议，官方文档与用户账单说法冲突，本站不将其作为承诺。核实于 2026-11-12。"
+        "text": "Always Free 租户是 2 OCPU / 12 GB：官方文档（Updated 2026-06-12）写明每月前 1,500 OCPU 小时 + 9,000 GB 小时，相当于 2 OCPU 与 12 GB 内存。4 OCPU / 24 GB 是旧额度，已不适用于 Always Free 租户；PAYG 账户的 4 核 24G 免费说法存在争议，官方文档与用户账单说法冲突，不可作为承诺。核实于 2026-11-12。"
       }
     },
     {
@@ -121,7 +121,7 @@ footer a { color:var(--accent); }
 </script>
 </head>
 <body>
-<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：只收厂商官方核对过的免费额度。领取前请以厂商官方页为准。</p></div></header>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：额度信息来自厂商官方页。领取前请以厂商官方页为准。</p></div></header>
 <nav><div class="wrap"><a href="../../../">首页</a><a href="../../">免费 VPS</a><a href="../" aria-current="page">VPS 详情</a><a href="../../compare/">VPS 对比</a><a href="../../guides/">VPS 指南</a><a href="../../faq/">VPS 问答</a></div></nav>
 <main><div class="wrap">
 <article>
@@ -137,7 +137,7 @@ footer a { color:var(--accent); }
 <p>按官方文档（Updated 2026-06-12），所有租户的 Always Free 计算资源包括：Ampere A1 (Arm) 机型每月前 1,500 OCPU 小时与 9,000 GB 小时——对 Always Free 租户而言相当于 2 OCPU 与 12 GB 内存；最多 2 台 VM.Standard.E2.1.Micro (AMD) 实例；200 GB 块存储总量；每月 10 TB 出站流量。每个实例的最小启动卷为 47 GB。另有 US$300 试用额度，与 Always Free 分开计算，见下文。</p>
 <h2 id="change">版本变化：2026 年 6 月改配（旧教程已过时）</h2>
 <p>2026 年 6 月 12 日更新的官方文档把 Always Free 的 A1 额度写为每月 1,500 OCPU 小时 + 9,000 GB 小时（相当于 2 OCPU / 12 GB）。此前许多教程所写的 4 OCPU / 24 GB 已不适用于 Always Free 租户；社区报告称新额度自 2026 年 8 月 18 日起执行（社区说法，非官方公告）。如果你看到的教程还在写 4 核 24G，那篇教程过时了。</p>
-<div class="note"><b>有争议的说法：</b>网上有「升级到 PAYG（按量付费）后 4 OCPU / 24 GB 仍免费」的说法，并附有用户零账单截图；但官方文档写明 1,500 / 9,000 小时适用于所有租户。两者冲突，本站将其列为「有争议」，不作为承诺写出；最终以你的账单为准。详见 <a href="../../faq/">VPS 问答 Q15</a>。</div>
+<div class="note"><b>有争议的说法：</b>网上有「升级到 PAYG（按量付费）后 4 OCPU / 24 GB 仍免费」的说法，并附有用户零账单截图；但官方文档写明 1,500 / 9,000 小时适用于所有租户。两者冲突，属「有争议」说法，不可作为承诺；最终以你的账单为准。详见 <a href="../../faq/">VPS 问答 Q15</a>。</div>
 <h2 id="requirements">需要什么条件</h2>
 <p>注册需提供信用卡或借记卡用于身份验证；Oracle 会定期检查卡的有效性，产生临时授权预扣，通常 3–5 天内由银行解除，不会实际扣费。不接受带 PIN 的借记卡、虚拟卡、一次性卡、预付卡。每人限一个免费账户；联系与账单信息必须准确、有效并经本人同意使用。</p>
 <h2 id="regions">区域与容量</h2>
@@ -150,11 +150,11 @@ footer a { color:var(--accent); }
 <p>在 Oracle Cloud Free Tier 官方页注册 → 提供信用卡/借记卡完成身份验证 → 选定主区域 → 在主区域创建 A1 Flex 实例（2 OCPU / 12 GB 以内）或 E2.1.Micro 实例 → 配置 SSH 密钥与安全规则后使用。</p>
 <p><a class="btn" href="https://www.oracle.com/cloud/free/" target="_blank" rel="noopener noreferrer">去厂商官方页领取</a></p>
 <h2 id="risks">注意事项</h2><ul><li>闲置回收：7 天内 CPU 95 分位利用率低于 20%、网络利用率低于 20%、内存利用率低于 20%（仅 A1 机型）可能被回收</li><li>Out of host capacity：主区域 Always Free 机型容量不足时需换可用区或等待，官方 FAQ 称可能需要数日</li><li>账户闲置 30 天以上可能被视为弃用并暂停或终止</li><li>超出 Always Free 限额的 A1 实例在试用结束后会被停用，30 天后删除（除非升级为付费账户）</li><li>PAYG 账户 4 OCPU / 24 GB 免费的说法存在争议：官方文档写明 1,500/9,000 小时适用于所有租户，不得作为承诺</li><li>无 SLA；仅使用 Always Free 资源的客户不能获得 Oracle 技术支持</li></ul>
-<h2 id="faq">常见问题</h2><details><summary>甲骨文免费 VPS 现在是 2 核 12G 还是 4 核 24G？</summary><p>Always Free 租户是 2 OCPU / 12 GB：官方文档（Updated 2026-06-12）写明每月前 1,500 OCPU 小时 + 9,000 GB 小时，相当于 2 OCPU 与 12 GB 内存。4 OCPU / 24 GB 是旧额度，已不适用于 Always Free 租户；PAYG 账户的 4 核 24G 免费说法存在争议，官方文档与用户账单说法冲突，本站不将其作为承诺。核实于 2026-11-12。</p></details><details><summary>甲骨文注册需要绑卡吗？哪些卡不行？</summary><p>需要。注册需提供信用卡或借记卡用于身份验证，会有临时授权预扣（通常 3–5 天解除）。官方 FAQ 明确：不接受带 PIN 的借记卡、虚拟卡、一次性卡、预付卡。核实于 2026-11-12，领取前请以厂商官方页为准。</p></details><details><summary>甲骨文免费实例会被回收吗？</summary><p>会。按官方文档，闲置的 Always Free 实例可能被回收：7 天内 CPU 95 分位利用率低于 20%、网络利用率低于 20%、内存利用率低于 20%（仅 A1 机型）即判为闲置。账户闲置 30 天以上也可能被视为弃用。不要用刷负载脚本冒充真实使用，详见防回收指南。核实于 2026-11-12。</p></details>
-<div class="note"><b>免责：</b>本页信息照录本站核对时厂商官方页的内容（核实于 2026-11-12），额度随时可能调整或结束；领取前请以厂商官方页为准。</div>
+<h2 id="faq">常见问题</h2><details><summary>甲骨文免费 VPS 现在是 2 核 12G 还是 4 核 24G？</summary><p>Always Free 租户是 2 OCPU / 12 GB：官方文档（Updated 2026-06-12）写明每月前 1,500 OCPU 小时 + 9,000 GB 小时，相当于 2 OCPU 与 12 GB 内存。4 OCPU / 24 GB 是旧额度，已不适用于 Always Free 租户；PAYG 账户的 4 核 24G 免费说法存在争议，官方文档与用户账单说法冲突，不可作为承诺。核实于 2026-11-12。</p></details><details><summary>甲骨文注册需要绑卡吗？哪些卡不行？</summary><p>需要。注册需提供信用卡或借记卡用于身份验证，会有临时授权预扣（通常 3–5 天解除）。官方 FAQ 明确：不接受带 PIN 的借记卡、虚拟卡、一次性卡、预付卡。核实于 2026-11-12，领取前请以厂商官方页为准。</p></details><details><summary>甲骨文免费实例会被回收吗？</summary><p>会。按官方文档，闲置的 Always Free 实例可能被回收：7 天内 CPU 95 分位利用率低于 20%、网络利用率低于 20%、内存利用率低于 20%（仅 A1 机型）即判为闲置。账户闲置 30 天以上也可能被视为弃用。不要用刷负载脚本冒充真实使用，详见防回收指南。核实于 2026-11-12。</p></details>
+<div class="note"><b>免责：</b>本页信息来自厂商官方页（核实于 2026-11-12），额度随时可能调整或结束；领取前请以厂商官方页为准。</div>
 <div class="related"><h2>相关页面</h2><ul><li><a href="../gcp-free-tier/">Google Cloud 免费层：e2-micro 永久免费 + $300 试用</a></li><li><a href="../../compare/oracle-vs-gcp/">Oracle vs GCP：免费 VPS 二选一</a></li><li><a href="../../compare/best-free-vps/">最佳免费 VPS 对比：永久免费 vs 试用额度</a></li><li><a href="../../guides/oracle-signup/">甲骨文注册与开机全流程</a></li><li><a href="../../guides/anti-reclaim/">甲骨文防回收与备份</a></li><li><a href="../../guides/out-of-capacity/">Out of host capacity 怎么办</a></li><li><a href="../../faq/">VPS 常见问题</a></li><li><a href="../../">返回免费 VPS 列表</a></li></ul></div>
 </article>
 </div></main>
-<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">免费 VPS</a> · <a href="../">VPS 详情</a> · <a href="../../compare/">VPS 对比</a> · <a href="../../guides/">VPS 指南</a> · <a href="../../faq/">VPS 问答</a></p><p>数据仅供参考，以厂商官方页为准。VPS 板块各条目均经厂商官方页核对，核实日期见各页；额度随时可能调整或结束，领取前请看清对方条款。本站不含邀请链接、API 中转站、二手积分、共享账号等内容。</p></div></footer>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">免费 VPS</a> · <a href="../">VPS 详情</a> · <a href="../../compare/">VPS 对比</a> · <a href="../../guides/">VPS 指南</a> · <a href="../../faq/">VPS 问答</a></p><p>数据仅供参考，以厂商官方页为准。VPS 板块各条目信息来自厂商官方页，核实日期见各页；额度随时可能调整或结束，领取前请看清对方条款。无邀请链接、无 API 中转站、无二手积分、无共享账号内容。</p></div></footer>
 </body>
 </html>
