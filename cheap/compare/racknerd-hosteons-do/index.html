@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RackNerd vs HostEONS vs DigitalOcean：低价三家对比</title>
+<meta name="description" content="低价区 3 家横评：RackNerd 年付同价续费、HostEONS 年付但续费未知、DigitalOcean 按月封顶。价格、续费、CPU、机房、付款方式逐项比。">
+<link rel="canonical" href="https://tokens.yangtokent.com/cheap/compare/racknerd-hosteons-do/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "RackNerd vs HostEONS vs DigitalOcean：低价三家对比",
+  "description": "低价区 3 家横评：RackNerd 年付同价续费、HostEONS 年付但续费未知、DigitalOcean 按月封顶。价格、续费、CPU、机房、付款方式逐项比。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/cheap/compare/racknerd-hosteons-do/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "长期持有选谁？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "长期持有选 RackNerd（终身同价）；HostEONS 续费未知，不适合长期规划。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "短期试用选谁？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "短期试用选 DigitalOcean（按秒计费）或 HostEONS 月付档。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：只收厂商官方核对过的免费额度。领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">低价 VPS</a><a href="../../offers/">低价详情</a><a href="../" aria-current="page">低价对比</a><a href="../../guides/">低价指南</a><a href="../../faq/">低价问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">低价 VPS</a> / <a href="../">低价对比</a> / 三家对比</p>
+<h1>RackNerd vs HostEONS vs DigitalOcean：低价三家对比</h1>
+<p class="meta">本页更新于 2026-11-13 · 数据照录本站核对的厂商官方页内容</p>
+<div class="answer"><p>三家各有取舍：RackNerd 续费最确定（官方承诺终身同价），适合长期持有；HostEONS 入门最便宜（$21/年），但续费价未知，适合先短期试用；DigitalOcean 最灵活（按秒计费、按月封顶），适合用量不固定、随时开关机的场景。没有一家全胜，按你的持有时间与用量选。</p></div>
+<p>下表照录三家官网页内容；「未注明」表示页面没有写。入门价不能直接比——要结合续费确定性与计费方式一起看。</p>
+<div class="tablewrap"><table><thead><tr><th>维度</th><th>RackNerd</th><th>HostEONS</th><th>DigitalOcean</th></tr></thead><tbody><tr><td>入门价</td><td>$21.99/年（1 GB）</td><td>$21/年（1 GB）/ $24/年（512 MB Ryzen）</td><td>$4.00/月（512MiB，封顶）</td></tr><tr><td>续费</td><td>终身同价（官方 FAQ）</td><td>未注明</td><td>目录价，按月封顶</td></tr><tr><td>计费</td><td>年付</td><td>年付（入门）/ 月付</td><td>按秒计费，月封顶</td></tr><tr><td>CPU</td><td>KVM（页面称 dedicated resources，厂商说法）</td><td>公平共享（Fair Share）</td><td>共享 CPU（Basic，突发负载）</td></tr><tr><td>机房</td><td>多机房（下单时选）</td><td>6 个美国城市</td><td>区域未见于定价页</td></tr><tr><td>IPv4 / IPv6</td><td>1 个 IPv4；IPv6 目录页写最多 100 个（需申请）</td><td>1 个 IPv4；免费 IPv6</td><td>Bundled Plans 含公网 IPv4</td></tr><tr><td>付款</td><td>页面未说明</td><td>支付宝、银联、PayPal、比特币、卡、电汇（页面图标）</td><td>页面未说明</td></tr><tr><td>适合</td><td>长期持有</td><td>短期试用、图便宜</td><td>用量不固定、随时开关</td></tr></tbody></table></div>
+<h2 id="renewal">续费确定性是核心差异</h2>
+<p>三家最大的区别不在首年价，而在第二年：RackNerd 官方 FAQ 白纸黑字写终身同价；DigitalOcean 是目录价、没有首期折扣，月封顶就是续费价；HostEONS 续费价页面没写，第二年多少钱完全未知。长期持有优先选续费确定的；短期试用可以选便宜的，但要把续费未知算进风险。</p>
+<h2 id="cpu">CPU：三种说法</h2>
+<p>RackNerd specials 页称 Full KVM for dedicated resources（厂商说法，未独立验证）；HostEONS 套餐表明确写 Fair Share（公平共享）；DigitalOcean 定价页明确写 Basic 是共享 CPU、适合突发负载。便宜机器的 CPU 预期要放低：持续满载的场景，三家都不适合。验机方法见<a href="../../guides/overselling-checks/">超售检查指南</a>。</p>
+<h2 id="payment">付款便利性</h2>
+<p>HostEONS 是三家里唯一在页面展示支付宝与银联图标的，对没有国际信用卡的用户最友好。RackNerd 与 DigitalOcean 的套餐页/定价页未说明付款方式，以下单时为准。</p>
+<h2 id="faq">常见问题</h2>
+<details><summary>长期持有选谁？</summary><p>RackNerd：终身同价续费写在官方 FAQ 里，3 年总价可算（$21.99×3=$65.97）。DigitalOcean 次之（目录价封顶）。HostEONS 续费未知，不适合长期持有规划。</p></details>
+<details><summary>短期试用选谁？</summary><p>DigitalOcean（按秒计费、随时停）或 HostEONS 月付档（$4/月起）；RackNerd 只有年付，试用成本高于月付。</p></details>
+<div class="note"><b>免责：</b>本页数据照录三家官网页内容（核实于 2026-11-13），价格随时可能调整；购买前请以厂商官方页为准。</div>
+<div class="related"><h2>相关页面</h2><ul><li><a href="../../">低价 VPS 列表</a></li><li><a href="../../offers/racknerd-specials/">RackNerd 详情页</a></li><li><a href="../../offers/hosteons/">HostEONS 详情页</a></li><li><a href="../../offers/digitalocean-basic/">DigitalOcean 详情页</a></li><li><a href="../annual-vs-monthly-vs-intro/">年付 vs 月付 vs 首期价</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">低价 VPS</a> · <a href="../../offers/">低价详情</a> · <a href="../">低价对比</a> · <a href="../../guides/">低价指南</a> · <a href="../../faq/">低价问答</a></p><p>数据仅供参考，以厂商官方页为准。低价区只收常态价，续费条件以厂商官方页为准；价格随时可能调整，购买前请在厂商页面确认续费价。本站不含邀请链接。</p></div></footer>
+</body>
+</html>
