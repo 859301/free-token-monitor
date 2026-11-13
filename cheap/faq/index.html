@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>常见问题：低价 VPS 的 10 个问题</title>
+<meta name="description" content="低价 VPS 常见问题 10 问：搬瓦工太贵怎么办、年付多少钱合适、续费涨价吗、年付月付哪个划算、$2–$5 能干什么、会超售跑路吗、路由重要吗、512MB 够吗、备案与机房、黑五价与平时价的区别。">
+<link rel="canonical" href="https://tokens.yangtokent.com/cheap/faq/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "搬瓦工好贵，有没有便宜一点的 VPS？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "有：本站低价区在架 3 家——RackNerd $21.99/年起（终身同价续费）、HostEONS $21/年起（续费未知）、DigitalOcean $4/月起（按月封顶）。搬瓦工因入门价说法冲突（$49.99/年 vs $99.99/年）暂未收录，见核查笔记（羊毛区）。三家横评见三家对比。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "便宜 VPS 年付多少钱合适？每年几百块能买到什么样的？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "本站观察到的价格带：入门年付约 $21–$36/年（1–2 GB 内存）；实用档 $4–$6/月（1–2 GB，月付封顶）；$8–$10/月档（4–8 GB）。「每年几百块」是用户的说法，本站不做货币换算——按原币价格对照：$21.99/年约合 $1.83/月（换算），$119.99/年是 8 GB 大内存档。档位详解见$1/$5/$10 指南。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "续费会涨价吗？第二年多少钱？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "看厂商：RackNerd 官方 FAQ 承诺终身同价续费（$21.99/年第二年还是 $21.99）；DigitalOcean 是目录价、按月封顶（第二年同价）；HostEONS 续费价页面未写、第二年未知。买之前先找到 FAQ 或条款里的续费句，找不到就按目录价做预算。算法见续费数学指南。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "年付和月付哪个划算？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "只在续费同价时，年付比月付便宜：RackNerd 年付 3 年 $65.97，DigitalOcean 月付 3 年 $144。但月付买的是灵活性（随时停机、随时换配置）。新厂商先按月试用，信任建立后再转年付。完整对比见年付 vs 月付 vs 首期价。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "$2–$5 的 VPS 能干什么？够用吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "约 $2/月档（1 GB）：静态站、轻量 Bot、反向代理、学习实验。$4–$6/月档（1–2 GB）：面板、Docker、n8n、WordPress。内存门槛：n8n 要 2 GB，AI 应用要 4 GB，OpenClaw 要 8 GB（RackNerd 官方 FAQ）。低于门槛的内存，装上了也跑不起来。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "便宜 VPS 会不会超售/跑路？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "超售：便宜机器的 CPU 通常是共享的（HostEONS 写 Fair Share，DigitalOcean 写共享 CPU）——预期按共享放，验机方法见超售检查指南。跑路：三家都是有历史的厂商，风险低于无名小厂；但重要数据永远要有异地备份，见备份清单。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "去程/回程路由重要吗？CN2 GIA 值得加钱吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "路由比配置重要：配置过剩是常态，线路决定体验。去程回程都要看（mtr 双向测）。CN2 GIA 对延迟敏感的场景（游戏、实时交互）值得加钱，对延迟不敏感的（备份、爬虫）不值得。本站目前无已核实 CN2 GIA 套餐，不推荐未核实的线路宣称。方法见线路优先指南。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "512MB 内存够用吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "只够最轻量的场景：静态站、单进程 Bot、学习。面板、Docker、AI 应用都不够。建议 1 GB 起步，2 GB 更稳妥。HostEONS Ryzen 512 MB 档 $24/年（续费未知）与 DigitalOcean 512MiB 档 $4/月（封顶）都是入门实验档，不是主力档。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "需要备案吗？哪个机房对国内友好？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "备案：国内机房的网站服务通常需要备案，规则以主管部门官方说法为准，本站不提供备案建议。机房：本站在架套餐的机房信息以官网页为准（HostEONS 6 个美国城市；RackNerd 多机房、下单时选；DigitalOcean 区域未见于定价页）。「对国内友好」要看实测路由，不是看机房名字——方法见线路优先指南。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "黑五/双 11 的价格和平时价有什么区别？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "黑五/双 11 价是限时活动价：有截止日期、可能限量、续费价可能不同——按本站边界规则，活动价归羊毛区，常态价归低价区。RackNerd 2025 年黑五价（$10.60/年起）已过期，仅作历史档案；2026 年黑五（11 月 27 日）官方清单尚未发布。买活动价之前，先确认续费价与截止日期。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：只收厂商官方核对过的免费额度。领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../">首页</a><a href="../">低价 VPS</a><a href="../offers/">低价详情</a><a href="../compare/">低价对比</a><a href="../guides/">低价指南</a><a href="./" aria-current="page">低价问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../">首页</a> / <a href="../">低价 VPS</a> / 低价问答</p>
+<h1>常见问题：低价 VPS 的 10 个问题</h1>
+<p class="meta">本页更新于 2026-11-13 · 答案以厂商官方页核对信息为准</p>
+<div class="answer"><p>10 个用户最常问的低价问题，答案先行、附核实日期：搬瓦工太贵怎么办、年付多少钱合适、续费涨价吗、年付月付哪个划算、$2–$5 能干什么、会超售跑路吗、路由重要吗、512MB 够吗、备案与机房、黑五价与平时价的区别。</p></div>
+<p>问题按用户实际提问的措辞整理；答案基于本站核对时各厂商官网页的内容，价格均为原币、不做换算。</p>
+<details><summary>搬瓦工好贵，有没有便宜一点的 VPS？</summary><p>有：本站低价区在架 3 家——RackNerd $21.99/年起（终身同价续费）、HostEONS $21/年起（续费未知）、DigitalOcean $4/月起（按月封顶）。搬瓦工因入门价说法冲突（$49.99/年 vs $99.99/年）暂未收录，见<a href="../../wool/offers/bandwagonhost-code-status/">核查笔记</a>（羊毛区）。三家横评见<a href="../compare/racknerd-hosteons-do/">三家对比</a>。</p></details>
+<details><summary>便宜 VPS 年付多少钱合适？每年几百块能买到什么样的？</summary><p>本站观察到的价格带：入门年付约 $21–$36/年（1–2 GB 内存）；实用档 $4–$6/月（1–2 GB，月付封顶）；$8–$10/月档（4–8 GB）。「每年几百块」是用户的说法，本站不做货币换算——按原币价格对照：$21.99/年约合 $1.83/月（换算），$119.99/年是 8 GB 大内存档。档位详解见<a href="../guides/what-a-dollar-buys/">$1/$5/$10 指南</a>。</p></details>
+<details><summary>续费会涨价吗？第二年多少钱？</summary><p>看厂商：RackNerd 官方 FAQ 承诺终身同价续费（$21.99/年第二年还是 $21.99）；DigitalOcean 是目录价、按月封顶（第二年同价）；HostEONS 续费价页面未写、第二年未知。买之前先找到 FAQ 或条款里的续费句，找不到就按目录价做预算。算法见<a href="../guides/renewal-math/">续费数学指南</a>。</p></details>
+<details><summary>年付和月付哪个划算？</summary><p>只在续费同价时，年付比月付便宜：RackNerd 年付 3 年 $65.97，DigitalOcean 月付 3 年 $144。但月付买的是灵活性（随时停机、随时换配置）。新厂商先按月试用，信任建立后再转年付。完整对比见<a href="../compare/annual-vs-monthly-vs-intro/">年付 vs 月付 vs 首期价</a>。</p></details>
+<details><summary>$2–$5 的 VPS 能干什么？够用吗？</summary><p>约 $2/月档（1 GB）：静态站、轻量 Bot、反向代理、学习实验。$4–$6/月档（1–2 GB）：面板、Docker、n8n、WordPress。内存门槛：n8n 要 2 GB，AI 应用要 4 GB，OpenClaw 要 8 GB（RackNerd 官方 FAQ）。低于门槛的内存，装上了也跑不起来。</p></details>
+<details><summary>便宜 VPS 会不会超售/跑路？</summary><p>超售：便宜机器的 CPU 通常是共享的（HostEONS 写 Fair Share，DigitalOcean 写共享 CPU）——预期按共享放，验机方法见<a href="../guides/overselling-checks/">超售检查指南</a>。跑路：三家都是有历史的厂商，风险低于无名小厂；但重要数据永远要有异地备份，见<a href="../../wool/guides/backup-before-host-dies/">备份清单</a>。</p></details>
+<details><summary>去程/回程路由重要吗？CN2 GIA 值得加钱吗？</summary><p>路由比配置重要：配置过剩是常态，线路决定体验。去程回程都要看（mtr 双向测）。CN2 GIA 对延迟敏感的场景（游戏、实时交互）值得加钱，对延迟不敏感的（备份、爬虫）不值得。本站目前无已核实 CN2 GIA 套餐，不推荐未核实的线路宣称。方法见<a href="../guides/route-first/">线路优先指南</a>。</p></details>
+<details><summary>512MB 内存够用吗？</summary><p>只够最轻量的场景：静态站、单进程 Bot、学习。面板、Docker、AI 应用都不够。建议 1 GB 起步，2 GB 更稳妥。HostEONS Ryzen 512 MB 档 $24/年（续费未知）与 DigitalOcean 512MiB 档 $4/月（封顶）都是入门实验档，不是主力档。</p></details>
+<details><summary>需要备案吗？哪个机房对国内友好？</summary><p>备案：国内机房的网站服务通常需要备案，规则以主管部门官方说法为准，本站不提供备案建议。机房：本站在架套餐的机房信息以官网页为准（HostEONS 6 个美国城市；RackNerd 多机房、下单时选；DigitalOcean 区域未见于定价页）。「对国内友好」要看实测路由，不是看机房名字——方法见<a href="../guides/route-first/">线路优先指南</a>。</p></details>
+<details><summary>黑五/双 11 的价格和平时价有什么区别？</summary><p>黑五/双 11 价是限时活动价：有截止日期、可能限量、续费价可能不同——按本站边界规则，活动价归<a href="../../wool/">羊毛区</a>，常态价归低价区。RackNerd 2025 年黑五价（$10.60/年起）已过期，仅作<a href="../../wool/offers/racknerd-black-friday-archive/">历史档案</a>；2026 年黑五（11 月 27 日）官方清单尚未发布。买活动价之前，先确认续费价与截止日期。</p></details>
+<h2>为什么本站不收录某些低价套餐</h2><p>搬瓦工（入门价说法冲突）、IONOS（只有标题价、无套餐表）、OVHcloud（From 价的承诺期结构未注明）、Contabo（价格说法冲突、首期价结构）均未收录，原因写在<a href="../">低价 VPS 列表</a>的「未收录及原因」一节。首期价、限时促销与优惠码价归<a href="../../wool/">羊毛区</a>。</p>
+<div class="note"><b>免责：</b>本页答案基于本站核对时各厂商官网页的内容（核实于 2026-11-13）；价格随时可能调整，购买前请以厂商官方页为准。本站不做货币换算，价格均为原币。</div>
+<div class="related"><h2>相关页面</h2><ul><li><a href="../">低价 VPS 列表</a></li><li><a href="../compare/racknerd-hosteons-do/">三家对比</a></li><li><a href="../guides/what-a-dollar-buys/">$1/$5/$10 指南</a></li><li><a href="../../wool/faq/">羊毛 VPS 常见问题</a></li><li><a href="../../vps/faq/">免费 VPS 常见问题</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../">首页</a> · <a href="../">低价 VPS</a> · <a href="../offers/">低价详情</a> · <a href="../compare/">低价对比</a> · <a href="../guides/">低价指南</a> · <a href="./">低价问答</a></p><p>数据仅供参考，以厂商官方页为准。低价区只收常态价，续费条件以厂商官方页为准；价格随时可能调整，购买前请在厂商页面确认续费价。本站不含邀请链接。</p></div></footer>
+</body>
+</html>
