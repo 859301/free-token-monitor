@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merchant of Record 费率对照：Paddle、Polar、Lemon Squeezy 与 Stripe Managed Payments</title>
+<meta name="description" content="Merchant of Record 费率对照：Paddle 5% + 50¢、Lemon Squeezy 5% + 50¢、Polar 四档 5% + 50¢ 起、Stripe Managed Payments 3.5% + Payments 费用；附加费、争议费、提现费与税务逐项对照。核实于 2026-11-13。">
+<link rel="canonical" href="https://tokens.yangtokent.com/payments/compare/mor-fees-compared/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Merchant of Record 费率对照：Paddle、Polar、Lemon Squeezy 与 Stripe Managed Payments",
+  "description": "Merchant of Record 费率对照：Paddle 5% + 50¢、Lemon Squeezy 5% + 50¢、Polar 四档 5% + 50¢ 起、Stripe Managed Payments 3.5% + Payments 费用；附加费、争议费、提现费与税务逐项对照。核实于 2026-11-13。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/payments/compare/mor-fees-compared/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "MoR 费率最低的是哪家？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "按官方费率看，Polar Scale 档 3.4% + 30¢（$400/月）低于 Paddle 与 Lemon Squeezy 的 5% + 50¢；Stripe Managed Payments 为 3.5% + Payments 费用。月费与回本点见 Polar 详情页。核实于 2026-11-13。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MoR 费率包含税务服务吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "包含。Paddle 代收正确税率、跟踪申报期限、提交销售税申报；Lemon Squeezy 代收代缴销售税/VAT 并申报；Stripe Managed Payments 含 75+ 国家间接税合规。核实于 2026-11-13。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">支付变现</a><a href="../../offers/">支付详情</a><a href="../../compare/" aria-current="page">支付对比</a><a href="../../guides/">支付指南</a><a href="../../faq/">支付问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">支付变现</a> / <a href="../">支付对比</a> / Merchant of Record 费率对照</p>
+<h1>Merchant of Record 费率对照</h1>
+<p class="meta">本页更新于 2026-11-13 · 核实于 2026-11-13</p>
+<div class="answer"><p>四种 MoR 费率结构：Paddle 与 Lemon Squeezy 为单一费率 5% + 50¢/笔、无月费；Polar 为四档定价，月费越高、费率越低，Starter 5% + 50¢、Scale 3.4% + 30¢；Stripe Managed Payments 为 3.5% + Payments 费用，两部分相加。附加费方面，Polar 国际卡 +1.5%、争议 $15/起；Lemon Squeezy 美国以外交易可能有小额附加费。</p></div>
+<h2 id="table">对比表</h2><div class="tablewrap"><table><thead><tr><th>项目</th><th>Paddle</th><th>Lemon Squeezy</th><th>Polar</th><th>Stripe Managed Payments</th></tr></thead><tbody><tr><th>费率</th><td>5% + 50¢/Checkout 交易</td><td>5% + 50¢/交易</td><td>Starter 5% + 50¢；Pro 3.8% + 40¢；Growth 3.6% + 35¢；Scale 3.4% + 30¢</td><td>3.5%/成功交易，另加 Payments 费用</td></tr><tr><th>月费</th><td>无月费、无迁移费、无隐藏费用</td><td>无月费</td><td>Starter Free；Pro $20/月；Growth $100/月；Scale $400/月</td><td>以官方页面为准</td></tr><tr><th>国际卡附加</th><td>官网已读页面未述，以官方页面为准</td><td>美国以外交易可能有小额附加费，细则以官方页面为准</td><td>+1.5%（非美国卡）</td><td>国际卡 +1.5%（标准处理部分）</td></tr><tr><th>争议费</th><td>官网已读页面未述，以官方页面为准</td><td>官网已读页面未述，以官方页面为准</td><td>$15/起，无论结果</td><td>$15/起（标准处理）</td></tr><tr><th>提现费</th><td>官网已读页面未述，以官方页面为准</td><td>官网已读页面未述，以官方页面为准</td><td>Stripe 费用原样转嫁：$2/有提现的月份、0.25% + $0.25/笔、货币转换 0.25%（欧盟）–1%</td><td>以官方页面为准</td></tr><tr><th>税务</th><td>代收正确税率、跟踪申报期限、提交销售税申报</td><td>销售税/VAT 代收代缴与申报</td><td>Merchant of Record（页面称 Merchant of Record premium）</td><td>含 75+ 国家间接税合规</td></tr><tr><th>欺诈与退款</th><td>欺诈保护、退款与买家支持</td><td>AI 欺诈保护</td><td>以官方页面为准</td><td>欺诈预防、争议管理、开票与客服</td></tr><tr><th>订阅与许可</th><td>官网已读页面未述，以官方页面为准</td><td>许可证密钥、订阅计费</td><td>Early Member 条款提及订阅费 +0.5%</td><td>Stripe Billing 按量 0.7%</td></tr><tr><th>核实日期</th><td>2026-11-13</td><td>2026-11-13</td><td>2026-11-13</td><td>2026-11-13</td></tr></tbody></table></div><h2 id="structures">四种费率结构</h2><p>Paddle 与 Lemon Squeezy 按单一费率计费，无月费，销售额为零时费用为零。Polar 按月费档位计费，月费越高、单笔费率越低，官方页给出各档回本点。Stripe Managed Payments 按 3.5% 加 Payments 费用计费，Payments 费用部分按标准处理费率（美国国内卡 2.9% + 30¢，国际卡 +1.5%）计算。</p><h2 id="fixed">固定部分对小额交易的影响</h2><p>50¢、40¢、35¢、30¢ 这些固定部分不随交易金额变化，交易金额越小，固定部分占比越高。按官方费率计算，一笔 $5 的交易按 5% + 50¢ 计费，费用为 $0.75，占 15%；一笔 $100 的交易按同一费率计费，费用为 $5.50，占 5.5%。以下换算均为按官方费率计算的结果，见<a href="../../guides/fee-math/">支付费率怎么算</a>。</p><h2 id="extra">附加费对照</h2><p>写明附加费数字的只有 Polar：国际卡 +1.5%、争议 $15/起、提现费按 Stripe 费用原样转嫁。Lemon Squeezy 写明美国以外交易可能有小额附加费，细则在文档页。Paddle 与 Stripe Managed Payments 的附加费细则以官方页面为准。</p><h2 id="faq">常见问题</h2><details><summary>MoR 费率最低的是哪家？</summary><p>按官方费率看，Polar Scale 档 3.4% + 30¢（$400/月）低于 Paddle 与 Lemon Squeezy 的 5% + 50¢；Stripe Managed Payments 为 3.5% + Payments 费用。月费与回本点见 Polar 详情页。核实于 2026-11-13。</p></details><details><summary>MoR 费率包含税务服务吗？</summary><p>包含。Paddle 代收正确税率、跟踪申报期限、提交销售税申报；Lemon Squeezy 代收代缴销售税/VAT 并申报；Stripe Managed Payments 含 75+ 国家间接税合规。核实于 2026-11-13。</p></details>
+<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，领取前请以厂商官方页为准。</div><div class="related"><h2>其他对比</h2><ul><li><a href="../stripe-paddle-lemon-squeezy/">Stripe vs Paddle vs Lemon Squeezy</a></li><li><a href="../polar-tiers/">Polar 四档对照</a></li><li><a href="../../offers/paddle/">Paddle 详情页</a></li><li><a href="../../offers/polar/">Polar 详情页</a></li><li><a href="../../guides/fee-math/">支付费率怎么算</a></li><li><a href="../../">返回支付变现列表</a></li></ul></div></article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">支付变现</a> · <a href="../../offers/">支付详情</a> · <a href="../../compare/">支付对比</a> · <a href="../../guides/">支付指南</a> · <a href="../../faq/">支付问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
