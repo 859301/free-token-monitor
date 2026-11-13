@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>个人开发者全流程：从立项到上线运营的 14 个环节</title>
+<meta name="description" content="14 个环节的阶段地图：立项验证、代码托管、模型 API、数据库、认证、部署托管、服务器、域名、对象存储、邮件、监控分析、周边能力、支付变现、上线运营；附从零上线检查清单与 3 套 $0 组合。">
+<link rel="canonical" href="https://tokens.yangtokent.com/workflow/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "个人开发者全流程：从立项到上线运营的 14 个环节",
+  "description": "14 个环节的阶段地图：立项验证、代码托管、模型 API、数据库、认证、部署托管、服务器、域名、对象存储、邮件、监控分析、周边能力、支付变现、上线运营；附从零上线检查清单与 3 套 $0 组合。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/workflow/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../">首页</a><a href="./" aria-current="page">工作流总览</a><a href="../guides/idea-validation/">立项验证</a><a href="../guides/peripheral-capabilities/">周边能力</a><a href="../guides/launch-operations/">上线运营</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../">首页</a> / 工作流总览</p>
+<h1>个人开发者全流程：从立项到上线运营的 14 个环节</h1>
+<p class="meta">本页更新于 2026-11-13 · 各环节条目核实于 2026-11-13，见各列表页</p>
+<div class="answer"><p>一个个人项目从想法到上线运营，经过 14 个环节：立项验证、代码托管、模型 API、数据库、认证、部署托管、服务器、域名、对象存储、邮件、监控分析、周边能力、支付变现、上线运营。每个环节点进去是对应的列表页或指南。</p></div>
+<p>环节按做项目的顺序排列，不是一次性全配齐：前面的环节先定，后面的环节等产品形态确定后再配。每个环节的免费额度、绑卡要求与超额规则见对应的列表页与详情页。</p>
+<div class="toc"><b>本页内容</b><ul><li><a href="#map">阶段地图：14 个环节</a></li><li><a href="#checklist">从零上线检查清单</a></li><li><a href="#stacks">$0 组合：3 套搭配</a></li></ul></div>
+<h2 id="map">阶段地图：14 个环节</h2>
+<h3>阶段 A：立项与开发</h3>
+<div class="tablewrap"><table><thead><tr><th>环节</th><th>做什么</th><th>去向</th></tr></thead><tbody>
+<tr><td>1 · 立项验证</td><td>确认想法有没有人需要，再决定做不做</td><td><a href="../guides/idea-validation/">立项验证指南</a></td></tr>
+<tr><td>2 · 代码托管 / CI</td><td>代码放哪，私有仓库与自动构建</td><td><a href="../code/">代码托管列表</a></td></tr>
+<tr><td>3 · 模型 / API</td><td>模型 API 免费额度、绑卡与重置规则</td><td><a href="../">额度总览</a> · <a href="../offers/">额度详情</a></td></tr>
+<tr><td>4 · 数据库</td><td>免费数据库、暂停与超额规则</td><td><a href="../database/">免费数据库列表</a></td></tr>
+<tr><td>5 · 认证</td><td>登录注册、社交登录、免费用户数</td><td><a href="../auth/">认证列表</a></td></tr>
+</tbody></table></div>
+<h3>阶段 B：部署与上线</h3>
+<div class="tablewrap"><table><thead><tr><th>环节</th><th>做什么</th><th>去向</th></tr></thead><tbody>
+<tr><td>6 · 部署托管</td><td>静态、容器、Serverless 托管；虚拟主机是另一条路线</td><td><a href="../deploy/">部署与托管列表</a> · <a href="../hosting/">免费虚拟主机列表</a></td></tr>
+<tr><td>7 · 服务器 / VPS 与自托管</td><td>免费 VPS、试用额度、任务续费与低价 VPS</td><td><a href="../vps/">免费 VPS 列表</a> · <a href="../wool/">羊毛 VPS 列表</a> · <a href="../cheap/">低价 VPS 列表</a></td></tr>
+<tr><td>8 · 域名 / DNS / CDN / SSL</td><td>域名注册、DNS、CDN、证书</td><td><a href="../domain/">域名列表</a></td></tr>
+<tr><td>9 · 对象存储</td><td>图片与文件存哪，出站流量规则</td><td><a href="../storage/">对象存储列表</a></td></tr>
+</tbody></table></div>
+<h3>阶段 C：运营必需品</h3>
+<div class="tablewrap"><table><thead><tr><th>环节</th><th>做什么</th><th>去向</th></tr></thead><tbody>
+<tr><td>10 · 邮件</td><td>注册验证与通知邮件</td><td><a href="../email/">邮件列表</a></td></tr>
+<tr><td>11 · 监控分析</td><td>宕机提醒、错误追踪、访问分析</td><td><a href="../monitoring/">监控分析列表</a></td></tr>
+<tr><td>12 · 周边能力</td><td>定时任务、队列、搜索、缓存</td><td><a href="../guides/peripheral-capabilities/">周边能力指南</a></td></tr>
+</tbody></table></div>
+<h3>阶段 D：变现与增长</h3>
+<div class="tablewrap"><table><thead><tr><th>环节</th><th>做什么</th><th>去向</th></tr></thead><tbody>
+<tr><td>13 · 支付变现</td><td>收款、费率、税务代管、提现路径</td><td><a href="../payments/">支付变现列表</a></td></tr>
+<tr><td>14 · 上线运营</td><td>获客、SEO、客服、合规提示</td><td><a href="../guides/launch-operations/">上线运营指南</a></td></tr>
+</tbody></table></div>
+<h2 id="checklist">从零上线检查清单</h2>
+<p>按顺序过一遍，每项做完再往下走；跳过的项记下来，上线前补上。</p>
+<h3>立项与开发</h3>
+<ol>
+<li>写下一句话：解决谁的什么问题。见<a href="../guides/idea-validation/">立项验证指南</a>。</li>
+<li>找几位潜在用户聊，问过去的行为，不问“会不会用”。</li>
+<li>做一个着陆页或等候名单，看有没有人留联系方式。</li>
+<li>定下最小可用的第一版范围：一个核心功能。</li>
+<li>代码放进仓库，定好分支与部署方式。见<a href="../code/">代码托管列表</a>。</li>
+</ol>
+<h3>部署与上线</h3>
+<ol>
+<li>选部署方式：托管免费层、虚拟主机还是 VPS。见<a href="../deploy/">部署与托管列表</a>、<a href="../hosting/">免费虚拟主机列表</a>、<a href="../vps/">免费 VPS 列表</a>。</li>
+<li>选数据库，确认不活跃暂停与超额规则。见<a href="../database/">免费数据库列表</a>与<a href="../database/guides/pause-and-scale-to-zero/">暂停与缩容说明</a>。</li>
+<li>定认证方式：自己写还是用托管认证。见<a href="../auth/">认证列表</a>。</li>
+<li>域名、DNS、SSL 配好。见<a href="../domain/">域名列表</a>。</li>
+<li>文件与图片存对象存储，不塞进代码仓库。见<a href="../storage/">对象存储列表</a>。</li>
+</ol>
+<h3>运营必需品</h3>
+<ol>
+<li>注册验证邮件与通知邮件接好。见<a href="../email/">邮件列表</a>。</li>
+<li>监控与告警：宕机提醒、错误追踪、访问分析。见<a href="../monitoring/">监控分析列表</a>。</li>
+<li>定时任务与队列安排好。见<a href="../guides/peripheral-capabilities/">周边能力指南</a>。</li>
+</ol>
+<h3>变现与增长</h3>
+<ol>
+<li>收款方式：费率、税务代管、提现路径。见<a href="../payments/">支付变现列表</a>。</li>
+<li>上线前检查：备份、账单提醒、状态页。见<a href="../guides/launch-operations/">上线运营指南</a>。</li>
+</ol>
+<h2 id="stacks">$0 组合：3 套搭配</h2>
+<p>以下 3 套搭配只用各列表页已经列出的条目组成，数字与规则见各自详情页，条款以厂商官方页为准。</p>
+<h3>组合一：Vercel + Supabase + R2</h3>
+<ul>
+<li><a href="../deploy/offers/vercel-hobby/">Vercel Hobby</a>：100 GB Fast Data Transfer、1M CDN 请求、1M 函数调用、4 CPU 小时；达上限不可加购；仅限个人或非商业用途。</li>
+<li><a href="../database/offers/supabase/">Supabase</a>：500 MB 数据库、50,000 MAU、5 GB egress、1 GB 文件存储；免费项目 1 周不活跃暂停；至多 2 个活跃项目。</li>
+<li><a href="../storage/offers/cloudflare-r2/">Cloudflare R2</a>：每月 10 GB-month 存储、1M Class A 操作、10M Class B 操作，出站免费。</li>
+<li>可以再加：<a href="../email/offers/resend/">Resend</a>（3,000 封/月、100 封/天）、<a href="../auth/offers/clerk/">Clerk</a>（每个应用 50,000 MRUs）。</li>
+</ul>
+<h3>组合二：Cloudflare 全家桶</h3>
+<ul>
+<li><a href="../deploy/offers/cloudflare-workers/">Cloudflare Workers</a>：100,000 请求/天、每次调用 10 ms CPU；配套免费量含 KV 100,000 读/天、D1 5M 行读/天、Queues 10,000 ops/天。</li>
+<li><a href="../deploy/offers/cloudflare-pages/">Cloudflare Pages</a>：500 构建/月、100 自定义域名/项目、20,000 文件/站。</li>
+<li><a href="../storage/offers/cloudflare-r2/">Cloudflare R2</a>：每月 10 GB-month 存储、1M Class A 操作、10M Class B 操作，出站免费。</li>
+<li><a href="../domain/offers/cloudflare/">Cloudflare Free 计划</a>：$0，包括 DNS、CDN、Universal SSL。</li>
+</ul>
+<h3>组合三：VPS 自托管</h3>
+<ul>
+<li><a href="../vps/offers/oracle-always-free/">Oracle Always Free</a>：2 OCPU / 12 GB 内存、200 GB 块存储、每月 10 TB 出站流量；绑卡与回收规则见详情页。</li>
+<li>域名：<a href="../domain/">域名列表</a>里的注册商，首年价与续费价分开列出，对照见<a href="../domain/compare/registrars/">注册商对比</a>。</li>
+<li><a href="../domain/offers/lets-encrypt/">Let's Encrypt</a>：签发免费 DV 证书，通过 ACME 流程申请。</li>
+<li><a href="../monitoring/offers/uptimerobot/">UptimeRobot</a>：50 个监控器、5 分钟检测间隔、基础状态页，无需信用卡。</li>
+<li>自托管与托管路线的对照见<a href="../deploy/guides/managed-vs-selfhosted/">托管免费层 vs VPS 自托管</a>。</li>
+</ul>
+<div class="note"><b>提醒：</b>各条的绑卡要求、超额行为与暂停规则不同，搭配前看各自详情页；条款随时可能调整，以厂商官方页为准。</div>
+<div class="related"><h2>相关页面</h2><ul><li><a href="../guides/idea-validation/">立项验证指南</a></li><li><a href="../guides/peripheral-capabilities/">周边能力指南</a></li><li><a href="../guides/launch-operations/">上线运营指南</a></li><li><a href="../code/">代码托管列表</a></li><li><a href="../database/">免费数据库列表</a></li><li><a href="../deploy/">部署与托管列表</a></li><li><a href="../domain/">域名列表</a></li><li><a href="../storage/">对象存储列表</a></li><li><a href="../email/">邮件列表</a></li><li><a href="../monitoring/">监控分析列表</a></li><li><a href="../payments/">支付变现列表</a></li><li><a href="../auth/">认证列表</a></li><li><a href="../">返回额度总览</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../">首页</a> · <a href="./">工作流总览</a> · <a href="../guides/idea-validation/">立项验证</a> · <a href="../guides/peripheral-capabilities/">周边能力</a> · <a href="../guides/launch-operations/">上线运营</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
