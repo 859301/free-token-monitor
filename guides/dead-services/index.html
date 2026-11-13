@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>已经取消的免费层：Heroku、PlanetScale、SendGrid、Freenom、Upstash Kafka 与 Google Domains 现状</title>
+<meta name="description" content="6 项已经取消或结束的免费服务现状：Heroku 免费层、PlanetScale Hobby、SendGrid 永久免费计划、Freenom 免费域名、Upstash Kafka 与 Google Domains；时间线来自多家公开报道，现状与替代见各环节列表。">
+<link rel="canonical" href="https://tokens.yangtokent.com/guides/dead-services/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "已经取消的免费层：Heroku、PlanetScale、SendGrid、Freenom、Upstash Kafka 与 Google Domains 现状",
+  "description": "6 项已经取消或结束的免费服务现状：Heroku 免费层、PlanetScale Hobby、SendGrid 永久免费计划、Freenom 免费域名、Upstash Kafka 与 Google Domains；时间线来自多家公开报道，现状与替代见各环节列表。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/guides/dead-services/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Heroku 免费层还在吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不在。免费 tier 已于 2022-11-28 移除，现 Eco $5/月起；2026-02 转 sustaining engineering。时间线来自多家公开报道。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "SendGrid 还有免费计划吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "没有永久免费计划：永久免费计划 2025 年 3–5 月退役，现仅 60 天试用。当前试用条件按厂商官方页核实于 2026-11-13：60 天、100 封/天、无需信用卡。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Freenom 免费域名还能注册吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不能。2023 年停新注册，2024 年退出域名业务；2026-07 恢复付费销售，免费已死。恢复后的价格说法冲突：€8.22/年 vs $9.95/年，价格以官方页面为准。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Google Domains 还在独立运营吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不在。Google Domains 已出售给 Squarespace，不再独立运营。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：额度信息来自厂商官方页。领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../">首页</a><a href="../../offers/">额度详情</a><a href="../../compare/">对比</a><a href="../../guides/" aria-current="page">指南</a><a href="../../faq/">常见问题</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../">首页</a> / <a href="../">指南</a> / 已经取消的免费层</p>
+<h1>已经取消的免费层：现状与替代</h1>
+<p class="meta">本页更新于 2026-11-13</p>
+<div class="answer"><p>Heroku、PlanetScale、SendGrid、Freenom、Upstash Kafka 的免费层或免费计划已经取消或结束，Google Domains 已出售给 Squarespace、不再独立运营。以下时间线来自多家公开报道，不是厂商官方页的重新核实结果；SendGrid 当前试用条件按厂商官方页核实于 2026-11-13。替代见各环节列表。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#table">总表</a></li><li><a href="#heroku">Heroku</a></li><li><a href="#planetscale">PlanetScale</a></li><li><a href="#sendgrid">SendGrid</a></li><li><a href="#freenom">Freenom</a></li><li><a href="#upstash">Upstash Kafka</a></li><li><a href="#google-domains">Google Domains</a></li><li><a href="#faq">常见问题</a></li></ul></div>
+<h2 id="table">总表</h2><div class="tablewrap"><table><thead><tr><th>服务</th><th>结束事实</th><th>现状</th><th>替代列表</th></tr></thead><tbody><tr><td>Heroku</td><td>免费 tier 2022-11-28 移除</td><td>Eco $5/月起；2026-02 转 sustaining engineering</td><td><a href="../../deploy/">部署与托管列表</a></td></tr><tr><td>PlanetScale</td><td>Hobby 计划 2024-03-06 宣布、2024-04-08 退役</td><td>无免费 tier</td><td><a href="../../database/">数据库列表</a></td></tr><tr><td>SendGrid</td><td>永久免费计划 2025 年 3–5 月退役</td><td>仅 60 天试用：60 天、100 封/天、无需信用卡</td><td><a href="../../email/">邮件列表</a></td></tr><tr><td>Freenom</td><td>2023 年停新注册、2024 年退出域名业务</td><td>2026-07 恢复付费销售，免费已死；价格说法冲突</td><td><a href="../../domain/">域名列表</a></td></tr><tr><td>Upstash Kafka</td><td>2024-09-06 停新用户，后终止</td><td>已终止</td><td>—</td></tr><tr><td>Google Domains</td><td>已出售给 Squarespace</td><td>不再独立运营</td><td><a href="../../domain/">域名列表</a></td></tr></tbody></table></div><h2 id="heroku">Heroku</h2><p>免费 tier 已于 2022-11-28 移除；现 Eco $5/月起；2026-02 转 sustaining engineering。还在推荐 Heroku 免费层的教程已经过时。替代见<a href="../../deploy/">部署与托管列表</a>。</p><h2 id="planetscale">PlanetScale</h2><p>Hobby 计划 2024-03-06 宣布、2024-04-08 退役，无免费 tier。替代见<a href="../../database/">数据库列表</a>。</p><h2 id="sendgrid">SendGrid</h2><p>永久免费计划 2025 年 3–5 月退役，现仅 60 天试用。当前试用条件按厂商官方页核实于 2026-11-13：60 天、100 封/天、无需信用卡（<a href="https://www.twilio.com/en-us/products/email-api/pricing" target="_blank" rel="noopener noreferrer">官方页</a>）。替代见<a href="../../email/">邮件列表</a>。</p><h2 id="freenom">Freenom</h2><p>免费域名：2023 年停新注册，2024 年退出域名业务；2026-07 恢复付费销售，免费已死。恢复后的价格说法冲突：€8.22/年 vs $9.95/年，两说并列，价格以官方页面为准。时间线与价格说法冲突的详细说明见<a href="../../domain/guides/freenom-dead/">Freenom 免费域名已死</a>；替代见<a href="../../domain/">域名列表</a>。</p><h2 id="upstash">Upstash Kafka</h2><p>Upstash Kafka 2024-09-06 停止接受新用户，后终止。</p><h2 id="google-domains">Google Domains</h2><p>Google Domains 已出售给 Squarespace，不再独立运营。替代见<a href="../../domain/">域名列表</a>。</p>
+<h2 id="faq">常见问题</h2><details><summary>Heroku 免费层还在吗？</summary><p>不在。免费 tier 已于 2022-11-28 移除，现 Eco $5/月起；2026-02 转 sustaining engineering。时间线来自多家公开报道。替代见<a href="../../deploy/">部署与托管列表</a>。</p></details><details><summary>SendGrid 还有免费计划吗？</summary><p>没有永久免费计划：永久免费计划 2025 年 3–5 月退役，现仅 60 天试用。当前试用条件按厂商官方页核实于 2026-11-13：60 天、100 封/天、无需信用卡。替代见<a href="../../email/">邮件列表</a>。</p></details><details><summary>Freenom 免费域名还能注册吗？</summary><p>不能。2023 年停新注册，2024 年退出域名业务；2026-07 恢复付费销售，免费已死。恢复后的价格说法冲突：€8.22/年 vs $9.95/年，价格以官方页面为准。替代见<a href="../../domain/">域名列表</a>。</p></details><details><summary>Google Domains 还在独立运营吗？</summary><p>不在。Google Domains 已出售给 Squarespace，不再独立运营。替代见<a href="../../domain/">域名列表</a>。</p></details>
+<div class="note"><b>提醒：</b>时间线来自多家公开报道；SendGrid 试用条件按厂商官方页核实于 2026-11-13。条款随时可能调整，办理前请以厂商官方页为准。</div>
+<div class="related"><h2>相关页面</h2><ul><li><a href="../../deploy/">部署与托管列表</a></li><li><a href="../../database/">数据库列表</a></li><li><a href="../../email/">邮件列表</a></li><li><a href="../../domain/">域名列表</a></li><li><a href="../../domain/guides/freenom-dead/">Freenom 免费域名已死</a></li><li><a href="../">指南总览</a></li><li><a href="../../">返回额度总览</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../">首页</a> · <a href="../../offers/">额度详情</a> · <a href="../../compare/">对比</a> · <a href="../../guides/">指南</a> · <a href="../../faq/">常见问题</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
