@@ -1,0 +1,1162 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-09",
+    "count": 43,
+    "language": "en",
+    "sources": [
+      "Lanlan repo (all verified against vendor official pages)",
+      "freetokens.fyi (all verified against vendor official pages)"
+    ],
+    "note": "Quota wording transcribed from vendor official pages; no currency conversion. Check the official page before claiming. Text translated from data/offers.json; all facts identical."
+  },
+  "offers": [
+    {
+      "id": 1,
+      "slug": "xfyun-spark-x26",
+      "title": "Spark-X2.6 free trial credits",
+      "provider": "iFlytek Spark · Spark MaaS",
+      "category": "llm",
+      "accessType": "api",
+      "cadence": "once",
+      "quotaText": "1 billion tokens",
+      "claimUrl": "https://maas.xfyun.cn/overview",
+      "openaiCompat": true,
+      "region": "cn",
+      "requirements": [
+        "Account",
+        "Real-name verification"
+      ],
+      "risks": [
+        "Only designated models such as Spark-X2.6"
+      ],
+      "steps": "Open the Spark MaaS platform → register and complete real-name verification → claim the Spark-X2.6 free trial credits on the platform → create an API key and call the API.",
+      "resetNote": "One-time claim; credit validity as shown in the console",
+      "verifiedAt": "2026-11-05",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "slug": "aliyun-bailian-newuser",
+      "title": "New-user free credits (over 70M tokens across models)",
+      "provider": "Alibaba Cloud Bailian",
+      "category": "llm",
+      "accessType": "api",
+      "cadence": "once",
+      "quotaText": "About 1M tokens per model, valid 90 days",
+      "claimUrl": "https://help.aliyun.com/zh/model-studio/new-free-quota",
+      "openaiCompat": true,
+      "region": "cn",
+      "requirements": [
+        "Account",
+        "Real-name verification"
+      ],
+      "risks": [
+        "Free credits only in the North China 2 (Beijing) region",
+        "Switches to pay-as-you-go when exhausted by default — turn on “stop when exhausted”"
+      ],
+      "steps": "Complete Alibaba Cloud real-name verification → enable Bailian (choose the North China 2 / Beijing region) → credits are issued automatically → turn on “stop when exhausted” in the console to avoid charges.",
+      "resetNote": "Issued automatically after activation; each model counted separately; expires after 90 days",
+      "verifiedAt": "2026-11-01",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "slug": "zhipu-newuser-pack",
+      "title": "New-user token gift pack",
+      "provider": "Zhipu BigModel",
+      "category": "llm",
+      "accessType": "api",
+      "cadence": "once",
+      "quotaText": "20M tokens + 120 image/video generations",
+      "claimUrl": "https://open.bigmodel.cn/",
+      "openaiCompat": true,
+      "region": "cn",
+      "requirements": [
+        "Account",
+        "Real-name verification"
+      ],
+      "risks": [],
+      "steps": "Open the Zhipu open platform → register with a phone number → complete real-name verification → the gift pack is issued to your account automatically → create an API key.",
+      "resetNote": "One-time gift pack; validity as shown in the console",
+      "verifiedAt": "2026-11-08",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 4,
+      "slug": "zhipu-glm-flash-free",
+      "title": "GLM-4.5-Flash / GLM-4.7-Flash free models",
+      "provider": "Zhipu BigModel",
+      "category": "llm",
+      "accessType": "api",
+      "cadence": "permanent",
+      "quotaText": "Officially marked fully free; concurrency shown per account",
+      "claimUrl": "https://open.bigmodel.cn/",
+      "openaiCompat": true,
+      "region": "cn",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [
+        "Only the Flash series is free; flagship models are paid"
+      ],
+      "steps": "Register on the Zhipu open platform → create an API key → set the model name to glm-4.5-flash or glm-4.7-flash and call directly.",
+      "resetNote": "Long-term free models; no claim needed; call right after registering",
+      "verifiedAt": "2026-11-08",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 5,
+      "slug": "tencent-tokenhub-newuser",
+      "title": "New-user 1M tokens per model trial pack",
+      "provider": "Tencent Cloud TokenHub",
+      "category": "llm",
+      "accessType": "api",
+      "cadence": "once",
+      "quotaText": "1M tokens per model, valid 1 year",
+      "claimUrl": "https://cloud.tencent.com/document/product/1823/130053",
+      "openaiCompat": true,
+      "region": "cn",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [
+        "Once the free credits run out, postpaid billing must be enabled to continue"
+      ],
+      "steps": "Log in to Tencent Cloud → open the TokenHub console model square → claim under “New user benefits”, or claim automatically on first call.",
+      "resetNote": "Once per master account; campaign runs until 2026-12-31",
+      "verifiedAt": "2026-11-01",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": "2026-12-31",
+      "daysLeft": 52,
+      "status": "active"
+    },
+    {
+      "id": 6,
+      "slug": "qiniu-newuser-3m",
+      "title": "New-user all-model resource pack",
+      "provider": "Qiniu AI Inference",
+      "category": "llm",
+      "accessType": "api",
+      "cadence": "once",
+      "quotaText": "3M tokens",
+      "claimUrl": "https://s.qiniu.com/AN3MZf",
+      "openaiCompat": true,
+      "region": "cn",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [
+        "Switches to pay-as-you-go when used up — watch your balance"
+      ],
+      "steps": "Register on Qiniu Cloud → open AI Inference → create your first API key → the 3M-token resource pack is issued automatically (may take a while).",
+      "resetNote": "Issued automatically after creating your first API key or first trial",
+      "verifiedAt": "2026-10-29",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 7,
+      "slug": "siliconflow-signup",
+      "title": "Signup credits + real-name verification voucher",
+      "provider": "SiliconFlow",
+      "category": "llm",
+      "accessType": "api",
+      "cadence": "once",
+      "quotaText": "¥14 credit on signup; invite + real-name verification earns a ¥16 voucher (180 days)",
+      "claimUrl": "https://llck.top/free",
+      "openaiCompat": true,
+      "region": "cn",
+      "requirements": [
+        "Account",
+        "Real-name verification"
+      ],
+      "risks": [],
+      "steps": "Register on SiliconFlow → complete real-name verification → the ¥14 credit is issued; claim the ¥16 voucher on the campaign page.",
+      "resetNote": "One-time credit; voucher valid 180 days",
+      "verifiedAt": "2026-10-27",
+      "sourceName": "freetokens.fyi · verified against official page",
+      "sourceUrl": "https://freetokens.fyi/zh/offers",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 8,
+      "slug": "kimi-voucher-15",
+      "title": "New-user free trial benefit",
+      "provider": "Kimi Open Platform",
+      "category": "llm",
+      "accessType": "api",
+      "cadence": "once",
+      "quotaText": "¥15 voucher, valid 3 months",
+      "claimUrl": "https://freetokens.fyi/zh/offers",
+      "openaiCompat": true,
+      "region": "cn",
+      "requirements": [
+        "Account",
+        "Real-name verification",
+        "Phone number"
+      ],
+      "risks": [
+        "Voucher does not apply to the K3 model"
+      ],
+      "steps": "Register on the Kimi open platform → complete real-name verification → the ¥15 voucher applies to API calls automatically.",
+      "resetNote": "Issued to the API account automatically after real-name verification",
+      "verifiedAt": "2026-10-27",
+      "sourceName": "freetokens.fyi · verified against official page",
+      "sourceUrl": "https://freetokens.fyi/zh/offers",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 9,
+      "slug": "sensenova-pool",
+      "title": "Public-beta shared credit pool",
+      "provider": "SenseTime SenseNova",
+      "category": "llm",
+      "accessType": "api",
+      "cadence": "weekly",
+      "quotaText": "120,000 credits per rolling 5 hours / 1,200,000 per week",
+      "claimUrl": "https://platform.sensenova.cn/docs",
+      "openaiCompat": true,
+      "region": "cn",
+      "requirements": [
+        "Account",
+        "Phone number"
+      ],
+      "risks": [
+        "Public-beta benefit; may change later"
+      ],
+      "steps": "Register on the SenseNova platform → verify your phone number → create an sk- API key in the console → call models such as DeepSeek V4.1 Flash.",
+      "resetNote": "Dual limits: rolling 5-hour window + weekly window; public-beta benefit",
+      "verifiedAt": "2026-11-05",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 10,
+      "slug": "modelscope-daily",
+      "title": "API-Inference daily free credits",
+      "provider": "ModelScope",
+      "category": "llm",
+      "accessType": "api",
+      "cadence": "daily",
+      "quotaText": "250 magic particles per day (200 check-in + 50 for binding Alibaba Cloud)",
+      "claimUrl": "https://www.modelscope.cn/docs/model-service/API-Inference/intro",
+      "openaiCompat": true,
+      "region": "cn",
+      "requirements": [
+        "Account",
+        "Real-name verification"
+      ],
+      "risks": [],
+      "steps": "Log in to ModelScope → check in to get 200 magic particles → bind an Alibaba Cloud account for 50 more → call API-Inference with an access token.",
+      "resetNote": "Resets daily; unused credits do not roll over",
+      "verifiedAt": "2026-10-27",
+      "sourceName": "freetokens.fyi · verified against official page",
+      "sourceUrl": "https://freetokens.fyi/zh/offers",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 11,
+      "slug": "antling-daily",
+      "title": "Daily free tokens",
+      "provider": "Ant Ling Studio",
+      "category": "llm",
+      "accessType": "api",
+      "cadence": "daily",
+      "quotaText": "500,000 tokens per day (input + output)",
+      "claimUrl": "https://developer.ant-ling.com/zh-CN/docs/",
+      "openaiCompat": true,
+      "region": "cn",
+      "requirements": [
+        "Account",
+        "Phone number"
+      ],
+      "risks": [
+        "Verified a while ago — check the actual credits in the console before claiming"
+      ],
+      "steps": "Register on the Ling developer platform with a +86 phone number → daily credits are issued automatically → call the API per the docs.",
+      "resetNote": "Issued before 02:00 daily; no rollover",
+      "verifiedAt": "2026-10-16",
+      "sourceName": "freetokens.fyi · verified against official page",
+      "sourceUrl": "https://freetokens.fyi/zh/offers",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 12,
+      "slug": "huawei-codearts-daily",
+      "title": "Promo models daily free tokens",
+      "provider": "Huawei Cloud CodeArts",
+      "category": "llm",
+      "accessType": "api",
+      "cadence": "daily",
+      "quotaText": "10M tokens per day, first come first served",
+      "claimUrl": "https://freetokens.fyi/zh/offers",
+      "openaiCompat": true,
+      "region": "cn",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [
+        "Verified a while ago; may have changed",
+        "First come, first served until gone"
+      ],
+      "steps": "Log in to Huawei Cloud CodeArts → pick a promo model (DeepSeek / GLM Flash series) → call directly within the daily credits.",
+      "resetNote": "Resets at 24:00 (UTC+8) daily, first come first served",
+      "verifiedAt": "2026-10-09",
+      "sourceName": "freetokens.fyi · verified against official page",
+      "sourceUrl": "https://freetokens.fyi/zh/offers",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 13,
+      "slug": "amd-token-factory",
+      "title": "Token Factory free model API",
+      "provider": "AMD Radeon Cloud",
+      "category": "llm",
+      "accessType": "api",
+      "cadence": "daily",
+      "quotaText": "Free calls within the daily pts usage cap",
+      "claimUrl": "https://developer.amd.com.cn/radeon/modelapis",
+      "openaiCompat": true,
+      "region": "cn",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [
+        "Trial-oriented; not for production",
+        "Exact credits as shown under “Points & usage” in the console"
+      ],
+      "steps": "Register and log in at developer.amd.com.cn → open Token Factory → copy the rc- API key and call.",
+      "resetNote": "Resets at 00:00 Beijing time; daily credits vary by account",
+      "verifiedAt": "2026-11-01",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 14,
+      "slug": "ifm-k2-daily",
+      "title": "K2-Horizon daily free credits",
+      "provider": "IFM",
+      "category": "llm",
+      "accessType": "api",
+      "cadence": "daily",
+      "quotaText": "10M tokens per key per day (input + output)",
+      "claimUrl": "https://platform.ifm.ai/",
+      "openaiCompat": true,
+      "region": "global",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [
+        "Console display and docs occasionally differ — go by your account"
+      ],
+      "steps": "Register on the IFM platform → create an API key → call K2-Horizon in OpenAI format.",
+      "resetNote": "Resets at 00:00 UTC",
+      "verifiedAt": "2026-10-31",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 15,
+      "slug": "openrouter-free",
+      "title": ":free free models",
+      "provider": "OpenRouter",
+      "category": "llm",
+      "accessType": "api",
+      "cadence": "daily",
+      "quotaText": "20 RPM / 50 requests per day; 1,000 per day after the account has been topped up $10",
+      "claimUrl": "https://openrouter.ai/models?max_price=0",
+      "openaiCompat": true,
+      "region": "global",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [
+        "Failed requests also count toward the daily cap",
+        "The free model list changes"
+      ],
+      "steps": "Register on OpenRouter → create an API key → call models whose IDs end in :free; one key works across many providers’ models.",
+      "resetNote": "Resets daily; model IDs end in :free",
+      "verifiedAt": "2026-10-27",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 16,
+      "slug": "groq-free-plan",
+      "title": "Free Plan fast inference",
+      "provider": "Groq",
+      "category": "llm",
+      "accessType": "api",
+      "cadence": "daily",
+      "quotaText": "Per model: 30 RPM / 1,000 requests per day / 200K tokens per day",
+      "claimUrl": "https://console.groq.com/",
+      "openaiCompat": true,
+      "region": "global",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [
+        "Limits are calculated per organization and per model"
+      ],
+      "steps": "Register on GroqCloud → create an API key → call open models such as gpt-oss and Qwen; speed is its selling point.",
+      "resetNote": "Per-model rate limits; resets daily",
+      "verifiedAt": "2026-11-08",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 17,
+      "slug": "gemini-free-tier",
+      "title": "Gemini API free tier",
+      "provider": "Google AI Studio",
+      "category": "llm",
+      "accessType": "api",
+      "cadence": "daily",
+      "quotaText": "Free tier for Gemini Flash and other models, 5–30 RPM / per-model daily caps",
+      "claimUrl": "https://aistudio.google.com/",
+      "openaiCompat": true,
+      "region": "global",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [
+        "Free-tier data may be used to improve Google products",
+        "Requires network access to Google"
+      ],
+      "steps": "Log in to AI Studio → create an API key → call Gemini Flash / Flash-Lite; long context up to 1M.",
+      "resetNote": "Resets daily; actual limits as shown in the AI Studio quota panel",
+      "verifiedAt": "2026-11-08",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 18,
+      "slug": "cloudflare-workers-ai",
+      "title": "Daily free Neurons",
+      "provider": "Cloudflare Workers AI",
+      "category": "llm",
+      "accessType": "api",
+      "cadence": "daily",
+      "quotaText": "10,000 Neurons per day",
+      "claimUrl": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+      "openaiCompat": true,
+      "region": "global",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [
+        "Some newer models require a payment method first"
+      ],
+      "steps": "Enable Cloudflare Workers AI → call per the docs; both free and paid plans include 10,000 Neurons per day.",
+      "resetNote": "Resets at 00:00 UTC (08:00 Beijing time)",
+      "verifiedAt": "2026-11-01",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 19,
+      "slug": "cerebras-trial",
+      "title": "Inference trial credits",
+      "provider": "Cerebras",
+      "category": "llm",
+      "accessType": "api",
+      "cadence": "once",
+      "quotaText": "$5 free credit, expires in 30 days",
+      "claimUrl": "https://freetokens.fyi/zh/offers",
+      "openaiCompat": true,
+      "region": "global",
+      "requirements": [
+        "Account",
+        "Card required"
+      ],
+      "risks": [
+        "Card required",
+        "No long-term free tier — don’t treat it as daily credits"
+      ],
+      "steps": "Register on Cerebras Inference → bind a payment method for verification → call public models once the $5 credit is issued.",
+      "resetNote": "One-time trial credit, expires 30 days after grant; daily cap 1M tokens",
+      "verifiedAt": "2026-10-27",
+      "sourceName": "freetokens.fyi · verified against official page",
+      "sourceUrl": "https://freetokens.fyi/zh/offers",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 20,
+      "slug": "novita-sandbox-credit",
+      "title": "New-user Sandbox promo credits",
+      "provider": "Novita AI",
+      "category": "llm",
+      "accessType": "api",
+      "cadence": "once",
+      "quotaText": "$100 promo credit, valid 90 days (Sandbox only)",
+      "claimUrl": "https://freetokens.fyi/zh/offers",
+      "openaiCompat": true,
+      "region": "global",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [
+        "Sandbox only — not a general balance"
+      ],
+      "steps": "Register on Novita AI → promo credits are issued automatically → call the full model catalog in the Sandbox environment.",
+      "resetNote": "One-time credit, usable only in the Novita Sandbox",
+      "verifiedAt": "2026-10-27",
+      "sourceName": "freetokens.fyi · verified against official page",
+      "sourceUrl": "https://freetokens.fyi/zh/offers",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 21,
+      "slug": "vercel-ai-gateway",
+      "title": "Free tier monthly credits",
+      "provider": "Vercel AI Gateway",
+      "category": "llm",
+      "accessType": "api",
+      "cadence": "monthly",
+      "quotaText": "$5 Gateway credits per month",
+      "claimUrl": "https://vercel.com/docs/ai-gateway/pricing",
+      "openaiCompat": true,
+      "region": "global",
+      "requirements": [
+        "Account",
+        "Card required"
+      ],
+      "risks": [
+        "Card required",
+        "Available models are a subset, with rate limits"
+      ],
+      "steps": "Enable AI Gateway with a Vercel team account → the monthly $5 free credits start counting after the first request.",
+      "resetNote": "Monthly cycle counted from the first Gateway request",
+      "verifiedAt": "2026-10-27",
+      "sourceName": "freetokens.fyi · verified against official page",
+      "sourceUrl": "https://freetokens.fyi/zh/offers",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 22,
+      "slug": "bilibili-index-translate",
+      "title": "Free public translation API",
+      "provider": "Bilibili Index-Translate",
+      "category": "llm",
+      "accessType": "api",
+      "cadence": "permanent",
+      "quotaText": "Call directly with no registration; no cap stated on the official site",
+      "claimUrl": "https://index-translate.bilibili.com/",
+      "openaiCompat": true,
+      "region": "cn",
+      "requirements": [],
+      "risks": [
+        "Translation only (150 languages) — not a general chat model"
+      ],
+      "steps": "Point the Base URL to index-translate.bilibili.com/v1 in OpenAI format, model name Index-Translate-35B-A3B; callable without a key.",
+      "resetNote": "Long-term free; no registration, no key needed",
+      "verifiedAt": "2026-11-03",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 23,
+      "slug": "qoder-daily-credits",
+      "title": "Daily credits in the desktop app",
+      "provider": "Qoder",
+      "category": "coding",
+      "accessType": "client",
+      "cadence": "daily",
+      "quotaText": "100 credits per day, each batch valid 30 days",
+      "claimUrl": "https://docs.qoder.com/zh/events/flashoffer",
+      "openaiCompat": false,
+      "region": "cn",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [
+        "Usable only inside the Qoder client"
+      ],
+      "steps": "Open the Qoder desktop app → claim today’s 100 credits at the campaign entry → each day’s batch is usable for 30 days.",
+      "resetNote": "Claim daily inside the Qoder desktop app",
+      "verifiedAt": "2026-10-27",
+      "sourceName": "freetokens.fyi · verified against official page",
+      "sourceUrl": "https://freetokens.fyi/zh/offers",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 24,
+      "slug": "workbuddy-monthly-500",
+      "title": "Trial edition free credits",
+      "provider": "WorkBuddy (Tencent)",
+      "category": "coding",
+      "accessType": "client",
+      "cadence": "monthly",
+      "quotaText": "500 credits/month, valid within the month, no rollover",
+      "claimUrl": "https://www.workbuddy.cn/",
+      "openaiCompat": false,
+      "region": "cn",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [
+        "Usable only inside the client"
+      ],
+      "steps": "Download WorkBuddy → log in with WeChat or a phone number → the trial edition gets 500 credits per month automatically.",
+      "resetNote": "Issued monthly; unused credits expire at month end",
+      "verifiedAt": "2026-10-28",
+      "sourceName": "freetokens.fyi · verified against official page",
+      "sourceUrl": "https://freetokens.fyi/zh/offers",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 25,
+      "slug": "workbuddy-hy4-limited",
+      "title": "Hunyuan Hy4 limited-time free access",
+      "provider": "WorkBuddy / CodeBuddy",
+      "category": "coding",
+      "accessType": "client",
+      "cadence": "daily",
+      "quotaText": "Free credits gifted daily, Nov 4–15",
+      "claimUrl": "https://www.workbuddy.cn/",
+      "openaiCompat": false,
+      "region": "cn",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [
+        "Limited-time campaign, ends Nov 15"
+      ],
+      "steps": "Download WorkBuddy or CodeBuddy → log in → pick “Hunyuan Hy4” in the model selector to use the free credits.",
+      "resetNote": "Gifted daily during the campaign; subscribers get more",
+      "verifiedAt": "2026-11-04",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": "2026-11-15",
+      "daysLeft": 6,
+      "status": "active"
+    },
+    {
+      "id": 26,
+      "slug": "codebuddy-newuser-250",
+      "title": "New-user credits",
+      "provider": "CodeBuddy (International)",
+      "category": "coding",
+      "accessType": "client",
+      "cadence": "once",
+      "quotaText": "250 credits on first login, valid 14 days",
+      "claimUrl": "https://freetokens.fyi/zh/offers",
+      "openaiCompat": false,
+      "region": "global",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [
+        "Usable only inside the app"
+      ],
+      "steps": "Register on CodeBuddy International → first login → 250 credits are issued automatically.",
+      "resetNote": "One-time new-user gift, expires after 14 days",
+      "verifiedAt": "2026-10-28",
+      "sourceName": "freetokens.fyi · verified against official page",
+      "sourceUrl": "https://freetokens.fyi/zh/offers",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 27,
+      "slug": "trae-daily-checkin",
+      "title": "Daily check-in credits",
+      "provider": "TRAE CN (ByteDance)",
+      "category": "coding",
+      "accessType": "client",
+      "cadence": "daily",
+      "quotaText": "100 per daily check-in + 500 per monthly login + 2,000 on registration",
+      "claimUrl": "https://freetokens.fyi/zh/offers",
+      "openaiCompat": false,
+      "region": "cn",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [
+        "Usable only inside the client"
+      ],
+      "steps": "Open TRAE CN → check in daily for 100 credits → use GLM and Seed series models for coding.",
+      "resetNote": "Check-in refreshes daily; invite credits also available",
+      "verifiedAt": "2026-10-27",
+      "sourceName": "freetokens.fyi · verified against official page",
+      "sourceUrl": "https://freetokens.fyi/zh/offers",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 28,
+      "slug": "kiro-student",
+      "title": "Student plan free for one year",
+      "provider": "Amazon Kiro",
+      "category": "coding",
+      "accessType": "client",
+      "cadence": "monthly",
+      "quotaText": "1,000 credits/month × 12 months, no rollover",
+      "claimUrl": "https://kiro.dev/students/",
+      "openaiCompat": false,
+      "region": "global",
+      "requirements": [
+        "Account",
+        "Student status",
+        "Real-name verification"
+      ],
+      "risks": [
+        "Students only, must be 18 or older",
+        "Schools not on the list can register interest"
+      ],
+      "steps": "Register on Kiro → pick your school under Settings → Students → verify student status via SheerID → 1,000 credits per month are issued.",
+      "resetNote": "Issued monthly, no rollover across months; no card required",
+      "verifiedAt": "2026-11-01",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 29,
+      "slug": "dify-sandbox",
+      "title": "Sandbox free-edition model message credits",
+      "provider": "Dify Cloud",
+      "category": "coding",
+      "accessType": "web",
+      "cadence": "once",
+      "quotaText": "200 model message credits + 5,000 API calls per month",
+      "claimUrl": "https://dify.ai/pricing",
+      "openaiCompat": false,
+      "region": "global",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [
+        "Credits are deducted by model type; flagship models cost more"
+      ],
+      "steps": "Register on Dify Cloud → Sandbox edition by default → use the 200 message credits to try OpenAI, Gemini, Qwen and other models to build apps.",
+      "resetNote": "Sandbox free edition by default on registration; bring your own key when credits run out",
+      "verifiedAt": "2026-11-04",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 30,
+      "slug": "tavily-monthly",
+      "title": "Search API free tier",
+      "provider": "Tavily",
+      "category": "search",
+      "accessType": "api",
+      "cadence": "monthly",
+      "quotaText": "1,000 API credits per month, no card required",
+      "claimUrl": "https://www.tavily.com/pricing",
+      "openaiCompat": false,
+      "region": "global",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [],
+      "steps": "Register on Tavily → get an API key in the console → plug web search and page extraction into your agent.",
+      "resetNote": "Resets on the 1st of each month",
+      "verifiedAt": "2026-11-01",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 31,
+      "slug": "firecrawl-free",
+      "title": "Scrape/search free tier",
+      "provider": "Firecrawl",
+      "category": "search",
+      "accessType": "api",
+      "cadence": "monthly",
+      "quotaText": "1,000 credits per month, no card required",
+      "claimUrl": "https://www.firecrawl.dev/pricing",
+      "openaiCompat": false,
+      "region": "global",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [],
+      "steps": "Register on Firecrawl → get an API key → use the scrape/search endpoints to feed web content to your agent.",
+      "resetNote": "Resets monthly; roughly 1,000 pages",
+      "verifiedAt": "2026-11-01",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 32,
+      "slug": "exa-starter",
+      "title": "Search API Starter free credits",
+      "provider": "Exa",
+      "category": "search",
+      "accessType": "api",
+      "cadence": "monthly",
+      "quotaText": "$10 per month + $10 signup gift, no card required",
+      "claimUrl": "https://exa.ai/pricing",
+      "openaiCompat": false,
+      "region": "global",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [],
+      "steps": "Click “Start for free” on the Exa pricing page → register and get an API key → credits offset search and content endpoints on a metered basis.",
+      "resetNote": "$10 credits per month, plus a $10 onboarding bonus on signup",
+      "verifiedAt": "2026-11-01",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 33,
+      "slug": "youcom-mcp-daily",
+      "title": "Web Search API (MCP) free daily",
+      "provider": "You.com",
+      "category": "search",
+      "accessType": "api",
+      "cadence": "daily",
+      "quotaText": "100 searches per day, no account, no key",
+      "claimUrl": "https://you.com/pricing",
+      "openaiCompat": false,
+      "region": "global",
+      "requirements": [],
+      "risks": [
+        "Overage billed at $5 per 1,000 searches"
+      ],
+      "steps": "Add the You.com MCP server to your AI client per the official docs → 100 free web searches per day, no registration.",
+      "resetNote": "Resets daily; called via the MCP server",
+      "verifiedAt": "2026-11-05",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 34,
+      "slug": "e2b-hobby",
+      "title": "Code sandbox Hobby credits",
+      "provider": "E2B",
+      "category": "compute",
+      "accessType": "api",
+      "cadence": "once",
+      "quotaText": "$100 one-time usage credits, no card required",
+      "claimUrl": "https://e2b.dev/pricing",
+      "openaiCompat": false,
+      "region": "global",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [],
+      "steps": "Click “Start for Free” on the E2B pricing page → register for Hobby → $100 sandbox credits are issued for running agent code.",
+      "resetNote": "One-time credits, until used up",
+      "verifiedAt": "2026-11-01",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 35,
+      "slug": "modal-starter",
+      "title": "Starter monthly free compute",
+      "provider": "Modal",
+      "category": "compute",
+      "accessType": "api",
+      "cadence": "monthly",
+      "quotaText": "$30 free credits per month",
+      "claimUrl": "https://modal.com/pricing",
+      "openaiCompat": false,
+      "region": "global",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [],
+      "steps": "Register on Modal → choose Starter → $30 compute credits per month take effect automatically; good for inference and batch jobs.",
+      "resetNote": "Issued monthly; overage billed at GPU/CPU list prices",
+      "verifiedAt": "2026-11-01",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 36,
+      "slug": "steel-launch",
+      "title": "Browser automation Launch credits",
+      "provider": "Steel",
+      "category": "browser",
+      "accessType": "api",
+      "cadence": "once",
+      "quotaText": "$30 one-time credits, no card required",
+      "claimUrl": "https://steel.dev/pricing",
+      "openaiCompat": false,
+      "region": "global",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [],
+      "steps": "Open the Steel pricing page → start the free Launch plan → $30 credits for agent browser sessions.",
+      "resetNote": "One-time credits, with concurrent session limits",
+      "verifiedAt": "2026-11-01",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 37,
+      "slug": "jina-free-key",
+      "title": "Free tokens with a new API key",
+      "provider": "Jina AI",
+      "category": "data",
+      "accessType": "api",
+      "cadence": "once",
+      "quotaText": "10M tokens per new key (shared across Reader/Embedding/Reranker)",
+      "claimUrl": "https://jina.ai/reader/",
+      "openaiCompat": false,
+      "region": "global",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [],
+      "steps": "Open Jina → get an API key → 10M free tokens are attached to the key automatically, usable for Reader web fetching and embedding models.",
+      "resetNote": "One-time credits; check balance under API Key & Billing",
+      "verifiedAt": "2026-11-01",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 38,
+      "slug": "voyage-free-embedding",
+      "title": "First embedding tokens free",
+      "provider": "Voyage AI",
+      "category": "data",
+      "accessType": "api",
+      "cadence": "once",
+      "quotaText": "First 200M embedding tokens per account free",
+      "claimUrl": "https://docs.voyageai.com/docs/pricing",
+      "openaiCompat": false,
+      "region": "global",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [],
+      "steps": "Register on Voyage (MongoDB account) → call voyage-4 series embedding models → the first 200M tokens are not billed.",
+      "resetNote": "One-time credits; 50M for some older models",
+      "verifiedAt": "2026-11-01",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 39,
+      "slug": "llamaparse-free",
+      "title": "Document parsing free tier",
+      "provider": "LlamaParse (LlamaIndex)",
+      "category": "data",
+      "accessType": "api",
+      "cadence": "monthly",
+      "quotaText": "10,000 credits per month",
+      "claimUrl": "https://www.llamaindex.ai/pricing",
+      "openaiCompat": false,
+      "region": "global",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [],
+      "steps": "Click “Start for free” on the pricing page → register → 10,000 credits per month for parsing PDFs/documents for your agent.",
+      "resetNote": "Resets monthly; basic parsing from 1 credit/page",
+      "verifiedAt": "2026-11-01",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 40,
+      "slug": "pinecone-inference-starter",
+      "title": "Inference Starter free credits",
+      "provider": "Pinecone",
+      "category": "data",
+      "accessType": "api",
+      "cadence": "monthly",
+      "quotaText": "5M embedding tokens per model per month + 500 reranks/month",
+      "claimUrl": "https://www.pinecone.io/pricing/",
+      "openaiCompat": false,
+      "region": "global",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [],
+      "steps": "Click “Start for Free” to open Starter → call inference models such as llama-text-embed-v2; monthly free credits offset automatically.",
+      "resetNote": "Issued monthly, separately per model",
+      "verifiedAt": "2026-11-01",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 41,
+      "slug": "deepgram-signup",
+      "title": "Speech API signup credits",
+      "provider": "Deepgram",
+      "category": "speech",
+      "accessType": "api",
+      "cadence": "once",
+      "quotaText": "$200 free credits, no card required, never expire",
+      "claimUrl": "https://deepgram.com/pricing",
+      "openaiCompat": false,
+      "region": "global",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [],
+      "steps": "Open the Deepgram pricing page → register for free → $200 credits are issued for STT/TTS/Voice Agent.",
+      "resetNote": "One-time credits, never expire; roughly hundreds of hours of transcription",
+      "verifiedAt": "2026-11-01",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 42,
+      "slug": "assemblyai-signup",
+      "title": "Speech transcription signup credits",
+      "provider": "AssemblyAI",
+      "category": "speech",
+      "accessType": "api",
+      "cadence": "once",
+      "quotaText": "$50 free credits, no card required",
+      "claimUrl": "https://www.assemblyai.com/pricing",
+      "openaiCompat": false,
+      "region": "global",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [],
+      "steps": "Open the AssemblyAI pricing page → register and get an API key → $50 credits for transcription and Speech Understanding.",
+      "resetNote": "One-time credits; lower concurrency on the free tier",
+      "verifiedAt": "2026-11-01",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 43,
+      "slug": "nebius-builder",
+      "title": "Builder bundle credits",
+      "provider": "Nebius AI Builder Program",
+      "category": "compute",
+      "accessType": "api",
+      "cadence": "once",
+      "quotaText": "$25 inference credits + $25 Tavily + $100 LangSmith, etc.",
+      "claimUrl": "https://dev.nebius.com/builders",
+      "openaiCompat": true,
+      "region": "global",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [
+        "Credits are mainly for learning, testing, and experiments"
+      ],
+      "steps": "Open the Nebius Builder page → fill in the form to join for free → verify your email → claim inference, search, LangSmith and other partner credits in the dashboard.",
+      "resetNote": "One-time bundle; claim each item in the dashboard after email verification",
+      "verifiedAt": "2026-11-05",
+      "sourceName": "Lanlan repo · verified against official page",
+      "sourceUrl": "https://llck.top/free",
+      "endsAt": null,
+      "daysLeft": null,
+      "status": "active"
+    }
+  ]
+}

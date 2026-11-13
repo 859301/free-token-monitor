@@ -1,0 +1,292 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-13",
+    "count": 9,
+    "language": "en",
+    "sources": [
+      "Vendor official pages (verified item by item)",
+      "InstaBox official pricing docs: https://instabox.sh/docs/pricing.md"
+    ],
+    "note": "Specs and terms transcribed from vendor official pages; fields the official page does not state are written as “Check the official page”, never invented. Check the official page before claiming. Text translated from data/vps.json; all facts identical."
+  },
+  "offers": [
+    {
+      "id": 1,
+      "slug": "oracle-always-free",
+      "title": "Always Free cloud servers (Oracle Cloud)",
+      "provider": "Oracle Cloud",
+      "category": "vps",
+      "group": "always-free",
+      "specText": "Ampere A1 (Arm): first 1,500 OCPU hours + 9,000 GB hours per month (equivalent to 2 OCPU / 12 GB RAM for Always Free tenants); up to 2 VM.Standard.E2.1.Micro (AMD) instances; 200 GB block storage; 10 TB outbound traffic per month; plus a US$300 trial credit (30 days)",
+      "durationText": "Always Free has no fixed end date (while the account stays active); the US$300 trial credit lasts up to 30 days or until used up",
+      "cardRequired": true,
+      "cardNote": "Registration requires a credit/debit card for identity verification; temporary authorization holds are made periodically and usually released by the bank within 3–5 days. Debit cards with a PIN, virtual cards, single-use cards, and prepaid cards are not accepted.",
+      "regions": "Always Free compute instances can only be created in the home region; the A1 shape is not available in South Korea North (Chuncheon); Free Tier is available in all commercial OCI regions.",
+      "risks": [
+        "Idle reclaim: instances may be reclaimed if CPU 95th-percentile utilization is below 20%, network utilization below 20%, and memory utilization below 20% over 7 days (A1 shapes only)",
+        "Out of host capacity: if Always Free capacity in the home region is exhausted, change availability domain or wait — the official FAQ says it may take several days",
+        "Accounts idle for more than 30 days may be considered abandoned and suspended or terminated",
+        "A1 instances above the Always Free limits are stopped when the trial ends and deleted after 30 days (unless upgraded to a paid account)",
+        "Disputed: whether PAYG accounts get 4 OCPU / 24 GB free — the official docs state the 1,500/9,000 hours apply to all tenants; do not treat it as a promise",
+        "No SLA; customers using only Always Free resources cannot get Oracle technical support"
+      ],
+      "steps": "Register on the Oracle Cloud Free Tier official page → provide a credit/debit card for identity verification → choose a home region → create an A1 Flex instance (within 2 OCPU / 12 GB) or an E2.1.Micro instance in the home region → configure SSH keys and security rules, then use it.",
+      "claimUrl": "https://www.oracle.com/cloud/free/",
+      "verifiedAt": "2026-11-12",
+      "sourceName": "Oracle official docs · verified against official page",
+      "sourceUrl": "https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm",
+      "status": "active",
+      "flags": [
+        "disputed-payg-4c24g",
+        "idle-reclaim",
+        "capacity-shortage"
+      ],
+      "notes": "The official docs page is marked Updated 2026-06-12; since June 2026 the Always Free A1 allowance is 2 OCPU / 12 GB — the 4 OCPU / 24 GB in older tutorials no longer applies to Always Free tenants."
+    },
+    {
+      "id": 2,
+      "slug": "gcp-free-tier",
+      "title": "Google Cloud Free Tier: e2-micro free forever + $300 trial",
+      "provider": "Google Cloud",
+      "category": "vps",
+      "group": "always-free",
+      "specText": "1 non-preemptible e2-micro VM per month; 30 GB-months of standard persistent disk; 1 GB outbound traffic per month from North America to all destinations (excluding China/Australia); plus a $300 welcome credit (90 days)",
+      "durationText": "The Free Tier has no end date (Google reserves the right to change or discontinue it with 30 days’ notice); the $300 trial lasts 90 days",
+      "cardRequired": true,
+      "cardNote": "A credit card or other payment method must be provided when signing up for the trial; a temporary hold of $0.00–$1.00, not an actual charge. Using the Free Tier requires a valid Cloud Billing account.",
+      "regions": "Free e2-micro is limited to three US regions: us-west1 (Oregon), us-central1 (Iowa), us-east1 (South Carolina); usage is combined across the three regions.",
+      "risks": [
+        "Unused Free Tier limits do not roll over to the next month",
+        "Trial ends without upgrade: resources stop and are permanently deleted after a 30-day grace period",
+        "During the trial you cannot add GPUs, use Marketplace, or create Windows Server image instances",
+        "$300 credit cannot pay for Gemini API fees in AI Studio; from November 16, 2026 it also cannot pay for Gemini platform service fees",
+        "The e2-micro vCPU count is not stated in the official Free Tier table — check the official page"
+      ],
+      "steps": "Sign up for the Google Cloud free trial → provide a payment method for verification → create an e2-micro instance in one of the three free regions (within 30 GB standard disk) → watch the outbound traffic limit.",
+      "claimUrl": "https://cloud.google.com/free",
+      "verifiedAt": "2026-11-12",
+      "sourceName": "Google Cloud official docs · verified against official page",
+      "sourceUrl": "https://cloud.google.com/free/docs/free-cloud-features",
+      "status": "active",
+      "flags": [
+        "region-restricted",
+        "egress-1gb"
+      ],
+      "notes": "Free Tier e2-micro limits are calculated by time, not instance count: total free hours across all e2-micro instances per month must not exceed the month’s total hours."
+    },
+    {
+      "id": 3,
+      "slug": "aws-free-tier",
+      "title": "AWS Free Tier: up to $200 credits / 6 months (new accounts)",
+      "provider": "Amazon Web Services (AWS)",
+      "category": "vps",
+      "group": "trial",
+      "specText": "Up to $200 in AWS credits: $100 on signup + up to $100 more for exploring foundational services; 30+ always-free services; no fixed free EC2 VM (EC2 usage is deducted from credits)",
+      "durationText": "Up to 6 months, or until credits run out (whichever comes first); cannot be extended",
+      "cardRequired": false,
+      "cardNote": "Per the official FAQ: most new customers do not need a payment method to sign up; in some cases payment information may be required to verify identity.",
+      "regions": "Credits apply globally; China (Ningxia/Beijing) regions and GovCloud regions are not available (with exceptions for individual services).",
+      "risks": [
+        "New accounts only: no eligibility if you have or have had an AWS account",
+        "After the free plan expires the account is suspended, data is kept for 90 days, then permanently deleted if not upgraded",
+        "The official FAQ gives two wordings for credit expiry — 6 months and 12 months (see the detail page); go by the official page and billing page",
+        "The free plan only covers some services; joining Organizations or setting up Control Tower removes eligibility to earn extra credits"
+      ],
+      "steps": "Create an AWS account online (joins the free plan automatically) → complete activities in the Explore AWS widget on the console home page to earn the extra $100 → use credits for EC2 and other services → check remaining credits and days in the console.",
+      "claimUrl": "https://aws.amazon.com/free/",
+      "verifiedAt": "2026-11-12",
+      "sourceName": "AWS official FAQ · verified against official page",
+      "sourceUrl": "https://aws.amazon.com/free/free-tier-faqs/",
+      "status": "active",
+      "flags": [
+        "credit-expiry-wording-conflict",
+        "no-fixed-free-vm"
+      ],
+      "notes": "The old 12-month free EC2 plan is no longer offered to new accounts; this page only describes the credit model."
+    },
+    {
+      "id": 4,
+      "slug": "azure-free-account",
+      "title": "Azure free account: $200 credit + 750 VM hours / 12 months",
+      "provider": "Microsoft Azure",
+      "category": "vps",
+      "group": "trial",
+      "specText": "$200 credit; B1s, B2pts v2 (Arm), and B2ats v2 (AMD) burstable VMs, 750 hours each per month (Linux or Windows); monthly free amounts for 20+ popular services + 65+ always-free services",
+      "durationText": "$200 credit: 30 days; VM and service free amounts: 12 months (new customers only)",
+      "cardRequired": true,
+      "cardNote": "Registration requires a phone number + credit/debit card (not prepaid) for identity verification; a temporary $1 (or equivalent) authorization may appear and is released after verification. Hong Kong and Brazil accept credit cards only.",
+      "regions": "Per-region VM availability is not stated on the official page — check the official page.",
+      "risks": [
+        "You must switch to pay-as-you-go within 30 days or after credits run out, or you cannot keep receiving the 12 months of free services; without switching, the account and services are disabled",
+        "After 12 months, services in use keep running and are billed at pay-as-you-go prices",
+        "Free amounts for VM disks/IPs/outbound traffic are not stated on the official page — check the official page",
+        "One free account per new customer"
+      ],
+      "steps": "Register for an Azure free account → complete phone and card verification → use the $200 credit within 30 days → switch to pay-as-you-go to keep receiving 12 months of free amounts → check free service usage monthly in the portal.",
+      "claimUrl": "https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account/",
+      "verifiedAt": "2026-11-12",
+      "sourceName": "Microsoft Azure official page · verified against official page",
+      "sourceUrl": "https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account/",
+      "status": "active",
+      "flags": [
+        "requires-payg-upgrade",
+        "disk-ip-egress-unstated"
+      ],
+      "notes": "$200 credit cannot be used for Azure Marketplace; after switching to pay-as-you-go, remaining credit stays usable within 30 days."
+    },
+    {
+      "id": 5,
+      "slug": "azure-for-students",
+      "title": "Azure for Students: $100 credit / 12 months, no credit card",
+      "provider": "Microsoft Azure",
+      "category": "vps",
+      "group": "student",
+      "specText": "$100 Azure credit (use within 12 months) + some free services (service content may change)",
+      "durationText": "12 months; the subscription is disabled when credits run out",
+      "cardRequired": false,
+      "cardNote": "No credit card needed to register.",
+      "regions": "The official offer details page does not state region limits — check the official page.",
+      "risks": [
+        "Only for students aged 18+ enrolled full-time at an accredited two-year/four-year degree-granting institution; academic status must be verified with a school organization email",
+        "One subscription per customer; MOOCs and for-profit vocational training are not eligible",
+        "Credits cannot be used for support plans, DevOps, Marketplace products, etc.",
+        "Unused credits do not roll over to the next month and cannot be transferred; activation spots are limited, first come first served"
+      ],
+      "steps": "Apply on the Azure for Students official page → verify student status with a school organization email → receive $100 credit → use it within 12 months.",
+      "claimUrl": "https://azure.microsoft.com/en-us/pricing/offers/ms-azr-0170p",
+      "verifiedAt": "2026-11-12",
+      "sourceName": "Microsoft Azure official offer details page · verified against official page",
+      "sourceUrl": "https://azure.microsoft.com/en-us/pricing/offers/ms-azr-0170p",
+      "status": "active",
+      "flags": [
+        "no-card",
+        "student-only"
+      ],
+      "notes": "The only credit offer among the verified offers on this site that explicitly requires no credit card."
+    },
+    {
+      "id": 6,
+      "slug": "aliyun-ecs-trial",
+      "title": "Alibaba Cloud ECS free trial: ¥300 personal / ¥660 enterprise, 3-month credit model",
+      "provider": "Alibaba Cloud",
+      "category": "vps",
+      "group": "trial",
+      "specText": "Personal edition: ¥300 total credits; Enterprise edition: ¥660 total credits; credit model: constrained simultaneously by total credits, hourly offset cap, and validity period",
+      "durationText": "3-month validity",
+      "cardRequired": null,
+      "cardNote": "The campaign page body does not state card requirements; the page shows cards by account real-name verification type — eligibility and details as shown on the cards after login and on the official page.",
+      "regions": "Available regions are not listed in the campaign page body — go by the cards shown after login and the official page.",
+      "risks": [
+        "Costs exceeding the hourly offset cap, exhausted total credits, expired validity, or resources outside the offset scope are billed pay-as-you-go",
+        "Instances are not auto-released when the trial expires; the system sends reminders before expiry; ignoring them may lead to continued billing",
+        "Personal and Enterprise benefits are not shared; hourly offset cap, public traffic allowance, and max specs are as shown on the cards after login",
+        "Help Center rules mention new compute-product users only; eligibility per the official page"
+      ],
+      "steps": "Open the Alibaba Cloud ECS free trial campaign page → log in and complete real-name verification → claim the matching edition per the displayed card → create an ECS instance within the validity period → watch credits and expiry reminders.",
+      "claimUrl": "https://www.aliyun.com/activity/ecs/ecs/freetrial",
+      "verifiedAt": "2026-11-12",
+      "sourceName": "Alibaba Cloud official campaign page · verified against official page",
+      "sourceUrl": "https://www.aliyun.com/activity/ecs/ecs/freetrial",
+      "status": "active",
+      "flags": [
+        "card-level-details-unstated",
+        "not-auto-released"
+      ],
+      "notes": "Hourly offset cap, public traffic allowance, max specs, and the region list appear only in the official page’s search snippet and community articles, not verified in the campaign page body, so this site does not list them as verified terms. The Alibaba Cloud student ¥300 coupon was not verified on an official offer page and is not listed as a verified offer."
+    },
+    {
+      "id": 7,
+      "slug": "tencent-free-trial",
+      "title": "Tencent Cloud Free Trial Center: Lighthouse/CVM 1 month + BF1 7 days",
+      "provider": "Tencent Cloud",
+      "category": "vps",
+      "group": "trial",
+      "specText": "Lighthouse: 2C2G 3Mbps 40GB + 200GB traffic pack (personal) / 4C8G 12Mbps 180GB + 2000GB traffic pack (enterprise, daily limited) / 2C4G 5Mbps 60GB + 500GB traffic pack (both); CVM: 2C2G 3Mbps 50GB / 2C4G 3Mbps 50GB; CVM BF1: 2C4G 3M 50GB / 4C8G 3M 50GB",
+      "durationText": "Lighthouse/CVM: 1 month; CVM BF1: 7 days",
+      "cardRequired": null,
+      "cardNote": "The campaign page body does not state card requirements — check the official page.",
+      "regions": "The campaign page body does not state regions — check the official page.",
+      "risks": [
+        "Product new users only: accounts that have purchased or trialed the product (including other accounts under the same real-name verification entity) cannot join",
+        "Daily limited, first come first served; submitting an order without payment occupies a trial slot",
+        "Card specs change; go by the current cards on the campaign page",
+        "For ICP filing, the server must be on a monthly plan of 3+ months with at least 1 month of validity remaining during filing",
+        "Do not mix up the China site and international site trial terms"
+      ],
+      "steps": "Open the Tencent Cloud Free Trial Center → filter cards by personal/enterprise verification → claim a Lighthouse/CVM/BF1 card → use it within the trial period → renew in the console before expiry (CVM renewal from 35% off).",
+      "claimUrl": "https://cloud.tencent.com/act/pro/free",
+      "verifiedAt": "2026-11-12",
+      "sourceName": "Tencent Cloud official campaign page · verified against official page",
+      "sourceUrl": "https://cloud.tencent.com/act/pro/free",
+      "status": "active",
+      "flags": [
+        "per-card-specs",
+        "daily-limited",
+        "product-new-user-only"
+      ],
+      "notes": "Specs are as written on the campaign page cards; cards change. The international site (tencentcloud.com) has different terms; this page covers the China site only."
+    },
+    {
+      "id": 8,
+      "slug": "kamatera-trial",
+      "title": "Kamatera 30-day trial: 1 server, up to $100 configuration (credit card required)",
+      "provider": "Kamatera",
+      "category": "vps",
+      "group": "trial",
+      "specText": "Within 30 days, create 1 server with configuration costs up to $100; 1 TB free traffic (inbound + outbound); no fixed vCPU/RAM specs (choose your own configuration)",
+      "durationText": "30 days; billing starts if not cancelled at expiry",
+      "cardRequired": true,
+      "cardNote": "A valid credit card is required to start the trial; no charges within the limits.",
+      "regions": "The official FAQ page does not state the data center list — check the official page.",
+      "risks": [
+        "This is a trial, not permanently free: terminate the server to cancel before expiry, or usage-based billing starts",
+        "Trial limited to 1 server",
+        "Claims of an ~$2 verification charge do not appear in the official FAQ — check the official page"
+      ],
+      "steps": "Open the Kamatera free trial FAQ page → provide a valid credit card to start the trial → create 1 server with up to $100 configuration → terminate the server to cancel before the 30 days end.",
+      "claimUrl": "https://www.kamatera.com/faq/answer/what-are-the-terms-of-the-free-trial/",
+      "verifiedAt": "2026-11-12",
+      "sourceName": "Kamatera official FAQ · verified against official page",
+      "sourceUrl": "https://www.kamatera.com/faq/answer/what-are-the-terms-of-the-free-trial/",
+      "status": "active",
+      "flags": [
+        "trial-only",
+        "auto-charges-if-not-cancelled"
+      ],
+      "notes": "An independent vendor trial, listed separately from the cloud vendors’ free tiers above."
+    },
+    {
+      "id": 9,
+      "slug": "instabox",
+      "title": "InstaBox free tier: 1 sandbox machine with 4 vCPU / 8 GB (not a traditional VPS)",
+      "provider": "InstaBox",
+      "category": "vps",
+      "group": "sandbox",
+      "specText": "Free tier: 1 machine with 4 vCPU / 8 GiB (Firecracker microVM, Debian 13), 20 GiB persistent disk, 5 snapshots, 100 GiB outbound traffic per month (inbound free); default template agent-browser (Debian, Docker, Node, Bun, Python, Go, Rust, OpenJDK 21, desktop + Chromium)",
+      "durationText": "Free tier has no fixed end date (the official blog commits to keeping the free tier; pricing is v1 and may change); auto-pauses after 30 minutes idle; max single run 120 minutes (grows with use to 480 minutes)",
+      "cardRequired": null,
+      "cardNote": "The official pricing docs do not state card requirements — check the official page.",
+      "regions": "The official pricing docs do not state data center regions; external access is via public HTTPS links published per port; a dedicated inbound IPv4 does not appear in the official docs.",
+      "risks": [
+        "Beta product (launched 2026-10-14); pricing is v1 and may change",
+        "Early accounts keep 5 free sandboxes until 2026-12-01; after that only 1 per account can run at a time (others paused, not deleted)",
+        "Max single run 120 minutes (grows with use to 480 minutes); not suitable for 24/7 always-on use",
+        "Not a traditional VPS: no dedicated inbound IPv4 (not in official docs); external access via public HTTPS links published per port",
+        "Pause, stop, and restart preserve the /data disk; only deleting the machine wipes data"
+      ],
+      "steps": "Open the InstaBox official pricing page → register an account → create 1 free sandbox machine (4 vCPU / 8 GiB) → use it via CLI, API, SSH, or desktop; auto-pauses after 30 minutes idle and resumes in under 1 second.",
+      "claimUrl": "https://instabox.sh/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "InstaBox official pricing docs · verified against official page",
+      "sourceUrl": "https://instabox.sh/docs/pricing.md",
+      "status": "active",
+      "flags": [
+        "beta",
+        "sandbox-not-vps",
+        "pause-30min",
+        "grandfathering-ends-2026-12-01"
+      ],
+      "notes": "Free tier pricing appears in the official blog (2026-10-19) and pricing docs; “invite-only beta” and “no inbound IPv4” claims appear only in third-party sources, not verified on official pages, so this site does not list them as verified terms."
+    }
+  ]
+}

@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-13",
+    "count": 4,
+    "language": "en",
+    "sources": [
+      "https://www.racknerd.com/specials",
+      "https://www.racknerd.com/kvm-vps",
+      "https://hosteons.com/kvm_vps.php",
+      "https://hosteons.com/ryzen_premium_vps.php",
+      "https://www.digitalocean.com/pricing/droplets"
+    ],
+    "note": "Cheap section: standing prices only (standing plan page + no end date + renewal terms stated or list price). 3 vendors live + 1 sold-out watch (Hetzner CX23, not on sale). renewalStatus values: stated-same-rate (official page states same-rate renewal) / list-price (list price, monthly cap) / unknown (not stated on the page). riskLevel: low / medium / high. plans arrays transcribe the vendor plan tables; annual totals are labelled conversions. Text translated from data/cheap.json; all facts identical."
+  },
+  "offers": [
+    {
+      "id": "racknerd-specials",
+      "slug": "racknerd-specials",
+      "title": "RackNerd VPS Specials: $21.99–$119.99/year (lifetime same-rate renewal)",
+      "provider": "RackNerd",
+      "category": "cheap",
+      "group": "annual-specials",
+      "specText": "KVM VPS, 1–7 vCPU, 1–8 GB RAM, 20–150 GB SSD, 3–20 TB transfer, 1 Gbps port, 1 IPv4, full root access, ctrl panel.",
+      "durationText": "Annual billing; official FAQ: lifetime same-rate renewal.",
+      "cardRequired": null,
+      "cardNote": "The plan page does not state payment method requirements — go by the checkout page.",
+      "regions": "Multiple locations (the page only says “deploy in multiple locations”; specific locations as shown at order time)",
+      "risks": [
+        "The location list does not appear on the Specials page; available locations as shown at order time",
+        "Refund terms do not appear on the Specials page — go by the official terms",
+        "Unmanaged VPS; you manage it yourself"
+      ],
+      "steps": [
+        "Open the RackNerd official Specials page and confirm the current plans and prices.",
+        "Choose a plan and location; instant setup after ordering.",
+        "Manage via the ctrl panel or SSH; install one-click apps in ctrl if needed."
+      ],
+      "claimUrl": "https://www.racknerd.com/specials",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "RackNerd VPS Specials page",
+      "sourceUrl": "https://www.racknerd.com/specials",
+      "status": "live",
+      "flags": [
+        "lifetime-recurring",
+        "locations-unspecified"
+      ],
+      "notes": "Plan ladder and lifetime same-rate renewal FAQ verified 2026-11-13 on the official Specials page; the catalog page (kvm-vps) has higher prices — Specials and catalog prices differ, see the detail page comparison.",
+      "priceText": "$21.99–$119.99/year",
+      "validityText": "Standing prices, no end date",
+      "riskLevel": "low",
+      "renewalText": "Lifetime same-rate renewal (official FAQ wording: “lifetime recurring”, “renew at the same rate”)",
+      "renewalStatus": "stated-same-rate",
+      "taskBurden": "none",
+      "codeRequired": false,
+      "locations": "Multiple locations (no specific cities listed on the page)",
+      "plans": [
+        {
+          "name": "1 GB KVM VPS",
+          "price": "$21.99/year",
+          "cpu": "1 vCPU",
+          "ram": "1 GB",
+          "disk": "20 GB SSD",
+          "transfer": "3 TB/month"
+        },
+        {
+          "name": "2 GB KVM VPS",
+          "price": "$35.99/year",
+          "cpu": "2 vCPU",
+          "ram": "2 GB",
+          "disk": "35 GB SSD",
+          "transfer": "5 TB/month"
+        },
+        {
+          "name": "4 GB KVM VPS",
+          "price": "$59.99/year",
+          "cpu": "3 vCPU",
+          "ram": "4 GB",
+          "disk": "60 GB SSD",
+          "transfer": "7 TB/month"
+        },
+        {
+          "name": "6 GB KVM VPS",
+          "price": "$89.99/year",
+          "cpu": "6 vCPU",
+          "ram": "6 GB",
+          "disk": "100 GB SSD",
+          "transfer": "12 TB/month"
+        },
+        {
+          "name": "8 GB KVM VPS",
+          "price": "$119.99/year",
+          "cpu": "7 vCPU",
+          "ram": "8 GB",
+          "disk": "150 GB SSD",
+          "transfer": "20 TB/month"
+        }
+      ]
+    },
+    {
+      "id": "hosteons",
+      "slug": "hosteons",
+      "title": "HostEONS: from $21/year (renewal price not stated)",
+      "provider": "HostEONS",
+      "category": "cheap",
+      "group": "annual-specials",
+      "specText": "Two plan tables: Gigabit VPS (from $21/year, 1 fair-share core, 1 GB, 10 GB, 1 TB) and Ryzen Premium (from $24/year, 1 core 3.5GHz+ fair-share, 512 MB, 10 GB NVMe, 500 GB). 6 US locations, 1 IPv4, free IPv6.",
+      "durationText": "Annual billing (entry plans) and monthly billing (other tiers); renewal price not stated on the page.",
+      "cardRequired": null,
+      "cardNote": "The plan pages do not state payment method requirements; payment icons shown on the page include Alipay, UnionPay, PayPal, Bitcoin, credit cards, and wire transfer.",
+      "regions": "Los Angeles, Salt Lake City, Portland, New York, Miami, Dallas (plan table wording); the footer also lists 8 data centers including Frankfurt (Dallas appears twice) — Frankfurt does not appear in the plan tables and is unverified",
+      "risks": [
+        "Renewal price does not appear on either plan page — do not assume renewal at the first-year price; confirm on the checkout page before buying",
+        "CPU is fair share, not dedicated",
+        "The footer Frankfurt location claim is inconsistent with the plan tables (6 US cities in the tables) and is unverified"
+      ],
+      "steps": [
+        "Open the HostEONS official plan pages and confirm the current plans and prices.",
+        "Confirm the renewal price and billing period on the checkout page before ordering.",
+        "Manage via the VPS control panel (reboot, reinstall, VNC, custom ISO)."
+      ],
+      "claimUrl": "https://hosteons.com/kvm_vps.php",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "HostEONS KVM VPS page and Ryzen Premium page",
+      "sourceUrl": "https://hosteons.com/kvm_vps.php",
+      "status": "live",
+      "flags": [
+        "renewal-unknown",
+        "fair-share",
+        "frankfurt-unverified"
+      ],
+      "notes": "Both plan tables verified 2026-11-13 on the official pages; neither page states a renewal price, so this site does not assume same-rate renewal. Payment methods per the icons shown on the page.",
+      "priceText": "From $21/year (Gigabit VPS 1); from $24/year (Ryzen 512 MB)",
+      "validityText": "Standing prices, no end date; renewal price not stated",
+      "riskLevel": "medium",
+      "renewalText": "Renewal price not stated on the page — go by the checkout page",
+      "renewalStatus": "unknown",
+      "taskBurden": "none",
+      "codeRequired": false,
+      "locations": "Los Angeles, Salt Lake City, Portland, New York, Miami, Dallas",
+      "plans": [
+        {
+          "name": "Gigabit VPS 1",
+          "price": "$21/year",
+          "cpu": "1 core (fair share)",
+          "ram": "1 GB",
+          "disk": "10 GB",
+          "transfer": "1 TB/month"
+        },
+        {
+          "name": "Gigabit VPS 2",
+          "price": "$4/month",
+          "cpu": "2 cores (fair share)",
+          "ram": "1.5 GB",
+          "disk": "20 GB",
+          "transfer": "2 TB/month"
+        },
+        {
+          "name": "Gigabit VPS 3",
+          "price": "$5/month",
+          "cpu": "2 cores (fair share)",
+          "ram": "2 GB",
+          "disk": "25 GB",
+          "transfer": "3 TB/month"
+        },
+        {
+          "name": "RYZEN 512 MB",
+          "price": "$24/year",
+          "cpu": "1 core 3.5GHz+ (fair share)",
+          "ram": "512 MB",
+          "disk": "10 GB NVMe",
+          "transfer": "500 GB/month"
+        },
+        {
+          "name": "RYZEN 1 GB",
+          "price": "$4/month",
+          "cpu": "1 core 3.5GHz+ (fair share)",
+          "ram": "1 GB",
+          "disk": "15 GB NVMe",
+          "transfer": "1 TB/month"
+        },
+        {
+          "name": "RYZEN 2 GB",
+          "price": "$8/month",
+          "cpu": "2 cores 3.5GHz+ (fair share)",
+          "ram": "2 GB",
+          "disk": "30 GB NVMe",
+          "transfer": "2 TB/month"
+        }
+      ]
+    },
+    {
+      "id": "digitalocean-basic",
+      "slug": "digitalocean-basic",
+      "title": "DigitalOcean Basic Droplets: from $4/month (monthly cap)",
+      "provider": "DigitalOcean",
+      "category": "cheap",
+      "group": "monthly-capped",
+      "specText": "Basic Droplets (shared CPU): 512 MiB $4.00/month (1 vCPU, 10 GiB, 500 GiB); 1 GiB $6.00/month (1 vCPU, 25 GiB, 1,000 GiB). Per-second billing (from January 1, 2026), monthly cap.",
+      "durationText": "Monthly-capped list prices, no end date; pay for what you use, never above the monthly cap.",
+      "cardRequired": null,
+      "cardNote": "The pricing page does not state payment method requirements — go by the official page.",
+      "regions": "Data center regions do not appear on the pricing page — go by the console",
+      "risks": [
+        "Basic is shared CPU, suited to bursty loads, not workloads needing sustained dedicated CPU",
+        "Backups and snapshots cost extra: backups 20% of Droplet cost (weekly) / 30% (daily), snapshots $0.06/GB/month",
+        "Data center regions do not appear on the pricing page"
+      ],
+      "steps": [
+        "Open the DigitalOcean official Droplet pricing page and confirm the current prices.",
+        "In the console, choose a Basic plan, region, and OS to create a Droplet.",
+        "Enable backups as needed; note backups and snapshots cost extra."
+      ],
+      "claimUrl": "https://www.digitalocean.com/pricing/droplets",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "DigitalOcean Droplet pricing page",
+      "sourceUrl": "https://www.digitalocean.com/pricing/droplets",
+      "status": "live",
+      "flags": [
+        "monthly-cap",
+        "per-second-billing",
+        "regions-unspecified"
+      ],
+      "notes": "Basic plan table, per-second billing, and monthly-cap rules verified 2026-11-13 on the official pricing page; 12-month conversions ($48/year, $72/year) are this site’s calculations from the monthly cap prices, labelled as such.",
+      "priceText": "From $4.00/month (512 MiB); $6.00/month (1 GiB)",
+      "validityText": "Standing list prices, no end date",
+      "riskLevel": "low",
+      "renewalText": "Monthly cap price (list price), no intro discount; monthly bill never exceeds the cap",
+      "renewalStatus": "list-price",
+      "taskBurden": "none",
+      "codeRequired": false,
+      "locations": "Not stated on the pricing page",
+      "plans": [
+        {
+          "name": "Basic 512MiB",
+          "price": "$4.00/month ($0.00595/hour)",
+          "cpu": "1 vCPU",
+          "ram": "512 MiB",
+          "disk": "10 GiB SSD",
+          "transfer": "500 GiB/month"
+        },
+        {
+          "name": "Basic 1GiB",
+          "price": "$6.00/month ($0.00893/hour)",
+          "cpu": "1 vCPU",
+          "ram": "1 GiB",
+          "disk": "25 GiB SSD",
+          "transfer": "1,000 GiB/month"
+        },
+        {
+          "name": "Basic 2GiB",
+          "price": "$12.00/month",
+          "cpu": "1 vCPU",
+          "ram": "2 GiB",
+          "disk": "50 GiB SSD",
+          "transfer": "2,000 GiB/month"
+        }
+      ]
+    },
+    {
+      "id": "hetzner-cx23-watch",
+      "slug": "hetzner-cx23-watch",
+      "title": "Hetzner CX23 sold-out watch (not on sale)",
+      "provider": "Hetzner",
+      "category": "cheap",
+      "group": "watch",
+      "specText": "CX23: third-party reading €5.49/month (excl. tax) + €0.50 IPv4 surcharge, not verified on an official page; every check in Sep–Nov 2026 showed sold out (third-party dated checks).",
+      "durationText": "Sold-out watch, not on sale; no purchasable price.",
+      "cardRequired": null,
+      "cardNote": "Not verified.",
+      "regions": "Not verified",
+      "risks": [
+        "Price and specs appear only in third-party readings, not verified on an official page — this site does not adopt them as current prices",
+        "Long-term sold out; restock time unknown",
+        "Hetzner prices were adjusted on June 15, 2026 (third-party claim); historical prices do not represent current prices"
+      ],
+      "steps": [
+        "This entry is a sold-out watch; nothing to buy.",
+        "For a Hetzner trial credit, see the Hetzner €50 credit in the Deals section (valid in the current month).",
+        "After restock, go by the Hetzner official cloud server page."
+      ],
+      "claimUrl": "",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Third-party dated stock checks (not verified on an official page)",
+      "sourceUrl": "",
+      "status": "watch",
+      "flags": [
+        "sold-out",
+        "third-party-only",
+        "not-listed"
+      ],
+      "notes": "This entry is not a live offer: price and stock status both come from third-party checks, not verified on an official page. It is included in the data file so the watch status is trackable, status=watch.",
+      "priceText": "€5.49/month (third-party reading, unverified)",
+      "validityText": "Sold-out watch in progress",
+      "riskLevel": "medium",
+      "renewalText": "Not verified",
+      "renewalStatus": "unknown",
+      "taskBurden": "none",
+      "codeRequired": false,
+      "locations": "Not verified",
+      "plans": []
+    }
+  ]
+}

@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-13",
+    "count": 7,
+    "language": "en",
+    "sources": [
+      "https://www.vultr.com/coupons/",
+      "https://www.vultr.com/match/",
+      "https://try.digitalocean.com/learn-kubernetes/",
+      "https://www.akamai.com/lp/kubernetes",
+      "http://hetzner.com/promo-code/",
+      "https://www.sanfengyun.com/freeServer/",
+      "https://box.simular.ai/",
+      "https://www.simular.ai/alternatives/orgo-vs-e2b-vs-daytona",
+      "https://www.racknerd.com/specials"
+    ],
+    "note": "Deals section: trial credits, task-renewal hosts, sandbox credits, and a historical promo archive. Only content verified on vendor official pages; unstated information is marked unstated, never invented. 6 live + 1 historical archive (RackNerd Black Friday 2025, expired). This site publishes no promo-code strings. status values: live / live-undated / disputed / historical. riskLevel: low / medium / high, see each entry’s notes. taskBurden: none / disputed / unknown. Text translated from data/wool.json; all facts identical."
+  },
+  "offers": [
+    {
+      "id": "vultr-credits",
+      "slug": "vultr-credits",
+      "title": "Vultr deposit match (up to $100) + $200/$300/$250 free credits",
+      "provider": "Vultr",
+      "category": "wool",
+      "group": "trial-credit",
+      "specText": "First deposit matched dollar-for-dollar, up to $100; plus $200 / $300 / $250 free credits (as listed on the promo page). New customers only; promo credits apply only to selected products and cannot be combined with other offers.",
+      "durationText": "Matched credits: expire 12 months after issuance. $200/$300/$250 credits: duration not stated on the promo page.",
+      "cardRequired": true,
+      "cardNote": "Matching requires a first deposit ($10 / $25 / $50 / $100 tiers); card requirements for the $200/$300/$250 free credits are not stated on the promo page.",
+      "regions": "Check the official page",
+      "risks": [
+        "New customers only; duplicate accounts are not eligible",
+        "Matched credits offset 50/50: on a $10 hourly bill, $5 comes from promo credits and $5 from real funds",
+        "Limited-time offer; the page states no end date",
+        "Validity of the $200/$300/$250 credits is not stated on the page"
+      ],
+      "steps": [
+        "Open a new account on the Vultr website (new customers only).",
+        "Check the official promo page to confirm the current match offer and free credits are still running.",
+        "Deposit or claim credits per the official page instructions, noting the 50/50 offset rule and the 12-month expiry."
+      ],
+      "claimUrl": "https://www.vultr.com/match/",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Vultr promo page and Match campaign page",
+      "sourceUrl": "https://www.vultr.com/coupons/",
+      "status": "live-undated",
+      "flags": [
+        "new-customers-only",
+        "undated",
+        "no-code-published"
+      ],
+      "notes": "Match terms (12-month expiry, 50/50 offset, limited-time with no stated end date) verified 2026-11-13 on the official Match page; the $200/$300/$250 credits appear on the official promo page. The official page body gives no promo-code string to copy; this site publishes no promo-code strings.",
+      "priceText": "Deposit match up to $100; free credits $200 / $300 / $250",
+      "validityText": "Matched credits expire 12 months after issuance; free-credit duration not stated; limited-time offer, no end date",
+      "riskLevel": "medium",
+      "renewalText": "After credits run out or expire, billing at normal prices; no same-rate renewal promise",
+      "taskBurden": "none",
+      "codeRequired": false
+    },
+    {
+      "id": "hetzner-50-credit",
+      "slug": "hetzner-50-credit",
+      "title": "Hetzner €50 new-customer credit (valid in the current billing month only)",
+      "provider": "Hetzner",
+      "category": "wool",
+      "group": "trial-credit",
+      "specText": "€50 starter credit, usable across all Hetzner products (cloud servers, dedicated servers, storage, etc.). New customers only.",
+      "durationText": "Redeem within 14 days of registration; valid only in the billing month of redemption (the official page suggests redeeming on the 1st).",
+      "cardRequired": null,
+      "cardNote": "The promo page does not state whether a payment method must be bound — check the official page.",
+      "regions": "Check the official page",
+      "risks": [
+        "New customers with no existing Hetzner account only",
+        "Redeeming late in the month loses most of the validity: redeeming on the 20th only covers until the 30th/31st",
+        "Promo code strings rotate; this site does not publish them — go by the official page",
+        "A €20 credit was not verified on the official promo page and is not listed here"
+      ],
+      "steps": [
+        "Register a free Hetzner account at hetzner.com.",
+        "Copy the current promo code from the official promo page (as displayed on the page).",
+        "Enter and redeem it under User Account → Promo Codes in your account (within 14 days of registration).",
+        "Credits offset the current invoice automatically; check balance and expiry in the Promo Codes view."
+      ],
+      "claimUrl": "http://hetzner.com/promo-code/",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Hetzner promo code page",
+      "sourceUrl": "http://hetzner.com/promo-code/",
+      "status": "live",
+      "flags": [
+        "new-customers-only",
+        "billing-month-only",
+        "no-code-published"
+      ],
+      "notes": "Redemption rules and current-month validity verified 2026-11-13 on the official promo page FAQ; the official page suggests redeeming on the 1st for a full billing period. Promo codes must be obtained from the official page; this site publishes no promo-code strings.",
+      "priceText": "€50 credit",
+      "validityText": "Redeem within 14 days of registration; valid only in the redemption month’s billing period",
+      "riskLevel": "low",
+      "renewalText": "Credits offset only the current invoice; afterwards billed at normal prices",
+      "taskBurden": "none",
+      "codeRequired": true
+    },
+    {
+      "id": "akamai-100-credit",
+      "slug": "akamai-100-credit",
+      "title": "Akamai $100 credit (Managed Kubernetes trial)",
+      "provider": "Akamai (Linode)",
+      "category": "wool",
+      "group": "trial-credit",
+      "specText": "US$100 credit, usable for most Compute plans (except GPU plans), object storage, block storage, and NodeBalancers. Only for new customers who have never registered a free trial.",
+      "durationText": "Within the trial period (the page only says “trial period”, no day count stated); unused credits expire automatically.",
+      "cardRequired": true,
+      "cardNote": "A valid payment method is required to verify identity; no charges during the trial; a temporary pre-authorization may appear when adding a card (it is released).",
+      "regions": "Check the official page",
+      "risks": [
+        "Trial length in days is not stated on the page; the “60 days” figure appears only in third-party sources and is not adopted here",
+        "GPU plans are excluded from this offer",
+        "Usage beyond credits is billed at standard prices; unused credits expire automatically"
+      ],
+      "steps": [
+        "Create a new account with Google/GitHub SSO or email.",
+        "Provide a valid payment method to verify identity (no charges during the trial).",
+        "Use the credits within the trial period for Compute (except GPU), storage, or NodeBalancers."
+      ],
+      "claimUrl": "https://www.akamai.com/lp/kubernetes",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Akamai Managed Kubernetes campaign page",
+      "sourceUrl": "https://www.akamai.com/lp/kubernetes",
+      "status": "live-undated",
+      "flags": [
+        "new-customers-only",
+        "duration-not-stated",
+        "gpu-excluded"
+      ],
+      "notes": "$100 credit, new-customer restriction, GPU exclusion, and automatic expiry of unused credits all verified 2026-11-13 on the official campaign page; the campaign page does not state the trial length in days.",
+      "priceText": "$100 credit",
+      "validityText": "Within the trial period; day count not stated on the page; unused credits expire automatically",
+      "riskLevel": "medium",
+      "renewalText": "Billed at standard prices after the trial ends",
+      "taskBurden": "none",
+      "codeRequired": false
+    },
+    {
+      "id": "digitalocean-200-trial",
+      "slug": "digitalocean-200-trial",
+      "title": "DigitalOcean $200 / 60-day trial (disputed)",
+      "provider": "DigitalOcean",
+      "category": "wool",
+      "group": "trial-credit",
+      "specText": "$200 credit, 60-day free trial (campaign page wording: “$200, 60-day free trial requires valid credit card”), for use with the free Kubernetes course. Mining is prohibited.",
+      "durationText": "60 days (campaign page wording).",
+      "cardRequired": true,
+      "cardNote": "The campaign page wording requires a valid credit card.",
+      "regions": "Check the official page",
+      "risks": [
+        "Disputed: a DigitalOcean community answer (2025-04-07) and third-party guides say direct signup only gets $5/90 days and $200 is referral-only — conflicting with the campaign page",
+        "Clusters kept after the trial are billed at normal prices (single-node clusters from $12/month, campaign page wording)",
+        "The campaign page is a Kubernetes learning campaign page, not a general signup page"
+      ],
+      "steps": [
+        "Open the official DigitalOcean Kubernetes learning campaign page and confirm the campaign is still running.",
+        "Register an account and provide a valid credit card.",
+        "Check the actual credited amount in your account right after signup ($200 or $5) before deciding whether to use it."
+      ],
+      "claimUrl": "https://try.digitalocean.com/learn-kubernetes/",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "DigitalOcean Kubernetes learning campaign page",
+      "sourceUrl": "https://try.digitalocean.com/learn-kubernetes/",
+      "status": "disputed",
+      "flags": [
+        "disputed",
+        "card-required",
+        "referral-conflict"
+      ],
+      "notes": "$200/60 days/card required verified 2026-11-13 on the official campaign page; the $5/90 days and referral-only claims come from community answers and third-party guides and conflict with the campaign page — this site marks the dispute honestly without ruling on it.",
+      "priceText": "$200 credit (disputed)",
+      "validityText": "60 days (campaign page wording); actual credited amount as shown in the account",
+      "riskLevel": "high",
+      "renewalText": "Billed at normal prices after the trial ends",
+      "taskBurden": "none",
+      "codeRequired": false
+    },
+    {
+      "id": "sanfengyun-free",
+      "slug": "sanfengyun-free",
+      "title": "Sanfengyun free cloud server (only specs verified; renewal rules disputed)",
+      "provider": "Sanfengyun",
+      "category": "wool",
+      "group": "task-host",
+      "specText": "1 core, 1 GB RAM, 5 Mbps, 10 GB SSD, BGP, dedicated IP (official page wording).",
+      "durationText": "Requires task-based renewal; renewal rules are stated inconsistently — see risks.",
+      "cardRequired": null,
+      "cardNote": "Not stated on the official page — check the official page.",
+      "regions": "Check the official page",
+      "risks": [
+        "Conflicting renewal rules: the official domain summary says posting renews +5 days, while first-hand posts say 7-day click renewal; this site cannot rule on it",
+        "This re-check (2026-11-13) could not reopen the official page (fetch tool error, no retry); specs rely on the 2026-11-12 official page snapshot",
+        "Task-renewal hosts carry high data and continuity risk — do not keep important data only here"
+      ],
+      "steps": [
+        "Open the Sanfengyun official free server page and confirm the current specs and renewal rules.",
+        "Register and claim per the official page instructions.",
+        "Renew on time per the renewal rules published on the official page to avoid reclaim."
+      ],
+      "claimUrl": "https://www.sanfengyun.com/freeServer/",
+      "verifiedAt": "2026-11-12",
+      "sourceName": "Sanfengyun free server page",
+      "sourceUrl": "https://www.sanfengyun.com/freeServer/",
+      "status": "disputed",
+      "flags": [
+        "specs-only",
+        "renewal-conflict",
+        "task-host"
+      ],
+      "notes": "Specs verified 2026-11-12 on the official page; renewal task rules have conflicting accounts — this site lists specs only and does not promise renewal rules. The 2026-11-13 re-check failed with a fetch tool error and was not retried.",
+      "priceText": "Free (task renewal required)",
+      "validityText": "Renewal rules disputed — go by the official page",
+      "riskLevel": "high",
+      "renewalText": "Task renewal; rules stated inconsistently",
+      "taskBurden": "disputed",
+      "codeRequired": false
+    },
+    {
+      "id": "simular-box",
+      "slug": "simular-box",
+      "title": "Simular Box: $5-credit cloud computer (conflicting terms)",
+      "provider": "Simular",
+      "category": "wool",
+      "group": "sandbox-credit",
+      "specText": "Cloud Linux desktop (1 per account), connected to Claude, ChatGPT, Codex and other agents via MCP; 2 vCPU / 4 GB ~$0.10/hour, 4 vCPU / 8 GB ~$0.20/hour (official blog). Linux only; no Windows/Mac/GPU.",
+      "durationText": "$5 credit once per account; the vendor email says 90 days validity (not verified on a public page). Deleted with data if not woken for 14 consecutive days.",
+      "cardRequired": null,
+      "cardNote": "The verified official pages do not state whether a payment method must be bound — check the official page.",
+      "regions": "Check the official page",
+      "risks": [
+        "Conflicting official statements: the product homepage says the box itself is free; the vendor email (2026-11-12) and official blog say the free beta ended and it is now $5 credit + pay-as-you-go",
+        "If not woken for 14 consecutive days, the box is deleted together with files and saved content; any wake resets the count",
+        "Model calls by the box’s own tools are paid from credits at model cost +20% (1,000 credits = $1, official blog)"
+      ],
+      "steps": [
+        "Open box.simular.ai and confirm the current billing description.",
+        "Log in with a Simular account and plug the MCP address into the agent you use (Claude, ChatGPT, Codex, etc.).",
+        "Confirm in your account whether the $5 credit has arrived, its validity, and the pay-as-you-go prices before deciding usage."
+      ],
+      "claimUrl": "https://box.simular.ai/",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "box by Simular homepage and Simular official blog",
+      "sourceUrl": "https://box.simular.ai/",
+      "status": "disputed",
+      "flags": [
+        "disputed",
+        "sandbox",
+        "deletion-risk"
+      ],
+      "notes": "The 14-day deletion rule was verified 2026-11-13 on the product homepage; the $5 credit and pay-as-you-go prices were verified 2026-11-13 on the official blog; the 90-day validity and beta ending appear only in the vendor email (background info, not public page terms) and are labelled with their source. The homepage claim that the box itself is free conflicts with the email/blog; this site does not present Simular Box as long-term free.",
+      "priceText": "$5 credit (once per account); then pay-as-you-go from $0.10/hour",
+      "validityText": "$5 credit validity: vendor email says 90 days (not verified on a public page); deleted if not woken for 14 days",
+      "riskLevel": "high",
+      "renewalText": "Pay-as-you-go top-ups (from $5); Small $19/month, Medium $39/month (official blog)",
+      "taskBurden": "none",
+      "codeRequired": false
+    },
+    {
+      "id": "racknerd-black-friday-archive",
+      "slug": "racknerd-black-friday-archive",
+      "title": "RackNerd Black Friday promo archive (2025 prices, expired)",
+      "provider": "RackNerd",
+      "category": "wool",
+      "group": "promo-drop",
+      "specText": "2025 Black Friday promo prices, from $10.60/year (historical record). Black Friday 2026 is November 27; as of 2026-11-12 no official 2026 list had been seen.",
+      "durationText": "Expired. Historical archive, not purchasable.",
+      "cardRequired": null,
+      "cardNote": "Historical archive; no claim requirements.",
+      "regions": "Check the official page",
+      "risks": [
+        "Historical prices do not represent current prices; do not order at 2025 prices",
+        "Black Friday promos are usually limited stock and limited time; stock and renewal rules per the official page of that year"
+      ],
+      "steps": [
+        "This entry is a historical archive; nothing to claim.",
+        "For standing prices, see RackNerd VPS Specials in the Cheap section (lifetime same-rate renewal).",
+        "Near Black Friday 2026 (November 27), go by RackNerd’s official page for that year."
+      ],
+      "claimUrl": "https://www.racknerd.com/specials",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "RackNerd official Specials page (standing prices) and historical promo records",
+      "sourceUrl": "https://www.racknerd.com/specials",
+      "status": "historical",
+      "flags": [
+        "historical",
+        "expired",
+        "watch"
+      ],
+      "notes": "The 2025 $10.60/year price is a historical promo record, not a current price; no 2026 list had been seen as of 2026-11-12. For standing prices see the Cheap section.",
+      "priceText": "$10.60/year (2025 historical price, expired)",
+      "validityText": "Expired",
+      "riskLevel": "low",
+      "renewalText": "Renewal rules for historical promos per the official page of that year; this site makes no promise",
+      "taskBurden": "none",
+      "codeRequired": false
+    }
+  ]
+}
