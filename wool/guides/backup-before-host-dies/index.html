@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>廉价主机跑路前：备份清单</title>
+<meta name="description" content="跑路信号识别（LowEndBox Provider Graveyard 背景）与备份清单：异地备份、配置即代码、数据导出、域名独立、恢复演练。">
+<link rel="canonical" href="https://tokens.yangtokent.com/wool/guides/backup-before-host-dies/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "廉价主机跑路前：备份清单",
+  "description": "跑路信号识别（LowEndBox Provider Graveyard 背景）与备份清单：异地备份、配置即代码、数据导出、域名独立、恢复演练。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/wool/guides/backup-before-host-dies/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "多久备份一次？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "按数据变化频率；至少两份异地副本。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "备份放在哪里？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "另一家厂商或本地；不要与源机器同命运。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：只收厂商官方核对过的免费额度。领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">羊毛 VPS</a><a href="../../offers/">羊毛详情</a><a href="../../compare/">羊毛对比</a><a href="../" aria-current="page">羊毛指南</a><a href="../../faq/">羊毛问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">羊毛 VPS</a> / <a href="../">羊毛指南</a> / 备份清单</p>
+<h1>廉价主机跑路前：备份清单</h1>
+<p class="meta">本页更新于 2026-11-13</p>
+<div class="answer"><p>廉价主机跑路前有信号：客服越来越慢、频繁宕机无公告、条款突然更改、公司信息查不到。看到两个以上信号，立即备份、准备迁移——不要等到关停公告。备份清单：数据异地备份、配置即代码、域名与 DNS 独立于主机商、定期恢复演练。备份要能恢复才算数，没演练过的备份等于没有备份。</p></div>
+<p>本指南适用于所有廉价/免费/任务主机。跑路历史为公开背景信息，备份方法是本站编辑建议。</p>
+<h2 id="signals">跑路信号</h2>
+<p>廉价主机圈有记录厂商倒闭的传统：LowEndBox 的 Provider Graveyard 记录了多家关停的主机商，包括 DediPath（2023 年 8 月 31 日关停，背景信息）。常见跑路前信号：长期超低价揽客后突然涨价、客服响应越来越慢、频繁宕机且无公告、公司信息与联系方式查不到、突然更改服务条款。单个信号可能是偶然，两个以上同时出现就该行动。</p>
+<h2 id="checklist">备份清单</h2>
+<ul><li><strong>数据异地备份：</strong>数据库、文件、上传内容定期备份到另一家厂商或对象存储——不要把备份放在同一台机器上。</li><li><strong>配置即代码：</strong>部署脚本、Docker Compose、Nginx 配置都存代码仓库，换机器能一键重建。</li><li><strong>域名与 DNS 独立：</strong>域名不要在主机商处注册，DNS 不要只用主机商的——主机商倒了，域名还能指到新机器。</li><li><strong>定期导出：</strong>面板数据、账单、工单记录定期导出，关停后工单系统也一起消失。</li><li><strong>恢复演练：</strong>每季度在另一台机器上恢复一次备份，确认备份文件完整、恢复流程能跑通。</li></ul>
+<h2 id="special">免费/任务主机的特殊风险</h2>
+<p>免费与任务主机的风险更高：Simular Box 连续 14 天未唤醒删机删数据；三丰云续期失败可能回收；甲骨文闲置 7 天可能回收。这些规则都写在官网页上——不是跑路，是规则。重要数据不要只放在这类机器上；放上去的，先备份。</p>
+<h2 id="faq">常见问题</h2>
+<details><summary>多久备份一次？</summary><p>按数据变化频率：每天变的每天备份，每周变的每周备份。至少保留两份异地副本，保留期覆盖最近 30 天。</p></details>
+<details><summary>备份放在哪里？</summary><p>另一家厂商的对象存储、另一台机器、或本地硬盘——关键是不要与源机器同命运。</p></details>
+<div class="note"><b>免责：</b>本指南为本站编辑建议；跑路历史为公开背景信息，各条优惠的核实日期见详情页。</div>
+<div class="related"><h2>相关页面</h2><ul><li><a href="../../../cheap/guides/backup-monthly-first/">先按月、再年付指南</a></li><li><a href="../../compare/deal-or-trap-checklist/">羊毛还是陷阱？核查清单</a></li><li><a href="../task-host-survival/">任务续费主机生存指南</a></li><li><a href="../../">羊毛 VPS 列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">羊毛 VPS</a> · <a href="../../offers/">羊毛详情</a> · <a href="../../compare/">羊毛对比</a> · <a href="../">羊毛指南</a> · <a href="../../faq/">羊毛问答</a></p><p>数据仅供参考，以厂商官方页为准。羊毛板块各条目均经厂商官方页核对，核实日期见各页；额度与促销随时可能调整或结束，领取前请看清对方条款。本站不含邀请链接，不刊登优惠码字符串。</p></div></footer>
+</body>
+</html>
