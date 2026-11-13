@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>域名验证基础：SPF 与 DKIM 概念、验证步骤与常见问题</title>
+<meta name="description" content="域名验证基础：SPF 与 DKIM 的概念、通用验证步骤、验证状态检查与常见问题；各家提供的记录值以官方页面为准。核实于 2026-11-13。">
+<link rel="canonical" href="https://tokens.yangtokent.com/email/guides/domain-verification-basics/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "域名验证基础：SPF 与 DKIM 概念、验证步骤与常见问题",
+  "description": "域名验证基础：SPF 与 DKIM 的概念、通用验证步骤、验证状态检查与常见问题；各家提供的记录值以官方页面为准。核实于 2026-11-13。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/email/guides/domain-verification-basics/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">邮件通知</a><a href="../../offers/">邮件详情</a><a href="../../compare/">邮件对比</a><a href="../../guides/" aria-current="page">邮件指南</a><a href="../../faq/">邮件问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">邮件通知</a> / <a href="../">邮件指南</a> / 域名验证基础</p>
+<h1>域名验证基础</h1>
+<p class="meta">核实于 2026-11-13 · 本页更新于 2026-11-13</p>
+<div class="answer"><p>域名验证是证明“这个域名归发件人所有、授权这家邮件服务代发”的步骤，通用做法是在域名的 DNS 里添加服务商提供的 SPF 与 DKIM 记录，再回到服务商后台确认验证通过。各家提供的记录值不同，以官方页面为准。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#why">为什么要验证域名</a></li><li><a href="#spf">SPF：授权发件服务器</a></li><li><a href="#dkim">DKIM：签名验证</a></li><li><a href="#steps">通用验证步骤</a></li><li><a href="#status">验证状态与排查</a></li><li><a href="#limits">各家域名上限对照</a></li></ul></div>
+<h2 id="why">为什么要验证域名</h2><p>邮件服务商需要确认发件域名归发件人所有，才允许用该域名发信。验证通过后，收件方可以依据 DNS 里的记录核对发件身份。验证是发件身份认证的基础步骤，不等于送达保证：是否进入收件箱还受收件方策略与发件行为影响，具体规则以各收件方与服务商的官方页面为准。</p><h2 id="spf">SPF：授权发件服务器</h2><p>SPF（Sender Policy Framework）是一条 DNS TXT 记录，列出哪些服务器被授权用该域名发信。收件方收到邮件后查询该记录，核对实际发件服务器是否在授权列表里。SPF 记录的具体内容由邮件服务商提供，不同服务商的记录值不同，以官方页面为准。</p><h2 id="dkim">DKIM：签名验证</h2><p>DKIM（DomainKeys Identified Mail）用密钥签名邮件：发件方用私钥给邮件签名，公钥放在 DNS 记录里，收件方用公钥验证签名，确认邮件在传输中没有被改动、确实由该域名授权发出。DKIM 的选择器名称与公钥记录由邮件服务商提供，以官方页面为准。</p><h2 id="steps">通用验证步骤</h2><ol><li>在邮件服务商后台添加发件域名，服务商会给出需要添加的 DNS 记录（SPF、DKIM）。</li><li>到域名注册商或 DNS 服务商的 DNS 管理界面，按服务商给出的记录类型、主机记录与记录值添加记录；记录值以官方页面为准。</li><li>等待 DNS 记录生效后，回到邮件服务商后台触发验证，查看验证状态。</li><li>验证通过后，再用该域名发信；验证未通过时按服务商后台的提示核对记录。</li></ol><p>域名注册与 DNS 服务本身见<a href="../../../domain/">域名 / DNS / CDN / SSL 列表</a>。</p><h2 id="status">验证状态与排查</h2><p>验证状态一般在邮件服务商后台查看。常见未通过原因按通用经验有三类：DNS 记录填错（主机记录或记录值与服务商给出的不一致）、DNS 记录尚未生效、同一个域名在多家服务商的记录互相冲突。排查时以服务商后台的提示与官方文档为准，记录值不要凭记忆填写。</p><h2 id="limits">各家域名上限对照</h2><p>Resend 免费计划含 3 个域名；Mailgun 免费计划含 1 个自定义发送域名。Brevo、SendGrid 试用、Postmark 的域名数量上限在官网已读页面中未述，以官方页面为准。多域名场景按各家上限核对。</p>
+<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，领取前请以厂商官方页为准。</div>
+<div class="related"><h2>相关页面</h2><ul><li><a href="../choosing-transactional-email/">事务邮件怎么选</a></li><li><a href="../sendgrid-trial-migration/">从 SendGrid 试用迁移</a></li><li><a href="../../offers/resend/">Resend 免费层</a></li><li><a href="../../offers/mailgun/">Mailgun 免费计划</a></li><li><a href="../../faq/">邮件常见问题</a></li><li><a href="../../">返回邮件通知列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">邮件通知</a> · <a href="../../offers/">邮件详情</a> · <a href="../../compare/">邮件对比</a> · <a href="../../guides/">邮件指南</a> · <a href="../../faq/">邮件问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
