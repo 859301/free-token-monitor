@@ -1,0 +1,224 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-13",
+    "count": 6,
+    "sources": [
+      "Supabase 官网定价页",
+      "Neon 官网定价页（页注 2026-11-04 更新）",
+      "Turso 官网定价页（渲染复核）与 Supabase 官方博客收购公告",
+      "Upstash 官网定价页",
+      "MongoDB 官网定价页",
+      "Firebase 官网定价页与官方 FAQ"
+    ],
+    "note": "规格与条款照录厂商官方页面原文；官方页面未注明的字段写「以官方页面为准」。领取前请以厂商官方页为准。group 取值：verified（参数经官网页确认）。status 取值：active。cardRequired 为 null 表示官方页未说明。新增字段：dbType（数据库类型，Turso 一条因证据未述引擎类型，写为通用表述）、overage（超限行为）、upgrade（升级与付费档价格）、idlePolicy（闲置、暂停与休眠规则）。"
+  },
+  "offers": [
+    {
+      "id": 1,
+      "slug": "supabase",
+      "title": "Supabase 免费档",
+      "provider": "Supabase",
+      "category": "database",
+      "group": "verified",
+      "dbType": "PostgreSQL",
+      "freePlan": "Free $0/月",
+      "storage": "500 MB 数据库（共享 CPU·500 MB RAM）",
+      "specText": "无限 API 请求；50,000 MAU；500 MB 数据库（共享 CPU·500 MB RAM）；5 GB egress；5 GB cached egress；1 GB 文件存储；Edge Functions 500,000 次；社区支持",
+      "durationText": "官网定价页未明示永久，以官方页面为准",
+      "cardRequired": null,
+      "cardNote": "绑卡要求在官网定价页抓取文本中未明确写出，以官方页面为准。",
+      "idlePolicy": "Free projects are paused after 1 week of inactivity. Limit of 2 active projects.（官网原文：免费项目 1 周不活跃暂停；至多 2 个活跃项目。）",
+      "overage": "暂停与超限后的恢复流程在官网已读页面中未述，以官方页面为准。",
+      "upgrade": "Pro $25/月",
+      "risks": [
+        "1 周不活跃暂停；至多 2 个活跃项目",
+        "绑卡要求在官网定价页抓取文本中未明确写出，以官方页面为准",
+        "定价页未明示永久，以官方页面为准"
+      ],
+      "steps": "在 Supabase 官网定价页确认 Free 档条款 → 注册账户 → 创建免费项目（至多 2 个活跃项目）→ 在控制台查看用量与暂停规则。",
+      "claimUrl": "https://supabase.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Supabase 官网定价页",
+      "sourceUrl": "https://supabase.com/pricing",
+      "status": "active",
+      "flags": [
+        "pause-1w",
+        "max-2-projects",
+        "card-unconfirmed"
+      ],
+      "notes": "论坛工具表中的「Supabase 免费 500M 两个项目」与官网数字一致。"
+    },
+    {
+      "id": 2,
+      "slug": "neon",
+      "title": "Neon 免费档",
+      "provider": "Neon",
+      "category": "database",
+      "group": "verified",
+      "dbType": "PostgreSQL",
+      "freePlan": "Free $0",
+      "storage": "1 GB 存储/项目",
+      "specText": "100 个项目；100 CU-hrs/项目/月；1 GB 存储/项目；最大 2 CU（8 GB RAM）；5 GB 对象存储；Managed Better Auth 60k MAU/项目；5 GB egress/项目；5 分钟闲置 scale to zero；6 小时/1 GB 历史窗口；1 个快照",
+      "durationText": "The Free plan is permanent, not a trial（官网 FAQ 原文）",
+      "cardRequired": false,
+      "cardNote": "Build and learn free with no time limits and no credit card required.（官网原文）FAQ：doesn't require a credit card。",
+      "idlePolicy": "5 分钟闲置 scale to zero。",
+      "overage": "超限不删数据，计算暂停至下个周期。",
+      "upgrade": "Launch 按量：$0.106/CU-hour、存储 $0.35/GB-month",
+      "risks": [
+        "5 分钟闲置 scale to zero",
+        "2026-11-02 博客旧数字（50 CU-hours / 0.5 GB）已被 2026-11-04 定价页取代，以定价页为准"
+      ],
+      "steps": "在 Neon 官网定价页确认 Free 档条款 → 注册账户（无需信用卡）→ 创建项目 → 在控制台查看 CU-hrs 与存储用量。",
+      "claimUrl": "https://neon.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Neon 官网定价页（页注 2026-11-04 更新）",
+      "sourceUrl": "https://neon.com/pricing",
+      "status": "active",
+      "flags": [
+        "permanent",
+        "no-card",
+        "scale-to-zero-5m"
+      ],
+      "notes": "定价页自注 Last updated November 4, 2026。"
+    },
+    {
+      "id": 3,
+      "slug": "turso",
+      "title": "Turso 免费档",
+      "provider": "Turso",
+      "category": "database",
+      "group": "verified",
+      "dbType": "数据库服务（引擎类型以官方页面为准）",
+      "freePlan": "Free $0/month",
+      "storage": "5 GB",
+      "specText": "100 个数据库；5 GB 存储；每月行读取 500 Million；每月行写入 10 Million；每月同步 3 GB；Point-In-Time Restore 1 天；Audit Logs / Restore Deleted DBs 不包含；Community 支持；定价页 Free 列无单独 egress 行",
+      "durationText": "定价页写 Start free，未写永久措辞，以官方页面为准",
+      "cardRequired": false,
+      "cardNote": "Start free, no credit card required.（官网原文）",
+      "idlePolicy": "闲置暂停规则在官网已读页面中未述，以官方页面为准。",
+      "overage": "FAQ：Free plan 超限需升级/阻塞。",
+      "upgrade": "Developer $4.99/月（年付）、Scaler $24.92/月（年付）、Pro $416.58/月（年付）",
+      "risks": [
+        "Free plan 超限需升级/阻塞（FAQ）",
+        "2026-10-02 Supabase 官方博客宣布收购 Turso；博客原文称现有用户不受影响、Turso 继续运行，未宣布定价或免费层政策变化",
+        "定价页未写永久措辞，以官方页面为准"
+      ],
+      "steps": "在 Turso 官网定价页确认 Free 档条款 → 注册账户（无需信用卡）→ 创建数据库 → 在控制台查看行读写与同步用量。",
+      "claimUrl": "https://turso.tech/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Turso 官网定价页（渲染复核）",
+      "sourceUrl": "https://turso.tech/pricing",
+      "status": "active",
+      "flags": [
+        "no-card",
+        "acquired-2026-10-02"
+      ],
+      "notes": "Free 档数字经 2026-11-13 渲染复核在官网定价页直接确认。收购信息来源：Supabase 官方博客 2026-10-02。"
+    },
+    {
+      "id": 4,
+      "slug": "upstash-redis",
+      "title": "Upstash Redis 免费档",
+      "provider": "Upstash",
+      "category": "database",
+      "group": "verified",
+      "dbType": "Redis",
+      "freePlan": "Free $0",
+      "storage": "250 MB 数据量（对比表同页写 256 MB，官网内部表述差异）",
+      "specText": "数据量 250 MB（对比表同页写 256 MB）；每月带宽 10 GB；每月命令 500K；1 个免费数据库",
+      "durationText": "官网定价页未明示永久，以官方页面为准",
+      "cardRequired": null,
+      "cardNote": "FAQ：Once you enter your credit card, your database will be upgraded to the pay-as-you-go plan.（加卡即转按量付费。）免费档本身的绑卡要求未单独写明，以官方页面为准。",
+      "idlePolicy": "闲置暂停规则在官网已读页面中未述，以官方页面为准。",
+      "overage": "超限行为在官网已读页面中未述，以官方页面为准。",
+      "upgrade": "Pay as You Go：$0.2/100K commands，存储每库首 1 GB 免费、之后 $0.25/GB，带宽 200 GB 内免费、之后 $0.03/GB；Fixed $10/月起",
+      "risks": [
+        "数据量官网内部表述差异：Free 列写 250 MB，对比表同页写 256 MB",
+        "加卡即转按量付费（FAQ）",
+        "定价页未明示永久，以官方页面为准"
+      ],
+      "steps": "在 Upstash 官网定价页确认 Free 档条款 → 注册账户 → 创建 1 个免费数据库 → 在控制台查看命令数与带宽用量。",
+      "claimUrl": "https://upstash.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Upstash 官网定价页",
+      "sourceUrl": "https://upstash.com/pricing",
+      "status": "active",
+      "flags": [
+        "size-250-256-conflict",
+        "card-upgrades-to-paygo"
+      ],
+      "notes": "FAQ 原文：Free tier includes 250MB data size and 500K commands per month."
+    },
+    {
+      "id": 5,
+      "slug": "mongodb-atlas",
+      "title": "MongoDB Atlas M0 免费集群",
+      "provider": "MongoDB Atlas",
+      "category": "database",
+      "group": "verified",
+      "dbType": "MongoDB",
+      "freePlan": "Free Cluster M0",
+      "storage": "512 MB",
+      "specText": "M0 512 MB；共享 RAM/vCPU；Free forever（官网原文）",
+      "durationText": "Free forever（官网原文）",
+      "cardRequired": null,
+      "cardNote": "绑卡要求在官网定价页抓取文本中未述，以官方页面为准。",
+      "idlePolicy": "暂停规则未在官网定价页抓取文本中呈现，以官方页面为准。",
+      "overage": "ops/连接数未在官网定价页抓取文本中呈现，以官方页面为准。",
+      "upgrade": "M2 $9/月 2 GB；M5 $25/月 5 GB；Flex $8–$30/月用量（$0.0110/小时起）；Dedicated M10 $0.08/小时起",
+      "risks": [
+        "M0 的 ops/连接数/暂停规则未在官网定价页抓取文本中呈现，以官方页面为准",
+        "绑卡要求在官网定价页抓取文本中未述，以官方页面为准"
+      ],
+      "steps": "在 MongoDB 官网定价页确认 M0 免费集群条款 → 注册账户 → 创建 M0 免费集群 → 在控制台查看存储用量。",
+      "claimUrl": "https://www.mongodb.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "MongoDB 官网定价页",
+      "sourceUrl": "https://www.mongodb.com/pricing",
+      "status": "active",
+      "flags": [
+        "free-forever",
+        "card-unconfirmed",
+        "ops-unconfirmed"
+      ],
+      "notes": ""
+    },
+    {
+      "id": 6,
+      "slug": "firebase",
+      "title": "Firebase 免费额度（Firestore / Auth / Hosting）",
+      "provider": "Firebase",
+      "category": "database",
+      "group": "verified",
+      "dbType": "Firestore / Realtime Database + Auth + Hosting",
+      "freePlan": "No-cost 额度（Spark 计划与 Blaze 计划语义不同）",
+      "storage": "Firestore 1 GiB 存储；Hosting 10 GB 存储；Realtime Database 1 GB 存储",
+      "specText": "Firestore：1 GiB 存储、10 GiB 出站/月、20K 写/天、50K 读/天、20K 删/天；Auth：50K MAU（SAML/OIDC 50）；Hosting：10 GB 存储 + 每天 360 MB 传输，超出 $0.15/GB；Realtime Database：100 并发连接、1 GB 存储、下载 360 MB/天（约 10 GB/月），超出 $1/GB；Cloud Functions（Blaze 列）：每月 2M 调用、400K GB-s、200K CPU-s、5 GB 出站，Spark 列为 Not applicable；Cloud Storage 免费额度在 Blaze 列，Spark 列为 Not applicable",
+      "durationText": "No-cost 额度；Spark 与 Blaze 语义不同，见详情页",
+      "cardRequired": null,
+      "cardNote": "Spark 计划是否需要支付方式，二手说法称无需支付方式，未在官网定价页与 FAQ 抓取中直接确认，以官方页面为准。Blaze 计划需绑定 billing account；Cloud Functions 需要 billing account。",
+      "idlePolicy": "闲置暂停规则在官网已读页面中未述，以官方页面为准。",
+      "overage": "Spark：超出任一计划上限，应用停用。Blaze：免费额度按日计算，无法设置用量硬上限。",
+      "upgrade": "Blaze 按量付费 + 同等按日计算的免费额度",
+      "risks": [
+        "Spark 超限停用：when you exceed any plan limit in any month, your app will be turned off（官网 FAQ 原文）",
+        "Blaze 无法设用量硬上限：No, you cannot currently cap your Blaze plan usage.（官网 FAQ 原文）",
+        "Cloud Functions 与 Cloud Storage 的免费额度在 Blaze 列，Spark 列为 Not applicable；Cloud Functions 需要 billing account",
+        "Hosting 免费传输为 360 MB/天；10 GB/月是 Realtime Database 下载的等值表述，两者不得混用"
+      ],
+      "steps": "在 Firebase 官网定价页确认各产品 No-cost 额度与 Spark/Blaze 语义 → 注册账户 → 创建项目、选用需要的产品（Firestore、Auth、Hosting、Realtime Database）→ 在控制台查看每日用量。",
+      "claimUrl": "https://firebase.google.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Firebase 官网定价页 · 官方 FAQ",
+      "sourceUrl": "https://firebase.google.com/pricing",
+      "status": "active",
+      "flags": [
+        "spark-blaze",
+        "hosting-360mb-day",
+        "functions-needs-billing"
+      ],
+      "notes": "FAQ 页面副本抓取于 2026-10-19。Hosting 部署侧的对照见部署与托管板块。"
+    }
+  ]
+}
