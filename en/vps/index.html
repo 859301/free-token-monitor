@@ -98,8 +98,8 @@ footer a { color:var(--accent); }
 
 <h1>Free VPS: verified free cloud servers</h1>
 <p class="meta">Updated 2026-11-13 · 9 verified entries (8 verified 2026-11-12, InstaBox verified 2026-11-13) · Specs and terms transcribed from vendor official pages</p>
-<div class="answer"><p><b>The bottom line:</b> only 2 VMs are truly free forever — Oracle Always Free and Google Cloud e2-micro — and both require a card. The other 5 are time-limited trials or credits (AWS, Azure, Alibaba Cloud, Tencent Cloud, Kamatera), 1 is students-only (Azure for Students, the only one explicitly card-free), and 1 is a free sandbox (InstaBox, a 4 vCPU / 8 GiB machine, not a traditional VPS). This site keeps the four groups strictly separate: trials are never written as permanent. Every entry states its card, region, reclaim, and expiry rules, with the verification date and official link in the table.</p></div>
-<p>This is the second section of this site, sharing one verification rule with the <a href="../">free credits overview</a>: only content checked against vendor official pages — no invite links, resellers, or task-renewal hosts. Pick a group first, then open the detail page for the entry you want.</p>
+<div class="answer"><p><b>The bottom line:</b> only 2 VMs are truly free forever — Oracle Always Free and Google Cloud e2-micro — and both require a card. The other 5 are time-limited trials or credits (AWS, Azure, Alibaba Cloud, Tencent Cloud, Kamatera), 1 is students-only (Azure for Students, the only one explicitly card-free), and 1 is a free sandbox (InstaBox, a 4 vCPU / 8 GiB machine, not a traditional VPS). The four groups stay separate: trials are never written as permanent. Every entry states its card, region, reclaim, and expiry rules, with the verification date and official link in the table.</p></div>
+<p>This section follows the same rule as the <a href="../">free credits overview</a>: only content checked against vendor official pages — no invite links, resellers, or task-renewal hosts. Pick a group first, then open the detail page for the entry you want.</p>
 <p><button type="button" data-filter="all" aria-pressed="true" style="padding:7px 13px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;cursor:pointer;font-size:13px;">All 9</button><button type="button" data-filter="always-free" aria-pressed="false" style="padding:7px 13px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;cursor:pointer;font-size:13px;">Always-free only</button><button type="button" data-filter="nocard" aria-pressed="false" style="padding:7px 13px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;cursor:pointer;font-size:13px;">No card</button><button type="button" data-filter="domestic" aria-pressed="false" style="padding:7px 13px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;cursor:pointer;font-size:13px;">Chinese vendors</button><button type="button" data-filter="sandbox" aria-pressed="false" style="padding:7px 13px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;cursor:pointer;font-size:13px;">Free sandbox</button></p>
 <p id="filter-note" class="meta"></p>
 
@@ -132,20 +132,20 @@ footer a { color:var(--accent); }
 <tbody>
 <tr data-tags="sandbox"><td>InstaBox free tier: 1 sandbox machine with 4 vCPU / 8 GB (not a traditional VPS)<br><span class="meta">InstaBox</span></td><td>1 machine 4 vCPU / 8 GiB (Firecracker microVM, Debian 13), 20 GiB persistent disk, 5 snapshots, 100 GiB outbound/month (inbound free)</td><td>Free tier has no fixed end date (official blog commits to keeping the free tier; pricing v1, may change); auto-pause after 30 min idle, max single run 120 min (grows to 480 min)</td><td>Not stated in the official pricing docs — check the official page</td><td>No regions stated in the official pricing docs; external access via public HTTPS links per published port; dedicated inbound IPv4 not in official docs</td><td>Beta product (launched 2026-10-14); early accounts’ 5 free sandboxes end 2026-12-01; files kept after pause, wiped only when the machine is deleted</td><td>2026-11-13 · <a href="https://instabox.sh/docs/pricing.md" target="_blank" rel="noopener noreferrer">Official pricing docs</a></td></tr>
 </tbody></table></div></section>
-<h2>Not listed, and why</h2>
-<p>The following vendors or claims did not meet this site’s listing standard (verifiable on an official page + sold by the vendor itself + clear terms) when checked, so they are not listed as verified offers. They are listed here to explain why — not as recommendations.</p>
+<h2>Services not in the list, and why</h2>
+<p>The following vendors or claims could not be verified on an official page, are not sold by the vendor itself, or have unclear terms, so they are not shown as verified offers. The reasons are given below — not as recommendations.</p>
 <ul>
-<li><b>Huawei Cloud free trial:</b> the official free page returned homepage content when checked; no current spec card was verified, status unclear, not listed.</li>
-<li><b>Vultr and DigitalOcean new-user credits:</b> second-hand sources contradict each other on amounts and validity, no official page was verified, and most are tied to referral links — not listed here (see the Deals section, where they are listed under deal rules).</li>
+<li><b>Huawei Cloud free trial:</b> the official free page returned homepage content when checked; no current spec card was verified, status unclear.</li>
+<li><b>Vultr and DigitalOcean new-user credits:</b> second-hand sources contradict each other on amounts and validity, no official page was verified, and most are tied to referral links (see the Deals section, where they are under deal rules).</li>
 <li><b>Cloudways:</b> no official page verified, and it is a managed layer (reselling other clouds’ resources), which fails the vendor-direct-only rule.</li>
-<li><b>AccuWebHosting free Windows VPS:</b> second-hand sources only, no official page verified, not listed.</li>
+<li><b>AccuWebHosting free Windows VPS:</b> second-hand sources only, no official page verified.</li>
 <li><b>Baidu AI Cloud BCC free trial:</b> only a 2021 article was found, no current official page — treated as ended or status unclear.</li>
-<li><b>GratisVPS, VPSWala, and other small “permanently free” hosts:</b> no verifiable official terms or business information, not listed.</li>
-<li><b>Abeiyun, Sanfengyun, Rainyun, and other task-renewal hosts:</b> require posting, check-ins, or points to renew, which fails the official-terms-only rule. (Sanfengyun is now listed in the Deals section under deal rules.)</li>
-<li><b>IONOS, Hostinger, and other “money-back guarantee” offers:</b> a refund guarantee is not a free trial — not listed.</li>
+<li><b>GratisVPS, VPSWala, and other small “permanently free” hosts:</b> no verifiable official terms or business information.</li>
+<li><b>Abeiyun, Sanfengyun, Rainyun, and other task-renewal hosts:</b> require posting, check-ins, or points to renew, which fails the official-terms-only rule. (Sanfengyun is in the Deals section under deal rules.)</li>
+<li><b>IONOS, Hostinger, and other “money-back guarantee” offers:</b> a refund guarantee is not a free trial.</li>
 <li><b>Ended claims:</b> Oracle Always Free 4 OCPU / 24 GB (docs changed to 2 OCPU / 12 GB in June 2026); AWS 12-month free EC2 (new accounts moved to the credit model). Tutorials still writing these are out of date.</li>
 </ul>
-<p><b>Added 2026-11-13:</b> trial credits (Vultr, DigitalOcean, Akamai, Hetzner) and Sanfengyun are now listed in the <a href="../wool/">VPS Deals section</a> under deal rules (verified on official pages, expiry dates and risks stated, marked separately from free). This free section’s listing standard is unchanged.</p>
+<p><b>Added 2026-11-13:</b> trial credits (Vultr, DigitalOcean, Akamai, Hetzner) and Sanfengyun are in the <a href="../wool/">VPS Deals section</a> under deal rules (verified on official pages, expiry dates and risks stated, marked separately from free).</p>
 <h2>Change log (per official pages and docs dates)</h2>
 <ul>
 <li><b>2026-06-12:</b> Oracle official docs updated: Always Free A1 allowance changed to 1,500 OCPU hours + 9,000 GB hours per month (equivalent to 2 OCPU / 12 GB). Community reports say it took effect from August 18, 2026 (community claim, not an official announcement).</li>
@@ -153,7 +153,7 @@ footer a { color:var(--accent); }
 <li><b>Sep–Oct 2026:</b> AWS new signup flow launched; the official FAQ states most new customers do not need a payment method to register.</li>
 <li><b>From 2026-11-16:</b> for trials registered or upgrades made on or after this date, the GCP $300 credit cannot pay for Gemini platform service fees (official docs wording); the $300 credit already could not pay for Gemini API fees in AI Studio.</li>
 <li><b>2026-10-19:</b> InstaBox announced pricing: free tier with 1 machine at 4 vCPU / 8 GiB (official blog).</li>
-<li><b>2026-11-13:</b> this site added the InstaBox free tier (9th entry), verified against the official pricing docs.</li>
+<li><b>2026-11-13:</b> InstaBox free tier added (9th entry), verified against the official pricing docs.</li>
 <li><b>2026-12-01:</b> early accounts’ 5-free-sandbox grace period ends; after that each account can run only 1 free sandbox at a time (official pricing docs).</li>
 </ul>
 <div class="related"><h2>Related pages</h2>
@@ -201,6 +201,6 @@ footer a { color:var(--accent); }
 
 
 </div></main>
-<footer><div class="wrap"><p><a href="../">Home</a> · <a href="./">Free VPS</a> · <a href="../wool/">VPS Deals</a> · <a href="../cheap/">Cheap VPS</a> · <a href="../offers/">Offer details</a> · <a href="../compare/">Comparisons</a> · <a href="../faq/">FAQ</a> · <a href="../../vps/">中文</a></p><p>Data is for reference only — check the vendor’s official page. Every VPS entry was verified against a vendor official page; verification dates are on each page. Allowances can change or end at any time; read the vendor’s terms before claiming. This site contains no invite links, API resellers, second-hand credits, or shared accounts.</p></div></footer>
+<footer><div class="wrap"><p><a href="../">Home</a> · <a href="./">Free VPS</a> · <a href="../wool/">VPS Deals</a> · <a href="../cheap/">Cheap VPS</a> · <a href="../offers/">Offer details</a> · <a href="../compare/">Comparisons</a> · <a href="../faq/">FAQ</a> · <a href="../../vps/">中文</a></p><p>Data is for reference only — check the vendor’s official page. Every VPS entry was verified against a vendor official page; verification dates are on each page. Allowances can change or end at any time; read the vendor’s terms before claiming. No invite links, API resellers, second-hand credits, or shared accounts.</p></div></footer>
 </body>
 </html>
