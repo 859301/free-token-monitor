@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paddle 费率详解：5% + 50¢、Merchant of Record、无月费、税务合规</title>
+<meta name="description" content="Paddle Pay-as-you-go：5% + 50¢/Checkout 交易；Merchant of Record；全球税务合规、欺诈保护、退款与买家支持；无月费、无迁移费、无隐藏费用；低于 $10 的商品可议价。核实于 2026-11-13。">
+<link rel="canonical" href="https://tokens.yangtokent.com/payments/offers/paddle/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Paddle 费率详解：5% + 50¢、Merchant of Record、无月费、税务合规",
+  "description": "Paddle Pay-as-you-go：5% + 50¢/Checkout 交易；Merchant of Record；全球税务合规、欺诈保护、退款与买家支持；无月费、无迁移费、无隐藏费用；低于 $10 的商品可议价。核实于 2026-11-13。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/payments/offers/paddle/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Paddle 收月费吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不收。FAQ 原文：无月费、无迁移费、无隐藏费用。费率为 5% + 50¢/Checkout 交易。核实于 2026-11-13。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Paddle 负责税务吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "负责。按 FAQ 表述，Paddle 代收正确税率、跟踪申报期限、提交销售税申报。核实于 2026-11-13。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "商品低于 $10 怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FAQ 写明，低于 $10 的商品可联系议价。议价条件与流程以官方页面为准。核实于 2026-11-13。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Paddle 接受中国大陆个人注册吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "官网已读页面未述。是否接受中国大陆个人注册，以官方支持国家/验证要求页面为准。核实于 2026-11-13。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">支付变现</a><a href="../../offers/" aria-current="page">支付详情</a><a href="../../compare/">支付对比</a><a href="../../guides/">支付指南</a><a href="../../faq/">支付问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">支付变现</a> / <a href="../">支付详情</a> / Paddle</p>
+<h1>Paddle</h1>
+<p class="meta">Paddle · 核实于 2026-11-13 · 本页更新于 2026-11-13</p>
+<p><span class="tag">Merchant of Record</span><span class="tag ok">无月费</span><span class="tag">5% + 50¢</span></p>
+<div class="answer"><p>Paddle Pay-as-you-go 费率为 5% + 50¢/Checkout 交易，无月费、无迁移费、无隐藏费用。Paddle 为 Merchant of Record，包含全球税务合规、欺诈保护、退款与买家支持；税务方面代收正确税率、跟踪申报期限、提交销售税申报。低于 $10 的商品可联系议价。核实于 2026-11-13，领取前请以厂商官方页为准。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#facts">费率速览</a></li><li><a href="#rates">费率</a></li><li><a href="#mor">Merchant of Record 包含的服务</a></li><li><a href="#tax">税务</a></li><li><a href="#lowprice">低于 $10 的商品</a></li><li><a href="#unconfirmed">未确认的信息</a></li><li><a href="#official">官方链接</a></li><li><a href="#risks">注意事项</a></li><li><a href="#faq">常见问题</a></li></ul></div>
+<h2 id="facts">费率速览</h2><div class="tablewrap"><table class="fact"><tbody><tr><th>提供方</th><td>Paddle</td></tr><tr><th>类型</th><td>Merchant of Record</td></tr><tr><th>费率</th><td>Pay-as-you-go：5% + 50¢/Checkout 交易</td></tr><tr><th>月费</th><td>无月费、无迁移费、无隐藏费用（FAQ 原文）</td></tr><tr><th>包含服务</th><td>全球税务合规、欺诈保护、退款与买家支持</td></tr><tr><th>税务</th><td>代收正确税率、跟踪申报期限、提交销售税申报（FAQ）</td></tr><tr><th>低价商品</th><td>低于 $10 的商品可联系议价（FAQ）</td></tr><tr><th>注册绑卡</th><td>官网已读页面未述，以官方页面为准</td></tr><tr><th>支持国家/验证要求</th><td>官网已读页面未述，以官方页面为准</td></tr><tr><th>核实日期</th><td>2026-11-13</td></tr><tr><th>来源</th><td>Paddle 官网定价页（<a href="https://www.paddle.com/pricing" target="_blank" rel="noopener noreferrer">官方页</a>）</td></tr></tbody></table></div><h2 id="rates">费率</h2><p>Pay-as-you-go：5% + 50¢/Checkout 交易。无月费、无迁移费、无隐藏费用（FAQ 原文）。单笔换算见<a href="../../guides/fee-math/">支付费率怎么算</a>。</p><h2 id="mor">Merchant of Record 包含的服务</h2><p>Paddle 为 Merchant of Record，包含全球税务合规、欺诈保护、退款与买家支持。Merchant of Record 的含义见<a href="../../guides/what-is-mor/">Merchant of Record 是什么</a>。</p><h2 id="tax">税务</h2><p>按 FAQ 表述，Paddle 代收正确税率、跟踪申报期限、提交销售税申报。具体适用地区与税种以官方页面为准。</p><h2 id="lowprice">低于 $10 的商品</h2><p>FAQ 写明，低于 $10 的商品可联系议价。议价条件与流程以官方页面为准。</p><h2 id="unconfirmed">未确认的信息</h2><p>支持国家、验证要求、提现路径与到账方式、注册是否需要绑卡，在官网已读页面中未述，以官方页面为准。是否接受中国大陆个人注册，以官方支持国家/验证要求页面为准。</p><h2 id="official">官方链接</h2><p><a class="btn" href="https://www.paddle.com/pricing" target="_blank" rel="noopener noreferrer">去厂商官方页</a></p><h2 id="risks">注意事项</h2><ul><li>费率为 5% + 50¢/Checkout 交易，按交易计费</li><li>低于 $10 的商品可联系议价，条件以官方页面为准</li><li>支持国家与验证要求以官方页面为准</li></ul><h2 id="faq">常见问题</h2><details><summary>Paddle 收月费吗？</summary><p>不收。FAQ 原文：无月费、无迁移费、无隐藏费用。费率为 5% + 50¢/Checkout 交易。核实于 2026-11-13。</p></details><details><summary>Paddle 负责税务吗？</summary><p>负责。按 FAQ 表述，Paddle 代收正确税率、跟踪申报期限、提交销售税申报。核实于 2026-11-13。</p></details><details><summary>商品低于 $10 怎么办？</summary><p>FAQ 写明，低于 $10 的商品可联系议价。议价条件与流程以官方页面为准。核实于 2026-11-13。</p></details><details><summary>Paddle 接受中国大陆个人注册吗？</summary><p>官网已读页面未述。是否接受中国大陆个人注册，以官方支持国家/验证要求页面为准。核实于 2026-11-13。</p></details>
+<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，领取前请以厂商官方页为准。</div><div class="related"><h2>相关页面</h2><ul><li><a href="../stripe/">Stripe</a></li><li><a href="../lemon-squeezy/">Lemon Squeezy</a></li><li><a href="../polar/">Polar</a></li><li><a href="../../compare/mor-fees-compared/">Merchant of Record 费率对照</a></li><li><a href="../../guides/what-is-mor/">Merchant of Record 是什么</a></li><li><a href="../../faq/">支付变现常见问题</a></li><li><a href="../../">返回支付变现列表</a></li></ul></div></article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">支付变现</a> · <a href="../../offers/">支付详情</a> · <a href="../../compare/">支付对比</a> · <a href="../../guides/">支付指南</a> · <a href="../../faq/">支付问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
