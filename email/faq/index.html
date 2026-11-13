@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>邮件常见问题：15 问（免费层、试用、日限月限、绑卡、超额、域名验证）</title>
+<meta name="description" content="邮件常见问题 15 问：SendGrid 试用、Resend 免费层、Mailgun 永久性、Brevo 限制、Postmark 结转、日限月限、超额规则与域名验证。核实于 2026-11-13。">
+<link rel="canonical" href="https://tokens.yangtokent.com/email/faq/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "邮件常见问题：15 问（免费层、试用、日限月限、绑卡、超额、域名验证）",
+  "description": "邮件常见问题 15 问：SendGrid 试用、Resend 免费层、Mailgun 永久性、Brevo 限制、Postmark 结转、日限月限、超额规则与域名验证。核实于 2026-11-13。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/email/faq/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "SendGrid 还有免费计划吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "没有永久免费计划，只有 60 天免费试用：100 封/天，无需信用卡、无承诺。页面中的 free plan 字样指同一 60 天试用。旧的永久免费计划已于 2025 年 3–5 月退役（多家二手来源一致说法）。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "注册验证邮件用什么发？免费额度够吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "注册验证、密码重置这类事务邮件可以用邮件 API 发送。5 条的额度：Resend 3,000 封/月加 100 封/天、Brevo 300 封/天、Mailgun 100 封/天、Postmark 100 封/月、SendGrid 试用 100 封/天（60 天）。够不够用看单日高峰与整月总量，分别对照日限与月限。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "免费额度按天算还是按月算？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "两种口径都有：Mailgun 100 封/天、Brevo 300 封/天按天计量；Postmark 100 封/月按月计量；Resend 同时有 100 封/天与 3,000 封/月两个上限；SendGrid 试用 100 封/天按天计量。Brevo 每日重置、不结转；Postmark 未用不结转。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Resend 免费层是永久的吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "定价页 FAQ 称提供 free-forever plan。免费计划 $0/月：3,000 封/月、100 封/天、3 个域名、3 个收件箱、30 天数据保留。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mailgun 免费计划是永久的吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "官网未明示永久。定价页措辞为 “Test us out”，FAQ 称免费计划可探索平台、带每日发送上限，全文无 “forever” 表述。免费计划 $0/月：100 封/天、1 个自定义发送域名、1 天日志保留。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Brevo 免费计划有什么限制？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "每天 300 封发送，每日重置，不结转；无时间限制；无需绑卡；最多 100,000 联系人；1 个用户；邮件始终带 “Sent with Brevo” 标识；事务邮件重试队列 1,000；自动化 2,000 联系人；50 个 open deals / 1 条 pipeline。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Postmark 免费额度用不完能留到下个月吗？付费起步是多少？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不能结转，FAQ 写明未用额度不结转。免费 Developer 计划 100 封/月，永不过期，不允许超额。100 封/月与 10,000 封/月之间没有中间档位；付费 Basic $15/月起 10,000 封，没有年付计划。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "哪些邮件服务在官网写明了无需信用卡？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Brevo：官方帮助中心写明无需绑卡，定价页写明 “Free forever, no credit card needed”。SendGrid 试用：定价页写明 “no credit card required, no commitment”。其余服务的信用卡要求以官方页面为准。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "邮件超了会怎样？会直接扣费吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "各不相同：Postmark 免费计划不允许超额；Resend 的 pay-as-you-go 仅限付费计划，未开启时超限会收到通知并可选择升级；SendGrid 超额可能收费；Mailgun 与 Brevo 的超额行为在官网已读页面中未述，以官方页面为准。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "SendGrid 试用到期后怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "试用 60 天到期后，继续使用要转入付费计划（Essentials $19.95/月起、Pro $89.95/月起、Premier 定制价），或迁移到其他邮件服务。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "SendGrid 的超额费率为什么有两个数字？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "官方定价 PDF 与定价网页显示的超额费率不同：PDF 中 Essentials 为 $0.00133/封与 $0.00088/封，Pro 五档为 $0.00110 至 $0.00047/封；网页显示 Essentials $0.00075/封、Pro $0.000575/封。两处数值并列呈现，以官方页面为准。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Resend 收到的邮件和 Broadcast 邮件怎么计入额度？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FAQ 写明：收到的邮件计入事务配额；Broadcast 邮件不计入事务限额。事务邮件与 Broadcast 邮件按不同口径计量。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "域名验证要做什么？SPF 和 DKIM 是什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "域名验证是在 DNS 里添加服务商提供的 SPF 与 DKIM 记录，再回到服务商后台确认验证通过。SPF 是一条 DNS TXT 记录，列出被授权用该域名发信的服务器；DKIM 用密钥签名邮件，收件方用 DNS 里的公钥验证签名。各家提供的记录值以官方页面为准。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "邮件会不会进垃圾箱？域名验证能保证送达吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "域名验证是发件身份认证的基础步骤，不等于送达保证：是否进入收件箱还受收件方策略与发件行为影响，具体规则以各收件方与服务商的官方页面为准。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Best free transactional email API? Resend vs SendGrid free tier?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Resend 有免费层（FAQ 称 free-forever plan），3,000 封/月加 100 封/天；SendGrid 只有 60 天试用，没有永久免费计划。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../">首页</a><a href="../">邮件通知</a><a href="../offers/">邮件详情</a><a href="../compare/">邮件对比</a><a href="../guides/">邮件指南</a><a href="../faq/" aria-current="page">邮件问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../">首页</a> / <a href="../">邮件通知</a> / 常见问题</p>
+
+<h1>邮件常见问题</h1>
+<p class="meta">核实于 2026-11-13 · 本页更新于 2026-11-13</p>
+<div class="answer"><p>15 个问题：14 个中文问题，1 个英文问题原文、中文回答。答案里的参数以各家官网为准，核实于 2026-11-13。</p></div>
+<h2 id="zh">中文问题</h2>
+<details><summary>SendGrid 还有免费计划吗？</summary><p>没有永久免费计划，只有 60 天免费试用：100 封/天，无需信用卡、无承诺。页面中的 free plan 字样，计划表头明确为 Free Trial $0/mo for 60 days，指同一 60 天试用。旧的永久免费计划已于 2025 年 3–5 月退役（多家二手来源一致说法）。详情见<a href="../offers/sendgrid-trial/">SendGrid 试用详情页</a>。</p></details><details><summary>注册验证邮件用什么发？免费额度够吗？</summary><p>注册验证、密码重置这类事务邮件可以用邮件 API 发送。5 条的额度：Resend 3,000 封/月加 100 封/天、Brevo 300 封/天、Mailgun 100 封/天、Postmark 100 封/月、SendGrid 试用 100 封/天（60 天）。够不够用看单日高峰与整月总量，分别对照日限与月限，见<a href="../guides/choosing-transactional-email/">事务邮件怎么选</a>。</p></details><details><summary>免费额度按天算还是按月算？</summary><p>两种口径都有：Mailgun 100 封/天、Brevo 300 封/天按天计量；Postmark 100 封/月按月计量；Resend 同时有 100 封/天与 3,000 封/月两个上限；SendGrid 试用 100 封/天按天计量。Brevo 每日重置、不结转；Postmark 未用不结转。完整对照见<a href="../compare/daily-vs-monthly-limits/">日限 vs 月限</a>。</p></details><details><summary>Resend 免费层是永久的吗？</summary><p>定价页 FAQ 称提供 free-forever plan。免费计划 $0/月：3,000 封/月、100 封/天、3 个域名、3 个收件箱、30 天数据保留。详情见<a href="../offers/resend/">Resend 详情页</a>。</p></details><details><summary>Mailgun 免费计划是永久的吗？</summary><p>官网未明示永久。定价页措辞为 “Test us out”，FAQ 称免费计划可探索平台、带每日发送上限，全文无 “forever” 表述。免费计划 $0/月：100 封/天、1 个自定义发送域名、1 天日志保留。详情见<a href="../offers/mailgun/">Mailgun 详情页</a>。</p></details><details><summary>Brevo 免费计划有什么限制？</summary><p>每天 300 封发送，每日重置，不结转；无时间限制；无需绑卡；最多 100,000 联系人；1 个用户；邮件始终带 “Sent with Brevo” 标识；事务邮件重试队列 1,000；自动化 2,000 联系人；50 个 open deals / 1 条 pipeline。详情见<a href="../offers/brevo/">Brevo 详情页</a>。</p></details><details><summary>Postmark 免费额度用不完能留到下个月吗？付费起步是多少？</summary><p>不能结转，FAQ 写明未用额度不结转。免费 Developer 计划 100 封/月，永不过期，不允许超额。100 封/月与 10,000 封/月之间没有中间档位；付费 Basic $15/月起 10,000 封，没有年付计划。详情见<a href="../offers/postmark/">Postmark 详情页</a>。</p></details><details><summary>哪些邮件服务在官网写明了无需信用卡？</summary><p>Brevo：官方帮助中心写明无需绑卡，定价页写明 “Free forever, no credit card needed”。SendGrid 试用：定价页写明 “no credit card required, no commitment”。其余服务的信用卡要求以官方页面为准。</p></details><details><summary>邮件超了会怎样？会直接扣费吗？</summary><p>各不相同：Postmark 免费计划不允许超额；Resend 的 pay-as-you-go 仅限付费计划，未开启时超限会收到通知并可选择升级；SendGrid 超额可能收费（“overage charges may apply”）；Mailgun 与 Brevo 的超额行为在官网已读页面中未述，以官方页面为准。完整对照见<a href="../guides/email-overage-rules/">邮件超额规则</a>。</p></details><details><summary>SendGrid 试用到期后怎么办？</summary><p>试用 60 天到期后，继续使用要转入付费计划（Essentials $19.95/月起、Pro $89.95/月起、Premier 定制价），或迁移到其他邮件服务。迁移步骤与替代对照见<a href="../guides/sendgrid-trial-migration/">从 SendGrid 试用迁移</a>。</p></details><details><summary>SendGrid 的超额费率为什么有两个数字？</summary><p>官方定价 PDF 与定价网页显示的超额费率不同：PDF 中 Essentials 为 $0.00133/封（$19.95 档）与 $0.00088/封（$34.95 档），Pro 五档为 $0.00110 至 $0.00047/封；网页显示 Essentials $0.00075/封、Pro $0.000575/封。两处数值并列呈现，以官方页面为准。详情见<a href="../offers/sendgrid-trial/">SendGrid 试用详情页</a>。</p></details><details><summary>Resend 收到的邮件和 Broadcast 邮件怎么计入额度？</summary><p>FAQ 写明：收到的邮件计入事务配额；Broadcast 邮件不计入事务限额。事务邮件与 Broadcast 邮件按不同口径计量。详情见<a href="../offers/resend/">Resend 详情页</a>。</p></details><details><summary>域名验证要做什么？SPF 和 DKIM 是什么？</summary><p>域名验证是在 DNS 里添加服务商提供的 SPF 与 DKIM 记录，再回到服务商后台确认验证通过。SPF 是一条 DNS TXT 记录，列出被授权用该域名发信的服务器；DKIM 用密钥签名邮件，收件方用 DNS 里的公钥验证签名。各家提供的记录值以官方页面为准。通用步骤见<a href="../guides/domain-verification-basics/">域名验证基础</a>。</p></details><details><summary>邮件会不会进垃圾箱？域名验证能保证送达吗？</summary><p>域名验证是发件身份认证的基础步骤，不等于送达保证：是否进入收件箱还受收件方策略与发件行为影响，具体规则以各收件方与服务商的官方页面为准。验证步骤见<a href="../guides/domain-verification-basics/">域名验证基础</a>。</p></details>
+<h2 id="en">英文问题</h2>
+<details><summary>Best free transactional email API? Resend vs SendGrid free tier?</summary><p>这是英文归纳问法，中文回答：Resend 有免费层（FAQ 称 free-forever plan），3,000 封/月加 100 封/天；SendGrid 只有 60 天试用，没有永久免费计划。两者对照见<a href="../compare/resend-sendgrid-mailgun/">Resend vs SendGrid vs Mailgun</a>。</p></details>
+<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，领取前请以厂商官方页为准。</div>
+<div class="related"><h2>相关页面</h2><ul><li><a href="../">邮件通知列表</a></li><li><a href="../offers/">邮件详情总览</a></li><li><a href="../compare/all-email-table/">邮件总表</a></li><li><a href="../guides/">邮件指南</a></li></ul></div>
+
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../">首页</a> · <a href="../">邮件通知</a> · <a href="../offers/">邮件详情</a> · <a href="../compare/">邮件对比</a> · <a href="../guides/">邮件指南</a> · <a href="../faq/">邮件问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
