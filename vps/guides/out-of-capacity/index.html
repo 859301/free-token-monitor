@@ -85,14 +85,14 @@ footer a { color:var(--accent); }
 </script>
 </head>
 <body>
-<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：只收厂商官方核对过的免费额度。领取前请以厂商官方页为准。</p></div></header>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：额度信息来自厂商官方页。领取前请以厂商官方页为准。</p></div></header>
 <nav><div class="wrap"><a href="../../../">首页</a><a href="../../">免费 VPS</a><a href="../../offers/">VPS 详情</a><a href="../../compare/">VPS 对比</a><a href="../" aria-current="page">VPS 指南</a><a href="../../faq/">VPS 问答</a></div></nav>
 <main><div class="wrap">
 <article>
 <p class="crumb"><a href="../../../">首页</a> / <a href="../../">免费 VPS</a> / <a href="../">VPS 指南</a> / Out of host capacity 怎么办</p>
 <h1>Out of host capacity 怎么办</h1>
 <p class="meta">本页更新于 2026-11-13</p>
-<div class="answer"><p>Out of host capacity 是主区域 Always Free 容量不足，官方建议换可用区、等待或升级 PAYG；官方称补充容量可能需要数日。社区经验（小规格、AMD 备选）只作参考；抢容量脚本本站不推荐。</p></div>
+<div class="answer"><p>Out of host capacity 是主区域 Always Free 容量不足，官方建议换可用区、等待或升级 PAYG；官方称补充容量可能需要数日。社区经验（小规格、AMD 备选）只作参考；抢容量脚本不推荐。</p></div>
 <div class="toc"><b>本页内容</b><ul><li><a href="#meaning">1. 错误含义</a></li><li><a href="#official">2. 官方建议</a></li><li><a href="#community">3. 社区经验</a></li><li><a href="#scripts">4. 不推荐脚本</a></li><li><a href="#longterm">5. 长期视角</a></li></ul></div>
 <h2 id="meaning">1. 错误含义（官方解释）</h2>
 <p>Out of host capacity 表示主区域暂时没有可用的 Always Free 机型容量。官方文档与 FAQ 的原话是：这表明主区域暂时缺少 Always Free 规格；Oracle 正在补充容量，但可能需要数日后主区域才有额外容量。这不是你的账户问题，也不是配置错误——是区域容量不足。</p>
@@ -101,13 +101,13 @@ footer a { color:var(--accent); }
 <h2 id="community">3. 社区经验（非官方保证，仅供参考）</h2>
 <p>社区讨论里还提到以下做法，均未获官方确认，效果因人而异：错峰重试（非高峰时段容量相对宽松）；改开 1 OCPU 的小规格 A1 实例（占用容量少，更容易开出来）；改开 AMD 的 E2.1.Micro 实例（社区报告称 AMD 机型通常有货）；更换主区域需要重新注册（社区教程指出主区域选定后无法更改，请以官方文档为准）。</p>
 <h2 id="scripts">4. 不推荐：自动重试 / 抢容量脚本</h2>
-<p>社区里有自动重试创建实例的脚本（俗称抢容量脚本）。频繁的自动化重试可能违反厂商使用政策，也可能给账户带来风险；本站不推荐、不提供此类脚本。按官方建议换可用区与等待，是更稳妥的做法。</p>
+<p>社区里有自动重试创建实例的脚本（俗称抢容量脚本）。频繁的自动化重试可能违反厂商使用政策，也可能给账户带来风险；不要用此类脚本。按官方建议换可用区与等待，是更稳妥的做法。</p>
 <h2 id="longterm">5. 长期视角：选区与备选</h2>
 <p>Always Free 计算资源只能建在主区域，容量问题本质上是主区域容量问题。注册时选一个容量相对宽松的主区域，比事后反复重试更重要；同时可考虑把 GCP e2-micro 作为备选免费机（无官方闲置回收规则，但规格与流量更小），见对比 <a href="../../compare/oracle-vs-gcp/">Oracle vs GCP</a>。</p>
 <div class="note"><b>提醒：</b>容量规则以官方文档与 FAQ 为准；社区经验未获官方确认，效果因人而异。</div>
 <div class="related"><h2>相关页面</h2><ul><li><a href="../../offers/oracle-always-free/">Always Free 永久免费云服务器（甲骨文）详情</a></li><li><a href="../oracle-signup/">甲骨文注册与开机全流程</a></li><li><a href="../anti-reclaim/">甲骨文防回收与备份</a></li><li><a href="../../compare/oracle-vs-gcp/">Oracle vs GCP 对比</a></li><li><a href="../../faq/">VPS 常见问题</a></li><li><a href="../../">返回免费 VPS 列表</a></li></ul></div>
 </article>
 </div></main>
-<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">免费 VPS</a> · <a href="../../offers/">VPS 详情</a> · <a href="../../compare/">VPS 对比</a> · <a href="../">VPS 指南</a> · <a href="../../faq/">VPS 问答</a></p><p>数据仅供参考，以厂商官方页为准。VPS 板块各条目均经厂商官方页核对，核实日期见各页；额度随时可能调整或结束，领取前请看清对方条款。本站不含邀请链接、API 中转站、二手积分、共享账号等内容。</p></div></footer>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">免费 VPS</a> · <a href="../../offers/">VPS 详情</a> · <a href="../../compare/">VPS 对比</a> · <a href="../">VPS 指南</a> · <a href="../../faq/">VPS 问答</a></p><p>数据仅供参考，以厂商官方页为准。VPS 板块各条目信息来自厂商官方页，核实日期见各页；额度随时可能调整或结束，领取前请看清对方条款。无邀请链接、无 API 中转站、无二手积分、无共享账号内容。</p></div></footer>
 </body>
 </html>
