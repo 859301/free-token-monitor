@@ -110,7 +110,7 @@ footer a { color:var(--accent); }
       "name": "AWS 额度什么时候过期？6 个月还是 12 个月？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "官方 FAQ 同一页面有两种表述：基础额度写为开户后 6 个月过期；升级后剩余额度与活动赚取的额度写为开户后 12 个月过期。本站如实列出两种说法，请以账号账单页面显示的到期日为准。核实于 2026-11-12。"
+        "text": "官方 FAQ 同一页面有两种表述：基础额度写为开户后 6 个月过期；升级后剩余额度与活动赚取的额度写为开户后 12 个月过期。两种说法并列，请以账号账单页面显示的到期日为准。核实于 2026-11-12。"
       }
     }
   ]
@@ -118,7 +118,7 @@ footer a { color:var(--accent); }
 </script>
 </head>
 <body>
-<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：只收厂商官方核对过的免费额度。领取前请以厂商官方页为准。</p></div></header>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：额度信息来自厂商官方页。领取前请以厂商官方页为准。</p></div></header>
 <nav><div class="wrap"><a href="../../../">首页</a><a href="../../">免费 VPS</a><a href="../" aria-current="page">VPS 详情</a><a href="../../compare/">VPS 对比</a><a href="../../guides/">VPS 指南</a><a href="../../faq/">VPS 问答</a></div></nav>
 <main><div class="wrap">
 <article>
@@ -134,7 +134,7 @@ footer a { color:var(--accent); }
 <p>按官方 FAQ，AWS 免费套餐面向新客户：最高 $200 AWS 额度——注册时 $100，再通过探索基础服务最多获得 $100；另有 30+ 项长期免费服务（在指定限额内、作为 AWS 客户期间一直免费）。注意：官方 FAQ 没有写固定的免费 EC2 虚拟机，EC2 用量是从额度里抵扣的，额度花完或到期就不再免费。旧的「12 个月免费 EC2」已不再面向新账户，旧教程里还在写 12 个月免费的，均已过时。</p>
 <p>额外 $100 的赚取方式：完成控制台首页 Explore AWS 小部件里的活动（在小部件中筛选「Earn AWS credits」查看），须在开户后 6 个月内完成；加入 AWS Organizations 或搭建 Control Tower 落地区后，活动立即过期且失去赚取资格；激活高级功能后也不能再赚取。</p>
 <h2 id="expiry">额度到期时间：官方 FAQ 的两种说法（请注意）</h2>
-<p>官方 FAQ 同一页面上出现了两种到期表述，本站如实列出，不替官方调和：</p>
+<p>官方 FAQ 同一页面上出现了两种到期表述，并列如下，不替官方调和：</p>
 <ul>
 <li>「Free Tier credits expire 6 months from the date you create your AWS account」（额度自开户起 6 个月过期）；免费计划在「6 个月或额度用完」时到期（以先到者为准），不可延长。</li>
 <li>「When you upgrade to Paid plan, your remaining Free Tier credits will automatically apply to future AWS bills until they expire. Free Tier credits expire 12 months after you create your account」（升级后剩余额度继续抵扣，有效期写为开户后 12 个月）；活动赚取的额度也写为「expire 12 months from the date you create your AWS account」。</li>
@@ -148,11 +148,11 @@ footer a { color:var(--accent); }
 <p>在线创建 AWS 账户（自动加入免费计划）→ 在控制台首页 Explore AWS 小部件中完成活动赚取额外 $100 → 用额度开 EC2 等服务 → 在控制台查看剩余额度与剩余天数。</p>
 <p><a class="btn" href="https://aws.amazon.com/free/" target="_blank" rel="noopener noreferrer">去厂商官方页领取</a></p>
 <h2 id="risks">注意事项</h2><ul><li>新账户专属：已有或曾经有过 AWS 账户则无资格</li><li>免费计划到期后账户暂停，数据保留 90 天，逾期未升级则永久删除</li><li>官方 FAQ 对额度到期时间的表述存在 6 个月与 12 个月两种说法（见详情页），以官方页面与账单页面显示为准</li><li>免费计划只能访问部分服务；加入 Organizations 或搭建 Control Tower 后即失去赚取额外额度的资格</li></ul>
-<h2 id="faq">常见问题</h2><details><summary>新账户还有 12 个月免费 EC2 吗？</summary><p>没有了。新账户只有额度模型：最高 $200 额度、最长 6 个月，EC2 用量从额度里抵扣，官方 FAQ 没有写固定的免费 EC2 虚拟机。旧的 12 个月免费 EC2 已不再面向新账户。核实于 2026-11-12。</p></details><details><summary>注册 AWS 需要绑卡吗？</summary><p>按官方 FAQ，大多数新客户注册时不需要付款方式；某些情况下可能要求提供付款方式等信息以验证身份。仅限新客户，已有或曾经有过 AWS 账户的无资格。核实于 2026-11-12。</p></details><details><summary>AWS 额度什么时候过期？6 个月还是 12 个月？</summary><p>官方 FAQ 同一页面有两种表述：基础额度写为开户后 6 个月过期；升级后剩余额度与活动赚取的额度写为开户后 12 个月过期。本站如实列出两种说法，请以账号账单页面显示的到期日为准。核实于 2026-11-12。</p></details>
-<div class="note"><b>免责：</b>本页信息照录本站核对时厂商官方页的内容（核实于 2026-11-12），额度随时可能调整或结束；领取前请以厂商官方页为准。</div>
+<h2 id="faq">常见问题</h2><details><summary>新账户还有 12 个月免费 EC2 吗？</summary><p>没有了。新账户只有额度模型：最高 $200 额度、最长 6 个月，EC2 用量从额度里抵扣，官方 FAQ 没有写固定的免费 EC2 虚拟机。旧的 12 个月免费 EC2 已不再面向新账户。核实于 2026-11-12。</p></details><details><summary>注册 AWS 需要绑卡吗？</summary><p>按官方 FAQ，大多数新客户注册时不需要付款方式；某些情况下可能要求提供付款方式等信息以验证身份。仅限新客户，已有或曾经有过 AWS 账户的无资格。核实于 2026-11-12。</p></details><details><summary>AWS 额度什么时候过期？6 个月还是 12 个月？</summary><p>官方 FAQ 同一页面有两种表述：基础额度写为开户后 6 个月过期；升级后剩余额度与活动赚取的额度写为开户后 12 个月过期。两种说法并列，请以账号账单页面显示的到期日为准。核实于 2026-11-12。</p></details>
+<div class="note"><b>免责：</b>本页信息来自厂商官方页（核实于 2026-11-12），额度随时可能调整或结束；领取前请以厂商官方页为准。</div>
 <div class="related"><h2>相关页面</h2><ul><li><a href="../azure-free-account/">Azure 免费账户：$200 额度 + 750 小时虚拟机 / 12 个月</a></li><li><a href="../gcp-free-tier/">Google Cloud 免费层：e2-micro 永久免费 + $300 试用</a></li><li><a href="../../compare/aws-azure-gcp/">AWS vs Azure vs GCP 免费层对比</a></li><li><a href="../../compare/no-card-audit/">免费 VPS 无需信用卡：真正不用绑卡的有哪些？</a></li><li><a href="../../guides/billing-pitfalls/">免费 VPS 账单避坑</a></li><li><a href="../../faq/">VPS 常见问题</a></li><li><a href="../../">返回免费 VPS 列表</a></li></ul></div>
 </article>
 </div></main>
-<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">免费 VPS</a> · <a href="../">VPS 详情</a> · <a href="../../compare/">VPS 对比</a> · <a href="../../guides/">VPS 指南</a> · <a href="../../faq/">VPS 问答</a></p><p>数据仅供参考，以厂商官方页为准。VPS 板块各条目均经厂商官方页核对，核实日期见各页；额度随时可能调整或结束，领取前请看清对方条款。本站不含邀请链接、API 中转站、二手积分、共享账号等内容。</p></div></footer>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">免费 VPS</a> · <a href="../">VPS 详情</a> · <a href="../../compare/">VPS 对比</a> · <a href="../../guides/">VPS 指南</a> · <a href="../../faq/">VPS 问答</a></p><p>数据仅供参考，以厂商官方页为准。VPS 板块各条目信息来自厂商官方页，核实日期见各页；额度随时可能调整或结束，领取前请看清对方条款。无邀请链接、无 API 中转站、无二手积分、无共享账号内容。</p></div></footer>
 </body>
 </html>
