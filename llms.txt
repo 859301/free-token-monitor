@@ -193,6 +193,115 @@
 - [免费子域名 vs 自有域名](https://tokens.yangtokent.com/hosting/guides/subdomain-vs-domain/): 后缀列表、绑定、Cloudflare 限制。
 - [从 000webhost 迁移](https://tokens.yangtokent.com/hosting/guides/migrate-from-000webhost/): 停服事实、数据恢复、迁移目标对照。
 
+## 部署与托管板块
+
+- [部署与托管](https://tokens.yangtokent.com/deploy/): 10 条：7 个免费层、1 个 30 天试用、2 个无免费层说明；含不在列表中的服务及原因与变化记录。
+- [部署详情](https://tokens.yangtokent.com/deploy/offers/): 10 条部署详情页。
+- [部署对比](https://tokens.yangtokent.com/deploy/compare/): 5 篇对比：静态三家、休眠对照、Workers vs Pages、试用三家、总表。
+- [部署指南](https://tokens.yangtokent.com/deploy/guides/): 6 篇指南：超额对照、商用限制、休眠冷启动、不租服务器、托管 vs 自托管、绑卡对照。
+- [部署常见问题](https://tokens.yangtokent.com/deploy/faq/): 17 个常见问题与回答。
+- [部署数据（JSON）](https://tokens.yangtokent.com/data/deploy.json): 全部 10 条的机器可读数据，含规格原文、绑卡、超额行为、休眠政策、核实日期。
+
+## 部署详情页
+
+- [Vercel Hobby 免费层](https://tokens.yangtokent.com/deploy/offers/vercel-hobby/): 100 GB 传输、1M 请求、硬上限、个人非商业限制。核实于 2026-11-13。
+- [Netlify Free](https://tokens.yangtokent.com/deploy/offers/netlify-free/): 300 credits/月、$0 forever、生产部署 15 credits/次。核实于 2026-11-13。
+- [Cloudflare Workers 免费层](https://tokens.yangtokent.com/deploy/offers/cloudflare-workers/): 每天 100,000 请求、10 ms CPU、KV/D1 免费量。核实于 2026-11-13。
+- [Cloudflare Pages 免费层](https://tokens.yangtokent.com/deploy/offers/cloudflare-pages/): 每月 500 构建、20,000 文件、100 域名/项目。核实于 2026-11-13。
+- [Render 免费层](https://tokens.yangtokent.com/deploy/offers/render-free/): 0.1 CPU/512 MB、15 分钟休眠、750 小时、Postgres 30 天到期。核实于 2026-11-13。
+- [Northflank Sandbox](https://tokens.yangtokent.com/deploy/offers/northflank-sandbox/): 2 服务/1 数据库、$20 资源上限、常开不休眠、必须绑卡。核实于 2026-11-13。
+- [EdgeOne 免费计划](https://tokens.yangtokent.com/deploy/offers/edgeone-free/): $0/月、不限量安全流量与 SSL、内测中、无 SLA。核实于 2026-11-13。
+- [Railway 试用](https://tokens.yangtokent.com/deploy/offers/railway-trial/): 30 天 $5 credits、之后 $1/月起、试用制不是永久免费。核实于 2026-11-13。
+- [Fly.io 没有免费层](https://tokens.yangtokent.com/deploy/offers/fly-io/): $1/7 天试用、账单低于 $5 豁免、最小常开 $2.19/30 天。核实于 2026-11-13。
+- [Koyeb 没有免费层](https://tokens.yangtokent.com/deploy/offers/koyeb/): Pro $29/月、Scale $299/月、Enterprise 定制。核实于 2026-11-13。
+
+## 部署对比
+
+- [Vercel vs Netlify vs Cloudflare Pages](https://tokens.yangtokent.com/deploy/compare/vercel-netlify-pages/): 计量方式、构建、商业限制、超额行为、绑卡逐项比。
+- [Render vs Northflank vs Railway](https://tokens.yangtokent.com/deploy/compare/render-northflank-railway/): 15 分钟 spin down、常开不休眠、30 天试用对照。
+- [Cloudflare Workers vs Pages](https://tokens.yangtokent.com/deploy/compare/workers-vs-pages/): 请求与 CPU 计量、构建与文件限制、配套免费量。
+- [Fly.io vs Railway vs Koyeb](https://tokens.yangtokent.com/deploy/compare/flyio-railway-koyeb/): 三家均无永久免费层；试用、$5 豁免、起步价、绑卡对照。
+- [部署与托管总表](https://tokens.yangtokent.com/deploy/compare/all-deploy-table/): 10 条免费、试用与无免费层一览。
+
+## 部署指南
+
+- [免费额度超了怎么办](https://tokens.yangtokent.com/deploy/guides/overage-stop-vs-charge/): 停服、暂停、等待与扣费对照。
+- [Vercel Hobby 商业限制说明](https://tokens.yangtokent.com/deploy/guides/vercel-hobby-commercial/): 服务条款原文与公平使用清单。
+- [免费实例休眠与冷启动](https://tokens.yangtokent.com/deploy/guides/sleep-cold-start/): Render 15 分钟 spin down 与 Northflank 常开对照。
+- [不租服务器怎么部署](https://tokens.yangtokent.com/deploy/guides/no-server-deploy/): 静态托管、边缘计算、容器三条路线。
+- [托管免费层 vs VPS 自托管](https://tokens.yangtokent.com/deploy/guides/managed-vs-selfhosted/): 两条路线的对照。
+- [部署服务要绑卡吗](https://tokens.yangtokent.com/deploy/guides/card-required-check/): 必须绑卡、无需绑卡、未述逐家对照。
+
+## 免费数据库板块
+
+- [免费数据库](https://tokens.yangtokent.com/database/): 6 个免费数据库与数据层额度；含不在列表中的服务及原因与变化记录。
+- [数据库详情](https://tokens.yangtokent.com/database/offers/): 6 条数据库详情页。
+- [数据库对比](https://tokens.yangtokent.com/database/compare/): 5 篇对比：三家 Postgres、Supabase vs Neon、Supabase vs Firebase、暂停超限、总表。
+- [数据库指南](https://tokens.yangtokent.com/database/guides/): 6 篇指南：选择、超额迁移、暂停休眠、Spark vs Blaze、自托管、认证额度。
+- [数据库常见问题](https://tokens.yangtokent.com/database/faq/): 16 个常见问题与回答。
+- [数据库数据（JSON）](https://tokens.yangtokent.com/data/database.json): 全部 6 条的机器可读数据，含规格原文、绑卡、暂停规则、超限行为、核实日期。
+
+## 数据库详情页
+
+- [Supabase 免费档](https://tokens.yangtokent.com/database/offers/supabase/): 500 MB 数据库、50,000 MAU、1 周不活跃暂停、至多 2 个项目。核实于 2026-11-13。
+- [Neon 免费档](https://tokens.yangtokent.com/database/offers/neon/): 100 CU-hrs/项目/月、1 GB 存储/项目、永久免费、免绑卡、5 分钟 scale to zero。核实于 2026-11-13。
+- [Turso 免费档](https://tokens.yangtokent.com/database/offers/turso/): 100 个数据库、5 GB、每月 500M 行读/10M 行写、免绑卡。核实于 2026-11-13。
+- [Upstash Redis 免费档](https://tokens.yangtokent.com/database/offers/upstash-redis/): 250 MB、500K 命令/月、1 个免费库、加卡即转按量付费。核实于 2026-11-13。
+- [MongoDB Atlas M0](https://tokens.yangtokent.com/database/offers/mongodb-atlas/): 512 MB、共享 CPU/RAM、Free forever。核实于 2026-11-13。
+- [Firebase 免费额度](https://tokens.yangtokent.com/database/offers/firebase/): Firestore 1 GiB、Auth 50K MAU、Hosting 360 MB/天、Spark vs Blaze。核实于 2026-11-13。
+
+## 数据库对比
+
+- [Supabase vs Neon vs Turso](https://tokens.yangtokent.com/database/compare/supabase-vs-neon-vs-turso/): 存储、用量口径、暂停、绑卡逐项比。
+- [Supabase vs Neon](https://tokens.yangtokent.com/database/compare/supabase-vs-neon/): 500 MB vs 1 GB/项目、暂停与 scale to zero、认证额度。
+- [Supabase vs Firebase](https://tokens.yangtokent.com/database/compare/supabase-vs-firebase/): 数据库、认证、存储、函数、托管逐项比。
+- [免费数据库暂停与超限对照](https://tokens.yangtokent.com/database/compare/pause-and-overage/): 暂停、休眠、停服、扣费各家怎么写。
+- [免费数据库总表](https://tokens.yangtokent.com/database/compare/all-databases-table/): 6 条免费档一览。
+
+## 数据库指南
+
+- [免费数据库怎么选](https://tokens.yangtokent.com/database/guides/choosing-a-free-database/): 5 步对照：类型、暂停、绑卡、附加额度、超限。
+- [免费数据库超额与迁移](https://tokens.yangtokent.com/database/guides/migration-and-overage/): 超了怎么办、停服还是扣费、迁移通用步骤。
+- [免费数据库暂停与休眠](https://tokens.yangtokent.com/database/guides/pause-and-scale-to-zero/): 1 周暂停、5 分钟 scale to zero、暂停与删除的区别。
+- [Firebase Spark vs Blaze](https://tokens.yangtokent.com/database/guides/firebase-spark-vs-blaze/): 免费额度语义、超限停用、无法设硬上限。
+- [自托管 vs 托管数据库](https://tokens.yangtokent.com/database/guides/self-hosted-vs-managed/): VPS 自部署、PocketBase、运维成本对照。
+- [数据库自带的认证额度](https://tokens.yangtokent.com/database/guides/auth-included/): Supabase 50,000 MAU、Neon 60k、Firebase 50K。
+
+## 域名 / DNS / CDN / SSL 板块
+
+- [域名 / DNS / CDN / SSL](https://tokens.yangtokent.com/domain/): Cloudflare 免费计划、Let's Encrypt、is-a.dev（部分信息未确认）与 3 家低价注册商；含不在列表中的服务及原因与变化记录。
+- [域名详情](https://tokens.yangtokent.com/domain/offers/): 6 条域名详情页。
+- [域名对比](https://tokens.yangtokent.com/domain/compare/): 5 篇对比：注册商价格、免费子域名路线、SSL 路线、Cloudflare Registrar、总表。
+- [域名指南](https://tokens.yangtokent.com/domain/guides/): 6 篇指南：Freenom 现状、免费域名替代、续费价、基础概念、SSL 限流、学生域名优惠。
+- [域名常见问题](https://tokens.yangtokent.com/domain/faq/): 16 个常见问题与回答。
+- [域名数据（JSON）](https://tokens.yangtokent.com/data/domain.json): 全部 6 条的机器可读数据，含价格原文、首年价与续费价、ICANN 费、核实日期。
+
+## 域名详情页
+
+- [Cloudflare 免费计划](https://tokens.yangtokent.com/domain/offers/cloudflare/): $0、DNS、CDN、Universal SSL、成本价域名注册。核实于 2026-11-13。
+- [Let's Encrypt 免费 DV 证书](https://tokens.yangtokent.com/domain/offers/lets-encrypt/): 50 证/注册域/7 天、ARI 续期。核实于 2026-11-13。
+- [is-a.dev 免费子域名](https://tokens.yangtokent.com/domain/offers/is-a-dev/): 免费 .is-a.dev 与 .is-a.bot；部分信息未确认。核实于 2026-11-13。
+- [Porkbun .com 价格](https://tokens.yangtokent.com/domain/offers/porkbun/): 注册/续费/转入均为 $11.81，含 ICANN 费。核实于 2026-11-13。
+- [Namecheap .com 价格](https://tokens.yangtokent.com/domain/offers/namecheap/): 首年 $12.08（促销价）、续费 $19.98、转入 $12.28。核实于 2026-11-13。
+- [Spaceship .com 价格](https://tokens.yangtokent.com/domain/offers/spaceship/): 首年 $9.48（促销价）、续费 $10.68、转入 $10.18。核实于 2026-11-13。
+
+## 域名对比
+
+- [Porkbun vs Namecheap vs Spaceship](https://tokens.yangtokent.com/domain/compare/registrars/): 三家 .com 首年价、续费价、转入价对照。
+- [免费子域名与低价域名](https://tokens.yangtokent.com/domain/compare/free-subdomain-routes/): is-a.dev、学生包域名、低价 .com 三条路线。
+- [两种免费 SSL 路线](https://tokens.yangtokent.com/domain/compare/ssl-routes/): Cloudflare Universal SSL 与 Let's Encrypt 对照。
+- [Cloudflare Registrar 成本价对照](https://tokens.yangtokent.com/domain/compare/cloudflare-registrar/): 成本价注册与三家注册商 .com 价格对照。
+- [域名 / DNS / CDN / SSL 总表](https://tokens.yangtokent.com/domain/compare/all-domain-table/): 6 条价格与条款一览。
+
+## 域名指南
+
+- [Freenom 免费域名已死](https://tokens.yangtokent.com/domain/guides/freenom-dead/): 时间线、现状与价格说法冲突。
+- [免费域名现状与替代](https://tokens.yangtokent.com/domain/guides/free-domain-alternatives/): 免费子域名、低价 .com、学生包域名。
+- [首年价与续费价](https://tokens.yangtokent.com/domain/guides/renewal-prices/): 注册价、续费价、转入价三种写法与 ICANN 费。
+- [域名、DNS、CDN、SSL 各管什么](https://tokens.yangtokent.com/domain/guides/dns-cdn-ssl-basics/): 从输入网址到显示 HTTPS。
+- [Let's Encrypt 限流详解](https://tokens.yangtokent.com/domain/guides/lets-encrypt-limits/): 50 证/7 天、5 张同标识集与 ARI 续期。
+- [学生身份的域名优惠](https://tokens.yangtokent.com/domain/guides/student-domain-perks/): GitHub Student Pack 里的域名与 SSL。
+
 ## English edition
 
 - [Free Token Monitor (English)](https://tokens.yangtokent.com/en/): all 43 verified free credits in English, filterable; static listing, no claim ledger.

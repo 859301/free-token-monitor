@@ -39,6 +39,27 @@
 - 板块页面在 `cheap/` 下：列表页、4 篇详情页与缺货观察、4 篇对比、6 篇指南、1 个问答页（10 问），均已加入 `sitemap.xml` 与 `llms.txt`。
 - 边界规则：只收常态价（常态套餐页 + 无截止日期 + 续费条件写明或为目录价）；限时促销、首期价与优惠码价一律归羊毛板块。
 
+## 部署与托管板块
+
+- 共 10 条（核实于 2026-11-13）：7 个免费层（Vercel、Netlify、Cloudflare Workers、Cloudflare Pages、Render、Northflank、EdgeOne）+ 1 个试用（Railway，30 天 $5 credits）+ 2 个无免费层说明（Fly.io、Koyeb）。
+- 数据在 `data/deploy.json` 里，字段与 `data/hosting.json` 对应（另有 `planKind`、`hostingType`、`limitsText`、`overageBehavior`、`sleepPolicy`、`commercialNote`、`paidFrom` 字段；`group` / `status` 取值：`free` / `trial` / `no-free-tier`；`cardRequired` 为 `null` 表示官方页未说明；无 `steps` 字段，证据中没有各家的注册流程）。
+- 板块页面在 `deploy/` 下：列表页、10 篇详情页、5 篇对比、6 篇指南、1 个问答页（17 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+- GitHub Pages（参数未直接核实）与 Heroku 免费 tier（已于 2022-11-28 移除）只在列表页「不在列表中的服务及原因」一节说明。
+
+## 免费数据库板块
+
+- 共 6 条（核实于 2026-11-13）：Supabase、Neon、Turso、Upstash Redis、MongoDB Atlas M0、Firebase（Firestore/Auth/Hosting，Hosting 不另建详情页）。
+- 数据在 `data/database.json` 里，字段与 `data/hosting.json` 对应（另有 `dbType`、`overage`、`upgrade`、`idlePolicy`、`storage`、`freePlan` 字段；`group` 取值：`verified`；`status` 取值：`active`；`cardRequired` 为 `null` 表示官方页未说明）。
+- 板块页面在 `database/` 下：列表页、6 篇详情页、5 篇对比、6 篇指南、1 个问答页（16 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+- PlanetScale Hobby（已于 2024-04-08 退役）只在列表页「不在列表中的服务及原因」一节说明。
+
+## 域名 / DNS / CDN / SSL 板块
+
+- 共 6 条（核实于 2026-11-13）：Cloudflare 免费计划、Let's Encrypt、is-a.dev（部分信息未确认）与 3 家低价注册商（Porkbun、Namecheap、Spaceship，首年价与续费价分开列出）。
+- 数据在 `data/domain.json` 里，字段与 `data/hosting.json` 对应（另有 `serviceType`、`priceText`、`keyLimits`、`firstYear`、`renewal`、`transfer`、`icannFee`、`privacy` 字段；`group` 取值：`verified` / `conditional` / `low-price`；`status` 取值：`active` / `conditional`；`cardRequired` 为 `null` 表示官方页未说明）。
+- 板块页面在 `domain/` 下：列表页、6 篇详情页、5 篇对比、6 篇指南、1 个问答页（16 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+- Freenom 免费域名（已死）、eu.org / JS.ORG / DigitalPlat（官网条款未确认）只在列表页「不在列表中的服务及原因」一节说明；GitHub Student Pack 域名优惠只作交叉提示。
+
 ## 使用方法
 
 ### 本地打开
