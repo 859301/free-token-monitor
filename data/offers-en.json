@@ -4,8 +4,8 @@
     "count": 43,
     "language": "en",
     "sources": [
-      "Lanlan repo (all verified against vendor official pages)",
-      "freetokens.fyi (all verified against vendor official pages)"
+      "Lanlan repo",
+      "freetokens.fyi"
     ],
     "note": "Quota wording transcribed from vendor official pages; no currency conversion. Check the official page before claiming. Text translated from data/offers.json; all facts identical."
   },

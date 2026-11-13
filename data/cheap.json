@@ -9,7 +9,7 @@
       "https://hosteons.com/ryzen_premium_vps.php",
       "https://www.digitalocean.com/pricing/droplets"
     ],
-    "note": "低价板块：只收常态价（常态套餐页 + 无截止日期 + 续费条件写明或为目录价）。3 家在架 + 1 个缺货观察（Hetzner CX23，非在售）。renewalStatus 取值：stated-same-rate（官方写明同价续费）/ list-price（目录价，按月封顶）/ unknown（页面未说明）。riskLevel 取值：low / medium / high。plans 数组照录厂商页面套餐表；年总计换算均已标注为换算。"
+    "note": "低价板块：常态价标准（常态套餐页 + 无截止日期 + 续费条件写明或为目录价）。3 家 + 1 个缺货观察（Hetzner CX23，非在售）。renewalStatus 取值：stated-same-rate（官方写明同价续费）/ list-price（目录价，按月封顶）/ unknown（页面未说明）。riskLevel 取值：low / medium / high。plans 数组照录厂商页面套餐表；年总计换算均已标注为换算。"
   },
   "offers": [
     {
@@ -127,7 +127,7 @@
         "fair-share",
         "frankfurt-unverified"
       ],
-      "notes": "两张套餐表核实于 2026-11-13 官网页面；两页均未说明续费价，本站不假设同价续费。付款方式以页面图标为准。",
+      "notes": "两张套餐表核实于 2026-11-13 官网页面；两页均未说明续费价，续费价未知。付款方式以页面图标为准。",
       "priceText": "$21/年起（Gigabit VPS 1）；$24/年起（Ryzen 512MB）",
       "validityText": "常态价，无截止日期；续费价未注明",
       "riskLevel": "medium",
@@ -219,7 +219,7 @@
         "per-second-billing",
         "regions-unspecified"
       ],
-      "notes": "Basic 套餐表、按秒计费与月封顶规则核实于 2026-11-13 官网定价页；12 个月换算（$48/年、$72/年）为本站按月封顶价换算，已标注。",
+      "notes": "Basic 套餐表、按秒计费与月封顶规则核实于 2026-11-13 官网定价页；12 个月换算（$48/年、$72/年）按月封顶价计算，已标注。",
       "priceText": "$4.00/月起（512MiB）；$6.00/月（1GiB）",
       "validityText": "常态目录价，无截止日期",
       "riskLevel": "low",
@@ -268,7 +268,7 @@
       "cardNote": "未核实。",
       "regions": "未核实",
       "risks": [
-        "价格与规格只见于第三方读数，未经官方页核实，本站不采信为当前售价",
+        "价格与规格只见于第三方读数，未经官方页核实，不作为当前售价",
         "长期售罄；补货时间未知",
         "Hetzner 价目在 2026 年 6 月 15 日调整过（第三方说法），历史价不代表现价"
       ],
@@ -287,7 +287,7 @@
         "third-party-only",
         "not-listed"
       ],
-      "notes": "本条不是在架优惠：价格与库存状态均来自第三方检查，未在官方页核实。列入数据文件是为了让观察状态可追踪，status=watch。",
+      "notes": "本条为缺货观察，非在售优惠：价格与库存状态均来自第三方检查，未在官方页核实。",
       "priceText": "€5.49/月（第三方读数，未核实）",
       "validityText": "售罄观察中",
       "riskLevel": "medium",

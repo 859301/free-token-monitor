@@ -1,12 +1,12 @@
 {
   "meta": {
     "generatedAt": "2026-11-13",
-    "count": 9,
+    "count": 10,
     "sources": [
-      "厂商官方页（逐条核对）",
+      "厂商官方页",
       "InstaBox 官方定价文档：https://instabox.sh/docs/pricing.md"
     ],
-    "note": "规格与条款照录厂商官方页面原文；官方页面未注明的字段写「以官方页面为准」，不编造。领取前请以厂商官方页为准。"
+    "note": "规格与条款照录厂商官方页面原文；官方页面未注明的字段写「以官方页面为准」。领取前请以厂商官方页为准。"
   },
   "offers": [
     {
@@ -161,7 +161,7 @@
         "no-card",
         "student-only"
       ],
-      "notes": "本站已核实的各大厂商优惠中，唯一明确无需信用卡的额度优惠。"
+      "notes": "各大厂商优惠中，唯一明确无需信用卡的额度优惠。"
     },
     {
       "id": 6,
@@ -191,7 +191,7 @@
         "card-level-details-unstated",
         "not-auto-released"
       ],
-      "notes": "每小时抵扣上限、公网流量额度、最大规格与地域列表仅见于官方页搜索摘要与社区文章，未在活动页正文中核实，本站不将其作为已核实条款列出。阿里云学生版 300 元优惠券未在官方优惠页核实，不列为已核实优惠。"
+      "notes": "每小时抵扣上限、公网流量额度、最大规格与地域列表仅见于官方页搜索摘要与社区文章，未在活动页正文中核实，不作为已核实条款。阿里云学生版 300 元优惠券未在官方优惠页核实，不列为已核实优惠。"
     },
     {
       "id": 7,
@@ -285,7 +285,39 @@
         "pause-30min",
         "grandfathering-ends-2026-12-01"
       ],
-      "notes": "免费层定价见官方博客（2026-10-19）与定价文档；「邀请制 Beta」与「无入站 IPv4」的说法只见于第三方，未在官方页核实，本站不将其作为已核实条款列出。"
+      "notes": "免费层定价见官方博客（2026-10-19）与定价文档；「邀请制 Beta」与「无入站 IPv4」的说法只见于第三方，未在官方页核实，不作为已核实条款。"
+    },
+    {
+      "id": 10,
+      "slug": "euserv",
+      "title": "EUserv VS2-free：IPv6-only 免费容器服务器、每月手动续期",
+      "provider": "EUserv",
+      "category": "vps",
+      "group": "manual-renew",
+      "specText": "容器型 vServer，完整 root 权限；1 核 @ 1 GHz（AMD/Intel）；1 GB 内存；10 GB 硬盘（Raid10）；1 Gbit/s；每月 1 TB 流量（超出后限速至 1 Mbit/s）；Linux 操作系统免费",
+      "durationText": "合同期 1 个月，续期方式：手动，解约通知期：1 个月",
+      "cardRequired": null,
+      "cardNote": "官方产品页未说明验证与绑卡要求，以官方页面为准。",
+      "regions": "官方产品页未注明机房区域，以官方页面为准。",
+      "risks": [
+        "免费 IPv4 地址为无（产品页写“-”），免费 IPv6 地址 1 个 /128",
+        "合同期 1 个月，续期方式为手动，忘记续期服务会停",
+        "每月 1 TB 流量，超出后限速至 1 Mbit/s",
+        "验证要求在官方产品页未述，地址/电话/人工审核等说法只见于中文教程，以官方页面为准",
+        "社区论坛支持，无工单支持"
+      ],
+      "steps": "打开 EUserv 官网产品页 → 下单 VS2-free → 按页面提示完成验证（验证要求以官方页面为准）→ 收到服务器信息后通过 SSH 使用；每月手动续期。",
+      "claimUrl": "https://www.euserv.com/en/virtual-private-server/root-vserver/v2/vs2-free.php?pk=f6ca143dd4e6765",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "EUserv 官方产品页 · 官方核对",
+      "sourceUrl": "https://www.euserv.com/en/virtual-private-server/root-vserver/v2/vs2-free.php?pk=f6ca143dd4e6765",
+      "status": "active",
+      "flags": [
+        "ipv6-only",
+        "manual-renewal",
+        "verification-secondhand"
+      ],
+      "notes": "验证要求（地址/电话/人工审核、48 小时、IP 与地址国家一致、€2 开通费/$10 最低充值）只见于中文教程，未在官方产品页确认；续期需邮件验证码 PIN 的说法只见于官方论坛帖子搜索摘要，未经官网直读确认。"
     }
   ]
 }

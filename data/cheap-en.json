@@ -128,7 +128,7 @@
         "fair-share",
         "frankfurt-unverified"
       ],
-      "notes": "Both plan tables verified 2026-11-13 on the official pages; neither page states a renewal price, so this site does not assume same-rate renewal. Payment methods per the icons shown on the page.",
+      "notes": "Both plan tables verified 2026-11-13 on the official pages; neither page states a renewal price, so same-rate renewal is not assumed. Payment methods per the icons shown on the page.",
       "priceText": "From $21/year (Gigabit VPS 1); from $24/year (Ryzen 512 MB)",
       "validityText": "Standing prices, no end date; renewal price not stated",
       "riskLevel": "medium",
@@ -220,7 +220,7 @@
         "per-second-billing",
         "regions-unspecified"
       ],
-      "notes": "Basic plan table, per-second billing, and monthly-cap rules verified 2026-11-13 on the official pricing page; 12-month conversions ($48/year, $72/year) are this site’s calculations from the monthly cap prices, labelled as such.",
+      "notes": "Basic plan table, per-second billing, and monthly-cap rules verified 2026-11-13 on the official pricing page; 12-month conversions ($48/year, $72/year) are conversions from the monthly cap prices, labelled as such.",
       "priceText": "From $4.00/month (512 MiB); $6.00/month (1 GiB)",
       "validityText": "Standing list prices, no end date",
       "riskLevel": "low",
@@ -269,7 +269,7 @@
       "cardNote": "Not verified.",
       "regions": "Not verified",
       "risks": [
-        "Price and specs appear only in third-party readings, not verified on an official page — this site does not adopt them as current prices",
+        "Price and specs appear only in third-party readings, not verified on an official page — they are not adopted as current prices",
         "Long-term sold out; restock time unknown",
         "Hetzner prices were adjusted on June 15, 2026 (third-party claim); historical prices do not represent current prices"
       ],

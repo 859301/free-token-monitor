@@ -4,10 +4,10 @@
     "count": 9,
     "language": "en",
     "sources": [
-      "Vendor official pages (verified item by item)",
+      "Vendor official pages",
       "InstaBox official pricing docs: https://instabox.sh/docs/pricing.md"
     ],
-    "note": "Specs and terms transcribed from vendor official pages; fields the official page does not state are written as “Check the official page”, never invented. Check the official page before claiming. Text translated from data/vps.json; all facts identical."
+    "note": "Specs and terms transcribed from vendor official pages; fields the official page does not state are written as “Check the official page”. Check the official page before claiming. Text translated from data/vps.json; all facts identical."
   },
   "offers": [
     {
@@ -162,7 +162,7 @@
         "no-card",
         "student-only"
       ],
-      "notes": "The only credit offer among the verified offers on this site that explicitly requires no credit card."
+      "notes": "The only credit offer that explicitly requires no credit card."
     },
     {
       "id": 6,
@@ -192,7 +192,7 @@
         "card-level-details-unstated",
         "not-auto-released"
       ],
-      "notes": "Hourly offset cap, public traffic allowance, max specs, and the region list appear only in the official page’s search snippet and community articles, not verified in the campaign page body, so this site does not list them as verified terms. The Alibaba Cloud student ¥300 coupon was not verified on an official offer page and is not listed as a verified offer."
+      "notes": "Hourly offset cap, public traffic allowance, max specs, and the region list appear only in the official page’s search snippet and community articles, not verified in the campaign page body, so they are not shown as verified terms. The Alibaba Cloud student ¥300 coupon was not verified on an official offer page and is not shown as a verified offer."
     },
     {
       "id": 7,
@@ -253,7 +253,7 @@
         "trial-only",
         "auto-charges-if-not-cancelled"
       ],
-      "notes": "An independent vendor trial, listed separately from the cloud vendors’ free tiers above."
+      "notes": "An independent vendor trial, separate from the cloud vendors’ free tiers above."
     },
     {
       "id": 9,
@@ -286,7 +286,7 @@
         "pause-30min",
         "grandfathering-ends-2026-12-01"
       ],
-      "notes": "Free tier pricing appears in the official blog (2026-10-19) and pricing docs; “invite-only beta” and “no inbound IPv4” claims appear only in third-party sources, not verified on official pages, so this site does not list them as verified terms."
+      "notes": "Free tier pricing appears in the official blog (2026-10-19) and pricing docs; “invite-only beta” and “no inbound IPv4” claims appear only in third-party sources, not verified on official pages, so they are not shown as verified terms."
     }
   ]
 }

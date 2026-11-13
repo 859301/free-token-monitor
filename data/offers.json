@@ -3,8 +3,8 @@
     "generatedAt": "2026-11-09",
     "count": 43,
     "sources": [
-      "蓝蓝仓库（均经厂商官方页核对）",
-      "freetokens.fyi（均经厂商官方页核对）"
+      "蓝蓝仓库",
+      "freetokens.fyi"
     ],
     "note": "额度原文照录厂商官方页面，未做人民币折算；领取前请以厂商官方页为准。"
   },
@@ -261,7 +261,8 @@
       "endsAt": null,
       "daysLeft": null,
       "status": "active"
-    },
+    }
+,
     {
       "id": 12,
       "slug": "huawei-codearts-daily",
@@ -514,7 +515,8 @@
       "endsAt": null,
       "daysLeft": null,
       "status": "active"
-    },
+    }
+,
     {
       "id": 23,
       "slug": "qoder-daily-credits",
@@ -767,7 +769,8 @@
       "endsAt": null,
       "daysLeft": null,
       "status": "active"
-    },
+    }
+,
     {
       "id": 34,
       "slug": "e2b-hobby",

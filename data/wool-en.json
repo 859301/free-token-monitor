@@ -14,7 +14,7 @@
       "https://www.simular.ai/alternatives/orgo-vs-e2b-vs-daytona",
       "https://www.racknerd.com/specials"
     ],
-    "note": "Deals section: trial credits, task-renewal hosts, sandbox credits, and a historical promo archive. Only content verified on vendor official pages; unstated information is marked unstated, never invented. 6 live + 1 historical archive (RackNerd Black Friday 2025, expired). This site publishes no promo-code strings. status values: live / live-undated / disputed / historical. riskLevel: low / medium / high, see each entry’s notes. taskBurden: none / disputed / unknown. Text translated from data/wool.json; all facts identical."
+    "note": "Deals section: trial credits, task-renewal hosts, sandbox credits, and a historical promo archive. Only content verified on vendor official pages; unstated information is marked unstated. 6 live + 1 historical archive (RackNerd Black Friday 2025, expired). No promo-code strings are included. status values: live / live-undated / disputed / historical. riskLevel: low / medium / high, see each entry’s notes. taskBurden: none / disputed / unknown. Text translated from data/wool.json; all facts identical."
   },
   "offers": [
     {
@@ -50,7 +50,7 @@
         "undated",
         "no-code-published"
       ],
-      "notes": "Match terms (12-month expiry, 50/50 offset, limited-time with no stated end date) verified 2026-11-13 on the official Match page; the $200/$300/$250 credits appear on the official promo page. The official page body gives no promo-code string to copy; this site publishes no promo-code strings.",
+      "notes": "Match terms (12-month expiry, 50/50 offset, limited-time with no stated end date) verified 2026-11-13 on the official Match page; the $200/$300/$250 credits appear on the official promo page. The official page body gives no promo-code string to copy; go by the official page.",
       "priceText": "Deposit match up to $100; free credits $200 / $300 / $250",
       "validityText": "Matched credits expire 12 months after issuance; free-credit duration not stated; limited-time offer, no end date",
       "riskLevel": "medium",
@@ -73,8 +73,8 @@
       "risks": [
         "New customers with no existing Hetzner account only",
         "Redeeming late in the month loses most of the validity: redeeming on the 20th only covers until the 30th/31st",
-        "Promo code strings rotate; this site does not publish them — go by the official page",
-        "A €20 credit was not verified on the official promo page and is not listed here"
+        "Promo code strings rotate — go by the official page",
+        "A €20 credit was not verified on the official promo page"
       ],
       "steps": [
         "Register a free Hetzner account at hetzner.com.",
@@ -92,7 +92,7 @@
         "billing-month-only",
         "no-code-published"
       ],
-      "notes": "Redemption rules and current-month validity verified 2026-11-13 on the official promo page FAQ; the official page suggests redeeming on the 1st for a full billing period. Promo codes must be obtained from the official page; this site publishes no promo-code strings.",
+      "notes": "Redemption rules and current-month validity verified 2026-11-13 on the official promo page FAQ; the official page suggests redeeming on the 1st for a full billing period. Promo codes must be obtained from the official page.",
       "priceText": "€50 credit",
       "validityText": "Redeem within 14 days of registration; valid only in the redemption month’s billing period",
       "riskLevel": "low",
@@ -172,7 +172,7 @@
         "card-required",
         "referral-conflict"
       ],
-      "notes": "$200/60 days/card required verified 2026-11-13 on the official campaign page; the $5/90 days and referral-only claims come from community answers and third-party guides and conflict with the campaign page — this site marks the dispute honestly without ruling on it.",
+      "notes": "$200/60 days/card required verified 2026-11-13 on the official campaign page; the $5/90 days and referral-only claims come from community answers and third-party guides and conflict with the campaign page — the dispute is shown without ruling on it.",
       "priceText": "$200 credit (disputed)",
       "validityText": "60 days (campaign page wording); actual credited amount as shown in the account",
       "riskLevel": "high",
@@ -193,7 +193,7 @@
       "cardNote": "Not stated on the official page — check the official page.",
       "regions": "Check the official page",
       "risks": [
-        "Conflicting renewal rules: the official domain summary says posting renews +5 days, while first-hand posts say 7-day click renewal; this site cannot rule on it",
+        "Conflicting renewal rules: the official domain summary says posting renews +5 days, while first-hand posts say 7-day click renewal; it cannot be ruled on",
         "This re-check (2026-11-13) could not reopen the official page (fetch tool error, no retry); specs rely on the 2026-11-12 official page snapshot",
         "Task-renewal hosts carry high data and continuity risk — do not keep important data only here"
       ],
@@ -212,7 +212,7 @@
         "renewal-conflict",
         "task-host"
       ],
-      "notes": "Specs verified 2026-11-12 on the official page; renewal task rules have conflicting accounts — this site lists specs only and does not promise renewal rules. The 2026-11-13 re-check failed with a fetch tool error and was not retried.",
+      "notes": "Specs verified 2026-11-12 on the official page; renewal task rules have conflicting accounts — specs only are shown; no renewal rule is promised. The 2026-11-13 re-check failed with a fetch tool error and was not retried.",
       "priceText": "Free (task renewal required)",
       "validityText": "Renewal rules disputed — go by the official page",
       "riskLevel": "high",
@@ -252,7 +252,7 @@
         "sandbox",
         "deletion-risk"
       ],
-      "notes": "The 14-day deletion rule was verified 2026-11-13 on the product homepage; the $5 credit and pay-as-you-go prices were verified 2026-11-13 on the official blog; the 90-day validity and beta ending appear only in the vendor email (background info, not public page terms) and are labelled with their source. The homepage claim that the box itself is free conflicts with the email/blog; this site does not present Simular Box as long-term free.",
+      "notes": "The 14-day deletion rule was verified 2026-11-13 on the product homepage; the $5 credit and pay-as-you-go prices were verified 2026-11-13 on the official blog; the 90-day validity and beta ending appear only in the vendor email (background info, not public page terms) and are labelled with their source. The homepage claim that the box itself is free conflicts with the email/blog; Simular Box is not presented as long-term free.",
       "priceText": "$5 credit (once per account); then pay-as-you-go from $0.10/hour",
       "validityText": "$5 credit validity: vendor email says 90 days (not verified on a public page); deleted if not woken for 14 days",
       "riskLevel": "high",
@@ -295,7 +295,7 @@
       "priceText": "$10.60/year (2025 historical price, expired)",
       "validityText": "Expired",
       "riskLevel": "low",
-      "renewalText": "Renewal rules for historical promos per the official page of that year; this site makes no promise",
+      "renewalText": "Renewal rules for historical promos per the official page of that year",
       "taskBurden": "none",
       "codeRequired": false
     }
