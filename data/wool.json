@@ -1,0 +1,302 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-13",
+    "count": 7,
+    "sources": [
+      "https://www.vultr.com/coupons/",
+      "https://www.vultr.com/match/",
+      "https://try.digitalocean.com/learn-kubernetes/",
+      "https://www.akamai.com/lp/kubernetes",
+      "http://hetzner.com/promo-code/",
+      "https://www.sanfengyun.com/freeServer/",
+      "https://box.simular.ai/",
+      "https://www.simular.ai/alternatives/orgo-vs-e2b-vs-daytona",
+      "https://www.racknerd.com/specials"
+    ],
+    "note": "羊毛板块：试用额度、任务续费主机、沙箱额度与历史促销档案。只收厂商官方页核对过的内容；未注明的信息写明未注明，不编造。6 条在架 + 1 份历史档案（RackNerd 黑五 2025，已过期）。本站不刊登优惠码字符串。status 取值：live（在架）/ live-undated（在架，未注明截止）/ disputed（说法有争议）/ historical（历史档案）。riskLevel 取值：low / medium / high，见各条 notes。taskBurden 取值：none / disputed / unknown。"
+  },
+  "offers": [
+    {
+      "id": "vultr-credits",
+      "slug": "vultr-credits",
+      "title": "Vultr 充值翻倍（最高 $100）与 $200/$300/$250 免费额度",
+      "provider": "Vultr",
+      "category": "wool",
+      "group": "trial-credit",
+      "specText": "首笔充值等额匹配，最高 $100；另有 $200 / $300 / $250 免费额度（优惠页所列）。仅限新客户；促销额度仅适用于部分产品，不可与其他优惠叠加。",
+      "durationText": "匹配额度：发放后 12 个月过期。$200/$300/$250 额度：优惠页未注明时长。",
+      "cardRequired": true,
+      "cardNote": "匹配额度需先充值（$10 / $25 / $50 / $100 档）；$200/$300/$250 免费额度的绑卡要求优惠页未说明。",
+      "regions": "以官方页面为准",
+      "risks": [
+        "仅限新客户，重复账户不符合资格",
+        "匹配额度按 50/50 抵扣：每小时账单 $10，其中 $5 扣促销额度、$5 扣真实资金",
+        "限时优惠，页面未注明截止日期",
+        "$200/$300/$250 额度的有效期页面未注明"
+      ],
+      "steps": [
+        "在 Vultr 官网开设新账户（仅限新客户）。",
+        "在官网优惠页确认当前匹配活动与免费额度是否仍在进行。",
+        "按官网页面提示充值或领取额度，留意 50/50 抵扣规则与 12 个月过期时间。"
+      ],
+      "claimUrl": "https://www.vultr.com/match/",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Vultr 优惠页与 Match 活动页",
+      "sourceUrl": "https://www.vultr.com/coupons/",
+      "status": "live-undated",
+      "flags": [
+        "new-customers-only",
+        "undated",
+        "no-code-published"
+      ],
+      "notes": "匹配条款（12 个月过期、50/50 抵扣、限时未注明截止）核实于 2026-11-13 官网 Match 页；$200/$300/$250 额度见官网优惠页。官网页面正文未给出可直接抄录的优惠码字符串，本站不刊登任何优惠码字符串。",
+      "priceText": "充值匹配最高 $100；免费额度 $200 / $300 / $250",
+      "validityText": "匹配额度发放后 12 个月过期；免费额度时长未注明；活动限时，无截止日期",
+      "riskLevel": "medium",
+      "renewalText": "额度用完或过期后按正常价格计费；无续费同价承诺",
+      "taskBurden": "none",
+      "codeRequired": false
+    },
+    {
+      "id": "hetzner-50-credit",
+      "slug": "hetzner-50-credit",
+      "title": "Hetzner €50 新用户额度（当月有效）",
+      "provider": "Hetzner",
+      "category": "wool",
+      "group": "trial-credit",
+      "specText": "€50 起步额度，适用于 Hetzner 全部产品（云服务器、独立服务器、存储等）。仅限新客户。",
+      "durationText": "注册后 14 天内兑换；仅在兑换当月账期内有效（官方建议每月 1 号兑换）。",
+      "cardRequired": null,
+      "cardNote": "优惠页未说明是否需要绑定支付方式，以官方页面为准。",
+      "regions": "以官方页面为准",
+      "risks": [
+        "仅限尚无 Hetzner 账户的新客户",
+        "月底兑换会损失大部分有效期：20 号兑换只用到当月 30/31 号",
+        "优惠码字符串轮换，本站不刊登；请以官网页面显示为准",
+        "€20 额度未在官网优惠页核实到，本站不收录"
+      ],
+      "steps": [
+        "在 hetzner.com 免费注册 Hetzner 账户。",
+        "在官网优惠页复制当前优惠码（以页面显示为准）。",
+        "在账户内 User Account → Promo Codes 输入并兑换（注册后 14 天内）。",
+        "额度自动抵扣当期账单；在 Promo Codes 界面查看余额与过期时间。"
+      ],
+      "claimUrl": "http://hetzner.com/promo-code/",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Hetzner 优惠码页",
+      "sourceUrl": "http://hetzner.com/promo-code/",
+      "status": "live",
+      "flags": [
+        "new-customers-only",
+        "billing-month-only",
+        "no-code-published"
+      ],
+      "notes": "兑换规则与当月有效期核实于 2026-11-13 官网优惠页 FAQ；官方提示每月 1 号兑换可获得完整账期。优惠码需在官网页面获取，本站不刊登优惠码字符串。",
+      "priceText": "€50 额度",
+      "validityText": "注册后 14 天内兑换；仅兑换当月账期有效",
+      "riskLevel": "low",
+      "renewalText": "额度只抵扣当期账单；之后按正常价格计费",
+      "taskBurden": "none",
+      "codeRequired": true
+    },
+    {
+      "id": "akamai-100-credit",
+      "slug": "akamai-100-credit",
+      "title": "Akamai $100 额度（Managed Kubernetes 试用）",
+      "provider": "Akamai（Linode）",
+      "category": "wool",
+      "group": "trial-credit",
+      "specText": "US$100 额度，可用于多数 Compute 套餐（GPU 套餐除外）、对象存储、块存储与 NodeBalancers。仅限从未注册过免费试用的新客户。",
+      "durationText": "试用期内（页面只写 trial period，未注明具体天数）；未用完的额度自动过期。",
+      "cardRequired": true,
+      "cardNote": "需要有效付款方式验证身份，试用期间不扣费；加卡时可能有临时预授权（会释放）。",
+      "regions": "以官方页面为准",
+      "risks": [
+        "试用期具体天数页面未注明，60 天说法只见于第三方，本站不采信",
+        "GPU 套餐不参加此活动",
+        "超出额度按标准价计费；未用完的额度自动过期"
+      ],
+      "steps": [
+        "用 Google/GitHub 单点登录或邮箱创建新账户。",
+        "提供有效付款方式验证身份（试用期间不扣费）。",
+        "在试用期内把额度用于 Compute（GPU 除外）、存储或 NodeBalancers。"
+      ],
+      "claimUrl": "https://www.akamai.com/lp/kubernetes",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Akamai Managed Kubernetes 活动页",
+      "sourceUrl": "https://www.akamai.com/lp/kubernetes",
+      "status": "live-undated",
+      "flags": [
+        "new-customers-only",
+        "duration-not-stated",
+        "gpu-excluded"
+      ],
+      "notes": "$100 额度、新客户限制、GPU 除外、未用额度过期均核实于 2026-11-13 官网活动页；活动页未注明试用期天数。",
+      "priceText": "$100 额度",
+      "validityText": "试用期内；具体天数页面未注明；未用额度自动过期",
+      "riskLevel": "medium",
+      "renewalText": "试用结束后按标准价计费",
+      "taskBurden": "none",
+      "codeRequired": false
+    },
+    {
+      "id": "digitalocean-200-trial",
+      "slug": "digitalocean-200-trial",
+      "title": "DigitalOcean $200 / 60 天试用（有争议）",
+      "provider": "DigitalOcean",
+      "category": "wool",
+      "group": "trial-credit",
+      "specText": "$200 额度，60 天试用（活动页原文：$200, 60-day free trial requires valid credit card），配合 Kubernetes 免费课程使用。挖矿禁用。",
+      "durationText": "60 天（活动页原文）。",
+      "cardRequired": true,
+      "cardNote": "活动页原文要求有效信用卡。",
+      "regions": "以官方页面为准",
+      "risks": [
+        "有争议：DigitalOcean 社区回答（2025-04-07）与第三方指南称直接注册只得 $5/90 天、$200 仅限推荐；与活动页说法冲突",
+        "试用结束后保留的集群按正常价格计费（单节点集群每月 $12 起，活动页原文）",
+        "活动页为 Kubernetes 学习活动页，非通用注册页"
+      ],
+      "steps": [
+        "打开 DigitalOcean 官方 Kubernetes 学习活动页，确认当前活动仍在进行。",
+        "注册账户并提供有效信用卡。",
+        "注册后立即在账户内确认实际到账额度（$200 还是 $5），再决定是否使用。"
+      ],
+      "claimUrl": "https://try.digitalocean.com/learn-kubernetes/",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "DigitalOcean Kubernetes 学习活动页",
+      "sourceUrl": "https://try.digitalocean.com/learn-kubernetes/",
+      "status": "disputed",
+      "flags": [
+        "disputed",
+        "card-required",
+        "referral-conflict"
+      ],
+      "notes": "$200/60 天/需绑卡核实于 2026-11-13 官网活动页；$5/90 天与推荐限定的说法来自社区回答与第三方指南，与活动页冲突，本站如实标注争议，不作裁决。",
+      "priceText": "$200 额度（有争议）",
+      "validityText": "60 天（活动页原文）；实际到账额度以账户内显示为准",
+      "riskLevel": "high",
+      "renewalText": "试用结束后按正常价格计费",
+      "taskBurden": "none",
+      "codeRequired": false
+    },
+    {
+      "id": "sanfengyun-free",
+      "slug": "sanfengyun-free",
+      "title": "三丰云免费云服务器（仅规格已核实，续期规则有争议）",
+      "provider": "三丰云",
+      "category": "wool",
+      "group": "task-host",
+      "specText": "1核 1G 5M 10G SSD，BGP 线路，独立 IP（官网页面原文）。",
+      "durationText": "需任务续期；续期规则说法冲突，见 risks。",
+      "cardRequired": null,
+      "cardNote": "官方页未说明，以官方页面为准。",
+      "regions": "以官方页面为准",
+      "risks": [
+        "续期规则说法冲突：官网域名摘要称发帖续期 +5 天，亲历帖称 7 天点击续期；本站未能裁决",
+        "本次复核（2026-11-13）未能重新打开官网页面（抓取工具错误，未重试）；规格依据 2026-11-12 官网页面快照",
+        "任务续费型主机的数据与存续风险高，重要数据不要只放这里"
+      ],
+      "steps": [
+        "打开三丰云官网免费服务器页面，确认当前规格与续期规则。",
+        "按官网页面提示注册并领取。",
+        "按官网页面公布的续期规则及时续期，避免回收。"
+      ],
+      "claimUrl": "https://www.sanfengyun.com/freeServer/",
+      "verifiedAt": "2026-11-12",
+      "sourceName": "三丰云免费服务器页",
+      "sourceUrl": "https://www.sanfengyun.com/freeServer/",
+      "status": "disputed",
+      "flags": [
+        "specs-only",
+        "renewal-conflict",
+        "task-host"
+      ],
+      "notes": "规格核实于 2026-11-12 官网页面；续期任务规则存在冲突说法，本站只列规格、不承诺续期规则。2026-11-13 复核时抓取工具报错未能重新打开页面，未重试。",
+      "priceText": "免费（需任务续期）",
+      "validityText": "续期规则有争议，以官网页面为准",
+      "riskLevel": "high",
+      "renewalText": "任务续期；规则说法冲突",
+      "taskBurden": "disputed",
+      "codeRequired": false
+    },
+    {
+      "id": "simular-box",
+      "slug": "simular-box",
+      "title": "Simular Box：$5 额度云电脑（条款说法冲突）",
+      "provider": "Simular",
+      "category": "wool",
+      "group": "sandbox-credit",
+      "specText": "云端 Linux 桌面（每账户 1 台），通过 MCP 接入 Claude、ChatGPT、Codex 等 Agent；2 vCPU / 4 GB 约 $0.10/小时，4 vCPU / 8 GB 约 $0.20/小时（官方博客）。仅 Linux，无 Windows/Mac/GPU。",
+      "durationText": "$5 额度每账户一次；厂商邮件称 90 天有效（未在公开页面核实）。连续 14 天未唤醒则删机删数据。",
+      "cardRequired": null,
+      "cardNote": "已核实的官方页面未说明是否需要绑定支付方式，以官方页面为准。",
+      "regions": "以官方页面为准",
+      "risks": [
+        "官方说法冲突：产品首页称 box 本身免费；厂商邮件（2026-11-12）与官方博客称免费 beta 已结束、改为 $5 额度 + 按量计费",
+        "连续 14 天未唤醒，box 连同文件与保存内容一并删除；任何一次唤醒重置计数",
+        "box 自身工具的模型调用按模型成本 +20% 用额度支付（1,000 credits = $1，官方博客）"
+      ],
+      "steps": [
+        "打开 box.simular.ai，确认当前计费说明。",
+        "用 Simular 账户登录，把 MCP 地址接入你用的 Agent（Claude、ChatGPT、Codex 等）。",
+        "在账户内确认 $5 额度是否到账、有效期与按量价格，再决定用量。"
+      ],
+      "claimUrl": "https://box.simular.ai/",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "box by Simular 首页与 Simular 官方博客",
+      "sourceUrl": "https://box.simular.ai/",
+      "status": "disputed",
+      "flags": [
+        "disputed",
+        "sandbox",
+        "deletion-risk"
+      ],
+      "notes": "14 天删除规则核实于 2026-11-13 产品首页；$5 额度与按量价核实于 2026-11-13 官方博客；90 天有效期与 beta 结束只见于厂商邮件（背景信息，非公开页面条款），本站如实标注来源。产品首页 box 本身免费的说法与邮件/博客冲突，本站不把 Simular Box 写成长期免费。",
+      "priceText": "$5 额度（每账户一次）；之后按量 $0.10/小时起",
+      "validityText": "$5 额度有效期：厂商邮件称 90 天（未在公开页面核实）；14 天未唤醒删机",
+      "riskLevel": "high",
+      "renewalText": "按量充值（$5 起充）；Small $19/月、Medium $39/月（官方博客）",
+      "taskBurden": "none",
+      "codeRequired": false
+    },
+    {
+      "id": "racknerd-black-friday-archive",
+      "slug": "racknerd-black-friday-archive",
+      "title": "RackNerd 黑五促销档案（2025 年价格，已过期）",
+      "provider": "RackNerd",
+      "category": "wool",
+      "group": "promo-drop",
+      "specText": "2025 年黑五促销价，最低 $10.60/年（历史记录）。2026 年黑五为 11 月 27 日；截至 2026-11-12 未见官方 2026 清单。",
+      "durationText": "已过期。历史档案，不可购买。",
+      "cardRequired": null,
+      "cardNote": "历史档案，无领取要求。",
+      "regions": "以官方页面为准",
+      "risks": [
+        "历史价格，不代表当前售价；请勿按 2025 年价格下单",
+        "黑五促销通常限量、限时，库存与续费规则以当年官方页为准"
+      ],
+      "steps": [
+        "本条为历史档案，无需领取。",
+        "如需常态价，见低价区的 RackNerd VPS Specials（终身同价续费）。",
+        "2026 年黑五（11 月 27 日）临近时，以 RackNerd 官网当年页面为准。"
+      ],
+      "claimUrl": "https://www.racknerd.com/specials",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "RackNerd 官网 Specials 页（常态价）与历史促销记录",
+      "sourceUrl": "https://www.racknerd.com/specials",
+      "status": "historical",
+      "flags": [
+        "historical",
+        "expired",
+        "watch"
+      ],
+      "notes": "2025 年 $10.60/年为历史促销记录，非当前售价；2026 年清单截至 2026-11-12 未见。常态价见低价区。",
+      "priceText": "$10.60/年（2025 年历史价，已过期）",
+      "validityText": "已过期",
+      "riskLevel": "low",
+      "renewalText": "历史促销的续费规则以当年官方页为准，本站不承诺",
+      "taskBurden": "none",
+      "codeRequired": false
+    }
+  ]
+}

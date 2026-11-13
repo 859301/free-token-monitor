@@ -1,0 +1,302 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-13",
+    "count": 4,
+    "sources": [
+      "https://www.racknerd.com/specials",
+      "https://www.racknerd.com/kvm-vps",
+      "https://hosteons.com/kvm_vps.php",
+      "https://hosteons.com/ryzen_premium_vps.php",
+      "https://www.digitalocean.com/pricing/droplets"
+    ],
+    "note": "低价板块：只收常态价（常态套餐页 + 无截止日期 + 续费条件写明或为目录价）。3 家在架 + 1 个缺货观察（Hetzner CX23，非在售）。renewalStatus 取值：stated-same-rate（官方写明同价续费）/ list-price（目录价，按月封顶）/ unknown（页面未说明）。riskLevel 取值：low / medium / high。plans 数组照录厂商页面套餐表；年总计换算均已标注为换算。"
+  },
+  "offers": [
+    {
+      "id": "racknerd-specials",
+      "slug": "racknerd-specials",
+      "title": "RackNerd VPS Specials：$21.99–$119.99/年（终身同价续费）",
+      "provider": "RackNerd",
+      "category": "cheap",
+      "group": "annual-specials",
+      "specText": "KVM VPS，1–7 vCPU，1–8 GB 内存，20–150 GB SSD，3–20 TB 流量，1Gbps 端口，1 个 IPv4，完整 root 权限，ctrl 面板。",
+      "durationText": "年付；官方 FAQ：终身同价续费。",
+      "cardRequired": null,
+      "cardNote": "套餐页未说明付款方式要求，以结账页为准。",
+      "regions": "多机房（页面只写 deploy in multiple locations，具体机房以下单时为准）",
+      "risks": [
+        "机房列表未见于 specials 页面，具体可选机房以下单时为准",
+        "退款条款未见于 specials 页面，以官方条款为准",
+        "非托管 VPS，需自行管理"
+      ],
+      "steps": [
+        "打开 RackNerd 官网 Specials 页，确认当前套餐与价格。",
+        "选择套餐与机房，下单后即时开通。",
+        "用 ctrl 面板或 SSH 管理；需要一键应用的在 ctrl 内安装。"
+      ],
+      "claimUrl": "https://www.racknerd.com/specials",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "RackNerd VPS Specials 页",
+      "sourceUrl": "https://www.racknerd.com/specials",
+      "status": "live",
+      "flags": [
+        "lifetime-recurring",
+        "locations-unspecified"
+      ],
+      "notes": "套餐梯队与终身同价续费 FAQ 核实于 2026-11-13 官网 Specials 页；目录页（kvm-vps）价格更高，specials 与目录价不同，见详情页对照。",
+      "priceText": "$21.99–$119.99/年",
+      "validityText": "常态价，无截止日期",
+      "riskLevel": "low",
+      "renewalText": "终身同价续费（官方 FAQ 原文：lifetime recurring，renew at the same rate）",
+      "renewalStatus": "stated-same-rate",
+      "taskBurden": "none",
+      "codeRequired": false,
+      "locations": "多机房（页面未列具体城市）",
+      "plans": [
+        {
+          "name": "1 GB KVM VPS",
+          "price": "$21.99/年",
+          "cpu": "1 vCPU",
+          "ram": "1 GB",
+          "disk": "20 GB SSD",
+          "transfer": "3 TB/月"
+        },
+        {
+          "name": "2 GB KVM VPS",
+          "price": "$35.99/年",
+          "cpu": "2 vCPU",
+          "ram": "2 GB",
+          "disk": "35 GB SSD",
+          "transfer": "5 TB/月"
+        },
+        {
+          "name": "4 GB KVM VPS",
+          "price": "$59.99/年",
+          "cpu": "3 vCPU",
+          "ram": "4 GB",
+          "disk": "60 GB SSD",
+          "transfer": "7 TB/月"
+        },
+        {
+          "name": "6 GB KVM VPS",
+          "price": "$89.99/年",
+          "cpu": "6 vCPU",
+          "ram": "6 GB",
+          "disk": "100 GB SSD",
+          "transfer": "12 TB/月"
+        },
+        {
+          "name": "8 GB KVM VPS",
+          "price": "$119.99/年",
+          "cpu": "7 vCPU",
+          "ram": "8 GB",
+          "disk": "150 GB SSD",
+          "transfer": "20 TB/月"
+        }
+      ]
+    },
+    {
+      "id": "hosteons",
+      "slug": "hosteons",
+      "title": "HostEONS：$21/年起（续费价未注明）",
+      "provider": "HostEONS",
+      "category": "cheap",
+      "group": "annual-specials",
+      "specText": "两张套餐表：Gigabit VPS（$21/年起，1核公平共享，1GB，10GB，1TB）与 Ryzen Premium（$24/年起，1核 3.5GHz+ 公平共享，512MB，10GB NVMe，500GB）。6 个美国机房，1 个 IPv4，免费 IPv6。",
+      "durationText": "年付（入门款）与月付（其余档）；续费价页面未说明。",
+      "cardRequired": null,
+      "cardNote": "套餐页未说明付款方式要求；页面展示的付款图标含支付宝、银联、PayPal、比特币、信用卡、电汇。",
+      "regions": "洛杉矶、盐湖城、波特兰、纽约、迈阿密、达拉斯（套餐表原文）；页脚另写 8 个数据中心含法兰克福（达拉斯重复出现），法兰克福未见于套餐表，未核实",
+      "risks": [
+        "续费价未见于两张套餐页，请勿默认按首年价续费；购买前请在结账页确认",
+        "CPU 为公平共享（Fair Share），非独占",
+        "页脚法兰克福机房说法与套餐表不一致（套餐表 6 个美国城市），未核实"
+      ],
+      "steps": [
+        "打开 HostEONS 官网套餐页，确认当前套餐与价格。",
+        "在结账页确认续费价与账期，再下单。",
+        "用 VPS 控制面板管理（重启、重装、VNC、自定义 ISO）。"
+      ],
+      "claimUrl": "https://hosteons.com/kvm_vps.php",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "HostEONS KVM VPS 页与 Ryzen Premium 页",
+      "sourceUrl": "https://hosteons.com/kvm_vps.php",
+      "status": "live",
+      "flags": [
+        "renewal-unknown",
+        "fair-share",
+        "frankfurt-unverified"
+      ],
+      "notes": "两张套餐表核实于 2026-11-13 官网页面；两页均未说明续费价，本站不假设同价续费。付款方式以页面图标为准。",
+      "priceText": "$21/年起（Gigabit VPS 1）；$24/年起（Ryzen 512MB）",
+      "validityText": "常态价，无截止日期；续费价未注明",
+      "riskLevel": "medium",
+      "renewalText": "页面未说明续费价，以结账页为准",
+      "renewalStatus": "unknown",
+      "taskBurden": "none",
+      "codeRequired": false,
+      "locations": "洛杉矶、盐湖城、波特兰、纽约、迈阿密、达拉斯",
+      "plans": [
+        {
+          "name": "Gigabit VPS 1",
+          "price": "$21/年",
+          "cpu": "1 核（公平共享）",
+          "ram": "1 GB",
+          "disk": "10 GB",
+          "transfer": "1 TB/月"
+        },
+        {
+          "name": "Gigabit VPS 2",
+          "price": "$4/月",
+          "cpu": "2 核（公平共享）",
+          "ram": "1.5 GB",
+          "disk": "20 GB",
+          "transfer": "2 TB/月"
+        },
+        {
+          "name": "Gigabit VPS 3",
+          "price": "$5/月",
+          "cpu": "2 核（公平共享）",
+          "ram": "2 GB",
+          "disk": "25 GB",
+          "transfer": "3 TB/月"
+        },
+        {
+          "name": "RYZEN 512 MB",
+          "price": "$24/年",
+          "cpu": "1 核 3.5GHz+（公平共享）",
+          "ram": "512 MB",
+          "disk": "10 GB NVMe",
+          "transfer": "500 GB/月"
+        },
+        {
+          "name": "RYZEN 1 GB",
+          "price": "$4/月",
+          "cpu": "1 核 3.5GHz+（公平共享）",
+          "ram": "1 GB",
+          "disk": "15 GB NVMe",
+          "transfer": "1 TB/月"
+        },
+        {
+          "name": "RYZEN 2 GB",
+          "price": "$8/月",
+          "cpu": "2 核 3.5GHz+（公平共享）",
+          "ram": "2 GB",
+          "disk": "30 GB NVMe",
+          "transfer": "2 TB/月"
+        }
+      ]
+    },
+    {
+      "id": "digitalocean-basic",
+      "slug": "digitalocean-basic",
+      "title": "DigitalOcean Basic Droplets：$4/月起（按月封顶）",
+      "provider": "DigitalOcean",
+      "category": "cheap",
+      "group": "monthly-capped",
+      "specText": "Basic Droplets（共享 CPU）：512MiB $4.00/月（1 vCPU，10 GiB，500 GiB）；1GiB $6.00/月（1 vCPU，25 GiB，1,000 GiB）。按秒计费（2026 年 1 月 1 日起），每月封顶。",
+      "durationText": "按月封顶的目录价，无截止日期；用多少算多少，永不超过月封顶价。",
+      "cardRequired": null,
+      "cardNote": "定价页未说明付款方式要求，以官网页面为准。",
+      "regions": "机房区域未见于定价页，以控制台为准",
+      "risks": [
+        "Basic 为共享 CPU，适合突发负载，不适合需要持续独占 CPU 的场景",
+        "备份与快照另收费：备份为 Droplet 费用的 20%（每周）/ 30%（每天），快照 $0.06/GB/月",
+        "机房区域未见于定价页"
+      ],
+      "steps": [
+        "打开 DigitalOcean 官网 Droplet 定价页，确认当前价格。",
+        "在控制台选择 Basic 套餐、区域与系统创建 Droplet。",
+        "按需开启备份；注意备份与快照另收费。"
+      ],
+      "claimUrl": "https://www.digitalocean.com/pricing/droplets",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "DigitalOcean Droplet 定价页",
+      "sourceUrl": "https://www.digitalocean.com/pricing/droplets",
+      "status": "live",
+      "flags": [
+        "monthly-cap",
+        "per-second-billing",
+        "regions-unspecified"
+      ],
+      "notes": "Basic 套餐表、按秒计费与月封顶规则核实于 2026-11-13 官网定价页；12 个月换算（$48/年、$72/年）为本站按月封顶价换算，已标注。",
+      "priceText": "$4.00/月起（512MiB）；$6.00/月（1GiB）",
+      "validityText": "常态目录价，无截止日期",
+      "riskLevel": "low",
+      "renewalText": "按月封顶价（目录价），无首期折扣；每月账单不超过封顶价",
+      "renewalStatus": "list-price",
+      "taskBurden": "none",
+      "codeRequired": false,
+      "locations": "未见于定价页",
+      "plans": [
+        {
+          "name": "Basic 512MiB",
+          "price": "$4.00/月（$0.00595/小时）",
+          "cpu": "1 vCPU",
+          "ram": "512 MiB",
+          "disk": "10 GiB SSD",
+          "transfer": "500 GiB/月"
+        },
+        {
+          "name": "Basic 1GiB",
+          "price": "$6.00/月（$0.00893/小时）",
+          "cpu": "1 vCPU",
+          "ram": "1 GiB",
+          "disk": "25 GiB SSD",
+          "transfer": "1,000 GiB/月"
+        },
+        {
+          "name": "Basic 2GiB",
+          "price": "$12.00/月",
+          "cpu": "1 vCPU",
+          "ram": "2 GiB",
+          "disk": "50 GiB SSD",
+          "transfer": "2,000 GiB/月"
+        }
+      ]
+    },
+    {
+      "id": "hetzner-cx23-watch",
+      "slug": "hetzner-cx23-watch",
+      "title": "Hetzner CX23 缺货观察（非在售）",
+      "provider": "Hetzner",
+      "category": "cheap",
+      "group": "watch",
+      "specText": "CX23：第三方读数为 €5.49/月（不含税）+ €0.50 IPv4 附加费，未经官方页核实；2026 年 9–11 月每次检查均显示售罄（第三方 dated 检查）。",
+      "durationText": "缺货观察，非在售；无可购买的价格。",
+      "cardRequired": null,
+      "cardNote": "未核实。",
+      "regions": "未核实",
+      "risks": [
+        "价格与规格只见于第三方读数，未经官方页核实，本站不采信为当前售价",
+        "长期售罄；补货时间未知",
+        "Hetzner 价目在 2026 年 6 月 15 日调整过（第三方说法），历史价不代表现价"
+      ],
+      "steps": [
+        "本条为缺货观察，无需购买。",
+        "如需 Hetzner 试用额度，见羊毛区的 Hetzner €50 额度（当月有效）。",
+        "补货后以 Hetzner 官网云服务器页为准。"
+      ],
+      "claimUrl": "",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "第三方 dated 库存检查（未在官方页核实）",
+      "sourceUrl": "",
+      "status": "watch",
+      "flags": [
+        "sold-out",
+        "third-party-only",
+        "not-listed"
+      ],
+      "notes": "本条不是在架优惠：价格与库存状态均来自第三方检查，未在官方页核实。列入数据文件是为了让观察状态可追踪，status=watch。",
+      "priceText": "€5.49/月（第三方读数，未核实）",
+      "validityText": "售罄观察中",
+      "riskLevel": "medium",
+      "renewalText": "未核实",
+      "renewalStatus": "unknown",
+      "taskBurden": "none",
+      "codeRequired": false,
+      "locations": "未核实",
+      "plans": []
+    }
+  ]
+}

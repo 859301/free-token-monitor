@@ -1,9 +1,10 @@
 {
   "meta": {
     "generatedAt": "2026-11-13",
-    "count": 8,
+    "count": 9,
     "sources": [
-      "厂商官方页（逐条核对）"
+      "厂商官方页（逐条核对）",
+      "InstaBox 官方定价文档：https://instabox.sh/docs/pricing.md"
     ],
     "note": "规格与条款照录厂商官方页面原文；官方页面未注明的字段写「以官方页面为准」，不编造。领取前请以厂商官方页为准。"
   },
@@ -252,6 +253,39 @@
         "auto-charges-if-not-cancelled"
       ],
       "notes": "独立厂商试用，与前述云厂商免费层分开标注。"
+    },
+    {
+      "id": 9,
+      "slug": "instabox",
+      "title": "InstaBox 免费层：1 台 4 vCPU / 8 GB 沙箱机器（非传统 VPS）",
+      "provider": "InstaBox",
+      "category": "vps",
+      "group": "sandbox",
+      "specText": "免费层：1 台 4 vCPU / 8 GiB 机器（Firecracker microVM，Debian 13），20 GiB 持久磁盘，5 个快照，每月 100 GiB 出站流量（入站免费）；默认模板 agent-browser（Debian、Docker、Node、Bun、Python、Go、Rust、OpenJDK 21、桌面 + Chromium）",
+      "durationText": "免费层无固定结束日期（官方博客承诺坚持免费层；定价为 v1、可能调整）；闲置 30 分钟自动暂停，单次最长运行 120 分钟（随使用增长至 480 分钟）",
+      "cardRequired": null,
+      "cardNote": "官方定价文档未说明绑卡要求，以官方页面为准。",
+      "regions": "官方定价文档未注明机房区域；对外访问通过端口发布的公开 HTTPS 链接，独立入站 IPv4 未见于官方文档。",
+      "risks": [
+        "Beta 阶段产品（2026-10-14 上线），定价为 v1、可能调整",
+        "早期账户 5 台免费沙箱保留至 2026-12-01，此后每账户只能同时运行 1 台（其余暂停、不删除）",
+        "单次最长运行 120 分钟（随使用增长至 480 分钟），不适合 24/7 挂机",
+        "不是传统 VPS：无独立入站 IPv4（未见于官方文档），对外访问走端口发布的公开 HTTPS 链接",
+        "暂停、停止、重启保留 /data 磁盘；删除机器才清空数据"
+      ],
+      "steps": "打开 InstaBox 官网定价页 → 注册账户 → 创建 1 台免费沙箱机器（4 vCPU / 8 GiB）→ 通过 CLI、API、SSH 或桌面使用；闲置 30 分钟自动暂停，恢复不到 1 秒。",
+      "claimUrl": "https://instabox.sh/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "InstaBox 官方定价文档 · 官方核对",
+      "sourceUrl": "https://instabox.sh/docs/pricing.md",
+      "status": "active",
+      "flags": [
+        "beta",
+        "sandbox-not-vps",
+        "pause-30min",
+        "grandfathering-ends-2026-12-01"
+      ],
+      "notes": "免费层定价见官方博客（2026-10-19）与定价文档；「邀请制 Beta」与「无入站 IPv4」的说法只见于第三方，未在官方页核实，本站不将其作为已核实条款列出。"
     }
   ]
 }
