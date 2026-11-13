@@ -45,6 +45,7 @@
 - [领取第一个免费 Key 并完成第一次调用](https://tokens.yangtokent.com/guides/first-free-key/): 从选额度、注册、创建 Key 到第一次调用，含一个零 Key 示例。
 - [401 / 402 / 429 报错排查](https://tokens.yangtokent.com/guides/fix-401-402-429/): 三个状态码分别改什么，分钟级与日级限速的区别，重置时间对照表。
 - [把免费 Key 接入 Claude Code / Codex / Cline / OpenCode](https://tokens.yangtokent.com/guides/connect-coding-agents/): 协议对照、通用接入步骤、两个常见坑、OpenAI 兼容额度清单。
+- [已经取消的免费层：Heroku、PlanetScale、SendGrid、Freenom、Upstash Kafka 与 Google Domains 现状](https://tokens.yangtokent.com/guides/dead-services/): 6 项已经取消或结束的免费服务现状：Heroku 免费层、PlanetScale Hobby、SendGrid 永久免费计划、Freenom 免费域名、Upstash Kafka 与 Google Domains；时间线来自多家公开报道，现状与替代见各环节列表。
 
 
 ## 免费 VPS 板块
@@ -301,6 +302,185 @@
 - [域名、DNS、CDN、SSL 各管什么](https://tokens.yangtokent.com/domain/guides/dns-cdn-ssl-basics/): 从输入网址到显示 HTTPS。
 - [Let's Encrypt 限流详解](https://tokens.yangtokent.com/domain/guides/lets-encrypt-limits/): 50 证/7 天、5 张同标识集与 ARI 续期。
 - [学生身份的域名优惠](https://tokens.yangtokent.com/domain/guides/student-domain-perks/): GitHub Student Pack 里的域名与 SSL。
+
+## 邮件通知板块
+
+- [邮件通知](https://tokens.yangtokent.com/email/): 3 个免费层（Resend、Brevo、Postmark）、1 个官网未明示永久（Mailgun）、1 个 60 天试用（SendGrid）；含不在列表中的服务及原因与变化记录。
+- [邮件通知详情](https://tokens.yangtokent.com/email/offers/): 5 篇邮件详情页。
+- [邮件通知对比](https://tokens.yangtokent.com/email/compare/): 4 篇对比：Resend vs SendGrid vs Mailgun、日限与月限、试用与免费层对照、总表。
+- [邮件通知指南](https://tokens.yangtokent.com/email/guides/): 5 篇指南：事务邮件选型、日限与月限、SendGrid 试用迁移、域名验证基础、超额规则。
+- [邮件通知常见问题](https://tokens.yangtokent.com/email/faq/): 15 个常见问题与回答。
+- [邮件通知数据（JSON）](https://tokens.yangtokent.com/data/email.json): 全部 5 条的机器可读数据，含日限与月限口径、超额行为、PDF 与网页超额费率并列、核实日期。
+
+## 邮件详情页
+
+- [Brevo 免费计划详解：300 封/天、100,000 联系人、无需绑卡、带品牌标识](https://tokens.yangtokent.com/email/offers/brevo/): Brevo 免费计划：每天 300 封发送，每日重置、不结转，无时间限制，无需绑卡，最多 100,000 联系人；邮件始终带 Sent with Brevo 标识。付费 Starter $9/月起。核实于 2026-11-13。
+- [Mailgun 免费计划详解：100 封/天、1 个域名、1 天日志保留、官网未明示永久](https://tokens.yangtokent.com/email/offers/mailgun/): Mailgun 免费计划：$0/月，100 封/天、1 个自定义发送域名、RESTful API + SMTP、1 个 API key、1 天日志保留；官网未明示永久。付费 Basic $15/月起。核实于 2026-11-13。
+- [Postmark 免费 Developer 详解：100 封/月、永不过期、无超额、未用不结转](https://tokens.yangtokent.com/email/offers/postmark/): Postmark 免费 Developer 计划：$0，100 封/月，永不过期，不允许超额，未用额度不结转；100 封/月与 10,000 封/月之间无中间档位。付费 Basic $15/月起。核实于 2026-11-13。
+- [Resend 免费层详解：3,000 封/月、100 封/天、3 个域名、free-forever](https://tokens.yangtokent.com/email/offers/resend/): Resend 免费层：$0/月，3,000 封/月、100 封/天、3 个域名、3 个收件箱、30 天数据保留；FAQ 称提供 free-forever plan；付费 Pro $20/月、Scale $90/月。核实于 2026-11-13。
+- [SendGrid 只有 60 天试用：100 封/天、无永久免费计划、PDF 与网页超额费率并列](https://tokens.yangtokent.com/email/offers/sendgrid-trial/): SendGrid 只有 60 天免费试用：100 封/天，无需信用卡、无承诺，没有永久免费计划。Essentials $19.95/月起、Pro $89.95/月起；官方定价 PDF 与定价网页的超额费率不同，并列呈现。核实于 2026-11-13。
+
+## 邮件对比
+
+- [邮件总表：5 条免费、未明示永久与试用一览](https://tokens.yangtokent.com/email/compare/all-email-table/): 邮件总表：Resend、Mailgun、Brevo、SendGrid 试用、Postmark 5 条一览，含免费或试用内容、关键限制、超额行为与付费起步。核实于 2026-11-13。
+- [邮件日限 vs 月限：Resend、Mailgun、Brevo、Postmark 限额结构对照](https://tokens.yangtokent.com/email/compare/daily-vs-monthly-limits/): 邮件限额结构对照：Resend 日限加月限双重上限，Mailgun 与 Brevo 按天计量、每日重置，Postmark 按月计量 100 封、未用不结转。核实于 2026-11-13。
+- [Resend vs SendGrid vs Mailgun：免费层、试用与日限对照](https://tokens.yangtokent.com/email/compare/resend-sendgrid-mailgun/): Resend、SendGrid、Mailgun 对照：Resend 免费层 3,000 封/月加 100 封/天，SendGrid 仅 60 天试用 100 封/天，Mailgun 100 封/天且官网未明示永久。核实于 2026-11-13。
+- [SendGrid 试用 vs 免费层：60 天试用与长期免费计划对照](https://tokens.yangtokent.com/email/compare/sendgrid-trial-vs-free-plans/): SendGrid 60 天试用与 Resend、Brevo、Postmark 免费层对照：期限、额度、试用后去向。SendGrid 没有永久免费计划，旧免费计划已于 2025 年 3–5 月退役。核实于 2026-11-13。
+
+## 邮件指南
+
+- [事务邮件怎么选：Resend、Mailgun、Brevo、Postmark 与 SendGrid 试用对照](https://tokens.yangtokent.com/email/guides/choosing-transactional-email/): 事务邮件选型：按发送量、限额口径、期限与超额行为对照 Resend、Mailgun、Brevo、Postmark 与 SendGrid 试用。核实于 2026-11-13。
+- [邮件日限与月限怎么算：每天重置与每月配额的区别](https://tokens.yangtokent.com/email/guides/daily-vs-monthly-limits/): 邮件日限与月限算法：按天计量的每天重置、按月计量的每月配额、Resend 双重上限的读法；Brevo 每日重置不结转，Postmark 未用不结转。核实于 2026-11-13。
+- [域名验证基础：SPF 与 DKIM 概念、验证步骤与常见问题](https://tokens.yangtokent.com/email/guides/domain-verification-basics/): 域名验证基础：SPF 与 DKIM 的概念、通用验证步骤、验证状态检查与常见问题；各家提供的记录值以官方页面为准。核实于 2026-11-13。
+- [邮件超额规则：Postmark 无超额、Resend 付费计划按量、SendGrid 超额可能收费](https://tokens.yangtokent.com/email/guides/email-overage-rules/): 邮件超额规则对照：Postmark 免费计划不允许超额，Resend 的 pay-as-you-go 仅限付费计划，SendGrid 超额可能收费，Mailgun 与 Brevo 以官方页面为准。核实于 2026-11-13。
+- [从 SendGrid 试用迁移：60 天到期前后的迁移步骤与替代对照](https://tokens.yangtokent.com/email/guides/sendgrid-trial-migration/): SendGrid 试用迁移：60 天试用内容、到期后的付费计划与替代服务对照、迁移步骤与域名验证衔接。核实于 2026-11-13。
+
+## 监控分析板块
+
+- [监控分析](https://tokens.yangtokent.com/monitoring/): 6 个免费层（UptimeRobot、Sentry、Umami、PostHog、Clarity、Google Analytics 4）与 1 个 30 天试用（Plausible）；含不在列表中的服务及原因与变化记录。
+- [监控分析详情](https://tokens.yangtokent.com/monitoring/offers/): 7 篇监控详情页。
+- [监控分析对比](https://tokens.yangtokent.com/monitoring/compare/): 5 篇对比：宕机监控、错误追踪、数据分析工具、隐私与限制、总表。
+- [监控分析指南](https://tokens.yangtokent.com/monitoring/guides/): 5 篇指南：自托管监控、宕机监控选型、Sentry 额度读法、分析工具超额规则、状态页基础。
+- [监控分析常见问题](https://tokens.yangtokent.com/monitoring/faq/): 16 个常见问题与回答。
+- [监控分析数据（JSON）](https://tokens.yangtokent.com/data/monitoring.json): 全部 7 条的机器可读数据，含监控类型、保留期限、超额行为、核实日期。
+
+## 监控详情页
+
+- [Microsoft Clarity 详解：永久免费、无流量限制、无采样](https://tokens.yangtokent.com/monitoring/offers/clarity/): Microsoft Clarity 官方 FAQ：Clarity is a free service forever；无流量限制、无需升级到付费版；每个账户的网站数量无限制；无采样。核实于 2026-11-13。
+- [Google Analytics 4 标准版详解：免费、保留期限与采样配额](https://tokens.yangtokent.com/monitoring/offers/google-analytics-4/): 标准版 Google Analytics 4 免费（free of charge）；用户级数据保留 2 或 14 个月，事件数据保留 2/14/26/38/50 个月（26/38/50 仅 360），默认 26 个月；事件级查询标准版 1,000 万事件、360 最高 10 亿事件。核实于 2026-11-13。
+- [Plausible 试用说明：30 天免费试用、无永久免费云端计划、可自托管](https://tokens.yangtokent.com/monitoring/offers/plausible-trial/): Plausible 云端没有永久免费计划：30 天免费试用、无需信用卡，试用后需预付费方可继续使用；计划 $9/月起，年付省 2 个月；Community Edition 免费可自托管（AGPLv3）。核实于 2026-11-13。
+- [PostHog 免费层详解：每月 1M 事件与各产品免费额度、超限即停](https://tokens.yangtokent.com/monitoring/offers/posthog/): PostHog 免费层：无需信用卡、不是试用；首 1M 事件每月免费、每月重置、有无绑卡额度相同；无限团队成员、1 个项目、1 年保留、社区支持；用量到免费上限即停。核实于 2026-11-13。
+- [Sentry Developer 免费层详解：5k errors、5M spans、50 replays（未标注周期）](https://tokens.yangtokent.com/monitoring/offers/sentry/): Sentry Developer：$0、限 1 名用户、无限项目、5 GB logs、1 个 uptime monitor、1 个 cron monitor、30 天 lookback；对比表：5k errors、5M spans、50 replays，三项数字未标注周期。Team $26/月、Business $80/月。核实于 2026-11-13。
+- [Umami Hobby 免费层详解：100,000 事件、3 个网站、6 个月保留](https://tokens.yangtokent.com/monitoring/offers/umami/): Umami Hobby：$0、100,000 事件、3 个网站、6 个月数据保留、完整报告套件、数据导出；无团队成员、无 API、无邮件报告、无 session replay、无 heatmap。Pro $9/月、Business $49/月。核实于 2026-11-13。
+- [UptimeRobot 免费层详解：50 个监控器、5 分钟间隔、SSL 监控两种说法并列](https://tokens.yangtokent.com/monitoring/offers/uptimerobot/): UptimeRobot Free：$0/月、50 个监控器、5 分钟间隔、HTTP/port/ping、keyword、API、UDP、DNS、仅 5 个集成、基础状态页、3 个月保留、1 个状态页、无需信用卡。SSL 与域名过期监控：计划卡片与对比表说法不一，并列呈现。核实于 2026-11-13。
+
+## 监控对比
+
+- [监控分析总表：7 条一览](https://tokens.yangtokent.com/monitoring/compare/all-monitoring-table/): 监控分析 7 条总表：免费与试用内容、关键限制、绑卡、超额行为、数据保留。核实于 2026-11-13。
+- [Umami vs PostHog vs Plausible vs GA4 vs Clarity：数据分析工具对照](https://tokens.yangtokent.com/monitoring/compare/analytics-tools/): 五家数据分析工具对照：免费与试用写法、计量口径、网站数、保留、采样、超额行为、自托管。核实于 2026-11-13。
+- [Sentry vs PostHog 错误追踪对照：错误量、日志与回放](https://tokens.yangtokent.com/monitoring/compare/error-tracking/): Sentry Developer 与 PostHog Error tracking 对照：错误量口径、用户数、项目数、日志、回放、保留、超额行为。核实于 2026-11-13。
+- [隐私与限制对照：数据保留、采样与超额行为](https://tokens.yangtokent.com/monitoring/compare/privacy-and-limits/): 7 条监控分析条目对照：数据保留期限、采样与查询限制、超额行为、绑卡要求；隐私合规问法说明。核实于 2026-11-13。
+- [UptimeRobot vs Sentry 宕机监控：监控器数量、间隔与状态页对照](https://tokens.yangtokent.com/monitoring/compare/uptime-monitoring/): UptimeRobot 与 Sentry uptime monitor 对照：监控器数量、检测间隔、监控类型、状态页、绑卡、保留，另有自托管路线说明。核实于 2026-11-13。
+
+## 监控指南
+
+- [数据分析工具超额规则：到限即停、按事件计费与升级通知对照](https://tokens.yangtokent.com/monitoring/guides/analytics-overage-rules/): 数据分析工具超额行为对照：PostHog 用量到限即停、Umami 付费计划按事件计费、Plausible 连续两月超档通知升级、GA4 与 Clarity 未述事项。核实于 2026-11-13。
+- [怎么选宕机监控：监控器数量、检测间隔与状态页](https://tokens.yangtokent.com/monitoring/guides/choosing-uptime-monitoring/): 宕机监控选型步骤：监控器数量、检测间隔、监控类型、状态页、集成、保留、绑卡、自托管路线。参数以各家官网为准，核实于 2026-11-13。
+- [Sentry 免费额度怎么读：三项数字没有标注周期](https://tokens.yangtokent.com/monitoring/guides/reading-sentry-limits/): Sentry Developer 对比表原文：5k errors、5M spans、50 replays 三行本身未标注周期；新用户推广语与计划数字的区别；Team 含 50K errors/月。核实于 2026-11-13。
+- [自托管监控路线：Uptime Kuma、UptimeFlare、哪吒探针](https://tokens.yangtokent.com/monitoring/guides/self-hosted-monitoring/): 自托管监控三条路线：Uptime Kuma、UptimeFlare、哪吒探针的概念与部署方式，以及与 UptimeRobot 托管免费层的对照。核实于 2026-11-13。
+- [状态页基础：UptimeRobot 基础状态页与自托管状态页路线](https://tokens.yangtokent.com/monitoring/guides/status-page-basics/): 状态页基础：UptimeRobot Free 含基础状态页、1 个状态页；自托管状态页路线 UptimeFlare 与 Uptime Kuma。核实于 2026-11-13。
+
+## 支付变现板块
+
+- [支付变现](https://tokens.yangtokent.com/payments/): 1 个支付处理（Stripe）与 3 个 Merchant of Record（Paddle、Lemon Squeezy、Polar）；含不在列表中的服务及原因与变化记录。
+- [支付变现详情](https://tokens.yangtokent.com/payments/offers/): 4 篇支付详情页。
+- [支付变现对比](https://tokens.yangtokent.com/payments/compare/): 4 篇对比：大陆个人视角费率对照、MoR 费率对照、Polar 档位、总表。
+- [支付变现指南](https://tokens.yangtokent.com/payments/guides/): 5 篇指南：大陆个人收款路径、Merchant of Record 解释、费率换算、Lemon Squeezy 迁移、订阅与许可证。
+- [支付变现常见问题](https://tokens.yangtokent.com/payments/faq/): 18 个常见问题与回答。
+- [支付变现数据（JSON）](https://tokens.yangtokent.com/data/payments.json): 全部 4 条的机器可读数据，含费率原文、月费、Merchant of Record 身份、核实日期。
+
+## 支付详情页
+
+- [Lemon Squeezy 费率详解：5% + 50¢、Merchant of Record、许可证密钥与迁移说明](https://tokens.yangtokent.com/payments/offers/lemon-squeezy/): Lemon Squeezy：电商 5% + 50¢/交易，无月费，Merchant of Record；销售税/VAT 代收代缴与申报、AI 欺诈保护、许可证密钥、订阅计费；邮件营销 500 订阅者内免费；注册无需绑卡。2026 Update 博客未提关闭日期与费率。核实于 2026-11-13。
+- [Paddle 费率详解：5% + 50¢、Merchant of Record、无月费、税务合规](https://tokens.yangtokent.com/payments/offers/paddle/): Paddle Pay-as-you-go：5% + 50¢/Checkout 交易；Merchant of Record；全球税务合规、欺诈保护、退款与买家支持；无月费、无迁移费、无隐藏费用；低于 $10 的商品可议价。核实于 2026-11-13。
+- [Polar 费率详解：四档月费、5% + 50¢ 起、争议 $15、Early Member 规则](https://tokens.yangtokent.com/payments/offers/polar/): Polar：Starter 免费 5% + 50¢；Pro $20/月 3.8% + 40¢；Growth $100/月 3.6% + 35¢；Scale $400/月 3.4% + 30¢；Merchant of Record；国际卡 +1.5%；争议 $15/起；Early Member 规则以 2026-05-27 为界。核实于 2026-11-13。
+- [Stripe 费率详解：2.9% + 30¢、Managed Payments 3.5%、Atlas $500、中国大陆不在支持列表](https://tokens.yangtokent.com/payments/offers/stripe/): Stripe：标准处理 2.9% + 30¢（美国国内卡），国际卡 +1.5%，无月费；Managed Payments 3.5% + Payments 费用；Atlas $500 一次性；Billing 按量 0.7%。中国大陆不在官方支持国家列表（50 条）中，香港在列。核实于 2026-11-13。
+
+## 支付对比
+
+- [支付变现总表：4 条费率、月费、MoR 与关键条款一览](https://tokens.yangtokent.com/payments/compare/all-payments-table/): 支付变现总表：Stripe、Paddle、Lemon Squeezy、Polar 费率、月费、Merchant of Record 状态、支持国家、附加费、绑卡一览。核实于 2026-11-13。
+- [Merchant of Record 费率对照：Paddle、Polar、Lemon Squeezy 与 Stripe Managed Payments](https://tokens.yangtokent.com/payments/compare/mor-fees-compared/): Merchant of Record 费率对照：Paddle 5% + 50¢、Lemon Squeezy 5% + 50¢、Polar 四档 5% + 50¢ 起、Stripe Managed Payments 3.5% + Payments 费用；附加费、争议费、提现费与税务逐项对照。核实于 2026-11-13。
+- [Polar 四档对照：Starter、Pro、Growth、Scale 费率与回本点](https://tokens.yangtokent.com/payments/compare/polar-tiers/): Polar 四档对照：Starter 免费 5% + 50¢、Pro $20/月 3.8% + 40¢、Growth $100/月 3.6% + 35¢、Scale $400/月 3.4% + 30¢；官方回本点约 $1,379、$5,634、$19,048/月；Early Member 规则以 2026-05-27 为界。核实于 2026-11-13。
+- [Stripe vs Paddle vs Lemon Squeezy：大陆个人视角对照（支持国家、费率、MoR）](https://tokens.yangtokent.com/payments/compare/stripe-paddle-lemon-squeezy/): 从大陆个人视角对照 Stripe、Paddle、Lemon Squeezy：Stripe 官方支持国家列表（50 条）中没有中国大陆，香港在列；Paddle 与 Lemon Squeezy 为 Merchant of Record，费率 5% + 50¢；各平台注册资格以官方支持国家/验证要求页面为准。核实于 2026-11-13。
+
+## 支付指南
+
+- [支付费率怎么算：5% + 50¢、3.5% + 处理费与 Polar 分档换算](https://tokens.yangtokent.com/payments/guides/fee-math/): 支付费率换算：5% + 50¢、Stripe 2.9% + 30¢、Managed Payments 3.5% + 处理费、Polar 四档的单笔与月度换算；全部换算均按官方费率计算得出，非官方报价。核实于 2026-11-13。
+- [Lemon Squeezy 迁移说明：官方博客原文、35+ 国家与 Atlas 指向](https://tokens.yangtokent.com/payments/guides/lemon-squeezy-migration/): Lemon Squeezy 迁移说明：2026 Update 官方博客（2026-01-28）原文——团队在建设 Stripe Managed Payments，目标是提供迁移路径；博客未提关闭日期、未提费率；Managed Payments 当时支持 35+ 国家。核实于 2026-11-13。
+- [大陆个人境外收款：合规路径、支持国家核对与 Atlas 说明](https://tokens.yangtokent.com/payments/guides/mainland-individual-payments/): 大陆个人境外收款：Stripe 官方支持国家列表（50 条）中没有中国大陆，香港在列；Merchant of Record 模式说明；Atlas $500 一次性路径；注册资格核对清单。核实于 2026-11-13。
+- [订阅计费与许可证密钥：Lemon Squeezy 与 Stripe Billing 对照](https://tokens.yangtokent.com/payments/guides/subscriptions-and-licensing/): 订阅计费与许可证密钥对照：Lemon Squeezy 许可证密钥与订阅计费、Stripe Billing 按量 0.7%；Paddle 与 Polar 的相关细则以官方页面为准。核实于 2026-11-13。
+- [Merchant of Record 是什么：税务、欺诈保护与退款由谁负责](https://tokens.yangtokent.com/payments/guides/what-is-mor/): Merchant of Record 含义：平台作为交易中的销售方，承担税务合规、欺诈保护、退款与争议等责任；Paddle、Lemon Squeezy、Polar 与 Stripe Managed Payments 的服务范围对照。核实于 2026-11-13。
+
+## 认证与用户管理板块
+
+- [认证与用户管理](https://tokens.yangtokent.com/auth/): 2 个独立认证免费档（Clerk、Auth0）与 2 个数据库附带认证（Supabase Auth、Firebase Auth）交叉指引；含不在列表中的服务及原因与变化记录。
+- [认证与用户管理详情](https://tokens.yangtokent.com/auth/offers/): 2 篇认证详情页。
+- [认证与用户管理对比](https://tokens.yangtokent.com/auth/compare/): 3 篇对比：Clerk vs Auth0、数据库附带认证对照、总表。
+- [认证与用户管理指南](https://tokens.yangtokent.com/auth/guides/): 4 篇指南：认证选型、MRU 与 MAU、社交登录基础、超额规则。
+- [认证与用户管理常见问题](https://tokens.yangtokent.com/auth/faq/): 14 个常见问题与回答。
+- [认证与用户管理数据（JSON）](https://tokens.yangtokent.com/data/auth.json): 2 条独立认证的机器可读数据，含 MRU/MRO 与 MAU 额度、超额行为、核实日期；数据库附带认证见数据库数据文件。
+
+## 认证详情页
+
+- [Auth0 Free 详解：25,000 MAU、5 个组织、1 个企业连接、1 天日志保留](https://tokens.yangtokent.com/auth/offers/auth0/): Auth0 Free：$0、至多 25,000 MAU（External Active Users）、注册无需绑卡；1 个自定义域名（需绑卡验证）、5 个组织、1 个企业连接、1,000 个 M2M token、5 个 Actions、1 天日志保留。核实于 2026-11-13。
+- [Clerk Hobby 详解：50,000 MRUs、100 MROs、3 个社交登录、1 个月宽限期](https://tokens.yangtokent.com/auth/offers/clerk/): Clerk Hobby 免费版：50,000 MRUs/应用、100 MROs/应用、无限应用、3 个 dashboard seats、至多 3 个社交登录、固定 7 天 session、1 天日志保留；无需信用卡；超限须升级 Pro，1 个月宽限期。核实于 2026-11-13。
+
+## 认证对比
+
+- [认证总表：独立认证与附带认证一览（MRU、MAU、绑卡、超额）](https://tokens.yangtokent.com/auth/compare/all-auth-table/): 认证总表：Clerk、Auth0、Supabase Auth、Firebase Auth 一览：免费额度、口径、绑卡、超限规则、详情页链接。核实于 2026-11-13。
+- [独立认证与数据库附带认证对照：Clerk、Auth0、Supabase Auth、Firebase Auth](https://tokens.yangtokent.com/auth/compare/auth-included/): 独立认证服务（Clerk、Auth0）与数据库附带认证（Supabase Auth 50,000 MAU、Firebase Auth 50K MAU）对照：额度口径、归属、详情页链接。核实于 2026-11-13。
+- [Clerk vs Auth0：MRU 与 MAU、社交登录、组织与超额对照](https://tokens.yangtokent.com/auth/compare/clerk-vs-auth0/): Clerk Hobby 与 Auth0 Free 逐项对照：50,000 MRUs 与 25,000 MAU 口径不同、社交登录与企业连接、组织数量、绑卡、日志保留、超限规则。核实于 2026-11-13。
+
+## 认证指南
+
+- [认证额度超了怎么办：Clerk 宽限期与强制升级、Auth0 超额说明](https://tokens.yangtokent.com/auth/guides/auth-overage-rules/): 认证超额规则：Clerk 超 50,000 MRU 须升级 Pro、超 100 MRO 须升级 B2B 附加项、1 个月宽限期；Auth0 超限行为在官网已读页面中未述，以官方页面为准。核实于 2026-11-13。
+- [登录注册自己写还是用 Clerk/Auth0：认证选型对照](https://tokens.yangtokent.com/auth/guides/choosing-auth-provider/): 认证选型：自己写登录注册与用 Clerk、Auth0、数据库附带认证的对照：免费用户量、社交登录、组织、绑卡、超限规则。核实于 2026-11-13。
+- [MRU 与 MAU 有什么不同：Clerk 留存用户定义与 Auth0 外部活跃用户](https://tokens.yangtokent.com/auth/guides/mru-vs-mau/): MRU 与 MAU 口径对照：Clerk 的 MRU 定义（用户注册 24 小时后回访即计为 retained）、MRO 定义、Auth0 的 External Active Users 表述；数字不能直接比大小。核实于 2026-11-13。
+- [社交登录基础：Clerk 3 个社交登录与 Auth0 企业连接对照](https://tokens.yangtokent.com/auth/guides/social-login-basics/): 社交登录基础：通用配置步骤、Clerk Hobby 至多 3 个社交登录、Auth0 Free 1 个企业连接；各家数量以官网定价页为准。核实于 2026-11-13。
+
+## 对象存储板块
+
+- [对象存储](https://tokens.yangtokent.com/storage/): 1 个免费层（Cloudflare R2）、1 个按量付费（Backblaze B2）与 2 个数据库附带存储说明；含不在列表中的服务及原因与变化记录。
+- [对象存储详情](https://tokens.yangtokent.com/storage/offers/): 2 篇存储详情页。
+- [对象存储对比](https://tokens.yangtokent.com/storage/compare/): 4 篇对比：R2 vs B2、出站规则、数据库附带存储对照、总表。
+- [对象存储指南](https://tokens.yangtokent.com/storage/guides/): 3 篇指南：对象存储选型、R2 存储类别、存储与 CDN。
+- [对象存储常见问题](https://tokens.yangtokent.com/storage/faq/): 14 个常见问题与回答。
+- [对象存储数据（JSON）](https://tokens.yangtokent.com/data/storage.json): 2 条的机器可读数据，含免费额度与按量价格、出站规则、核实日期；数据库附带存储见数据库数据文件。
+
+## 存储详情页
+
+- [Backblaze B2 详解：$6.95/TB 存储、出站 3 倍规则、合作 CDN 出站免费](https://tokens.yangtokent.com/storage/offers/backblaze-b2/): Backblaze B2 按量付费：存储 $6.95/TB/30 天；出站每月平均存储量 3 倍以内免费，超出 $0.01/GB；经合作 CDN 出站不限量免费；Overdrive $15/TB/月；没有免费层。核实于 2026-11-13。
+- [Cloudflare R2 免费层详解：10 GB-month、1M/10M 操作、出站免费、Infrequent Access 不适用免费层](https://tokens.yangtokent.com/storage/offers/cloudflare-r2/): Cloudflare R2 免费层：每月 10 GB-month 存储、1M Class A 操作、10M Class B 操作，出站免费；标准存储 $0.015/GB-month；Infrequent Access 不适用免费层、最短存储 30 天。核实于 2026-11-13。
+
+## 存储对比
+
+- [对象存储总表：R2、B2 与数据库附带存储一览](https://tokens.yangtokent.com/storage/compare/all-storage-table/): 对象存储总表：R2 免费层、B2 按量付费、Supabase Storage 与 Firebase Storage 附带存储说明，含价格、出站规则与详情链接。核实于 2026-11-13。
+- [对象存储出站规则对照：R2 出站免费、B2 3 倍规则与合作 CDN 出站](https://tokens.yangtokent.com/storage/compare/egress-rules/): 三组出站规则对照：R2 所有存储类出站不收费；B2 每月平均存储量 3 倍以内免费、超出 $0.01/GB；B2 经合作 CDN 出站不限量免费。核实于 2026-11-13。
+- [Cloudflare R2 vs Backblaze B2：免费层与按量付费对照](https://tokens.yangtokent.com/storage/compare/r2-vs-b2/): R2 与 B2 逐项对比：免费层、存储价、操作价、存储类别、出站规则、Overdrive。R2 每月免费层、出站免费；B2 按量付费、出站 3 倍规则。核实于 2026-11-13。
+- [独立对象存储 vs 数据库附带存储：R2、B2、Supabase Storage、Firebase Storage 对照](https://tokens.yangtokent.com/storage/compare/storage-included/): R2、B2 与数据库附带的 Supabase Storage、Firebase Storage 对照：独立服务与随套餐提供之分；Supabase 1 GB 文件存储；Firebase Storage Spark 列为 Not applicable、免费额度在 Blaze 列。核实于 2026-11-13。
+
+## 存储指南
+
+- [怎么选对象存储：免费层、按量付费与数据库附带存储](https://tokens.yangtokent.com/storage/guides/choosing-object-storage/): 选对象存储的对照：R2 每月免费层与出站免费、B2 按量付费与出站 3 倍规则、数据库附带的 Supabase Storage 与 Firebase Storage。核实于 2026-11-13。
+- [R2 存储类别：Standard 与 Infrequent Access 对照（免费层不适用 IA、30 天最短存储）](https://tokens.yangtokent.com/storage/guides/r2-storage-classes/): R2 两个存储类别对照：Standard $0.015/GB-month；Infrequent Access $0.01/GB-month、取回 $0.01/GB、最短存储 30 天，免费层不适用；两类出站均不收费。核实于 2026-11-13。
+- [对象存储与 CDN：B2 合作 CDN 出站免费与 R2 出站免费](https://tokens.yangtokent.com/storage/guides/storage-with-cdn/): 对象存储与 CDN 搭配：B2 经 8 家合作 CDN 出站不限量免费；R2 所有存储类出站不收费；B2 直接出站按 3 倍规则计费。核实于 2026-11-13。
+
+## 代码托管与 CI板块
+
+- [代码托管与 CI](https://tokens.yangtokent.com/code/): GitHub Free 与 GitLab Free；含不在列表中的服务及原因与变化记录。
+- [代码托管与 CI详情](https://tokens.yangtokent.com/code/offers/): 2 篇代码托管详情页。
+- [代码托管与 CI对比](https://tokens.yangtokent.com/code/compare/): 3 篇对比：GitHub vs GitLab、CI 分钟数对照、总表。
+- [代码托管与 CI指南](https://tokens.yangtokent.com/code/guides/): 4 篇指南：代码托管选型、CI 分钟数基础、GitLab Runner、私有仓库限制。
+- [代码托管与 CI常见问题](https://tokens.yangtokent.com/code/faq/): 15 个常见问题与回答。
+- [代码托管与 CI数据（JSON）](https://tokens.yangtokent.com/data/code.json): 2 条的机器可读数据，含仓库、CI 分钟数、存储额度、核实日期。
+
+## 代码托管详情页
+
+- [GitHub Free 详解：无限仓库、2,000 CI/CD 分钟、500 MB Packages、Codespaces](https://tokens.yangtokent.com/code/offers/github-free/): GitHub Free $0：无限公开/私有仓库、2,000 CI/CD 分钟/月、500 MB Packages 存储、Issues & Projects、Dependabot、Codespaces 访问（$0 spend limit）；公开仓库 Actions 分钟与 Packages 免费；多项功能仅限公开仓库。核实于 2026-11-13。
+- [GitLab Free 详解：5 名用户、400 计算分钟、10 GiB 存储、共享 Runner 绑卡验证](https://tokens.yangtokent.com/code/offers/gitlab-free/): GitLab Free $0：注册无需信用卡、每个顶级组 5 名用户、400 计算分钟/月、10 GiB 可调存储、每月 5 GiB 传输数据；共享 Runner 须绑卡（$1 授权验证、不扣费）；Premium $29/用户/月，Ultimate 报价制。核实于 2026-11-13。
+
+## 代码托管对比
+
+- [代码托管总表：GitHub Free 与 GitLab Free 一览](https://tokens.yangtokent.com/code/compare/all-code-table/): 代码托管 2 条总表：免费内容、关键限制、绑卡、付费计划一览。核实于 2026-11-13。
+- [CI 分钟数对照：GitHub 2,000 Actions 分钟 vs GitLab 400 计算分钟](https://tokens.yangtokent.com/code/compare/ci-minutes-compared/): GitHub Free 每月 2,000 CI/CD 分钟与 GitLab Free 每月 400 计算分钟对照：各自计划口径不同，不宜直接等同；公开仓库 Actions 分钟免费。核实于 2026-11-13。
+- [GitHub Free vs GitLab Free：仓库、CI 分钟、存储与人数对照](https://tokens.yangtokent.com/code/compare/github-vs-gitlab/): GitHub Free 与 GitLab Free 逐项对照：仓库与人数、CI 分钟、存储与传输、绑卡要求、付费计划、公开仓库限定。核实于 2026-11-13。
+
+## 代码托管指南
+
+- [个人项目代码放哪：GitHub Free 与 GitLab Free 怎么选](https://tokens.yangtokent.com/code/guides/choosing-code-hosting/): 从私有仓库、人数、CI 分钟、存储与绑卡五个方面对照 GitHub Free 与 GitLab Free，帮个人项目选代码托管。核实于 2026-11-13。
+- [CI 分钟是什么：Actions 分钟与计算分钟的含义与免费量](https://tokens.yangtokent.com/code/guides/ci-minutes-basics/): CI 分钟的含义：代码提交后自动构建与测试任务占用的运行时间；GitHub Free 每月 2,000 分钟、GitLab Free 每月 400 分钟，各自口径不同。核实于 2026-11-13。
+- [GitLab Runner 说明：共享 Runner 绑卡验证与自带 Runner](https://tokens.yangtokent.com/code/guides/gitlab-runners/): GitLab 共享 Runner 须绑卡（$1 授权验证、不扣费），自带 Runner 或禁用共享 Runner 不需要绑卡；GitLab Free 每月 400 计算分钟、注册无需信用卡。核实于 2026-11-13。
+- [私有仓库限制说明：GitHub 公开仓库限定功能与 GitLab 5 用户上限](https://tokens.yangtokent.com/code/guides/private-repo-limits/): GitHub Free 对比表中 repository rules、code owners、草稿 PR、Pages/wikis、secret scanning 等功能仅限公开仓库；GitLab Free 每个顶级组 5 名用户。核实于 2026-11-13。
 
 ## English edition
 

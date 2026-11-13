@@ -60,6 +60,46 @@
 - 板块页面在 `domain/` 下：列表页、6 篇详情页、5 篇对比、6 篇指南、1 个问答页（16 问），均已加入 `sitemap.xml` 与 `llms.txt`。
 - Freenom 免费域名（已死）、eu.org / JS.ORG / DigitalPlat（官网条款未确认）只在列表页「不在列表中的服务及原因」一节说明；GitHub Student Pack 域名优惠只作交叉提示。
 
+## 邮件通知板块
+
+- 共 5 条（核实于 2026-11-13）：3 个免费层（Resend、Brevo、Postmark）+ 1 个官网未明示永久（Mailgun）+ 1 个试用（SendGrid，60 天）。
+- 数据在 `data/email.json` 里，字段与 `data/hosting.json` 对应（另有 `planKind`、`planName`、`limitKind`、`limitsText`、`overageBehavior`、`paidFrom` 字段；`group` / `status` 取值：`free` / `not-stated-permanent` / `trial`；`cardRequired` 为 `null` 表示官方页未说明；SendGrid 的 PDF 与网页超额费率并列记录）。
+- 板块页面在 `email/` 下：列表页、5 篇详情页、4 篇对比、5 篇指南、1 个问答页（15 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+- SendGrid 永久免费计划（已于 2025 年 3–5 月退役）只在列表页「不在列表中的服务及原因」一节说明，并链向已死服务指南。
+
+## 监控分析板块
+
+- 共 7 条（核实于 2026-11-13）：6 个免费层（UptimeRobot、Sentry、Umami、PostHog、Clarity、Google Analytics 4）+ 1 个试用（Plausible，30 天）。
+- 数据在 `data/monitoring.json` 里，字段与 `data/hosting.json` 对应（另有 `planKind`、`planName`、`monitoringType`、`retentionText`、`limitsText`、`overageBehavior`、`paidFrom` 字段；`group` 取值：`free` / `trial`；`status` 取值：`active` / `trial`；`cardRequired` 为 `null` 表示官方页未说明；Sentry 的 5k/5M/50 三项数字不带周期表述；UptimeRobot 的卡片与对比表冲突记在 `notes` 里）。
+- 板块页面在 `monitoring/` 下：列表页、7 篇详情页、5 篇对比、5 篇指南、1 个问答页（16 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+- 自托管监控软件（Uptime Kuma、UptimeFlare 等）只在指南中说明，不列入列表。
+
+## 支付变现板块
+
+- 共 4 条（核实于 2026-11-13）：1 个支付处理（Stripe）+ 3 个 Merchant of Record（Paddle、Lemon Squeezy、Polar）。
+- 数据在 `data/payments.json` 里，字段与 `data/hosting.json` 对应（另有 `feeText`、`monthlyFee`、`morStatus` 字段；`group` 取值：`processor` / `merchant-of-record`；`status` 取值：`active`；`cardRequired` 为 `null` 表示官方页未说明）。
+- 板块页面在 `payments/` 下：列表页、4 篇详情页、4 篇对比、5 篇指南、1 个问答页（18 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+- 灰色渠道（买卖/代办账户）只在列表页与大陆个人收款指南中作一行风险提示，不作任何操作说明；Lemon Squeezy 迁移后费率不写沿用旧费率的说法。
+
+## 认证板块
+
+- 共 2 条独立认证（核实于 2026-11-13）：Clerk、Auth0；Supabase Auth 与 Firebase Auth 随数据库免费档提供，只作交叉指引，不重复列出。
+- 数据在 `data/auth.json` 里，字段与 `data/hosting.json` 对应（另有 `planName`、`limitsText`、`overageBehavior` 字段；`group` 取值：`standalone`；`status` 取值：`active`；`cardRequired` 为 `null` 表示官方页未说明）。
+- 板块页面在 `auth/` 下：列表页、2 篇详情页、3 篇对比、4 篇指南、1 个问答页（14 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+
+## 对象存储板块
+
+- 共 2 条（核实于 2026-11-13）：1 个免费层（Cloudflare R2）+ 1 个按量付费（Backblaze B2，无免费层）；Supabase Storage 与 Firebase Storage 只作交叉指引，不重复列出。
+- 数据在 `data/storage.json` 里，字段与 `data/hosting.json` 对应（另有 `limitsText`、`overageBehavior`、`egressText` 字段；`group` / `status` 取值：`free` / `pay-as-you-go`；`cardRequired` 为 `null` 表示官方页未说明）。
+- 板块页面在 `storage/` 下：列表页、2 篇详情页、4 篇对比、3 篇指南、1 个问答页（14 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+
+## 代码托管板块
+
+- 共 2 条（核实于 2026-11-13）：GitHub Free、GitLab Free。
+- 数据在 `data/code.json` 里，字段与 `data/hosting.json` 对应（另有 `planKind`、`planName`、`limitsText` 字段；`group` 取值：`free`；`status` 取值：`active`；`cardRequired` 为 `null` 表示官方页未说明，为 `false` 表示官网写明无需信用卡）。
+- 板块页面在 `code/` 下：列表页、2 篇详情页、3 篇对比、4 篇指南、1 个问答页（15 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+- 已死服务指南在 `guides/dead-services/` 下：Heroku、PlanetScale、SendGrid 永久免费计划、Freenom、Upstash Kafka、Google Domains 的现状与替代，时间线来自多家公开报道。
+
 ## 使用方法
 
 ### 本地打开
