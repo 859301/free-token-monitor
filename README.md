@@ -88,3 +88,9 @@ python3 -m http.server 8000
 ## 许可证
 
 MIT License，见 [LICENSE](LICENSE)。
+
+## 英文版（English edition）
+
+- 英文页在 `en/` 下（首批，2026-11-13）：24 页——4 个板块列表页、10 篇详情页、6 篇对比、1 个综合问答页（23 问）、3 个 Hub 页。
+- 英文数据文件 `data/offers-en.json`、`data/vps-en.json`、`data/wool-en.json`、`data/cheap-en.json`：文本译为英文，事实（金额、日期、条款、规格、链接、核实日期）与中文数据文件完全一致；中文数据文件是事实来源，不要单独改 `-en` 文件里的事实字段。
+- 每篇英文页都在 `<head>` 里用 hreflang 指向中文对应页（`en` / `zh-CN` / `x-default`），中文为默认语言；中文对应页也加了回链。英文列表页为静态页，不含领取台账（无 localStorage）。

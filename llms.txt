@@ -151,3 +151,37 @@
 - [先按月、再年付：新主机信任规则与备份](https://tokens.yangtokent.com/cheap/guides/backup-monthly-first/): 30/90 天信任检查清单。
 - [线路优先：买 VPS 先看路由、再看配置](https://tokens.yangtokent.com/cheap/guides/route-first/): 术语解释与 ping/mtr 测量方法。
 - [隐藏费用清单：IPv4、备份、税费与超额](https://tokens.yangtokent.com/cheap/guides/hidden-costs-checklist/): 7 类隐藏费用与结账页检查方法。
+
+## English edition
+
+- [Free Token Monitor (English)](https://tokens.yangtokent.com/en/): all 43 verified free credits in English, filterable; static listing, no claim ledger.
+- [Free VPS (English)](https://tokens.yangtokent.com/en/vps/): 9 verified free cloud servers in English.
+- [VPS Deals (English)](https://tokens.yangtokent.com/en/wool/): trial credits, task-renewal hosts, and promo archives in English.
+- [Cheap VPS (English)](https://tokens.yangtokent.com/en/cheap/): standing-price cheap VPS picks in English.
+- [Offer details (English)](https://tokens.yangtokent.com/en/offers/): 6 English detail pages: OpenRouter, Gemini, Groq, Cloudflare, Deepgram, Tavily.
+- [Comparisons (English)](https://tokens.yangtokent.com/en/compare/): 3 English comparisons: no-card LLM APIs, free-tier types, search APIs.
+- [Free VPS offer details (English)](https://tokens.yangtokent.com/en/vps/offers/): Oracle Always Free and GCP Free Tier detail pages.
+- [FAQ (English)](https://tokens.yangtokent.com/en/faq/): 23 questions in English users’ own wording, answer-first with sources and dates.
+- [English data: offers](https://tokens.yangtokent.com/data/offers-en.json): all 43 offers, English text, facts identical to data/offers.json.
+- [English data: VPS](https://tokens.yangtokent.com/data/vps-en.json): 9 VPS entries, English text, facts identical to data/vps.json.
+- [English data: deals](https://tokens.yangtokent.com/data/wool-en.json): 7 deal entries, English text, facts identical to data/wool.json.
+- [English data: cheap](https://tokens.yangtokent.com/data/cheap-en.json): 4 cheap entries, English text, facts identical to data/cheap.json.
+
+English detail and comparison pages:
+
+- [:free free models (OpenRouter)](https://tokens.yangtokent.com/en/offers/openrouter-free/): 20 RPM / 50 requests per day; 1,000 per day after a $10 top-up. Verified 2026-10-27.
+- [Gemini API free tier (Google AI Studio)](https://tokens.yangtokent.com/en/offers/gemini-free-tier/): free tier for Gemini Flash and other models, 5–30 RPM / per-model daily caps. Verified 2026-11-08.
+- [Free Plan fast inference (Groq)](https://tokens.yangtokent.com/en/offers/groq-free-plan/): per model 30 RPM / 1,000 requests per day / 200K tokens per day. Verified 2026-11-08.
+- [Daily free Neurons (Cloudflare Workers AI)](https://tokens.yangtokent.com/en/offers/cloudflare-workers-ai/): 10,000 Neurons per day. Verified 2026-11-01.
+- [Speech API signup credits (Deepgram)](https://tokens.yangtokent.com/en/offers/deepgram-signup/): $200 free credits, no card required, never expire. Verified 2026-11-01.
+- [Search API free tier (Tavily)](https://tokens.yangtokent.com/en/offers/tavily-monthly/): 1,000 API credits per month, no card required. Verified 2026-11-01.
+- [Always Free cloud servers (Oracle Cloud)](https://tokens.yangtokent.com/en/vps/offers/oracle-always-free/): A1 1,500 OCPU hours + 9,000 GB hours/month (2 OCPU / 12 GB), 200 GB storage, 10 TB outbound. Card required. Verified 2026-11-12.
+- [Google Cloud Free Tier: e2-micro + $300 trial](https://tokens.yangtokent.com/en/vps/offers/gcp-free-tier/): 1 e2-micro per month, 30 GB disk, 1 GB outbound, 3 US regions only. Card required. Verified 2026-11-12.
+- [Vultr deposit match + free credits](https://tokens.yangtokent.com/en/wool/offers/vultr-credits/): match up to $100, 12-month expiry, 50/50 offset, new customers only. Verified 2026-11-13.
+- [RackNerd VPS Specials](https://tokens.yangtokent.com/en/cheap/offers/racknerd-specials/): 5 annual tiers, official FAQ promises lifetime same-rate renewal. Verified 2026-11-13.
+- [Best free LLM APIs with no credit card](https://tokens.yangtokent.com/en/compare/best-free-llm-api-no-card/): 6 no-card LLM APIs compared.
+- [Free-tier types compared](https://tokens.yangtokent.com/en/compare/free-tier-types/): long-term free tier vs signup credit vs periodic reset vs limited-time; all 43 offers grouped.
+- [Free search & scraping APIs compared](https://tokens.yangtokent.com/en/compare/free-search-apis/): Tavily / Exa / Firecrawl / You.com.
+- [Oracle vs GCP](https://tokens.yangtokent.com/en/vps/compare/oracle-vs-gcp/): the two always-free VMs, item by item.
+- [Trial credits compared](https://tokens.yangtokent.com/en/wool/compare/trial-credits-compared/): Vultr / DigitalOcean / Akamai / Hetzner.
+- [Cheap VPS vs free VPS](https://tokens.yangtokent.com/en/cheap/compare/cheap-vs-free/): when paying is worth it.
