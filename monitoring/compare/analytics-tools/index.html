@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Umami vs PostHog vs Plausible vs GA4 vs Clarity：数据分析工具对照</title>
+<meta name="description" content="五家数据分析工具对照：免费与试用写法、计量口径、网站数、保留、采样、超额行为、自托管。核实于 2026-11-13。">
+<link rel="canonical" href="https://tokens.yangtokent.com/monitoring/compare/analytics-tools/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Umami vs PostHog vs Plausible vs GA4 vs Clarity：数据分析工具对照",
+  "description": "五家数据分析工具对照：免费与试用写法、计量口径、网站数、保留、采样、超额行为、自托管。核实于 2026-11-13。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/monitoring/compare/analytics-tools/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "哪几家可以自托管？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Umami（MIT）、PostHog（MIT）、Plausible Community Edition（AGPLv3）。GA4 与 Clarity 的自托管在官网已读页面中未述。核实于 2026-11-13。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Plausible 和其他几家有什么根本不同？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plausible 云端没有永久免费计划，只有 30 天试用，试用后需预付费方可继续使用；其余四家有免费层。核实于 2026-11-13。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">监控分析</a><a href="../../offers/">监控详情</a><a href="../../compare/" aria-current="page">监控对比</a><a href="../../guides/">监控指南</a><a href="../../faq/">监控问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">监控分析</a> / <a href="../">监控对比</a> / Umami vs PostHog vs Plausible vs GA4 vs Clarity</p>
+<h1>Umami vs PostHog vs Plausible vs GA4 vs Clarity</h1>
+<p class="meta">核实于 2026-11-13 · 本页更新于 2026-11-13</p>
+<div class="answer"><p>五家之中，Plausible 只有 30 天试用、云端无永久免费计划，其余四家有免费层。计量口径各不相同：Umami 按事件，PostHog 按各产品，GA4 按保留与查询配额，Clarity 无流量限制。Umami、PostHog、Plausible 可以自托管。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#table">对比表</a></li><li><a href="#metering">计量口径不同</a></li><li><a href="#retention">保留与采样</a></li><li><a href="#overage">超额行为</a></li><li><a href="#selfhost">自托管</a></li><li><a href="#how">怎么选</a></li><li><a href="#faq">常见问题</a></li></ul></div>
+<h2 id="table">对比表</h2><div class="tablewrap"><table><thead><tr><th>项目</th><th>Umami Hobby</th><th>PostHog Free</th><th>Plausible 试用</th><th>GA4 标准版</th><th>Clarity</th></tr></thead><tbody><tr><th>免费/试用写法</th><td>$0</td><td>无需信用卡、不是试用</td><td>30 天试用、无永久免费计划</td><td>free of charge</td><td>free service forever</td></tr><tr><th>计量口径</th><td>事件（100,000）</td><td>各产品每月免费额度</td><td>按网站数分档</td><td>保留与查询配额</td><td>无流量限制</td></tr><tr><th>网站/项目数</th><td>3 个网站</td><td>1 个项目</td><td>Starter 1 个、Growth 至多 3 个、Business 至多 10 个网站</td><td>以官方页面为准</td><td>每个账户网站数量无限制</td></tr><tr><th>数据保留</th><td>6 个月</td><td>1 年</td><td>以官方页面为准</td><td>用户级 2/14 个月、事件级 2/14/26/38/50 个月</td><td>以官方页面为准</td></tr><tr><th>采样/查询</th><td>以官方页面为准</td><td>以官方页面为准</td><td>以官方页面为准</td><td>事件级查询 1,000 万事件</td><td>无采样</td></tr><tr><th>超额行为</th><td>Hobby 未述；付费按事件计费</td><td>用量到限即停</td><td>无意外收费；连续两月超档通知升级</td><td>以官方页面为准</td><td>无流量限制、无需升级</td></tr><tr><th>绑卡</th><td>定价页无绑卡表述</td><td>无需信用卡</td><td>试用无需信用卡</td><td>官网已读页面未述</td><td>官网已读页面未述</td></tr><tr><th>自托管</th><td>开源，MIT</td><td>开源，MIT</td><td>Community Edition，AGPLv3</td><td>以官方页面为准</td><td>以官方页面为准</td></tr><tr><th>报告功能</th><td>完整报告套件、数据导出</td><td>多产品（分析、回放、flags、调查、日志）</td><td>Business 含 funnels 等</td><td>以官方页面为准</td><td>以官方页面为准</td></tr><tr><th>核实日期</th><td>2026-11-13</td><td>2026-11-13</td><td>2026-11-13</td><td>2026-11-13</td><td>2026-11-13</td></tr></tbody></table></div><h2 id="metering">计量口径不同</h2><p>Umami 按事件计量：Hobby 100,000 事件、3 个网站。PostHog 按各产品计量：Analytics 1M events/月、Session replay 5K recordings/月、Feature flags 1M requests/月、Error tracking 100K exceptions/月、Surveys 1500 responses/月、Logs 10 GB/月、AI Observability 100K events/月。Plausible 按网站数分档：Starter 1 个、Growth 至多 3 个、Business 至多 10 个网站。GA4 按保留期限与查询配额设限。Clarity 无流量限制。</p><h2 id="retention">保留与采样</h2><p>保留：Umami 6 个月，PostHog 1 年，GA4 用户级 2 或 14 个月、事件级 2/14/26/38/50 个月（26/38/50 仅限 360）；Plausible 与 Clarity 的保留期限在官网已读页面中未述。采样：Clarity 无采样；GA4 事件级查询标准版 1,000 万事件、360 最高 10 亿事件；其余三家在官网已读页面中未述。</p><h2 id="overage">超额行为</h2><p>PostHog 用量到限即停；Umami 付费计划超量按事件计费，Hobby 超限行为未述；Plausible 无意外收费、连续两个月超档通知升级；GA4 的超额行为在官网已读页面中未述；Clarity 无流量限制。完整对照见<a href="../../guides/analytics-overage-rules/">数据分析工具超额规则</a>。</p><h2 id="selfhost">自托管</h2><p>Umami 开源，MIT 许可证，free to self-host。PostHog 开源，MIT licensed。Plausible Community Edition 免费可自托管，AGPLv3，追踪脚本 MIT。GA4 与 Clarity 的自托管在官网已读页面中未述。</p><h2 id="how">怎么选</h2><p>看四点：免费还是试用（Plausible 只有试用）、计量口径（事件、各产品、保留与配额、无流量限制）、保留与采样（6 个月、1 年、分档保留、无采样）、超额行为（到限即停、按事件计费、通知升级、未述）。需要自托管，看 Umami、PostHog、Plausible。</p>
+<h2 id="faq">常见问题</h2><details><summary>哪几家可以自托管？</summary><p>Umami（MIT）、PostHog（MIT）、Plausible Community Edition（AGPLv3）。GA4 与 Clarity 的自托管在官网已读页面中未述。核实于 2026-11-13。</p></details><details><summary>Plausible 和其他几家有什么根本不同？</summary><p>Plausible 云端没有永久免费计划，只有 30 天试用，试用后需预付费方可继续使用；其余四家有免费层。核实于 2026-11-13。</p></details>
+<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，领取前请以厂商官方页为准。</div>
+<div class="related"><h2>其他对比</h2><ul><li><a href="../privacy-and-limits/">隐私与限制对照</a></li><li><a href="../all-monitoring-table/">监控分析总表</a></li><li><a href="../../offers/umami/">Umami Hobby 详情页</a></li><li><a href="../../offers/posthog/">PostHog 详情页</a></li><li><a href="../../offers/plausible-trial/">Plausible 详情页</a></li><li><a href="../../offers/google-analytics-4/">GA4 详情页</a></li><li><a href="../../offers/clarity/">Clarity 详情页</a></li><li><a href="../../">返回监控分析列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">监控分析</a> · <a href="../../offers/">监控详情</a> · <a href="../../compare/">监控对比</a> · <a href="../../guides/">监控指南</a> · <a href="../../faq/">监控问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
