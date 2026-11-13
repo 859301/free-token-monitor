@@ -42,7 +42,7 @@
       "name": "Is Oracle’s free VPS 2 cores / 12 GB or 4 cores / 24 GB?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For Always Free tenants it is 2 OCPU / 12 GB: the official docs (Updated 2026-06-12) state the first 1,500 OCPU hours + 9,000 GB hours per month, equivalent to 2 OCPU and 12 GB of memory. 4 OCPU / 24 GB is the old allowance and no longer applies to Always Free tenants; the claim that PAYG accounts still get 4 cores / 24 GB free is disputed — the official docs and user bills conflict — and this site does not present it as a promise. Verified 2026-11-12."
+        "text": "For Always Free tenants it is 2 OCPU / 12 GB: the official docs (Updated 2026-06-12) state the first 1,500 OCPU hours + 9,000 GB hours per month, equivalent to 2 OCPU and 12 GB of memory. 4 OCPU / 24 GB is the old allowance and no longer applies to Always Free tenants; the claim that PAYG accounts still get 4 cores / 24 GB free is disputed — the official docs and user bills conflict — and it is not a promise. Verified 2026-11-12."
       }
     },
     {
@@ -160,7 +160,7 @@ footer a { color:var(--accent); }
 <p>Per the official docs (Updated 2026-06-12), Always Free compute resources for all tenants include: Ampere A1 (Arm) shapes at the first 1,500 OCPU hours and 9,000 GB hours per month — equivalent to 2 OCPU and 12 GB of memory for Always Free tenants; up to 2 VM.Standard.E2.1.Micro (AMD) instances; 200 GB total block storage; 10 TB outbound traffic per month. The minimum boot volume per instance is 47 GB. There is also a US$300 trial credit, counted separately from Always Free — see below.</p>
 <h2 id="change">Change: June 2026 re-tiering (old tutorials outdated)</h2>
 <p>The official docs updated June 12, 2026 write the Always Free A1 allowance as 1,500 OCPU hours + 9,000 GB hours per month (equivalent to 2 OCPU / 12 GB). The 4 OCPU / 24 GB written in many earlier tutorials no longer applies to Always Free tenants; community reports say the new allowance took effect from August 18, 2026 (community claim, not an official announcement). If a tutorial you are reading still says 4 cores / 24 GB, that tutorial is out of date.</p>
-<div class="note"><p><b>Disputed claim:</b> there are claims online that after upgrading to PAYG (pay-as-you-go), 4 OCPU / 24 GB stays free, with zero-bill screenshots from users; but the official docs state the 1,500 / 9,000 hours apply to all tenants. The two conflict — this site lists it as “disputed” and does not write it as a promise; in the end, go by your own bill.</p></div>
+<div class="note"><p><b>Disputed claim:</b> there are claims online that after upgrading to PAYG (pay-as-you-go), 4 OCPU / 24 GB stays free, with zero-bill screenshots from users; but the official docs state the 1,500 / 9,000 hours apply to all tenants. The two conflict — it is marked “disputed”, not written as a promise; in the end, go by your own bill.</p></div>
 <h2 id="requirements">Requirements</h2>
 <p>Registration requires a credit or debit card for identity verification; Oracle periodically checks the card’s validity, producing temporary authorization holds that are usually released by the bank within 3–5 days and are not actual charges. Debit cards with a PIN, virtual cards, single-use cards, and prepaid cards are not accepted. One free account per person; contact and billing information must be accurate, valid, and used with the owner’s consent.</p>
 <h2 id="regions">Regions &amp; capacity</h2>
@@ -178,7 +178,7 @@ footer a { color:var(--accent); }
 </ul>
 <h2 id="faq">FAQ</h2>
 <details><summary>Is Oracle’s free VPS 2 cores / 12 GB or 4 cores / 24 GB?</summary>
-<p>For Always Free tenants it is 2 OCPU / 12 GB: the official docs (Updated 2026-06-12) state the first 1,500 OCPU hours + 9,000 GB hours per month, equivalent to 2 OCPU and 12 GB of memory. 4 OCPU / 24 GB is the old allowance and no longer applies to Always Free tenants; the claim that PAYG accounts still get 4 cores / 24 GB free is disputed — the official docs and user bills conflict — and this site does not present it as a promise. Verified 2026-11-12.</p>
+<p>For Always Free tenants it is 2 OCPU / 12 GB: the official docs (Updated 2026-06-12) state the first 1,500 OCPU hours + 9,000 GB hours per month, equivalent to 2 OCPU and 12 GB of memory. 4 OCPU / 24 GB is the old allowance and no longer applies to Always Free tenants; the claim that PAYG accounts still get 4 cores / 24 GB free is disputed — the official docs and user bills conflict — and it is not a promise. Verified 2026-11-12.</p>
 </details>
 <details><summary>Does Oracle registration require a card? Which cards are rejected?</summary>
 <p>Yes. Registration requires a credit or debit card for identity verification, with temporary authorization holds (usually released within 3–5 days). The official FAQ is explicit: debit cards with a PIN, virtual cards, single-use cards, and prepaid cards are not accepted. Verified 2026-11-12 — check the official page before claiming.</p>
@@ -186,7 +186,7 @@ footer a { color:var(--accent); }
 <details><summary>Will an Oracle free instance be reclaimed?</summary>
 <p>Yes, it can be. Per the official docs, idle Always Free instances may be reclaimed: within 7 days, CPU 95th-percentile utilization below 20%, network utilization below 20%, and memory utilization below 20% (A1 shapes only) counts as idle. Accounts idle for more than 30 days may also be treated as abandoned. Do not fake real usage with load scripts. Verified 2026-11-12.</p>
 </details>
-<p><b>Disclaimer:</b> this page transcribes the vendor official page content as checked by this site (verified 2026-11-12); allowances can change or end at any time — check the official page before claiming.</p>
+<p><b>Disclaimer:</b> this page’s information comes from the vendor official page (verified 2026-11-12); allowances can change or end at any time — check the official page before claiming.</p>
 <div class="related"><h2>Related pages</h2>
 <ul>
 <li><a href="../gcp-free-tier/">Google Cloud Free Tier: e2-micro free forever + $300 trial</a></li><li><a href="../../compare/oracle-vs-gcp/">Oracle vs GCP: picking one of the two always-free VMs</a></li><li><a href="../">Free VPS offer details</a></li><li><a href="../../../faq/">FAQ (English, 23 questions)</a></li><li><a href="../../">Back to the Free VPS list</a></li>
@@ -195,6 +195,6 @@ footer a { color:var(--accent); }
 </article>
 
 </div></main>
-<footer><div class="wrap"><p><a href="../../../">Home</a> · <a href="../../">Free VPS</a> · <a href="../../../wool/">VPS Deals</a> · <a href="../../../cheap/">Cheap VPS</a> · <a href="../../../offers/">Offer details</a> · <a href="../../../compare/">Comparisons</a> · <a href="../../../faq/">FAQ</a> · <a href="../../../../vps/offers/oracle-always-free/">中文</a></p><p>Data is for reference only — check the vendor’s official page. Every VPS entry was verified against a vendor official page; verification dates are on each page. Allowances can change or end at any time; read the vendor’s terms before claiming. This site contains no invite links, API resellers, second-hand credits, or shared accounts.</p></div></footer>
+<footer><div class="wrap"><p><a href="../../../">Home</a> · <a href="../../">Free VPS</a> · <a href="../../../wool/">VPS Deals</a> · <a href="../../../cheap/">Cheap VPS</a> · <a href="../../../offers/">Offer details</a> · <a href="../../../compare/">Comparisons</a> · <a href="../../../faq/">FAQ</a> · <a href="../../../../vps/offers/oracle-always-free/">中文</a></p><p>Data is for reference only — check the vendor’s official page. Every VPS entry was verified against a vendor official page; verification dates are on each page. Allowances can change or end at any time; read the vendor’s terms before claiming. No invite links, API resellers, second-hand credits, or shared accounts.</p></div></footer>
 </body>
 </html>
