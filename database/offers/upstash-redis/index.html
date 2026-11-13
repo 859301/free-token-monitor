@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upstash Redis 免费档详解：250MB、500K 命令/月、1 个免费库、加卡即转按量付费</title>
+<meta name="description" content="Upstash Redis 免费档：250 MB 数据量（同页另处写 256 MB）、10 GB 带宽、500K 命令/月、1 个免费数据库；FAQ 写加卡即转按量付费。核实于 2026-11-13。">
+<link rel="canonical" href="https://tokens.yangtokent.com/database/offers/upstash-redis/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Upstash Redis 免费档详解：250MB、500K 命令/月、1 个免费库、加卡即转按量付费",
+  "description": "Upstash Redis 免费档：250 MB 数据量（同页另处写 256 MB）、10 GB 带宽、500K 命令/月、1 个免费数据库；FAQ 写加卡即转按量付费。核实于 2026-11-13。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/database/offers/upstash-redis/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Upstash 免费库是 250 MB 还是 256 MB？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "官网定价页 Free 列写 250 MB，对比表同页写 256 MB，官网内部表述差异。FAQ 写 250MB。两个数字并列，以官方页面为准。核实于 2026-11-13。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Upstash 加信用卡会怎样？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "官网 FAQ 原文：Once you enter your credit card, your database will be upgraded to the pay-as-you-go plan.核实于 2026-11-13。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Upstash Redis 免费档是永久的吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "官网定价页未明示永久，以官方页面为准。核实于 2026-11-13。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">免费数据库</a><a href="../" aria-current="page">数据库详情</a><a href="../../compare/">数据库对比</a><a href="../../guides/">数据库指南</a><a href="../../faq/">数据库问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">免费数据库</a> / <a href="../">数据库详情</a> / Upstash Redis 免费档</p>
+<h1>Upstash Redis 免费档</h1><p class="meta">Upstash · 核实于 2026-11-13 · 本页更新于 2026-11-13</p><p><span class="tag">Redis</span><span class="tag">1 个免费库</span><span class="tag warn">加卡即转按量付费</span><span class="tag gray">250 MB / 256 MB 表述差异</span></p><div class="answer"><p>Upstash Redis 免费档 $0：数据量 250 MB、每月带宽 10 GB、每月命令 500K、1 个免费数据库。官网 FAQ 原文：Free tier includes 250MB data size and 500K commands per month.（免费档包括 250MB 数据量与每月 500K 命令。）同一官网定价页的对比表另处写 256 MB，官网内部表述差异。FAQ：Once you enter your credit card, your database will be upgraded to the pay-as-you-go plan.（加卡即转按量付费。）核实于 2026-11-13，领取前请以厂商官方页为准。</p></div><div class="toc"><b>本页内容</b><ul><li><a href="#facts">规格速览</a></li><li><a href="#what">免费档包括什么</a></li><li><a href="#size">250 MB 与 256 MB</a></li><li><a href="#card">加卡即转按量付费</a></li><li><a href="#steps">怎么领取</a></li><li><a href="#risks">注意事项</a></li><li><a href="#faq">常见问题</a></li></ul></div><h2 id="facts">规格速览</h2><div class="tablewrap"><table class="fact"><tbody><tr><th>免费内容</th><td>数据量 250 MB；每月带宽 10 GB；每月命令 500K；1 个免费数据库</td></tr><tr><th>提供方</th><td>Upstash</td></tr><tr><th>免费档</th><td>Free $0</td></tr><tr><th>时长</th><td>官网定价页未明示永久，以官方页面为准</td></tr><tr><th>绑卡与验证</th><td>FAQ：加卡即转按量付费；免费档本身的绑卡要求未单独写明，以官方页面为准</td></tr><tr><th>超限行为</th><td>官网已读页面中未述，以官方页面为准</td></tr><tr><th>升级</th><td>Pay as You Go：$0.2/100K commands，存储每库首 1 GB 免费、之后 $0.25/GB，带宽 200 GB 内免费、之后 $0.03/GB；Fixed $10/月起</td></tr><tr><th>核实日期</th><td>2026-11-13</td></tr><tr><th>来源</th><td>Upstash 官网定价页（<a href="https://upstash.com/pricing" target="_blank" rel="noopener noreferrer">官方页</a>）</td></tr></tbody></table></div><h2 id="what">免费档包括什么</h2><p>按官网定价页，Free $0 包括：Data Size 250 MB、Monthly Bandwidth 10 GB、Monthly Commands 500K、1 个免费数据库。官网 FAQ 原文：Free tier includes 250MB data size and 500K commands per month.</p><h2 id="size">250 MB 与 256 MB</h2><p>官网定价页 Free 列写 Data Size 250 MB，对比表同页写 256 MB，官网内部表述差异。两个数字并列，以官方页面为准。</p><h2 id="card">加卡即转按量付费</h2><p>官网 FAQ 原文：Once you enter your credit card, your database will be upgraded to the pay-as-you-go plan.（一旦输入信用卡，数据库会升级到按量付费计划。）按量付费价：$0.2/100K commands，存储每库首 1 GB 免费、之后 $0.25/GB，带宽 200 GB 内免费、之后 $0.03/GB；Fixed 计划 $10/月起。</p><h2 id="steps">怎么领取</h2><p>在 Upstash 官网定价页确认 Free 档条款 → 注册账户 → 创建 1 个免费数据库 → 在控制台查看命令数与带宽用量。</p><p><a class="btn" href="https://upstash.com/pricing" target="_blank" rel="noopener noreferrer">去厂商官方页</a></p><h2 id="risks">注意事项</h2><ul><li>数据量官网内部表述差异：Free 列写 250 MB，对比表同页写 256 MB</li><li>加卡即转按量付费（FAQ）</li><li>定价页未明示永久，以官方页面为准</li><li>超限行为在官网已读页面中未述，以官方页面为准</li></ul><h2 id="faq">常见问题</h2><details><summary>Upstash 免费库是 250 MB 还是 256 MB？</summary><p>官网定价页 Free 列写 250 MB，对比表同页写 256 MB，官网内部表述差异。FAQ 原文写 250MB。两个数字并列，以官方页面为准。核实于 2026-11-13。</p></details><details><summary>Upstash 加信用卡会怎样？</summary><p>官网 FAQ 原文：Once you enter your credit card, your database will be upgraded to the pay-as-you-go plan.（一旦输入信用卡，数据库会升级到按量付费计划。）核实于 2026-11-13。</p></details><details><summary>Upstash Redis 免费档是永久的吗？</summary><p>官网定价页未明示永久，以官方页面为准。核实于 2026-11-13。</p></details><div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，领取前请以厂商官方页为准。</div><div class="related"><h2>相关页面</h2><ul><li><a href="../../compare/all-databases-table/">免费数据库总表</a></li><li><a href="../../guides/migration-and-overage/">超额与迁移指南</a></li><li><a href="../../faq/">数据库常见问题</a></li><li><a href="../../">返回免费数据库列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">免费数据库</a> · <a href="../">数据库详情</a> · <a href="../../compare/">数据库对比</a> · <a href="../../guides/">数据库指南</a> · <a href="../../faq/">数据库问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
