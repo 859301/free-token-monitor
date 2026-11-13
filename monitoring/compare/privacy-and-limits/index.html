@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>隐私与限制对照：数据保留、采样与超额行为</title>
+<meta name="description" content="7 条监控分析条目对照：数据保留期限、采样与查询限制、超额行为、绑卡要求；隐私合规问法说明。核实于 2026-11-13。">
+<link rel="canonical" href="https://tokens.yangtokent.com/monitoring/compare/privacy-and-limits/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "隐私与限制对照：数据保留、采样与超额行为",
+  "description": "7 条监控分析条目对照：数据保留期限、采样与查询限制、超额行为、绑卡要求；隐私合规问法说明。核实于 2026-11-13。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-13",
+  "dateModified": "2026-11-13",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/monitoring/compare/privacy-and-limits/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "哪家写明了不采样？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Microsoft Clarity。官方 FAQ 写明无采样。核实于 2026-11-13。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "哪家的数据保留写得最具体？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GA4：用户级 2 或 14 个月，事件级 2/14/26/38/50 个月（26/38/50 仅限 360），默认 26 个月，大型资源限 2 个月。核实于 2026-11-13。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">监控分析</a><a href="../../offers/">监控详情</a><a href="../../compare/" aria-current="page">监控对比</a><a href="../../guides/">监控指南</a><a href="../../faq/">监控问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">监控分析</a> / <a href="../">监控对比</a> / 隐私与限制对照</p>
+<h1>隐私与限制对照</h1>
+<p class="meta">核实于 2026-11-13 · 本页更新于 2026-11-13</p>
+<div class="answer"><p>数据保留写得最具体的是 GA4（分用户级与事件级、多档期限）与 Umami（6 个月）、PostHog（1 年）、UptimeRobot（3 个月）、Sentry（30 天 lookback）；Plausible 与 Clarity 的保留期限在官网已读页面中未述。写明无采样的是 Clarity；写明事件级查询配额的是 GA4。超额行为只有 PostHog、Umami（付费计划）、Plausible 写明。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#table">对比表</a></li><li><a href="#retention">数据保留</a></li><li><a href="#sampling">采样与查询限制</a></li><li><a href="#overage">超额行为</a></li><li><a href="#privacy">隐私合规问法</a></li><li><a href="#faq">常见问题</a></li></ul></div>
+<h2 id="table">对比表</h2><div class="tablewrap"><table><thead><tr><th>服务</th><th>数据保留</th><th>采样/查询限制</th><th>超额行为</th><th>绑卡</th></tr></thead><tbody><tr><td><a href="../../offers/uptimerobot/">UptimeRobot</a></td><td>3 个月</td><td>以官方页面为准</td><td>以官方页面为准</td><td>无需信用卡</td></tr><tr><td><a href="../../offers/sentry/">Sentry</a></td><td>30 天 lookback</td><td>以官方页面为准</td><td>以官方页面为准</td><td>Developer 计划未述</td></tr><tr><td><a href="../../offers/umami/">Umami</a></td><td>6 个月</td><td>以官方页面为准</td><td>付费按事件计费、不中断、不丢数据；Hobby 未述</td><td>定价页无绑卡表述</td></tr><tr><td><a href="../../offers/posthog/">PostHog</a></td><td>1 年</td><td>以官方页面为准</td><td>用量到限即停</td><td>无需信用卡</td></tr><tr><td><a href="../../offers/plausible-trial/">Plausible</a></td><td>以官方页面为准</td><td>以官方页面为准</td><td>无意外收费；连续两月超档通知升级</td><td>试用无需信用卡</td></tr><tr><td><a href="../../offers/clarity/">Clarity</a></td><td>以官方页面为准</td><td>无采样</td><td>无流量限制、无需升级到付费版</td><td>官网已读页面未述</td></tr><tr><td><a href="../../offers/google-analytics-4/">GA4</a></td><td>用户级 2/14 个月、事件级 2/14/26/38/50 个月</td><td>事件级查询 1,000 万事件（标准版）</td><td>以官方页面为准</td><td>官网已读页面未述</td></tr></tbody></table></div><h2 id="retention">数据保留</h2><p>UptimeRobot 3 个月，Sentry 30 天 lookback，Umami 6 个月，PostHog 1 年。GA4 分两类：用户级数据 2 或 14 个月，事件数据 2/14/26/38/50 个月（26/38/50 仅限 360），默认 26 个月，大型资源限 2 个月。Plausible 与 Clarity 的保留期限在官网已读页面中未述。</p><h2 id="sampling">采样与查询限制</h2><p>Clarity：无采样。GA4：事件级查询标准版 1,000 万事件、360 最高 10 亿事件。其余五家在官网已读页面中未述。</p><h2 id="overage">超额行为</h2><p>PostHog 到限即停；Umami 付费计划按事件计费，Hobby 未述；Plausible 通知升级；UptimeRobot、Sentry、GA4 未述；Clarity 无流量限制。完整对照见<a href="../../guides/analytics-overage-rules/">数据分析工具超额规则</a>。</p><h2 id="privacy">隐私合规问法</h2><p>隐私合规（cookie 横幅）是用户常问的一类问题。各家官网已读页面中关于 cookie 横幅与隐私合规的具体说明，以官方页面为准。</p>
+<h2 id="faq">常见问题</h2><details><summary>哪家写明了不采样？</summary><p>Microsoft Clarity。官方 FAQ 写明无采样。核实于 2026-11-13。</p></details><details><summary>哪家的数据保留写得最具体？</summary><p>GA4：用户级 2 或 14 个月，事件级 2/14/26/38/50 个月（26/38/50 仅限 360），默认 26 个月，大型资源限 2 个月。核实于 2026-11-13。</p></details>
+<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，领取前请以厂商官方页为准。</div>
+<div class="related"><h2>其他对比</h2><ul><li><a href="../analytics-tools/">Umami vs PostHog vs Plausible vs GA4 vs Clarity</a></li><li><a href="../all-monitoring-table/">监控分析总表</a></li><li><a href="../../offers/clarity/">Clarity 详情页</a></li><li><a href="../../offers/google-analytics-4/">GA4 详情页</a></li><li><a href="../../guides/analytics-overage-rules/">数据分析工具超额规则</a></li><li><a href="../../">返回监控分析列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">监控分析</a> · <a href="../../offers/">监控详情</a> · <a href="../../compare/">监控对比</a> · <a href="../../guides/">监控指南</a> · <a href="../../faq/">监控问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
