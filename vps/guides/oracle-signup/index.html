@@ -85,7 +85,7 @@ footer a { color:var(--accent); }
 </script>
 </head>
 <body>
-<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：只收厂商官方核对过的免费额度。领取前请以厂商官方页为准。</p></div></header>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>给 Agent 的免费口粮：额度信息来自厂商官方页。领取前请以厂商官方页为准。</p></div></header>
 <nav><div class="wrap"><a href="../../../">首页</a><a href="../../">免费 VPS</a><a href="../../offers/">VPS 详情</a><a href="../../compare/">VPS 对比</a><a href="../" aria-current="page">VPS 指南</a><a href="../../faq/">VPS 问答</a></div></nav>
 <main><div class="wrap">
 <article>
@@ -97,9 +97,9 @@ footer a { color:var(--accent); }
 <h2 id="prep">1. 准备：一张能用的卡与准确的信息</h2>
 <p>按官方 FAQ，注册需提供信用卡或借记卡用于身份验证；Oracle 接受信用卡与「像信用卡一样使用的借记卡」，不接受带 PIN 的借记卡、虚拟卡、一次性卡、预付卡。注册时会产生临时授权预扣，通常 3–5 天内由银行解除，不会实际扣费。每人限一个免费账户；联系与账单信息必须准确、有效并经本人同意使用。准备好邮箱（用于验证与通知）与一张符合要求的卡再开始。</p>
 <h2 id="signup">2. 注册与身份验证</h2>
-<p>在 Oracle Cloud Free Tier 官方页注册，按页面流程填写信息并完成卡验证。验证失败是常见卡点：社区讨论里报告的常见原因包括发卡行风控拦截、账单地址与注册信息不一致、注册时网络出口与地址不符（以上均为社区说法，非官方说明）。可尝试的办法：联系发卡行确认拦截、核对账单地址与注册信息一致、换个网络环境后重试；仍有问题可按官方 FAQ 指引，通过菜单栏的 Chat 联系 Oracle Cloud 支持团队。本站不提供绕过身份验证的方法。</p>
+<p>在 Oracle Cloud Free Tier 官方页注册，按页面流程填写信息并完成卡验证。验证失败是常见卡点：社区讨论里报告的常见原因包括发卡行风控拦截、账单地址与注册信息不一致、注册时网络出口与地址不符（以上均为社区说法，非官方说明）。可尝试的办法：联系发卡行确认拦截、核对账单地址与注册信息一致、换个网络环境后重试；仍有问题可按官方 FAQ 指引，通过菜单栏的 Chat 联系 Oracle Cloud 支持团队。不要尝试绕过身份验证。</p>
 <h2 id="region">3. 选主区域：注册时就要选好</h2>
-<p>Always Free 计算实例必须建在主区域（Home Region）。社区教程普遍指出主区域选定后无法更改（社区说法，请以官方文档为准），因此注册时就要认真选：A1 实例除韩国北部（春川）外可在任一可用区创建；不同区域的 Always Free 容量不同，容量紧张时开不出实例。社区有按运营商（电信/移动/联通）整理的区域延迟报告（例如 Linux.do 的讨论帖），那是社区报告、非本站实测，选区时可作参考，实际以你自己的测试为准。</p>
+<p>Always Free 计算实例必须建在主区域（Home Region）。社区教程普遍指出主区域选定后无法更改（社区说法，请以官方文档为准），因此注册时就要认真选：A1 实例除韩国北部（春川）外可在任一可用区创建；不同区域的 Always Free 容量不同，容量紧张时开不出实例。社区有按运营商（电信/移动/联通）整理的区域延迟报告（例如 Linux.do 的讨论帖），那是社区报告、非实测，选区时可作参考，实际以你自己的测试为准。</p>
 <h2 id="create">4. 开 A1 实例：规格别超限</h2>
 <p>在主区域创建实例，机型选 VM.Standard.A1.Flex，OCPU 与内存总量控制在免费限额内（Always Free 租户相当于 2 OCPU / 12 GB；可开 1 台 2 OCPU 或 2 台各 1 OCPU，取决于启动卷分配）。每个实例的最小启动卷为 47 GB，账户共 200 GB 块存储。也可以开最多 2 台 E2.1.Micro (AMD) 实例。创建时配置 SSH 密钥对（私钥保存好），并确认实例被标记为 Always Free——用试用额度开的付费规格实例会在试用结束时被回收。</p>
 <h2 id="firewall">5. 双层防火墙：云端与系统内都要放行</h2>
@@ -108,10 +108,10 @@ footer a { color:var(--accent); }
 <p>报 Out of host capacity 时，官方建议是换一个可用区、等一段时间再试，或升级到 PAYG 获得更多计算资源。社区经验（非官方保证）还包括：错峰重试、改开 1 OCPU 的小规格、改开 AMD 的 E2 Micro（社区报告称 AMD 机型通常有货）。详见指南 <a href="../out-of-capacity/">Out of host capacity 怎么办</a>。</p>
 <h2 id="trial">7. 分清试用额度与 Always Free</h2>
 <p>US$300 试用额度（30 天）与 Always Free 是两回事：用额度创建的付费实例会在试用结束时被回收；试用结束时 A1 总量若超出 Always Free 限额，全部 A1 实例会被停用、30 天后删除。试用结束前，请把 A1 总量降到限额以内，并确认要保留的实例都是 Always Free 标记。试用结束后不升级也能继续用 Always Free 资源，但无法获得 Oracle 技术支持。</p>
-<div class="note"><b>提醒：</b>注册流程、卡种要求、区域与容量规则以厂商官方文档与 FAQ 为准；社区经验只作参考，本站不提供绕过身份验证、地区或支付规则的方法。</div>
+<div class="note"><b>提醒：</b>注册流程、卡种要求、区域与容量规则以厂商官方文档与 FAQ 为准；社区经验只作参考，请遵守厂商条款，不要绕过身份验证、地区或支付规则。</div>
 <div class="related"><h2>相关页面</h2><ul><li><a href="../../offers/oracle-always-free/">Always Free 永久免费云服务器（甲骨文）详情</a></li><li><a href="../anti-reclaim/">甲骨文防回收与备份</a></li><li><a href="../out-of-capacity/">Out of host capacity 怎么办</a></li><li><a href="../billing-pitfalls/">免费 VPS 账单避坑</a></li><li><a href="../../faq/">VPS 常见问题</a></li><li><a href="../../">返回免费 VPS 列表</a></li></ul></div>
 </article>
 </div></main>
-<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">免费 VPS</a> · <a href="../../offers/">VPS 详情</a> · <a href="../../compare/">VPS 对比</a> · <a href="../">VPS 指南</a> · <a href="../../faq/">VPS 问答</a></p><p>数据仅供参考，以厂商官方页为准。VPS 板块各条目均经厂商官方页核对，核实日期见各页；额度随时可能调整或结束，领取前请看清对方条款。本站不含邀请链接、API 中转站、二手积分、共享账号等内容。</p></div></footer>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">免费 VPS</a> · <a href="../../offers/">VPS 详情</a> · <a href="../../compare/">VPS 对比</a> · <a href="../">VPS 指南</a> · <a href="../../faq/">VPS 问答</a></p><p>数据仅供参考，以厂商官方页为准。VPS 板块各条目信息来自厂商官方页，核实日期见各页；额度随时可能调整或结束，领取前请看清对方条款。无邀请链接、无 API 中转站、无二手积分、无共享账号内容。</p></div></footer>
 </body>
 </html>
