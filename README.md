@@ -13,10 +13,24 @@
 
 ## 免费 VPS 板块
 
-- 共 8 条（核实于 2026-11-12），分三组：永久免费 2 条（甲骨文、Google Cloud）、试用/额度 5 条（AWS、Azure、阿里云、腾讯云、Kamatera）、学生专属 1 条（Azure for Students）。
+- 共 9 条（8 条核实于 2026-11-12，InstaBox 核实于 2026-11-13），分四组：永久免费 2 条（甲骨文、Google Cloud）、试用/额度 5 条（AWS、Azure、阿里云、腾讯云、Kamatera）、学生专属 1 条（Azure for Students）、免费沙箱 1 条（InstaBox，非传统 VPS）。
 - 数据在 `data/vps.json` 里，字段与 `data/offers.json` 对应（另有 `group`、`specText`、`durationText`、`cardNote`、`flags`、`notes` 字段；`cardRequired` 为 `null` 表示官方页未说明）。
-- 板块页面在 `vps/` 下：列表页、8 篇详情页、8 篇对比、4 篇指南、1 个问答页（20 问），均已加入 `sitemap.xml` 与 `llms.txt`。
-- 未收录说明：华为云（状态未核实）、Vultr / DigitalOcean（说法矛盾）、任务续费型主机、退款保证类「试用」等暂不收录，原因写在 `vps/index.html` 的「未收录及原因」一节。
+- 板块页面在 `vps/` 下：列表页、9 篇详情页、8 篇对比、4 篇指南、1 个问答页（20 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+- 未收录说明：华为云（状态未核实）、Vultr / DigitalOcean（说法矛盾）、任务续费型主机、退款保证类「试用」等暂不收录，原因写在 `vps/index.html` 的「未收录及原因」一节。试用额度与任务主机现已在羊毛板块按羊毛规则收录，见下「羊毛 VPS 板块」一节。
+
+## 羊毛 VPS 板块
+
+- 共 7 条（6 条在架 + 1 个历史档案；核实于 2026-11-12/13），分三组：试用额度 4 条（Vultr、Hetzner、Akamai、DigitalOcean）、任务续费主机 1 条（三丰云，仅规格已核实）、沙箱额度 1 条（Simular Box，条款说法冲突）；另有 RackNerd 黑五历史档案与搬瓦工优惠码核查笔记。
+- 数据在 `data/wool.json` 里，字段与 `data/vps.json` 对应（另有 `priceText`、`validityText`、`riskLevel`、`renewalText`、`taskBurden`、`codeRequired` 字段；`status` 取值含 `disputed` 与 `historical`）。
+- 板块页面在 `wool/` 下：列表页、8 篇详情页与核查笔记、3 篇对比、5 篇指南、1 个问答页（12 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+- 标签规则：风险等级（低/中/高）、有效期、续费条件、任务负担、优惠码依赖逐条写明；本站不刊登优惠码字符串。
+
+## 低价 VPS 板块
+
+- 共 4 条（核实于 2026-11-13）：常态价 3 家（RackNerd、HostEONS、DigitalOcean）+ 缺货观察 1 个（Hetzner CX23，非在售）。
+- 数据在 `data/cheap.json` 里，字段与 `data/vps.json` 对应（另有 `priceText`、`validityText`、`riskLevel`、`renewalText`、`renewalStatus`、`plans` 字段；`renewalStatus` 取值：`stated-same-rate` / `list-price` / `unknown`）。
+- 板块页面在 `cheap/` 下：列表页、4 篇详情页与缺货观察、4 篇对比、6 篇指南、1 个问答页（10 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+- 边界规则：只收常态价（常态套餐页 + 无截止日期 + 续费条件写明或为目录价）；限时促销、首期价与优惠码价一律归羊毛板块。
 
 ## 使用方法
 

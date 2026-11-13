@@ -49,12 +49,12 @@
 
 ## 免费 VPS 板块
 
-- [免费 VPS](https://tokens.yangtokent.com/vps/): 8 条经厂商官方页核实的免费云服务器：2 个永久免费、5 个试用额度、1 个学生专属；含未收录说明与变化记录。
-- [VPS 详情](https://tokens.yangtokent.com/vps/offers/): 8 条 VPS 优惠详情页。
+- [免费 VPS](https://tokens.yangtokent.com/vps/): 9 条经厂商官方页核实的免费云服务器：2 个永久免费、5 个试用额度、1 个学生专属、1 个免费沙箱；含未收录说明与变化记录。
+- [VPS 详情](https://tokens.yangtokent.com/vps/offers/): 9 条 VPS 优惠详情页。
 - [VPS 对比](https://tokens.yangtokent.com/vps/compare/): 8 篇对比：总对比、Oracle vs GCP、三家免费层、免绑卡核查、国内试用、学生版、Windows、按用途选。
 - [VPS 指南](https://tokens.yangtokent.com/vps/guides/): 甲骨文注册开机、防回收与备份、容量排查、账单避坑。
 - [VPS 常见问题](https://tokens.yangtokent.com/vps/faq/): 20 个常见问题与回答。
-- [VPS 数据（JSON）](https://tokens.yangtokent.com/data/vps.json): 全部 8 条 VPS 优惠的机器可读数据，含规格原文、绑卡、区域、风险、核实日期。
+- [VPS 数据（JSON）](https://tokens.yangtokent.com/data/vps.json): 全部 9 条 VPS 优惠的机器可读数据，含规格原文、绑卡、区域、风险、核实日期。
 
 ## VPS 详情页
 
@@ -66,6 +66,7 @@
 - [阿里云 ECS 免费试用：个人 300 元 / 企业 660 元，3 个月额度制](https://tokens.yangtokent.com/vps/offers/aliyun-ecs-trial/): 总额度 + 每小时抵扣上限 + 有效期三重约束。核实于 2026-11-12。
 - [腾讯云免费体验馆：轻量/CVM 1 个月 + 蜂驰型 7 天](https://tokens.yangtokent.com/vps/offers/tencent-free-trial/): 按卡片规格领取，仅限产品新用户。核实于 2026-11-12。
 - [Kamatera 30 天试用：1 台服务器，配置最高 $100（需信用卡）](https://tokens.yangtokent.com/vps/offers/kamatera-trial/): 30 天试用，1 TB 流量，到期未取消则计费。需绑卡。核实于 2026-11-12。
+- [InstaBox 免费层：1 台 4 vCPU / 8 GB 沙箱机器（非传统 VPS）](https://tokens.yangtokent.com/vps/offers/instabox/): 1 台 4 vCPU / 8 GiB 机器，20 GiB 磁盘，闲置 30 分钟暂停。绑卡要求未见于官方文档。核实于 2026-11-13。
 
 ## VPS 对比
 
@@ -84,3 +85,69 @@
 - [甲骨文防回收与备份](https://tokens.yangtokent.com/vps/guides/anti-reclaim/): 闲置规则、真实负载、PAYG 说明；不推荐刷负载脚本。
 - [Out of host capacity 怎么办](https://tokens.yangtokent.com/vps/guides/out-of-capacity/): 官方解释、换可用区、等待、AMD 备选。
 - [免费 VPS 账单避坑](https://tokens.yangtokent.com/vps/guides/billing-pitfalls/): 分厂商到期处理、预算提醒、到期前检查清单。
+
+## 羊毛 VPS 板块
+
+- [羊毛 VPS](https://tokens.yangtokent.com/wool/): 6 条在架羊毛 + 1 个历史档案：4 个试用额度、1 个任务续费主机、1 个沙箱额度；含未收录说明与核查笔记。
+- [羊毛详情](https://tokens.yangtokent.com/wool/offers/): 8 篇羊毛详情页与核查笔记。
+- [羊毛对比](https://tokens.yangtokent.com/wool/compare/): 3 篇对比：试用额度横评、核查清单、沙箱对比。
+- [羊毛指南](https://tokens.yangtokent.com/wool/guides/): 判断羊毛值不值、续费陷阱、备份清单、任务主机生存、IPv6/NAT 科普。
+- [羊毛常见问题](https://tokens.yangtokent.com/wool/faq/): 12 个常见问题与回答。
+- [羊毛数据（JSON）](https://tokens.yangtokent.com/data/wool.json): 全部 7 条羊毛的机器可读数据，含价格、有效期、风险等级、续费与任务负担、核实日期。
+
+## 羊毛详情页
+
+- [Vultr 充值翻倍（最高 $100）与 $200/$300/$250 免费额度](https://tokens.yangtokent.com/wool/offers/vultr-credits/): 匹配额度 12 个月过期、按 50/50 抵扣；仅限新客户。核实于 2026-11-13。
+- [Hetzner €50 新用户额度（当月有效）](https://tokens.yangtokent.com/wool/offers/hetzner-50-credit/): 注册后 14 天内兑换，仅当月账期有效。核实于 2026-11-13。
+- [Akamai $100 额度（Managed Kubernetes 试用）](https://tokens.yangtokent.com/wool/offers/akamai-100-credit/): US$100 额度，新客户专属，GPU 除外，试用期天数未注明。核实于 2026-11-13。
+- [DigitalOcean $200 / 60 天试用（有争议）](https://tokens.yangtokent.com/wool/offers/digitalocean-200-trial/): 活动页写 $200/60 天，社区称直接注册只得 $5。核实于 2026-11-13。
+- [三丰云免费云服务器（仅规格已核实，续期规则有争议）](https://tokens.yangtokent.com/wool/offers/sanfengyun-free/): 1 核 1G 5M 10G，续期规则说法冲突。核实于 2026-11-12。
+- [Simular Box：$5 额度云电脑（条款说法冲突）](https://tokens.yangtokent.com/wool/offers/simular-box/): $5 额度 + 按量计费，14 天未唤醒删机删数据。核实于 2026-11-13。
+- [RackNerd 黑五促销档案（2025 年价格，已过期）](https://tokens.yangtokent.com/wool/offers/racknerd-black-friday-archive/): 2025 年黑五价记录，仅作档案。核实于 2026-11-13。
+- [搬瓦工优惠码状态核查（未核实到有效优惠码）](https://tokens.yangtokent.com/wool/offers/bandwagonhost-code-status/): 核查笔记，未核实到有效优惠码与入门价。核实于 2026-11-13。
+
+## 羊毛对比
+
+- [试用额度对比：Vultr / DigitalOcean / Akamai / Hetzner](https://tokens.yangtokent.com/wool/compare/trial-credits-compared/): 金额、时长、绑卡、过期规则、争议逐项比。
+- [羊毛还是陷阱？一份核查清单](https://tokens.yangtokent.com/wool/compare/deal-or-trap-checklist/): 7 项核查清单与 6 条羊毛的逐项核查结果。
+- [Simular Box vs InstaBox：沙箱/云电脑对比](https://tokens.yangtokent.com/wool/compare/sandbox-boxes-compared/): 共享云电脑 vs 独立沙箱机器，附 E2B 说明。
+
+## 羊毛指南
+
+- [怎么判断一个 VPS 羊毛值不值得薅](https://tokens.yangtokent.com/wool/guides/evaluate-a-deal/): 5 步核查法与真实成本算法。
+- [续费陷阱：首期价、额度过期与自动扣费](https://tokens.yangtokent.com/wool/guides/renewal-traps/): 三种续费陷阱拆解与到期处理清单。
+- [廉价主机跑路前：备份清单](https://tokens.yangtokent.com/wool/guides/backup-before-host-dies/): 跑路信号与异地备份清单。
+- [任务续费主机生存指南](https://tokens.yangtokent.com/wool/guides/task-host-survival/): 任务负担对照、日历提醒法、迁移路径。
+- [IPv6 Only 与 NAT 主机：能干什么、不能干什么](https://tokens.yangtokent.com/wool/guides/ipv6-nat-explainer/): IPv6-only 与 NAT 概念科普。
+
+## 低价 VPS 板块
+
+- [低价 VPS](https://tokens.yangtokent.com/cheap/): 3 家常态价在架 + 1 个缺货观察；只收常态价，续费条件写明。
+- [低价详情](https://tokens.yangtokent.com/cheap/offers/): 4 篇低价详情页与缺货观察。
+- [低价对比](https://tokens.yangtokent.com/cheap/compare/): 4 篇对比：三家横评、年付月付首期价、每 GB 内存价、低价 vs 免费。
+- [低价指南](https://tokens.yangtokent.com/cheap/guides/): 档位、续费数学、超售检查、先按月再年付、线路优先、隐藏费用。
+- [低价常见问题](https://tokens.yangtokent.com/cheap/faq/): 10 个常见问题与回答。
+- [低价数据（JSON）](https://tokens.yangtokent.com/data/cheap.json): 全部 4 条低价套餐的机器可读数据，含套餐梯队、续费状态、风险等级、核实日期。
+
+## 低价详情页
+
+- [RackNerd VPS Specials：$21.99–$119.99/年（终身同价续费）](https://tokens.yangtokent.com/cheap/offers/racknerd-specials/): 5 档年付梯队，官方 FAQ 承诺终身同价续费。核实于 2026-11-13。
+- [HostEONS：$21/年起（续费价未注明）](https://tokens.yangtokent.com/cheap/offers/hosteons/): Gigabit 与 Ryzen 两系套餐表，续费价未注明。核实于 2026-11-13。
+- [DigitalOcean Basic Droplets：$4/月起（按月封顶）](https://tokens.yangtokent.com/cheap/offers/digitalocean-basic/): 按秒计费、按月封顶，共享 CPU。核实于 2026-11-13。
+- [Hetzner CX23 缺货观察（非在售）](https://tokens.yangtokent.com/cheap/offers/hetzner-cx23-watch/): 缺货观察页，非在售套餐。核实于 2026-11-13。
+
+## 低价对比
+
+- [RackNerd vs HostEONS vs DigitalOcean：低价三家对比](https://tokens.yangtokent.com/cheap/compare/racknerd-hosteons-do/): 价格、续费、CPU、机房、付款逐项比。
+- [年付 vs 月付 vs 首期价：1 年与 3 年总价对比](https://tokens.yangtokent.com/cheap/compare/annual-vs-monthly-vs-intro/): 按续费价算 1 年与 3 年总价，首期价结构拆解。
+- [每 GB 内存多少钱：按续费价换算](https://tokens.yangtokent.com/cheap/compare/price-per-gb-ram/): $/GB 换算表与局限说明，续费未知不参与排名。
+- [低价 VPS vs 免费 VPS：什么时候值得付费](https://tokens.yangtokent.com/cheap/compare/cheap-vs-free/): 免费的真实成本与付费的确定性，按用途给建议。
+
+## 低价指南
+
+- [$1 / $5 / $10 每月能买到什么样的 VPS](https://tokens.yangtokent.com/cheap/guides/what-a-dollar-buys/): 诚实档位指南与内存门槛表。
+- [续费数学：3 年总价怎么算](https://tokens.yangtokent.com/cheap/guides/renewal-math/): 公式、实例与 specials 页读法。
+- [超售与 CPU 争抢：怎么验一台廉价 VPS](https://tokens.yangtokent.com/cheap/guides/overselling-checks/): 基准测试、steal 指标、长期观察。
+- [先按月、再年付：新主机信任规则与备份](https://tokens.yangtokent.com/cheap/guides/backup-monthly-first/): 30/90 天信任检查清单。
+- [线路优先：买 VPS 先看路由、再看配置](https://tokens.yangtokent.com/cheap/guides/route-first/): 术语解释与 ping/mtr 测量方法。
+- [隐藏费用清单：IPv4、备份、税费与超额](https://tokens.yangtokent.com/cheap/guides/hidden-costs-checklist/): 7 类隐藏费用与结账页检查方法。
