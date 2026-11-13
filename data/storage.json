@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-13",
+    "count": 2,
+    "sources": [
+      "Cloudflare R2 官网定价页（页面注 2026-10-30 更新）",
+      "Backblaze 官网定价页"
+    ],
+    "note": "规格与条款照录厂商官方页面原文；官方页面未注明的字段写「以官方页面为准」。group 取值：free（免费层）/ pay-as-you-go（按量付费）。status 取值：active（免费层）/ pay-as-you-go（按量付费）。cardRequired 为 null 表示官方页未说明。specText 为免费内容或价格原文摘要；durationText 为时长或计费形态；limitsText 为关键限制；overageBehavior 为免费额度之外或超出规则后的计费；egressText 为出站规则；risks 为注意事项；flags 为英文标签。Supabase Storage 与 Firebase Storage 的详情在数据库板块（data/database.json 与数据库详情页），本文件不重复列出。"
+  },
+  "offers": [
+    {
+      "id": 1,
+      "slug": "cloudflare-r2",
+      "title": "Cloudflare R2 免费层",
+      "provider": "Cloudflare",
+      "category": "storage",
+      "group": "free",
+      "status": "active",
+      "specText": "每月：10 GB-month 存储、1M Class A 操作、10M Class B 操作、出站免费；标准存储 $0.015/GB-month；Class A $4.50/M 请求；Class B $0.36/M 请求",
+      "durationText": "按月计量的免费额度；永久性在官方已读页面中未述，以官方页面为准",
+      "cardRequired": null,
+      "cardNote": "官方定价页未述，以官方页面为准。",
+      "limitsText": "免费额度按月计量；Infrequent Access 不适用免费层、最短存储 30 天、数据取回 $0.01/GB；Class A 与 Class B 的归类以官方页面为准",
+      "overageBehavior": "定价页列出的免费额度之外价格：标准存储 $0.015/GB-month、Class A $4.50/M 请求、Class B $0.36/M 请求；Infrequent Access：$0.01/GB-month、Class A $9.00/M、Class B $0.90/M、数据取回 $0.01/GB",
+      "egressText": "所有存储类均不收出站带宽费用（官方原文：There are no charges for egress bandwidth for any storage class.）",
+      "risks": [
+        "免费层不适用于 Infrequent Access",
+        "Infrequent Access 最短存储 30 天",
+        "Infrequent Access 数据取回 $0.01/GB",
+        "免费额度按月计量"
+      ],
+      "claimUrl": "https://developers.cloudflare.com/r2/pricing/",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Cloudflare R2 官网定价页（页面注 2026-10-30 更新）",
+      "sourceUrl": "https://developers.cloudflare.com/r2/pricing/",
+      "flags": [
+        "monthly-free-tier",
+        "egress-free",
+        "ia-excluded-from-free-tier",
+        "ia-30d-minimum"
+      ],
+      "notes": "Infrequent Access 的免费层一栏在计费示例中为 NA；Class A 与 Class B 各包含哪些操作以官方页面为准。"
+    },
+    {
+      "id": 2,
+      "slug": "backblaze-b2",
+      "title": "Backblaze B2（按量付费）",
+      "provider": "Backblaze",
+      "category": "storage",
+      "group": "pay-as-you-go",
+      "status": "pay-as-you-go",
+      "specText": "存储 $6.95/TB/30 天；出站每月平均存储量 3 倍以内免费，超出 $0.01/GB；Overdrive $15/TB/月",
+      "durationText": "按量付费，没有免费层",
+      "cardRequired": null,
+      "cardNote": "官方定价页未述，以官方页面为准。",
+      "limitsText": "没有免费层；经合作 CDN（Fastly、Cloudflare、bunny.net、CacheFly、CoreWeave、Equinix Metal、Vultr、phoenixNAP）出站不限量免费",
+      "overageBehavior": "出站超出每月平均存储量 3 倍后 $0.01/GB；存储按 $6.95/TB/30 天计费",
+      "egressText": "每月平均存储量 3 倍以内免费，超出 $0.01/GB；经合作 CDN 出站不限量免费",
+      "risks": [
+        "没有免费层",
+        "出站超出每月平均存储量 3 倍后按 $0.01/GB 计费",
+        "Overdrive 除 $15/TB/月价格外的条款以官方页面为准"
+      ],
+      "claimUrl": "https://www.backblaze.com/cloud-storage/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Backblaze 官网定价页",
+      "sourceUrl": "https://www.backblaze.com/cloud-storage/pricing",
+      "flags": [
+        "no-free-tier",
+        "pay-as-you-go",
+        "egress-3x-rule",
+        "partner-cdn-egress-free"
+      ],
+      "notes": "官方定价页两次抓取均未出现“10GB 免费”表述；操作请求是否单独计费以官方页面为准。"
+    }
+  ]
+}

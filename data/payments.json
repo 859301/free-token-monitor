@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-13",
+    "count": 4,
+    "sources": [
+      "Stripe 官网定价页与官方支持国家页",
+      "Paddle 官网定价页",
+      "Lemon Squeezy 官网定价页与 2026 Update 官方博客",
+      "Polar 官网定价资源页"
+    ],
+    "note": "费率与条款照录厂商官方页面原文；官方页面未注明的字段写「以官方页面为准」。group 取值：processor（支付处理）/ merchant-of-record（Merchant of Record）。status 取值：active（定价页有效）。feeText 为官方费率原文；monthlyFee 为月费原文；morStatus 取值：yes（本身为 Merchant of Record）/ managed-payments（仅 Managed Payments 产品为 Merchant of Record）。cardRequired 为 null 表示官方页未说明。specText 为官方页写明的服务范围；durationText 写明计费方式与期限相关事实；limitsText 为官方页写明的关键限制；risks 为注意事项；flags 为检索标记；notes 为补充说明。claimUrl 与 sourceUrl 均为厂商官方页。"
+  },
+  "offers": [
+    {
+      "id": 1,
+      "slug": "stripe",
+      "title": "Stripe 费率",
+      "provider": "Stripe",
+      "category": "payments",
+      "group": "processor",
+      "status": "active",
+      "feeText": "2.9% + 30¢/成功交易（美国国内卡），国际卡 +1.5%；Managed Payments 3.5% + Payments 费用",
+      "monthlyFee": "标准处理无月费；Billing 按量 0.7%",
+      "morStatus": "managed-payments",
+      "specText": "标准处理 + Managed Payments（MoR，含 75+ 国家间接税合规、欺诈预防、争议管理、开票与客服）+ Atlas + Billing + Tax",
+      "durationText": "按交易计费",
+      "cardRequired": null,
+      "cardNote": "官网已读页面未述，以官方页面为准。",
+      "limitsText": "官方支持国家列表 50 条；中国大陆不在其中；香港在列；印度、印度尼西亚标注 Preview；争议费 $15/起",
+      "risks": [
+        "中国大陆不在官方支持国家列表中，不支持中国大陆主体直接开户",
+        "国际卡在标准费率上另加 1.5%",
+        "Managed Payments 费率为 3.5% + Payments 费用，两部分相加"
+      ],
+      "claimUrl": "https://stripe.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Stripe 官网定价页 · 官方支持国家页",
+      "sourceUrl": "https://stripe.com/pricing",
+      "flags": [
+        "not-supported-mainland-china",
+        "managed-payments",
+        "atlas"
+      ],
+      "notes": "支持国家列表见 https://stripe.com/en-gi/global。Atlas $500 一次性，可从任何地方注册美国公司。"
+    },
+    {
+      "id": 2,
+      "slug": "paddle",
+      "title": "Paddle 费率",
+      "provider": "Paddle",
+      "category": "payments",
+      "group": "merchant-of-record",
+      "status": "active",
+      "feeText": "5% + 50¢/Checkout 交易",
+      "monthlyFee": "无月费",
+      "morStatus": "yes",
+      "specText": "全球税务合规、欺诈保护、退款与买家支持；代收正确税率、跟踪申报期限、提交销售税申报",
+      "durationText": "按交易计费",
+      "cardRequired": null,
+      "cardNote": "官网已读页面未述，以官方页面为准。",
+      "limitsText": "低于 $10 的商品可联系议价",
+      "risks": [
+        "支持国家与验证要求以官方页面为准"
+      ],
+      "claimUrl": "https://www.paddle.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Paddle 官网定价页",
+      "sourceUrl": "https://www.paddle.com/pricing",
+      "flags": [
+        "mor",
+        "no-monthly-fee"
+      ],
+      "notes": "FAQ 原文：无月费、无迁移费、无隐藏费用。"
+    },
+    {
+      "id": 3,
+      "slug": "lemon-squeezy",
+      "title": "Lemon Squeezy 费率",
+      "provider": "Lemon Squeezy",
+      "category": "payments",
+      "group": "merchant-of-record",
+      "status": "active",
+      "feeText": "5% + 50¢/交易",
+      "monthlyFee": "无月费",
+      "morStatus": "yes",
+      "specText": "销售税/VAT 代收代缴与申报、AI 欺诈保护、许可证密钥、订阅计费；邮件营销 500 订阅者内免费；支持 PayPal 等多种支付方式",
+      "durationText": "按交易计费；2026 Update 博客未提关闭日期",
+      "cardRequired": false,
+      "cardNote": "定价页写明 no card required（注册无需绑卡）。",
+      "limitsText": "美国以外交易可能有小额附加费，细则以官方页面为准",
+      "risks": [
+        "2026 Update 博客未提关闭日期与费率；迁移后费率以 Stripe 官方定价页为准",
+        "支持国家与验证要求以官方页面为准"
+      ],
+      "claimUrl": "https://www.lemonsqueezy.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Lemon Squeezy 官网定价页 · 2026 Update 官方博客",
+      "sourceUrl": "https://www.lemonsqueezy.com/pricing",
+      "flags": [
+        "mor",
+        "no-monthly-fee",
+        "migration-announced",
+        "no-close-date"
+      ],
+      "notes": "2026 Update 博客：https://www.lemonsqueezy.com/blog/2026-update。"
+    },
+    {
+      "id": 4,
+      "slug": "polar",
+      "title": "Polar 费率",
+      "provider": "Polar",
+      "category": "payments",
+      "group": "merchant-of-record",
+      "status": "active",
+      "feeText": "Starter 5% + 50¢；Pro 3.8% + 40¢；Growth 3.6% + 35¢；Scale 3.4% + 30¢",
+      "monthlyFee": "Starter Free；Pro $20/月；Growth $100/月；Scale $400/月",
+      "morStatus": "yes",
+      "specText": "Merchant of Record；国际卡 +1.5%；争议 $15/起；提现费按 Stripe 费用原样转嫁",
+      "durationText": "按交易计费；Early Member 规则以 2026-05-27 为界",
+      "cardRequired": null,
+      "cardNote": "官网已读页面未述，以官方页面为准。",
+      "limitsText": "回本点（官方页数字）：Pro 约 $1,379/月，Growth 约 $5,634/月，Scale 约 $19,048/月",
+      "risks": [
+        "国际卡 +1.5%；争议 $15/起，无论结果",
+        "Early Member 升级付费计划后永久失去旧费率，降回 Starter 按新 5% + 50¢ 计",
+        "支持国家与验证要求以官方页面为准"
+      ],
+      "claimUrl": "https://polar.sh/resources/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Polar 官网定价资源页",
+      "sourceUrl": "https://polar.sh/resources/pricing",
+      "flags": [
+        "mor",
+        "tiered",
+        "early-member"
+      ],
+      "notes": "提现费：$2/有提现的月份、0.25% + $0.25/笔提现、货币转换 0.25%（欧盟）–1%。"
+    }
+  ]
+}

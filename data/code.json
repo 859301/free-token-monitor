@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-13",
+    "count": 2,
+    "sources": [
+      "GitHub 官网定价页",
+      "GitLab 官网定价页"
+    ],
+    "note": "规格与条款照录厂商官方页面原文；官方页面未注明的字段写「以官方页面为准」。group 取值：free（免费层）。status 取值：active（免费层）。cardRequired 为 null 表示官方页未说明，为 false 表示官网写明无需信用卡。planKind 与 group 含义相同，取值为 free-tier（免费层）。planName 为厂商计划名。specText 为免费内容原文摘要；durationText 为时长与永久性说明；cardNote 为绑卡要求说明；limitsText 为关键限制；risks 为注意事项；flags 为条目特征标记：public-only（对比表中有功能仅限公开仓库）、no-card-signup（注册无需信用卡）、shared-runner-card（共享 Runner 须绑卡验证）、user-limit（每组人数上限）、unlimited-repos（仓库数量不限）。"
+  },
+  "offers": [
+    {
+      "id": 1,
+      "slug": "github-free",
+      "title": "GitHub Free",
+      "provider": "GitHub",
+      "category": "code",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "planName": "Free",
+      "specText": "无限公开/私有仓库；Dependabot；2,000 CI/CD 分钟/月；500 MB Packages 存储；Issues & Projects；社区支持；Codespaces 访问（$0 spend limit）",
+      "durationText": "免费（官网已读页面未明示永久）",
+      "cardRequired": null,
+      "cardNote": "官网已读页面未述，以官方页面为准。",
+      "limitsText": "对比表多项功能仅限公开仓库（repository rules、code owners、草稿 PR、Pages/wikis、secret scanning 等）；Codespaces 免费小时只给个人账户，不给免费组织；定价页示例：2 核机器 60 小时、4 核 30 小时",
+      "risks": [
+        "对比表多项功能仅限公开仓库，私有仓库不可用",
+        "Codespaces 免费小时只给个人账户，不给免费组织",
+        "绑卡要求在官网已读页面中未述，以官方页面为准"
+      ],
+      "claimUrl": "https://github.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "GitHub 官网定价页",
+      "sourceUrl": "https://github.com/pricing",
+      "flags": [
+        "public-only",
+        "unlimited-repos"
+      ],
+      "notes": "公开仓库 Actions 分钟与 Packages 免费；Team $4/用户/月（3,000 分钟、2 GB）；Enterprise $21/用户/月（50,000 分钟、50 GB）。"
+    },
+    {
+      "id": 2,
+      "slug": "gitlab-free",
+      "title": "GitLab Free",
+      "provider": "GitLab",
+      "category": "code",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "planName": "Free",
+      "specText": "每个顶级组 5 名用户；400 计算分钟/月；10 GiB 可调存储；每月 5 GiB 传输数据",
+      "durationText": "免费；定价页写明“No credit card required”（无需信用卡）",
+      "cardRequired": false,
+      "cardNote": "注册无需信用卡（定价页原文“No credit card required”）；使用共享 Runner 须绑卡验证（$1 授权验证，不扣费），自带 Runner 或禁用共享 Runner 不需要绑卡。",
+      "limitsText": "每个顶级组 5 名用户；400 计算分钟/月；10 GiB 可调存储；每月 5 GiB 传输数据",
+      "risks": [
+        "共享 Runner 须绑卡验证（$1 授权验证，不扣费）",
+        "每个顶级组 5 名用户"
+      ],
+      "claimUrl": "https://about.gitlab.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "GitLab 官网定价页",
+      "sourceUrl": "https://about.gitlab.com/pricing",
+      "flags": [
+        "no-card-signup",
+        "shared-runner-card",
+        "user-limit"
+      ],
+      "notes": "Premium $29/用户/月（按年计费）；Ultimate 无公开价，定价页写“Contact us for custom pricing”（报价制）。"
+    }
+  ]
+}

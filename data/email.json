@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-13",
+    "count": 5,
+    "sources": [
+      "Resend 官网定价页",
+      "Mailgun 官网定价页",
+      "Brevo 官网定价页与官方帮助中心免费计划说明页",
+      "Twilio 官网 SendGrid 定价页与官方定价 PDF",
+      "Postmark 官网定价页"
+    ],
+    "note": "规格与条款照录厂商官方页面原文；官方页面未注明的字段写「以官方页面为准」。group 取值：free（免费层）/ not-stated-permanent（官网未明示永久）/ trial（试用）。status 取值与 group 对应：active（免费层）/ not-stated-permanent（官网未明示永久）/ trial（试用）。cardRequired 为 null 表示官方页面未说明，为 false 表示官方页面写明无需信用卡。overageBehavior 为官方页写明的超额行为，未写明的写「以官方页面为准」。paidFrom 为官网写明的付费起步价。limitKind 取值：daily-monthly（日限加月限）/ daily（按天计量）/ monthly（按月计量）。planKind 与 group 含义相同。sendgridOveragePdf 与 sendgridOverageWeb 仅用于 SendGrid 条目，分别记录官方定价 PDF 与定价网页显示的超额费率，两处数值不同，并列记录。"
+  },
+  "offers": [
+    {
+      "id": 1,
+      "slug": "resend",
+      "title": "Resend 免费层",
+      "provider": "Resend",
+      "category": "email",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "limitKind": "daily-monthly",
+      "planName": "Free",
+      "specText": "$0/月：3,000 封/月、100 封/天、3 个域名、3 个收件箱、30 天数据保留、5 AI credits、10,000 automation runs、SSO、工单支持",
+      "durationText": "FAQ 称提供 free-forever plan",
+      "cardRequired": null,
+      "cardNote": "官方页面未说明，以官方页面为准。",
+      "limitsText": "3,000 封/月；100 封/天；3 个域名；3 个收件箱；30 天数据保留",
+      "overageBehavior": "Pay-as-you-go 仅限付费计划；未开启时超限会收到通知并可选择升级",
+      "paidFrom": "Pro $20/月 50,000 封；Scale $90/月 100,000 封；超量 $0.90/1,000 封",
+      "risks": [
+        "日限 100 封与月限 3,000 封同时存在",
+        "收到的邮件计入事务配额",
+        "域名上限 3 个，收件箱上限 3 个",
+        "数据保留 30 天"
+      ],
+      "claimUrl": "https://resend.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Resend 官网定价页",
+      "sourceUrl": "https://resend.com/pricing",
+      "flags": [
+        "free-forever",
+        "daily-monthly-limits",
+        "broadcast-excluded"
+      ],
+      "notes": "收到的邮件计入事务配额；Broadcast 邮件不计入事务限额。"
+    },
+    {
+      "id": 2,
+      "slug": "mailgun",
+      "title": "Mailgun 免费计划",
+      "provider": "Mailgun",
+      "category": "email",
+      "group": "not-stated-permanent",
+      "status": "not-stated-permanent",
+      "planKind": "not-stated-permanent",
+      "limitKind": "daily",
+      "planName": "Free",
+      "specText": "$0/月：100 封/天、1 个自定义发送域名、RESTful API + SMTP、1 个 API key、1 天日志保留、1 条 inbound route、1 个用户、工单支持",
+      "durationText": "官网未明示永久（页面措辞为 Test us out，全文无 forever 表述）",
+      "cardRequired": null,
+      "cardNote": "官方页面未说明，以官方页面为准。",
+      "limitsText": "100 封/天；1 个自定义发送域名；1 个 API key；1 天日志保留；1 条 inbound route；1 个用户",
+      "overageBehavior": "以官方页面为准",
+      "paidFrom": "Basic $15/月起 10,000 封/月；Foundation $35/月 50,000 封（首月免费）；Scale $90/月 100,000 封（首月免费）",
+      "risks": [
+        "官网未明示永久",
+        "发送量按天计量，每天上限 100 封",
+        "日志保留 1 天",
+        "免费计划限 1 用户"
+      ],
+      "claimUrl": "https://www.mailgun.com/pricing/",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Mailgun 官网定价页",
+      "sourceUrl": "https://www.mailgun.com/pricing/",
+      "flags": [
+        "not-stated-permanent",
+        "daily-limit",
+        "1-day-logs"
+      ],
+      "notes": "FAQ 称免费计划可探索平台、带每日发送上限。"
+    },
+    {
+      "id": 3,
+      "slug": "brevo",
+      "title": "Brevo 免费计划",
+      "provider": "Brevo",
+      "category": "email",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "limitKind": "daily",
+      "planName": "Free",
+      "specText": "每天 300 封发送；最多 100,000 联系人；1 个用户；事务邮件重试队列 1,000；自动化 2,000 联系人；50 个 open deals / 1 条 pipeline",
+      "durationText": "无时间限制",
+      "cardRequired": false,
+      "cardNote": "官方帮助中心写明无需绑卡；定价页写明 Free forever, no credit card needed。",
+      "limitsText": "每天 300 封发送，每日重置，不结转；最多 100,000 联系人；1 个用户；邮件始终带 Sent with Brevo 标识",
+      "overageBehavior": "以官方页面为准",
+      "paidFrom": "Starter $9/月起、Standard $18/月起、Professional $499/月起、Enterprise 定制；价格不含税；年付 9 折",
+      "risks": [
+        "每天 300 封，每日重置，不结转",
+        "邮件始终带 Sent with Brevo 标识",
+        "1 个用户",
+        "付费价格不含税"
+      ],
+      "claimUrl": "https://brevo.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Brevo 官网定价页与官方帮助中心免费计划说明页",
+      "sourceUrl": "https://brevo.com/pricing",
+      "flags": [
+        "no-card",
+        "daily-reset",
+        "branded"
+      ],
+      "notes": "定价页文本抓取中不渲染每日发送数与价格，以官方帮助中心为准。"
+    },
+    {
+      "id": 4,
+      "slug": "sendgrid-trial",
+      "title": "SendGrid 试用",
+      "provider": "Twilio SendGrid",
+      "category": "email",
+      "group": "trial",
+      "status": "trial",
+      "planKind": "trial",
+      "limitKind": "daily",
+      "planName": "Free Trial",
+      "specText": "Free Trial $0，60 天，100 封/天；1 名队友、1 个 event webhook、3 天可搜索邮件活动记录",
+      "durationText": "60 天试用；没有永久免费计划",
+      "cardRequired": false,
+      "cardNote": "定价页写明 no credit card required, no commitment（无需信用卡、无承诺）。",
+      "limitsText": "100 封/天；1 名队友；1 个 event webhook；3 天可搜索邮件活动记录",
+      "overageBehavior": "overage charges may apply（超额可能收费，细则见计划详情）",
+      "paidFrom": "Essentials 起价 $19.95/月；Pro 起价 $89.95/月；Premier 定制价",
+      "sendgridOveragePdf": "Essentials $0.00133/封（$19.95 档，50,000 封/月）、$0.00088/封（$34.95 档，100,000 封/月）；Pro $0.00110/$0.00091/$0.00078/$0.00059/$0.00047 每封（$89.95/$249/$499/$799/$1,099 五档，100K/300K/700K/1.5M/2.5M 封）",
+      "sendgridOverageWeb": "Essentials $0.00075/封；Pro $0.000575/封",
+      "risks": [
+        "只有 60 天试用，没有永久免费计划",
+        "试用 100 封/天，3 天可搜索邮件活动记录",
+        "超额可能收费；PDF 与网页的超额费率数值不同",
+        "旧永久免费计划已于 2025 年 3–5 月退役（多家二手来源一致说法）"
+      ],
+      "claimUrl": "https://www.twilio.com/en-us/products/email-api/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Twilio 官网 SendGrid 定价页与官方定价 PDF",
+      "sourceUrl": "https://www.twilio.com/en-us/products/email-api/pricing",
+      "flags": [
+        "60d-trial",
+        "no-permanent-free",
+        "pdf-web-overage-differs"
+      ],
+      "notes": "页面中的 free plan 字样指同一 60 天试用；旧永久免费计划退役时间为多家二手来源一致说法。"
+    },
+    {
+      "id": 5,
+      "slug": "postmark",
+      "title": "Postmark 免费 Developer",
+      "provider": "Postmark",
+      "category": "email",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "limitKind": "monthly",
+      "planName": "Free Developer",
+      "specText": "Free Developer $0：100 封/月；No overages allowed in this plan；never expires or runs out",
+      "durationText": "never expires or runs out（永不过期）",
+      "cardRequired": null,
+      "cardNote": "官方页面未说明，以官方页面为准。",
+      "limitsText": "100 封/月；未用额度不结转；100 封/月与 10,000 封/月之间无中间档位；无年付计划",
+      "overageBehavior": "No overages allowed in this plan（该计划不允许超额）",
+      "paidFrom": "Basic $15/月起 10,000 封（超量 $1.80/1,000）；Pro $16.50/月起 10,000 封（超量 $1.30/1,000）；Platform $18/月起 10,000 封（超量 $1.20/1,000）",
+      "risks": [
+        "免费计划每月 100 封，不允许超额",
+        "未用额度不结转",
+        "100 封/月与 10,000 封/月之间无中间档位",
+        "没有年付计划"
+      ],
+      "claimUrl": "https://postmarkapp.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Postmark 官网定价页",
+      "sourceUrl": "https://postmarkapp.com/pricing",
+      "flags": [
+        "never-expires",
+        "no-overages",
+        "no-rollover"
+      ],
+      "notes": "FAQ 写明没有年付计划（Not right now）。"
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-13",
+    "count": 7,
+    "sources": [
+      "UptimeRobot 官网定价页",
+      "Sentry 官网定价页",
+      "Umami 官网定价页",
+      "PostHog 官网定价页",
+      "Plausible 官方文档、服务条款与官方页面",
+      "Microsoft Learn 官方 FAQ",
+      "Google Analytics 官方产品页与官方帮助页"
+    ],
+    "note": "规格与条款照录厂商官方页面原文；官方页面未注明的字段写「以官方页面为准」。group 取值：free（免费层）/ trial（试用）。status 取值：active（免费层）/ trial（试用）。cardRequired 为 null 表示官方页未说明。planKind 与 group 含义相同。monitoringType 取值：uptime（宕机监控）/ error-tracking（错误追踪）/ analytics（数据分析）。retentionText 为官方页写明的数据保留期限，未写明的写「以官方页面为准」。overageBehavior 为官方页写明的超额行为，未写明的写「以官方页面为准」。paidFrom 为官网写明的付费起步价，未写明的写「以官方页面为准」。"
+  },
+  "offers": [
+    {
+      "id": 1,
+      "slug": "uptimerobot",
+      "title": "UptimeRobot 免费层",
+      "provider": "UptimeRobot",
+      "category": "monitoring",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "monitoringType": "uptime",
+      "planName": "Free",
+      "specText": "$0/月；50 monitors；5 分钟间隔；HTTP/port/ping、keyword、API、UDP、DNS；仅 5 个集成；基础状态页；3 个月数据保留；1 个状态页",
+      "durationText": "官网已读页面未明示永久，以官方页面为准",
+      "cardRequired": false,
+      "cardNote": "计划卡片原文：No credit card required!",
+      "limitsText": "50 monitors；5 分钟间隔；仅 5 个集成；3 个月数据保留；1 个状态页",
+      "overageBehavior": "官网已读页面未述，以官方页面为准",
+      "retentionText": "3 个月数据保留",
+      "paidFrom": "Solo $13/月（年付 $12）；Team $39/月（年付 $33）；Scale $83/月（年付 $67）",
+      "risks": [
+        "SSL 与域名过期监控：计划卡片与对比表说法不一，见 notes 并列呈现",
+        "仅 5 个集成",
+        "3 个月数据保留"
+      ],
+      "claimUrl": "https://uptimerobot.com/pricing/",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "UptimeRobot 官网定价页",
+      "sourceUrl": "https://uptimerobot.com/pricing/",
+      "flags": [
+        "no-card",
+        "50-monitors",
+        "ssl-conflict"
+      ],
+      "notes": "同一官网定价页说法不一：Free 计划卡片列出 SSL & Domain exp. monitor；对比表 SSL monitoring 行与 Domain exp. monitoring 行 Free 为 ✗，HTTPS monitoring 行提示 SSL monitoring is included only in paid plans。两种说法并列呈现，不裁决。"
+    },
+    {
+      "id": 2,
+      "slug": "sentry",
+      "title": "Sentry Developer 免费层",
+      "provider": "Sentry",
+      "category": "monitoring",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "monitoringType": "error-tracking",
+      "planName": "Developer",
+      "specText": "$0；限 1 名用户；无限项目；5 GB logs；1 个 uptime monitor；1 个 cron monitor；30 天 lookback；对比表：5k errors、5M spans、50 replays（未标注周期）",
+      "durationText": "页面元数据：Start free on the Developer plan forever",
+      "cardRequired": null,
+      "cardNote": "Developer 计划的绑卡要求在官网已读页面中未述；Business 14 天试用无需信用卡（页面元数据）。",
+      "limitsText": "限 1 名用户；5k errors、5M spans、50 replays（对比表原文，未标注周期）；5 GB logs；1 个 uptime monitor；1 个 cron monitor；30 天 lookback",
+      "overageBehavior": "官网已读页面未述，以官方页面为准",
+      "retentionText": "30 天 lookback",
+      "paidFrom": "Team $26/月；Business $80/月（年付、默认预付数据）；Team 含 50K errors/月",
+      "risks": [
+        "限 1 名用户",
+        "三项对比表数字未标注周期",
+        "新用户推广语 5,000 free replays per month for your first 3 months 不是计划数字"
+      ],
+      "claimUrl": "https://sentry.io/pricing/",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Sentry 官网定价页",
+      "sourceUrl": "https://sentry.io/pricing/",
+      "flags": [
+        "one-user",
+        "no-period-figures"
+      ],
+      "notes": "对比表 Errors/Spans/Replays 三行本身未标注周期；页面唯一带 per month 的是新用户推广语。"
+    },
+    {
+      "id": 3,
+      "slug": "umami",
+      "title": "Umami Hobby 免费层",
+      "provider": "Umami",
+      "category": "monitoring",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "monitoringType": "analytics",
+      "planName": "Hobby",
+      "specText": "$0；100,000 事件；3 个网站；6 个月数据保留；完整报告套件；数据导出；社区支持",
+      "durationText": "官网已读页面未明示永久，以官方页面为准",
+      "cardRequired": null,
+      "cardNote": "定价页无绑卡表述，以官方页面为准。",
+      "limitsText": "100,000 事件；3 个网站；6 个月数据保留；无团队成员、无 API、无邮件报告、无 session replay、无 heatmap",
+      "overageBehavior": "Hobby 超限后的行为在官网已读页面中未述；付费计划超量按事件计费，数据收集不中断、不丢数据",
+      "retentionText": "6 个月数据保留",
+      "paidFrom": "Pro $9/月；Business $49/月（美元，默认按月计费）；Pro 超量 $0.00003/事件，Business 超量 $0.00002/事件",
+      "risks": [
+        "Hobby 无团队成员、无 API、无邮件报告、无 session replay、无 heatmap",
+        "Hobby 超限后的行为在官网已读页面中未述"
+      ],
+      "claimUrl": "https://umami.is/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Umami 官网定价页",
+      "sourceUrl": "https://umami.is/pricing",
+      "flags": [
+        "3-websites",
+        "self-host-mit"
+      ],
+      "notes": "Hobby 的 Additional events 格为空、无每事件单价；开源可自托管（MIT license，free to self-host）。"
+    },
+    {
+      "id": 4,
+      "slug": "posthog",
+      "title": "PostHog 免费层",
+      "provider": "PostHog",
+      "category": "monitoring",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "monitoringType": "analytics",
+      "planName": "Free",
+      "specText": "无需信用卡、不是试用；Analytics 1M events/月；Session replay 5K recordings/月；Feature flags 1M requests/月；Error tracking 100K exceptions/月；Surveys 1500 responses/月；Logs 10 GB ingested/月；AI Observability 100K events/月（与 evaluations 共享）；无限团队成员；1 个项目；1 年保留；社区支持",
+      "durationText": "免费额度每月重置；有无绑卡额度相同",
+      "cardRequired": false,
+      "cardNote": "官网原文：No credit card, not a trial.",
+      "limitsText": "1 个项目；1 年保留；各产品月免费额度见 specText",
+      "overageBehavior": "用量在免费上限处停止，不会产生意外账单（官网原文：Usage stops at the free tier limits, so you can't be charged by surprise.）",
+      "retentionText": "1 年保留",
+      "paidFrom": "以官方页面为准",
+      "risks": [
+        "只有 1 个项目"
+      ],
+      "claimUrl": "https://posthog.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "PostHog 官网定价页",
+      "sourceUrl": "https://posthog.com/pricing",
+      "flags": [
+        "monthly-reset",
+        "stops-at-limit",
+        "open-source-mit"
+      ],
+      "notes": "Data warehouse 在免费额度表中无独立免费数值；开源，MIT licensed。"
+    },
+    {
+      "id": 5,
+      "slug": "plausible-trial",
+      "title": "Plausible 试用",
+      "provider": "Plausible",
+      "category": "monitoring",
+      "group": "trial",
+      "status": "trial",
+      "planKind": "trial",
+      "monitoringType": "analytics",
+      "planName": "Trial",
+      "specText": "30 天免费试用、无需信用卡；云端无永久免费计划；计划 $9/月起；Starter 1 个网站；Growth 至多 3 个网站；Business 至多 10 个网站",
+      "durationText": "30 天试用；试用后需预付费方可继续使用（服务条款原文）",
+      "cardRequired": false,
+      "cardNote": "30 天免费试用，无需信用卡。",
+      "limitsText": "Starter 1 个网站；Growth 至多 3 个网站；Business 至多 10 个网站 + funnels/user journeys/收入追踪/自定义属性/Stats API；年付省 2 个月",
+      "overageBehavior": "无意外收费；连续两个月超档会通知要求升级",
+      "retentionText": "以官方页面为准",
+      "paidFrom": "Plans start at $9/month",
+      "risks": [
+        "云端无永久免费计划",
+        "试用后需预付费方可继续使用"
+      ],
+      "claimUrl": "https://plausible.io/docs/subscription-plans",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Plausible 官方文档 · 服务条款 · 官方页面",
+      "sourceUrl": "https://plausible.io/docs/subscription-plans",
+      "flags": [
+        "30d-trial",
+        "no-free-tier",
+        "self-host-agpl"
+      ],
+      "notes": "Community Edition 免费可自托管（AGPLv3），追踪脚本 MIT。"
+    },
+    {
+      "id": 6,
+      "slug": "clarity",
+      "title": "Microsoft Clarity",
+      "provider": "Microsoft",
+      "category": "monitoring",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "monitoringType": "analytics",
+      "planName": "Clarity",
+      "specText": "官方 FAQ：Clarity is a free service forever；无流量限制；无需升级到付费版；每个账户的网站数量无限制；无采样",
+      "durationText": "官方 FAQ：free service forever",
+      "cardRequired": null,
+      "cardNote": "官网已读页面未述，以官方页面为准。",
+      "limitsText": "网站数量无限制；无流量限制；无采样",
+      "overageBehavior": "官方 FAQ 写明无流量限制、无需升级到付费版",
+      "retentionText": "以官方页面为准",
+      "paidFrom": "以官方页面为准",
+      "risks": [
+        "保留期限等数字在官方 FAQ 已读页面中未述，以官方页面为准"
+      ],
+      "claimUrl": "https://learn.microsoft.com/clarity/faq",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Microsoft Learn 官方 FAQ",
+      "sourceUrl": "https://learn.microsoft.com/clarity/faq",
+      "flags": [
+        "free-forever",
+        "no-sampling"
+      ],
+      "notes": ""
+    },
+    {
+      "id": 7,
+      "slug": "google-analytics-4",
+      "title": "Google Analytics 4 标准版",
+      "provider": "Google",
+      "category": "monitoring",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "monitoringType": "analytics",
+      "planName": "标准版",
+      "specText": "标准版 free of charge；用户级数据保留 2 或 14 个月；事件数据保留 2/14/26/38/50 个月（26/38/50 仅 360）；默认 26 个月；大型资源限 2 个月；事件级查询标准版 1,000 万事件、360 最高 10 亿事件",
+      "durationText": "标准版免费（free of charge）",
+      "cardRequired": null,
+      "cardNote": "官网已读页面未述，以官方页面为准。",
+      "limitsText": "用户级数据保留 2 或 14 个月；事件数据保留 2/14/26/38/50 个月（26/38/50 仅 360）；默认 26 个月；大型资源限 2 个月；事件级查询标准版 1,000 万事件、360 最高 10 亿事件",
+      "overageBehavior": "官网已读页面未述，以官方页面为准",
+      "retentionText": "用户级 2 或 14 个月；事件级 2/14/26/38/50 个月",
+      "paidFrom": "Analytics 360 定价以官方页面为准",
+      "risks": [
+        "26/38/50 个月保留仅限 Analytics 360",
+        "大型资源限 2 个月"
+      ],
+      "claimUrl": "https://marketingplatform.google.com/about/analytics/",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Google Analytics 官方产品页 · 官方帮助页",
+      "sourceUrl": "https://marketingplatform.google.com/about/analytics/",
+      "flags": [
+        "free-of-charge",
+        "retention-tiers"
+      ],
+      "notes": "Analytics 360 定价以官方页面为准。"
+    }
+  ]
+}
