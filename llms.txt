@@ -31,30 +31,30 @@
 
 ## 对比
 
-- [不绑卡的最佳免费大模型 API 对比](https://tokens.yangtokent.com/compare/best-free-llm-api-no-card/): 6 条不绑卡的免费大模型 API 对比：Gemini、Groq、OpenRouter、Cloudflare、智谱 GLM Flash、硅基流动。额度、限速、重置时间照录本站核对数据。
-- [免费额度形态对比：长期免费层 vs 注册赠金 vs 周期重置 vs 限时活动](https://tokens.yangtokent.com/compare/free-tier-types/): 免费额度分四种形态：长期免费层、注册赠金、周期重置、限时活动。43 条在架额度的完整分组，照录本站核对数据。
+- [不绑卡的最佳免费大模型 API 对比](https://tokens.yangtokent.com/compare/best-free-llm-api-no-card/): 6 条不绑卡的免费大模型 API 对比：Gemini、Groq、OpenRouter、Cloudflare、智谱 GLM Flash、硅基流动。额度、限速、重置时间均来自厂商官方页。
+- [免费额度形态对比：长期免费层 vs 注册赠金 vs 周期重置 vs 限时活动](https://tokens.yangtokent.com/compare/free-tier-types/): 免费额度分四种形态：长期免费层、注册赠金、周期重置、限时活动。43 条额度的完整分组，数据来自厂商官方页。
 - [国内可直连的免费额度对比](https://tokens.yangtokent.com/compare/china-accessible/): 18 条标注国内直连的免费额度完整清单，含大模型、编程、搜索、算力；海外厂商可用性说法不一，需要实时测试。
-- [免费编程工具额度对比：Qoder / WorkBuddy / TRAE / Kiro / Dify](https://tokens.yangtokent.com/compare/free-coding-tools/): 7 条编程类免费额度对比：Qoder、WorkBuddy、CodeBuddy、TRAE、Kiro 学生计划、Dify Cloud。均为客户端或云端内积分，照录本站核对数据。
-- [免费搜索与抓取 API 对比：Tavily / Exa / Firecrawl / You.com](https://tokens.yangtokent.com/compare/free-search-apis/): 4 条搜索与抓取类免费额度对比：Tavily、Exa、Firecrawl、You.com。每月额度与每日额度的区别，照录本站核对数据。
-- [免费语音 API 对比：Deepgram / AssemblyAI](https://tokens.yangtokent.com/compare/free-speech-apis/): 2 条语音类免费额度对比：Deepgram（$200，不过期）与 AssemblyAI（$50）。均为一次性额度、免绑卡，照录本站核对数据。
-- [免费沙箱与浏览器自动化额度对比：E2B / Modal / Steel](https://tokens.yangtokent.com/compare/free-sandbox-browser/): 3 条沙箱与浏览器类免费额度对比：E2B（$100 一次性）、Modal（每月 $30）、Steel（$30 一次性）。均免绑卡，照录本站核对数据。
+- [免费编程工具额度对比：Qoder / WorkBuddy / TRAE / Kiro / Dify](https://tokens.yangtokent.com/compare/free-coding-tools/): 7 条编程类免费额度对比：Qoder、WorkBuddy、CodeBuddy、TRAE、Kiro 学生计划、Dify Cloud。均为客户端或云端内积分，数据来自厂商官方页。
+- [免费搜索与抓取 API 对比：Tavily / Exa / Firecrawl / You.com](https://tokens.yangtokent.com/compare/free-search-apis/): 4 条搜索与抓取类免费额度对比：Tavily、Exa、Firecrawl、You.com。每月额度与每日额度的区别，数据来自厂商官方页。
+- [免费语音 API 对比：Deepgram / AssemblyAI](https://tokens.yangtokent.com/compare/free-speech-apis/): 2 条语音类免费额度对比：Deepgram（$200，不过期）与 AssemblyAI（$50）。均为一次性额度、免绑卡，数据来自厂商官方页。
+- [免费沙箱与浏览器自动化额度对比：E2B / Modal / Steel](https://tokens.yangtokent.com/compare/free-sandbox-browser/): 3 条沙箱与浏览器类免费额度对比：E2B（$100 一次性）、Modal（每月 $30）、Steel（$30 一次性）。均免绑卡，数据来自厂商官方页。
 - [免费向量与 Embedding 额度对比：Pinecone / Voyage / Jina](https://tokens.yangtokent.com/compare/free-vector-embedding/): 3 条向量与 Embedding 类免费额度对比：Pinecone、Voyage AI、Jina AI。计费单位不同，按你的向量化与检索量选。
 
 ## 指南
 
 - [领取第一个免费 Key 并完成第一次调用](https://tokens.yangtokent.com/guides/first-free-key/): 从选额度、注册、创建 Key 到第一次调用，含一个零 Key 示例。
 - [401 / 402 / 429 报错排查](https://tokens.yangtokent.com/guides/fix-401-402-429/): 三个状态码分别改什么，分钟级与日级限速的区别，重置时间对照表。
-- [把免费 Key 接入 Claude Code / Codex / Cline / OpenCode](https://tokens.yangtokent.com/guides/connect-coding-agents/): 协议对照、通用接入步骤、两个常见坑、本站 OpenAI 兼容额度清单。
+- [把免费 Key 接入 Claude Code / Codex / Cline / OpenCode](https://tokens.yangtokent.com/guides/connect-coding-agents/): 协议对照、通用接入步骤、两个常见坑、OpenAI 兼容额度清单。
 
 
 ## 免费 VPS 板块
 
-- [免费 VPS](https://tokens.yangtokent.com/vps/): 9 条经厂商官方页核实的免费云服务器：2 个永久免费、5 个试用额度、1 个学生专属、1 个免费沙箱；含未收录说明与变化记录。
-- [VPS 详情](https://tokens.yangtokent.com/vps/offers/): 9 条 VPS 优惠详情页。
+- [免费 VPS](https://tokens.yangtokent.com/vps/): 10 条经厂商官方页核实的免费云服务器：2 个永久免费、5 个试用额度、1 个学生专属、1 个免费沙箱、1 个需手动续期；含不在列表中的服务说明与变化记录。
+- [VPS 详情](https://tokens.yangtokent.com/vps/offers/): 10 条 VPS 优惠详情页。
 - [VPS 对比](https://tokens.yangtokent.com/vps/compare/): 8 篇对比：总对比、Oracle vs GCP、三家免费层、免绑卡核查、国内试用、学生版、Windows、按用途选。
 - [VPS 指南](https://tokens.yangtokent.com/vps/guides/): 甲骨文注册开机、防回收与备份、容量排查、账单避坑。
 - [VPS 常见问题](https://tokens.yangtokent.com/vps/faq/): 20 个常见问题与回答。
-- [VPS 数据（JSON）](https://tokens.yangtokent.com/data/vps.json): 全部 9 条 VPS 优惠的机器可读数据，含规格原文、绑卡、区域、风险、核实日期。
+- [VPS 数据（JSON）](https://tokens.yangtokent.com/data/vps.json): 全部 10 条 VPS 优惠的机器可读数据，含规格原文、绑卡、区域、风险、核实日期。
 
 ## VPS 详情页
 
@@ -67,6 +67,7 @@
 - [腾讯云免费体验馆：轻量/CVM 1 个月 + 蜂驰型 7 天](https://tokens.yangtokent.com/vps/offers/tencent-free-trial/): 按卡片规格领取，仅限产品新用户。核实于 2026-11-12。
 - [Kamatera 30 天试用：1 台服务器，配置最高 $100（需信用卡）](https://tokens.yangtokent.com/vps/offers/kamatera-trial/): 30 天试用，1 TB 流量，到期未取消则计费。需绑卡。核实于 2026-11-12。
 - [InstaBox 免费层：1 台 4 vCPU / 8 GB 沙箱机器（非传统 VPS）](https://tokens.yangtokent.com/vps/offers/instabox/): 1 台 4 vCPU / 8 GiB 机器，20 GiB 磁盘，闲置 30 分钟暂停。绑卡要求未见于官方文档。核实于 2026-11-13。
+- [EUserv VS2-free：IPv6-only 免费容器服务器、每月手动续期](https://tokens.yangtokent.com/vps/offers/euserv/): 1 核 1 GB 10 GB，每月 1 TB 流量，免费 IPv4 地址为无，合同期 1 个月、手动续期。验证要求只见二手说法。核实于 2026-11-13。
 
 ## VPS 对比
 
@@ -88,7 +89,7 @@
 
 ## 羊毛 VPS 板块
 
-- [羊毛 VPS](https://tokens.yangtokent.com/wool/): 6 条在架羊毛 + 1 个历史档案：4 个试用额度、1 个任务续费主机、1 个沙箱额度；含未收录说明与核查笔记。
+- [羊毛 VPS](https://tokens.yangtokent.com/wool/): 6 条羊毛 + 1 个历史档案：4 个试用额度、1 个任务续费主机、1 个沙箱额度；含不在列表中的服务说明与核查笔记。
 - [羊毛详情](https://tokens.yangtokent.com/wool/offers/): 8 篇羊毛详情页与核查笔记。
 - [羊毛对比](https://tokens.yangtokent.com/wool/compare/): 3 篇对比：试用额度横评、核查清单、沙箱对比。
 - [羊毛指南](https://tokens.yangtokent.com/wool/guides/): 判断羊毛值不值、续费陷阱、备份清单、任务主机生存、IPv6/NAT 科普。
@@ -122,7 +123,7 @@
 
 ## 低价 VPS 板块
 
-- [低价 VPS](https://tokens.yangtokent.com/cheap/): 3 家常态价在架 + 1 个缺货观察；只收常态价，续费条件写明。
+- [低价 VPS](https://tokens.yangtokent.com/cheap/): 3 家常态价 + 1 个缺货观察；续费条件写明。
 - [低价详情](https://tokens.yangtokent.com/cheap/offers/): 4 篇低价详情页与缺货观察。
 - [低价对比](https://tokens.yangtokent.com/cheap/compare/): 4 篇对比：三家横评、年付月付首期价、每 GB 内存价、低价 vs 免费。
 - [低价指南](https://tokens.yangtokent.com/cheap/guides/): 档位、续费数学、超售检查、先按月再年付、线路优先、隐藏费用。
@@ -149,8 +150,48 @@
 - [续费数学：3 年总价怎么算](https://tokens.yangtokent.com/cheap/guides/renewal-math/): 公式、实例与 specials 页读法。
 - [超售与 CPU 争抢：怎么验一台廉价 VPS](https://tokens.yangtokent.com/cheap/guides/overselling-checks/): 基准测试、steal 指标、长期观察。
 - [先按月、再年付：新主机信任规则与备份](https://tokens.yangtokent.com/cheap/guides/backup-monthly-first/): 30/90 天信任检查清单。
-- [线路优先：买 VPS 先看路由、再看配置](https://tokens.yangtokent.com/cheap/guides/route-first/): 术语解释与 ping/mtr 测量方法。
+- [线路优先：买 VPS 路由比配置更重要](https://tokens.yangtokent.com/cheap/guides/route-first/): 术语解释与 ping/mtr 测量方法。
 - [隐藏费用清单：IPv4、备份、税费与超额](https://tokens.yangtokent.com/cheap/guides/hidden-costs-checklist/): 7 类隐藏费用与结账页检查方法。
+
+## 免费虚拟主机板块
+
+- [免费虚拟主机](https://tokens.yangtokent.com/hosting/): 10 家免费虚拟主机：8 家参数较完整、2 家部分信息未确认，另有 000webhost 已停服档案；含不在列表中的服务及原因与变化记录。
+- [虚拟主机详情](https://tokens.yangtokent.com/hosting/offers/): 10 家详情页与 1 个已停服档案。
+- [虚拟主机对比](https://tokens.yangtokent.com/hosting/compare/): 5 篇对比：四家总对比、主机 vs VPS vs 静态托管、InfinityFree vs Byet、总表、三家对比。
+- [虚拟主机指南](https://tokens.yangtokent.com/hosting/guides/): 6 篇指南：WordPress、避坑备份、国内访问、hits 限额、域名、迁移。
+- [虚拟主机常见问题](https://tokens.yangtokent.com/hosting/faq/): 18 个常见问题与回答。
+- [虚拟主机数据（JSON）](https://tokens.yangtokent.com/data/hosting.json): 全部 11 条的机器可读数据，含规格原文、绑卡、闲置政策、核实日期。
+
+## 虚拟主机详情页
+
+- [InfinityFree 免费虚拟主机](https://tokens.yangtokent.com/hosting/offers/infinityfree/): 5 GB、400 个数据库、PHP 8.4、50,000 hits/日。无需信用卡。核实于 2026-11-13。
+- [Byet.host 免费虚拟主机](https://tokens.yangtokent.com/hosting/offers/byet-host/): 5 GB NVMe、无限数据库、PHP 8.3、VistaPanel。无需信用卡。核实于 2026-11-13。
+- [x10Hosting 免费虚拟主机](https://tokens.yangtokent.com/hosting/offers/x10hosting/): 500 MB 初始空间、2 个数据库、DirectAdmin。无需信用卡。核实于 2026-11-13。
+- [AwardSpace 免费虚拟主机](https://tokens.yangtokent.com/hosting/offers/awardspace/): 1 GB、每月 5 GB、1 个数据库、Zacky。KB 页面更新于 2024-07-13。核实于 2026-11-13。
+- [HelioHost 免费虚拟主机](https://tokens.yangtokent.com/hosting/offers/heliohost/): 1000 MB、Plesk、PHP 5/7/8、负载单位。核实于 2026-11-13。
+- [GoogieHost 免费虚拟主机](https://tokens.yangtokent.com/hosting/offers/googiehost/): 1000 MB NVMe、DirectAdmin、免费 SSL。无需信用卡。核实于 2026-11-13。
+- [FreeHosting.com 免费虚拟主机](https://tokens.yangtokent.com/hosting/offers/freehosting-com/): 10 GB、必须自有域名、SSL 附加包。无需信用卡。核实于 2026-11-13。
+- [FreeHostia Chocolate 免费虚拟主机](https://tokens.yangtokent.com/hosting/offers/freehostia/): 250 MB、每月 6 GB、Let's Encrypt、1 年续期。核实于 2026-11-13。
+- [ProFreeHost 免费虚拟主机](https://tokens.yangtokent.com/hosting/offers/profreehost/): 5 GB、10 个数据库、PHP 8.4、自签名 SSL；部分信息未确认。核实于 2026-11-13。
+- [TinkerHost 免费虚拟主机](https://tokens.yangtokent.com/hosting/offers/tinkerhost/): 5 GiB、每月 100 GB、免费 SSL；部分信息未确认。核实于 2026-11-13。
+- [000webhost 已停服档案](https://tokens.yangtokent.com/hosting/offers/000webhost-archive/): 2024-07-08 停新用户、2024-10-14 全面停服。核实于 2026-11-13。
+
+## 虚拟主机对比
+
+- [四家免费虚拟主机对比](https://tokens.yangtokent.com/hosting/compare/four-hosts-overview/): InfinityFree、Byet.host、x10Hosting、AwardSpace 逐项对照。
+- [虚拟主机 vs VPS vs 静态托管](https://tokens.yangtokent.com/hosting/compare/hosting-vs-vps-vs-static/): 能力边界对照：WordPress、Discourse、Node 应用。
+- [InfinityFree vs Byet.host](https://tokens.yangtokent.com/hosting/compare/infinityfree-vs-byet/): 数据库、PHP、SSL、面板、限额透明度、闲置政策。
+- [免费虚拟主机总表](https://tokens.yangtokent.com/hosting/compare/all-hosts-table/): 10 家参数一览。
+- [GoogieHost vs FreeHosting.com vs FreeHostia](https://tokens.yangtokent.com/hosting/compare/small-space-trio/): 子域名、SSL、数据库三个决策点。
+
+## 虚拟主机指南
+
+- [5 步用免费虚拟主机建 WordPress](https://tokens.yangtokent.com/hosting/guides/wordpress-5-steps/): 选主机、注册、建站、一键安装、上线检查。
+- [免费虚拟主机避坑与备份](https://tokens.yangtokent.com/hosting/guides/pitfalls-backups/): 闲置天数表、备份责任、仿冒官网。
+- [免费虚拟主机国内访问](https://tokens.yangtokent.com/hosting/guides/china-access/): 服务器位置、Cloudflare、备案提醒。
+- [hits 与 CPU 限额怎么算](https://tokens.yangtokent.com/hosting/guides/hits-cpu-limits/): hits 算法、HelioHost 负载单位、x10 规则。
+- [免费子域名 vs 自有域名](https://tokens.yangtokent.com/hosting/guides/subdomain-vs-domain/): 后缀列表、绑定、Cloudflare 限制。
+- [从 000webhost 迁移](https://tokens.yangtokent.com/hosting/guides/migrate-from-000webhost/): 停服事实、数据恢复、迁移目标对照。
 
 ## English edition
 

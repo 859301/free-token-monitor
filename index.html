@@ -17,7 +17,7 @@
       "@type": "Organization",
       "name": "免费 Token 监控平台",
       "url": "https://tokens.yangtokent.com/",
-      "description": "给 Agent 的免费口粮：只收厂商官方核对过的免费额度。"
+      "description": "给 Agent 的免费口粮：额度信息来自厂商官方页。"
     },
     {
       "@type": "WebSite",
@@ -95,7 +95,7 @@
 <header>
   <div class="wrap">
     <h1>免费 Token 监控平台</h1>
-    <p>给 Agent 的免费口粮：只收厂商官方核对过的免费额度。数据来自 data/offers.json，领取前请以厂商官方页为准。</p>
+    <p>给 Agent 的免费口粮：额度信息来自厂商官方页。领取前请以厂商官方页为准。</p>
     <div class="stats">
       <div class="stat"><div class="num" id="stat-today">–</div><div class="label">今日可领（本周期未领）</div></div>
       <div class="stat"><div class="num" id="stat-daily">–</div><div class="label">每日口粮条数</div></div>
@@ -105,7 +105,7 @@
     </div>
   </div>
 </header>
-<nav><div class="wrap"><a href="./" aria-current="page">首页</a><a href="vps/">免费 VPS</a><a href="wool/">羊毛 VPS</a><a href="cheap/">低价 VPS</a><a href="offers/">额度详情</a><a href="compare/">对比</a><a href="guides/">指南</a><a href="faq/">常见问题</a><a href="en/">English</a></div></nav>
+<nav><div class="wrap"><a href="./" aria-current="page">首页</a><a href="vps/">免费 VPS</a><a href="wool/">羊毛 VPS</a><a href="cheap/">低价 VPS</a><a href="hosting/">免费虚拟主机</a><a href="offers/">额度详情</a><a href="compare/">对比</a><a href="guides/">指南</a><a href="faq/">常见问题</a><a href="en/">English</a></div></nav>
 <main>
   <div class="wrap">
     <div class="vps-banner">
@@ -115,13 +115,18 @@
     </div>
     <div class="vps-banner">
       <h2>新增：羊毛 VPS 板块</h2>
-      <p>6 条在架羊毛：4 个试用额度（Vultr、Hetzner、Akamai、DigitalOcean）、1 个任务续费主机（三丰云，仅规格已核实）、1 个沙箱额度（Simular Box，条款说法冲突）。有效期、绑卡、争议与风险逐条写明，与免费严格区分。</p>
+      <p>6 条羊毛：4 个试用额度（Vultr、Hetzner、Akamai、DigitalOcean）、1 个任务续费主机（三丰云，仅规格已核实）、1 个沙箱额度（Simular Box，条款说法冲突）。有效期、绑卡、争议与风险逐条写明。</p>
       <p><a href="wool/">查看羊毛 VPS →</a></p>
     </div>
     <div class="vps-banner">
       <h2>新增：低价 VPS 板块</h2>
-      <p>3 家常态价在架：RackNerd（$21.99/年起，终身同价续费）、HostEONS（$21/年起，续费价未注明）、DigitalOcean（$4/月起，按月封顶）。只收常态价，续费条件写明；限时促销归羊毛区。</p>
+      <p>3 家常态价：RackNerd（$21.99/年起，终身同价续费）、HostEONS（$21/年起，续费价未注明）、DigitalOcean（$4/月起，按月封顶）。均为常态价，续费条件写明；限时促销见羊毛区。</p>
       <p><a href="cheap/">查看低价 VPS →</a></p>
+    </div>
+    <div class="vps-banner">
+      <h2>新增：免费虚拟主机板块</h2>
+      <p>10 家免费虚拟主机（PHP + MySQL，可装 WordPress）：空间、流量、数据库、PHP 版本、SSL、闲置与删站政策逐条列出；2 家部分信息未确认，另有 000webhost 已停服档案。</p>
+      <p><a href="hosting/">查看免费虚拟主机 →</a></p>
     </div>
     <div class="controls">
       <input type="search" id="q" placeholder="搜索标题或厂商…" aria-label="搜索">
@@ -157,11 +162,11 @@
     <div id="error"></div>
     <div class="grid" id="grid"></div>
   </div>
-<div class="wrap"><section class="faq-section" id="faq"><h2>常见问题</h2><p>按用户实际提问的措辞整理，答案以本站核对的额度数据为准。<a href="faq/">查看 18 个问题的完整回答</a>。</p><details><summary>有哪些完全免费且无需绑定信用卡的 AI API？</summary><p>本站在架的 43 条额度里，按核对的门槛字段明确要求绑卡的只有 2 条（Cerebras、Vercel AI Gateway）；其余都不要求绑卡，用首页「免绑卡」筛选即可。领取前仍以厂商官方页为准。</p></details><details><summary>免费 AI API 的限速指标 RPM、RPD、TPM 分别代表什么？额度多久重置？</summary><p>RPM 是每分钟请求数，RPD 是每天请求数，TPM 是每分钟 Token 数；重置时间各家不同，本站每条的「重置」字段都写明了，例如 Cloudflare 在每天 00:00 UTC（北京时间 08:00）重置。</p></details><details><summary>免费额度到期/用完会扣钱吗？会不会自动转付费？</summary><p>分三种：用完即停、用完转按量计费、需手动开通后付费才继续计费。本站每条的「注意」事项写明了已知情况，领取前务必在厂商官方页确认有没有「用完即停」类开关。</p></details><details><summary>官方网页版聊天免费与开放平台 API 免费额度是互通的吗？</summary><p>不互通。网页版聊天免费不等于 API 免费，额度、模型、计费各自独立；网页版能用的模型，API 里可能要单独付费或根本没有。</p></details><details><summary>为什么部分免费模型无法直接接入 Codex CLI 或 Claude Code？</summary><p>协议不匹配：Claude Code 要求 Anthropic 协议，Codex CLI 要求 Responses API，普通 OpenAI Chat Completions 密钥不能直接用；需要确认工具支持的协议和模型是否支持工具调用。</p></details><details><summary>免费 AI API 的 Base URL 怎么填？需要加 /chat/completions 吗？</summary><p>看工具要求：有的工具要求填到 /v1，有的工具要求填完整路径，重复加 /chat/completions 会 404；Base URL 以厂商官方文档为准，工具的填写规则以工具官方文档为准。</p></details><details><summary>这些免费 API 在中国大陆能用吗？需要翻墙吗？</summary><p>本站「国内直连」筛选列出的是核对时标注国内可直连的额度（18 条）；海外厂商的可用性说法不一，需要实时测试。本站未做实时实测，实际以测试结果和厂商官方页为准。</p></details><details><summary>Claude Code 是免费的吗？免费版 Claude 包含 Claude Code 吗？</summary><p>Claude Code 工具本身免费下载，但调用模型要花 API 额度或订阅；Anthropic 的免费套餐不包含 Claude Code。本站没有收录 Claude Code 的免费额度。</p></details><details><summary>遇到 429 怎么办？是等一分钟还是等到明天？</summary><p>看撞的是哪种限速：分钟级（RPM/TPM）等一会儿再试，日级（RPD/TPD）要等到重置时间；不要无脑重试，失败请求也可能计入上限。</p></details><details><summary>免费层的数据会被用来训练模型吗？能用于商业用途吗？</summary><p>各家政策不同。本站只在厂商明确说明时才标注，例如 Gemini 免费层数据可能被用于改进 Google 产品；其余额度的数据与商业用途政策以厂商官方条款为准。</p></details><details><summary>Are free LLM APIs really free?</summary><p>是真的免费，但「免费」分四种形态：长期免费层、注册赠金、周期重置、限时活动；形态不同，有效期、限速、用完后的处理都不同，领取前要看清是哪一种。</p></details><details><summary>Do free AI APIs require a credit card?</summary><p>本站在架的 43 条额度里，按核对的门槛字段明确要求绑卡的只有 2 条（Cerebras、Vercel AI Gateway）；其余都不要求绑卡，但可能要求注册、手机号或实名。</p></details><details><summary>Is Nano Banana / Veo free on the API?</summary><p>不是。App/网页版的免费不等于 API 免费；按调研来源，Nano Banana 图像 API 和 Veo 都没有免费层，创建 API Key 不等于获得免费图片额度。</p></details><details><summary>OpenRouter 免费模型每天 50 次，充 $10 后真的是 1000 次吗？</summary><p>按本站核对的额度原文：20 RPM / 50 次每天，账户充过 $10 后 1000 次每天；失败请求也计入每日上限，免费模型清单会变动。核实于 2026-10-27。</p></details><details><summary>学生优惠还有哪些？Cursor 学生免费 Pro 还能领吗？</summary><p>Cursor 学生免费 Pro 已于 2026-06-25 结束，不能领了。本站在架的学生额度只有 Kiro 学生计划（每月 1,000 Credits × 12 个月，不结转），需学生身份与实名验证。</p></details><details><summary>Claude Max / ChatGPT 订阅送的 API 额度怎么领？能用于 Claude Code 吗？</summary><p>通过关联的 Console 组织领取；按调研来源，这类额度不能用于交互式 Claude Code。本站未收录这类捆绑额度，领取前请以 Anthropic / OpenAI 官方页为准。</p></details><details><summary>免费额度没用完会结转到下个月吗？</summary><p>绝大多数不结转。本站每条的「重置」字段写明了是否结转，例如 ModelScope 每天 250 魔粒「当日不用不结转」，WorkBuddy 500 积分「当月不用作废」，Kiro 学生计划「不跨月结转」。</p></details><details><summary>GitHub Models 还能免费调用吗？</summary><p>不能。GitHub Models 已于 2026-07-30 退役；需要免费大模型 API 的话，看本站在架的其他额度，例如 Gemini、Groq、OpenRouter、智谱 GLM Flash。</p></details><p><a href="faq/">查看全部 18 个常见问题 →</a></p></section></div>
+<div class="wrap"><section class="faq-section" id="faq"><h2>常见问题</h2><p>按用户实际提问的措辞整理，答案以额度数据为准。<a href="faq/">查看 18 个问题的完整回答</a>。</p><details><summary>有哪些完全免费且无需绑定信用卡的 AI API？</summary><p>43 条额度里，按门槛字段明确要求绑卡的只有 2 条（Cerebras、Vercel AI Gateway）；其余都不要求绑卡，用首页「免绑卡」筛选即可。领取前仍以厂商官方页为准。</p></details><details><summary>免费 AI API 的限速指标 RPM、RPD、TPM 分别代表什么？额度多久重置？</summary><p>RPM 是每分钟请求数，RPD 是每天请求数，TPM 是每分钟 Token 数；重置时间各家不同，每条的「重置」字段都写明了，例如 Cloudflare 在每天 00:00 UTC（北京时间 08:00）重置。</p></details><details><summary>免费额度到期/用完会扣钱吗？会不会自动转付费？</summary><p>分三种：用完即停、用完转按量计费、需手动开通后付费才继续计费。每条的「注意」事项写明了已知情况，领取前务必在厂商官方页确认有没有「用完即停」类开关。</p></details><details><summary>官方网页版聊天免费与开放平台 API 免费额度是互通的吗？</summary><p>不互通。网页版聊天免费不等于 API 免费，额度、模型、计费各自独立；网页版能用的模型，API 里可能要单独付费或根本没有。</p></details><details><summary>为什么部分免费模型无法直接接入 Codex CLI 或 Claude Code？</summary><p>协议不匹配：Claude Code 要求 Anthropic 协议，Codex CLI 要求 Responses API，普通 OpenAI Chat Completions 密钥不能直接用；需要确认工具支持的协议和模型是否支持工具调用。</p></details><details><summary>免费 AI API 的 Base URL 怎么填？需要加 /chat/completions 吗？</summary><p>看工具要求：有的工具要求填到 /v1，有的工具要求填完整路径，重复加 /chat/completions 会 404；Base URL 以厂商官方文档为准，工具的填写规则以工具官方文档为准。</p></details><details><summary>这些免费 API 在中国大陆能用吗？需要翻墙吗？</summary><p>「国内直连」筛选列出的是核对时标注国内可直连的额度（18 条）；海外厂商的可用性说法不一，需要实时测试。实际以测试结果和厂商官方页为准。</p></details><details><summary>Claude Code 是免费的吗？免费版 Claude 包含 Claude Code 吗？</summary><p>Claude Code 工具本身免费下载，但调用模型要花 API 额度或订阅；Anthropic 的免费套餐不包含 Claude Code。没有 Claude Code 的免费额度可领。</p></details><details><summary>遇到 429 怎么办？是等一分钟还是等到明天？</summary><p>看撞的是哪种限速：分钟级（RPM/TPM）等一会儿再试，日级（RPD/TPD）要等到重置时间；不要无脑重试，失败请求也可能计入上限。</p></details><details><summary>免费层的数据会被用来训练模型吗？能用于商业用途吗？</summary><p>各家政策不同。只在厂商明确说明时标注，例如 Gemini 免费层数据可能被用于改进 Google 产品；其余额度的数据与商业用途政策以厂商官方条款为准。</p></details><details><summary>Are free LLM APIs really free?</summary><p>是真的免费，但「免费」分四种形态：长期免费层、注册赠金、周期重置、限时活动；形态不同，有效期、限速、用完后的处理都不同，领取前要看清是哪一种。</p></details><details><summary>Do free AI APIs require a credit card?</summary><p>43 条额度里，按门槛字段明确要求绑卡的只有 2 条（Cerebras、Vercel AI Gateway）；其余都不要求绑卡，但可能要求注册、手机号或实名。</p></details><details><summary>Is Nano Banana / Veo free on the API?</summary><p>不是。App/网页版的免费不等于 API 免费；按调研来源，Nano Banana 图像 API 和 Veo 都没有免费层，创建 API Key 不等于获得免费图片额度。</p></details><details><summary>OpenRouter 免费模型每天 50 次，充 $10 后真的是 1000 次吗？</summary><p>按额度原文：20 RPM / 50 次每天，账户充过 $10 后 1000 次每天；失败请求也计入每日上限，免费模型清单会变动。核实于 2026-10-27。</p></details><details><summary>学生优惠还有哪些？Cursor 学生免费 Pro 还能领吗？</summary><p>Cursor 学生免费 Pro 已于 2026-06-25 结束，不能领了。学生额度只有 Kiro 学生计划（每月 1,000 Credits × 12 个月，不结转），需学生身份与实名验证。</p></details><details><summary>Claude Max / ChatGPT 订阅送的 API 额度怎么领？能用于 Claude Code 吗？</summary><p>通过关联的 Console 组织领取；按调研来源，这类额度不能用于交互式 Claude Code。领取前请以 Anthropic / OpenAI 官方页为准。</p></details><details><summary>免费额度没用完会结转到下个月吗？</summary><p>绝大多数不结转。每条的「重置」字段写明了是否结转，例如 ModelScope 每天 250 魔粒「当日不用不结转」，WorkBuddy 500 积分「当月不用作废」，Kiro 学生计划「不跨月结转」。</p></details><details><summary>GitHub Models 还能免费调用吗？</summary><p>不能。GitHub Models 已于 2026-07-30 退役；需要免费大模型 API 的话，看其他额度，例如 Gemini、Groq、OpenRouter、智谱 GLM Flash。</p></details><p><a href="faq/">查看全部 18 个常见问题 →</a></p></section></div>
 </main>
 <footer>
   <div class="wrap">
-    <p>数据仅供参考，以厂商官方页为准。额度随时可能调整或结束；领取前请看清对方条款，用完记得开「用完即停」防扣费。本站不含邀请链接、API 中转站、二手积分、共享账号等内容。数据来源：蓝蓝仓库、freetokens.fyi，均经厂商官方页核对。领取记录只保存在本浏览器（localStorage），换浏览器或清理数据会重置。</p>
+    <p>数据仅供参考，以厂商官方页为准。额度随时可能调整或结束；领取前请看清对方条款，用完记得开「用完即停」防扣费。无邀请链接、无 API 中转站、无二手积分、无共享账号内容。数据来源：蓝蓝仓库、freetokens.fyi；额度信息以厂商官方页为准。领取记录只保存在本浏览器（localStorage），换浏览器或清理数据会重置。</p>
     <p><a href="./">首页</a> · <a href="offers/">额度详情</a> · <a href="compare/">对比</a> · <a href="guides/">指南</a> · <a href="faq/">常见问题</a></p>
     <p id="meta"></p>
   </div>
@@ -275,7 +280,7 @@
       return da - db;
     });
 
-    document.getElementById('count').textContent = '共 ' + list.length + ' 条在架，当前筛选出 ' + filtered.length + ' 条（北京时间 ' + beijingToday() + '）。';
+    document.getElementById('count').textContent = '共 ' + list.length + ' 条额度，当前筛选出 ' + filtered.length + ' 条（北京时间 ' + beijingToday() + '）。';
     var grid = document.getElementById('grid');
     grid.innerHTML = filtered.map(function (o) {
       var claimed = isClaimed(o);
