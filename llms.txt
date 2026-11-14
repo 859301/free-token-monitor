@@ -14,7 +14,7 @@
 ## 额度详情页
 
 - [:free 免费模型（OpenRouter）](https://tokens.yangtokent.com/offers/openrouter-free/): 20 RPM / 50 次每天；账户充过 $10 后 1000 次每天。门槛：账号。核实于 2026-10-27。
-- [Gemini API 免费层（Google AI Studio）](https://tokens.yangtokent.com/offers/gemini-free-tier/): Gemini Flash 等模型免费层，5–30 RPM / 按模型限日额。门槛：账号。核实于 2026-11-08。
+- [Gemini API 免费层（Google AI Studio）](https://tokens.yangtokent.com/offers/gemini-free-tier/): Gemini Flash、Gemini 4 Hydrogen 等模型免费层，5–30 RPM / 按模型限日额。门槛：账号。核实于 2026-11-14。
 - [Free Plan 高速推理（Groq）](https://tokens.yangtokent.com/offers/groq-free-plan/): 每模型 30 RPM / 1,000 次每天 / 20 万 Token 每天。门槛：账号。核实于 2026-11-08。
 - [每日免费 Neurons（Cloudflare Workers AI）](https://tokens.yangtokent.com/offers/cloudflare-workers-ai/): 每天 10,000 Neurons。门槛：账号。核实于 2026-11-01。
 - [GLM-4.5-Flash / GLM-4.7-Flash 免费模型（智谱 BigModel）](https://tokens.yangtokent.com/offers/zhipu-glm-flash-free/): 官方标注完全免费，并发按账号显示。门槛：账号。核实于 2026-11-08。
@@ -507,7 +507,7 @@
 English detail and comparison pages:
 
 - [:free free models (OpenRouter)](https://tokens.yangtokent.com/en/offers/openrouter-free/): 20 RPM / 50 requests per day; 1,000 per day after a $10 top-up. Verified 2026-10-27.
-- [Gemini API free tier (Google AI Studio)](https://tokens.yangtokent.com/en/offers/gemini-free-tier/): free tier for Gemini Flash and other models, 5–30 RPM / per-model daily caps. Verified 2026-11-08.
+- [Gemini API free tier (Google AI Studio)](https://tokens.yangtokent.com/en/offers/gemini-free-tier/): free tier for Gemini Flash, Gemini 4 Hydrogen and other models, 5–30 RPM / per-model daily caps. Verified 2026-11-14.
 - [Free Plan fast inference (Groq)](https://tokens.yangtokent.com/en/offers/groq-free-plan/): per model 30 RPM / 1,000 requests per day / 200K tokens per day. Verified 2026-11-08.
 - [Daily free Neurons (Cloudflare Workers AI)](https://tokens.yangtokent.com/en/offers/cloudflare-workers-ai/): 10,000 Neurons per day. Verified 2026-11-01.
 - [Speech API signup credits (Deepgram)](https://tokens.yangtokent.com/en/offers/deepgram-signup/): $200 free credits, no card required, never expire. Verified 2026-11-01.
