@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Descope Free Forever 详解：7,500 MAU、10 个租户、3 个 SSO 连接、无超额计费</title>
+<meta name="description" content="Descope Free Forever：$0、7,500 MAU、10 个月活租户、3 个 SSO 连接、1 个联合应用（OIDC）、5 个测试用户、10,000 次 M2M 交换、2,000 MACs、2,000 MATKs；无超额计费，超限须升级 Pro；无自定义域名。核实于 2026-11-14。">
+<link rel="canonical" href="https://tokens.yangtokent.com/auth/offers/descope/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/auth/offers/descope/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/auth/offers/descope/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/auth/offers/descope/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Descope Free Forever 详解：7,500 MAU、10 个租户、3 个 SSO 连接、无超额计费",
+  "description": "Descope Free Forever：$0、7,500 MAU、10 个月活租户、3 个 SSO 连接、1 个联合应用（OIDC）、5 个测试用户、10,000 次 M2M 交换、2,000 MACs、2,000 MATKs；无超额计费，超限须升级 Pro；无自定义域名。核实于 2026-11-14。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-14",
+  "dateModified": "2026-11-14",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/auth/offers/descope/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Descope 免费档包括什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Free Forever $0：7,500 MAU、10 个月活租户、3 个 SSO 连接、1 个联合应用（OIDC）、5 个测试用户、10,000 次 M2M 交换、2,000 MACs、2,000 MATKs，含全部认证方式、RBAC、MFA/分步认证，无 Descope 水印。核实于 2026-11-14。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "超过 7,500 MAU 会怎样？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "无超额计费，超过 7,500 MAU、10 个租户或 3 个 SSO 连接中的任一上限都须升级 Pro；超 MAU 或租户上限后会收到警告邮件与升级宽限期，宽限期过后应用可能失去访问权限，宽限期时长以官方页面为准。核实于 2026-11-14。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Descope 免费档有自定义域名吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "没有。自定义域名从 Pro 起（Pro $249/月起，年付）。核实于 2026-11-14。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">认证与用户管理</a><a href="../../offers/" aria-current="page">认证详情</a><a href="../../compare/">认证对比</a><a href="../../guides/">认证指南</a><a href="../../faq/">认证问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">认证与用户管理</a> / <a href="../">认证详情</a> / Descope Free Forever</p>
+
+<h1>Descope Free Forever</h1>
+<p class="meta">Descope · 核实于 2026-11-14 · 本页更新于 2026-11-14</p>
+<p><span class="tag ok">免费档</span><span class="tag">7,500 MAU</span><span class="tag">3 个 SSO 连接</span><span class="tag warn">超限须升级</span></p>
+<div class="answer"><p>Descope Free Forever：$0，7,500 MAU、10 个月活租户、3 个 SSO 连接、1 个联合应用（OIDC）、5 个测试用户、10,000 次 M2M 交换、2,000 个月活同意书（MACs）、2,000 个月活 token（MATKs），含全部认证方式、RBAC、MFA/分步认证、安全会话管理、无 Descope 水印、社区支持、99% SLA，审计保留 1 周。定价页写明 “No overages. Upgrade required to exceed limits.”（无超额计费，超出上限须升级。）自定义域名从 Pro 起。绑卡要求在官网已读页面中未述，以官方页面为准。核实于 2026-11-14，领取前请以厂商官方页为准。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#facts">规格速览</a></li><li><a href="#definitions">MAU 与租户的定义</a></li><li><a href="#included">免费版包括什么</a></li><li><a href="#overage">超限规则与付费档</a></li><li><a href="#unconfirmed">未确认的信息</a></li><li><a href="#official">官方链接</a></li><li><a href="#risks">注意事项</a></li><li><a href="#faq">常见问题</a></li></ul></div>
+<h2 id="facts">规格速览</h2><div class="tablewrap"><table class="fact"><tbody><tr><th>免费内容</th><td>7,500 MAU、10 个月活租户、3 个 SSO 连接、1 个联合应用（OIDC）</td></tr><tr><th>提供方</th><td>Descope</td></tr><tr><th>计划名</th><td>Free Forever</td></tr><tr><th>时长</th><td>免费档（计划名 Free Forever）</td></tr><tr><th>绑卡与验证</th><td>官网已读页面未说明，以官方页面为准</td></tr><tr><th>测试用户</th><td>5 个</td></tr><tr><th>M2M 交换</th><td>10,000 次</td></tr><tr><th>MACs / MATKs</th><td>各 2,000 个</td></tr><tr><th>认证与安全</th><td>全部认证方式、RBAC、MFA/分步认证、安全会话管理、无 Descope 水印</td></tr><tr><th>短信与邮件投递</th><td>Descope 投递：短信/语音每月至多 100 次，邮件每天至多 1,000 封；自带连接器不限</td></tr><tr><th>审计保留</th><td>1 周（仅 Descope 界面查看）</td></tr><tr><th>自定义域名</th><td>无（Pro 起）</td></tr><tr><th>超限规则</th><td>无超额计费；超任一上限须升级 Pro；超 MAU 或租户上限后有警告邮件与升级宽限期，宽限期时长未述</td></tr><tr><th>付费档</th><td>Pro $249/月起（年付）；Growth $799/月起（年付）</td></tr><tr><th>核实日期</th><td>2026-11-14</td></tr><tr><th>来源</th><td>Descope 官网定价页（<a href="https://www.descope.com/pricing" target="_blank" rel="noopener noreferrer">官方页</a>）</td></tr></tbody></table></div><h2 id="definitions">MAU 与租户的定义</h2><p>MAU：1 个月内注册或登录的用户（“any user of your application that engages with Descope’s platform by signing up or signing in over a 1-month time period”），同一用户多次登录不重复计费。租户：B2B 应用的客户（有时称 account），一个租户可有多个用户。活跃租户：租户关联 2 名以上用户且至少 1 名当月登录。SSO 连接：租户与身份提供方之间用 SAML/OIDC 的连接，一个租户可有多个 SSO 连接，每个已配置的连接都计入。</p><h2 id="included">免费版包括什么</h2><p>Free Forever 包括：7,500 MAU、10 个月活租户、3 个 SSO 连接、1 个联合应用（OIDC）、5 个测试用户、10,000 次 M2M 交换、2,000 MACs、2,000 MATKs；全部认证方式（生物识别/Passkey、邮件魔法链接、邮件 OTP、认证器应用、社交登录）、RBAC、安全会话管理、自适应 MFA 与分步认证、自助管理小部件、第三方连接器、无 Descope 水印、社区支持、99% SLA。Descope 投递的短信/语音每月至多 100 次、邮件每天至多 1,000 封；用自带连接器投递不限量。另有 Hello World Startup Plan：初创企业申请通过后 Pro 档免费 1 年，与 Free Forever 免费档不同。</p><h2 id="overage">超限规则与付费档</h2><p>定价页写明 “No overages. Upgrade required to exceed limits.”FAQ 写明：超过 7,500 MAU、10 个租户或 3 个 SSO 连接中的任一上限，都必须升级到 Pro；服务不会立即中断，超 MAU 或租户上限后会收到警告邮件与升级宽限期，宽限期过后应用可能失去 Descope 访问权限；宽限期时长在官网已读页面中未述，以官方页面为准。Pro $249/月起（年付），Growth $799/月起（年付）。定价表写 Pro 含 10,000 MAU，FAQ 举例写 Pro 含 7,500 MAU，两处说法不一致，以官方页面为准。超限规则的完整对照见<a href="../../guides/auth-overage-rules/">认证额度超了怎么办</a>。</p><h2 id="unconfirmed">未确认的信息</h2><p>绑卡要求：官网已读页面未说明，以官方页面为准。宽限期时长：官网已读页面未述，以官方页面为准。社交登录数量上限：官网已读页面只写社交登录包含在内，未写数量，以官方页面为准。Pro 含 MAU 数：定价表与 FAQ 举例说法不一致（10,000 与 7,500），以官方页面为准。</p><h2 id="official">官方链接</h2>
+<p><a class="btn" href="https://www.descope.com/pricing" target="_blank" rel="noopener noreferrer">去厂商官方页</a></p><h2 id="risks">注意事项</h2><ul><li>任一上限（7,500 MAU、10 个租户、3 个 SSO 连接）超了都须升级 Pro</li><li>无自定义域名，自定义域名从 Pro 起</li><li>Descope 投递的短信/语音每月至多 100 次、邮件每天至多 1,000 封</li><li>审计保留 1 周，仅 Descope 界面查看</li></ul>
+<h2 id="faq">常见问题</h2><details><summary>Descope 免费档包括什么？</summary><p>Free Forever $0：7,500 MAU、10 个月活租户、3 个 SSO 连接、1 个联合应用（OIDC）、5 个测试用户、10,000 次 M2M 交换、2,000 MACs、2,000 MATKs，含全部认证方式、RBAC、MFA/分步认证，无 Descope 水印。核实于 2026-11-14。</p></details><details><summary>超过 7,500 MAU 会怎样？</summary><p>无超额计费，超过 7,500 MAU、10 个租户或 3 个 SSO 连接中的任一上限都须升级 Pro；超 MAU 或租户上限后会收到警告邮件与升级宽限期，宽限期过后应用可能失去访问权限，宽限期时长以官方页面为准。核实于 2026-11-14。</p></details><details><summary>Descope 免费档有自定义域名吗？</summary><p>没有。自定义域名从 Pro 起（Pro $249/月起，年付）。核实于 2026-11-14。</p></details>
+<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-14。条款随时可能调整或结束，领取前请以厂商官方页为准。</div>
+<div class="related"><h2>相关页面</h2><ul><li><a href="../kinde/">Kinde Free</a></li><li><a href="../../compare/descope-vs-kinde/">Descope vs Kinde</a></li><li><a href="../../compare/all-auth-table/">认证总表</a></li><li><a href="../../guides/sso-connection-counting/">SSO/SCIM 连接怎么计数</a></li><li><a href="../../guides/mfa-custom-domain-gates/">MFA 与自定义域名对照</a></li><li><a href="../../../database/offers/supabase/">Supabase 免费档（数据库板块）</a></li><li><a href="../../../database/offers/firebase/">Firebase 免费额度（数据库板块）</a></li><li><a href="../../faq/">认证常见问题</a></li><li><a href="../../">返回认证与用户管理列表</a></li></ul></div>
+
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">认证与用户管理</a> · <a href="../../offers/">认证详情</a> · <a href="../../compare/">认证对比</a> · <a href="../../guides/">认证指南</a> · <a href="../../faq/">认证问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
