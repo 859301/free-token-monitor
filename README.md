@@ -173,3 +173,9 @@ MIT License，见 [LICENSE](LICENSE)。
 - 新增 30 页英文：3 个板块列表页（部署与托管、免费数据库、域名 / DNS / CDN / SSL）、18 篇详情页、6 篇对比、3 个 Hub 页；问答页由 23 问扩充至 41 问。
 - 新增英文数据文件 `data/deploy-en.json`、`data/database-en.json`、`data/domain-en.json`：规则同首批（文本译为英文，事实与中文数据文件完全一致）。
 - 英文页导航与页脚新增三个板块链接；30 个中文对应页加 hreflang 回链（仅 head 三行）；对比页英文版集中在 `en/compare/` 下。
+
+### 第三批（2026-11-14）
+
+- 新增 76 页英文：7 个板块列表页（邮件、监控分析、支付变现、认证、对象存储、代码托管、免费虚拟主机）+ 工作流总览页、33 篇详情页、28 篇对比、7 个 Hub 页；问答页由 41 问扩充至 80 问；对比 Hub 增至 40 篇。
+- 新增英文数据文件 `data/email-en.json`、`data/monitoring-en.json`、`data/payments-en.json`、`data/auth-en.json`、`data/storage-en.json`、`data/code-en.json`、`data/hosting-en.json`：规则同前批（文本译为英文，事实与中文数据文件完全一致）。
+- 英文页导航与页脚新增八个板块链接；76 个中文对应页加 hreflang 回链（仅 head 三行）；对比页英文版集中在 `en/compare/` 下；英文版至此覆盖全部内容板块（指南不译）。
