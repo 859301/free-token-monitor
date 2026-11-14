@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upstash Workflow Free explained: 1,000 steps a day, retry and parallel step counting</title>
+<meta name="description" content="Upstash Workflow Free tier: 1,000 steps a day, 1 MB maximum message size, maximum parallelism 10; a step is one call from the QStash server to the Workflow URL or an external URL; retries count as extra steps, parallel steps count as two steps. Verified 2026-11-14.">
+<link rel="canonical" href="https://tokens.yangtokent.com/en/schedule/offers/upstash-workflow/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/schedule/offers/upstash-workflow/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/schedule/offers/upstash-workflow/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/schedule/offers/upstash-workflow/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Upstash Workflow Free explained: 1,000 steps a day, retry and parallel step counting",
+  "description": "Upstash Workflow Free tier: 1,000 steps a day, 1 MB maximum message size, maximum parallelism 10; a step is one call from the QStash server to the Workflow URL or an external URL; retries count as extra steps, parallel steps count as two steps. Verified 2026-11-14.",
+  "inLanguage": "en",
+  "datePublished": "2026-11-14",
+  "dateModified": "2026-11-14",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/en/schedule/offers/upstash-workflow/",
+  "author": {
+    "@type": "Organization",
+    "name": "Free Token Monitor",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Free Token Monitor",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is one step?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A step is one call from the QStash server to the Workflow URL or an external URL."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are parallel steps and retries counted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each step in a parallel run costs 1 extra step, retries count as extra steps, and context.call and context.invoke count as 2 steps each."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens past 1,000 steps a day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The daily step limit is a soft limit; short spikes do not block step executions immediately; at the limit, QStash returns errors, the SDK throttles and retries, and a run fails into the DLQ once the retry limit is reached; sustained overuse may bring an upgrade contact or quota-error failures."
+      }
+    }
+  ]
+}
+</script>
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">Free Token Monitor</a></h1>
+<p>Free credits for agents: only vendor-verified offers. Check the official page before claiming.</p></div></header>
+<nav><div class="wrap"><a href="../../../">Home</a><a href="../../../vps/">Free VPS</a><a href="../../../wool/">VPS Deals</a><a href="../../../cheap/">Cheap VPS</a><a href="../../../deploy/">Deploy &amp; Hosting</a><a href="../../../database/">Databases</a><a href="../../../domain/">Domains &amp; DNS</a><a href="../../../code/">Code Hosting</a><a href="../../../auth/">Auth</a><a href="../../../storage/">Storage</a><a href="../../../email/">Email</a><a href="../../../monitoring/">Monitoring</a><a href="../../../payments/">Payments</a><a href="../../../hosting/">Web Hosting</a><a href="../../../schedule/" aria-current="page">Scheduled Tasks</a><a href="../../../workflow/">Workflow</a><a href="../../../offers/">Offer details</a><a href="../../../compare/">Comparisons</a><a href="../../../faq/">FAQ</a><a href="../../../../schedule/offers/upstash-workflow/">中文</a></div></nav>
+<main><div class="wrap">
+
+<p class="crumb"><a href="../../../">Home</a> › <a href="../../">Scheduled Tasks &amp; Queues</a> › <a href="../">Details</a> › Upstash Workflow Free explained</p><h1>Upstash Workflow Free explained</h1><p class="meta">Published 2026-11-14 · Updated 2026-11-14 · Source: <a href="https://upstash.com/pricing/workflow">Upstash official Workflow pricing page</a> · Verified 2026-11-14</p><p><span class="tag">Free tier</span><span class="tag">Workflow</span><span class="tag">1,000 steps a day</span><span class="tag">Retries count as extra steps</span></p><div class="answer"><p>The Upstash Workflow Free tier provides 1,000 steps a day, 1 MB maximum message size, and maximum parallelism 10. A step is one call from the QStash server to the Workflow URL or an external URL; context.call and context.invoke count as 2 steps each, each step in a parallel run costs 1 extra step, and retries count as extra steps. Verified 2026-11-14; check the official page before claiming.</p></div><div class="toc"><strong>On this page</strong><ul><li><a href="#spec">Spec summary</a></li><li><a href="#s0">How steps are counted</a></li><li><a href="#s1">Overage and failure handling</a></li><li><a href="#s2">Relationship to QStash</a></li><li><a href="#overage">Overage and paid tiers</a></li><li><a href="#unconfirmed">Unconfirmed information</a></li><li><a href="#official">Official link</a></li><li><a href="#risks">Things to watch</a></li><li><a href="#faq">FAQ</a></li></ul></div><h2 id="spec">Spec summary</h2><div class="tablewrap"><table class="fact"><tbody><tr><th>Free allowance</th><td>1,000 steps a day, 1 MB maximum message size, maximum parallelism 10</td></tr><tr><th>Provider</th><td>Upstash</td></tr><tr><th>Plan name</th><td>Free</td></tr><tr><th>Duration</th><td>Free tier (the official pages read do not state permanent wording — check the official page)</td></tr><tr><th>Card and verification</th><td>Card requirements are not stated on the official pages read — check the official page</td></tr><tr><th>Step definition</th><td>A step is one call from the QStash server to the Workflow URL or an external URL</td></tr><tr><th>Counting rules</th><td>context.run, sleep, sleepUntil, and waitForEvent generate 1 step each; context.call and context.invoke generate 2 steps each; each step in a parallel run costs 1 extra step; retries count as extra steps</td></tr><tr><th>Overage rules</th><td>Daily step and monthly bandwidth limits are soft limits; short spikes do not block step executions immediately; continued overuse brings a contact about an upgrade, and over time workflow runs may fail with quota errors</td></tr><tr><th>Paid tiers</th><td>Pay as You Go $1 per 100K steps; Fixed 1M $180/month; Fixed 10M $420/month</td></tr><tr><th>Verified</th><td>2026-11-14</td></tr><tr><th>Source</th><td><a href="https://upstash.com/pricing/workflow">Upstash official Workflow pricing page</a></td></tr></tbody></table></div><h2 id="s0">How steps are counted</h2><p>A step is one call from the QStash server to the Workflow URL or an external URL. context.run, context.sleep, context.sleepUntil, and context.waitForEvent generate 1 billed step each; context.call and context.invoke generate 2 billed steps each; each step in a parallel run costs 1 extra step; retries count as extra steps.</p><p>Under those rules, a workflow with parallel branches and repeated retries consumes far more steps than the step count alone suggests.</p><h2 id="s1">Overage and failure handling</h2><p>Daily step and monthly bandwidth limits are soft limits; short spikes do not block step executions immediately; continued overuse brings a contact about an upgrade, and over time workflow runs may fail with quota errors. When the daily step limit is reached, QStash starts returning errors, the SDK throttles and retries after a short delay, and a run fails into the DLQ once the retry limit is reached.</p><p>A request body over the size limit at trigger time returns HTTP 412, and the SDK marks the run as failed and records it in the DLQ; oversized responses between steps also fail the run into the DLQ.</p><h2 id="s2">Relationship to QStash</h2><p>Workflow is built on QStash, and step metering follows the QStash delivery model. QStash Free tier delay, DLQ retention, and log retention figures do not transfer to Workflow; the Workflow pricing page read does not state those figures — check the official page.</p><h2 id="overage">Overage and paid tiers</h2><p>Daily step and monthly bandwidth limits are soft limits; short spikes do not block step executions immediately; continued overuse brings a contact about an upgrade, and over time workflow runs may fail with quota errors. Paid tiers: Pay as You Go $1 per 100K steps; Fixed 1M $180/month; Fixed 10M $420/month.</p><h2 id="unconfirmed">Unconfirmed information</h2><ul><li>Free tier bandwidth: not stated on the pricing page read.</li><li>Maximum delay: not stated on the pricing page read.</li><li>DLQ retention and log retention: not stated on the pricing page read.</li><li>Active schedule count: not stated on the pricing page read.</li><li>Card requirements and permanent wording: not stated on the pricing page read.</li></ul><h2 id="official">Official link</h2><p><a class="btn" href="https://upstash.com/pricing/workflow">Visit the official page</a></p><h2 id="risks">Things to watch</h2><ul><li>context.call and context.invoke count as 2 steps each, each parallel step costs 1 extra step, and retries count additionally</li><li>Bandwidth, maximum delay, DLQ retention, log retention, and active schedule counts for the Free tier are not stated on the pricing page read — check the official page</li><li>A request body over the size limit at trigger time returns HTTP 412, and the run fails into the DLQ</li></ul><h2 id="faq">FAQ</h2><details><summary>What is one step?</summary><p>A step is one call from the QStash server to the Workflow URL or an external URL.</p></details><details><summary>How are parallel steps and retries counted?</summary><p>Each step in a parallel run costs 1 extra step, retries count as extra steps, and context.call and context.invoke count as 2 steps each.</p></details><details><summary>What happens past 1,000 steps a day?</summary><p>The daily step limit is a soft limit; short spikes do not block step executions immediately; at the limit, QStash returns errors, the SDK throttles and retries, and a run fails into the DLQ once the retry limit is reached; sustained overuse may bring an upgrade contact or quota-error failures.</p></details><div class="note"><p>Information above was verified 2026-11-14 against vendor official pages. Free allowances and terms can change or end at any time; check the official page before claiming.</p></div><div class="related"><h3>Related pages</h3><p><a href="../qstash/">QStash Free tier</a></p><p><a href="../../../compare/queue-services/">Queue and workflow service comparison</a></p><p><a href="../../../workflow/">Workflow</a></p></div>
+
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">Home</a> · <a href="../../../vps/">Free VPS</a> · <a href="../../../wool/">VPS Deals</a> · <a href="../../../cheap/">Cheap VPS</a> · <a href="../../../deploy/">Deploy &amp; Hosting</a> · <a href="../../../database/">Databases</a> · <a href="../../../domain/">Domains &amp; DNS</a> · <a href="../../../code/">Code Hosting</a> · <a href="../../../auth/">Auth</a> · <a href="../../../storage/">Storage</a> · <a href="../../../email/">Email</a> · <a href="../../../monitoring/">Monitoring</a> · <a href="../../../payments/">Payments</a> · <a href="../../../hosting/">Web Hosting</a> · <a href="../../../schedule/">Scheduled Tasks</a> · <a href="../../../workflow/">Workflow</a> · <a href="../../../offers/">Offer details</a> · <a href="../../../compare/">Comparisons</a> · <a href="../../../faq/">FAQ</a> · <a href="../../../../schedule/offers/upstash-workflow/">中文</a></p><p>Data is for reference only — check the vendor’s official page. Every schedule entry was verified against a vendor official page; verification dates are on each page. Free tiers and limits can change or end at any time; read the vendor’s terms before claiming. No invite links.</p></div></footer>
+</body>
+</html>
