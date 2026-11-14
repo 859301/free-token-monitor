@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Standalone object storage vs database-bundled storage: R2, B2, Supabase, Firebase</title>
+<meta name="description" content="Standalone object storage vs database-bundled storage: R2 and B2 are standalone services; Supabase Storage comes with the Supabase plan with 1 GB file storage; Firebase Storage reads Not applicable in the Spark plan column, with free allowances in the Blaze column. Verified 2026-11-13.">
+<link rel="canonical" href="https://tokens.yangtokent.com/en/compare/storage-included/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/compare/storage-included/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/storage/compare/storage-included/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/storage/compare/storage-included/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Standalone vs database-bundled storage",
+  "description": "Standalone object storage vs database-bundled storage: R2 and B2 are standalone services; Supabase Storage comes with the Supabase plan with 1 GB file storage; Firebase Storage reads Not applicable in the Spark plan column, with free allowances in the Blaze column. Verified 2026-11-13.",
+  "inLanguage": "en",
+  "datePublished": "2026-11-14",
+  "dateModified": "2026-11-14",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/en/compare/storage-included/",
+  "author": {
+    "@type": "Organization",
+    "name": "Free Token Monitor",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Free Token Monitor",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Supabase Storage a standalone service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Supabase Storage comes with the Supabase plan, holding 1 GB file storage; details are on the database Supabase detail page. Verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Firebase Storage have free allowances under the Spark plan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The pricing page Spark plan column reads “Not applicable”; free allowances sit in the Blaze column. Details are on the database Firebase detail page. Verified 2026-11-13."
+      }
+    }
+  ]
+}
+</script>
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../">Free Token Monitor</a></h1>
+<p>Free credits for agents: only vendor-verified offers. Check the official page before claiming.</p></div></header>
+<nav><div class="wrap"><a href="../../">Home</a><a href="../../vps/">Free VPS</a><a href="../../wool/">VPS Deals</a><a href="../../cheap/">Cheap VPS</a><a href="../../deploy/">Deploy &amp; Hosting</a><a href="../../database/">Databases</a><a href="../../domain/">Domains &amp; DNS</a><a href="../../code/">Code Hosting</a><a href="../../auth/">Auth</a><a href="../../storage/">Storage</a><a href="../../email/">Email</a><a href="../../monitoring/">Monitoring</a><a href="../../payments/">Payments</a><a href="../../hosting/">Web Hosting</a><a href="../../workflow/">Workflow</a><a href="../../offers/">Offer details</a><a href="../" aria-current="page">Comparisons</a><a href="../../faq/">FAQ</a><a href="../../../storage/compare/storage-included/">中文</a></div></nav>
+<main><div class="wrap">
+
+<article>
+<p class="crumb"><a href="../../">Home</a> / <a href="../">Comparisons</a> / Standalone vs database-bundled storage</p>
+
+<h1>Standalone vs database-bundled storage</h1>
+<p class="meta">Updated 2026-11-14 · Table data from vendor official pages (verified 2026-11-13)</p>
+<div class="answer"><p><b>Short answer:</b> R2 and B2 are standalone object storage services; Supabase Storage comes with the Supabase plan, holding 1 GB file storage; Firebase Storage reads “Not applicable” in the pricing page Spark plan column, with free allowances in the Blaze column. Bundled-storage details are on the database detail pages, linked in the table below.</p></div>
+<h2>Comparison table</h2><div class="tablewrap"><table><thead><tr><th>Service</th><th>Form</th><th>Storage (official wording)</th><th>Egress (official wording)</th><th>Details</th></tr></thead><tbody><tr><td><b><a href="../../storage/offers/cloudflare-r2/">Cloudflare R2</a></b></td><td>Standalone service</td><td>Monthly free 10 GB-month</td><td>No egress charges for any storage class</td><td><a href="../../storage/offers/cloudflare-r2/">Detail page</a></td></tr><tr><td><b><a href="../../storage/offers/backblaze-b2/">Backblaze B2</a></b></td><td>Standalone service</td><td>Pay-as-you-go $6.95/TB/30 days, no free tier</td><td>Free up to 3x average monthly stored data, $0.01/GB beyond that</td><td><a href="../../storage/offers/backblaze-b2/">Detail page</a></td></tr><tr><td><b>Supabase Storage</b></td><td>Provided with the Supabase plan</td><td>1 GB file storage</td><td>See the database detail page</td><td><a href="../../database/offers/supabase/">Database detail page</a></td></tr><tr><td><b>Firebase Storage</b></td><td>Provided with Firebase plans</td><td>The Spark plan column reads “Not applicable”; free allowances sit in the Blaze column</td><td>See the database detail page</td><td><a href="../../database/offers/firebase/">Database detail page</a></td></tr></tbody></table></div><h2>Standalone services</h2><p>R2 and B2 are standalone object storage services, each with a detail page: R2 with a monthly free tier and egress free of charge; B2 pay-as-you-go with the 3x egress rule. Head-to-head comparison: <a href="../r2-vs-b2/">Cloudflare R2 vs Backblaze B2</a>.</p><h2>Database-bundled storage</h2><p>Supabase Storage: 1 GB file storage, provided with the Supabase plan; details on the <a href="../../database/offers/supabase/">Supabase detail page</a>. Firebase Storage: the pricing page Spark plan column reads “Not applicable”, with free allowances in the Blaze column; details on the <a href="../../database/offers/firebase/">Firebase detail page</a>.</p><h2>How to choose</h2><p>For a standalone object storage service, compare the R2 and B2 detail pages. For projects already using Supabase or Firebase, compare the database detail pages for the bundled-storage wording. Egress rules: see <a href="../egress-rules/">Egress rules compared</a>.</p>
+<h2>FAQ</h2>
+<details><summary>Is Supabase Storage a standalone service?</summary>
+<p>Supabase Storage comes with the Supabase plan, holding 1 GB file storage; details are on the database Supabase detail page. Verified 2026-11-13.</p>
+</details>
+<details><summary>Does Firebase Storage have free allowances under the Spark plan?</summary>
+<p>The pricing page Spark plan column reads “Not applicable”; free allowances sit in the Blaze column. Details are on the database Firebase detail page. Verified 2026-11-13.</p>
+</details>
+<p><b>Disclaimer:</b> table data comes from vendor official pages; allowances can change or end at any time — check the official page before claiming.</p>
+<div class="related"><h2>Related pages</h2>
+<ul>
+<li><a href="../r2-vs-b2/">Cloudflare R2 vs Backblaze B2</a></li><li><a href="../all-storage-table/">All object storage compared</a></li><li><a href="../../database/offers/supabase/">Supabase free tier</a></li><li><a href="../../database/offers/firebase/">Firebase free allowances</a></li><li><a href="../../storage/">Back to the Object storage list</a></li>
+</ul></div>
+
+</article>
+
+</div></main>
+<footer><div class="wrap"><p><a href="../../">Home</a> · <a href="../../vps/">Free VPS</a> · <a href="../../wool/">VPS Deals</a> · <a href="../../cheap/">Cheap VPS</a> · <a href="../../deploy/">Deploy &amp; Hosting</a> · <a href="../../database/">Databases</a> · <a href="../../domain/">Domains &amp; DNS</a> · <a href="../../code/">Code Hosting</a> · <a href="../../auth/">Auth</a> · <a href="../../storage/">Storage</a> · <a href="../../email/">Email</a> · <a href="../../monitoring/">Monitoring</a> · <a href="../../payments/">Payments</a> · <a href="../../hosting/">Web Hosting</a> · <a href="../../workflow/">Workflow</a> · <a href="../../offers/">Offer details</a> · <a href="../">Comparisons</a> · <a href="../../faq/">FAQ</a> · <a href="../../../storage/compare/storage-included/">中文</a></p><p>Data is for reference only — check the vendor’s official page. Every storage entry was verified against a vendor official page; verification dates are on each page. Free allowances and prices can change or end at any time; read the vendor’s terms before claiming. No invite links.</p></div></footer>
+</body>
+</html>
