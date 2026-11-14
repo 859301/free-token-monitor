@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-13",
+    "count": 2,
+    "language": "en",
+    "sources": [
+      "Clerk official pricing page",
+      "Auth0 official pricing page"
+    ],
+    "note": "Specs and terms are transcribed from vendor official pages; fields not stated on official pages read “Check the official page”. group values: standalone (standalone auth services). status values: active (free tiers). cardRequired null means the official page does not state it. planName is the plan name stated on the official site. overageBehavior is the overage behavior stated on the official page; where unstated it reads “Check the official page”. Supabase Auth (50,000 MAU) and Firebase Auth (50K MAU) come with database free tiers; see the Supabase and Firebase detail pages in the Databases section; not repeated in this file."
+  },
+  "offers": [
+    {
+      "id": 1,
+      "slug": "clerk",
+      "title": "Clerk Hobby free tier",
+      "provider": "Clerk",
+      "category": "auth",
+      "group": "standalone",
+      "status": "active",
+      "planName": "Hobby",
+      "specText": "50,000 MRUs per app, 100 MROs per app, unlimited apps, 3 dashboard seats, up to 3 social logins, fixed 7-day session, 1-day log retention, API Keys 1,000 creations and 100,000 verifications per month, M2M Tokens 2,500 creations and 100,000 verifications per month, 5 user impersonations per month, custom domain",
+      "durationText": "Free tier (the official pages read do not state permanent wording — check the official page)",
+      "cardRequired": false,
+      "cardNote": "The official pricing page states No credit card required.",
+      "limitsText": "50,000 MRUs per app; 100 MROs per app; unlimited apps; 3 dashboard seats; up to 3 social logins; fixed 7-day session; 1-day log retention; API Keys 1,000 creations and 100,000 verifications per month; M2M Tokens 2,500 creations and 100,000 verifications per month; 5 user impersonations per month",
+      "overageBehavior": "Exceeding 50,000 MRU requires upgrading to Pro; exceeding 100 MRO requires upgrading to the B2B add-on; 1-month grace period (FAQ)",
+      "risks": [
+        "MRU counts by return visits: a user counts as retained when returning 24 hours after signing up",
+        "Exceeding 50,000 MRU requires upgrading to Pro; exceeding 100 MRO requires upgrading to the B2B add-on",
+        "Fixed 7-day session; 1-day log retention",
+        "Up to 3 social logins"
+      ],
+      "claimUrl": "https://clerk.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Clerk official pricing page",
+      "sourceUrl": "https://clerk.com/pricing",
+      "flags": [
+        "mru",
+        "mro",
+        "grace-1-month",
+        "no-card"
+      ],
+      "notes": "MRU definition: a user counts as retained when returning 24 hours after signing up. MRO definition: an organization has at least 2 members, with at least 1 being a retained user that month. Pro $20/month (annual billing), including 50,000 MRUs, $0.02 each beyond that; Business $250/month (annual billing)."
+    },
+    {
+      "id": 2,
+      "slug": "auth0",
+      "title": "Auth0 Free",
+      "provider": "Auth0",
+      "category": "auth",
+      "group": "standalone",
+      "status": "active",
+      "planName": "Free",
+      "specText": "Up to 25,000 MAU (External Active Users), 1 custom domain (card verification required), 5 organizations, 1 enterprise connection, 1,000 M2M tokens, 5 Actions, 1-day log retention, no Pro MFA / role management",
+      "durationText": "Free tier (the official pages read do not state permanent wording — check the official page)",
+      "cardRequired": false,
+      "cardNote": "Sign-up needs no card; 1 custom domain requires card verification.",
+      "limitsText": "Up to 25,000 MAU; 1 custom domain (card verification required); 5 organizations; 1 enterprise connection; 1,000 M2M tokens; 5 Actions; 1-day log retention; no Pro MFA / role management",
+      "overageBehavior": "Not stated on the official pages read — check the official page",
+      "risks": [
+        "Overage behavior is not stated on the official pages read — check the official page",
+        "1 custom domain requires card verification",
+        "No Pro MFA / role management; 1-day log retention"
+      ],
+      "claimUrl": "https://auth0.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Auth0 official pricing page",
+      "sourceUrl": "https://auth0.com/pricing",
+      "flags": [
+        "mau",
+        "25k",
+        "custom-domain-card-check"
+      ],
+      "notes": "The pricing page FAQ confirms the 25,000 threshold. Essentials $35/month, Professional $240/month."
+    }
+  ]
+}

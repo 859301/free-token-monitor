@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-13",
+    "count": 7,
+    "language": "en",
+    "sources": [
+      "UptimeRobot official pricing page",
+      "Sentry official pricing page",
+      "Umami official pricing page",
+      "PostHog official pricing page",
+      "Plausible official docs, terms of service, and official pages",
+      "Microsoft Learn official FAQ",
+      "Google Analytics official product page and official help pages"
+    ],
+    "note": "Specs and terms are transcribed from vendor official pages; fields not stated on official pages read “Check the official page”. group values: free (free tier) / trial. status values: active (free tier) / trial. cardRequired null means the official page does not state it. planKind has the same meaning as group. monitoringType values: uptime (uptime monitoring) / error-tracking (error tracking) / analytics (analytics). retentionText is the data retention period stated on the official page; unstated fields read “Check the official page”. overageBehavior is the overage behavior stated on the official page; unstated fields read “Check the official page”. paidFrom is the paid starting price stated on the official site; unstated fields read “Check the official page”."
+  },
+  "offers": [
+    {
+      "id": 1,
+      "slug": "uptimerobot",
+      "title": "UptimeRobot free tier",
+      "provider": "UptimeRobot",
+      "category": "monitoring",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "monitoringType": "uptime",
+      "planName": "Free",
+      "specText": "$0/month; 50 monitors; 5-minute interval; HTTP/port/ping, keyword, API, UDP, DNS; only 5 integrations; basic status page; 3-month data retention; 1 status page",
+      "durationText": "The official pages read do not state permanent — Check the official page",
+      "cardRequired": false,
+      "cardNote": "Plan card wording: No credit card required!",
+      "limitsText": "50 monitors; 5-minute interval; only 5 integrations; 3-month data retention; 1 status page",
+      "overageBehavior": "Not stated on the official pages read — Check the official page",
+      "retentionText": "3-month data retention",
+      "paidFrom": "Solo $13/month (annual billing $12); Team $39/month (annual billing $33); Scale $83/month (annual billing $67)",
+      "risks": [
+        "SSL and domain expiry monitoring: the plan card and the comparison table differ; see the notes for both wordings side by side",
+        "Only 5 integrations",
+        "3-month data retention"
+      ],
+      "claimUrl": "https://uptimerobot.com/pricing/",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "UptimeRobot official pricing page",
+      "sourceUrl": "https://uptimerobot.com/pricing/",
+      "flags": [
+        "no-card",
+        "50-monitors",
+        "ssl-conflict"
+      ],
+      "notes": "Wording differs within the same official pricing page: the Free plan card includes SSL & Domain exp. monitor; the comparison-table SSL monitoring row and Domain exp. monitoring row mark Free as not included, and the HTTPS monitoring row states SSL monitoring is included only in paid plans. Both wordings stand side by side, with no ruling."
+    },
+    {
+      "id": 2,
+      "slug": "sentry",
+      "title": "Sentry Developer free tier",
+      "provider": "Sentry",
+      "category": "monitoring",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "monitoringType": "error-tracking",
+      "planName": "Developer",
+      "specText": "$0; limited to 1 user; unlimited projects; 5 GB logs; 1 uptime monitor; 1 cron monitor; 30-day lookback; comparison table: 5k errors, 5M spans, 50 replays (period not stated)",
+      "durationText": "Page metadata: Start free on the Developer plan forever",
+      "cardRequired": null,
+      "cardNote": "Card requirements for the Developer plan are not stated on the official pages read; the Business 14-day trial needs no credit card (page metadata).",
+      "limitsText": "Limited to 1 user; 5k errors, 5M spans, 50 replays (comparison-table wording, period not stated); 5 GB logs; 1 uptime monitor; 1 cron monitor; 30-day lookback",
+      "overageBehavior": "Not stated on the official pages read — Check the official page",
+      "retentionText": "30-day lookback",
+      "paidFrom": "Team $26/month; Business $80/month (annual billing, default prepaid data); Team includes 50K errors/month",
+      "risks": [
+        "Limited to 1 user",
+        "The three comparison-table figures state no period",
+        "The new-user promotional wording 5,000 free replays per month for your first 3 months is not a plan figure"
+      ],
+      "claimUrl": "https://sentry.io/pricing/",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Sentry official pricing page",
+      "sourceUrl": "https://sentry.io/pricing/",
+      "flags": [
+        "one-user",
+        "no-period-figures"
+      ],
+      "notes": "The Errors/Spans/Replays rows in the comparison table state no period; the only per month wording on the page is the new-user promotional wording."
+    },
+    {
+      "id": 3,
+      "slug": "umami",
+      "title": "Umami Hobby free tier",
+      "provider": "Umami",
+      "category": "monitoring",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "monitoringType": "analytics",
+      "planName": "Hobby",
+      "specText": "$0; 100,000 events; 3 websites; 6-month data retention; full reporting suite; data export; community support",
+      "durationText": "The official pages read do not state permanent — Check the official page",
+      "cardRequired": null,
+      "cardNote": "The pricing page states no card requirement — Check the official page.",
+      "limitsText": "100,000 events; 3 websites; 6-month data retention; no team members, no API, no email reports, no session replay, no heatmap",
+      "overageBehavior": "Hobby overage behavior is not stated on the official pages read; paid-plan overage is billed per event, data collection is not interrupted, and no data is lost",
+      "retentionText": "6-month data retention",
+      "paidFrom": "Pro $9/month; Business $49/month (USD, billed monthly by default); Pro overage $0.00003/event, Business overage $0.00002/event",
+      "risks": [
+        "Hobby has no team members, no API, no email reports, no session replay, no heatmap",
+        "Hobby overage behavior is not stated on the official pages read"
+      ],
+      "claimUrl": "https://umami.is/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Umami official pricing page",
+      "sourceUrl": "https://umami.is/pricing",
+      "flags": [
+        "3-websites",
+        "self-host-mit"
+      ],
+      "notes": "The Hobby Additional events cell is empty, with no per-event price; open source, self-hostable (MIT license, free to self-host)."
+    },
+    {
+      "id": 4,
+      "slug": "posthog",
+      "title": "PostHog free tier",
+      "provider": "PostHog",
+      "category": "monitoring",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "monitoringType": "analytics",
+      "planName": "Free",
+      "specText": "No credit card, not a trial; Analytics 1M events/month; Session replay 5K recordings/month; Feature flags 1M requests/month; Error tracking 100K exceptions/month; Surveys 1500 responses/month; Logs 10 GB ingested/month; AI Observability 100K events/month (shared with evaluations); unlimited team members; 1 project; 1-year retention; community support",
+      "durationText": "Free allowances reset monthly; allowances are the same with or without a card",
+      "cardRequired": false,
+      "cardNote": "Official wording: No credit card, not a trial.",
+      "limitsText": "1 project; 1-year retention; monthly free allowances per product: see specText",
+      "overageBehavior": "Usage stops at the free tier limits, with no surprise billing (official wording: Usage stops at the free tier limits, so you can't be charged by surprise.)",
+      "retentionText": "1-year retention",
+      "paidFrom": "Check the official page",
+      "risks": [
+        "Only 1 project"
+      ],
+      "claimUrl": "https://posthog.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "PostHog official pricing page",
+      "sourceUrl": "https://posthog.com/pricing",
+      "flags": [
+        "monthly-reset",
+        "stops-at-limit",
+        "open-source-mit"
+      ],
+      "notes": "Data warehouse has no separate free allowance in the free-allowance table; open source, MIT licensed."
+    },
+    {
+      "id": 5,
+      "slug": "plausible-trial",
+      "title": "Plausible trial",
+      "provider": "Plausible",
+      "category": "monitoring",
+      "group": "trial",
+      "status": "trial",
+      "planKind": "trial",
+      "monitoringType": "analytics",
+      "planName": "Trial",
+      "specText": "30-day free trial, no credit card required; no permanent free plan on the cloud; plans from $9/month; Starter 1 website; Growth up to 3 websites; Business up to 10 websites",
+      "durationText": "30-day trial; continued use after the trial requires prepayment (terms-of-service wording)",
+      "cardRequired": false,
+      "cardNote": "30-day free trial, no credit card required.",
+      "limitsText": "Starter 1 website; Growth up to 3 websites; Business up to 10 websites + funnels/user journeys/revenue tracking/custom properties/Stats API; annual billing saves 2 months",
+      "overageBehavior": "No surprise charges; exceeding the tier for two consecutive months triggers a notice asking for an upgrade",
+      "retentionText": "Check the official page",
+      "paidFrom": "Plans start at $9/month",
+      "risks": [
+        "No permanent free plan on the cloud",
+        "Continued use after the trial requires prepayment"
+      ],
+      "claimUrl": "https://plausible.io/docs/subscription-plans",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Plausible official docs, terms of service, and official pages",
+      "sourceUrl": "https://plausible.io/docs/subscription-plans",
+      "flags": [
+        "30d-trial",
+        "no-free-tier",
+        "self-host-agpl"
+      ],
+      "notes": "Community Edition is free to self-host (AGPLv3); the tracking script is MIT."
+    },
+    {
+      "id": 6,
+      "slug": "clarity",
+      "title": "Microsoft Clarity",
+      "provider": "Microsoft",
+      "category": "monitoring",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "monitoringType": "analytics",
+      "planName": "Clarity",
+      "specText": "Official FAQ: Clarity is a free service forever; no traffic limits; no need to upgrade to a paid version; no limit on the number of websites per account; no sampling",
+      "durationText": "Official FAQ: free service forever",
+      "cardRequired": null,
+      "cardNote": "Not stated on the official pages read — Check the official page.",
+      "limitsText": "No limit on website count; no traffic limits; no sampling",
+      "overageBehavior": "The official FAQ states no traffic limits and no need to upgrade to a paid version",
+      "retentionText": "Check the official page",
+      "paidFrom": "Check the official page",
+      "risks": [
+        "Retention periods and similar figures are not stated on the official FAQ pages read — Check the official page."
+      ],
+      "claimUrl": "https://learn.microsoft.com/clarity/faq",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Microsoft Learn official FAQ",
+      "sourceUrl": "https://learn.microsoft.com/clarity/faq",
+      "flags": [
+        "free-forever",
+        "no-sampling"
+      ],
+      "notes": ""
+    },
+    {
+      "id": 7,
+      "slug": "google-analytics-4",
+      "title": "Google Analytics 4 Standard",
+      "provider": "Google",
+      "category": "monitoring",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "monitoringType": "analytics",
+      "planName": "Standard",
+      "specText": "Standard free of charge; user-level data retention 2 or 14 months; event data retention 2/14/26/38/50 months (26/38/50 for 360 only); default 26 months; large properties limited to 2 months; event-level queries: Standard 10 million events, 360 up to 1 billion events",
+      "durationText": "Standard is free (free of charge)",
+      "cardRequired": null,
+      "cardNote": "Not stated on the official pages read — Check the official page.",
+      "limitsText": "User-level data retention 2 or 14 months; event data retention 2/14/26/38/50 months (26/38/50 for 360 only); default 26 months; large properties limited to 2 months; event-level queries: Standard 10 million events, 360 up to 1 billion events",
+      "overageBehavior": "Not stated on the official pages read — Check the official page",
+      "retentionText": "User-level 2 or 14 months; event-level 2/14/26/38/50 months",
+      "paidFrom": "Analytics 360 pricing — Check the official page",
+      "risks": [
+        "26/38/50-month retention for Analytics 360 only",
+        "Large properties limited to 2 months"
+      ],
+      "claimUrl": "https://marketingplatform.google.com/about/analytics/",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Google Analytics official product page and official help pages",
+      "sourceUrl": "https://marketingplatform.google.com/about/analytics/",
+      "flags": [
+        "free-of-charge",
+        "retention-tiers"
+      ],
+      "notes": "Analytics 360 pricing — Check the official page."
+    }
+  ]
+}

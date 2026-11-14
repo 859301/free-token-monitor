@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-13",
+    "count": 2,
+    "language": "en",
+    "sources": [
+      "GitHub official pricing page",
+      "GitLab official pricing page"
+    ],
+    "note": "Specs and terms are transcribed from vendor official pages; fields not stated on official pages read “Check the official page”. group values: free (free tier). status values: active (free tier). cardRequired null means the official page does not state it; false means the official site states no credit card is required. planKind has the same meaning as group, with the value free-tier (free tier). planName is the vendor plan name. specText summarizes the free allowances in the official wording; durationText covers duration and permanence; cardNote covers card requirements; limitsText covers key limits; risks covers notes; flags are entry feature markers: public-only (some features in the comparison table are limited to public repositories), no-card-signup (sign-up needs no credit card), shared-runner-card (shared runners require card verification), user-limit (per-group user limit), unlimited-repos (no repository count limit)."
+  },
+  "offers": [
+    {
+      "id": 1,
+      "slug": "github-free",
+      "title": "GitHub Free",
+      "provider": "GitHub",
+      "category": "code",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "planName": "Free",
+      "specText": "Unlimited public/private repositories; Dependabot; 2,000 CI/CD minutes/month; 500 MB Packages storage; Issues & Projects; community support; Codespaces access ($0 spend limit)",
+      "durationText": "Free (the official pages read do not state permanent wording)",
+      "cardRequired": null,
+      "cardNote": "Not stated on the official pages read — check the official page.",
+      "limitsText": "Several features in the comparison table are limited to public repositories (repository rules, code owners, draft PRs, Pages/wikis, secret scanning, and others); Codespaces free hours go only to personal accounts, not to free organizations; pricing page example: 2-core machines 60 hours, 4-core machines 30 hours",
+      "risks": [
+        "Several features in the comparison table are limited to public repositories and unavailable for private repositories",
+        "Codespaces free hours go only to personal accounts, not to free organizations",
+        "Card requirements are not stated on the official pages read — check the official page"
+      ],
+      "claimUrl": "https://github.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "GitHub official pricing page",
+      "sourceUrl": "https://github.com/pricing",
+      "flags": [
+        "public-only",
+        "unlimited-repos"
+      ],
+      "notes": "Public repository Actions minutes and Packages are free; Team $4/user/month (3,000 minutes, 2 GB); Enterprise $21/user/month (50,000 minutes, 50 GB)."
+    },
+    {
+      "id": 2,
+      "slug": "gitlab-free",
+      "title": "GitLab Free",
+      "provider": "GitLab",
+      "category": "code",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "planName": "Free",
+      "specText": "5 users per top-level group; 400 compute minutes/month; 10 GiB adjustable storage; 5 GiB data transfer per month",
+      "durationText": "Free; the pricing page states \"No credit card required\"",
+      "cardRequired": false,
+      "cardNote": "Sign-up needs no credit card (pricing page wording: \"No credit card required\"); using shared runners requires card verification ($1 authorization check, no charge), while a bring-your-own runner or disabling shared runners needs no card.",
+      "limitsText": "5 users per top-level group; 400 compute minutes/month; 10 GiB adjustable storage; 5 GiB data transfer per month",
+      "risks": [
+        "Shared runners require card verification ($1 authorization check, no charge)",
+        "5 users per top-level group"
+      ],
+      "claimUrl": "https://about.gitlab.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "GitLab official pricing page",
+      "sourceUrl": "https://about.gitlab.com/pricing",
+      "flags": [
+        "no-card-signup",
+        "shared-runner-card",
+        "user-limit"
+      ],
+      "notes": "Premium $29/user/month (annual billing); Ultimate has no public price, and the pricing page writes \"Contact us for custom pricing\" (quote-based pricing)."
+    }
+  ]
+}

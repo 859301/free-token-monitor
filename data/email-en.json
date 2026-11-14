@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-13",
+    "count": 5,
+    "language": "en",
+    "sources": [
+      "Resend official pricing page",
+      "Mailgun official pricing page",
+      "Brevo official pricing page and official help center free plan page",
+      "Twilio official SendGrid pricing page and official pricing PDF",
+      "Postmark official pricing page"
+    ],
+    "note": "Specs and terms are transcribed from vendor official pages; fields not stated on official pages read “Check the official page”. group values: free (free tier) / not-stated-permanent (permanence not stated on the official site) / trial (trial). status values correspond to group: active (free tier) / not-stated-permanent / trial. cardRequired null means the official page does not state it, false means the official page states no credit card is required. overageBehavior is the overage behavior stated on the official page; unstated cases read “Check the official page”. paidFrom is the paid starting price stated on the official site. limitKind values: daily-monthly (daily plus monthly limits) / daily (metered daily) / monthly (metered monthly). planKind has the same meaning as group. sendgridOveragePdf and sendgridOverageWeb are used only for the SendGrid entry, recording the overage rates shown in the official pricing PDF and on the pricing web page respectively; the two values differ and are recorded side by side."
+  },
+  "offers": [
+    {
+      "id": 1,
+      "slug": "resend",
+      "title": "Resend free tier",
+      "provider": "Resend",
+      "category": "email",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "limitKind": "daily-monthly",
+      "planName": "Free",
+      "specText": "$0/month: 3,000 emails/month, 100 emails/day, 3 domains, 3 inboxes, 30-day data retention, 5 AI credits, 10,000 automation runs, SSO, ticket support",
+      "durationText": "The FAQ states a free-forever plan is provided",
+      "cardRequired": null,
+      "cardNote": "Not stated on the official page — check the official page.",
+      "limitsText": "3,000 emails/month; 100 emails/day; 3 domains; 3 inboxes; 30-day data retention",
+      "overageBehavior": "Pay-as-you-go is only available on paid plans; without it, exceeding the limit triggers a notification, with an option to upgrade",
+      "paidFrom": "Pro $20/month for 50,000 emails; Scale $90/month for 100,000 emails; overage $0.90/1,000 emails",
+      "risks": [
+        "Daily limit of 100 emails and monthly limit of 3,000 emails both apply",
+        "Received emails count toward the transactional quota",
+        "Up to 3 domains and 3 inboxes",
+        "Data retention 30 days"
+      ],
+      "claimUrl": "https://resend.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Resend official pricing page",
+      "sourceUrl": "https://resend.com/pricing",
+      "flags": [
+        "free-forever",
+        "daily-monthly-limits",
+        "broadcast-excluded"
+      ],
+      "notes": "Received emails count toward the transactional quota; Broadcast emails do not count toward the transactional limit."
+    },
+    {
+      "id": 2,
+      "slug": "mailgun",
+      "title": "Mailgun free plan",
+      "provider": "Mailgun",
+      "category": "email",
+      "group": "not-stated-permanent",
+      "status": "not-stated-permanent",
+      "planKind": "not-stated-permanent",
+      "limitKind": "daily",
+      "planName": "Free",
+      "specText": "$0/month: 100 emails/day, 1 custom sending domain, RESTful API + SMTP, 1 API key, 1-day log retention, 1 inbound route, 1 user, ticket support",
+      "durationText": "Not stated as permanent on the official site (page wording: \"Test us out\"; no \"forever\" wording anywhere on the page)",
+      "cardRequired": null,
+      "cardNote": "Not stated on the official page — check the official page.",
+      "limitsText": "100 emails/day; 1 custom sending domain; 1 API key; 1-day log retention; 1 inbound route; 1 user",
+      "overageBehavior": "Check the official page",
+      "paidFrom": "Basic from $15/month for 10,000 emails/month; Foundation $35/month for 50,000 emails (first month free); Scale $90/month for 100,000 emails (first month free)",
+      "risks": [
+        "Not stated as permanent on the official site",
+        "Sending volume is metered daily, with a daily cap of 100 emails",
+        "Log retention 1 day",
+        "Free plan limited to 1 user"
+      ],
+      "claimUrl": "https://www.mailgun.com/pricing/",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Mailgun official pricing page",
+      "sourceUrl": "https://www.mailgun.com/pricing/",
+      "flags": [
+        "not-stated-permanent",
+        "daily-limit",
+        "1-day-logs"
+      ],
+      "notes": "The FAQ states the free plan is for exploring the platform, with a daily sending limit."
+    },
+    {
+      "id": 3,
+      "slug": "brevo",
+      "title": "Brevo free plan",
+      "provider": "Brevo",
+      "category": "email",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "limitKind": "daily",
+      "planName": "Free",
+      "specText": "300 emails sent per day; up to 100,000 contacts; 1 user; transactional email retry queue 1,000; automation 2,000 contacts; 50 open deals / 1 pipeline",
+      "durationText": "No time limit",
+      "cardRequired": false,
+      "cardNote": "Official help center states no card is required; pricing page states \"Free forever, no credit card needed.\"",
+      "limitsText": "300 emails sent per day, reset daily, no rollover; up to 100,000 contacts; 1 user; emails always carry the Sent with Brevo branding",
+      "overageBehavior": "Check the official page",
+      "paidFrom": "Starter from $9/month, Standard from $18/month, Professional from $499/month, Enterprise custom pricing; prices exclude tax; annual billing at 9 tenths of the monthly price",
+      "risks": [
+        "300 emails per day, reset daily, no rollover",
+        "Emails always carry the Sent with Brevo branding",
+        "1 user",
+        "Paid prices exclude tax"
+      ],
+      "claimUrl": "https://brevo.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Brevo official pricing page and official help center free plan page",
+      "sourceUrl": "https://brevo.com/pricing",
+      "flags": [
+        "no-card",
+        "daily-reset",
+        "branded"
+      ],
+      "notes": "The pricing page text capture does not render the daily sending count or prices; the official help center applies."
+    },
+    {
+      "id": 4,
+      "slug": "sendgrid-trial",
+      "title": "SendGrid trial",
+      "provider": "Twilio SendGrid",
+      "category": "email",
+      "group": "trial",
+      "status": "trial",
+      "planKind": "trial",
+      "limitKind": "daily",
+      "planName": "Free Trial",
+      "specText": "Free Trial $0: 60 days, 100 emails/day; 1 teammate, 1 event webhook, 3 days of searchable email activity history",
+      "durationText": "60-day trial; no permanent free plan",
+      "cardRequired": false,
+      "cardNote": "Pricing page states \"no credit card required, no commitment\".",
+      "limitsText": "100 emails/day; 1 teammate; 1 event webhook; 3 days of searchable email activity history",
+      "overageBehavior": "overage charges may apply (overage may be charged; see the plan details for specifics)",
+      "paidFrom": "Essentials from $19.95/month; Pro from $89.95/month; Premier custom pricing",
+      "sendgridOveragePdf": "Essentials $0.00133/email ($19.95 tier, 50,000 emails/month), $0.00088/email ($34.95 tier, 100,000 emails/month); Pro $0.00110/$0.00091/$0.00078/$0.00059/$0.00047 per email ($89.95/$249/$499/$799/$1,099 five tiers, 100K/300K/700K/1.5M/2.5M emails)",
+      "sendgridOverageWeb": "Essentials $0.00075/email; Pro $0.000575/email",
+      "risks": [
+        "Only a 60-day trial, no permanent free plan",
+        "Trial: 100 emails/day, 3 days of searchable email activity history",
+        "Overage may be charged; the PDF and web overage rates differ in value",
+        "The old permanent free plan was retired in March–May 2025 (months 3–5; multiple second-hand sources agree)"
+      ],
+      "claimUrl": "https://www.twilio.com/en-us/products/email-api/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Twilio official SendGrid pricing page and official pricing PDF",
+      "sourceUrl": "https://www.twilio.com/en-us/products/email-api/pricing",
+      "flags": [
+        "60d-trial",
+        "no-permanent-free",
+        "pdf-web-overage-differs"
+      ],
+      "notes": "The free plan wording on the page refers to the same 60-day trial; the retirement timing of the old permanent free plan comes from multiple second-hand sources that agree."
+    },
+    {
+      "id": 5,
+      "slug": "postmark",
+      "title": "Postmark Free Developer",
+      "provider": "Postmark",
+      "category": "email",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "limitKind": "monthly",
+      "planName": "Free Developer",
+      "specText": "Free Developer $0: 100 emails/month; No overages allowed in this plan; never expires or runs out",
+      "durationText": "never expires or runs out",
+      "cardRequired": null,
+      "cardNote": "Not stated on the official page — check the official page.",
+      "limitsText": "100 emails/month; unused allowance does not roll over; no intermediate tier between 100 emails/month and 10,000 emails/month; no annual plan",
+      "overageBehavior": "No overages allowed in this plan",
+      "paidFrom": "Basic from $15/month for 10,000 emails (overage $1.80/1,000); Pro from $16.50/month for 10,000 emails (overage $1.30/1,000); Platform from $18/month for 10,000 emails (overage $1.20/1,000)",
+      "risks": [
+        "Free plan: 100 emails per month, no overages allowed",
+        "Unused allowance does not roll over",
+        "No intermediate tier between 100 emails/month and 10,000 emails/month",
+        "No annual plan"
+      ],
+      "claimUrl": "https://postmarkapp.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Postmark official pricing page",
+      "sourceUrl": "https://postmarkapp.com/pricing",
+      "flags": [
+        "never-expires",
+        "no-overages",
+        "no-rollover"
+      ],
+      "notes": "FAQ states there is no annual plan (\"Not right now\")."
+    }
+  ]
+}

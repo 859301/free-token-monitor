@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-13",
+    "count": 2,
+    "language": "en",
+    "sources": [
+      "Cloudflare R2 official pricing page (page note: updated 2026-10-30)",
+      "Backblaze official pricing page"
+    ],
+    "note": "Specs and terms are transcribed from vendor official pages; fields not stated on official pages read “Check the official page”. group values: free (free tier) / pay-as-you-go. status values: active (free tier) / pay-as-you-go. cardRequired null means the official page does not state it. specText summarizes the free allowance or prices in the official wording; durationText is the duration or billing form; limitsText states key limits; overageBehavior is the charging beyond the free allowance or beyond the stated rules; egressText states the egress rule; risks are notes; flags are English tags. Supabase Storage and Firebase Storage details are in the Databases section (data/database.json and the database detail pages), not repeated in this file."
+  },
+  "offers": [
+    {
+      "id": 1,
+      "slug": "cloudflare-r2",
+      "title": "Cloudflare R2 free tier",
+      "provider": "Cloudflare",
+      "category": "storage",
+      "group": "free",
+      "status": "active",
+      "specText": "Monthly: 10 GB-month storage, 1M Class A operations, 10M Class B operations, egress free; standard storage $0.015/GB-month; Class A $4.50/M requests; Class B $0.36/M requests",
+      "durationText": "Monthly-metered free allowance; permanence is not stated on the official pages read — check the official page",
+      "cardRequired": null,
+      "cardNote": "Not stated on the official pricing page — check the official page.",
+      "limitsText": "Free allowance metered monthly; Infrequent Access is not covered by the free tier, 30-day minimum storage, data retrieval $0.01/GB; which operations fall under Class A and Class B — check the official page",
+      "overageBehavior": "Prices beyond the free allowance on the pricing page: standard storage $0.015/GB-month, Class A $4.50/M requests, Class B $0.36/M requests; Infrequent Access: $0.01/GB-month, Class A $9.00/M, Class B $0.90/M, data retrieval $0.01/GB",
+      "egressText": "No egress bandwidth charges for any storage class (official wording: There are no charges for egress bandwidth for any storage class.)",
+      "risks": [
+        "The free tier does not apply to Infrequent Access",
+        "Infrequent Access has a 30-day minimum storage period",
+        "Infrequent Access data retrieval costs $0.01/GB",
+        "The free allowance is metered monthly"
+      ],
+      "claimUrl": "https://developers.cloudflare.com/r2/pricing/",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Cloudflare R2 official pricing page (page note: updated 2026-10-30)",
+      "sourceUrl": "https://developers.cloudflare.com/r2/pricing/",
+      "flags": [
+        "monthly-free-tier",
+        "egress-free",
+        "ia-excluded-from-free-tier",
+        "ia-30d-minimum"
+      ],
+      "notes": "The free-tier column for Infrequent Access reads NA in the billing examples; which operations Class A and Class B each include — check the official page."
+    },
+    {
+      "id": 2,
+      "slug": "backblaze-b2",
+      "title": "Backblaze B2 (pay-as-you-go)",
+      "provider": "Backblaze",
+      "category": "storage",
+      "group": "pay-as-you-go",
+      "status": "pay-as-you-go",
+      "specText": "Storage $6.95/TB/30 days; egress free up to 3x average monthly stored data, $0.01/GB beyond that; Overdrive $15/TB/month",
+      "durationText": "Pay-as-you-go, no free tier",
+      "cardRequired": null,
+      "cardNote": "Not stated on the official pricing page — check the official page.",
+      "limitsText": "No free tier; unlimited free egress via partner CDNs (Fastly, Cloudflare, bunny.net, CacheFly, CoreWeave, Equinix Metal, Vultr, phoenixNAP)",
+      "overageBehavior": "Egress beyond 3x average monthly stored data is $0.01/GB; storage billed at $6.95/TB/30 days",
+      "egressText": "Free up to 3x average monthly stored data, $0.01/GB beyond that; unlimited free egress via partner CDNs",
+      "risks": [
+        "No free tier",
+        "Egress beyond 3x average monthly stored data is billed at $0.01/GB",
+        "Overdrive terms beyond the $15/TB/month price — check the official page"
+      ],
+      "claimUrl": "https://www.backblaze.com/cloud-storage/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Backblaze official pricing page",
+      "sourceUrl": "https://www.backblaze.com/cloud-storage/pricing",
+      "flags": [
+        "no-free-tier",
+        "pay-as-you-go",
+        "egress-3x-rule",
+        "partner-cdn-egress-free"
+      ],
+      "notes": "The official pricing page showed no “10GB free” wording in either of two captures; whether operation requests are billed separately — check the official page."
+    }
+  ]
+}

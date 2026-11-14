@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-13",
+    "count": 4,
+    "language": "en",
+    "sources": [
+      "Stripe official pricing page and official supported-country page",
+      "Paddle official pricing page",
+      "Lemon Squeezy official pricing page and 2026 Update official blog",
+      "Polar official pricing resource page"
+    ],
+    "note": "Fees and terms are transcribed from vendor official pages; fields not stated on official pages read “Check the official page”. group values: processor (payment processing) / merchant-of-record (Merchant of Record). status values: active (pricing page valid). feeText is the official fee wording; monthlyFee is the monthly-fee wording; morStatus values: yes (itself a Merchant of Record) / managed-payments (only the Managed Payments product is a Merchant of Record). cardRequired null means the official page does not state it. specText is the service scope stated on official pages; durationText states the billing method and term-related facts; limitsText is the key limits stated on official pages; risks are notes; flags are retrieval markers; notes are supplementary notes. claimUrl and sourceUrl are both vendor official pages."
+  },
+  "offers": [
+    {
+      "id": 1,
+      "slug": "stripe",
+      "title": "Stripe fees",
+      "provider": "Stripe",
+      "category": "payments",
+      "group": "processor",
+      "status": "active",
+      "feeText": "2.9% + 30¢ per successful transaction (US domestic cards), international cards +1.5%; Managed Payments 3.5% + Payments fees",
+      "monthlyFee": "No monthly fee for standard processing; Billing usage-based 0.7%",
+      "morStatus": "managed-payments",
+      "specText": "Standard processing + Managed Payments (MoR, including indirect tax compliance in 75+ countries, fraud prevention, dispute management, invoicing and customer support) + Atlas + Billing + Tax",
+      "durationText": "Per-transaction billing",
+      "cardRequired": null,
+      "cardNote": "Not stated on the official pages read — check the official page.",
+      "limitsText": "Official supported-country list: 50 entries; mainland China is not on it; Hong Kong is on the list; India and Indonesia marked Preview; dispute fee $15 each",
+      "risks": [
+        "Mainland China is not on the official supported-country list; direct signup for mainland China entities is not supported",
+        "International cards add 1.5% on top of the standard fee",
+        "The Managed Payments fee is 3.5% + Payments fees, added together"
+      ],
+      "claimUrl": "https://stripe.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Stripe official pricing page · official supported-country page",
+      "sourceUrl": "https://stripe.com/pricing",
+      "flags": [
+        "not-supported-mainland-china",
+        "managed-payments",
+        "atlas"
+      ],
+      "notes": "Supported-country list: https://stripe.com/en-gi/global. Atlas $500 one-time; register a US company from anywhere."
+    },
+    {
+      "id": 2,
+      "slug": "paddle",
+      "title": "Paddle fees",
+      "provider": "Paddle",
+      "category": "payments",
+      "group": "merchant-of-record",
+      "status": "active",
+      "feeText": "5% + 50¢ per Checkout transaction",
+      "monthlyFee": "No monthly fee",
+      "morStatus": "yes",
+      "specText": "Global tax compliance, fraud protection, refunds and buyer support; collects the correct tax rate, tracks filing deadlines, submits sales tax filings",
+      "durationText": "Per-transaction billing",
+      "cardRequired": null,
+      "cardNote": "Not stated on the official pages read — check the official page.",
+      "limitsText": "Products under $10: contact Paddle to negotiate pricing",
+      "risks": [
+        "Supported countries and verification requirements: check the official page"
+      ],
+      "claimUrl": "https://www.paddle.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Paddle official pricing page",
+      "sourceUrl": "https://www.paddle.com/pricing",
+      "flags": [
+        "mor",
+        "no-monthly-fee"
+      ],
+      "notes": "FAQ wording: no monthly fee, no migration fee, no hidden fees."
+    },
+    {
+      "id": 3,
+      "slug": "lemon-squeezy",
+      "title": "Lemon Squeezy fees",
+      "provider": "Lemon Squeezy",
+      "category": "payments",
+      "group": "merchant-of-record",
+      "status": "active",
+      "feeText": "5% + 50¢ per transaction",
+      "monthlyFee": "No monthly fee",
+      "morStatus": "yes",
+      "specText": "Sales tax/VAT collection, remittance and filing, AI fraud protection, license keys, subscription billing; email marketing free for up to 500 subscribers; supports PayPal and other payment methods",
+      "durationText": "Per-transaction billing; the 2026 Update blog states no closing date",
+      "cardRequired": false,
+      "cardNote": "The pricing page states no card required (no card needed to sign up).",
+      "limitsText": "Transactions outside the US may carry a small additional fee; details: check the official page",
+      "risks": [
+        "The 2026 Update blog states no closing date or fee rate; post-migration fees follow the Stripe official pricing page",
+        "Supported countries and verification requirements: check the official page"
+      ],
+      "claimUrl": "https://www.lemonsqueezy.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Lemon Squeezy official pricing page · 2026 Update official blog",
+      "sourceUrl": "https://www.lemonsqueezy.com/pricing",
+      "flags": [
+        "mor",
+        "no-monthly-fee",
+        "migration-announced",
+        "no-close-date"
+      ],
+      "notes": "2026 Update blog: https://www.lemonsqueezy.com/blog/2026-update."
+    },
+    {
+      "id": 4,
+      "slug": "polar",
+      "title": "Polar fees",
+      "provider": "Polar",
+      "category": "payments",
+      "group": "merchant-of-record",
+      "status": "active",
+      "feeText": "Starter 5% + 50¢; Pro 3.8% + 40¢; Growth 3.6% + 35¢; Scale 3.4% + 30¢",
+      "monthlyFee": "Starter Free; Pro $20/month; Growth $100/month; Scale $400/month",
+      "morStatus": "yes",
+      "specText": "Merchant of Record; international cards +1.5%; disputes $15 each; payout fees passed through at Stripe cost",
+      "durationText": "Per-transaction billing; the Early Member rule uses 2026-05-27 as the cutoff",
+      "cardRequired": null,
+      "cardNote": "Not stated on the official pages read — check the official page.",
+      "limitsText": "Break-even points (official page figures): Pro about $1,379/month, Growth about $5,634/month, Scale about $19,048/month",
+      "risks": [
+        "International cards +1.5%; disputes $15 each, regardless of outcome",
+        "Early Members permanently lose the old rate after upgrading to a paid plan; dropping back to Starter uses the new 5% + 50¢ rate",
+        "Supported countries and verification requirements: check the official page"
+      ],
+      "claimUrl": "https://polar.sh/resources/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Polar official pricing resource page",
+      "sourceUrl": "https://polar.sh/resources/pricing",
+      "flags": [
+        "mor",
+        "tiered",
+        "early-member"
+      ],
+      "notes": "Payout fees: $2 per month with payouts, 0.25% + $0.25 per payout, currency conversion 0.25% (EU)–1%."
+    }
+  ]
+}
