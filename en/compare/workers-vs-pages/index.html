@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cloudflare Workers vs Pages: edge compute vs static hosting compared</title>
+<meta name="description" content="Cloudflare Workers and Pages compared: request and CPU metering, build and file limits, KV/D1/Queues companion free amounts, cards, and overage. Verified 2026-11-13.">
+<link rel="canonical" href="https://tokens.yangtokent.com/en/compare/workers-vs-pages/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/compare/workers-vs-pages/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/deploy/compare/workers-vs-pages/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/deploy/compare/workers-vs-pages/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cloudflare Workers vs Pages",
+  "description": "Cloudflare Workers and Pages compared: request and CPU metering, build and file limits, KV/D1/Queues companion free amounts, cards, and overage. Verified 2026-11-13.",
+  "inLanguage": "en",
+  "datePublished": "2026-11-14",
+  "dateModified": "2026-11-14",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/en/compare/workers-vs-pages/",
+  "author": {
+    "@type": "Organization",
+    "name": "Free Token Monitor",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Free Token Monitor",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which has the larger free amount, Workers or Pages?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The units differ, so the two cannot be compared directly by size: Workers is 100,000 requests/day and 10 ms CPU per invocation; Pages is 500 builds/month, 20,000 files/site, single file 25 MiB. Verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often do Workers free requests reset?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Metered daily: 100,000 requests/day. Verified 2026-11-13."
+      }
+    }
+  ]
+}
+</script>
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../">Free Token Monitor</a></h1>
+<p>Free credits for agents: only vendor-verified offers. Check the official page before claiming.</p></div></header>
+<nav><div class="wrap"><a href="../../">Home</a><a href="../../vps/">Free VPS</a><a href="../../wool/">VPS Deals</a><a href="../../cheap/">Cheap VPS</a><a href="../../deploy/">Deploy &amp; Hosting</a><a href="../../database/">Databases</a><a href="../../domain/">Domains &amp; DNS</a><a href="../../offers/">Offer details</a><a href="../" aria-current="page">Comparisons</a><a href="../../faq/">FAQ</a><a href="../../../deploy/compare/workers-vs-pages/">中文</a></div></nav>
+<main><div class="wrap">
+
+<article>
+<p class="crumb"><a href="../../">Home</a> / <a href="../">Comparisons</a> / Cloudflare Workers vs Pages</p>
+
+<h1>Cloudflare Workers vs Pages</h1>
+<p class="meta">Updated 2026-11-14 · Table data from vendor official pages (verified 2026-11-13)</p>
+<div class="answer"><p><b>Short answer:</b> the metering differs: Workers is metered by requests and CPU (100,000 requests/day, 10 ms CPU per invocation), Pages is limited by builds and files (500 builds/month, 20,000 files/site). Workers also has KV, D1, Queues, and Logs companion free amounts; card and overage behavior are not stated on the official pages read for either.</p></div>
+<h2>Comparison table</h2><div class="tablewrap"><table><thead><tr><th>Item</th><th><a href="../../deploy/offers/cloudflare-workers/">Cloudflare Workers</a></th><th><a href="../../deploy/offers/cloudflare-pages/">Cloudflare Pages</a></th></tr></thead><tbody><tr><td><b>Metering</b></td><td>Requests and CPU</td><td>Build count and file count</td></tr><tr><td><b>Free amounts</b></td><td>100,000 requests/day, 10 ms CPU per invocation, static asset requests free and unlimited</td><td>500 builds/month, 1 concurrent build, 20-minute timeout</td></tr><tr><td><b>Files &amp; domains</b></td><td>Check the official page</td><td>20,000 files/site, single file 25 MiB, 100 custom domains/project, 100 projects/account, unlimited preview deployments</td></tr><tr><td><b>Companion free amounts</b></td><td>KV, D1, Queues, and Logs each have free amounts</td><td>Check the official page</td></tr><tr><td><b>Paid tier</b></td><td>From $5/month/account, no egress/bandwidth fees</td><td>Check the official page</td></tr><tr><td><b>Card</b></td><td>Not stated on the official pages read</td><td>Not stated on the official pages read</td></tr><tr><td><b>Overage behavior</b></td><td>Behavior after exceeding the free tier not stated</td><td>Behavior after exceeding the limits not stated</td></tr><tr><td><b>Verified date</b></td><td>2026-11-13</td><td>2026-11-13</td></tr></tbody></table></div><h2>Metering differs</h2><p>Workers is metered by requests and CPU: 100,000 requests/day, 10 ms CPU per invocation, no duration charge. Pages is limited by builds and files: 500 builds/month, 20,000 files/site, single file 25 MiB. The two free amounts use different units and cannot be compared directly by size.</p><h2>Workers companion free amounts</h2><p>KV Free: 100,000 reads/day, 1,000 writes/day, 1 GB storage. D1 Free: 5M row reads/day, 100,000 row writes/day, 5 GB total storage, 10 databases. Queues Free: 10,000 ops/day. Workers Logs Free: 200,000/day, 3-day retention.</p><h2>The claim about new projects using Workers</h2><p>A claim that Pages documentation recommends Workers for new projects was not confirmed on the Pages limits documentation page — check the official page. The Pages limits documentation was updated on 2026-09-05.</p><h2>How to choose</h2><p>Choose by metering: for request and CPU metering, see Workers’ 100,000 requests/day and 10 ms CPU; for build and file limits, see Pages’ 500 builds/month and 20,000 files. For KV, D1, and Queues free amounts, see the companion figures on the Workers pricing page.</p>
+<h2>FAQ</h2>
+<details><summary>Which has the larger free amount, Workers or Pages?</summary>
+<p>The units differ, so the two cannot be compared directly by size: Workers is 100,000 requests/day and 10 ms CPU per invocation; Pages is 500 builds/month, 20,000 files/site, single file 25 MiB. Verified 2026-11-13.</p>
+</details>
+<details><summary>How often do Workers free requests reset?</summary>
+<p>Metered daily: 100,000 requests/day. Verified 2026-11-13.</p>
+</details>
+<p><b>Disclaimer:</b> table data comes from vendor official pages; allowances can change or end at any time — check the official page before claiming.</p>
+<div class="related"><h2>Related pages</h2>
+<ul>
+<li><a href="../../deploy/offers/cloudflare-workers/">Cloudflare Workers free tier</a></li><li><a href="../../deploy/offers/cloudflare-pages/">Cloudflare Pages free tier</a></li><li><a href="../vercel-netlify-pages/">Vercel vs Netlify vs Cloudflare Pages</a></li><li><a href="../../deploy/">Back to the Deploy &amp; hosting list</a></li>
+</ul></div>
+
+</article>
+
+</div></main>
+<footer><div class="wrap"><p><a href="../../">Home</a> · <a href="../../vps/">Free VPS</a> · <a href="../../wool/">VPS Deals</a> · <a href="../../cheap/">Cheap VPS</a> · <a href="../../deploy/">Deploy &amp; Hosting</a> · <a href="../../database/">Databases</a> · <a href="../../domain/">Domains &amp; DNS</a> · <a href="../../offers/">Offer details</a> · <a href="../">Comparisons</a> · <a href="../../faq/">FAQ</a> · <a href="../../../deploy/compare/workers-vs-pages/">中文</a></p><p>Data is for reference only — check the vendor’s official page. Every deploy entry was verified against a vendor official page; verification dates are on each page. Free tiers, trials, and prices can change or end at any time; read the vendor’s terms before claiming. No invite links.</p></div></footer>
+</body>
+</html>
