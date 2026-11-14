@@ -10,8 +10,8 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>认证指南：选型、MRU 与 MAU、社交登录、超额规则</title>
-<meta name="description" content="4 篇认证指南：选型对照、MRU 与 MAU 口径、社交登录基础、超额规则。核实于 2026-11-13。">
+<title>认证指南：选型、MRU 与 MAU、社交登录、超额规则、SSO 连接计数、MFA 与自定义域名</title>
+<meta name="description" content="6 篇认证指南：选型对照、MRU 与 MAU 口径、社交登录基础、超额规则、SSO/SCIM 连接计数、MFA 与自定义域名对照。新 2 篇核实于 2026-11-14。">
 <link rel="canonical" href="https://tokens.yangtokent.com/auth/guides/">
 <style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
 * { box-sizing:border-box; }
@@ -72,11 +72,11 @@ footer a { color:var(--accent); }
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "认证指南：选型、MRU 与 MAU、社交登录、超额规则",
-  "description": "4 篇认证指南：选型对照、MRU 与 MAU 口径、社交登录基础、超额规则。核实于 2026-11-13。",
+  "headline": "认证指南：选型、MRU 与 MAU、社交登录、超额规则、SSO 连接计数、MFA 与自定义域名",
+  "description": "6 篇认证指南：选型对照、MRU 与 MAU 口径、社交登录基础、超额规则、SSO/SCIM 连接计数、MFA 与自定义域名对照。新 2 篇核实于 2026-11-14。",
   "inLanguage": "zh-CN",
   "datePublished": "2026-11-13",
-  "dateModified": "2026-11-13",
+  "dateModified": "2026-11-14",
   "mainEntityOfPage": "https://tokens.yangtokent.com/auth/guides/",
   "author": {
     "@type": "Organization",
@@ -99,11 +99,11 @@ footer a { color:var(--accent); }
 <p class="crumb"><a href="../../">首页</a> / <a href="../">认证与用户管理</a> / 认证指南</p>
 
 <h1>认证指南</h1>
-<p class="meta">本页更新于 2026-11-13</p>
-<p>4 篇指南：选型、口径、社交登录、超额。参数以各家官网为准，核实于 2026-11-13。</p>
-<ul><li><a href="choosing-auth-provider/">登录注册自己写还是用 Clerk/Auth0</a> — 自己写与用认证服务的对照：免费用户量、社交登录、组织、绑卡、超限规则</li><li><a href="mru-vs-mau/">MRU 与 MAU 有什么不同</a> — Clerk 留存用户定义、MRO 定义、Auth0 外部活跃用户表述、数字为什么不能直接比大小</li><li><a href="social-login-basics/">社交登录基础</a> — 通用配置步骤、Clerk 至多 3 个社交登录、Auth0 1 个企业连接</li><li><a href="auth-overage-rules/">认证额度超了怎么办</a> — Clerk 宽限期与强制升级、Auth0 超限行为未确认说明、附带认证的超额</li></ul>
+<p class="meta">本页更新于 2026-11-14</p>
+<p>6 篇指南：选型、口径、社交登录、超额、SSO 连接计数、MFA 与自定义域名。参数以各家官网为准，新 2 篇核实于 2026-11-14。</p>
+<ul><li><a href="choosing-auth-provider/">登录注册自己写还是用 Clerk/Auth0</a> — 自己写与用认证服务的对照：免费用户量、社交登录、组织、绑卡、超限规则</li><li><a href="mru-vs-mau/">MRU 与 MAU 有什么不同</a> — Clerk 留存用户定义、MRO 定义、Auth0 外部活跃用户表述、数字为什么不能直接比大小</li><li><a href="social-login-basics/">社交登录基础</a> — 通用配置步骤、Clerk 至多 3 个社交登录、Auth0 1 个企业连接</li><li><a href="auth-overage-rules/">认证额度超了怎么办</a> — Clerk 宽限期与强制升级、Auth0 超限行为未确认说明、附带认证的超额</li><li><a href="sso-connection-counting/">SSO/SCIM 连接怎么计数</a> — 8 个免费档的企业连接数、SSO 与 SCIM 分开计数规则、超额单价、自托管路线</li><li><a href="mfa-custom-domain-gates/">MFA 与自定义域名在哪些免费档里</a> — 8 个免费档的 MFA 与自定义域名对照、绑卡与付费门槛</li></ul>
 <p>分组总览见 <a href="../">认证与用户管理列表</a>；机器可读数据见 <a href="../../data/auth.json">data/auth.json</a>。</p>
-<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，领取前请以厂商官方页为准。</div>
+<div class="note"><b>信息来源：</b>厂商官方页；新 2 篇核实于 2026-11-14，其余核实于 2026-11-13。条款随时可能调整或结束，领取前请以厂商官方页为准。</div>
 </article>
 </div></main>
 <footer><div class="wrap"><p><a href="../../">首页</a> · <a href="../">认证与用户管理</a> · <a href="../offers/">认证详情</a> · <a href="../compare/">认证对比</a> · <a href="../guides/">认证指南</a> · <a href="../faq/">认证问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
