@@ -1,13 +1,16 @@
 {
   "meta": {
-    "generatedAt": "2026-11-13",
-    "count": 2,
+    "generatedAt": "2026-11-14",
+    "count": 5,
     "language": "en",
     "sources": [
       "GitHub official pricing page",
-      "GitLab official pricing page"
+      "GitLab official pricing page",
+      "Bitbucket official pricing page",
+      "Codeberg official documentation FAQ",
+      "Azure DevOps official pricing page"
     ],
-    "note": "Specs and terms are transcribed from vendor official pages; fields not stated on official pages read “Check the official page”. group values: free (free tier). status values: active (free tier). cardRequired null means the official page does not state it; false means the official site states no credit card is required. planKind has the same meaning as group, with the value free-tier (free tier). planName is the vendor plan name. specText summarizes the free allowances in the official wording; durationText covers duration and permanence; cardNote covers card requirements; limitsText covers key limits; risks covers notes; flags are entry feature markers: public-only (some features in the comparison table are limited to public repositories), no-card-signup (sign-up needs no credit card), shared-runner-card (shared runners require card verification), user-limit (per-group user limit), unlimited-repos (no repository count limit)."
+    "note": "Specs and terms are transcribed from vendor official pages; fields not stated on official pages read “Check the official page”. group values: free (free tier). status values: active (free tier). cardRequired null means the official page does not state it; false means the official site states no credit card is required. planKind has the same meaning as group, with the value free-tier (free tier). planName is the vendor plan name. specText summarizes the free allowances in the official wording; durationText covers duration and permanence; cardNote covers card requirements; limitsText covers key limits; risks covers notes; flags are entry feature markers: public-only (some features in the comparison table are limited to public repositories), no-card-signup (sign-up needs no credit card), shared-runner-card (shared runners require card verification), user-limit (per-group user limit), unlimited-repos (no repository count limit). New markers: foss-only (free/libre software projects only), private-limit (private content has a size cap). overageBehavior states the overage behavior from the official page (present on entries added 2026-11-14); fields not stated read “Check the official page”."
   },
   "offers": [
     {
@@ -69,6 +72,103 @@
         "user-limit"
       ],
       "notes": "Premium $29/user/month (annual billing); Ultimate has no public price, and the pricing page writes \"Contact us for custom pricing\" (quote-based pricing)."
+    },
+    {
+      "id": 3,
+      "slug": "bitbucket-free",
+      "title": "Bitbucket Free",
+      "provider": "Bitbucket",
+      "category": "code",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "planName": "Free",
+      "specText": "Up to 5 users; unlimited public/private repositories; 50 build minutes per month; 1 GB LFS file storage (plus 1 GB storage per repository); build minutes and storage shared by all users in the workspace",
+      "durationText": "Free (the official pages read do not state permanent wording)",
+      "cardRequired": null,
+      "cardNote": "Free-tier card requirements are not stated on the official pages read — check the official page.",
+      "limitsText": "Up to 5 users; 50 build minutes per month; 1 GB LFS file storage (the documentation page states 1 GB large file storage in total); build minutes scale by runner size (a 5-minute step on a 2x runner counts as 10 minutes)",
+      "overageBehavior": "The documentation page states no overage protection on the Free plan (Overage protection: Not included); the pricing page states 1,000 more minutes or 100 GB for $10 per month.",
+      "risks": [
+        "Up to 5 users; build minutes and storage are shared by all users in the workspace",
+        "50 build minutes per month, scaled by runner size",
+        "Free-tier card requirements are not stated on the official pages read — check the official page",
+        "Paid plan prices differ between the pricing page and the documentation page; see the detail page"
+      ],
+      "claimUrl": "https://www.atlassian.com/software/bitbucket/pricing",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Bitbucket official pricing page",
+      "sourceUrl": "https://www.atlassian.com/software/bitbucket/pricing",
+      "flags": [
+        "user-limit",
+        "unlimited-repos"
+      ],
+      "notes": "Pricing page: Standard $3.65/user/month, Premium $8/user/month; documentation limitations page: Standard $3/user/month ($15/month for 1-5 users), Premium $6/user/month ($30/month for 1-5 users), both wordings presented side by side. Documentation page: Standard 2,500 build minutes per month, Premium 3,500 build minutes per month. Community/academic subscriptions (eligibility-based): unlimited private repositories and contributors, 5 GB LFS storage, 500 build minutes."
+    },
+    {
+      "id": 4,
+      "slug": "codeberg",
+      "title": "Codeberg free hosting",
+      "provider": "Codeberg",
+      "category": "code",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "planName": "Free service",
+      "specText": "Free hosting for free/libre software projects (Forgejo); public repositories need a suitable license; 100 repositories per user/organization by default; requests needed above 750 MiB Git storage and 1.5 GiB packages/LFS/attachments; private content capped at 100 MB (for free software contributors); Forgejo Actions default runners need no request, Woodpecker CI access is granted per account",
+      "durationText": "Free; the FAQ states no payment is required for any service, and membership is fully optional",
+      "cardRequired": false,
+      "cardNote": "The FAQ states no payment is required for any service, and association membership is fully optional.",
+      "limitsText": "Free/libre software projects only; public repositories need a suitable license; no private hosting services; private content capped at 100 MB (the requests page states 100 MiB per user); 100 repositories by default; requests needed above 750 MiB Git storage or 1.5 GiB packages/LFS/attachments; Woodpecker CI access is granted per account",
+      "overageBehavior": "No quota for valid use cases; requests are needed before exceeding default resources — check the official page.",
+      "risks": [
+        "Free/libre software projects only; public repositories need a suitable license",
+        "No private hosting services; commercial private repositories are pointed to self-hosted Forgejo",
+        "Private content is capped at 100 MB, for free software contributors",
+        "Woodpecker CI access is granted per account; monthly CI minute figures are not stated on the official pages read"
+      ],
+      "claimUrl": "https://docs.codeberg.org/getting-started/faq/",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Codeberg official documentation FAQ",
+      "sourceUrl": "https://docs.codeberg.org/getting-started/faq/",
+      "flags": [
+        "no-card-signup",
+        "foss-only",
+        "private-limit"
+      ],
+      "notes": "No paid plans; funded by donations and membership fees. The FAQ states 100 MB of private content; the requests page states 100 MiB per user; both unit wordings are presented side by side."
+    },
+    {
+      "id": 5,
+      "slug": "azure-devops-free",
+      "title": "Azure DevOps free allowances",
+      "provider": "Azure DevOps",
+      "category": "code",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "planName": "Basic (first 5 users free)",
+      "specText": "First 5 Basic users free; unlimited private Git repositories; 1 Microsoft-hosted parallel job with 1,800 minutes per month; 1 self-hosted parallel job with unlimited minutes; 2 GiB of Artifacts free per organization; Boards and the Pipelines free offer included with Basic",
+      "durationText": "Free (the official pages read do not state permanent wording); free build amounts reset on the first day of the month",
+      "cardRequired": false,
+      "cardNote": "The pricing page FAQ states a credit card is not necessary to get started; a card is set up in the purchase experience when more services or more users are added.",
+      "limitsText": "First 5 Basic users free, $6/user/month from the 6th user; further users default to the Stakeholder tier, and Basic licenses are needed for access to Repos/Boards; Microsoft-hosted jobs allow 1,800 minutes per month",
+      "overageBehavior": "Free build amounts reset on the first day of the month; extra parallel jobs cost $40/Microsoft-hosted and $15/self-hosted per month; Artifacts beyond 2 GiB use tiered pricing.",
+      "risks": [
+        "Users beyond the first 5 default to the Stakeholder tier; Basic licenses are needed for access to Repos/Boards",
+        "The pricing page notes that prices are estimates — check the official page",
+        "Microsoft-hosted jobs allow 1,800 minutes per month; self-hosted job minutes are unlimited, with machines supplied separately"
+      ],
+      "claimUrl": "https://azure.microsoft.com/en-us/pricing/details/devops/azure-devops-services/",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Azure DevOps official pricing page",
+      "sourceUrl": "https://azure.microsoft.com/en-us/pricing/details/devops/azure-devops-services/",
+      "flags": [
+        "no-card-signup",
+        "user-limit",
+        "unlimited-repos"
+      ],
+      "notes": "Basic + Test Plans $52/user/month. Unlimited users can access Pipelines and Artifacts at no extra charge. Visual Studio subscribers get free access and do not count against the 5 free users (pricing page)."
     }
   ]
 }

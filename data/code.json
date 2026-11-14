@@ -1,12 +1,15 @@
 {
   "meta": {
-    "generatedAt": "2026-11-13",
-    "count": 2,
+    "generatedAt": "2026-11-14",
+    "count": 5,
     "sources": [
       "GitHub 官网定价页",
-      "GitLab 官网定价页"
+      "GitLab 官网定价页",
+      "Bitbucket 官网定价页",
+      "Codeberg 官方文档 FAQ",
+      "Azure DevOps 官网定价页"
     ],
-    "note": "规格与条款照录厂商官方页面原文；官方页面未注明的字段写「以官方页面为准」。group 取值：free（免费层）。status 取值：active（免费层）。cardRequired 为 null 表示官方页未说明，为 false 表示官网写明无需信用卡。planKind 与 group 含义相同，取值为 free-tier（免费层）。planName 为厂商计划名。specText 为免费内容原文摘要；durationText 为时长与永久性说明；cardNote 为绑卡要求说明；limitsText 为关键限制；risks 为注意事项；flags 为条目特征标记：public-only（对比表中有功能仅限公开仓库）、no-card-signup（注册无需信用卡）、shared-runner-card（共享 Runner 须绑卡验证）、user-limit（每组人数上限）、unlimited-repos（仓库数量不限）。"
+    "note": "规格与条款照录厂商官方页面原文；官方页面未注明的字段写「以官方页面为准」。group 取值：free（免费层）。status 取值：active（免费层）。cardRequired 为 null 表示官方页未说明，为 false 表示官网写明无需信用卡。planKind 与 group 含义相同，取值为 free-tier（免费层）。planName 为厂商计划名。specText 为免费内容原文摘要；durationText 为时长与永久性说明；cardNote 为绑卡要求说明；limitsText 为关键限制；risks 为注意事项；flags 为条目特征标记：public-only（对比表中有功能仅限公开仓库）、no-card-signup（注册无需信用卡）、shared-runner-card（共享 Runner 须绑卡验证）、user-limit（每组人数上限）、unlimited-repos（仓库数量不限）。新增标记：foss-only（仅面向自由/开源软件项目）、private-limit（私有内容有容量上限）。overageBehavior 为官方页写明的超额行为（2026-11-14 新增条目含此字段），未写明的写「以官方页面为准」。"
   },
   "offers": [
     {
@@ -68,6 +71,103 @@
         "user-limit"
       ],
       "notes": "Premium $29/用户/月（按年计费）；Ultimate 无公开价，定价页写“Contact us for custom pricing”（报价制）。"
+    },
+    {
+      "id": 3,
+      "slug": "bitbucket-free",
+      "title": "Bitbucket Free",
+      "provider": "Bitbucket",
+      "category": "code",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "planName": "Free",
+      "specText": "至多 5 名用户；无限公开/私有仓库；每月 50 构建分钟；1 GB LFS 文件存储（另有每仓库 1 GB 存储）；构建分钟与存储由工作区内所有用户共享",
+      "durationText": "免费（官网已读页面未明示永久）",
+      "cardRequired": null,
+      "cardNote": "官网已读页面未述免费档绑卡要求，以官方页面为准。",
+      "limitsText": "至多 5 名用户；每月 50 构建分钟；LFS 文件存储 1 GB（文档页写大型文件存储共 1 GB）；构建分钟按 Runner 规格计量（2× Runner 上 5 分钟步骤计 10 分钟）",
+      "overageBehavior": "文档页写免费档无超额保护（Overage protection: Not included）；定价页写可加购 1,000 分钟或 100 GB、每月 $10。",
+      "risks": [
+        "至多 5 名用户，构建分钟与存储由工作区内所有用户共享",
+        "每月 50 构建分钟，按 Runner 规格计量",
+        "免费档绑卡要求在官网已读页面中未述，以官方页面为准",
+        "付费档价格在定价页与文档页说法不同，见详情页"
+      ],
+      "claimUrl": "https://www.atlassian.com/software/bitbucket/pricing",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Bitbucket 官网定价页",
+      "sourceUrl": "https://www.atlassian.com/software/bitbucket/pricing",
+      "flags": [
+        "user-limit",
+        "unlimited-repos"
+      ],
+      "notes": "定价页：Standard $3.65/用户/月、Premium $8/用户/月；文档 limitations 页：Standard $3/用户/月（1–5 用户 $15/月）、Premium $6/用户/月（1–5 用户 $30/月），两处说法并列。文档页：Standard 每月 2,500 构建分钟、Premium 每月 3,500 构建分钟。社区/学术订阅（资格型）：无限私有仓库与贡献者、5 GB LFS 存储、500 构建分钟。"
+    },
+    {
+      "id": 4,
+      "slug": "codeberg",
+      "title": "Codeberg 免费托管",
+      "provider": "Codeberg",
+      "category": "code",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "planName": "免费服务",
+      "specText": "自由/开源软件项目免费托管（Forgejo）；公开仓库须附合适许可证；默认每用户/组织 100 个仓库；Git 存储 750 MiB、Packages/LFS/附件 1.5 GiB 以上先申请；私有内容至多 100 MB（面向自由软件贡献者）；Forgejo Actions 默认 Runner 无需申请，Woodpecker CI 按账户申请接入",
+      "durationText": "免费；FAQ 写明不要求为任何服务付费，会员完全可选",
+      "cardRequired": false,
+      "cardNote": "FAQ 写明不要求为任何服务付费，协会会员完全可选。",
+      "limitsText": "仅面向自由/开源软件项目；公开仓库须附合适许可证；不提供私有托管服务；私有内容至多 100 MB（申请页写 100 MiB/用户）；默认 100 个仓库；超 750 MiB Git 存储或 1.5 GiB Packages/LFS/附件须先申请；Woodpecker CI 须按账户申请",
+      "overageBehavior": "有效用例无配额；超过默认额度先在申请仓库提出请求，以官方页面为准。",
+      "risks": [
+        "仅面向自由/开源软件项目，公开仓库须附合适许可证",
+        "不提供私有托管服务；商业项目私有仓库建议自托管 Forgejo",
+        "私有内容至多 100 MB，面向自由软件贡献者",
+        "Woodpecker CI 须按账户申请接入；月度 CI 分钟数在官网已读页面中未述"
+      ],
+      "claimUrl": "https://docs.codeberg.org/getting-started/faq/",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Codeberg 官方文档 FAQ",
+      "sourceUrl": "https://docs.codeberg.org/getting-started/faq/",
+      "flags": [
+        "no-card-signup",
+        "foss-only",
+        "private-limit"
+      ],
+      "notes": "无付费档；资金来自捐赠与会员费。FAQ 写私有内容 100 MB，申请页写 100 MiB/用户，两处单位措辞并列。"
+    },
+    {
+      "id": 5,
+      "slug": "azure-devops-free",
+      "title": "Azure DevOps 免费额度",
+      "provider": "Azure DevOps",
+      "category": "code",
+      "group": "free",
+      "status": "active",
+      "planKind": "free-tier",
+      "planName": "Basic（前 5 名用户免费）",
+      "specText": "前 5 名 Basic 用户免费；无限私有 Git 仓库；1 个 Microsoft-hosted 并行作业、每月 1,800 分钟；1 个 self-hosted 并行作业、分钟不限；每组织 2 GiB Artifacts 免费；Boards 与 Pipelines 免费量随 Basic 包含",
+      "durationText": "免费（官网已读页面未明示永久）；免费构建量每月 1 日重置",
+      "cardRequired": false,
+      "cardNote": "定价页 FAQ 写明开始使用不需要信用卡（a credit card isn't necessary to get started）；用更多服务或加更多用户时，在购买流程中设置信用卡。",
+      "limitsText": "前 5 名 Basic 用户免费，第 6 名起 $6/用户/月；之后的用户默认 Stakeholder 层，访问 Repos/Boards 须买 Basic 许可；Microsoft-hosted 作业每月 1,800 分钟",
+      "overageBehavior": "免费构建量每月 1 日重置；额外并行作业 $40/Microsoft-hosted、$15/self-hosted 每月；Artifacts 超 2 GiB 后按阶梯价计费。",
+      "risks": [
+        "前 5 名用户之后默认 Stakeholder 层，访问 Repos/Boards 须买 Basic 许可",
+        "定价页注明价格为估算，以官方页面为准",
+        "Microsoft-hosted 作业每月 1,800 分钟，self-hosted 作业分钟不限但须自备机器"
+      ],
+      "claimUrl": "https://azure.microsoft.com/en-us/pricing/details/devops/azure-devops-services/",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Azure DevOps 官网定价页",
+      "sourceUrl": "https://azure.microsoft.com/en-us/pricing/details/devops/azure-devops-services/",
+      "flags": [
+        "no-card-signup",
+        "user-limit",
+        "unlimited-repos"
+      ],
+      "notes": "Basic + Test Plans $52/用户/月。无限用户可免费访问 Pipelines 与 Artifacts。Visual Studio 订阅者免费访问且不计入 5 名免费用户（定价页）。"
     }
   ]
 }

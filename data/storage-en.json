@@ -1,11 +1,14 @@
 {
   "meta": {
-    "generatedAt": "2026-11-13",
-    "count": 2,
+    "generatedAt": "2026-11-14",
+    "count": 5,
     "language": "en",
     "sources": [
       "Cloudflare R2 official pricing page (page note: updated 2026-10-30)",
-      "Backblaze official pricing page"
+      "Backblaze official pricing page",
+      "Tigris official pricing page",
+      "Google Cloud official Free Tier documentation",
+      "UploadThing official pricing section"
     ],
     "note": "Specs and terms are transcribed from vendor official pages; fields not stated on official pages read “Check the official page”. group values: free (free tier) / pay-as-you-go. status values: active (free tier) / pay-as-you-go. cardRequired null means the official page does not state it. specText summarizes the free allowance or prices in the official wording; durationText is the duration or billing form; limitsText states key limits; overageBehavior is the charging beyond the free allowance or beyond the stated rules; egressText states the egress rule; risks are notes; flags are English tags. Supabase Storage and Firebase Storage details are in the Databases section (data/database.json and the database detail pages), not repeated in this file."
   },
@@ -74,6 +77,107 @@
         "partner-cdn-egress-free"
       ],
       "notes": "The official pricing page showed no “10GB free” wording in either of two captures; whether operation requests are billed separately — check the official page."
+    },
+    {
+      "id": 3,
+      "slug": "tigris",
+      "title": "Tigris free tier",
+      "provider": "Tigris",
+      "category": "storage",
+      "group": "free",
+      "status": "active",
+      "specText": "Monthly: 5 GB Standard storage, 10,000 PUT/COPY/POST/LIST requests, 100,000 GET/SELECT and other requests, egress free; Standard storage $0.02/GB/month; Class A $0.005/1,000 requests; Class B $0.0005/1,000 requests",
+      "durationText": "Monthly allowance, resets monthly; whether it is permanent is not stated on the official pages read — check the official page",
+      "cardRequired": false,
+      "cardNote": "The official pricing page states “No card to start”.",
+      "limitsText": "The free allowance applies to Standard storage only; Infrequent Access has a 30-day minimum storage period and $0.01/GB retrieval; Archive and Archive Instant Retrieval have a 90-day minimum storage period; data in the Archive tier requires restoration before it can be accessed; storage is measured in binary gigabytes (1 GB equals 2^30 bytes), and GB/month is determined by averaging the daily peak storage over a billing period",
+      "overageBehavior": "Beyond the free allowance: Standard storage $0.02/GB/month, Infrequent Access $0.01/GB/month, Archive $0.004/GB/month, Archive Instant Retrieval $0.004/GB/month; Class A $0.005/1,000 requests, Class B $0.0005/1,000 requests; DELETE and CANCEL are free; object notifications $0.01/1,000 events; egress free",
+      "egressText": "Egress is free for all four storage classes (the Egress row of the official pricing table reads Free throughout)",
+      "risks": [
+        "The free allowance applies to Standard storage only",
+        "Infrequent Access has a 30-day minimum storage period; deleting, updating, or transitioning objects early still incurs a 30-day charge",
+        "Archive and Archive Instant Retrieval have a 90-day minimum storage period",
+        "Data in the Archive tier requires restoration before it can be accessed, and is charged at the Standard storage rate for the restoration period",
+        "Storage is measured in binary gigabytes"
+      ],
+      "claimUrl": "https://www.tigrisdata.com/pricing/",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Tigris official pricing page",
+      "sourceUrl": "https://www.tigrisdata.com/pricing/",
+      "flags": [
+        "monthly-free-tier",
+        "egress-free",
+        "no-card",
+        "s3-compatible",
+        "four-storage-classes"
+      ],
+      "notes": "The S3-compatible wording is on the Tigris official documentation partner integrations page. The free-tier block reads PUT, COPY, POST and LIST / GET, SELECT and all other requests; the documentation page groups them as PUT, POST, LIST / GET, HEAD — both wordings are shown side by side; check the official page."
+    },
+    {
+      "id": 4,
+      "slug": "google-cloud-storage",
+      "title": "Google Cloud Storage free tier",
+      "provider": "Google Cloud",
+      "category": "storage",
+      "group": "free",
+      "status": "active",
+      "specText": "Monthly: 5 GB-months of regional storage (US regions only), 5,000 Class A operations, 50,000 Class B operations, 100 GB of outbound data transfer from North America (excluding China and Australia destinations); only the us-east1, us-west1, and us-central1 regions, calculated combined",
+      "durationText": "The Free Tier has no end date; Google reserves the right to change or eliminate the offering with 30 days' advance notice; unused allowances do not roll over",
+      "cardRequired": true,
+      "cardNote": "A Google Cloud billing account is required to access the Free Tier; Free Trial signup requires a credit card or other payment method (a temporary $0.00–$1.00 hold, not an actual charge).",
+      "limitsText": "Free Tier benefits apply only to usage in the us-east1, us-west1, and us-central1 regions, calculated combined; the free outbound transfer covers North America to all region destinations excluding China and Australia; unused allowances do not roll over to the next month",
+      "overageBehavior": "Beyond the Free Tier, usage is billed at standard rates (paid billing account) or paid for by the $300 trial credit (trial billing account): Standard storage starting at $0.02/GiB/month, Nearline starting at $0.01/GiB/month, Coldline starting at $0.004/GiB/month, Archive starting at $0.0012/GiB/month, operation charges starting at $0.0004/1,000 operations, retrieval fees starting at $0.01/GiB, general data transfer starting at $0.08/GiB; full rates — check the official page",
+      "egressText": "100 GB of outbound data transfer from North America per month is free (excluding China and Australia destinations); inbound data transfer is unlimited; data transfer within the same location is unlimited; beyond the allowance, general data transfer starts at $0.08/GiB",
+      "risks": [
+        "Free Tier benefits apply only to three US regions",
+        "The free outbound transfer excludes China and Australia destinations",
+        "Unused allowances do not roll over",
+        "A Cloud Billing account is required to access the Free Tier",
+        "The $300 trial credit is valid for 90 days and is separate from the Free Tier"
+      ],
+      "claimUrl": "https://docs.cloud.google.com/free/docs/free-cloud-features",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Google Cloud official Free Tier documentation",
+      "sourceUrl": "https://docs.cloud.google.com/free/docs/free-cloud-features",
+      "flags": [
+        "monthly-free-tier",
+        "no-end-date",
+        "three-us-regions-only",
+        "billing-account-required"
+      ],
+      "notes": "The Free Tier documentation writes 5 GB-months / 100 GB, while the product page pricing table writes 5 GiB of standard storage / 100 GiB of data transfer; both unit wordings are shown side by side. The product page pricing table also states no retrieval fee for standard storage and unlimited free operations. Which operations Class A and Class B each include is not stated on the official pages read — check the official page."
+    },
+    {
+      "id": 5,
+      "slug": "uploadthing",
+      "title": "UploadThing 2GB App free plan",
+      "provider": "UploadThing",
+      "category": "storage",
+      "group": "free",
+      "status": "active",
+      "specText": "2GB App plan: $0/month; 100GB App plan $10/month (includes 100GB storage); Usage Based plan from $25/month (includes 250GB storage, $0.08/GB beyond that)",
+      "durationText": "$0/month plan; whether it is permanent is not stated on the official pages read — check the official page",
+      "cardRequired": null,
+      "cardNote": "Not stated on the official pages read — check the official page.",
+      "limitsText": "A file upload service, not an S3 bucket API; Regions and Private Files appear in the paid-plan feature rows; the 2GB App plan's feature details did not render in the official page text read — check the official page",
+      "overageBehavior": "What happens beyond the 2GB App plan is not stated on the official pages read — check the official page; paid plans: 100GB App $10/month, Usage Based from $25/month with $0.08/GB beyond 250GB",
+      "egressText": "Upload/download (egress) charging is not stated on the official pages read — check the official page",
+      "risks": [
+        "A file upload service, not an S3 bucket API",
+        "The 2GB App plan's feature details and overage behavior are not stated on the official pages read — check the official page",
+        "Egress charging is not stated on the official pages read — check the official page"
+      ],
+      "claimUrl": "https://uploadthing.com/#pricing",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "UploadThing official pricing section",
+      "sourceUrl": "https://uploadthing.com/#pricing",
+      "flags": [
+        "free-plan",
+        "file-upload-service",
+        "flat-plans",
+        "not-s3-bucket-api"
+      ],
+      "notes": "The official homepage pricing section text rendered only the three plan prices and the paid-plan feature rows; the 2GB App plan's audit log retention, upload/download rules, and sharing rules across apps are not stated on the official pages read — check the official page; second-hand figures are not used."
     }
   ]
 }

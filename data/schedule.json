@@ -1,0 +1,212 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-14",
+    "count": 6,
+    "sources": [
+      "Upstash 官网 QStash 定价页",
+      "Upstash 官网 Workflow 定价页",
+      "Inngest 官网定价页",
+      "Trigger.dev 官网定价页",
+      "cron-job.org 官网服务条款",
+      "EasyCron 官网定价页"
+    ],
+    "note": "规格与条款照录厂商官方页面原文；官方页面未注明的字段写「以官方页面为准」。group 取值：cron（定时任务）、queue（队列与工作流）。status 取值：active（免费档）。cardRequired 为 null 表示官方页未说明。planName 为官网写明的计划名；cron-job.org 服务条款未命名计划，写「免费服务」。overageBehavior 为官方页写明的超额行为，未写明的写「以官方页面为准」。QStash 定价页内关于重试是否计费有两种说法，见 QStash 条目的 notes。Cloudflare Cron Triggers / Queues、Vercel Cron、Render Cron Jobs、GitHub Actions 定时触发随部署/代码平台提供，详情见部署与代码板块的对应详情页，本文件不重复列出。"
+  },
+  "offers": [
+    {
+      "id": 1,
+      "slug": "qstash",
+      "title": "QStash Free 免费档",
+      "provider": "Upstash",
+      "category": "schedule",
+      "group": "queue",
+      "status": "active",
+      "planName": "Free",
+      "specText": "每天 1,000 条消息、50 GB 带宽、消息最大 1 MB、最多 10 个活跃排程、10 个队列、延迟最长 7 天、HTTP 响应时长最长 15 分钟、DLQ 保留 3 天、日志保留 3 天、队列并行度 2、最大并行度 10、URL 组 1 个、每组最多 100 个端点；排程分辨率最高 1 分钟，支持时区",
+      "durationText": "免费档（官网已读页面未明示永久，以官方页面为准）",
+      "cardRequired": null,
+      "cardNote": "官网已读页面未说明绑卡要求，以官方页面为准。",
+      "limitsText": "每天 1,000 条消息；50 GB 带宽；消息最大 1 MB；最多 10 个活跃排程；10 个队列；延迟最长 7 天；HTTP 响应时长最长 15 分钟；DLQ 保留 3 天；日志保留 3 天；队列并行度 2；最大并行度 10；URL 组 1 个，每组最多 100 个端点",
+      "overageBehavior": "日消息量与月带宽为软限制，只在持续超额时适用；短暂峰值不会立即拦截；持续超额先联系升级，无法联系且长期超额时 API 可能返回 429（定价页 FAQ）",
+      "risks": [
+        "重试计费说法冲突：定价页顶部写重试免费，同一页 FAQ 写每次投递尝试计 1 条、重试另计",
+        "默认重试 3 次，退避从 12 秒起、单次延迟上限 1 天",
+        "每分钟触发的排程一天产生 1,440 次初始投递，已超过每天 1,000 条的免费档日限额（算术，未计重试）",
+        "HTTP 响应超过 15 分钟会被中止",
+        "免费档无 SLA、无静态加密"
+      ],
+      "claimUrl": "https://upstash.com/pricing/qstash",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Upstash 官网 QStash 定价页",
+      "sourceUrl": "https://upstash.com/pricing/qstash",
+      "flags": [
+        "messages-per-day",
+        "schedules-10",
+        "retry-billing-conflict",
+        "soft-limits"
+      ],
+      "notes": "说法冲突原文：定价页机器可读版顶部 “You are only charged for messages — retries are free.”；同一页 FAQ “Each delivery attempt counts as one message. The initial delivery counts as one message, and each retry is counted as an additional message.”，并举例 1 次失败 + 1 次重试成功计 2 条。重试文档：默认重试 3 次，退避 12s / 2m28s / 30m8s（原文）/ 6h7m6s / 24h / 24h；响应 489 + Upstash-NonRetryable-Error: true 可禁用重试并进 DLQ；跟随重定向最多 10 次。排程 API 文档：最大分辨率 1 分钟，支持时区（如 CRON_TZ=America/New_York）。Pay as You Go $1/100K 消息，带宽超 50 GB/月后 $0.05/GB；Fixed 1M $180/月，Fixed 10M $420/月。"
+    },
+    {
+      "id": 2,
+      "slug": "upstash-workflow",
+      "title": "Upstash Workflow Free 免费档",
+      "provider": "Upstash",
+      "category": "schedule",
+      "group": "queue",
+      "status": "active",
+      "planName": "Free",
+      "specText": "每天 1,000 步、消息最大 1 MB、最大并行度 10；一步是 QStash 服务器对 Workflow URL 或外部 URL 的一次调用；重试计为额外步骤，并行步骤计为两步",
+      "durationText": "免费档（官网已读页面未明示永久，以官方页面为准）",
+      "cardRequired": null,
+      "cardNote": "官网已读页面未说明绑卡要求，以官方页面为准。",
+      "limitsText": "每天 1,000 步；消息最大 1 MB；最大并行度 10；context.call 与 context.invoke 各计 2 步；并行执行时每步多计 1 步；重试计为额外步骤",
+      "overageBehavior": "日步数与月带宽为软限制，短暂峰值不会立即拦截；持续超额先联系升级，长期超额时工作流运行可能因配额错误失败；达到日步数上限时 QStash 开始返回错误，SDK 节流后短暂延迟重试，重试上限到达后运行失败并记入 DLQ",
+      "risks": [
+        "context.call 与 context.invoke 各计 2 步，并行执行时每步多计 1 步，重试另计",
+        "免费档的带宽、延迟上限、DLQ 保留、日志保留、活跃排程数在已读定价页中未述，以官方页面为准",
+        "触发时请求体超限返回 HTTP 412，运行失败并记入 DLQ"
+      ],
+      "claimUrl": "https://upstash.com/pricing/workflow",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Upstash 官网 Workflow 定价页",
+      "sourceUrl": "https://upstash.com/pricing/workflow",
+      "flags": [
+        "steps-per-day",
+        "retry-counts-extra",
+        "soft-limits"
+      ],
+      "notes": "步的定义：一步是 QStash 服务器对 Workflow URL 或外部 URL 的一次调用。context.run、context.sleep、context.sleepUntil、context.waitForEvent 各计 1 步；context.call、context.invoke 各计 2 步。Workflow 基于 QStash 构建，QStash 免费档的延迟/DLQ/日志数字不直接转用于 Workflow。Pay as You Go $1/100K 步；Fixed 1M $180/月，Fixed 10M $420/月。"
+    },
+    {
+      "id": 3,
+      "slug": "inngest",
+      "title": "Inngest Free",
+      "provider": "Inngest",
+      "category": "schedule",
+      "group": "queue",
+      "status": "active",
+      "planName": "Free",
+      "specText": "每月 50,000 次执行、每月 500,000 个事件、每月 10,000 个 scores、5 个并发步骤、3 个 Workers、serverless workers 无限、5 个席位、24 小时 trace 与日志历史、队列深度 100,000、事件最大 256 KiB、每应用最多 100 个函数、单函数最多 1,000 步、单步最长 2 小时、运行最长 30 天",
+      "durationText": "免费档（官网已读页面未明示永久，以官方页面为准）",
+      "cardRequired": false,
+      "cardNote": "官网定价页写明 No credit card required（无需信用卡）。",
+      "limitsText": "每月 50,000 次执行；每月 500,000 个事件；每月 10,000 个 scores；5 个并发步骤；3 个 Workers；5 个席位；24 小时 trace 与日志历史；队列深度 100,000；事件最大 256 KiB；每应用最多 100 个函数；单函数最多 1,000 步；单步最长 2 小时；运行最长 30 天；每函数最多 10 个触发器",
+      "overageBehavior": "官网已读页面未述，以官方页面为准",
+      "risks": [
+        "一次执行 = 一次函数运行或一次步骤执行，5 步的函数一次运行计 6 次执行",
+        "免费档函数连续失败 20 次后自动暂停",
+        "单步 2 小时上限不延长宿主更短的超时",
+        "cron 默认 UTC，可加 TZ= 前缀；夏令时切换日可能运行 0、1、2 次，Inngest 不做夏令时修正"
+      ],
+      "claimUrl": "https://www.inngest.com/pricing",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Inngest 官网定价页",
+      "sourceUrl": "https://www.inngest.com/pricing",
+      "flags": [
+        "executions-per-month",
+        "concurrent-steps-5",
+        "auto-pause-20"
+      ],
+      "notes": "执行定义原文：一次执行是一次函数运行或一次步骤执行，5 步的函数一次运行计 6 次执行。单步返回最多 4 MiB，单次运行状态最多 32 MiB。cron 为 5 字段表达式，jitter 1 秒至 5 分钟。Pro $99/月起（含 1m 执行/月，之后 $50/1m）；Business $499/月起（含 10m 执行/月，之后 $25/1m）。用量限制与 cron 细节见 Inngest 官网文档（用量限制页、cron 排程页）。"
+    },
+    {
+      "id": 4,
+      "slug": "trigger-dev",
+      "title": "Trigger.dev Free",
+      "provider": "Trigger.dev",
+      "category": "schedule",
+      "group": "queue",
+      "status": "active",
+      "planName": "Free",
+      "specText": "每月 $5 计算额度、20 个并发运行、无限任务、5 名团队成员、10 个排程、1 天日志保留、1 天查询期、10 个并发 Realtime 连接、1 个告警目的地；任务无最长运行时长；等待超过 5 秒不计计算用量；API 限速 1,500 请求/分钟",
+      "durationText": "免费档（官网已读页面未明示永久，以官方页面为准）",
+      "cardRequired": false,
+      "cardNote": "官网定价页写明 No credit card required（无需信用卡）。",
+      "limitsText": "每月 $5 计算额度；20 个并发运行；无限任务；5 名团队成员；10 个排程；1 天日志保留；1 天查询期；10 个并发 Realtime 连接；1 个告警目的地；API 限速 1,500 请求/分钟",
+      "overageBehavior": "额度用完后须升级才能继续运行任务（定价页 FAQ）；付费档超额部分按计算用量费率计费",
+      "risks": [
+        "按执行秒数 + 每次运行 $0.000025 调用费计费，慢任务比快任务贵",
+        "重试默认规则在已读定价页中未述，以官方页面为准",
+        "排程最短间隔在已读定价页中未述，以官方页面为准"
+      ],
+      "claimUrl": "https://trigger.dev/pricing",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Trigger.dev 官网定价页",
+      "sourceUrl": "https://trigger.dev/pricing",
+      "flags": [
+        "compute-credits-5",
+        "concurrent-runs-20",
+        "schedules-10",
+        "no-card"
+      ],
+      "notes": "机器价：Micro $0.0000169/秒，Small 1x（默认）$0.0000338/秒，Small 2x $0.0000675/秒，Medium 1x $0.0000850/秒，Medium 2x $0.0001700/秒，Large 1x $0.0003400/秒，Large 2x $0.0006800/秒。官方示例：10 秒任务、每天 100 次、Small 1x，1 月约 $1.09。DEV 环境运行不收费。等待子任务与超过 5 秒的等待不计计算用量，并发限制只在代码执行时计入。Hobby $10/月（含 $10 额度），Pro $50/月（含 $50 额度）。"
+    },
+    {
+      "id": 5,
+      "slug": "cron-job-org",
+      "title": "cron-job.org 免费服务",
+      "provider": "cron-job.org",
+      "category": "schedule",
+      "group": "cron",
+      "status": "active",
+      "planName": "免费服务",
+      "specText": "完全免费、无需付费；排程以分钟为单位、可设每分钟执行、每个任务可设时区（默认 UTC）；超时按任务以秒配置（默认值未述）；支持自定义请求方法、请求头、请求体与 HTTP Basic 认证；REST API 默认每天 100 次请求，sustaining 会员 5,000 次",
+      "durationText": "免费服务（服务条款写明完全免费；未明示永久，以官方页面为准）",
+      "cardRequired": false,
+      "cardNote": "服务条款写明 no fees have to be paid（无需付费）。",
+      "limitsText": "排程以分钟为单位，可设每分钟执行；每个任务可设时区（默认 UTC）；超时按任务以秒配置，默认值未述；REST API 默认每天 100 次请求，sustaining 会员 5,000 次；任务创建 1 次/秒、5 次/分钟；列表/详情/历史 5 次/秒",
+      "overageBehavior": "API 超出日限额返回 429；任务执行次数上限、超时默认值、响应数据上限在已读官方页面中未述，以官方页面为准",
+      "risks": [
+        "不提供任何保证（含可用性与性能保证），可随时无事先通知关闭服务",
+        "可无事先通知删除/锁定账号",
+        "不适用于处理个人数据、敏感公司数据或其他机密数据",
+        "sustaining 会员不产生额外权益",
+        "重试规则在已读官方页面中未述，以官方页面为准"
+      ],
+      "claimUrl": "https://cron-job.org/en/tos/",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "cron-job.org 官网服务条款",
+      "sourceUrl": "https://cron-job.org/en/tos/",
+      "flags": [
+        "entirely-free",
+        "no-warranty",
+        "api-100-per-day"
+      ],
+      "notes": "服务条款未命名计划，planName 写“免费服务”。排程与 API 细节见官网 REST API 文档 https://docs.cron-job.org/rest-api.html：排程字段为分钟/小时/月中日/月/周中日，minutes [-1] 为每分钟；requestTimeout 以秒计，-1 为使用默认超时；执行历史含 jitter（毫秒）与分段计时；失败状态含超时、响应数据过多等，无数字。60 次/小时、30 秒超时、64 KB 输出上限、最近 50 次执行、连续失败自动禁用阈值等说法只见二手文章，未经官方页文本核实，未采用。"
+    },
+    {
+      "id": 6,
+      "slug": "easycron",
+      "title": "EasyCron Free",
+      "provider": "EasyCron",
+      "category": "schedule",
+      "group": "cron",
+      "status": "active",
+      "planName": "Free",
+      "specText": "200 EPDs、5 秒超时、20 分钟间隔、执行跟踪、10 条日志与预测、接收 100 MB、保存 10 KB 头尾；无邮件通知、无失败日志保留、无自定义 HTTP、无 Slack 通知、无正则匹配、无 Webhook 通知、无子用户；按频率可设任务数：每 20 分钟 2 个、每 30 分钟 4 个、每小时 8 个、每天 200 个",
+      "durationText": "免费档，每月到期（官网定价页写明 Expires Monthly；续期方式以官方页面为准）",
+      "cardRequired": null,
+      "cardNote": "官网已读页面未说明绑卡要求，以官方页面为准。",
+      "limitsText": "200 EPDs；5 秒超时；20 分钟间隔；10 条日志与预测；接收 100 MB；保存 10 KB 头尾；无邮件通知；无失败日志保留；无自定义 HTTP；无 Slack 通知；无正则匹配；无 Webhook 通知；无子用户",
+      "overageBehavior": "官网已读页面未述，以官方页面为准",
+      "risks": [
+        "免费档每月到期（Expires Monthly），续期方式与到期后任务状态以官方页面为准",
+        "超时只有 5 秒，最短间隔 20 分钟",
+        "失败日志不保留，也无失败通知",
+        "EPD 按最繁忙一天的执行总次数计，每分钟跑一次占 1,440 EPDs"
+      ],
+      "claimUrl": "https://www.easycron.com/pricing",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "EasyCron 官网定价页",
+      "sourceUrl": "https://www.easycron.com/pricing",
+      "flags": [
+        "epd-200",
+        "expires-monthly",
+        "interval-20-min",
+        "timeout-5s"
+      ],
+      "notes": "EPD 定义（官网 FAQ）：EPD 是任务在最繁忙一天的执行总次数；每 10 分钟跑一次占 144 EPDs，每分钟跑一次占 1,440 EPDs；删除任务后占用的 EPDs 释放回余额。任务数表（官网 FAQ）：Free 档每分钟与每 10 分钟无名额。Individual-1 $24/年（8,000 EPDs、1 分钟间隔）；Individual-2 $60/年；Individual-3 $120/年；Individual-4 $240/年。"
+    }
+  ]
+}

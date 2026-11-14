@@ -1,10 +1,13 @@
 {
   "meta": {
-    "generatedAt": "2026-11-13",
-    "count": 2,
+    "generatedAt": "2026-11-14",
+    "count": 5,
     "sources": [
       "Cloudflare R2 官网定价页（页面注 2026-10-30 更新）",
-      "Backblaze 官网定价页"
+      "Backblaze 官网定价页",
+      "Tigris 官网定价页",
+      "Google Cloud 官方免费层文档",
+      "UploadThing 官网定价区"
     ],
     "note": "规格与条款照录厂商官方页面原文；官方页面未注明的字段写「以官方页面为准」。group 取值：free（免费层）/ pay-as-you-go（按量付费）。status 取值：active（免费层）/ pay-as-you-go（按量付费）。cardRequired 为 null 表示官方页未说明。specText 为免费内容或价格原文摘要；durationText 为时长或计费形态；limitsText 为关键限制；overageBehavior 为免费额度之外或超出规则后的计费；egressText 为出站规则；risks 为注意事项；flags 为英文标签。Supabase Storage 与 Firebase Storage 的详情在数据库板块（data/database.json 与数据库详情页），本文件不重复列出。"
   },
@@ -73,6 +76,107 @@
         "partner-cdn-egress-free"
       ],
       "notes": "官方定价页两次抓取均未出现“10GB 免费”表述；操作请求是否单独计费以官方页面为准。"
+    },
+    {
+      "id": 3,
+      "slug": "tigris",
+      "title": "Tigris 免费层",
+      "provider": "Tigris",
+      "category": "storage",
+      "group": "free",
+      "status": "active",
+      "specText": "每月：5 GB 标准存储、10,000 次 PUT/COPY/POST/LIST 请求、100,000 次 GET/SELECT 及其他请求、出站免费；标准存储 $0.02/GB/月；Class A $0.005/1,000 次请求；Class B $0.0005/1,000 次请求",
+      "durationText": "每月额度，按月重置；永久性在官方已读页面中未述，以官方页面为准",
+      "cardRequired": false,
+      "cardNote": "官网定价页写明 No card to start（开始无需绑卡）。",
+      "limitsText": "免费额度仅适用于标准存储；Infrequent Access 最短存储 30 天、取回 $0.01/GB；Archive 与 Archive Instant Retrieval 最短存储 90 天；Archive 数据需恢复后才能访问；存储按二进制 GB（1 GB = 2^30 字节）计量，GB/月按账单期内每日峰值存储的平均值计算",
+      "overageBehavior": "超出免费额度后：标准存储 $0.02/GB/月、Infrequent Access $0.01/GB/月、Archive $0.004/GB/月、Archive Instant Retrieval $0.004/GB/月；Class A $0.005/1,000 次、Class B $0.0005/1,000 次；DELETE 与 CANCEL 免费；对象通知 $0.01/1,000 个事件；出站免费",
+      "egressText": "全部四个存储类出站均免费（官方定价表 Egress 一行均为 Free）",
+      "risks": [
+        "免费额度仅适用于标准存储",
+        "Infrequent Access 最短存储 30 天，未满删除/更新/转出仍按 30 天收费",
+        "Archive 与 Archive Instant Retrieval 最短存储 90 天",
+        "Archive 数据需恢复后才能访问，恢复期间按标准存储费率计费",
+        "存储按二进制 GB 计量"
+      ],
+      "claimUrl": "https://www.tigrisdata.com/pricing/",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Tigris 官网定价页",
+      "sourceUrl": "https://www.tigrisdata.com/pricing/",
+      "flags": [
+        "monthly-free-tier",
+        "egress-free",
+        "no-card",
+        "s3-compatible",
+        "four-storage-classes"
+      ],
+      "notes": "S3 兼容表述见 Tigris 官方文档合作伙伴集成页。免费层区块写 PUT, COPY, POST and LIST / GET, SELECT and all other requests；文档页分组措辞为 PUT, POST, LIST / GET, HEAD，两处措辞并列，以官方页面为准。"
+    },
+    {
+      "id": 4,
+      "slug": "google-cloud-storage",
+      "title": "Google Cloud Storage 免费层",
+      "provider": "Google Cloud",
+      "category": "storage",
+      "group": "free",
+      "status": "active",
+      "specText": "每月：5 GB-months 区域存储（仅美国区域）、5,000 次 Class A 操作、50,000 次 Class B 操作、100 GB 自北美出站数据传输（不含中国与澳大利亚目的地）；仅 us-east1、us-west1、us-central1 三个区域，合并计算",
+      "durationText": "免费层无结束日期；Google 保留提前 30 天通知后变更或取消的权利；未用额度不结转",
+      "cardRequired": true,
+      "cardNote": "使用免费层需要一个 Cloud Billing 账号；免费试用注册时须提供信用卡或其他付款方式（临时预扣 $0.00–$1.00，不是实际扣费）。",
+      "limitsText": "免费层仅适用于 us-east1、us-west1、us-central1 三个区域的用量，合并计算；出站免费部分仅限自北美至各区域目的地（不含中国与澳大利亚）；未用额度不结转至下月",
+      "overageBehavior": "超出免费层后按标准费率计费（付费账单账户）或由 $300 试用额度支付（试用账单账户）：标准存储起价 $0.02/GiB/月、Nearline 起价 $0.01/GiB/月、Coldline 起价 $0.004/GiB/月、Archive 起价 $0.0012/GiB/月、操作费起价 $0.0004/1,000 次、取回费起价 $0.01/GiB、通用数据传输起价 $0.08/GiB；完整费率以官方页面为准",
+      "egressText": "每月 100 GB 自北美出站数据传输免费（不含中国与澳大利亚目的地）；入站数据传输不限量；同一位置内数据传输不限量；超出后通用数据传输起价 $0.08/GiB",
+      "risks": [
+        "免费层仅适用于三个美国区域",
+        "出站免费部分不含中国与澳大利亚目的地",
+        "未用额度不结转",
+        "使用免费层需要 Cloud Billing 账号",
+        "$300 试用额度 90 天有效，与免费层是两回事"
+      ],
+      "claimUrl": "https://docs.cloud.google.com/free/docs/free-cloud-features",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Google Cloud 官方免费层文档",
+      "sourceUrl": "https://docs.cloud.google.com/free/docs/free-cloud-features",
+      "flags": [
+        "monthly-free-tier",
+        "no-end-date",
+        "three-us-regions-only",
+        "billing-account-required"
+      ],
+      "notes": "免费层文档写 5 GB-months / 100 GB，产品页定价表写 5 GiB 标准存储 / 100 GiB 数据传输，两处单位写法并列。产品页定价表另列：标准存储无取回费、免费操作不限量。Class A/B 各包含哪些操作在官方已读页面中未述，以官方页面为准。"
+    },
+    {
+      "id": 5,
+      "slug": "uploadthing",
+      "title": "UploadThing 2GB App 免费计划",
+      "provider": "UploadThing",
+      "category": "storage",
+      "group": "free",
+      "status": "active",
+      "specText": "2GB App 计划：$0/月；100GB App 计划 $10/月（含 100GB 存储）；Usage Based 计划 $25/月起（含 250GB 存储，超出部分 $0.08/GB）",
+      "durationText": "$0/月计划；永久性在官方已读页面中未述，以官方页面为准",
+      "cardRequired": null,
+      "cardNote": "官方已读页面未述，以官方页面为准。",
+      "limitsText": "文件上传服务，非 S3 桶 API；Regions 与 Private Files 列在付费档功能行中；2GB App 档的功能细则在官方已读页面文本中未渲染出，以官方页面为准",
+      "overageBehavior": "2GB App 档超额后的行为在官方已读页面中未述，以官方页面为准；付费档：100GB App $10/月，Usage Based $25/月起、超出 250GB 后 $0.08/GB",
+      "egressText": "上传/下载（出站）计费在官方已读页面中未述，以官方页面为准",
+      "risks": [
+        "文件上传服务，非 S3 桶 API",
+        "2GB App 档的功能细则与超额行为在官方已读页面中未述，以官方页面为准",
+        "出站计费在官方已读页面中未述，以官方页面为准"
+      ],
+      "claimUrl": "https://uploadthing.com/#pricing",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "UploadThing 官网定价区",
+      "sourceUrl": "https://uploadthing.com/#pricing",
+      "flags": [
+        "free-plan",
+        "file-upload-service",
+        "flat-plans",
+        "not-s3-bucket-api"
+      ],
+      "notes": "官网首页定价区文本只渲染出三个计划的价格与付费档功能行；2GB App 档的审计日志天数、上传/下载规则、应用间共享规则在官方已读页面中未述，以官方页面为准，不采纳二手说法。"
     }
   ]
 }

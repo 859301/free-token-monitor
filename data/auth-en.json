@@ -1,11 +1,17 @@
 {
   "meta": {
-    "generatedAt": "2026-11-13",
-    "count": 2,
+    "generatedAt": "2026-11-14",
+    "count": 8,
     "language": "en",
     "sources": [
       "Clerk official pricing page",
-      "Auth0 official pricing page"
+      "Auth0 official pricing page",
+      "Stytch official pricing page",
+      "Descope official pricing page",
+      "WorkOS official pricing page",
+      "Logto official pricing page",
+      "Kinde official pricing page",
+      "Frontegg official pricing page"
     ],
     "note": "Specs and terms are transcribed from vendor official pages; fields not stated on official pages read “Check the official page”. group values: standalone (standalone auth services). status values: active (free tiers). cardRequired null means the official page does not state it. planName is the plan name stated on the official site. overageBehavior is the overage behavior stated on the official page; where unstated it reads “Check the official page”. Supabase Auth (50,000 MAU) and Firebase Auth (50K MAU) come with database free tiers; see the Supabase and Firebase detail pages in the Databases section; not repeated in this file."
   },
@@ -73,6 +79,209 @@
         "custom-domain-card-check"
       ],
       "notes": "The pricing page FAQ confirms the 25,000 threshold. Essentials $35/month, Professional $240/month."
+    },
+    {
+      "id": 3,
+      "slug": "stytch",
+      "title": "Stytch pay-as-you-go free allowance",
+      "provider": "Stytch",
+      "category": "auth",
+      "group": "standalone",
+      "status": "active",
+      "planName": "Pay as you go",
+      "specText": "10,000 monthly active users and AI agents, unlimited organizations, 5 SSO or SCIM connections, 1,000 M2M tokens, full authn/authz feature suite (OAuth, SSO, sessions, RBAC), unlimited dashboard seats",
+      "durationText": "Free allowance (the official pricing page states Always free)",
+      "cardRequired": null,
+      "cardNote": "Card requirements are not stated on the official pages read — check the official page.",
+      "limitsText": "10,000 monthly active users and AI agents; unlimited organizations; 5 SSO or SCIM connections; 1,000 M2M tokens; fraud and risk prevention is an optional add-on (10,000 fingerprints, $.005 per fingerprint beyond that)",
+      "overageBehavior": "SSO or SCIM connections beyond 5 cost $125 per connection; the per-user price past the free allowance is not stated on the official pages read — check the official page",
+      "risks": [
+        "Each SSO or SCIM connection beyond 5 costs $125",
+        "Per-user and per-M2M-token prices past the free allowance are not stated on the official pages read — check the official page",
+        "Fraud and risk prevention tools are an optional add-on; past 10,000 fingerprints the price is $.005 per fingerprint",
+        "Card requirements are not stated on the official pages read — check the official page"
+      ],
+      "claimUrl": "https://stytch.com/pricing",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Stytch official pricing page",
+      "sourceUrl": "https://stytch.com/pricing",
+      "flags": [
+        "mau",
+        "10k",
+        "unlimited-orgs",
+        "sso-scim-5"
+      ],
+      "notes": "The pricing page states No feature gating and pay as you go from $0; the comparison table lists 5 SSO or SCIM connections included, $125 per connection beyond that; 1,000 M2M tokens included; unlimited dashboard seats. Enterprise uses custom pricing."
+    },
+    {
+      "id": 4,
+      "slug": "descope",
+      "title": "Descope Free Forever",
+      "provider": "Descope",
+      "category": "auth",
+      "group": "standalone",
+      "status": "active",
+      "planName": "Free Forever",
+      "specText": "7,500 MAU, 10 monthly active tenants, 3 SSO connections, 1 federated app (OIDC), 5 test users, 10,000 M2M exchanges, 2,000 MACs, 2,000 MATKs, all auth methods, RBAC, MFA / step-up authentication, no Descope watermark, 1-week audit retention, 99% SLA",
+      "durationText": "Free tier (plan name Free Forever)",
+      "cardRequired": null,
+      "cardNote": "Card requirements are not stated on the official pages read — check the official page.",
+      "limitsText": "7,500 MAU; 10 monthly active tenants; 3 SSO connections; 1 federated app (OIDC); 5 test users; 10,000 M2M exchanges; 2,000 MACs; 2,000 MATKs; Descope-delivered SMS / voice calls up to 100 per month; Descope-delivered emails up to 1,000 per day; 1-week audit retention; no custom domain (starts on Pro)",
+      "overageBehavior": "No overages; exceeding any limit requires upgrading to Pro; exceeding the MAU or tenant limit triggers a warning email and a grace period to upgrade, after which the app may lose access to Descope; the grace period length is not stated on the official pages read — check the official page",
+      "risks": [
+        "Exceeding any limit (7,500 MAU, 10 tenants, 3 SSO connections) requires upgrading to Pro",
+        "No custom domain; custom domains start on Pro",
+        "Descope-delivered SMS / voice calls up to 100 per month, emails up to 1,000 per day",
+        "1-week audit retention"
+      ],
+      "claimUrl": "https://www.descope.com/pricing",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Descope official pricing page",
+      "sourceUrl": "https://www.descope.com/pricing",
+      "flags": [
+        "mau",
+        "7500",
+        "tenants-10",
+        "sso-3",
+        "hard-limits",
+        "grace-unspecified"
+      ],
+      "notes": "MAU definition: a user signing up or signing in over a 1-month period. Active tenant definition: a tenant with two or more associated users and at least one user logging in within a month. Pro from $249/month (billed annually), Growth from $799/month (billed annually). The pricing table states Pro includes 10,000 MAU while a FAQ example states Pro includes 7,500 MAU; the two wordings disagree — check the official page. A separate Hello World Startup Plan gives early-stage startups the Pro tier free of charge for one year on application; it differs from the Free Forever tier."
+    },
+    {
+      "id": 5,
+      "slug": "workos",
+      "title": "WorkOS AuthKit free allowance",
+      "provider": "WorkOS",
+      "category": "auth",
+      "group": "standalone",
+      "status": "active",
+      "planName": "AuthKit",
+      "specText": "User Management free up to 1,000,000 MAU (social auth, email + password, Magic Auth, MFA, email verification, organization auth policies, JIT provisioning, passkeys, RBAC, CLI authentication), audit log capturing and exporting free, all products free to try in staging",
+      "durationText": "Free allowance (the official pricing page states First 1 million active users free)",
+      "cardRequired": false,
+      "cardNote": "The official FAQ states: free to get started, no credit card needed until moving to production.",
+      "limitsText": "User Management free up to 1,000,000 MAU; SSO and Directory Sync include no free connections and are billed per connection; custom domains and custom branding carry an extra monthly fee",
+      "overageBehavior": "$2,500 per month per additional 1M users; SSO and Directory Sync $125 per connection per month each (automatic volume discounts, official blog)",
+      "risks": [
+        "SSO and Directory Sync are each billed per connection, with no free connections included",
+        "Custom domains and custom branding carry an extra monthly fee",
+        "A credit card is needed for production",
+        "Audit log streaming and event retention are billed separately ($125 per SIEM connection per month, $99 per million events stored per month)"
+      ],
+      "claimUrl": "https://workos.com/pricing",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "WorkOS official pricing page",
+      "sourceUrl": "https://workos.com/pricing",
+      "flags": [
+        "mau",
+        "1m",
+        "sso-per-connection",
+        "card-for-production"
+      ],
+      "notes": "Active user definition: any user action (sign up, sign in, profile update, and similar) within the calendar month. Pricing page: $2,500 per month per additional 1M users; log streaming $125 per SIEM connection per month, event retention $99 per million events stored per month. Official blog: SSO and Directory Sync $125 per connection per month each, custom domains $99 per month. Annual Credits include a 99.99% uptime SLA."
+    },
+    {
+      "id": 6,
+      "slug": "logto",
+      "title": "Logto Cloud Free",
+      "provider": "Logto",
+      "category": "auth",
+      "group": "standalone",
+      "status": "active",
+      "planName": "Free",
+      "specText": "Up to 50,000 MAU, 50K tokens (access tokens only), 3 applications, 1 machine-to-machine app, 1 custom domain, 3 social connectors, 1 webhook, 3-day audit log retention, 1 tenant member, user authentication, machine-to-machine apps, Account APIs, audit logs and user management",
+      "durationText": "Free tier (the official pages read do not state permanent wording — check the official page)",
+      "cardRequired": false,
+      "cardNote": "The official pricing page states no credit card required.",
+      "limitsText": "Up to 50,000 MAU; 50K tokens; 3 applications; 1 machine-to-machine app; 1 custom domain; 3 social connectors; 1 webhook; 3-day audit log retention; 1 tenant member; no organizations, RBAC, MFA, or enterprise SSO (all Pro add-ons or paid features)",
+      "overageBehavior": "Not stated on the official pages read — check the official page",
+      "risks": [
+        "The free tier has no organizations, RBAC, MFA, or enterprise SSO (Pro add-ons: MFA $48, Enterprise SSO $48)",
+        "Only 3 applications, 3 social connectors, 1 webhook",
+        "3-day audit log retention",
+        "Overage behavior is not stated on the official pages read — check the official page"
+      ],
+      "claimUrl": "https://logto.io/pricing",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Logto official pricing page",
+      "sourceUrl": "https://logto.io/pricing",
+      "flags": [
+        "mau",
+        "50k",
+        "tokens-50k",
+        "no-card",
+        "no-orgs-free"
+      ],
+      "notes": "Only access tokens are counted. Pro from $24/month, 50K tokens free then billed by usage, unlimited MAU and total applications (subject to system fair-use policies). Self-hosted plans are separate; this entry covers the Logto Cloud hosted free tier."
+    },
+    {
+      "id": 7,
+      "slug": "kinde",
+      "title": "Kinde Free",
+      "provider": "Kinde",
+      "category": "auth",
+      "group": "standalone",
+      "status": "active",
+      "planName": "Free",
+      "specText": "$0 forever, 10,500 MAU, 5 monthly active organizations, unlimited applications, unlimited dashboard seats, 1 enterprise SSO connection, 2,000 M2M tokens, email / SMS / social login, MFA, custom domain, 5 custom roles and 10 permissions, 10 feature flags, 1 webhook, 2 environments, 10 SMS",
+      "durationText": "Free tier (the official pricing page states $0 forever)",
+      "cardRequired": false,
+      "cardNote": "The official pricing page and FAQ state No credit card required / does not require a credit card to get started.",
+      "limitsText": "10,500 MAU; 5 monthly active organizations; 1 enterprise SSO connection; 2,000 M2M tokens; 5 custom roles and 10 permissions; 10 feature flags; 5 custom properties; 1 webhook; 2 environments; 10 SMS; no passkeys, API keys, or SCIM; Kinde branding cannot be removed; billing through Kinde carries a 0.7% platform fee per transaction",
+      "overageBehavior": "The FAQ states overages past included limits are billed automatically at transparent, published rates; Free-tier overage rates do not appear in the table read — check the official page (Pro-tier rates: $0.0175 per extra MAU, $0.50 per extra MAO)",
+      "risks": [
+        "Overages past included limits are billed automatically at published rates (FAQ)",
+        "Billing through Kinde carries a 0.7% platform fee per transaction",
+        "The free tier has no passkeys, API keys, or SCIM, and Kinde branding cannot be removed",
+        "Only 10 SMS included"
+      ],
+      "claimUrl": "https://www.kinde.com/pricing/",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Kinde official pricing page",
+      "sourceUrl": "https://www.kinde.com/pricing/",
+      "flags": [
+        "mau",
+        "10500",
+        "mao-5",
+        "sso-1",
+        "no-card",
+        "auto-overage"
+      ],
+      "notes": "MAO definition: organizations containing a single active user are not counted. Users on paid subscriptions are not counted toward MAU. Pro $25/month, Plus $75/month, Scale $250/month; enterprise SSO is unlimited with no additional costs from Plus up, Scale includes 3 SCIM directory syncs. The Pro feature list states Uncapped MAU while the pricing comparison table states extra usage at $0.0175 per MAU; both wordings are presented side by side — check the official page."
+    },
+    {
+      "id": 8,
+      "slug": "frontegg",
+      "title": "Frontegg pay-as-you-go free allowance",
+      "provider": "Frontegg",
+      "category": "auth",
+      "group": "standalone",
+      "status": "active",
+      "planName": "Pay as you go",
+      "specText": "7,500 MAU, 5 enterprise connections (SSO/SCIM), unlimited organizations, custom domain, fully customized hosted login, unlimited team seats",
+      "durationText": "Free allowance (Always included list on the official pricing page, $0/month)",
+      "cardRequired": false,
+      "cardNote": "The official FAQ states No credit card is needed to start.",
+      "limitsText": "7,500 MAU; 5 enterprise connections (SSO/SCIM combined); unlimited organizations; custom domain; no multiple environments, advanced fraud protection, or similar items (Enterprise-only)",
+      "overageBehavior": "Overage prices and behavior are not stated on the official pages read — check the official page (the pricing page is a usage-based estimator)",
+      "risks": [
+        "SSO and SCIM are counted separately; a customer using both counts as two connections",
+        "Overage prices and behavior are not stated on the official pages read — check the official page",
+        "Multiple environments, advanced fraud protection, a 99.99% SLA, and similar items are Enterprise-only"
+      ],
+      "claimUrl": "https://frontegg.com/pricing",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Frontegg official pricing page",
+      "sourceUrl": "https://frontegg.com/pricing",
+      "flags": [
+        "mau",
+        "7500",
+        "sso-scim-5",
+        "unlimited-orgs",
+        "no-card"
+      ],
+      "notes": "MAU definition: a user who logs in at least once in a calendar month. Enterprise uses custom pricing and adds custom roles and permissions, entitlements, per-tenant MFA, session and IP policies, audit log streaming, and more."
     }
   ]
 }

@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-14",
+    "count": 6,
+    "language": "en",
+    "sources": [
+      "Upstash official QStash pricing page",
+      "Upstash official Workflow pricing page",
+      "Inngest official pricing page",
+      "Trigger.dev official pricing page",
+      "cron-job.org official Terms of Service",
+      "EasyCron official pricing page"
+    ],
+    "note": "Specs and terms are transcribed from vendor official pages; fields not stated on official pages read “Check the official page”. group values: cron (scheduled tasks), queue (queues and workflows). status values: active (free tiers). cardRequired null means the official page does not state it. planName is the plan name stated on the official site; the cron-job.org Terms of Service name no plan, so planName reads “Free service”. overageBehavior is the overage behavior stated on the official page; where unstated it reads “Check the official page”. The QStash pricing page states two positions on whether retries are billed; see the QStash entry notes. Cloudflare Cron Triggers / Queues, Vercel Cron, Render Cron Jobs, and GitHub Actions scheduled triggers come with deploy and code platforms; see the corresponding detail pages in the Deploy and Code sections; not repeated in this file."
+  },
+  "offers": [
+    {
+      "id": 1,
+      "slug": "qstash",
+      "title": "QStash Free tier",
+      "provider": "Upstash",
+      "category": "schedule",
+      "group": "queue",
+      "status": "active",
+      "planName": "Free",
+      "specText": "1,000 messages a day, 50 GB bandwidth, 1 MB maximum message size, up to 10 active schedules, 10 queues, 7-day maximum delay, 15-minute maximum HTTP response duration, 3-day DLQ retention, 3-day log retention, queue parallelism 2, maximum parallelism 10, 1 URL group, up to 100 endpoints per group; maximum schedule resolution 1 minute, timezones supported",
+      "durationText": "Free tier (the official pages read do not state permanent wording — check the official page)",
+      "cardRequired": null,
+      "cardNote": "Card requirements are not stated on the official pages read — check the official page.",
+      "limitsText": "1,000 messages a day; 50 GB bandwidth; 1 MB maximum message size; up to 10 active schedules; 10 queues; 7-day maximum delay; 15-minute maximum HTTP response duration; 3-day DLQ retention; 3-day log retention; queue parallelism 2; maximum parallelism 10; 1 URL group, up to 100 endpoints per group",
+      "overageBehavior": "Daily message and monthly bandwidth limits are soft limits, applying only on consistent overuse; short spikes are not blocked immediately; continued overuse brings a contact about an upgrade first, then the API may return 429 errors (pricing page FAQ)",
+      "risks": [
+        "Conflicting retry-billing wording: the top of the pricing page states retries are free, while the FAQ on the same page states each delivery attempt counts as one message, with retries counted additionally",
+        "3 retries by default, with backoff starting at 12 seconds and each delay capped at 1 day",
+        "A schedule firing every minute produces 1,440 initial deliveries a day, above the 1,000-a-day free allowance (arithmetic, retries excluded)",
+        "An HTTP response taking longer than 15 minutes is aborted",
+        "No SLA and no encryption at rest on the Free tier"
+      ],
+      "claimUrl": "https://upstash.com/pricing/qstash",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Upstash official QStash pricing page",
+      "sourceUrl": "https://upstash.com/pricing/qstash",
+      "flags": [
+        "messages-per-day",
+        "schedules-10",
+        "retry-billing-conflict",
+        "soft-limits"
+      ],
+      "notes": "Conflicting wording, quoted: the machine-readable pricing page opens with “You are only charged for messages — retries are free.”; the FAQ on the same page states “Each delivery attempt counts as one message. The initial delivery counts as one message, and each retry is counted as an additional message.”, with an example of 1 failure plus 1 successful retry billed as 2 messages. Retry docs: 3 retries by default, backoff 12s / 2m28s / 30m8s (as written) / 6h7m6s / 24h / 24h; responding 489 with Upstash-NonRetryable-Error: true disables retries and sends the message to the DLQ; up to 10 redirects followed. Schedule API docs: maximum resolution 1 minute, timezones supported (for example CRON_TZ=America/New_York). Pay as You Go $1 per 100K messages, bandwidth past 50 GB a month $0.05/GB; Fixed 1M $180/month, Fixed 10M $420/month."
+    },
+    {
+      "id": 2,
+      "slug": "upstash-workflow",
+      "title": "Upstash Workflow Free tier",
+      "provider": "Upstash",
+      "category": "schedule",
+      "group": "queue",
+      "status": "active",
+      "planName": "Free",
+      "specText": "1,000 steps a day, 1 MB maximum message size, maximum parallelism 10; a step is a single call from the QStash server to the Workflow URL or an external URL; retries count as extra steps, parallel steps count as two steps",
+      "durationText": "Free tier (the official pages read do not state permanent wording — check the official page)",
+      "cardRequired": null,
+      "cardNote": "Card requirements are not stated on the official pages read — check the official page.",
+      "limitsText": "1,000 steps a day; 1 MB maximum message size; maximum parallelism 10; context.call and context.invoke count as 2 steps each; each step in a parallel run costs 1 extra step; retries count as extra steps",
+      "overageBehavior": "Daily step and monthly bandwidth limits are soft limits; short spikes do not block step executions immediately; continued overuse brings a contact about an upgrade, and over time workflow runs may fail with quota errors; when the daily step limit is reached, QStash starts returning errors, the SDK throttles and retries after a short delay, and a run fails into the DLQ once the retry limit is reached",
+      "risks": [
+        "context.call and context.invoke count as 2 steps each, each parallel step costs 1 extra step, and retries count additionally",
+        "Bandwidth, maximum delay, DLQ retention, log retention, and active schedule counts for the Free tier are not stated on the pricing page read — check the official page",
+        "A request body over the size limit at trigger time returns HTTP 412, and the run fails into the DLQ"
+      ],
+      "claimUrl": "https://upstash.com/pricing/workflow",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Upstash official Workflow pricing page",
+      "sourceUrl": "https://upstash.com/pricing/workflow",
+      "flags": [
+        "steps-per-day",
+        "retry-counts-extra",
+        "soft-limits"
+      ],
+      "notes": "Step definition: a step is a single call from the QStash server to the Workflow URL or an external URL. context.run, context.sleep, context.sleepUntil, and context.waitForEvent generate 1 billed step each; context.call and context.invoke generate 2 billed steps each. Workflow is built on QStash; QStash Free tier delay, DLQ, and log figures do not transfer to Workflow. Pay as You Go $1 per 100K steps; Fixed 1M $180/month, Fixed 10M $420/month."
+    },
+    {
+      "id": 3,
+      "slug": "inngest",
+      "title": "Inngest Free",
+      "provider": "Inngest",
+      "category": "schedule",
+      "group": "queue",
+      "status": "active",
+      "planName": "Free",
+      "specText": "50,000 executions a month, 500,000 events a month, 10,000 scores a month, 5 concurrent steps, 3 workers, unlimited serverless workers, 5 seats, 24-hour trace and log history, queue depth 100,000, 256 KiB maximum event size, up to 100 active functions per app, up to 1,000 steps per function, 2-hour maximum step duration, 30-day maximum run length",
+      "durationText": "Free tier (the official pages read do not state permanent wording — check the official page)",
+      "cardRequired": false,
+      "cardNote": "The official pricing page states No credit card required.",
+      "limitsText": "50,000 executions a month; 500,000 events a month; 10,000 scores a month; 5 concurrent steps; 3 workers; 5 seats; 24-hour trace and log history; queue depth 100,000; 256 KiB maximum event size; up to 100 active functions per app; up to 1,000 steps per function; 2-hour maximum step duration; 30-day maximum run length; up to 10 triggers per function",
+      "overageBehavior": "Not stated on the official pages read — check the official page",
+      "risks": [
+        "One execution equals one function run or one step execution, so a run with five steps uses six executions",
+        "On the Free plan, a function is paused automatically after 20 consecutive failures",
+        "The 2-hour step ceiling does not extend a shorter host timeout",
+        "Cron schedules use UTC by default, with a TZ= prefix available; on daylight saving change days a schedule may run zero, one, or two times, and Inngest does not correct for daylight saving time"
+      ],
+      "claimUrl": "https://www.inngest.com/pricing",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Inngest official pricing page",
+      "sourceUrl": "https://www.inngest.com/pricing",
+      "flags": [
+        "executions-per-month",
+        "concurrent-steps-5",
+        "auto-pause-20"
+      ],
+      "notes": "Execution definition: one execution is one function run or one step execution; a function run with five steps uses six executions. One step returns up to 4 MiB; one run holds up to 32 MiB of state. Cron expressions have five fields, with jitter from 1 second to 5 minutes. Pro from $99/month (1m executions a month included, then $50 per 1m); Business from $499/month (10m executions a month included, then $25 per 1m). Usage limits and cron details are on the Inngest official docs pages (usage limits, cron schedules)."
+    },
+    {
+      "id": 4,
+      "slug": "trigger-dev",
+      "title": "Trigger.dev Free",
+      "provider": "Trigger.dev",
+      "category": "schedule",
+      "group": "queue",
+      "status": "active",
+      "planName": "Free",
+      "specText": "$5 of compute credits a month, 20 concurrent runs, unlimited tasks, 5 team members, 10 schedules, 1-day log retention, 1-day query period, 10 concurrent Realtime connections, 1 alert destination; runs have no maximum duration; waits longer than 5 seconds do not count toward compute usage; API rate limit 1,500 requests per minute",
+      "durationText": "Free tier (the official pages read do not state permanent wording — check the official page)",
+      "cardRequired": false,
+      "cardNote": "The official pricing page states No credit card required.",
+      "limitsText": "$5 of compute credits a month; 20 concurrent runs; unlimited tasks; 5 team members; 10 schedules; 1-day log retention; 1-day query period; 10 concurrent Realtime connections; 1 alert destination; API rate limit 1,500 requests per minute",
+      "overageBehavior": "Once the credits are used, upgrading is required to keep running tasks (pricing page FAQ); on paid plans, compute past the included credits is billed at compute usage rates",
+      "risks": [
+        "Billing is per second of execution plus a $0.000025 invocation cost per run, so a slow task costs more than a fast one",
+        "Default retry rules are not stated on the pricing page read — check the official page",
+        "The minimum schedule interval is not stated on the pricing page read — check the official page"
+      ],
+      "claimUrl": "https://trigger.dev/pricing",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "Trigger.dev official pricing page",
+      "sourceUrl": "https://trigger.dev/pricing",
+      "flags": [
+        "compute-credits-5",
+        "concurrent-runs-20",
+        "schedules-10",
+        "no-card"
+      ],
+      "notes": "Machine prices: Micro $0.0000169 per second, Small 1x (default) $0.0000338 per second, Small 2x $0.0000675 per second, Medium 1x $0.0000850 per second, Medium 2x $0.0001700 per second, Large 1x $0.0003400 per second, Large 2x $0.0006800 per second. Official example: a 10-second task running 100 times a day on Small 1x costs about $1.09 a month. Runs in the DEV environment are not charged. Waiting for subtasks and waits longer than 5 seconds do not count toward compute usage, and concurrency limits apply only while code is executing. Hobby $10/month ($10 credits included), Pro $50/month ($50 credits included)."
+    },
+    {
+      "id": 5,
+      "slug": "cron-job-org",
+      "title": "cron-job.org free service",
+      "provider": "cron-job.org",
+      "category": "schedule",
+      "group": "cron",
+      "status": "active",
+      "planName": "Free service",
+      "specText": "Entirely free of charge, no fees; minute-level schedules, every-minute execution available, per-job timezone (UTC by default); per-job timeout in seconds (default value unstated); custom request methods, headers, bodies, and HTTP Basic auth; REST API 100 requests a day by default, 5,000 a day for sustaining members",
+      "durationText": "Free service (the Terms of Service state entirely free of charge; permanent wording is not stated — check the official page)",
+      "cardRequired": false,
+      "cardNote": "The Terms of Service state no fees have to be paid.",
+      "limitsText": "Minute-level schedules, every-minute execution available; per-job timezone (UTC by default); per-job timeout in seconds, default value unstated; REST API 100 requests a day by default, 5,000 a day for sustaining members; job creation 1 request per second and 5 per minute; listing, details, and history 5 requests per second",
+      "overageBehavior": "API requests past the daily limit return 429; job count caps, execution caps, the default timeout, and response data caps are not stated on the official pages read — check the official page",
+      "risks": [
+        "No warranty of any form, including uptime and performance guarantees, and the service may be shut down at any time without prior notice",
+        "User accounts may be deleted or locked without prior notice and without reasons",
+        "The service is not intended for processing personal data, sensitive company data, or other confidential data",
+        "A sustaining membership does not result in additional entitlements",
+        "Retry rules are not stated on the official pages read — check the official page"
+      ],
+      "claimUrl": "https://cron-job.org/en/tos/",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "cron-job.org official Terms of Service",
+      "sourceUrl": "https://cron-job.org/en/tos/",
+      "flags": [
+        "entirely-free",
+        "no-warranty",
+        "api-100-per-day"
+      ],
+      "notes": "The Terms of Service name no plan; planName reads “Free service”. Schedule and API details are in the official REST API documentation at https://docs.cron-job.org/rest-api.html: schedule fields are minutes, hours, days of month, months, and days of week, with minutes [-1] meaning every minute; requestTimeout is in seconds, with -1 meaning the default timeout; execution history includes jitter in milliseconds and timing breakdowns; failure statuses include timeout and too much response data, with no figures. Figures such as 60 runs an hour, a 30-second timeout, a 64 KB output cap, the last 50 executions, and an auto-disable failure threshold appear only in third-party articles, were not verified against official page text, and were not used."
+    },
+    {
+      "id": 6,
+      "slug": "easycron",
+      "title": "EasyCron Free",
+      "provider": "EasyCron",
+      "category": "schedule",
+      "group": "cron",
+      "status": "active",
+      "planName": "Free",
+      "specText": "200 EPDs, 5-second timeout, 20-minute interval, execution tracking, 10 logs and predictions, 100 MB received, 10 KB head and tail saved; no email notification, no failure log retention, no custom HTTP, no Slack notification, no regexp matching, no webhook notification, no subusers; job counts by frequency: 2 jobs every 20 minutes, 4 every 30 minutes, 8 every hour, 200 every day",
+      "durationText": "Free tier, expires monthly (the official pricing page states Expires Monthly; renewal terms — check the official page)",
+      "cardRequired": null,
+      "cardNote": "Card requirements are not stated on the official pages read — check the official page.",
+      "limitsText": "200 EPDs; 5-second timeout; 20-minute interval; 10 logs and predictions; 100 MB received; 10 KB head and tail saved; no email notification; no failure log retention; no custom HTTP; no Slack notification; no regexp matching; no webhook notification; no subusers",
+      "overageBehavior": "Not stated on the official pages read — check the official page",
+      "risks": [
+        "The Free tier expires monthly (Expires Monthly); renewal terms and the state of jobs after expiry — check the official page",
+        "A 5-second timeout and a 20-minute minimum interval",
+        "Failure logs are not retained, and no failure notification is included",
+        "EPD counts total executions on the busiest day; a job running every minute occupies 1,440 EPDs"
+      ],
+      "claimUrl": "https://www.easycron.com/pricing",
+      "verifiedAt": "2026-11-14",
+      "sourceName": "EasyCron official pricing page",
+      "sourceUrl": "https://www.easycron.com/pricing",
+      "flags": [
+        "epd-200",
+        "expires-monthly",
+        "interval-20-min",
+        "timeout-5s"
+      ],
+      "notes": "EPD definition (official FAQ): EPDs (Executions Per Day) are the total execution times of a cron job on its busiest day; a job running every 10 minutes occupies 144 EPDs, every minute 1,440 EPDs; deleting a job releases occupied EPDs back to the balance. Job-count table (official FAQ): no Free tier allowance for every-minute or every-10-minute jobs. Individual-1 $24/year (8,000 EPDs, 1-minute interval); Individual-2 $60/year; Individual-3 $120/year; Individual-4 $240/year."
+    }
+  ]
+}
