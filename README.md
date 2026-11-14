@@ -167,3 +167,9 @@ MIT License，见 [LICENSE](LICENSE)。
 - 英文页在 `en/` 下（首批，2026-11-13）：24 页——4 个板块列表页、10 篇详情页、6 篇对比、1 个综合问答页（23 问）、3 个 Hub 页。
 - 英文数据文件 `data/offers-en.json`、`data/vps-en.json`、`data/wool-en.json`、`data/cheap-en.json`：文本译为英文，事实（金额、日期、条款、规格、链接、核实日期）与中文数据文件完全一致；中文数据文件是事实来源，不要单独改 `-en` 文件里的事实字段。
 - 每篇英文页都在 `<head>` 里用 hreflang 指向中文对应页（`en` / `zh-CN` / `x-default`），中文为默认语言；中文对应页也加了回链。英文列表页为静态页，不含领取台账（无 localStorage）。
+
+### P0 第二批（2026-11-14）
+
+- 新增 30 页英文：3 个板块列表页（部署与托管、免费数据库、域名 / DNS / CDN / SSL）、18 篇详情页、6 篇对比、3 个 Hub 页；问答页由 23 问扩充至 41 问。
+- 新增英文数据文件 `data/deploy-en.json`、`data/database-en.json`、`data/domain-en.json`：规则同首批（文本译为英文，事实与中文数据文件完全一致）。
+- 英文页导航与页脚新增三个板块链接；30 个中文对应页加 hreflang 回链（仅 head 三行）；对比页英文版集中在 `en/compare/` 下。
