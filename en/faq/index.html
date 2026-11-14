@@ -10,21 +10,20 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FAQ: 23 questions about free AI APIs, free VPS &amp; VPS deals</title>
-<meta name="description" content="23 questions in English users’ own wording: Are free LLM APIs really free? Do they need a credit card? What happens at the limit? Can I get a free VPS without a card? Is Oracle Always Free forever? Renewal prices? Answer-first, with sources and verification dates.">
+<title>FAQ: 41 questions about free AI APIs, VPS, deploy, databases &amp; domains</title>
+<meta name="description" content="41 questions in English users’ own wording: Are free LLM APIs really free? Do they need a credit card? What happens at the limit? Can Vercel Hobby be used commercially? Do free instances sleep? Which free database? Cheapest .com registrar? Answer-first, with sources and verification dates.">
 <link rel="canonical" href="https://tokens.yangtokent.com/en/faq/">
 <link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/faq/">
 <link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/faq/">
 <link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/faq/">
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "FAQ: 23 questions about free AI APIs, free VPS, and VPS deals",
-  "description": "23 questions in English users’ own wording: Are free LLM APIs really free? Do they need a credit card? What happens at the limit? Can I get a free VPS without a card? Is Oracle Always Free forever? Renewal prices? Answer-first, with sources and verification dates.",
+  "headline": "FAQ: 41 questions about free AI APIs, VPS, deploy, databases, and domains",
+  "description": "41 questions in English users’ own wording: Are free LLM APIs really free? Do they need a credit card? What happens at the limit? Can Vercel Hobby be used commercially? Do free instances sleep? Which free database? Cheapest .com registrar? Answer-first, with sources and verification dates.",
   "inLanguage": "en",
   "datePublished": "2026-11-13",
-  "dateModified": "2026-11-13",
+  "dateModified": "2026-11-14",
   "mainEntityOfPage": "https://tokens.yangtokent.com/en/faq/",
   "author": {
     "@type": "Organization",
@@ -36,10 +35,8 @@
     "name": "Free Token Monitor",
     "url": "https://tokens.yangtokent.com/"
   }
-}
-</script>
-<script type="application/ld+json">
-{
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "inLanguage": "en",
@@ -227,10 +224,153 @@
         "@type": "Answer",
         "text": "With stated renewal prices, annual wins; with unstated renewal, the 3-year total is unknowable. Calculated from stated prices: RackNerd 1 GB at $21.99/year × 3 = $65.97 (same-rate renewal stated in the official FAQ); DigitalOcean Basic 512MiB at the $4.00/month cap × 36 = $144.00 (list price, monthly cap). HostEONS is excluded from the math — its renewal price is unstated, so no 3-year total can be computed. Monthly billing buys flexibility (cancel any time); annual billing buys the lower total where renewal is stated.Source: verified cheap-section data, 2026-11-13; arithmetic calculated from stated prices, labelled as such."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the Vercel free tier be used commercially? What happens when the limit is exceeded?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Terms of Service §4 states the Hobby plan can only be used for personal or non-commercial purposes. On exceeding the limit: the official pricing page states free Hobby accounts are limited to the usage caps and cannot purchase additional usage; the Hobby docs page states a 30-day waiting period after exceeding the limit. See Vercel Hobby free tier for the Fair Use two-column list and full figures.Source: Vercel official pricing page, Terms of Service, and Fair Use Guide; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do free instances sleep?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Render free instances spin down after 15 minutes without inbound traffic, waking in about 1 minute; Northflank Sandbox stays always on with no sleeping. Sleep policies for the other services are not stated on the official pages read. See Render free tier for the 750 instance hours/month rule.Source: Render and Northflank official pages; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When does Render free Postgres expire?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "30 days after creation; after a 14-day grace period, it is deleted along with the data. 1 per workspace, 1 GB. See Render free tier.Source: Render official pricing page and free documentation; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do deploy services require a credit card?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It differs by vendor: Northflank requires a payment method; Render has a $1 verification charge (refunded); EdgeOne needs no credit card; Railway allows a card-free trial; Fly.io needs no card to start the trial but needs one afterwards; card requirements for Vercel, Netlify, Workers, Pages, and Koyeb are not stated on the official pages read. See Deploy & hosting for the per-entry card column.Source: vendor official pricing pages; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Cloudflare Workers and Pages?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The metering differs: Workers is metered by requests and CPU (100,000 requests/day, 10 ms CPU per invocation); Pages is limited by builds and files (500 builds/month, 20,000 files/site, single file 25 MiB). Full comparison: Cloudflare Workers vs Pages.Source: Cloudflare Workers pricing page and Pages limits documentation; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Best free hosting for a Next.js app? Does the free tier sleep?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On sleeping: Render free instances spin down after 15 minutes without traffic, Northflank Sandbox stays always on with no sleeping, and sleep policies for the other services are not stated on the official pages read. Framework support is not stated on the vendors’ official pricing pages — check the official page.Source: Render and Northflank official pages; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which free database should I pick?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By type: Postgres — Supabase and Neon; Redis — Upstash Redis; MongoDB — MongoDB Atlas M0; full-stack platform — Firebase; row read/write units — Turso. Pause rules, card requirements, extra allowances, and overage behavior differ across the six; the per-entry figures are on the Databases list.Source: vendor official pricing pages; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long can a Supabase free project sit idle before it is paused?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1 week. Official pricing page wording: Free projects are paused after 1 week of inactivity. Limit of 2 active projects. How to resume after a pause is not stated on the official pages read — check the official page. See Supabase free tier.Source: Supabase official pricing page; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can inactivity delete the database?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Neon states overage keeps data, with compute paused until the next cycle. The Supabase pricing page writes pause (paused), with no deletion rule stated. Deletion rules for Turso, Upstash, MongoDB Atlas, and Firebase are not stated on the official pages read — check the official page. Full comparison: Pause and overage compared.Source: vendor official pricing pages; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "After exceeding the limit: does the service stop, or does it start charging?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It differs by vendor: Neon pauses compute until the next cycle without deleting data; Turso requires upgrade or blocking; Firebase Spark disables the app, Blaze charges pay-as-you-go with no hard cap possible; overage behavior for Supabase, Upstash, and MongoDB Atlas is not stated on the official pages read — check the official page. Full comparison: Pause and overage compared.Source: vendor official pricing pages; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Did Turso's free tier change after the Supabase acquisition?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No change announced. The Supabase official blog announced the acquisition of Turso on 2026-10-02, stating existing users are unaffected and Turso keeps operating, with no pricing or free-tier policy change announced. Policy changes after the acquisition — check the official page. See Turso free tier.Source: Supabase official blog (2026-10-02) and Turso official pricing page; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Best free Postgres for a side project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Supabase and Neon are both Postgres free tiers: Supabase allows max 2 active projects, 500 MB database, pause after 1 week inactive; Neon allows 100 projects, 1 GB storage per project, scale to zero after 5 minutes idle, with permanent wording, not a trial, and no credit card. Item-by-item comparison: Supabase vs Neon vs Turso.Source: Supabase and Neon official pricing pages; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there still free domains? Can Freenom free domains still be registered?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Freenom free domains are dead: new registrations stopped in 2023, exit from the domain business in 2024, paid sales of .tk / .cf / .gq resumed 2026-07-23. Alternatives: is-a.dev free subdomains, low-price .com domains, and student-pack domains.Source: vendor official pages, verified 2026-11-13; Freenom dates per second-hand reports."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much is .com renewal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Renewal prices (verified 2026-11-13): Spaceship $10.68, Porkbun $11.81, Namecheap $19.98. Renewal prices differ from first-year prices: Spaceship first year $9.48 (promo price), Namecheap first year $12.08 (promo price), Porkbun all three at $11.81. See the registrar price comparison.Source: Porkbun, Namecheap, and Spaceship official domains pages, verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the ICANN fee? How do the three registrars charge it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The ICANN fee is a fee charged by ICANN, and the three registrars charge it differently: Porkbun includes it in the price (All prices include ICANN and any other fees); Namecheap $0.20 per purchase, added to the list price at purchase (applies to some domains); Spaceship $0.20/year, charged mandatorily at purchase.Source: Porkbun, Namecheap, and Spaceship official domains pages, verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the Cloudflare free plan include?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Free plan at $0 includes DNS, Unmetered DDoS Protection, CDN, Universal SSL, Free Managed Ruleset, and WAF; the official plans page positions it for personal/hobby projects. Pro $20/month (annual billing) or $25/month (monthly billing), Business $200/month (annual billing) or $250/month (monthly billing). Registrar offers at-cost registration with no markup; the specific .com price is not given as a number on the plans page. See the Cloudflare detail page.Source: Cloudflare official plans page, verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What rate limits do Let's Encrypt certificates have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "50 certificates/registered domain/7 days, 5 certificates with the same identifier set/7 days, 5 failed validations/account/hostname/hour, 300 new orders/account/3 hours, up to 100 identifiers per certificate; ARI renewals are exempt from all rate limits. Certificate validity — check the official page. See the Let's Encrypt detail page.Source: Let's Encrypt official rate limits documentation, verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are free domains still a thing after Freenom?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Freenom free domains are dead: new registrations stopped in 2023, exit from the domain business in 2024, paid sales resumed 2026-07-23. Alternatives: is-a.dev free subdomains, low-price .com domains, and student-pack domains.Source: vendor official pages, verified 2026-11-13; Freenom dates per second-hand reports."
+      }
     }
   ]
-}
-</script>
+}</script>
 <style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
 * { box-sizing:border-box; }
 body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
@@ -290,14 +430,14 @@ footer a { color:var(--accent); }
 <body>
 <header><div class="wrap"><h1><a href="../">Free Token Monitor</a></h1>
 <p>Free credits for agents: only vendor-verified offers. Check the official page before claiming.</p></div></header>
-<nav><div class="wrap"><a href="../">Home</a><a href="../vps/">Free VPS</a><a href="../wool/">VPS Deals</a><a href="../cheap/">Cheap VPS</a><a href="../offers/">Offer details</a><a href="../compare/">Comparisons</a><a href="./" aria-current="page">FAQ</a><a href="../../faq/">中文</a></div></nav>
+<nav><div class="wrap"><a href="../">Home</a><a href="../vps/">Free VPS</a><a href="../wool/">VPS Deals</a><a href="../cheap/">Cheap VPS</a><a href="../deploy/">Deploy &amp; Hosting</a><a href="../database/">Databases</a><a href="../domain/">Domains &amp; DNS</a><a href="../offers/">Offer details</a><a href="../compare/">Comparisons</a><a href="./" aria-current="page">FAQ</a><a href="../../faq/">中文</a></div></nav>
 <main><div class="wrap">
 
 <article>
 <p class="crumb"><a href="../">Home</a> / FAQ</p>
 
-<h1>FAQ: 23 questions about free AI APIs, free VPS &amp; VPS deals</h1>
-<p class="meta">Updated 2026-11-13 · 23 questions</p>
+<h1>FAQ: 41 questions about free AI APIs, VPS, deploy, databases &amp; domains</h1>
+<p class="meta">Updated 2026-11-14 · 41 questions</p>
 <p>The questions below use English users’ actual wording, gathered from search, forum, and community demand research. Answers are answer-first, based on vendor official pages; where an answer relies on community sources rather than a vendor official page, that is stated. Check the official page before claiming.</p>
 <details><summary>Are free LLM APIs really free?</summary>
 <p><b>Some are genuinely free long-term; most are capped allowances, not unlimited usage.</b> The 43 verified offers split into four shapes: 2 long-term free tiers, 18 one-time signup credits, 23 periodic resets (13 daily, 1 weekly, 9 monthly), and 2 with fixed end dates. “Free” always comes with conditions — an account, rate limits, an expiry, or all three. See the <a href="../compare/free-tier-types/">free-tier types comparison</a> for the full grouping.</p><p class="meta">Source: verified listings, 43 offers; verification dates 2026-10-09–2026-11-08.</p>
@@ -368,6 +508,81 @@ footer a { color:var(--accent); }
 <details><summary>Annual or monthly — which costs less over 3 years?</summary>
 <p><b>With stated renewal prices, annual wins; with unstated renewal, the 3-year total is unknowable.</b> Calculated from stated prices: RackNerd 1 GB at $21.99/year × 3 = $65.97 (same-rate renewal stated in the official FAQ); DigitalOcean Basic 512MiB at the $4.00/month cap × 36 = $144.00 (list price, monthly cap). HostEONS is excluded from the math — its renewal price is unstated, so no 3-year total can be computed. Monthly billing buys flexibility (cancel any time); annual billing buys the lower total where renewal is stated.</p><p class="meta">Source: verified cheap-section data, 2026-11-13; arithmetic calculated from stated prices, labelled as such.</p>
 </details>
+<h2>Deploy &amp; hosting</h2>
+<details><summary>Can the Vercel free tier be used commercially? What happens when the limit is exceeded?</summary>
+<p><b>No.</b> Terms of Service §4 states the Hobby plan can only be used for personal or non-commercial purposes. On exceeding the limit: the official pricing page states free Hobby accounts are limited to the usage caps and cannot purchase additional usage; the Hobby docs page states a 30-day waiting period after exceeding the limit. See <a href="../deploy/offers/vercel-hobby/">Vercel Hobby free tier</a> for the Fair Use two-column list and full figures.</p>
+<p class="meta">Source: Vercel official pricing page, Terms of Service, and Fair Use Guide; verified 2026-11-13.</p>
+</details>
+<details><summary>Do free instances sleep?</summary>
+<p>Render free instances spin down after 15 minutes without inbound traffic, waking in about 1 minute; <a href="../deploy/offers/northflank-sandbox/">Northflank Sandbox</a> stays always on with no sleeping. Sleep policies for the other services are not stated on the official pages read. See <a href="../deploy/offers/render-free/">Render free tier</a> for the 750 instance hours/month rule.</p>
+<p class="meta">Source: Render and Northflank official pages; verified 2026-11-13.</p>
+</details>
+<details><summary>When does Render free Postgres expire?</summary>
+<p>30 days after creation; after a 14-day grace period, it is deleted along with the data. 1 per workspace, 1 GB. See <a href="../deploy/offers/render-free/">Render free tier</a>.</p>
+<p class="meta">Source: Render official pricing page and free documentation; verified 2026-11-13.</p>
+</details>
+<details><summary>Do deploy services require a credit card?</summary>
+<p>It differs by vendor: Northflank requires a payment method; Render has a $1 verification charge (refunded); EdgeOne needs no credit card; Railway allows a card-free trial; Fly.io needs no card to start the trial but needs one afterwards; card requirements for Vercel, Netlify, Workers, Pages, and Koyeb are not stated on the official pages read. See <a href="../deploy/">Deploy &amp; hosting</a> for the per-entry card column.</p>
+<p class="meta">Source: vendor official pricing pages; verified 2026-11-13.</p>
+</details>
+<details><summary>What is the difference between Cloudflare Workers and Pages?</summary>
+<p>The metering differs: Workers is metered by requests and CPU (100,000 requests/day, 10 ms CPU per invocation); Pages is limited by builds and files (500 builds/month, 20,000 files/site, single file 25 MiB). Full comparison: <a href="../compare/workers-vs-pages/">Cloudflare Workers vs Pages</a>.</p>
+<p class="meta">Source: Cloudflare Workers pricing page and Pages limits documentation; verified 2026-11-13.</p>
+</details>
+<details><summary>Best free hosting for a Next.js app? Does the free tier sleep?</summary>
+<p>On sleeping: Render free instances spin down after 15 minutes without traffic, <a href="../deploy/offers/northflank-sandbox/">Northflank Sandbox</a> stays always on with no sleeping, and sleep policies for the other services are not stated on the official pages read. Framework support is not stated on the vendors’ official pricing pages — check the official page.</p>
+<p class="meta">Source: Render and Northflank official pages; verified 2026-11-13.</p>
+</details>
+<h2>Databases</h2>
+<details><summary>Which free database should I pick?</summary>
+<p>By type: Postgres — <a href="../database/offers/supabase/">Supabase</a> and <a href="../database/offers/neon/">Neon</a>; Redis — <a href="../database/offers/upstash-redis/">Upstash Redis</a>; MongoDB — <a href="../database/offers/mongodb-atlas/">MongoDB Atlas M0</a>; full-stack platform — <a href="../database/offers/firebase/">Firebase</a>; row read/write units — <a href="../database/offers/turso/">Turso</a>. Pause rules, card requirements, extra allowances, and overage behavior differ across the six; the per-entry figures are on <a href="../database/">the Databases list</a>.</p>
+<p class="meta">Source: vendor official pricing pages; verified 2026-11-13.</p>
+</details>
+<details><summary>How long can a Supabase free project sit idle before it is paused?</summary>
+<p>1 week. Official pricing page wording: Free projects are paused after 1 week of inactivity. Limit of 2 active projects. How to resume after a pause is not stated on the official pages read — check the official page. See <a href="../database/offers/supabase/">Supabase free tier</a>.</p>
+<p class="meta">Source: Supabase official pricing page; verified 2026-11-13.</p>
+</details>
+<details><summary>Can inactivity delete the database?</summary>
+<p>Neon states overage keeps data, with compute paused until the next cycle. The Supabase pricing page writes pause (paused), with no deletion rule stated. Deletion rules for Turso, Upstash, MongoDB Atlas, and Firebase are not stated on the official pages read — check the official page. Full comparison: <a href="../compare/pause-and-overage/">Pause and overage compared</a>.</p>
+<p class="meta">Source: vendor official pricing pages; verified 2026-11-13.</p>
+</details>
+<details><summary>After exceeding the limit: does the service stop, or does it start charging?</summary>
+<p>It differs by vendor: Neon pauses compute until the next cycle without deleting data; Turso requires upgrade or blocking; Firebase Spark disables the app, Blaze charges pay-as-you-go with no hard cap possible; overage behavior for Supabase, Upstash, and MongoDB Atlas is not stated on the official pages read — check the official page. Full comparison: <a href="../compare/pause-and-overage/">Pause and overage compared</a>.</p>
+<p class="meta">Source: vendor official pricing pages; verified 2026-11-13.</p>
+</details>
+<details><summary>Did Turso&#x27;s free tier change after the Supabase acquisition?</summary>
+<p>No change announced. The Supabase official blog announced the acquisition of Turso on 2026-10-02, stating existing users are unaffected and Turso keeps operating, with no pricing or free-tier policy change announced. Policy changes after the acquisition — check the official page. See <a href="../database/offers/turso/">Turso free tier</a>.</p>
+<p class="meta">Source: Supabase official blog (2026-10-02) and Turso official pricing page; verified 2026-11-13.</p>
+</details>
+<details><summary>Best free Postgres for a side project?</summary>
+<p>Supabase and Neon are both Postgres free tiers: Supabase allows max 2 active projects, 500 MB database, pause after 1 week inactive; Neon allows 100 projects, 1 GB storage per project, scale to zero after 5 minutes idle, with permanent wording, not a trial, and no credit card. Item-by-item comparison: <a href="../compare/supabase-vs-neon-vs-turso/">Supabase vs Neon vs Turso</a>.</p>
+<p class="meta">Source: Supabase and Neon official pricing pages; verified 2026-11-13.</p>
+</details>
+<h2>Domains &amp; DNS</h2>
+<details><summary>Are there still free domains? Can Freenom free domains still be registered?</summary>
+<p><b>No.</b> Freenom free domains are dead: new registrations stopped in 2023, exit from the domain business in 2024, paid sales of .tk / .cf / .gq resumed 2026-07-23. Alternatives: <a href="../domain/offers/is-a-dev/">is-a.dev free subdomains</a>, <a href="../compare/registrars/">low-price .com domains</a>, and student-pack domains.</p>
+<p class="meta">Source: vendor official pages, verified 2026-11-13; Freenom dates per second-hand reports.</p>
+</details>
+<details><summary>How much is .com renewal?</summary>
+<p><b>Renewal prices (verified 2026-11-13): Spaceship $10.68, Porkbun $11.81, Namecheap $19.98.</b> Renewal prices differ from first-year prices: Spaceship first year $9.48 (promo price), Namecheap first year $12.08 (promo price), Porkbun all three at $11.81. See <a href="../compare/registrars/">the registrar price comparison</a>.</p>
+<p class="meta">Source: Porkbun, Namecheap, and Spaceship official domains pages, verified 2026-11-13.</p>
+</details>
+<details><summary>What is the ICANN fee? How do the three registrars charge it?</summary>
+<p><b>The ICANN fee is a fee charged by ICANN, and the three registrars charge it differently:</b> Porkbun includes it in the price (All prices include ICANN and any other fees); Namecheap $0.20 per purchase, added to the list price at purchase (applies to some domains); Spaceship $0.20/year, charged mandatorily at purchase.</p>
+<p class="meta">Source: Porkbun, Namecheap, and Spaceship official domains pages, verified 2026-11-13.</p>
+</details>
+<details><summary>What does the Cloudflare free plan include?</summary>
+<p><b>The Free plan at $0 includes DNS, Unmetered DDoS Protection, CDN, Universal SSL, Free Managed Ruleset, and WAF;</b> the official plans page positions it for personal/hobby projects. Pro $20/month (annual billing) or $25/month (monthly billing), Business $200/month (annual billing) or $250/month (monthly billing). Registrar offers at-cost registration with no markup; the specific .com price is not given as a number on the plans page. See <a href="../domain/offers/cloudflare/">the Cloudflare detail page</a>.</p>
+<p class="meta">Source: Cloudflare official plans page, verified 2026-11-13.</p>
+</details>
+<details><summary>What rate limits do Let&#x27;s Encrypt certificates have?</summary>
+<p><b>50 certificates/registered domain/7 days, 5 certificates with the same identifier set/7 days, 5 failed validations/account/hostname/hour, 300 new orders/account/3 hours, up to 100 identifiers per certificate;</b> ARI renewals are exempt from all rate limits. Certificate validity — check the official page. See <a href="../domain/offers/lets-encrypt/">the Let&#x27;s Encrypt detail page</a>.</p>
+<p class="meta">Source: Let&#x27;s Encrypt official rate limits documentation, verified 2026-11-13.</p>
+</details>
+<details><summary>Are free domains still a thing after Freenom?</summary>
+<p><b>Freenom free domains are dead:</b> new registrations stopped in 2023, exit from the domain business in 2024, paid sales resumed 2026-07-23. Alternatives: <a href="../domain/offers/is-a-dev/">is-a.dev free subdomains</a>, <a href="../compare/registrars/">low-price .com domains</a>, and student-pack domains.</p>
+<p class="meta">Source: vendor official pages, verified 2026-11-13; Freenom dates per second-hand reports.</p>
+</details>
 <p><b>Disclaimer:</b> answers follow the vendor official page content; allowances can change or end at any time — check the official page before claiming.</p>
 <div class="related"><h2>Related pages</h2>
 <ul>
@@ -377,6 +592,6 @@ footer a { color:var(--accent); }
 </article>
 
 </div></main>
-<footer><div class="wrap"><p><a href="../">Home</a> · <a href="../vps/">Free VPS</a> · <a href="../wool/">VPS Deals</a> · <a href="../cheap/">Cheap VPS</a> · <a href="../offers/">Offer details</a> · <a href="../compare/">Comparisons</a> · <a href="./">FAQ</a> · <a href="../../faq/">中文</a></p><p>Data is for reference only — check the vendor’s official page. Allowances can change or end at any time; read the vendor’s terms before claiming, and turn on “stop when exhausted” where available to avoid charges. No invite links, API resellers, second-hand credits, or shared accounts. Data sources: Lanlan repo, freetokens.fyi. Allowance information per vendor official pages.</p></div></footer>
+<footer><div class="wrap"><p><a href="../">Home</a> · <a href="../vps/">Free VPS</a> · <a href="../wool/">VPS Deals</a> · <a href="../cheap/">Cheap VPS</a> · <a href="../deploy/">Deploy &amp; Hosting</a> · <a href="../database/">Databases</a> · <a href="../domain/">Domains &amp; DNS</a> · <a href="../offers/">Offer details</a> · <a href="../compare/">Comparisons</a> · <a href="./">FAQ</a> · <a href="../../faq/">中文</a></p><p>Data is for reference only — check the vendor’s official page. Allowances can change or end at any time; read the vendor’s terms before claiming, and turn on “stop when exhausted” where available to avoid charges. No invite links, API resellers, second-hand credits, or shared accounts. Data sources: Lanlan repo, freetokens.fyi. Allowance information per vendor official pages.</p></div></footer>
 </body>
 </html>
