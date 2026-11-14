@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>免费档、试用与额度：怎么区分</title>
+<meta name="description" content="免费档按月重置、没有结束日期；试用有固定天数、到期后按价计费或停用；额度是抵扣金、用完为止。R2、Tigris、Google Cloud Storage 免费档与 $300 试用额度、Storj 30 天试用的官方说法对照。核实于 2026-11-13/2026-11-14。">
+<link rel="canonical" href="https://tokens.yangtokent.com/storage/guides/free-tier-vs-trial/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "免费档、试用与额度：怎么区分",
+  "description": "免费档按月重置、没有结束日期；试用有固定天数、到期后按价计费或停用；额度是抵扣金、用完为止。R2、Tigris、Google Cloud Storage 免费档与 $300 试用额度、Storj 30 天试用的官方说法对照。核实于 2026-11-13/2026-11-14。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-14",
+  "dateModified": "2026-11-14",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/storage/guides/free-tier-vs-trial/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">对象存储</a><a href="../../offers/">存储详情</a><a href="../../compare/">存储对比</a><a href="../../guides/" aria-current="page">存储指南</a><a href="../../faq/">存储问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">对象存储</a> / <a href="../">存储指南</a> / 免费档、试用与额度：怎么区分</p>
+<h1>免费档、试用与额度：怎么区分</h1>
+<p class="meta">R2 与 B2 核实于 2026-11-13；Tigris、Google Cloud Storage 与 Storj 核实于 2026-11-14 · 本页更新于 2026-11-14</p>
+<div class="answer"><p>免费档按月重置、没有结束日期；试用有固定天数、到期后按价计费或停用；额度是抵扣金、用完为止。三者写在同一页时容易混淆：Google Cloud 的免费档没有结束日期，$300 试用额度有效期 90 天；Storj 的免费是 30 天试用，不是按月重置的免费档。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#table">三种形态对照</a></li><li><a href="#freetier">免费档：按月重置</a></li><li><a href="#trial">试用：有固定天数</a></li><li><a href="#credit">额度：抵扣金</a></li><li><a href="#minimum">最低消费</a></li><li><a href="#checklist">对照清单</a></li></ul></div>
+<h2 id="table">三种形态对照</h2><div class="tablewrap"><table><thead><tr><th>形态</th><th>例子</th><th>官方说法</th><th>到期后</th></tr></thead><tbody><tr><th>免费档</th><td>Cloudflare R2、Tigris、Google Cloud Storage</td><td>按月计量或按月重置；Google Cloud 免费档没有结束日期</td><td>每月重新计算；未用额度不结转</td></tr><tr><th>免费计划</th><td>UploadThing 2GB App</td><td>$0/月；是否永久在官方已读页面中未述</td><td>以官方页面为准</td></tr><tr><th>试用</th><td>Google Cloud 试用、Storj 试用</td><td>Google Cloud $300 额度有效期 90 天；Storj 30 天免费、25 GB 免费存储 30 天</td><td>Google Cloud：未升级则账户关闭、资源停用，30 天宽限期后永久删除；Storj：试用结束按价计费</td></tr><tr><th>按量付费</th><td>Backblaze B2</td><td>没有免费层</td><td>按量计费</td></tr></tbody></table></div><h2 id="freetier">免费档：按月重置</h2><p>R2：每月 10 GB-month 存储、1M Class A 操作、10M Class B 操作，出站免费。Tigris：每月 5 GB 标准存储、10,000 次 PUT/COPY/POST/LIST 请求、100,000 次 GET/SELECT 及其他请求，出站免费，额度按月重置、开始无需绑卡。Google Cloud Storage：每月 5 GB-months 区域存储、5,000 次 Class A 操作、50,000 次 Class B 操作、100 GB 自北美出站，免费档没有结束日期，但 Google 保留提前 30 天通知后变更或取消的权利，未用额度不结转。详情见<a href="../../offers/cloudflare-r2/">R2 详情页</a>、<a href="../../offers/tigris/">Tigris 详情页</a>与<a href="../../offers/google-cloud-storage/">Google Cloud Storage 详情页</a>。</p><h2 id="trial">试用：有固定天数</h2><p>Google Cloud 试用：新客户获得 $300 欢迎额度，有效期 90 天；试用账户超出免费档的用量由 $300 额度支付，付费账户超出免费档的用量按标准费率计费；试用结束未升级为付费账户的，账户关闭、资源停用，30 天宽限期后永久删除。Storj 试用：官方定价页写明 30 天免费，Object Mount 一节写明 25 GB 免费存储 30 天、无需绑卡；试用结束后按标准价格计费：存储 $7/TB、出口 $7/TB，最短存储 30 天，最小对象 50KB。Storj 没有按月重置的免费档。</p><h2 id="credit">额度：抵扣金</h2><p>Google Cloud 的 $300 是试用额度（抵扣金），与免费档是两回事：免费档是每月的免费量，额度是抵扣超出部分费用的金额，90 天有效期到了或用完了就结束。Storj 定价页写明每月 $5 最低费用不是使用额度（not a usage credit），试用期间免除。</p><h2 id="minimum">最低消费</h2><p>Storj：每月 $5 最低费用（以 USDC 支付除外，试用期间免除），不是使用额度。R2、Tigris、Google Cloud Storage 与 UploadThing 的最低消费在官方已读页面中未述，以官方页面为准。</p><h2 id="checklist">对照清单</h2><ol><li>对照形态：免费档按月重置，试用有固定天数，额度是抵扣金。</li><li>对照结束日期：Google Cloud 免费档没有结束日期，$300 额度 90 天，Storj 试用 30 天。</li><li>对照到期后：试用结束是按价计费、停用，还是删除。</li><li>对照最低消费：Storj 每月 $5 最低费用不是使用额度。</li><li>在厂商官方页确认最终条款。</li></ol>
+<div class="note"><b>信息来源：</b>厂商官方页；R2 与 B2 核实于 2026-11-13，Tigris、Google Cloud Storage 与 Storj 核实于 2026-11-14。条款随时可能调整或结束，领取前请以厂商官方页为准。</div>
+<div class="related"><h2>其他指南</h2><ul><li><a href="../choosing-object-storage/">怎么选对象存储</a></li><li><a href="../r2-storage-classes/">R2 存储类别：Standard 与 Infrequent Access</a></li><li><a href="../request-classes/">操作次数计费：Class A / Class B 对照</a></li><li><a href="../">存储指南总览</a></li><li><a href="../../">返回对象存储列表</a></li></ul></div>
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">对象存储</a> · <a href="../../offers/">存储详情</a> · <a href="../../compare/">存储对比</a> · <a href="../../guides/">存储指南</a> · <a href="../../faq/">存储问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
