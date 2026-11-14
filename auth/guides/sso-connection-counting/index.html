@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSO/SCIM 连接怎么计数：Stytch、Frontegg、Descope、Kinde、WorkOS、Auth0 对照</title>
+<meta name="description" content="SSO 与 SCIM 连接的计数对照：免费包含数、SSO 与 SCIM 是否分开计数、超出单价；Stytch 与 Frontegg 各 5 个，Descope 3 个，Kinde 与 Auth0 各 1 个，WorkOS 按连接收费，Logto 为附加项。核实于 2026-11-14。">
+<link rel="canonical" href="https://tokens.yangtokent.com/auth/guides/sso-connection-counting/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "SSO/SCIM 连接怎么计数：Stytch、Frontegg、Descope、Kinde、WorkOS、Auth0 对照",
+  "description": "SSO 与 SCIM 连接的计数对照：免费包含数、SSO 与 SCIM 是否分开计数、超出单价；Stytch 与 Frontegg 各 5 个，Descope 3 个，Kinde 与 Auth0 各 1 个，WorkOS 按连接收费，Logto 为附加项。核实于 2026-11-14。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-14",
+  "dateModified": "2026-11-14",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/auth/guides/sso-connection-counting/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">认证与用户管理</a><a href="../../offers/">认证详情</a><a href="../../compare/">认证对比</a><a href="../../guides/" aria-current="page">认证指南</a><a href="../../faq/">认证问答</a></div></nav>
+<main><div class="wrap">
+<article>
+<p class="crumb"><a href="../../../">首页</a> / <a href="../../">认证与用户管理</a> / <a href="../">认证指南</a> / SSO/SCIM 连接怎么计数：Stytch、Frontegg、Descope、Kinde、WorkOS、Auth0 对照</p>
+
+<h1>SSO/SCIM 连接怎么计数：Stytch、Frontegg、Descope、Kinde、WorkOS、Auth0 对照</h1>
+<p class="meta">核实于 2026-11-14 · 本页更新于 2026-11-14</p>
+<div class="answer"><p>免费连接数差别很大：Stytch 与 Frontegg 各含 5 个 SSO/SCIM 连接，Descope 含 3 个 SSO 连接，Kinde 与 Auth0 各含 1 个，WorkOS 不含免费连接、按连接收费，Logto 的企业 SSO 是 Pro 附加项。计数规则也不同：Frontegg 写明 SSO 与 SCIM 分开计数、同一客户同时用两项计 2 个连接；Descope 写明每个已配置的连接都计入，一个租户可有多个 SSO 连接；其余几家的计数细节在已读页面中未述，以官方页面为准。</p></div>
+<div class="toc"><b>本页内容</b><ul><li><a href="#table">对照表</a></li><li><a href="#what">连接是什么</a></li><li><a href="#counting">计数规则</a></li><li><a href="#price">超出后的价格</a></li><li><a href="#selfhosted">自托管路线</a></li><li><a href="#notes">看连接数时注意什么</a></li></ul></div>
+<h2 id="table">对照表</h2><div class="tablewrap"><table><thead><tr><th>服务</th><th>免费连接数</th><th>计数规则</th><th>超出后的价格</th></tr></thead><tbody><tr><td><a href="../../offers/stytch/">Stytch</a></td><td>5 个 SSO/SCIM 连接</td><td>计数细节在官网已读页面中未述，以官方页面为准</td><td>超出 5 个后 $125/connection</td></tr><tr><td><a href="../../offers/frontegg/">Frontegg</a></td><td>5 个企业连接（SSO/SCIM）</td><td>SSO 与 SCIM 分开计数；同一客户同时用两项计 2 个连接</td><td>超出后的单价在官网已读页面中未述，以官方页面为准</td></tr><tr><td><a href="../../offers/descope/">Descope</a></td><td>3 个 SSO 连接</td><td>每个已配置的连接都计入；一个租户可有多个 SSO 连接</td><td>免费档超限须升级 Pro；Pro/Growth 附加连接 $50/个</td></tr><tr><td><a href="../../offers/kinde/">Kinde</a></td><td>1 个企业 SSO 连接</td><td>计数细节在官网已读页面中未述，以官方页面为准</td><td>Plus 起企业 SSO 无限且无额外费用；免费档超出单价以官方页面为准</td></tr><tr><td><a href="../../offers/auth0/">Auth0</a></td><td>1 个企业连接</td><td>计数细节在官网已读页面中未述，以官方页面为准</td><td>官网已读页面未述，以官方页面为准（核实于 2026-11-13）</td></tr><tr><td><a href="../../offers/workos/">WorkOS</a></td><td>不含免费连接</td><td>每个用 SSO 或 Directory Sync 的企业客户计为 1 个连接</td><td>官方博客写各 $125/连接/月，SSO 量大自动折扣</td></tr><tr><td><a href="../../offers/logto/">Logto</a></td><td>无（企业 SSO 为 Pro 附加项）</td><td>计数细节在官网已读页面中未述，以官方页面为准</td><td>企业 SSO 附加项 $48</td></tr><tr><td><a href="../../offers/clerk/">Clerk</a></td><td>以官方页面为准</td><td>以官方页面为准</td><td>以官方页面为准（核实于 2026-11-13）</td></tr></tbody></table></div><h2 id="what">连接是什么</h2><p>SSO 连接指租户与身份提供方之间用 SAML/OIDC 的连接（Descope FAQ 定义）；SCIM/Directory Sync 指企业目录的同步连接。WorkOS 的定义是：连接代表 WorkOS 与任一组终端用户之间的关系。企业客户通过自家身份系统（例如 Okta、Microsoft Entra ID）登录应用时，就需要用到这类连接。</p><h2 id="counting">计数规则</h2><p>Frontegg：SSO 与 SCIM 分开计数，客户可以只有 SSO 或只有 SCIM；同时用两项的客户计为 2 个连接；5 个合计，例如 5 个 SSO 连接，或 3 个 SSO 与 2 个 SCIM。Descope：SSO 连接是租户与身份提供方之间的连接，一个租户可有多个 SSO 配置，每个已配置的 SSO 连接都计入。WorkOS：每个用 SSO 或 Directory Sync 的企业客户计为 1 个连接。Stytch、Kinde、Auth0、Logto 的连接计数细节在已读页面中未述，以官方页面为准。</p><h2 id="price">超出后的价格</h2><p>Stytch：超出 5 个后每个连接 $125。Descope：免费档无超额计费，超 3 个 SSO 连接须升级 Pro；Pro/Growth 的附加 SSO 连接 $50/个。WorkOS：官方博客写 SSO 与 Directory Sync 各 $125/连接/月，SSO 量大自动折扣。Logto：企业 SSO 附加项 $48。Frontegg、Kinde、Auth0 免费档超出后的单价在已读页面中未述，以官方页面为准。</p><h2 id="selfhosted">自托管路线</h2><p>自托管软件（Keycloak、SuperTokens、FusionAuth 等）没有托管服务按连接收费的账单，SSO/SCIM 连接数不受托管档位限制；成本在服务器、配置与运维上，功能细节以各项目官方页为准。自托管与托管的取舍，核心是愿不愿意自己承担运行工作。</p><h2 id="notes">看连接数时注意什么</h2><p>看免费包含数：5 个、3 个、1 个、0 个差别很大。看计数规则：SSO 与 SCIM 是否分开计数，同一客户用两项计几个连接。看超出单价：按连接收费的单价从 $48 到 $125 不等，且有的免费档超限须升级、没有按连接加购。看口径：连接数与 MAU 是两套计量，连接用完了、MAU 还没用完也会触发升级或计费。</p>
+<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-14。条款随时可能调整或结束，领取前请以厂商官方页为准。</div>
+<div class="related"><h2>其他指南</h2><ul><li><a href="../choosing-auth-provider/">登录注册自己写还是用 Clerk/Auth0</a></li><li><a href="../mru-vs-mau/">MRU 与 MAU 有什么不同</a></li><li><a href="../social-login-basics/">社交登录基础</a></li><li><a href="../auth-overage-rules/">认证额度超了怎么办</a></li><li><a href="../mfa-custom-domain-gates/">MFA 与自定义域名对照</a></li><li><a href="../../compare/stytch-vs-frontegg/">Stytch vs Frontegg</a></li><li><a href="../">认证指南总览</a></li><li><a href="../../">返回认证与用户管理列表</a></li></ul></div>
+
+</article>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">认证与用户管理</a> · <a href="../../offers/">认证详情</a> · <a href="../../compare/">认证对比</a> · <a href="../../guides/">认证指南</a> · <a href="../../faq/">认证问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
