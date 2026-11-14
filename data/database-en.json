@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-13",
+    "count": 6,
+    "language": "en",
+    "sources": [
+      "Supabase official pricing page",
+      "Neon official pricing page (page note: updated 2026-11-04)",
+      "Turso official pricing page (rendered re-check) and Supabase official blog acquisition announcement",
+      "Upstash official pricing page",
+      "MongoDB official pricing page",
+      "Firebase official pricing page and official FAQ"
+    ],
+    "note": "Specs and terms are transcribed from vendor official pages; fields not stated on official pages read “Check the official page”. Check the vendor official page before claiming. group values: verified (specs confirmed on official pages). status values: active. cardRequired null means the official page does not state it. Added fields: dbType (database type; the Turso entry uses a generic wording because the evidence does not state an engine type), overage (overage behavior), upgrade (upgrade and paid-tier prices), idlePolicy (idle, pause, and sleep rules)."
+  },
+  "offers": [
+    {
+      "id": 1,
+      "slug": "supabase",
+      "title": "Supabase free tier",
+      "provider": "Supabase",
+      "category": "database",
+      "group": "verified",
+      "dbType": "PostgreSQL",
+      "freePlan": "Free $0/month",
+      "storage": "500 MB database (shared CPU · 500 MB RAM)",
+      "specText": "Unlimited API requests; 50,000 MAU; 500 MB database (shared CPU · 500 MB RAM); 5 GB egress; 5 GB cached egress; 1 GB file storage; Edge Functions 500,000; community support",
+      "durationText": "The official pricing page does not state permanent — check the official page",
+      "cardRequired": null,
+      "cardNote": "Card requirements are not stated explicitly in the captured official pricing page text — check the official page.",
+      "idlePolicy": "Free projects are paused after 1 week of inactivity. Limit of 2 active projects. (Official wording: free projects pause after 1 week inactive; max 2 active projects.)",
+      "overage": "Pause and recovery procedures after overage are not stated on the official pages read — check the official page.",
+      "upgrade": "Pro $25/month",
+      "risks": [
+        "Pause after 1 week inactive; max 2 active projects",
+        "Card requirements are not stated explicitly in the captured official pricing page text — check the official page",
+        "The pricing page does not state permanent — check the official page"
+      ],
+      "steps": "Confirm the Free tier terms on the Supabase official pricing page → Create an account → Create a free project (max 2 active projects) → Check usage and pause rules in the console.",
+      "claimUrl": "https://supabase.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Supabase official pricing page",
+      "sourceUrl": "https://supabase.com/pricing",
+      "status": "active",
+      "flags": [
+        "pause-1w",
+        "max-2-projects",
+        "card-unconfirmed"
+      ],
+      "notes": "The “Supabase free 500M, two projects” figure in a forum tool table matches the official numbers."
+    },
+    {
+      "id": 2,
+      "slug": "neon",
+      "title": "Neon free tier",
+      "provider": "Neon",
+      "category": "database",
+      "group": "verified",
+      "dbType": "PostgreSQL",
+      "freePlan": "Free $0",
+      "storage": "1 GB storage/project",
+      "specText": "100 projects; 100 CU-hrs/project/month; 1 GB storage/project; max 2 CU (8 GB RAM); 5 GB object storage; Managed Better Auth 60k MAU/project; 5 GB egress/project; scale to zero after 5 minutes idle; 6-hour/1 GB history window; 1 snapshot",
+      "durationText": "The Free plan is permanent, not a trial (official FAQ wording)",
+      "cardRequired": false,
+      "cardNote": "Build and learn free with no time limits and no credit card required. (Official wording.) FAQ: doesn’t require a credit card.",
+      "idlePolicy": "Scales to zero after 5 minutes idle.",
+      "overage": "Overage keeps the data; compute pauses until the next cycle.",
+      "upgrade": "Launch usage-based: $0.106/CU-hour, storage $0.35/GB-month",
+      "risks": [
+        "Scales to zero after 5 minutes idle",
+        "The 2026-11-02 blog figures (50 CU-hours / 0.5 GB) are superseded by the 2026-11-04 pricing page; the pricing page figures apply"
+      ],
+      "steps": "Confirm the Free tier terms on the Neon official pricing page → Create an account (no credit card required) → Create a project → Check CU-hrs and storage usage in the console.",
+      "claimUrl": "https://neon.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Neon official pricing page (page note: updated 2026-11-04)",
+      "sourceUrl": "https://neon.com/pricing",
+      "status": "active",
+      "flags": [
+        "permanent",
+        "no-card",
+        "scale-to-zero-5m"
+      ],
+      "notes": "The pricing page notes Last updated November 4, 2026."
+    },
+    {
+      "id": 3,
+      "slug": "turso",
+      "title": "Turso free tier",
+      "provider": "Turso",
+      "category": "database",
+      "group": "verified",
+      "dbType": "Database service (engine type: check the official page)",
+      "freePlan": "Free $0/month",
+      "storage": "5 GB",
+      "specText": "100 databases; 5 GB storage; 500 Million monthly row reads; 10 Million monthly row writes; 3 GB monthly syncs; 1-day Point-In-Time Restore; Audit Logs / Restore Deleted DBs not included; Community support; the pricing page Free column has no separate egress row",
+      "durationText": "The pricing page writes Start free, with no permanent wording — check the official page",
+      "cardRequired": false,
+      "cardNote": "Start free, no credit card required. (Official wording.)",
+      "idlePolicy": "Idle-pause rules are not stated on the official pages read — check the official page.",
+      "overage": "FAQ: a Free plan overage requires upgrade or blocking.",
+      "upgrade": "Developer $4.99/month (annual billing), Scaler $24.92/month (annual billing), Pro $416.58/month (annual billing)",
+      "risks": [
+        "A Free plan overage requires upgrade or blocking (FAQ)",
+        "The Supabase official blog announced the acquisition of Turso on 2026-10-02; the blog wording states existing users are unaffected and Turso keeps operating, with no pricing or free-tier policy change announced",
+        "The pricing page has no permanent wording — check the official page"
+      ],
+      "steps": "Confirm the Free tier terms on the Turso official pricing page → Create an account (no credit card required) → Create a database → Check row read/write and sync usage in the console.",
+      "claimUrl": "https://turso.tech/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Turso official pricing page (rendered re-check)",
+      "sourceUrl": "https://turso.tech/pricing",
+      "status": "active",
+      "flags": [
+        "no-card",
+        "acquired-2026-10-02"
+      ],
+      "notes": "Free tier figures were confirmed directly on the official pricing page in a rendered re-check on 2026-11-13. Acquisition source: Supabase official blog, 2026-10-02."
+    },
+    {
+      "id": 4,
+      "slug": "upstash-redis",
+      "title": "Upstash Redis free tier",
+      "provider": "Upstash",
+      "category": "database",
+      "group": "verified",
+      "dbType": "Redis",
+      "freePlan": "Free $0",
+      "storage": "250 MB data size (the comparison table on the same page writes 256 MB — a wording difference inside the official site)",
+      "specText": "250 MB data size (the comparison table on the same page writes 256 MB); 10 GB monthly bandwidth; 500K monthly commands; 1 free database",
+      "durationText": "The official pricing page does not state permanent — check the official page",
+      "cardRequired": null,
+      "cardNote": "FAQ: Once you enter your credit card, your database will be upgraded to the pay-as-you-go plan. (Entering a card moves to pay-as-you-go.) Card requirements for the free tier itself are not stated separately — check the official page.",
+      "idlePolicy": "Idle-pause rules are not stated on the official pages read — check the official page.",
+      "overage": "Overage behavior is not stated on the official pages read — check the official page.",
+      "upgrade": "Pay as You Go: $0.2/100K commands, storage first 1 GB per database free, then $0.25/GB, bandwidth free within 200 GB, then $0.03/GB; Fixed from $10/month",
+      "risks": [
+        "Data size wording difference inside the official site: the Free column writes 250 MB, the comparison table on the same page writes 256 MB",
+        "Entering a card moves to pay-as-you-go (FAQ)",
+        "The pricing page does not state permanent — check the official page"
+      ],
+      "steps": "Confirm the Free tier terms on the Upstash official pricing page → Create an account → Create 1 free database → Check command counts and bandwidth usage in the console.",
+      "claimUrl": "https://upstash.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Upstash official pricing page",
+      "sourceUrl": "https://upstash.com/pricing",
+      "status": "active",
+      "flags": [
+        "size-250-256-conflict",
+        "card-upgrades-to-paygo"
+      ],
+      "notes": "FAQ wording: Free tier includes 250MB data size and 500K commands per month."
+    },
+    {
+      "id": 5,
+      "slug": "mongodb-atlas",
+      "title": "MongoDB Atlas M0 free cluster",
+      "provider": "MongoDB Atlas",
+      "category": "database",
+      "group": "verified",
+      "dbType": "MongoDB",
+      "freePlan": "Free Cluster M0",
+      "storage": "512 MB",
+      "specText": "M0 512 MB; shared RAM/vCPU; Free forever (official wording)",
+      "durationText": "Free forever (official wording)",
+      "cardRequired": null,
+      "cardNote": "Card requirements are not stated in the captured official pricing page text — check the official page.",
+      "idlePolicy": "Pause rules do not appear in the captured official pricing page text — check the official page.",
+      "overage": "Ops and connection counts do not appear in the captured official pricing page text — check the official page.",
+      "upgrade": "M2 $9/month 2 GB; M5 $25/month 5 GB; Flex $8–$30/month usage (from $0.0110/hour); Dedicated M10 from $0.08/hour",
+      "risks": [
+        "M0 ops, connection counts, and pause rules do not appear in the captured official pricing page text — check the official page",
+        "Card requirements are not stated in the captured official pricing page text — check the official page"
+      ],
+      "steps": "Confirm the M0 free cluster terms on the MongoDB official pricing page → Create an account → Create an M0 free cluster → Check storage usage in the console.",
+      "claimUrl": "https://www.mongodb.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "MongoDB official pricing page",
+      "sourceUrl": "https://www.mongodb.com/pricing",
+      "status": "active",
+      "flags": [
+        "free-forever",
+        "card-unconfirmed",
+        "ops-unconfirmed"
+      ],
+      "notes": ""
+    },
+    {
+      "id": 6,
+      "slug": "firebase",
+      "title": "Firebase free allowances (Firestore / Auth / Hosting)",
+      "provider": "Firebase",
+      "category": "database",
+      "group": "verified",
+      "dbType": "Firestore / Realtime Database + Auth + Hosting",
+      "freePlan": "No-cost allowances (Spark and Blaze plans differ in meaning)",
+      "storage": "Firestore 1 GiB storage; Hosting 10 GB storage; Realtime Database 1 GB storage",
+      "specText": "Firestore: 1 GiB storage, 10 GiB outbound/month, 20K writes/day, 50K reads/day, 20K deletes/day; Auth: 50K MAU (SAML/OIDC 50); Hosting: 10 GB storage + 360 MB transfer per day, overage $0.15/GB; Realtime Database: 100 concurrent connections, 1 GB storage, 360 MB downloads/day (about 10 GB/month), overage $1/GB; Cloud Functions (Blaze column): 2M invocations/month, 400K GB-s, 200K CPU-s, 5 GB outbound, Spark column Not applicable; Cloud Storage free allowances in the Blaze column, Spark column Not applicable",
+      "durationText": "No-cost allowances; Spark and Blaze differ in meaning, see the detail page",
+      "cardRequired": null,
+      "cardNote": "Whether the Spark plan needs a payment method: second-hand statements say no payment method is needed, not directly confirmed in the captured official pricing page and FAQ — check the official page. The Blaze plan requires a billing account; Cloud Functions needs a billing account.",
+      "idlePolicy": "Idle-pause rules are not stated on the official pages read — check the official page.",
+      "overage": "Spark: exceeding any plan limit disables the app. Blaze: free allowances are calculated daily; no hard usage cap can be set.",
+      "upgrade": "Blaze pay-as-you-go + equivalent daily-calculated free allowances",
+      "risks": [
+        "Spark overage disables the app: when you exceed any plan limit in any month, your app will be turned off (official FAQ wording)",
+        "Blaze cannot cap usage: No, you cannot currently cap your Blaze plan usage. (official FAQ wording)",
+        "Cloud Functions and Cloud Storage free allowances sit in the Blaze column; the Spark column reads Not applicable; Cloud Functions needs a billing account",
+        "Hosting free transfer is 360 MB/day; 10 GB/month is the equivalent expression for Realtime Database downloads — the two must not be mixed"
+      ],
+      "steps": "Confirm each product's no-cost allowances and the Spark/Blaze meanings on the Firebase official pricing page → Create an account → Create a project and pick the products needed (Firestore, Auth, Hosting, Realtime Database) → Check daily usage in the console.",
+      "claimUrl": "https://firebase.google.com/pricing",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "Firebase official pricing page · official FAQ",
+      "sourceUrl": "https://firebase.google.com/pricing",
+      "status": "active",
+      "flags": [
+        "spark-blaze",
+        "hosting-360mb-day",
+        "functions-needs-billing"
+      ],
+      "notes": "FAQ page copy captured 2026-10-19. For the Hosting deploy-side comparison, see the Deploy & hosting section."
+    }
+  ]
+}

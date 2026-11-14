@@ -1,7 +1,7 @@
 {
   "meta": {
     "generatedAt": "2026-11-13",
-    "count": 9,
+    "count": 10,
     "language": "en",
     "sources": [
       "Vendor official pages",
@@ -287,6 +287,38 @@
         "grandfathering-ends-2026-12-01"
       ],
       "notes": "Free tier pricing appears in the official blog (2026-10-19) and pricing docs; “invite-only beta” and “no inbound IPv4” claims appear only in third-party sources, not verified on official pages, so they are not shown as verified terms."
+    },
+    {
+      "id": 10,
+      "slug": "euserv",
+      "title": "EUserv VS2-free: IPv6-only free container server, manual renewal every month",
+      "provider": "EUserv",
+      "category": "vps",
+      "group": "manual-renew",
+      "specText": "Container-based vServer with full root access; 1 core @ 1 GHz (AMD/Intel); 1 GB RAM; 10 GB disk (Raid10); 1 Gbit/s; 1 TB traffic/month (throttled to 1 Mbit/s after that); Linux operating systems free",
+      "durationText": "1-month contract, renewal: manual, cancellation notice period: 1 month",
+      "cardRequired": null,
+      "cardNote": "The official product page does not state verification or card requirements — check the official page.",
+      "regions": "The official product page does not state datacenter regions — check the official page.",
+      "risks": [
+        "No free IPv4 address (the product page shows “-”); 1 free IPv6 address /128",
+        "1-month contract with manual renewal; forgetting to renew stops the service",
+        "1 TB traffic/month, throttled to 1 Mbit/s after that",
+        "Verification requirements are not stated on the official product page; address/phone/manual-review claims appear only in Chinese tutorials — check the official page",
+        "Community forum support, no ticket support"
+      ],
+      "steps": "Open the EUserv product page → order VS2-free → complete verification as the page instructs (verification requirements: check the official page) → use the server over SSH once the server details arrive; renew manually every month.",
+      "claimUrl": "https://www.euserv.com/en/virtual-private-server/root-vserver/v2/vs2-free.php?pk=f6ca143dd4e6765",
+      "verifiedAt": "2026-11-13",
+      "sourceName": "EUserv official product page · verified against official page",
+      "sourceUrl": "https://www.euserv.com/en/virtual-private-server/root-vserver/v2/vs2-free.php?pk=f6ca143dd4e6765",
+      "status": "active",
+      "flags": [
+        "ipv6-only",
+        "manual-renewal",
+        "verification-secondhand"
+      ],
+      "notes": "Verification requirements (address/phone/manual review, 48 hours, IP country matching address country, €2 setup fee / $10 minimum top-up) appear only in Chinese tutorials, not confirmed on the official product page; the claim that renewal needs an email verification PIN appears only in search snippets of official forum posts, not confirmed by reading the official site directly."
     }
   ]
 }
