@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upstash Workflow Free 详解：每天 1,000 步、重试与并行计步规则</title>
+<meta name="description" content="Upstash Workflow Free 免费档：每天 1,000 步、消息最大 1 MB、最大并行度 10；一步是 QStash 服务器对 Workflow URL 或外部 URL 的一次调用；重试计为额外步骤，并行步骤计为两步。核实于 2026-11-14。">
+<link rel="canonical" href="https://tokens.yangtokent.com/schedule/offers/upstash-workflow/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/schedule/offers/upstash-workflow/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/schedule/offers/upstash-workflow/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/schedule/offers/upstash-workflow/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Upstash Workflow Free 详解：每天 1,000 步、重试与并行计步规则",
+  "description": "Upstash Workflow Free 免费档：每天 1,000 步、消息最大 1 MB、最大并行度 10；一步是 QStash 服务器对 Workflow URL 或外部 URL 的一次调用；重试计为额外步骤，并行步骤计为两步。核实于 2026-11-14。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-14",
+  "dateModified": "2026-11-14",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/schedule/offers/upstash-workflow/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "一步是什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "一步是 QStash 服务器对 Workflow URL 或外部 URL 的一次调用。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "并行步骤与重试怎么计？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "并行执行时每步多计 1 步，重试计为额外步骤；context.call 与 context.invoke 各计 2 步。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "超过每天 1,000 步会怎样？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "日步数是软限制，短暂峰值不会立即拦截；达到上限时 QStash 返回错误，SDK 节流后重试，重试上限到达后运行失败并记入 DLQ；长期超额可能联系升级或因配额错误失败。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">定时任务与队列</a><a href="../../offers/" aria-current="page">详情</a><a href="../../compare/">对比</a><a href="../../guides/">指南</a><a href="../../faq/">问答</a></div></nav>
+<main><div class="wrap">
+<p class="crumb"><a href="../../../">首页</a> › <a href="../../">定时任务与队列</a> › <a href="../">详情</a> › Upstash Workflow Free 详解</p><h1>Upstash Workflow Free 详解</h1><p class="meta">发布于 2026-11-14 · 更新于 2026-11-14 · 来源：<a href="https://upstash.com/pricing/workflow">Upstash 官网 Workflow 定价页</a> · 核实于 2026-11-14</p><p><span class="tag">免费档</span><span class="tag">工作流</span><span class="tag">每天 1,000 步</span><span class="tag">重试计为额外步骤</span></p><div class="answer"><p>Upstash Workflow 免费档每天提供 1,000 步，消息最大 1 MB，最大并行度 10。一步是 QStash 服务器对 Workflow URL 或外部 URL 的一次调用；context.call 与 context.invoke 各计 2 步，并行执行时每步多计 1 步，重试计为额外步骤。核实于 2026-11-14，领取前请以厂商官方页为准。</p></div><div class="toc"><strong>本页内容</strong><ul><li><a href="#spec">规格速览</a></li><li><a href="#s0">步是怎么算的</a></li><li><a href="#s1">超限与失败处理</a></li><li><a href="#s2">与 QStash 的关系</a></li><li><a href="#overage">超限规则与付费档</a></li><li><a href="#unconfirmed">未确认的信息</a></li><li><a href="#official">官方链接</a></li><li><a href="#risks">注意事项</a></li><li><a href="#faq">常见问题</a></li></ul></div><h2 id="spec">规格速览</h2><div class="tablewrap"><table class="fact"><tbody><tr><th>免费内容</th><td>每天 1,000 步、消息最大 1 MB、最大并行度 10</td></tr><tr><th>提供方</th><td>Upstash</td></tr><tr><th>计划名称</th><td>Free</td></tr><tr><th>时长</th><td>免费档（官网已读页面未明示永久，以官方页面为准）</td></tr><tr><th>绑卡与验证</th><td>官网已读页面未说明绑卡要求，以官方页面为准</td></tr><tr><th>步的定义</th><td>一步是 QStash 服务器对 Workflow URL 或外部 URL 的一次调用</td></tr><tr><th>计步规则</th><td>context.run、sleep、sleepUntil、waitForEvent 各计 1 步；context.call、invoke 各计 2 步；并行执行时每步多计 1 步；重试计为额外步骤</td></tr><tr><th>超限规则</th><td>日步数与月带宽为软限制，短暂峰值不会立即拦截；持续超额先联系升级，长期超额时运行可能因配额错误失败</td></tr><tr><th>付费档</th><td>Pay as You Go $1/100K 步；Fixed 1M $180/月；Fixed 10M $420/月</td></tr><tr><th>核实日期</th><td>2026-11-14</td></tr><tr><th>来源</th><td><a href="https://upstash.com/pricing/workflow">Upstash 官网 Workflow 定价页</a></td></tr></tbody></table></div><h2 id="s0">步是怎么算的</h2><p>一步是 QStash 服务器对 Workflow URL 或外部 URL 的一次调用。context.run、context.sleep、context.sleepUntil、context.waitForEvent 各计 1 步；context.call 与 context.invoke 各计 2 步；并行执行时，每步多计 1 步；重试计为额外步骤。</p><p>按这个口径，一个带并行分支、又多次重试的工作流，消耗的步数会明显高于步骤数本身。</p><h2 id="s1">超限与失败处理</h2><p>日步数与月带宽为软限制，短暂峰值不会立即拦截；持续超额先联系升级，长期超额时工作流运行可能因配额错误失败。达到日步数上限时，QStash 开始返回错误，SDK 节流后短暂延迟重试，重试上限到达后运行失败并记入 DLQ。</p><p>触发时请求体超限返回 HTTP 412，SDK 标记失败并记入 DLQ；步骤间响应超限也会导致运行失败并记入 DLQ。</p><h2 id="s2">与 QStash 的关系</h2><p>Workflow 基于 QStash 构建，步数计量走 QStash 的投递口径。QStash 免费档的延迟、DLQ 保留、日志保留等数字不直接转用于 Workflow；Workflow 定价页已读内容未述这些数字，以官方页面为准。</p><h2 id="overage">超限规则与付费档</h2><p>日步数与月带宽为软限制，短暂峰值不会立即拦截；持续超额先联系升级，长期超额时工作流运行可能因配额错误失败。付费档：Pay as You Go $1/100K 步；Fixed 1M $180/月；Fixed 10M $420/月。</p><h2 id="unconfirmed">未确认的信息</h2><ul><li>免费档带宽：已读定价页未述。</li><li>延迟上限：已读定价页未述。</li><li>DLQ 保留与日志保留：已读定价页未述。</li><li>活跃排程数：已读定价页未述。</li><li>绑卡要求与是否永久：已读定价页未述。</li></ul><h2 id="official">官方链接</h2><p><a class="btn" href="https://upstash.com/pricing/workflow">去官网查看</a></p><h2 id="risks">注意事项</h2><ul><li>context.call 与 context.invoke 各计 2 步，并行执行时每步多计 1 步，重试另计</li><li>免费档的带宽、延迟上限、DLQ 保留、日志保留、活跃排程数在已读定价页中未述，以官方页面为准</li><li>触发时请求体超限返回 HTTP 412，运行失败并记入 DLQ</li></ul><h2 id="faq">常见问题</h2><details><summary>一步是什么？</summary><p>一步是 QStash 服务器对 Workflow URL 或外部 URL 的一次调用。</p></details><details><summary>并行步骤与重试怎么计？</summary><p>并行执行时每步多计 1 步，重试计为额外步骤；context.call 与 context.invoke 各计 2 步。</p></details><details><summary>超过每天 1,000 步会怎样？</summary><p>日步数是软限制，短暂峰值不会立即拦截；达到上限时 QStash 返回错误，SDK 节流后重试，重试上限到达后运行失败并记入 DLQ；长期超额可能联系升级或因配额错误失败。</p></details><div class="note"><p>以上信息核实于 2026-11-14，来源为厂商官方页面。免费额度与条款可能调整或结束，领取前请以厂商官方页为准。</p></div><div class="related"><h3>相关页面</h3><p><a href="../qstash/">QStash Free 免费档</a></p><p><a href="../../compare/queue-services/">队列与工作流服务对照</a></p><p><a href="../../guides/queue-retries-and-delays/">队列重试与延迟入门</a></p><p><a href="../../../guides/peripheral-capabilities/">定时任务、队列与搜索：周边能力怎么安排</a></p></div>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">定时任务与队列</a> · <a href="../../offers/">详情</a> · <a href="../../compare/">对比</a> · <a href="../../guides/">指南</a> · <a href="../../faq/">问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
