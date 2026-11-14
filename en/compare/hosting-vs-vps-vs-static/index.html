@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web hosting vs VPS vs static hosting: capability boundaries and how to choose</title>
+<meta name="description" content="Web hosting, VPS, and static hosting compared: web hosting runs PHP + MySQL with no maintenance, a VPS gives root access with self-management, static hosting serves HTML/CSS/JS only and cannot run WordPress. Verified 2026-11-13.">
+<link rel="canonical" href="https://tokens.yangtokent.com/en/compare/hosting-vs-vps-vs-static/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/compare/hosting-vs-vps-vs-static/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/hosting/compare/hosting-vs-vps-vs-static/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/hosting/compare/hosting-vs-vps-vs-static/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Web hosting vs VPS vs static hosting",
+  "description": "Web hosting, VPS, and static hosting compared: web hosting runs PHP + MySQL with no maintenance, a VPS gives root access with self-management, static hosting serves HTML/CSS/JS only and cannot run WordPress. Verified 2026-11-13.",
+  "inLanguage": "en",
+  "datePublished": "2026-11-14",
+  "dateModified": "2026-11-14",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/en/compare/hosting-vs-vps-vs-static/",
+  "author": {
+    "@type": "Organization",
+    "name": "Free Token Monitor",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Free Token Monitor",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can a Discourse forum run on free web hosting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Discourse needs a runtime of its own (Ruby, PostgreSQL, Redis, and others), which PHP web hosting does not have. A forum user asked the same question, and the reply was that InfinityFree is PHP web hosting and cannot run it (a user statement). Running Discourse needs a VPS, with the environment installed by hand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which service fits WordPress?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "WordPress needs PHP + MySQL: web hosting installs it directly (one-click installer), a VPS installs it with a hand-built environment, static hosting cannot run it. Web hosting needs no maintenance; a VPS is self-managed."
+      }
+    }
+  ]
+}
+</script>
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../">Free Token Monitor</a></h1>
+<p>Free credits for agents: only vendor-verified offers. Check the official page before claiming.</p></div></header>
+<nav><div class="wrap"><a href="../../">Home</a><a href="../../vps/">Free VPS</a><a href="../../wool/">VPS Deals</a><a href="../../cheap/">Cheap VPS</a><a href="../../deploy/">Deploy &amp; Hosting</a><a href="../../database/">Databases</a><a href="../../domain/">Domains &amp; DNS</a><a href="../../code/">Code Hosting</a><a href="../../auth/">Auth</a><a href="../../storage/">Storage</a><a href="../../email/">Email</a><a href="../../monitoring/">Monitoring</a><a href="../../payments/">Payments</a><a href="../../hosting/">Web Hosting</a><a href="../../workflow/">Workflow</a><a href="../../offers/">Offer details</a><a href="../" aria-current="page">Comparisons</a><a href="../../faq/">FAQ</a><a href="../../../hosting/compare/hosting-vs-vps-vs-static/">中文</a></div></nav>
+<main><div class="wrap">
+
+<article>
+<p class="crumb"><a href="../../">Home</a> / <a href="../">Comparisons</a> / Web hosting vs VPS vs static hosting</p>
+
+<h1>Web hosting vs VPS vs static hosting</h1>
+<p class="meta">Updated 2026-11-14 · Table data from vendor official pages (verified 2026-11-13)</p>
+<div class="answer"><p><b>Short answer:</b> the three services differ in capability: web hosting provides space that runs PHP and connects to MySQL, with WordPress installable and no maintenance; a VPS provides a server with root access (EUserv VS2-free as an example: IPv6-only, monthly manual renewal), with the environment installed by hand; static hosting serves HTML/CSS/JS only, with no PHP and no MySQL, so WordPress cannot run. Discourse and Node apps need a runtime of their own, which PHP web hosting cannot run.</p></div>
+<h2>Capability boundaries</h2><div class="tablewrap"><table><thead><tr><th>Capability / boundary</th><th>Web hosting</th><th>VPS</th><th>Static hosting</th></tr></thead><tbody><tr><td><b>What it provides</b></td><td>Space that runs PHP and connects to MySQL + a panel</td><td>A server with root access (container or virtual machine)</td><td>Static file publishing (HTML/CSS/JS)</td></tr><tr><td><b>PHP</b></td><td>Yes (version per vendor official site)</td><td>Installed by hand</td><td>No</td></tr><tr><td><b>MySQL database</b></td><td>Yes (count per vendor official site)</td><td>Installed by hand</td><td>No</td></tr><tr><td><b>WordPress</b></td><td>Installable (one-click installer)</td><td>Installable (environment installed by hand)</td><td>Cannot run</td></tr><tr><td><b>Discourse / Node apps</b></td><td>Cannot run (needs a runtime of its own)</td><td>Can run (environment installed by hand)</td><td>Cannot run</td></tr><tr><td><b>Root access</b></td><td>No</td><td>Yes</td><td>No</td></tr><tr><td><b>Maintenance</b></td><td>None (panel operation)</td><td>Self-managed (system, environment, and security managed by hand)</td><td>None (files only)</td></tr><tr><td><b>Free examples</b></td><td>InfinityFree, Byet.host, and others (see the list)</td><td>EUserv VS2-free (IPv6-only, monthly manual renewal); Oracle Always Free, GCP e2-micro (see <a href="../../vps/">Free VPS</a>)</td><td>GitHub Pages, Netlify, Cloudflare Pages (static publishing, no PHP/MySQL)</td></tr></tbody></table></div><h2>Web hosting</h2><p>Web hosting provides space that runs PHP and connects to MySQL, with a panel and a one-click installer, for WordPress, blogs, and business sites, with no maintenance. Limits are written on each vendor’s official site: space, traffic/hits, database counts, PHP versions, idle and removal rules. The 10 hosts on <a href="../../hosting/">the Web hosting list</a> are all web hosting.</p><h2>VPS: EUserv as an example</h2><p>EUserv VS2-free is a container-type vServer with full root access: 1 core @ 1 GHz, 1 GB memory, 10 GB disk, 1 TB traffic per month. The basic tier has no free IPv4 address and 1 free IPv6 address /128; the contract term is 1 month, renewed manually. A VPS has no PHP/MySQL panel-hosting semantics: environment, database, and security are all installed and managed by hand. Other free VPS forms (Oracle Always Free, GCP e2-micro, and others) are on <a href="../../vps/">Free VPS</a>.</p><h2>Static hosting</h2><p>Static hosting publishes HTML, CSS, JavaScript, and other static files only, with no server-side PHP and no MySQL; WordPress cannot run, and dynamic programs cannot run. GitHub Pages, Netlify, and Cloudflare Pages belong in this category — see <a href="../../deploy/">Deploy &amp;amp; hosting</a> and <a href="../vercel-netlify-pages/">the static hosting comparison</a>. Static hosting is outside the verification scope of the web hosting pages; it appears here only to mark the capability boundary.</p>
+<h2>FAQ</h2>
+<details><summary>Can a Discourse forum run on free web hosting?</summary>
+<p>No. Discourse needs a runtime of its own (Ruby, PostgreSQL, Redis, and others), which PHP web hosting does not have. A forum user asked the same question, and the reply was that InfinityFree is PHP web hosting and cannot run it (a user statement). Running Discourse needs a VPS, with the environment installed by hand.</p>
+</details>
+<details><summary>Which service fits WordPress?</summary>
+<p>WordPress needs PHP + MySQL: web hosting installs it directly (one-click installer), a VPS installs it with a hand-built environment, static hosting cannot run it. Web hosting needs no maintenance; a VPS is self-managed.</p>
+</details>
+<p><b>Disclaimer:</b> table data comes from vendor official pages; allowances can change or end at any time — check the official page before claiming.</p>
+<div class="related"><h2>Related pages</h2>
+<ul>
+<li><a href="../../vps/">Free VPS</a></li><li><a href="../../deploy/">Deploy &amp; hosting</a></li><li><a href="../four-hosts-overview/">Four free web hosts compared</a></li><li><a href="../all-hosts-table/">All free web hosts compared</a></li><li><a href="../../hosting/">Back to the Web hosting list</a></li>
+</ul></div>
+
+</article>
+
+</div></main>
+<footer><div class="wrap"><p><a href="../../">Home</a> · <a href="../../vps/">Free VPS</a> · <a href="../../wool/">VPS Deals</a> · <a href="../../cheap/">Cheap VPS</a> · <a href="../../deploy/">Deploy &amp; Hosting</a> · <a href="../../database/">Databases</a> · <a href="../../domain/">Domains &amp; DNS</a> · <a href="../../code/">Code Hosting</a> · <a href="../../auth/">Auth</a> · <a href="../../storage/">Storage</a> · <a href="../../email/">Email</a> · <a href="../../monitoring/">Monitoring</a> · <a href="../../payments/">Payments</a> · <a href="../../hosting/">Web Hosting</a> · <a href="../../workflow/">Workflow</a> · <a href="../../offers/">Offer details</a> · <a href="../">Comparisons</a> · <a href="../../faq/">FAQ</a> · <a href="../../../hosting/compare/hosting-vs-vps-vs-static/">中文</a></p><p>Data is for reference only — check the vendor’s official page. Every web hosting entry was verified against a vendor official page; verification dates are on each page. Free plans and terms can change or end at any time; read the vendor’s terms before signing up. No invite links.</p></div></footer>
+</body>
+</html>
