@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Queue and workflow service comparison: QStash, Workflow, Inngest, Trigger.dev</title>
+<meta name="description" content="Queue and workflow service comparison: QStash 1,000 messages a day, Workflow 1,000 steps a day, Inngest 50,000 executions a month, Trigger.dev $5 of compute credits a month; delay, timeout, retry, and dead-letter queue comparison. Verified 2026-11-14.">
+<link rel="canonical" href="https://tokens.yangtokent.com/en/compare/queue-services/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/compare/queue-services/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/schedule/compare/queue-services/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/schedule/compare/queue-services/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Queue and workflow service comparison: QStash, Workflow, Inngest, Trigger.dev",
+  "description": "Queue and workflow service comparison: QStash 1,000 messages a day, Workflow 1,000 steps a day, Inngest 50,000 executions a month, Trigger.dev $5 of compute credits a month; delay, timeout, retry, and dead-letter queue comparison. Verified 2026-11-14.",
+  "inLanguage": "en",
+  "datePublished": "2026-11-14",
+  "dateModified": "2026-11-14",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/en/compare/queue-services/",
+  "author": {
+    "@type": "Organization",
+    "name": "Free Token Monitor",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Free Token Monitor",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can the four free amounts be compared directly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. QStash counts messages, Workflow counts steps, Inngest counts executions, and Trigger.dev counts compute seconds plus an invocation cost; units differ, so cross-unit ranking does not apply."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which delay is longest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "QStash allows a 7-day maximum delay; Inngest allows one sleep up to 1 year, with total sleep within a run on the Free plan capped at 30 days; the Workflow maximum delay is not stated on the pricing page read."
+      }
+    }
+  ]
+}
+</script>
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../">Free Token Monitor</a></h1>
+<p>Free credits for agents: only vendor-verified offers. Check the official page before claiming.</p></div></header>
+<nav><div class="wrap"><a href="../../">Home</a><a href="../../vps/">Free VPS</a><a href="../../wool/">VPS Deals</a><a href="../../cheap/">Cheap VPS</a><a href="../../deploy/">Deploy &amp; Hosting</a><a href="../../database/">Databases</a><a href="../../domain/">Domains &amp; DNS</a><a href="../../code/">Code Hosting</a><a href="../../auth/">Auth</a><a href="../../storage/">Storage</a><a href="../../email/">Email</a><a href="../../monitoring/">Monitoring</a><a href="../../payments/">Payments</a><a href="../../hosting/">Web Hosting</a><a href="../../schedule/">Scheduled Tasks</a><a href="../../workflow/">Workflow</a><a href="../../offers/">Offer details</a><a href="../../compare/" aria-current="page">Comparisons</a><a href="../../faq/">FAQ</a><a href="../../../schedule/compare/queue-services/">中文</a></div></nav>
+<main><div class="wrap">
+
+<p class="crumb"><a href="../../">Home</a> › <a href="../">Comparisons</a> › Queue and workflow service comparison</p><h1>Queue and workflow service comparison</h1><p class="meta">Published 2026-11-14 · Updated 2026-11-14 · Verified 2026-11-14</p><div class="answer"><p>Metering units differ across the four services: QStash counts messages, Workflow counts steps, Inngest counts executions, and Trigger.dev counts compute seconds plus an invocation cost, so cross-unit ranking does not apply. Delay, timeout, retry, and dead-letter queue comparison appears below. Verified 2026-11-14.</p></div><div class="tablewrap"><table><thead><tr><th>Service</th><th>QStash Free</th><th>Upstash Workflow Free</th><th>Inngest Free</th><th>Trigger.dev Free</th></tr></thead><tbody><tr><td>Metering unit</td><td>Messages</td><td>Steps</td><td>Executions</td><td>Compute seconds + per-run invocation cost</td></tr><tr><td>Free amount and period</td><td>1,000 messages a day</td><td>1,000 steps a day</td><td>50,000 executions a month</td><td>$5 of compute credits a month</td></tr><tr><td>Message / event size</td><td>1 MB maximum message size</td><td>1 MB maximum message size</td><td>256 KiB maximum event size</td><td>Check the official page</td></tr><tr><td>Delay</td><td>7-day maximum</td><td>Check the official page</td><td>One sleep up to 1 year, 30-day total sleep cap per run</td><td>Waits past 5 seconds not billed</td></tr><tr><td>Timeout</td><td>15-minute maximum HTTP response duration</td><td>Check the official page</td><td>2-hour maximum step duration</td><td>No maximum run duration</td></tr><tr><td>Retries</td><td>3 retries by default; conflicting billing wording</td><td>Retries count as extra steps</td><td>Steps handle retries automatically, count unstated</td><td>Check the official page</td></tr><tr><td>Dead-letter queue</td><td>3-day DLQ retention</td><td>Failed runs recorded in the DLQ, retention unstated</td><td>Check the official page</td><td>Check the official page</td></tr><tr><td>Concurrency</td><td>Queue parallelism 2, maximum parallelism 10</td><td>Maximum parallelism 10</td><td>5 concurrent steps</td><td>20 concurrent runs</td></tr><tr><td>Card</td><td>Check the official page</td><td>Check the official page</td><td>No credit card required</td><td>No credit card required</td></tr><tr><td>Detail page</td><td><a href="../../schedule/offers/qstash/">Details</a></td><td><a href="../../schedule/offers/upstash-workflow/">Details</a></td><td><a href="../../schedule/offers/inngest/">Details</a></td><td><a href="../../schedule/offers/trigger-dev/">Details</a></td></tr></tbody></table></div><h2>Different units, aligned first</h2><p>A QStash message, a Workflow step, an Inngest execution, and a Trigger.dev compute second with an invocation cost are separate units. The same workload consumes different unit counts on each service, so comparison stays within one unit at a time.</p><h2>Delay and timeout</h2><p>QStash allows a 7-day maximum delay and a 15-minute maximum HTTP response duration; Inngest allows a 2-hour maximum step duration and a 30-day maximum run length; Trigger.dev runs have no maximum duration, and waits past 5 seconds are not billed; the Workflow maximum delay is not stated on the pricing page read.</p><h2>Retries and dead-letter queues</h2><p>QStash retries 3 times by default, with backoff starting at 12 seconds, and failed messages go to the DLQ, retained for 3 days; Workflow retries count as extra steps, and failed runs are recorded in the DLQ; Inngest steps handle retries automatically, with the count unstated; Trigger.dev retry rules are not stated on the pricing page read. The QStash pricing page carries two statements on retry billing, shown both ways on the detail page.</p><h2>Choosing</h2><p>For message-based delivery with schedules and delays, QStash applies; for multi-step workflows with sleeps and event waits, Workflow and Inngest apply; for long-running tasks under per-second billing, Trigger.dev applies.</p><h2>FAQ</h2><details><summary>Can the four free amounts be compared directly?</summary><p>No. QStash counts messages, Workflow counts steps, Inngest counts executions, and Trigger.dev counts compute seconds plus an invocation cost; units differ, so cross-unit ranking does not apply.</p></details><details><summary>Which delay is longest?</summary><p>QStash allows a 7-day maximum delay; Inngest allows one sleep up to 1 year, with total sleep within a run on the Free plan capped at 30 days; the Workflow maximum delay is not stated on the pricing page read.</p></details><div class="note"><p>Information above was verified 2026-11-14 against vendor official pages. Free allowances and terms can change or end at any time; check the official page before claiming.</p></div><div class="related"><h3>Related pages</h3><p><a href="../../schedule/offers/qstash/">QStash Free tier</a></p><p><a href="../../schedule/offers/upstash-workflow/">Upstash Workflow Free tier</a></p><p><a href="../../schedule/offers/inngest/">Inngest Free</a></p><p><a href="../../schedule/offers/trigger-dev/">Trigger.dev Free</a></p><p><a href="../../schedule/">Scheduled Tasks &amp; Queues</a></p></div>
+
+</div></main>
+<footer><div class="wrap"><p><a href="../../">Home</a> · <a href="../../vps/">Free VPS</a> · <a href="../../wool/">VPS Deals</a> · <a href="../../cheap/">Cheap VPS</a> · <a href="../../deploy/">Deploy &amp; Hosting</a> · <a href="../../database/">Databases</a> · <a href="../../domain/">Domains &amp; DNS</a> · <a href="../../code/">Code Hosting</a> · <a href="../../auth/">Auth</a> · <a href="../../storage/">Storage</a> · <a href="../../email/">Email</a> · <a href="../../monitoring/">Monitoring</a> · <a href="../../payments/">Payments</a> · <a href="../../hosting/">Web Hosting</a> · <a href="../../schedule/">Scheduled Tasks</a> · <a href="../../workflow/">Workflow</a> · <a href="../../offers/">Offer details</a> · <a href="../../compare/">Comparisons</a> · <a href="../../faq/">FAQ</a> · <a href="../../../schedule/compare/queue-services/">中文</a></p><p>Data is for reference only — check the vendor’s official page. Every schedule entry was verified against a vendor official page; verification dates are on each page. Free tiers and limits can change or end at any time; read the vendor’s terms before claiming. No invite links.</p></div></footer>
+</body>
+</html>
