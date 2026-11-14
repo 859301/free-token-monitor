@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EasyCron Free 详解：200 EPDs、20 分钟间隔、每月到期</title>
+<meta name="description" content="EasyCron Free：200 EPDs、5 秒超时、20 分钟间隔、执行跟踪、10 条日志与预测；免费档每月到期；无邮件通知、无失败日志保留。核实于 2026-11-14。">
+<link rel="canonical" href="https://tokens.yangtokent.com/schedule/offers/easycron/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/schedule/offers/easycron/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/schedule/offers/easycron/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/schedule/offers/easycron/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "EasyCron Free 详解：200 EPDs、20 分钟间隔、每月到期",
+  "description": "EasyCron Free：200 EPDs、5 秒超时、20 分钟间隔、执行跟踪、10 条日志与预测；免费档每月到期；无邮件通知、无失败日志保留。核实于 2026-11-14。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-14",
+  "dateModified": "2026-11-14",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/schedule/offers/easycron/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "200 EPDs 能设几个任务？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "取决于频率：每 20 分钟 2 个、每 30 分钟 4 个、每小时 8 个、每天 200 个；每分钟与每 10 分钟无名额。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Free 档每月到期是什么意思？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "定价页写明 Expires Monthly，即免费档每月到期；续期方式与到期后任务状态在已读页面中未述，以官方页面为准。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "超时只有 5 秒吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "是。Free 档超时为 5 秒，超过 5 秒的请求会被判定超时。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">定时任务与队列</a><a href="../../offers/" aria-current="page">详情</a><a href="../../compare/">对比</a><a href="../../guides/">指南</a><a href="../../faq/">问答</a></div></nav>
+<main><div class="wrap">
+<p class="crumb"><a href="../../../">首页</a> › <a href="../../">定时任务与队列</a> › <a href="../">详情</a> › EasyCron Free 详解</p><h1>EasyCron Free 详解</h1><p class="meta">发布于 2026-11-14 · 更新于 2026-11-14 · 来源：<a href="https://www.easycron.com/pricing">EasyCron 官网定价页</a> · 核实于 2026-11-14</p><p><span class="tag">免费档</span><span class="tag">定时任务</span><span class="tag">200 EPDs</span><span class="tag">每月到期</span><span class="tag">20 分钟间隔</span></p><div class="answer"><p>EasyCron Free 免费档提供 200 EPDs，5 秒超时、20 分钟间隔，执行跟踪、10 条日志与预测、接收 100 MB、保存 10 KB 头尾。EPD 是任务在最繁忙一天的执行总次数。免费档每月到期（Expires Monthly），无邮件通知、无失败日志保留。核实于 2026-11-14，领取前请以厂商官方页为准。</p></div><div class="toc"><strong>本页内容</strong><ul><li><a href="#spec">规格速览</a></li><li><a href="#s0">EPD 是怎么算的</a></li><li><a href="#s1">每月到期与不包括的功能</a></li><li><a href="#overage">超限规则与付费档</a></li><li><a href="#unconfirmed">未确认的信息</a></li><li><a href="#official">官方链接</a></li><li><a href="#risks">注意事项</a></li><li><a href="#faq">常见问题</a></li></ul></div><h2 id="spec">规格速览</h2><div class="tablewrap"><table class="fact"><tbody><tr><th>免费内容</th><td>200 EPDs、5 秒超时、20 分钟间隔、执行跟踪、10 条日志与预测、接收 100 MB、保存 10 KB 头尾</td></tr><tr><th>提供方</th><td>EasyCron</td></tr><tr><th>计划名称</th><td>Free</td></tr><tr><th>时长</th><td>免费档，每月到期（官网定价页写明 Expires Monthly；续期方式以官方页面为准）</td></tr><tr><th>绑卡与验证</th><td>官网已读页面未说明绑卡要求，以官方页面为准</td></tr><tr><th>EPD</th><td>EPD 是任务在最繁忙一天的执行总次数；每 10 分钟跑一次占 144 EPDs，每分钟跑一次占 1,440 EPDs</td></tr><tr><th>不包括</th><td>无邮件通知、无失败日志保留、无自定义 HTTP、无 Slack 通知、无正则匹配、无 Webhook 通知、无子用户</td></tr><tr><th>超限规则</th><td>官网已读页面未述，以官方页面为准</td></tr><tr><th>付费档</th><td>Individual-1 $24/年（8,000 EPDs、1 分钟间隔）；Individual-2 $60/年；Individual-3 $120/年；Individual-4 $240/年</td></tr><tr><th>核实日期</th><td>2026-11-14</td></tr><tr><th>来源</th><td><a href="https://www.easycron.com/pricing">EasyCron 官网定价页</a></td></tr></tbody></table></div><h2 id="s0">EPD 是怎么算的</h2><p>EPD（Executions Per Day）是任务在最繁忙一天的执行总次数。按官网 FAQ：每 10 分钟跑一次占 144 EPDs，每分钟跑一次占 1,440 EPDs；删除任务后占用的 EPDs 释放回余额。</p><div class="tablewrap"><table><thead><tr><th>任务频率</th><th>Free 档可设任务数</th></tr></thead><tbody><tr><td>每分钟</td><td>无名额</td></tr><tr><td>每 10 分钟</td><td>无名额</td></tr><tr><td>每 20 分钟</td><td>2 个</td></tr><tr><td>每 30 分钟</td><td>4 个</td></tr><tr><td>每小时</td><td>8 个</td></tr><tr><td>每天</td><td>200 个</td></tr></tbody></table></div><h2 id="s1">每月到期与不包括的功能</h2><p>免费档每月到期（Expires Monthly）；续期方式与到期后任务状态在已读页面中未述，以官方页面为准。</p><p>免费档不包括邮件通知、失败日志保留、自定义 HTTP、Slack 通知、正则匹配、Webhook 通知与子用户。超时只有 5 秒，最短间隔 20 分钟。</p><h2 id="overage">超限规则与付费档</h2><p>官网已读页面未述超额行为，以官方页面为准。付费档：Individual-1 $24/年（8,000 EPDs、1 分钟间隔）；Individual-2 $60/年；Individual-3 $120/年；Individual-4 $240/年。</p><h2 id="unconfirmed">未确认的信息</h2><ul><li>绑卡要求：已读页面未述。</li><li>超额行为：已读页面未述。</li><li>重试规则：已读页面未述。</li><li>续期方式与到期后任务状态：已读页面未述。</li></ul><h2 id="official">官方链接</h2><p><a class="btn" href="https://www.easycron.com/pricing">去官网查看</a></p><h2 id="risks">注意事项</h2><ul><li>免费档每月到期（Expires Monthly），续期方式与到期后任务状态以官方页面为准</li><li>超时只有 5 秒，最短间隔 20 分钟</li><li>失败日志不保留，也无失败通知</li><li>EPD 按最繁忙一天的执行总次数计，每分钟跑一次占 1,440 EPDs</li></ul><h2 id="faq">常见问题</h2><details><summary>200 EPDs 能设几个任务？</summary><p>取决于频率：每 20 分钟 2 个、每 30 分钟 4 个、每小时 8 个、每天 200 个；每分钟与每 10 分钟无名额。</p></details><details><summary>Free 档每月到期是什么意思？</summary><p>定价页写明 Expires Monthly，即免费档每月到期；续期方式与到期后任务状态在已读页面中未述，以官方页面为准。</p></details><details><summary>超时只有 5 秒吗？</summary><p>是。Free 档超时为 5 秒，超过 5 秒的请求会被判定超时。</p></details><div class="note"><p>以上信息核实于 2026-11-14，来源为厂商官方页面。免费额度与条款可能调整或结束，领取前请以厂商官方页为准。</p></div><div class="related"><h3>相关页面</h3><p><a href="../cron-job-org/">cron-job.org 免费服务</a></p><p><a href="../../compare/cron-services/">定时任务服务对照</a></p><p><a href="../../guides/cron-frequency-and-volume/">cron 频率与执行次数怎么算</a></p><p><a href="../../../guides/peripheral-capabilities/">定时任务、队列与搜索：周边能力怎么安排</a></p></div>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">定时任务与队列</a> · <a href="../../offers/">详情</a> · <a href="../../compare/">对比</a> · <a href="../../guides/">指南</a> · <a href="../../faq/">问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
