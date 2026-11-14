@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pause and overage compared: idle pause, sleep, shutdown, and pay-as-you-go across 6 free databases</title>
+<meta name="description" content="Pause, sleep, shutdown, and charging compared across Supabase, Neon, Turso, Upstash Redis, MongoDB Atlas, and Firebase: which pause, which keep data, and what happens on overage. Verified 2026-11-13.">
+<link rel="canonical" href="https://tokens.yangtokent.com/en/compare/pause-and-overage/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/compare/pause-and-overage/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/database/compare/pause-and-overage/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/database/compare/pause-and-overage/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Pause and overage compared",
+  "description": "Pause, sleep, shutdown, and charging compared across Supabase, Neon, Turso, Upstash Redis, MongoDB Atlas, and Firebase: which pause, which keep data, and what happens on overage. Verified 2026-11-13.",
+  "inLanguage": "en",
+  "datePublished": "2026-11-14",
+  "dateModified": "2026-11-14",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/en/compare/pause-and-overage/",
+  "author": {
+    "@type": "Organization",
+    "name": "Free Token Monitor",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Free Token Monitor",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can inactivity delete a free database?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Neon states overage keeps data. The Supabase pricing page writes pause (paused), with no deletion rule stated. Deletion rules for Turso, Upstash, MongoDB Atlas, and Firebase are not stated on the official pages read — check the official page. Verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "After exceeding the limit: does the service stop, or does it start charging?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It differs by vendor: Neon pauses compute until the next cycle; Turso requires upgrade or blocking; Firebase Spark disables the app, Blaze charges pay-as-you-go with no hard cap possible; overage behavior for Supabase, Upstash, and MongoDB Atlas is not stated on the official pages read — check the official page. Verified 2026-11-13."
+      }
+    }
+  ]
+}
+</script>
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../">Free Token Monitor</a></h1>
+<p>Free credits for agents: only vendor-verified offers. Check the official page before claiming.</p></div></header>
+<nav><div class="wrap"><a href="../../">Home</a><a href="../../vps/">Free VPS</a><a href="../../wool/">VPS Deals</a><a href="../../cheap/">Cheap VPS</a><a href="../../deploy/">Deploy &amp; Hosting</a><a href="../../database/">Databases</a><a href="../../domain/">Domains &amp; DNS</a><a href="../../offers/">Offer details</a><a href="../" aria-current="page">Comparisons</a><a href="../../faq/">FAQ</a><a href="../../../database/compare/pause-and-overage/">中文</a></div></nav>
+<main><div class="wrap">
+
+<article>
+<p class="crumb"><a href="../../">Home</a> / <a href="../">Comparisons</a> / Pause and overage compared</p>
+
+<h1>Pause and overage compared</h1>
+<p class="meta">Updated 2026-11-14 · Table data from vendor official pages (verified 2026-11-13)</p>
+<div class="answer"><p><b>Short answer:</b> pause, sleep, shutdown, and charging are four different overage behaviors, and each vendor’s official site writes them differently: Supabase writes pause (1 week inactive), Neon writes scale to zero and compute pause (data kept), Turso writes upgrade or blocking, Firebase Spark writes shutdown and Blaze writes no hard cap possible; overage behavior for Upstash and MongoDB Atlas is not stated on the official pages read.</p></div>
+<h2>Comparison table</h2><div class="tablewrap"><table><thead><tr><th>Database</th><th>Pause / sleep</th><th>Overage behavior</th><th>Data deleted?</th></tr></thead><tbody><tr><td><b><a href="../../database/offers/supabase/">Supabase</a></b></td><td>Pause after 1 week inactive; max 2 active projects</td><td>Not stated on the official pages read</td><td>Pricing page writes paused, with no deletion rule stated</td></tr><tr><td><b><a href="../../database/offers/neon/">Neon</a></b></td><td>Scale to zero after 5 minutes idle</td><td>Compute pauses until the next cycle</td><td>Data kept</td></tr><tr><td><b><a href="../../database/offers/turso/">Turso</a></b></td><td>Not stated on the official pages read</td><td>Upgrade or blocking required (FAQ)</td><td>Not stated on the official pages read</td></tr><tr><td><b><a href="../../database/offers/upstash-redis/">Upstash Redis</a></b></td><td>Not stated on the official pages read</td><td>Not stated on the official pages read</td><td>Not stated on the official pages read</td></tr><tr><td><b><a href="../../database/offers/mongodb-atlas/">MongoDB Atlas</a></b></td><td>Not shown on the pricing page</td><td>Ops and connection counts not shown on the pricing page</td><td>Not stated on the official pages read</td></tr><tr><td><b><a href="../../database/offers/firebase/">Firebase</a></b></td><td>Idle-pause rules not stated on the official pages read</td><td>Spark: exceeding any limit disables the app; Blaze: pay-as-you-go, no hard cap possible</td><td>Not stated on the official pages read</td></tr></tbody></table></div><h2>Four behaviors compared</h2><p>Pause (Supabase): a project pauses after inactivity; the pricing page writes paused. Sleep (Neon scale to zero): compute drops to zero after idle time, data is kept. Shutdown (Firebase Spark): exceeding any plan limit disables the app, preventing further usage and charges. Pay-as-you-go (Firebase Blaze, Upstash after a card is entered): usage beyond the free allowance is billed by usage, and Blaze cannot set a hard usage cap. The Turso FAQ states overage requires upgrade or blocking: either upgrade to a paid tier, or usage is blocked.</p><h2>Does inactivity delete the database?</h2><p>Neon states overage keeps data. The Supabase pricing page writes pause, with no deletion rule stated. Deletion rules for Turso, Upstash, MongoDB Atlas, and Firebase are not stated on the official pages read — check the official page. Pausing is not deletion: pause and sleep keep data; deletion rules follow the specific terms on each vendor’s official site.</p>
+<h2>FAQ</h2>
+<details><summary>Can inactivity delete a free database?</summary>
+<p>Neon states overage keeps data. The Supabase pricing page writes pause (paused), with no deletion rule stated. Deletion rules for Turso, Upstash, MongoDB Atlas, and Firebase are not stated on the official pages read — check the official page. Verified 2026-11-13.</p>
+</details>
+<details><summary>After exceeding the limit: does the service stop, or does it start charging?</summary>
+<p>It differs by vendor: Neon pauses compute until the next cycle; Turso requires upgrade or blocking; Firebase Spark disables the app, Blaze charges pay-as-you-go with no hard cap possible; overage behavior for Supabase, Upstash, and MongoDB Atlas is not stated on the official pages read — check the official page. Verified 2026-11-13.</p>
+</details>
+<p><b>Disclaimer:</b> table data comes from vendor official pages; allowances can change or end at any time — check the official page before claiming.</p>
+<div class="related"><h2>Related pages</h2>
+<ul>
+<li><a href="../../database/offers/supabase/">Supabase free tier</a></li><li><a href="../../database/offers/neon/">Neon free tier</a></li><li><a href="../../database/offers/firebase/">Firebase free allowances</a></li><li><a href="../supabase-vs-neon-vs-turso/">Supabase vs Neon vs Turso</a></li><li><a href="../../database/">Back to the Databases list</a></li>
+</ul></div>
+
+</article>
+
+</div></main>
+<footer><div class="wrap"><p><a href="../../">Home</a> · <a href="../../vps/">Free VPS</a> · <a href="../../wool/">VPS Deals</a> · <a href="../../cheap/">Cheap VPS</a> · <a href="../../deploy/">Deploy &amp; Hosting</a> · <a href="../../database/">Databases</a> · <a href="../../domain/">Domains &amp; DNS</a> · <a href="../../offers/">Offer details</a> · <a href="../">Comparisons</a> · <a href="../../faq/">FAQ</a> · <a href="../../../database/compare/pause-and-overage/">中文</a></p><p>Data is for reference only — check the vendor’s official page. Every database entry was verified against a vendor official page; verification dates are on each page. Free tiers and limits can change or end at any time; read the vendor’s terms before claiming. No invite links.</p></div></footer>
+</body>
+</html>
