@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solo developer workflow: 14 stages from idea to launch and operations</title>
+<meta name="description" content="A 14-stage map: idea validation, code hosting, model APIs, databases, auth, deploy and hosting, servers, domains, object storage, email, monitoring and analytics, peripheral capabilities, payments, launch and operations; with a 15-item launch checklist and 3 $0 stacks.">
+<link rel="canonical" href="https://tokens.yangtokent.com/en/workflow/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/workflow/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/workflow/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/workflow/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Solo developer workflow: 14 stages from idea to launch and operations",
+  "description": "A 14-stage map: idea validation, code hosting, model APIs, databases, auth, deploy and hosting, servers, domains, object storage, email, monitoring and analytics, peripheral capabilities, payments, launch and operations; with a 15-item launch checklist and 3 $0 stacks.",
+  "inLanguage": "en",
+  "datePublished": "2026-11-14",
+  "dateModified": "2026-11-14",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/en/workflow/",
+  "author": {
+    "@type": "Organization",
+    "name": "Free Token Monitor",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Free Token Monitor",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../">Free Token Monitor</a></h1>
+<p>Free credits for agents: only vendor-verified offers. Check the official page before claiming.</p></div></header>
+<nav><div class="wrap"><a href="../">Home</a><a href="../vps/">Free VPS</a><a href="../wool/">VPS Deals</a><a href="../cheap/">Cheap VPS</a><a href="../deploy/">Deploy &amp; Hosting</a><a href="../database/">Databases</a><a href="../domain/">Domains &amp; DNS</a><a href="../code/">Code Hosting</a><a href="../auth/">Auth</a><a href="../storage/">Storage</a><a href="../email/">Email</a><a href="../monitoring/">Monitoring</a><a href="../payments/">Payments</a><a href="../hosting/">Web Hosting</a><a href="./" aria-current="page">Workflow</a><a href="../offers/">Offer details</a><a href="../compare/">Comparisons</a><a href="../faq/">FAQ</a><a href="../../workflow/">中文</a></div></nav>
+<main><div class="wrap">
+
+<article>
+<p class="crumb"><a href="../">Home</a> / Workflow overview</p>
+
+<h1>Solo developer workflow: 14 stages from idea to launch and operations</h1>
+<p class="meta">Updated 2026-11-14 · Section entries verified 2026-11-13, see each section page</p>
+<div class="answer"><p>A solo project passes through 14 stages from idea to launch and operations: idea validation, code hosting, models and APIs, databases, authentication, deploy and hosting, servers and VPS, domains, object storage, email, monitoring and analytics, peripheral capabilities, payments and monetization, and launch and operations. Each stage connects to its section page, or to a key-points card on this page where no section page exists.</p></div>
+<p>Stages follow project order, not a one-time setup of everything: earlier stages get decided first, and later stages after the product shape is set. Free allowances, card requirements, and overage rules for each stage are on the corresponding section pages.</p>
+<div class="toc"><b>On this page</b><ul><li><a href="#map">Stage map: 14 stages</a></li><li><a href="#checklist">Launch checklist from zero</a></li><li><a href="#stacks">$0 stacks: 3 combinations</a></li><li><a href="#guide-cards">Method guides: key points</a></li></ul></div>
+<h2 id="map">Stage map: 14 stages</h2>
+<h3>Stage A: Idea &amp; development</h3>
+<div class="tablewrap"><table><thead><tr><th>Stage</th><th>What it covers</th><th>Section</th></tr></thead><tbody>
+<tr><td>1 · Idea validation</td><td>Confirm whether anyone needs the idea before deciding to build it</td><td><a href="#guide-idea-validation">Key points</a></td></tr>
+<tr><td>2 · Code hosting / CI</td><td>Where the code lives; private repositories and automated builds</td><td><a href="../code/">Code hosting</a></td></tr>
+<tr><td>3 · Models / APIs</td><td>Model API free allowances, card requirements, and reset rules</td><td><a href="../">Free credits overview</a></td></tr>
+<tr><td>4 · Databases</td><td>Free databases, pause rules, and overage rules</td><td><a href="../database/">Databases</a></td></tr>
+<tr><td>5 · Authentication</td><td>Sign-up and sign-in, social login, free user counts</td><td><a href="../auth/">Authentication</a></td></tr>
+</tbody></table></div>
+<h3>Stage B: Deploy &amp; launch</h3>
+<div class="tablewrap"><table><thead><tr><th>Stage</th><th>What it covers</th><th>Section</th></tr></thead><tbody>
+<tr><td>6 · Deploy &amp; hosting</td><td>Static, container, and serverless hosting; web hosting is a separate route</td><td><a href="../deploy/">Deploy &amp; hosting</a> · <a href="../hosting/">Web hosting</a></td></tr>
+<tr><td>7 · Servers / VPS &amp; self-hosting</td><td>Free VPS, trial credits, task-renewed hosting, and cheap VPS</td><td><a href="../vps/">Free VPS</a> · <a href="../wool/">VPS deals</a> · <a href="../cheap/">Cheap VPS</a></td></tr>
+<tr><td>8 · Domains / DNS / CDN / SSL</td><td>Domain registration, DNS, CDN, and certificates</td><td><a href="../domain/">Domains &amp; DNS</a></td></tr>
+<tr><td>9 · Object storage</td><td>Where images and files live; egress rules</td><td><a href="../storage/">Object storage</a></td></tr>
+</tbody></table></div>
+<h3>Stage C: Operations essentials</h3>
+<div class="tablewrap"><table><thead><tr><th>Stage</th><th>What it covers</th><th>Section</th></tr></thead><tbody>
+<tr><td>10 · Email</td><td>Registration verification and notification email</td><td><a href="../email/">Email</a></td></tr>
+<tr><td>11 · Monitoring &amp; analytics</td><td>Uptime alerts, error tracking, and access analytics</td><td><a href="../monitoring/">Monitoring &amp; analytics</a></td></tr>
+<tr><td>12 · Peripheral capabilities</td><td>Scheduled tasks, queues, search, and caching</td><td><a href="#guide-peripheral">Key points</a></td></tr>
+</tbody></table></div>
+<h3>Stage D: Monetization &amp; growth</h3>
+<div class="tablewrap"><table><thead><tr><th>Stage</th><th>What it covers</th><th>Section</th></tr></thead><tbody>
+<tr><td>13 · Payments &amp; monetization</td><td>Collecting payments, fees, tax handling, and payout paths</td><td><a href="../payments/">Payments</a></td></tr>
+<tr><td>14 · Launch &amp; operations</td><td>Getting users, SEO, support, and compliance notes</td><td><a href="#guide-launch">Key points</a></td></tr>
+</tbody></table></div>
+<h2 id="checklist">Launch checklist from zero</h2>
+<p>Work through the items in order, finishing each before moving on; note skipped items and complete them before launch.</p>
+<h3>Idea &amp; development</h3>
+<ol>
+<li>Write one sentence: whose problem, and what problem.</li>
+<li>Talk to a few potential users; ask about past behavior, not “would you use it”.</li>
+<li>Build a landing page or a waitlist; check whether anyone leaves contact details.</li>
+<li>Set the scope of the first usable version: one core feature.</li>
+<li>Put the code in a repository; decide the branching and deployment approach. See <a href="../code/">Code hosting</a>.</li>
+</ol>
+<h3>Deploy &amp; launch</h3>
+<ol>
+<li>Pick a deployment route: a managed free tier, web hosting, or a VPS. See <a href="../deploy/">Deploy &amp; hosting</a>, <a href="../hosting/">Web hosting</a>, <a href="../vps/">Free VPS</a>.</li>
+<li>Pick a database; confirm the idle-pause and overage rules. See <a href="../database/">Databases</a>.</li>
+<li>Decide the auth approach: build it or use managed auth. See <a href="../auth/">Authentication</a>.</li>
+<li>Set up the domain, DNS, and SSL. See <a href="../domain/">Domains &amp; DNS</a>.</li>
+<li>Store files and images in object storage, not in the code repository. See <a href="../storage/">Object storage</a>.</li>
+</ol>
+<h3>Operations essentials</h3>
+<ol>
+<li>Set up registration verification and notification email. See <a href="../email/">Email</a>.</li>
+<li>Monitoring and alerts: uptime alerts, error tracking, access analytics. See <a href="../monitoring/">Monitoring &amp; analytics</a>.</li>
+<li>Arrange scheduled tasks and queues.</li>
+</ol>
+<h3>Monetization &amp; growth</h3>
+<ol>
+<li>Payment method: fees, tax handling, payout path. See <a href="../payments/">Payments</a>.</li>
+<li>Pre-launch checks: backups, billing alerts, status page.</li>
+</ol>
+<h2 id="stacks">$0 stacks: 3 combinations</h2>
+<p>The 3 combinations below use only entries from the section pages; figures and rules are on the respective detail pages, and terms follow the vendor official pages.</p>
+<h3>Stack 1: Vercel + Supabase + R2</h3>
+<ul>
+<li><b>Vercel Hobby</b>: 100 GB Fast Data Transfer, 1M CDN requests, 1M function invocations, 4 CPU hours; no top-up purchases once the limit is reached; personal or non-commercial use only.</li>
+<li><b>Supabase</b>: 500 MB database, 50,000 MAU, 5 GB egress, 1 GB file storage; free projects pause after 1 week inactive; max 2 active projects.</li>
+<li><b>Cloudflare R2</b>: 10 GB-month storage per month, 1M Class A operations, 10M Class B operations, free egress.</li>
+<li>Optional additions: <b>Resend</b> (3,000 emails/month, 100/day), <b>Clerk</b> (50,000 MRUs per application).</li>
+</ul>
+<h3>Stack 2: Cloudflare full stack</h3>
+<ul>
+<li><b>Cloudflare Workers</b>: 100,000 requests/day, 10 ms CPU per invocation; bundled free amounts include KV 100,000 reads/day, D1 5M row reads/day, Queues 10,000 ops/day.</li>
+<li><b>Cloudflare Pages</b>: 500 builds/month, 100 custom domains/project, 20,000 files/site.</li>
+<li><b>Cloudflare R2</b>: 10 GB-month storage per month, 1M Class A operations, 10M Class B operations, free egress.</li>
+<li><b>Cloudflare Free plan</b>: $0, including DNS, CDN, Universal SSL.</li>
+</ul>
+<h3>Stack 3: VPS self-hosting</h3>
+<ul>
+<li><b>Oracle Always Free</b>: 2 OCPU / 12 GB RAM, 200 GB block storage, 10 TB outbound traffic/month; card and reclamation rules: see <a href="../vps/">Free VPS</a>.</li>
+<li>Domains: registrars on the <a href="../domain/">Domains &amp; DNS</a> page, with first-year and renewal prices shown separately.</li>
+<li><b>Let’s Encrypt</b>: free DV certificates, issued through the ACME process.</li>
+<li><b>UptimeRobot</b>: 50 monitors, 5-minute check interval, basic status page, no credit card.</li>
+<li><b>Managed free tiers vs VPS self-hosting</b>: a comparison of the two routes; terms per the vendor official pages.</li>
+</ul>
+<div class="note"><b>Note:</b> Card requirements, overage behavior, and pause rules differ by entry; check each detail page before combining. Terms can change at any time — check the official page.</div>
+<h2 id="guide-cards">Method guides: key points</h2>
+<p>Three stages have no section page. The key points for each follow.</p>
+<h3 id="guide-idea-validation">Stage 1 · Idea validation: key points</h3>
+<ul>
+<li>Validation means confirming, before writing code, that someone will spend time, money, or contact details on the idea.</li>
+<li>Three low-cost methods: a landing page with a waitlist, manual concierge service, and interviews about past behavior.</li>
+<li>Signals that count are concrete actions: leaving contact details, paying a deposit or prepaying, asking follow-up questions, already paying for an alternative.</li>
+<li>Common mistakes: asking “would you use it”, building the full product before validating, treating likes as demand, asking only people nearby.</li>
+<li>After validation: set the first version to one core feature solving the confirmed problem.</li>
+</ul>
+<h3 id="guide-peripheral">Stage 12 · Peripheral capabilities: key points</h3>
+<ul>
+<li>Peripheral capabilities are the supporting capabilities beyond the main feature: scheduled tasks, message queues, search, and caching.</li>
+<li>Main-stack built-ins come first: capabilities built into the deploy platform, database, or monitoring service, before adding a separate service.</li>
+<li>Scheduled tasks are fixed-time automated work: nightly cleanup, hourly data pulls, weekly summaries. Failures need alerts.</li>
+<li>Queues run slow work in the background: sending email, generating images, processing uploads — users do not wait for the result.</li>
+<li>Search and caching: small content volumes work with database fuzzy queries; caching needs an expiry time, or stale data keeps serving as new.</li>
+</ul>
+<h3 id="guide-launch">Stage 14 · Launch &amp; operations: key points</h3>
+<ul>
+<li>Pre-launch checks: uptime alerts, error tracking, access analytics, and a status page.</li>
+<li>Backups: keep backup files off the same machine as the database, and rehearse a restore — whether a backup restores is only known after a rehearsal.</li>
+<li>Billing and usage: overage behavior differs by entry — service stops or charges start; usage alerts before the limit avoid sudden stops or surprise bills.</li>
+<li>Domains, email, and certificates: verification and notification email set up with domain verification; renewal prices differ from first-year prices; free certificates have renewal rate limits.</li>
+<li>After launch: a change log entry per release, a feedback channel, weekly monitoring review, regular billing review with unused services shut off. Acquisition channels where target users gather; privacy policy, user agreement, and filing requirements depend on the regions served — information only, not legal advice.</li>
+</ul>
+
+<p><b>Disclaimer:</b> Stage figures come from the linked section pages, each verified against vendor official pages. Free tiers, trials, and prices can change or end at any time; check the official page before claiming. No invite links.</p>
+<div class="related"><h2>Related pages</h2>
+<ul>
+<li><a href="../">Free credits overview</a></li><li><a href="../code/">Code hosting</a></li><li><a href="../database/">Databases</a></li><li><a href="../auth/">Authentication</a></li><li><a href="../deploy/">Deploy &amp; hosting</a></li><li><a href="../hosting/">Web hosting</a></li><li><a href="../vps/">Free VPS</a></li><li><a href="../wool/">VPS deals</a></li><li><a href="../cheap/">Cheap VPS</a></li><li><a href="../domain/">Domains &amp; DNS</a></li><li><a href="../storage/">Object storage</a></li><li><a href="../email/">Email</a></li><li><a href="../monitoring/">Monitoring &amp; analytics</a></li><li><a href="../payments/">Payments</a></li><li><a href="../faq/">FAQ</a></li>
+</ul></div>
+
+</article>
+
+</div></main>
+<footer><div class="wrap"><p><a href="../">Home</a> · <a href="../vps/">Free VPS</a> · <a href="../wool/">VPS Deals</a> · <a href="../cheap/">Cheap VPS</a> · <a href="../deploy/">Deploy &amp; Hosting</a> · <a href="../database/">Databases</a> · <a href="../domain/">Domains &amp; DNS</a> · <a href="../code/">Code Hosting</a> · <a href="../auth/">Auth</a> · <a href="../storage/">Storage</a> · <a href="../email/">Email</a> · <a href="../monitoring/">Monitoring</a> · <a href="../payments/">Payments</a> · <a href="../hosting/">Web Hosting</a> · <a href="./">Workflow</a> · <a href="../offers/">Offer details</a> · <a href="../compare/">Comparisons</a> · <a href="../faq/">FAQ</a> · <a href="../../workflow/">中文</a></p><p>Stage figures come from the linked section pages, each verified against vendor official pages. Free tiers, trials, and prices can change or end at any time; check the official page before claiming. No invite links.</p></div></footer>
+</body>
+</html>
