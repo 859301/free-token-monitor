@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QStash Free 详解：每天 1,000 条消息、10 个排程、重试计费说法冲突</title>
+<meta name="description" content="QStash Free 免费档：每天 1,000 条消息、50 GB 带宽、消息最大 1 MB、10 个活跃排程、10 个队列、延迟最长 7 天、HTTP 响应最长 15 分钟；默认重试 3 次；定价页内重试计费说法冲突，并列呈现。核实于 2026-11-14。">
+<link rel="canonical" href="https://tokens.yangtokent.com/schedule/offers/qstash/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/schedule/offers/qstash/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/schedule/offers/qstash/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/schedule/offers/qstash/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "QStash Free 详解：每天 1,000 条消息、10 个排程、重试计费说法冲突",
+  "description": "QStash Free 免费档：每天 1,000 条消息、50 GB 带宽、消息最大 1 MB、10 个活跃排程、10 个队列、延迟最长 7 天、HTTP 响应最长 15 分钟；默认重试 3 次；定价页内重试计费说法冲突，并列呈现。核实于 2026-11-14。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-14",
+  "dateModified": "2026-11-14",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/schedule/offers/qstash/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "每天 1,000 条消息够每分钟排程用吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不够。每分钟触发的排程一天产生 1,440 次初始投递，已超过每天 1,000 条的免费档日限额（算术，未计重试）。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "重试计不计费？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "定价页内有两种说法：页首写只按消息收费、重试免费；同一页 FAQ 写每次投递尝试计 1 条消息、每次重试另计 1 条，并举例 1 次失败加 1 次重试成功计 2 条。定价页未说明两种说法哪一种为准。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "消息能延迟多久，失败后去哪里？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "延迟最长 7 天。默认重试 3 次后仍失败的消息进死信队列（DLQ），DLQ 保留 3 天。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">定时任务与队列</a><a href="../../offers/" aria-current="page">详情</a><a href="../../compare/">对比</a><a href="../../guides/">指南</a><a href="../../faq/">问答</a></div></nav>
+<main><div class="wrap">
+<p class="crumb"><a href="../../../">首页</a> › <a href="../../">定时任务与队列</a> › <a href="../">详情</a> › QStash Free 详解</p><h1>QStash Free 详解</h1><p class="meta">发布于 2026-11-14 · 更新于 2026-11-14 · 来源：<a href="https://upstash.com/pricing/qstash">Upstash 官网 QStash 定价页</a> · 核实于 2026-11-14</p><p><span class="tag">免费档</span><span class="tag">队列</span><span class="tag">每天 1,000 条消息</span><span class="tag">10 个排程</span><span class="tag">重试计费说法冲突</span></p><div class="answer"><p>QStash 免费档每天提供 1,000 条消息，消息最大 1 MB，延迟最长 7 天，HTTP 响应最长 15 分钟，最多 10 个活跃排程与 10 个队列。重试计费在定价页内有两种说法：页首写重试免费，FAQ 写每次投递尝试计 1 条、重试另计，两种说法并列于下。核实于 2026-11-14，领取前请以厂商官方页为准。</p></div><div class="toc"><strong>本页内容</strong><ul><li><a href="#spec">规格速览</a></li><li><a href="#s0">重试计费的两种说法</a></li><li><a href="#s1">重试与退避</a></li><li><a href="#s2">排程与队列</a></li><li><a href="#overage">超限规则与付费档</a></li><li><a href="#unconfirmed">未确认的信息</a></li><li><a href="#official">官方链接</a></li><li><a href="#risks">注意事项</a></li><li><a href="#faq">常见问题</a></li></ul></div><h2 id="spec">规格速览</h2><div class="tablewrap"><table class="fact"><tbody><tr><th>免费内容</th><td>每天 1,000 条消息、50 GB 带宽、消息最大 1 MB、最多 10 个活跃排程、10 个队列、延迟最长 7 天、HTTP 响应最长 15 分钟、DLQ 保留 3 天、日志保留 3 天</td></tr><tr><th>提供方</th><td>Upstash</td></tr><tr><th>计划名称</th><td>Free</td></tr><tr><th>时长</th><td>免费档（官网已读页面未明示永久，以官方页面为准）</td></tr><tr><th>绑卡与验证</th><td>官网已读页面未说明绑卡要求，以官方页面为准</td></tr><tr><th>排程分辨率</th><td>最高 1 分钟；支持时区</td></tr><tr><th>队列并行度</th><td>队列并行度 2；最大并行度 10</td></tr><tr><th>URL 组</th><td>1 个组，每组最多 100 个端点</td></tr><tr><th>重试</th><td>默认重试 3 次；退避从 12 秒起；单次延迟上限 1 天</td></tr><tr><th>超限规则</th><td>日消息量与月带宽为软限制，只在持续超额时适用；短暂峰值不会立即拦截；持续超额先联系升级，无法联系且长期超额时 API 可能返回 429</td></tr><tr><th>付费档</th><td>Pay as You Go $1/100K 消息，带宽超 50 GB/月后 $0.05/GB；Fixed 1M $180/月；Fixed 10M $420/月</td></tr><tr><th>核实日期</th><td>2026-11-14</td></tr><tr><th>来源</th><td><a href="https://upstash.com/pricing/qstash">Upstash 官网 QStash 定价页</a></td></tr></tbody></table></div><h2 id="s0">重试计费的两种说法</h2><p>QStash 定价页内关于重试是否计费有两种说法，并列如下：</p><ul><li>定价页机器可读版顶部写：只按消息收费，重试免费（原文：You are only charged for messages — retries are free.）。</li><li>同一页 FAQ 写：每次投递尝试计 1 条消息，初始投递计 1 条，每次重试另计 1 条，并举例 1 次失败加 1 次重试成功计 2 条。</li></ul><p>按 FAQ 的口径估算额度时，重试会额外占用消息数；按页首的说法则不会。定价页未说明两种说法哪一种为准。</p><h2 id="s1">重试与退避</h2><p>投递失败时默认重试 3 次，非 2XX 响应会触发重试；每次重试之间的延迟随次数拉长，单次延迟上限 1 天；跟随重定向最多 10 次。</p><div class="tablewrap"><table><thead><tr><th>重试次数</th><th>延迟</th></tr></thead><tbody><tr><td>1</td><td>12 秒</td></tr><tr><td>2</td><td>2 分 28 秒</td></tr><tr><td>3</td><td>30 分 8 秒（原文）</td></tr><tr><td>4</td><td>6 小时 7 分 6 秒</td></tr><tr><td>5</td><td>24 小时</td></tr><tr><td>6</td><td>24 小时</td></tr></tbody></table></div><p>端点可以返回 489 并带 Upstash-NonRetryable-Error: true 请求头，禁用重试并把消息送入死信队列（DLQ）。</p><h2 id="s2">排程与队列</h2><p>排程分辨率最高 1 分钟，支持时区（如 CRON_TZ=America/New_York）。免费档最多 10 个活跃排程、10 个队列，队列并行度 2、最大并行度 10，延迟最长 7 天，HTTP 响应时长最长 15 分钟，DLQ 保留 3 天，日志保留 3 天。</p><p>每分钟触发的排程一天产生 1,440 次初始投递，已超过每天 1,000 条的免费档日限额（算术，未计重试）。</p><h2 id="overage">超限规则与付费档</h2><p>日消息量与月带宽为软限制，只在持续超额时适用；短暂峰值不会立即拦截。持续超额时先联系升级；无法联系且长期超额时，API 可能返回 429。付费档：Pay as You Go $1/100K 消息，带宽超 50 GB/月后 $0.05/GB；Fixed 1M $180/月；Fixed 10M $420/月。</p><h2 id="unconfirmed">未确认的信息</h2><ul><li>绑卡要求：官网已读页面未说明。</li><li>是否永久：官网已读页面未明示。</li></ul><h2 id="official">官方链接</h2><p><a class="btn" href="https://upstash.com/pricing/qstash">去官网查看</a></p><h2 id="risks">注意事项</h2><ul><li>重试计费说法冲突：定价页顶部写重试免费，同一页 FAQ 写每次投递尝试计 1 条、重试另计</li><li>默认重试 3 次，退避从 12 秒起、单次延迟上限 1 天</li><li>每分钟触发的排程一天产生 1,440 次初始投递，已超过每天 1,000 条的免费档日限额（算术，未计重试）</li><li>HTTP 响应超过 15 分钟会被中止</li><li>免费档无 SLA、无静态加密</li></ul><h2 id="faq">常见问题</h2><details><summary>每天 1,000 条消息够每分钟排程用吗？</summary><p>不够。每分钟触发的排程一天产生 1,440 次初始投递，已超过每天 1,000 条的免费档日限额（算术，未计重试）。</p></details><details><summary>重试计不计费？</summary><p>定价页内有两种说法：页首写只按消息收费、重试免费；同一页 FAQ 写每次投递尝试计 1 条消息、每次重试另计 1 条，并举例 1 次失败加 1 次重试成功计 2 条。定价页未说明两种说法哪一种为准。</p></details><details><summary>消息能延迟多久，失败后去哪里？</summary><p>延迟最长 7 天。默认重试 3 次后仍失败的消息进死信队列（DLQ），DLQ 保留 3 天。</p></details><div class="note"><p>以上信息核实于 2026-11-14，来源为厂商官方页面。免费额度与条款可能调整或结束，领取前请以厂商官方页为准。</p></div><div class="related"><h3>相关页面</h3><p><a href="../upstash-workflow/">Upstash Workflow Free 免费档</a></p><p><a href="../../compare/queue-services/">队列与工作流服务对照</a></p><p><a href="../../guides/queue-retries-and-delays/">队列重试与延迟入门</a></p><p><a href="../../../guides/peripheral-capabilities/">定时任务、队列与搜索：周边能力怎么安排</a></p></div>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">定时任务与队列</a> · <a href="../../offers/">详情</a> · <a href="../../compare/">对比</a> · <a href="../../guides/">指南</a> · <a href="../../faq/">问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
