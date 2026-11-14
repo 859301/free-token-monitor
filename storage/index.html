@@ -10,8 +10,8 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>对象存储：R2 免费层、B2 按量付费与数据库附带存储说明</title>
-<meta name="description" content="对象存储：Cloudflare R2 每月免费层（10 GB-month、1M/10M 操作、出站免费）、Backblaze B2 按量付费（$6.95/TB/30 天、出站 3 倍规则），以及 Supabase Storage 与 Firebase Storage 的数据库板块说明。核实于 2026-11-13。">
+<title>对象存储：R2、Tigris、Google Cloud Storage 免费层，UploadThing 免费计划，B2 按量付费与数据库附带存储说明</title>
+<meta name="description" content="对象存储：Cloudflare R2、Tigris、Google Cloud Storage 每月免费层，UploadThing 2GB App 免费计划，Backblaze B2 按量付费（$6.95/TB/30 天、出站 3 倍规则），以及 Supabase Storage 与 Firebase Storage 的数据库板块说明。R2 与 B2 核实于 2026-11-13，其余核实于 2026-11-14。">
 <link rel="canonical" href="https://tokens.yangtokent.com/storage/">
 <link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/storage/">
 <link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/storage/">
@@ -75,11 +75,11 @@ footer a { color:var(--accent); }
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "对象存储：R2 免费层、B2 按量付费与数据库附带存储说明",
-  "description": "对象存储：Cloudflare R2 每月免费层（10 GB-month、1M/10M 操作、出站免费）、Backblaze B2 按量付费（$6.95/TB/30 天、出站 3 倍规则），以及 Supabase Storage 与 Firebase Storage 的数据库板块说明。核实于 2026-11-13。",
+  "headline": "对象存储：R2、Tigris、Google Cloud Storage 免费层，UploadThing 免费计划，B2 按量付费与数据库附带存储说明",
+  "description": "对象存储：Cloudflare R2、Tigris、Google Cloud Storage 每月免费层，UploadThing 2GB App 免费计划，Backblaze B2 按量付费（$6.95/TB/30 天、出站 3 倍规则），以及 Supabase Storage 与 Firebase Storage 的数据库板块说明。R2 与 B2 核实于 2026-11-13，其余核实于 2026-11-14。",
   "inLanguage": "zh-CN",
   "datePublished": "2026-11-13",
-  "dateModified": "2026-11-13",
+  "dateModified": "2026-11-14",
   "mainEntityOfPage": "https://tokens.yangtokent.com/storage/",
   "author": {
     "@type": "Organization",
@@ -100,17 +100,20 @@ footer a { color:var(--accent); }
 <main><div class="wrap">
 <article>
 <p class="crumb"><a href="../">首页</a> / 对象存储</p>
-<h1>对象存储：1 个免费层、1 个按量付费与 2 个数据库附带存储说明</h1>
-<p class="meta">本页更新于 2026-11-13 · 2 条详情（核实于 2026-11-13）· 另有 2 条数据库附带存储说明</p>
-<div class="answer"><p>1 个免费层：Cloudflare R2（每月 10 GB-month 存储、1M Class A 操作、10M Class B 操作，出站免费）。1 个按量付费：Backblaze B2（存储 $6.95/TB/30 天，出站每月平均存储量 3 倍以内免费，超出 $0.01/GB，没有免费层）。2 个数据库附带存储：Supabase Storage（1 GB 文件存储，随 Supabase 套餐）与 Firebase Storage（Spark 计划列为“Not applicable”，免费额度在 Blaze 列），详情在数据库板块。</p></div>
-<p>对象存储用来存放用户上传的图片、文件等内容。出站（egress）费用是各家的主要区别：R2 所有存储类出站不收费，B2 按 3 倍规则计费，见<a href="compare/egress-rules/">出站规则对照</a>。数据库附带的存储见第三组，详情在数据库板块。</p>
-<p><button type="button" data-filter="all" aria-pressed="true" style="padding:8px 14px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;font-size:14px;margin:0 6px 6px 0">全部（4 行）</button><button type="button" data-filter="free" aria-pressed="false" style="padding:8px 14px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;font-size:14px;margin:0 6px 6px 0">免费层</button><button type="button" data-filter="payg" aria-pressed="false" style="padding:8px 14px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;font-size:14px;margin:0 6px 6px 0">按量付费</button><button type="button" data-filter="included" aria-pressed="false" style="padding:8px 14px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;font-size:14px;margin:0 6px 6px 0">数据库附带存储</button></p>
-<p id="filter-note" class="meta">显示全部 4 行：1 个免费层、1 个按量付费、2 个数据库附带存储说明。</p>
+<h1>对象存储：4 个免费层/免费计划、1 个按量付费与 2 个数据库附带存储说明</h1>
+<p class="meta">本页更新于 2026-11-14 · 5 条详情（R2 与 B2 核实于 2026-11-13，其余核实于 2026-11-14）· 另有 2 条数据库附带存储说明</p>
+<div class="answer"><p>4 个免费层/免费计划：Cloudflare R2（每月 10 GB-month 存储、1M Class A 操作、10M Class B 操作，出站免费）、Tigris（每月 5 GB 标准存储、10,000/100,000 次请求，出站免费，开始无需绑卡）、Google Cloud Storage（每月 5 GB-months 存储、5,000/50,000 次操作、100 GB 出站，仅三个美国区域）、UploadThing 2GB App 计划（$0/月，文件上传服务）。1 个按量付费：Backblaze B2（存储 $6.95/TB/30 天，出站每月平均存储量 3 倍以内免费，超出 $0.01/GB，没有免费层）。2 个数据库附带存储：Supabase Storage（1 GB 文件存储，随 Supabase 套餐）与 Firebase Storage（Spark 计划列为“Not applicable”，免费额度在 Blaze 列），详情在数据库板块。</p></div>
+<p>对象存储用来存放用户上传的图片、文件等内容。出站（egress）费用是各家的主要区别：R2 与 Tigris 全部存储类出站免费，Google Cloud Storage 每月 100 GB 自北美出站免费，B2 按 3 倍规则计费，见<a href="compare/free-tier-egress/">免费层出站规则对照</a>。数据库附带的存储见第三组，详情在数据库板块。</p>
+<p><button type="button" data-filter="all" aria-pressed="true" style="padding:8px 14px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;font-size:14px;margin:0 6px 6px 0">全部（7 行）</button><button type="button" data-filter="free" aria-pressed="false" style="padding:8px 14px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;font-size:14px;margin:0 6px 6px 0">免费层</button><button type="button" data-filter="payg" aria-pressed="false" style="padding:8px 14px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;font-size:14px;margin:0 6px 6px 0">按量付费</button><button type="button" data-filter="included" aria-pressed="false" style="padding:8px 14px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;cursor:pointer;font-size:14px;margin:0 6px 6px 0">数据库附带存储</button></p>
+<p id="filter-note" class="meta">显示全部 7 行：4 个免费层/免费计划、1 个按量付费、2 个数据库附带存储说明。</p>
 <section class="storage-group">
-<h2>第一组：免费层（1 条）</h2>
+<h2>第一组：免费层与免费计划（4 条）</h2>
 <p>免费内容按月计量，超出后的价格与出站规则按官方定价页列出。</p>
 <div class="tablewrap"><table><thead><tr><th>服务</th><th>免费内容（每月）</th><th>免费额度之外的价格</th><th>出站规则</th><th>核实</th></tr></thead><tbody>
 <tr data-tags="free"><td><a href="offers/cloudflare-r2/">Cloudflare R2</a><br><span class="meta">Cloudflare</span></td><td>10 GB-month 存储、1M Class A 操作、10M Class B 操作</td><td>标准存储 $0.015/GB-month；Class A $4.50/M 请求；Class B $0.36/M 请求</td><td>所有存储类均不收费</td><td>2026-11-13 · <a href="https://developers.cloudflare.com/r2/pricing/" target="_blank" rel="noopener noreferrer">官方页</a></td></tr>
+<tr data-tags="free"><td><a href="offers/tigris/">Tigris</a><br><span class="meta">Tigris</span></td><td>5 GB 标准存储、10,000 次 PUT/COPY/POST/LIST 请求、100,000 次 GET/SELECT 及其他请求</td><td>标准存储 $0.02/GB/月；Class A $0.005/1,000 次请求；Class B $0.0005/1,000 次请求</td><td>全部四个存储类均免费</td><td>2026-11-14 · <a href="https://www.tigrisdata.com/pricing/" target="_blank" rel="noopener noreferrer">官方页</a></td></tr>
+<tr data-tags="free"><td><a href="offers/google-cloud-storage/">Google Cloud Storage</a><br><span class="meta">Google Cloud</span></td><td>5 GB-months 区域存储（仅美国区域）、5,000 次 Class A 操作、50,000 次 Class B 操作、100 GB 自北美出站</td><td>标准存储起价 $0.02/GiB/月；操作费起价 $0.0004/1,000 次操作</td><td>每月 100 GB 自北美出站免费（不含中国与澳大利亚目的地）；超出后通用数据传输起价 $0.08/GiB</td><td>2026-11-14 · <a href="https://docs.cloud.google.com/free/docs/free-cloud-features" target="_blank" rel="noopener noreferrer">官方页</a></td></tr>
+<tr data-tags="free"><td><a href="offers/uploadthing/">UploadThing</a><br><span class="meta">UploadThing</span></td><td>2GB App 计划 $0/月；功能细节以官方页面为准</td><td>100GB App $10/月；Usage Based $25/月起、含 250GB 存储、超出 $0.08/GB</td><td>以官方页面为准</td><td>2026-11-14 · <a href="https://uploadthing.com/#pricing" target="_blank" rel="noopener noreferrer">官方页</a></td></tr>
 </tbody></table></div>
 </section>
 <section class="storage-group">
@@ -132,6 +135,7 @@ footer a { color:var(--accent); }
 <p>以下服务不在上面的列表里，原因按事实列出。</p>
 <ul>
 <li><strong>“Backblaze B2 10 GB 免费”的说法：</strong>官方定价页两次抓取均未出现该表述，B2 在第二组按按量付费列出。</li>
+<li><strong>Storj：</strong>官方定价页写明 30 天免费试用（25 GB 免费存储 30 天），不是按月重置的免费档；试用结束按标准价格计费（存储 $7/TB、出口 $7/TB），每月 $5 最低费用不是使用额度。</li>
 <li><strong>VPS 上自建文件存储：</strong>服务器形态，见<a href="../vps/">免费 VPS 列表</a>。</li>
 <li><strong>免费虚拟主机附带的文件空间：</strong>PHP + MySQL 形态，见<a href="../hosting/">免费虚拟主机列表</a>。</li>
 <li><strong>部署与托管平台：</strong>静态托管与容器托管，见<a href="../deploy/">部署与托管列表</a>。</li>
@@ -140,16 +144,16 @@ footer a { color:var(--accent); }
 <ul>
 <li><strong>2026-10-30：</strong>Cloudflare R2 定价页更新（页面注）。</li>
 </ul>
-<div class="related"><h2>相关页面</h2><ul><li><a href="offers/">存储详情总览（R2 免费层、B2 按量付费说明）</a></li><li><a href="compare/r2-vs-b2/">Cloudflare R2 vs Backblaze B2</a></li><li><a href="compare/all-storage-table/">对象存储总表</a></li><li><a href="guides/">存储指南：选存储、R2 存储类别、存储与 CDN</a></li><li><a href="faq/">对象存储常见问题（14 问）</a></li><li><a href="../database/">数据库列表</a></li><li><a href="../">返回免费 Token 总览</a></li></ul></div>
-<p class="meta">机器可读数据：<a href="../data/storage.json">data/storage.json</a>（2 条，含免费内容、出站规则、价格、核实日期）。</p>
+<div class="related"><h2>相关页面</h2><ul><li><a href="offers/">存储详情总览（5 条详情）</a></li><li><a href="compare/r2-vs-b2/">Cloudflare R2 vs Backblaze B2</a></li><li><a href="compare/r2-vs-tigris/">Cloudflare R2 vs Tigris</a></li><li><a href="compare/free-tier-egress/">免费层出站规则对照</a></li><li><a href="compare/all-storage-table/">对象存储总表</a></li><li><a href="guides/">存储指南：选存储、R2 存储类别、存储与 CDN、免费档与试用、操作次数计费</a></li><li><a href="faq/">对象存储常见问题（20 问）</a></li><li><a href="../database/">数据库列表</a></li><li><a href="../">返回免费 Token 总览</a></li></ul></div>
+<p class="meta">机器可读数据：<a href="../data/storage.json">data/storage.json</a>（5 条，含免费内容、出站规则、价格、核实日期）。</p>
 <script>
 (function () {
   var chips = document.querySelectorAll('[data-filter]');
   var groups = document.querySelectorAll('.storage-group');
   var note = document.getElementById('filter-note');
   var notes = {
-    'all': '显示全部 4 行：1 个免费层、1 个按量付费、2 个数据库附带存储说明。',
-    'free': '只显示免费层的 1 行：Cloudflare R2。',
+    'all': '显示全部 7 行：4 个免费层/免费计划、1 个按量付费、2 个数据库附带存储说明。',
+    'free': '只显示免费层与免费计划的 4 行：Cloudflare R2、Tigris、Google Cloud Storage、UploadThing。',
     'payg': '只显示按量付费的 1 行：Backblaze B2。',
     'included': '只显示数据库附带存储的 2 行：Supabase Storage、Firebase Storage。详情在数据库板块。'
   };
