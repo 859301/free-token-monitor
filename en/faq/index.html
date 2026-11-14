@@ -10,8 +10,8 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FAQ: 41 questions about free AI APIs, VPS, deploy, databases &amp; domains</title>
-<meta name="description" content="41 questions in English users’ own wording: Are free LLM APIs really free? Do they need a credit card? What happens at the limit? Can Vercel Hobby be used commercially? Do free instances sleep? Which free database? Cheapest .com registrar? Answer-first, with sources and verification dates.">
+<title>FAQ: 80 questions about free AI APIs, VPS, hosting, databases, domains, email, monitoring &amp; payments</title>
+<meta name="description" content="80 questions in English users’ own wording: Are free LLM APIs really free? Do they need a credit card? What happens at the limit? Can Vercel Hobby be used commercially? Do free instances sleep? Which free database? Cheapest .com registrar? Does SendGrid still have a free plan? Does the UptimeRobot free tier include SSL monitoring? Does Backblaze B2 have a free tier? Which free web hosts include free SSL? Answer-first, with sources and verification dates.">
 <link rel="canonical" href="https://tokens.yangtokent.com/en/faq/">
 <link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/faq/">
 <link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/faq/">
@@ -19,8 +19,8 @@
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "FAQ: 41 questions about free AI APIs, VPS, deploy, databases, and domains",
-  "description": "41 questions in English users’ own wording: Are free LLM APIs really free? Do they need a credit card? What happens at the limit? Can Vercel Hobby be used commercially? Do free instances sleep? Which free database? Cheapest .com registrar? Answer-first, with sources and verification dates.",
+  "headline": "FAQ: 80 questions about free AI APIs, VPS, hosting, databases, domains, email, monitoring and payments",
+  "description": "80 questions in English users’ own wording: Are free LLM APIs really free? Do they need a credit card? What happens at the limit? Can Vercel Hobby be used commercially? Do free instances sleep? Which free database? Cheapest .com registrar? Does SendGrid still have a free plan? Does the UptimeRobot free tier include SSL monitoring? Does Backblaze B2 have a free tier? Which free web hosts include free SSL? Answer-first, with sources and verification dates.",
   "inLanguage": "en",
   "datePublished": "2026-11-13",
   "dateModified": "2026-11-14",
@@ -368,6 +368,318 @@
         "@type": "Answer",
         "text": "Freenom free domains are dead: new registrations stopped in 2023, exit from the domain business in 2024, paid sales resumed 2026-07-23. Alternatives: is-a.dev free subdomains, low-price .com domains, and student-pack domains.Source: vendor official pages, verified 2026-11-13; Freenom dates per second-hand reports."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Does SendGrid still have a free plan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No permanent free plan — only a 60-day free trial: 100 emails/day, no credit card required, no commitment. The free plan wording on the page refers to the same 60-day trial: the plan header reads \"Free Trial $0/mo for 60 days\". The old permanent free plan was retired in March–May 2025 (multiple second-hand sources agree). See SendGrid trial.Source: Twilio official SendGrid pricing page and official pricing PDF; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are free email allowances metered daily or monthly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both metering styles exist: Mailgun 100 emails/day and Brevo 300 emails/day are metered daily; Postmark 100 emails/month is metered monthly; Resend has both a 100 emails/day cap and a 3,000 emails/month cap; the SendGrid trial 100 emails/day is metered daily. Brevo resets daily with no rollover; Postmark unused allowance does not roll over. Full comparison: Daily vs monthly limits.Source: vendor official pricing pages; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Mailgun free plan permanent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Permanence is not stated on the official site. The pricing page wording is an invitation to try the service, the FAQ states the free plan is for exploring the platform with a daily sending limit, and the page contains no \"forever\" wording. Free plan $0/month: 100 emails/day, 1 custom sending domain, 1-day log retention. See Mailgun free plan.Source: Mailgun official pricing page; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens after exceeding the email limit? Is there an automatic charge?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It differs per entry: the Postmark free plan does not allow overages; Resend pay-as-you-go is only available on paid plans, and without it an overage triggers a notification with an option to upgrade; SendGrid overage may be charged (\"overage charges may apply\"); Mailgun and Brevo overage behavior is not stated on the official pages read — check the official page. Full comparison: All email entries compared.Source: vendor official pricing pages; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does SendGrid show two different overage rates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The official pricing PDF and the pricing web page show different overage rates: in the PDF, Essentials is $0.00133/email ($19.95 tier) and $0.00088/email ($34.95 tier), and the five Pro tiers run $0.00110 to $0.00047/email; the web page shows Essentials $0.00075/email and Pro $0.000575/email. Both values are presented side by side; check the official page. See SendGrid trial.Source: Twilio official SendGrid pricing page and official pricing PDF; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the UptimeRobot free tier include SSL monitoring?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The same official pricing page states it two ways: the Free plan card shows “SSL & Domain exp. monitor”; the comparison-table SSL monitoring row marks Free as not included, the Domain exp. monitoring row marks Free as not included, and the HTTPS monitoring row states “SSL monitoring is included only in paid plans.” Both wordings stand side by side — check the official page. See UptimeRobot free tier.Source: UptimeRobot official pricing page; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are Sentry’s 5k errors, 5M spans, and 50 replays monthly allowances?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The three comparison-table rows state no period. The only per month wording on the page is the new-user promotional wording: 5,000 free replays per month for your first 3 months. Promotional wording is not a plan figure. See Sentry Developer free tier.Source: Sentry official pricing page; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many websites and events does Umami Hobby include? What happens on overage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "3 websites, 100,000 events, 6-month retention. Paid-plan overage is billed per event, data collection is not interrupted, and no data is lost; the Hobby Additional events cell is empty, with no per-event price, and Hobby overage behavior is not stated on the official pages read. See Umami Hobby free tier.Source: Umami official pricing page; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does PostHog’s free allowance reset monthly? Does it need a credit card?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Monthly reset, with the same allowance whether or not a card is on file; official wording: “No credit card, not a trial.” The first 1M events are free every month. Usage stops at the free tier limits, with no surprise billing. See PostHog free tier.Source: PostHog official pricing page; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Plausible have a permanent free version?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No permanent free plan on the cloud, only a 30-day free trial with no credit card; continued use after the trial requires prepayment. Community Edition is free to self-host (AGPLv3). See Plausible trial.Source: Plausible official docs and terms of service; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Microsoft Clarity really free forever? Does it have traffic limits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Official FAQ wording: Clarity is a free service forever. No traffic limits, no limit on the number of websites per account, no sampling. See Microsoft Clarity.Source: Microsoft Learn official FAQ; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can an individual in mainland China open a Stripe account directly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Mainland China is not on Stripe’s official supported country/region list (50 entries), and Stripe does not support direct signup for mainland China entities. Hong Kong is on the list. Atlas costs $500 one-time and can register a US company from anywhere. See Stripe fees.Source: Stripe official pricing page and official supported-country page; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Stripe Managed Payments fee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "3.5% per successful transaction, plus Payments fees. It includes indirect tax compliance in 75+ countries, fraud prevention, dispute management, invoicing, and customer support. See Stripe fees.Source: Stripe official pricing page; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What fee applies after migrating to Stripe Managed Payments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 2026 Update blog states no fee rate. Post-migration fees follow the Stripe official pricing page; the Stripe pricing page states Managed Payments is 3.5% + Payments fees. See Lemon Squeezy fees.Source: Lemon Squeezy 2026 Update official blog and Stripe official pricing page; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Polar Early Member?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Organizations created before 2026-05-27 permanently keep the 4% + 40¢ + subscription fee +0.5% rate. Upgrading to a paid plan permanently loses that rate; dropping back to Starter uses the new 5% + 50¢ rate. See Polar fees.Source: Polar official pricing resource page; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do disputes cost a fee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stripe standard processing charges a $15 dispute fee per dispute. Polar charges $15 per dispute, regardless of outcome. Paddle and Lemon Squeezy dispute fees are not stated on the official pages read — check the official page. Full comparison: Merchant of Record fees compared.Source: vendor official pricing pages; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many users does the Clerk free tier cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "50,000 MRUs per app and 100 MROs per app, with unlimited apps. MRU definition: a user counts as retained when returning 24 hours after signing up. See Clerk Hobby free tier.Source: Clerk official pricing page; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many users does the Auth0 free tier cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Up to 25,000 MAU, officially worded External Active Users. The pricing page FAQ confirms the 25,000 threshold. See Auth0 Free.Source: Auth0 official pricing page; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is MRU counted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A user counts as retained when returning 24 hours after signing up. Official wording: “A user is counted as retained when they return 24+ hours after signing up.” MRO: an organization has at least 2 members, with at least 1 being a retained user that month; Clerk Hobby allows 100 MROs per app. See Clerk vs Auth0.Source: Clerk official pricing page; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do Clerk and Auth0 free tiers need a credit card?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Neither needs a card for sign-up: Clerk states No credit card required on the official site; Auth0 sign-up needs no card. The difference is custom domains: Auth0’s 1 custom domain requires card verification; card requirements for Clerk custom domains are not stated on the official pages read. See Clerk Hobby free tier and Auth0 Free.Source: Clerk and Auth0 official pricing pages; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens past 50,000 MRU or 25,000 MAU?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Past 50,000 MRU, upgrading to Pro is required; past 100 MRO, upgrading to the B2B add-on is required; the FAQ states a 1-month grace period. Pro $20/month (annual billing), including 50,000 MRUs, $0.02 each beyond that. Auth0 behavior past 25,000 MAU is not stated on the official pages read — check the official page; paid tiers are Essentials $35/month and Professional $240/month. See Clerk vs Auth0.Source: Clerk and Auth0 official pricing pages; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much auth allowance comes with Supabase and Firebase free tiers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Supabase Auth 50,000 MAU, coming with the Supabase free tier; Firebase Auth 50K MAU, coming with the Firebase free allowances. See Supabase free tier and Firebase free allowances.Source: Supabase and Firebase official pricing pages; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Free object storage with free egress?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cloudflare R2: a monthly free tier (10 GB-month storage, 1M Class A operations, 10M Class B operations), with no egress charges for any storage class. Backblaze B2 has no free tier; egress follows the 3x rule. Details: Egress rules compared.Source: Cloudflare R2 and Backblaze official pricing pages; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which has the larger free allowance, R2 or B2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "B2 has no free tier, so no comparison by free allowance is possible. R2 monthly free allowance: 10 GB-month storage, 1M Class A operations, 10M Class B operations, egress free. Details: Cloudflare R2 vs Backblaze B2.Source: Cloudflare R2 and Backblaze official pricing pages; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is egress charged?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "R2 charges nothing: no egress bandwidth charges for any storage class. B2 direct egress is free up to 3x average monthly stored data, $0.01/GB beyond that, and egress via partner CDNs is unlimited free. Full comparison: Egress rules compared.Source: Cloudflare R2 and Backblaze official pricing pages; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the R2 free tier apply to Infrequent Access?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. In the billing examples on the official pricing page, the free-tier column for Infrequent Access reads NA. Infrequent Access prices: $0.01/GB-month, Class A $9.00/M, Class B $0.90/M, data retrieval $0.01/GB, 30-day minimum storage. See Cloudflare R2 free tier.Source: Cloudflare R2 official pricing page; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Backblaze B2 have a free tier?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The official pricing page showed no “10GB free” wording in either of two captures. B2 is pay-as-you-go: storage $6.95/TB/30 days. Details: Backblaze B2 (pay-as-you-go).Source: Backblaze official pricing page; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which partner CDNs give free B2 egress?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fastly, Cloudflare, bunny.net, CacheFly, CoreWeave, Equinix Metal, Vultr, phoenixNAP. Egress via these partner CDNs is unlimited free. Details: Backblaze B2 (pay-as-you-go).Source: Backblaze official pricing page; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I host private repositories for free with CI/CD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GitHub Free: unlimited public/private repositories with 2,000 CI/CD minutes per month; public repository Actions minutes are free. GitLab Free: 5 users per top-level group with 400 compute minutes per month; sign-up needs no credit card. See GitHub Free and GitLab Free.Source: GitHub and GitLab official pricing pages; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are GitHub’s 2,000 minutes and GitLab’s 400 minutes directly comparable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No direct equation: GitHub minutes are CI/CD minutes (Actions minutes), free for public repositories; GitLab minutes are compute minutes. Each plan meters by its own rules. Full comparison: CI minutes compared.Source: GitHub and GitLab official pricing pages; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does GitLab Free sign-up need a credit card?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The pricing page states “No credit card required”. Using shared runners still requires card verification ($1 authorization check, no charge); a bring-your-own runner or disabling shared runners needs no card. See GitLab Free.Source: GitLab official pricing page; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which GitHub Free features are limited to public repositories?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Several features in the Free column of the comparison table: repository rules, code owners, draft pull requests, Pages and wikis, secret scanning, and others. Private repositories cannot use these features. See GitHub Free.Source: GitHub official pricing page; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does GitLab Ultimate cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No public price. The pricing page states custom pricing (quote-based pricing). Premium is $29/user/month, annual billing. See GitLab Free.Source: GitLab official pricing page; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are GitHub Free Codespaces hours counted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Free hours go to personal accounts, not to free organizations; pricing page example: 2-core machines 60 hours, 4-core machines 30 hours. Codespaces access carries a $0 spend limit. See GitHub Free.Source: GitHub official pricing page; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which free web hosts need no credit card?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7 state no credit card on the official site: InfinityFree, Byet.host, x10Hosting, GoogieHost, FreeHosting.com, ProFreeHost, and TinkerHost. Card requirements for AwardSpace, HelioHost, and FreeHostia are not stated on the official pages read — check the official page. Identity and age rules: GoogieHost TOS states 18+ and a possible government photo ID; HelioHost requires 13+ and no disposable email; the x10Hosting TOS caps accounts at 1 per person/household.Source: vendor official pages; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will a free host suddenly suspend or delete a site?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Suspension and deletion rules are written on each vendor’s official site and TOS, with different day counts: GoogieHost suspends after 15 days idle and terminates permanently after 22 days; x10Hosting needs a login every 30 days and removes the site 21 days after suspension; HelioHost needs a login every 30 days; InfinityFree suspends after fewer than 5 hits in 30 days and deletes 20–60 days after suspension; FreeHosting.com may remove an account after 90 days without visitors; AwardSpace marks the account idle after 12 months without traffic, with a 1-year login renewal; FreeHostia has a 1-year validity, renewable free of charge; the Byet.host TOS gives no day count; ProFreeHost and TinkerHost idle policies are not stated on the official pages read. 000webhost shut down fully on 2024-10-14 — see the shutdown archive.Source: vendor official pages and TOS documents; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which free web hosts include free SSL?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Free SSL: InfinityFree (free SSL certificate), Byet.host (subdomains automatic, owned domains self-installed in the panel), GoogieHost (auto-activated), FreeHostia (Let’s Encrypt), TinkerHost (free SSL). ProFreeHost writes automatic self-signed SSL (whether it is a trusted CA certificate is not stated on the official site). FreeHosting.com SSL is a $29.95 one-time add-on; the free tier includes none. SSL for x10Hosting, AwardSpace, and HelioHost is not stated on the official pages read — check the official page.Source: vendor official pages; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the 50,000 hits/day cap mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A hit is every request for a website file, not a visit: a page with 2 CSS + 3 JS + 5 images produces 11 hits on one load (InfinityFree official KB example). InfinityFree caps hits at 50,000 per day; over the cap, the account goes offline for 24 hours. “Unlimited bandwidth” does not mean unlimited visits. HelioHost uses load units instead: 200 GB of memory/day + 10,000 CPU/day, sampled every 60 seconds.Source: InfinityFree official forum KB and HelioHost Wiki; verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a site run on a free subdomain?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Free subdomains cost nothing to start: InfinityFree (25+ suffixes), Byet.host (24 suffixes), x10Hosting (4 suffixes), GoogieHost (suffixes written three ways), ProFreeHost (free subdomain). An owned domain stays under its owner’s control and can move. FreeHosting.com requires an owned domain and hosts no free subdomains. Cloudflare cannot be used on InfinityFree free subdomains, but can be used on an owned domain (forum guide).Source: vendor official pages; verified 2026-11-13."
+      }
     }
   ]
 }</script>
@@ -430,14 +742,14 @@ footer a { color:var(--accent); }
 <body>
 <header><div class="wrap"><h1><a href="../">Free Token Monitor</a></h1>
 <p>Free credits for agents: only vendor-verified offers. Check the official page before claiming.</p></div></header>
-<nav><div class="wrap"><a href="../">Home</a><a href="../vps/">Free VPS</a><a href="../wool/">VPS Deals</a><a href="../cheap/">Cheap VPS</a><a href="../deploy/">Deploy &amp; Hosting</a><a href="../database/">Databases</a><a href="../domain/">Domains &amp; DNS</a><a href="../offers/">Offer details</a><a href="../compare/">Comparisons</a><a href="./" aria-current="page">FAQ</a><a href="../../faq/">中文</a></div></nav>
+<nav><div class="wrap"><a href="../">Home</a><a href="../vps/">Free VPS</a><a href="../wool/">VPS Deals</a><a href="../cheap/">Cheap VPS</a><a href="../deploy/">Deploy &amp; Hosting</a><a href="../database/">Databases</a><a href="../domain/">Domains &amp; DNS</a><a href="../code/">Code Hosting</a><a href="../auth/">Auth</a><a href="../storage/">Storage</a><a href="../email/">Email</a><a href="../monitoring/">Monitoring</a><a href="../payments/">Payments</a><a href="../hosting/">Web Hosting</a><a href="../workflow/">Workflow</a><a href="../offers/">Offer details</a><a href="../compare/">Comparisons</a><a href="./" aria-current="page">FAQ</a><a href="../../faq/">中文</a></div></nav>
 <main><div class="wrap">
 
 <article>
 <p class="crumb"><a href="../">Home</a> / FAQ</p>
 
-<h1>FAQ: 41 questions about free AI APIs, VPS, deploy, databases &amp; domains</h1>
-<p class="meta">Updated 2026-11-14 · 41 questions</p>
+<h1>FAQ: 80 questions about free AI APIs, VPS, hosting, databases, domains, email, monitoring &amp; payments</h1>
+<p class="meta">Updated 2026-11-14 · 80 questions</p>
 <p>The questions below use English users’ actual wording, gathered from search, forum, and community demand research. Answers are answer-first, based on vendor official pages; where an answer relies on community sources rather than a vendor official page, that is stated. Check the official page before claiming.</p>
 <details><summary>Are free LLM APIs really free?</summary>
 <p><b>Some are genuinely free long-term; most are capped allowances, not unlimited usage.</b> The 43 verified offers split into four shapes: 2 long-term free tiers, 18 one-time signup credits, 23 periodic resets (13 daily, 1 weekly, 9 monthly), and 2 with fixed end dates. “Free” always comes with conditions — an account, rate limits, an expiry, or all three. See the <a href="../compare/free-tier-types/">free-tier types comparison</a> for the full grouping.</p><p class="meta">Source: verified listings, 43 offers; verification dates 2026-10-09–2026-11-08.</p>
@@ -583,6 +895,169 @@ footer a { color:var(--accent); }
 <p><b>Freenom free domains are dead:</b> new registrations stopped in 2023, exit from the domain business in 2024, paid sales resumed 2026-07-23. Alternatives: <a href="../domain/offers/is-a-dev/">is-a.dev free subdomains</a>, <a href="../compare/registrars/">low-price .com domains</a>, and student-pack domains.</p>
 <p class="meta">Source: vendor official pages, verified 2026-11-13; Freenom dates per second-hand reports.</p>
 </details>
+<h2>Email</h2>
+<details><summary>Does SendGrid still have a free plan?</summary>
+<p>No permanent free plan — only a 60-day free trial: 100 emails/day, no credit card required, no commitment. The free plan wording on the page refers to the same 60-day trial: the plan header reads "Free Trial $0/mo for 60 days". The old permanent free plan was retired in March–May 2025 (multiple second-hand sources agree). See <a href="../email/offers/sendgrid-trial/">SendGrid trial</a>.</p>
+<p class="meta">Source: Twilio official SendGrid pricing page and official pricing PDF; verified 2026-11-13.</p>
+</details>
+<details><summary>Are free email allowances metered daily or monthly?</summary>
+<p>Both metering styles exist: Mailgun 100 emails/day and Brevo 300 emails/day are metered daily; Postmark 100 emails/month is metered monthly; Resend has both a 100 emails/day cap and a 3,000 emails/month cap; the SendGrid trial 100 emails/day is metered daily. Brevo resets daily with no rollover; Postmark unused allowance does not roll over. Full comparison: <a href="../compare/daily-vs-monthly-limits/">Daily vs monthly limits</a>.</p>
+<p class="meta">Source: vendor official pricing pages; verified 2026-11-13.</p>
+</details>
+<details><summary>Is the Mailgun free plan permanent?</summary>
+<p>Permanence is not stated on the official site. The pricing page wording is an invitation to try the service, the FAQ states the free plan is for exploring the platform with a daily sending limit, and the page contains no "forever" wording. Free plan $0/month: 100 emails/day, 1 custom sending domain, 1-day log retention. See <a href="../email/offers/mailgun/">Mailgun free plan</a>.</p>
+<p class="meta">Source: Mailgun official pricing page; verified 2026-11-13.</p>
+</details>
+<details><summary>What happens after exceeding the email limit? Is there an automatic charge?</summary>
+<p>It differs per entry: the Postmark free plan does not allow overages; Resend pay-as-you-go is only available on paid plans, and without it an overage triggers a notification with an option to upgrade; SendGrid overage may be charged ("overage charges may apply"); Mailgun and Brevo overage behavior is not stated on the official pages read — check the official page. Full comparison: <a href="../compare/all-email-table/">All email entries compared</a>.</p>
+<p class="meta">Source: vendor official pricing pages; verified 2026-11-13.</p>
+</details>
+<details><summary>Why does SendGrid show two different overage rates?</summary>
+<p>The official pricing PDF and the pricing web page show different overage rates: in the PDF, Essentials is $0.00133/email ($19.95 tier) and $0.00088/email ($34.95 tier), and the five Pro tiers run $0.00110 to $0.00047/email; the web page shows Essentials $0.00075/email and Pro $0.000575/email. Both values are presented side by side; check the official page. See <a href="../email/offers/sendgrid-trial/">SendGrid trial</a>.</p>
+<p class="meta">Source: Twilio official SendGrid pricing page and official pricing PDF; verified 2026-11-13.</p>
+</details>
+<h2>Monitoring &amp; analytics</h2>
+<details><summary>Does the UptimeRobot free tier include SSL monitoring?</summary>
+<p>The same official pricing page states it two ways: the Free plan card shows “SSL &amp; Domain exp. monitor”; the comparison-table SSL monitoring row marks Free as not included, the Domain exp. monitoring row marks Free as not included, and the HTTPS monitoring row states “SSL monitoring is included only in paid plans.” Both wordings stand side by side — check the official page. See <a href="../monitoring/offers/uptimerobot/">UptimeRobot free tier</a>.</p>
+<p class="meta">Source: UptimeRobot official pricing page; verified 2026-11-13.</p>
+</details>
+<details><summary>Are Sentry’s 5k errors, 5M spans, and 50 replays monthly allowances?</summary>
+<p>The three comparison-table rows state no period. The only per month wording on the page is the new-user promotional wording: 5,000 free replays per month for your first 3 months. Promotional wording is not a plan figure. See <a href="../monitoring/offers/sentry/">Sentry Developer free tier</a>.</p>
+<p class="meta">Source: Sentry official pricing page; verified 2026-11-13.</p>
+</details>
+<details><summary>How many websites and events does Umami Hobby include? What happens on overage?</summary>
+<p>3 websites, 100,000 events, 6-month retention. Paid-plan overage is billed per event, data collection is not interrupted, and no data is lost; the Hobby Additional events cell is empty, with no per-event price, and Hobby overage behavior is not stated on the official pages read. See <a href="../monitoring/offers/umami/">Umami Hobby free tier</a>.</p>
+<p class="meta">Source: Umami official pricing page; verified 2026-11-13.</p>
+</details>
+<details><summary>Does PostHog’s free allowance reset monthly? Does it need a credit card?</summary>
+<p>Monthly reset, with the same allowance whether or not a card is on file; official wording: “No credit card, not a trial.” The first 1M events are free every month. Usage stops at the free tier limits, with no surprise billing. See <a href="../monitoring/offers/posthog/">PostHog free tier</a>.</p>
+<p class="meta">Source: PostHog official pricing page; verified 2026-11-13.</p>
+</details>
+<details><summary>Does Plausible have a permanent free version?</summary>
+<p>No permanent free plan on the cloud, only a 30-day free trial with no credit card; continued use after the trial requires prepayment. Community Edition is free to self-host (AGPLv3). See <a href="../monitoring/offers/plausible-trial/">Plausible trial</a>.</p>
+<p class="meta">Source: Plausible official docs and terms of service; verified 2026-11-13.</p>
+</details>
+<details><summary>Is Microsoft Clarity really free forever? Does it have traffic limits?</summary>
+<p>Official FAQ wording: Clarity is a free service forever. No traffic limits, no limit on the number of websites per account, no sampling. See <a href="../monitoring/offers/clarity/">Microsoft Clarity</a>.</p>
+<p class="meta">Source: Microsoft Learn official FAQ; verified 2026-11-13.</p>
+</details>
+<h2>Payments</h2>
+<details><summary>Can an individual in mainland China open a Stripe account directly?</summary>
+<p>No. Mainland China is not on Stripe’s official supported country/region list (50 entries), and Stripe does not support direct signup for mainland China entities. Hong Kong is on the list. Atlas costs $500 one-time and can register a US company from anywhere. See <a href="../payments/offers/stripe/">Stripe fees</a>.</p>
+<p class="meta">Source: Stripe official pricing page and official supported-country page; verified 2026-11-13.</p>
+</details>
+<details><summary>What is the Stripe Managed Payments fee?</summary>
+<p>3.5% per successful transaction, plus Payments fees. It includes indirect tax compliance in 75+ countries, fraud prevention, dispute management, invoicing, and customer support. See <a href="../payments/offers/stripe/">Stripe fees</a>.</p>
+<p class="meta">Source: Stripe official pricing page; verified 2026-11-13.</p>
+</details>
+<details><summary>What fee applies after migrating to Stripe Managed Payments?</summary>
+<p>The 2026 Update blog states no fee rate. Post-migration fees follow the Stripe official pricing page; the Stripe pricing page states Managed Payments is 3.5% + Payments fees. See <a href="../payments/offers/lemon-squeezy/">Lemon Squeezy fees</a>.</p>
+<p class="meta">Source: Lemon Squeezy 2026 Update official blog and Stripe official pricing page; verified 2026-11-13.</p>
+</details>
+<details><summary>What is Polar Early Member?</summary>
+<p>Organizations created before 2026-05-27 permanently keep the 4% + 40¢ + subscription fee +0.5% rate. Upgrading to a paid plan permanently loses that rate; dropping back to Starter uses the new 5% + 50¢ rate. See <a href="../payments/offers/polar/">Polar fees</a>.</p>
+<p class="meta">Source: Polar official pricing resource page; verified 2026-11-13.</p>
+</details>
+<details><summary>Do disputes cost a fee?</summary>
+<p>Stripe standard processing charges a $15 dispute fee per dispute. Polar charges $15 per dispute, regardless of outcome. Paddle and Lemon Squeezy dispute fees are not stated on the official pages read — check the official page. Full comparison: <a href="../compare/mor-fees-compared/">Merchant of Record fees compared</a>.</p>
+<p class="meta">Source: vendor official pricing pages; verified 2026-11-13.</p>
+</details>
+<h2>Authentication</h2>
+<details><summary>How many users does the Clerk free tier cover?</summary>
+<p>50,000 MRUs per app and 100 MROs per app, with unlimited apps. MRU definition: a user counts as retained when returning 24 hours after signing up. See <a href="../auth/offers/clerk/">Clerk Hobby free tier</a>.</p>
+<p class="meta">Source: Clerk official pricing page; verified 2026-11-13.</p>
+</details>
+<details><summary>How many users does the Auth0 free tier cover?</summary>
+<p>Up to 25,000 MAU, officially worded External Active Users. The pricing page FAQ confirms the 25,000 threshold. See <a href="../auth/offers/auth0/">Auth0 Free</a>.</p>
+<p class="meta">Source: Auth0 official pricing page; verified 2026-11-13.</p>
+</details>
+<details><summary>How is MRU counted?</summary>
+<p>A user counts as retained when returning 24 hours after signing up. Official wording: “A user is counted as retained when they return 24+ hours after signing up.” MRO: an organization has at least 2 members, with at least 1 being a retained user that month; Clerk Hobby allows 100 MROs per app. See <a href="../compare/clerk-vs-auth0/">Clerk vs Auth0</a>.</p>
+<p class="meta">Source: Clerk official pricing page; verified 2026-11-13.</p>
+</details>
+<details><summary>Do Clerk and Auth0 free tiers need a credit card?</summary>
+<p>Neither needs a card for sign-up: Clerk states No credit card required on the official site; Auth0 sign-up needs no card. The difference is custom domains: Auth0’s 1 custom domain requires card verification; card requirements for Clerk custom domains are not stated on the official pages read. See <a href="../auth/offers/clerk/">Clerk Hobby free tier</a> and <a href="../auth/offers/auth0/">Auth0 Free</a>.</p>
+<p class="meta">Source: Clerk and Auth0 official pricing pages; verified 2026-11-13.</p>
+</details>
+<details><summary>What happens past 50,000 MRU or 25,000 MAU?</summary>
+<p>Past 50,000 MRU, upgrading to Pro is required; past 100 MRO, upgrading to the B2B add-on is required; the FAQ states a 1-month grace period. Pro $20/month (annual billing), including 50,000 MRUs, $0.02 each beyond that. Auth0 behavior past 25,000 MAU is not stated on the official pages read — check the official page; paid tiers are Essentials $35/month and Professional $240/month. See <a href="../compare/clerk-vs-auth0/">Clerk vs Auth0</a>.</p>
+<p class="meta">Source: Clerk and Auth0 official pricing pages; verified 2026-11-13.</p>
+</details>
+<details><summary>How much auth allowance comes with Supabase and Firebase free tiers?</summary>
+<p>Supabase Auth 50,000 MAU, coming with the Supabase free tier; Firebase Auth 50K MAU, coming with the Firebase free allowances. See <a href="../database/offers/supabase/">Supabase free tier</a> and <a href="../database/offers/firebase/">Firebase free allowances</a>.</p>
+<p class="meta">Source: Supabase and Firebase official pricing pages; verified 2026-11-13.</p>
+</details>
+<h2>Object storage</h2>
+<details><summary>Free object storage with free egress?</summary>
+<p>Cloudflare R2: a monthly free tier (10 GB-month storage, 1M Class A operations, 10M Class B operations), with no egress charges for any storage class. Backblaze B2 has no free tier; egress follows the 3x rule. Details: <a href="../compare/egress-rules/">Egress rules compared</a>.</p>
+<p class="meta">Source: Cloudflare R2 and Backblaze official pricing pages; verified 2026-11-13.</p>
+</details>
+<details><summary>Which has the larger free allowance, R2 or B2?</summary>
+<p>B2 has no free tier, so no comparison by free allowance is possible. R2 monthly free allowance: 10 GB-month storage, 1M Class A operations, 10M Class B operations, egress free. Details: <a href="../compare/r2-vs-b2/">Cloudflare R2 vs Backblaze B2</a>.</p>
+<p class="meta">Source: Cloudflare R2 and Backblaze official pricing pages; verified 2026-11-13.</p>
+</details>
+<details><summary>Is egress charged?</summary>
+<p>R2 charges nothing: no egress bandwidth charges for any storage class. B2 direct egress is free up to 3x average monthly stored data, $0.01/GB beyond that, and egress via partner CDNs is unlimited free. Full comparison: <a href="../compare/egress-rules/">Egress rules compared</a>.</p>
+<p class="meta">Source: Cloudflare R2 and Backblaze official pricing pages; verified 2026-11-13.</p>
+</details>
+<details><summary>Does the R2 free tier apply to Infrequent Access?</summary>
+<p>No. In the billing examples on the official pricing page, the free-tier column for Infrequent Access reads NA. Infrequent Access prices: $0.01/GB-month, Class A $9.00/M, Class B $0.90/M, data retrieval $0.01/GB, 30-day minimum storage. See <a href="../storage/offers/cloudflare-r2/">Cloudflare R2 free tier</a>.</p>
+<p class="meta">Source: Cloudflare R2 official pricing page; verified 2026-11-13.</p>
+</details>
+<details><summary>Does Backblaze B2 have a free tier?</summary>
+<p>No. The official pricing page showed no “10GB free” wording in either of two captures. B2 is pay-as-you-go: storage $6.95/TB/30 days. Details: <a href="../storage/offers/backblaze-b2/">Backblaze B2 (pay-as-you-go)</a>.</p>
+<p class="meta">Source: Backblaze official pricing page; verified 2026-11-13.</p>
+</details>
+<details><summary>Which partner CDNs give free B2 egress?</summary>
+<p>Fastly, Cloudflare, bunny.net, CacheFly, CoreWeave, Equinix Metal, Vultr, phoenixNAP. Egress via these partner CDNs is unlimited free. Details: <a href="../storage/offers/backblaze-b2/">Backblaze B2 (pay-as-you-go)</a>.</p>
+<p class="meta">Source: Backblaze official pricing page; verified 2026-11-13.</p>
+</details>
+<h2>Code hosting</h2>
+<details><summary>Where can I host private repositories for free with CI/CD?</summary>
+<p>GitHub Free: unlimited public/private repositories with 2,000 CI/CD minutes per month; public repository Actions minutes are free. GitLab Free: 5 users per top-level group with 400 compute minutes per month; sign-up needs no credit card. See <a href="../code/offers/github-free/">GitHub Free</a> and <a href="../code/offers/gitlab-free/">GitLab Free</a>.</p>
+<p class="meta">Source: GitHub and GitLab official pricing pages; verified 2026-11-13.</p>
+</details>
+<details><summary>Are GitHub’s 2,000 minutes and GitLab’s 400 minutes directly comparable?</summary>
+<p>No direct equation: GitHub minutes are CI/CD minutes (Actions minutes), free for public repositories; GitLab minutes are compute minutes. Each plan meters by its own rules. Full comparison: <a href="../compare/ci-minutes-compared/">CI minutes compared</a>.</p>
+<p class="meta">Source: GitHub and GitLab official pricing pages; verified 2026-11-13.</p>
+</details>
+<details><summary>Does GitLab Free sign-up need a credit card?</summary>
+<p>No. The pricing page states “No credit card required”. Using shared runners still requires card verification ($1 authorization check, no charge); a bring-your-own runner or disabling shared runners needs no card. See <a href="../code/offers/gitlab-free/">GitLab Free</a>.</p>
+<p class="meta">Source: GitLab official pricing page; verified 2026-11-13.</p>
+</details>
+<details><summary>Which GitHub Free features are limited to public repositories?</summary>
+<p>Several features in the Free column of the comparison table: repository rules, code owners, draft pull requests, Pages and wikis, secret scanning, and others. Private repositories cannot use these features. See <a href="../code/offers/github-free/">GitHub Free</a>.</p>
+<p class="meta">Source: GitHub official pricing page; verified 2026-11-13.</p>
+</details>
+<details><summary>What does GitLab Ultimate cost?</summary>
+<p>No public price. The pricing page states custom pricing (quote-based pricing). Premium is $29/user/month, annual billing. See <a href="../code/offers/gitlab-free/">GitLab Free</a>.</p>
+<p class="meta">Source: GitLab official pricing page; verified 2026-11-13.</p>
+</details>
+<details><summary>How are GitHub Free Codespaces hours counted?</summary>
+<p>Free hours go to personal accounts, not to free organizations; pricing page example: 2-core machines 60 hours, 4-core machines 30 hours. Codespaces access carries a $0 spend limit. See <a href="../code/offers/github-free/">GitHub Free</a>.</p>
+<p class="meta">Source: GitHub official pricing page; verified 2026-11-13.</p>
+</details>
+<h2>Web hosting</h2>
+<details><summary>Which free web hosts need no credit card?</summary>
+<p>7 state no credit card on the official site: <a href="../hosting/offers/infinityfree/">InfinityFree</a>, <a href="../hosting/offers/byet-host/">Byet.host</a>, <a href="../hosting/offers/x10hosting/">x10Hosting</a>, <a href="../hosting/offers/googiehost/">GoogieHost</a>, <a href="../hosting/offers/freehosting-com/">FreeHosting.com</a>, <a href="../hosting/offers/profreehost/">ProFreeHost</a>, and <a href="../hosting/offers/tinkerhost/">TinkerHost</a>. Card requirements for <a href="../hosting/offers/awardspace/">AwardSpace</a>, <a href="../hosting/offers/heliohost/">HelioHost</a>, and <a href="../hosting/offers/freehostia/">FreeHostia</a> are not stated on the official pages read — check the official page. Identity and age rules: GoogieHost TOS states 18+ and a possible government photo ID; HelioHost requires 13+ and no disposable email; the x10Hosting TOS caps accounts at 1 per person/household.</p>
+<p class="meta">Source: vendor official pages; verified 2026-11-13.</p>
+</details>
+<details><summary>Will a free host suddenly suspend or delete a site?</summary>
+<p>Suspension and deletion rules are written on each vendor’s official site and TOS, with different day counts: <a href="../hosting/offers/googiehost/">GoogieHost</a> suspends after 15 days idle and terminates permanently after 22 days; <a href="../hosting/offers/x10hosting/">x10Hosting</a> needs a login every 30 days and removes the site 21 days after suspension; <a href="../hosting/offers/heliohost/">HelioHost</a> needs a login every 30 days; <a href="../hosting/offers/infinityfree/">InfinityFree</a> suspends after fewer than 5 hits in 30 days and deletes 20–60 days after suspension; <a href="../hosting/offers/freehosting-com/">FreeHosting.com</a> may remove an account after 90 days without visitors; <a href="../hosting/offers/awardspace/">AwardSpace</a> marks the account idle after 12 months without traffic, with a 1-year login renewal; <a href="../hosting/offers/freehostia/">FreeHostia</a> has a 1-year validity, renewable free of charge; the <a href="../hosting/offers/byet-host/">Byet.host</a> TOS gives no day count; <a href="../hosting/offers/profreehost/">ProFreeHost</a> and <a href="../hosting/offers/tinkerhost/">TinkerHost</a> idle policies are not stated on the official pages read. 000webhost shut down fully on 2024-10-14 — see the <a href="../hosting/offers/000webhost-archive/">shutdown archive</a>.</p>
+<p class="meta">Source: vendor official pages and TOS documents; verified 2026-11-13.</p>
+</details>
+<details><summary>Which free web hosts include free SSL?</summary>
+<p>Free SSL: <a href="../hosting/offers/infinityfree/">InfinityFree</a> (free SSL certificate), <a href="../hosting/offers/byet-host/">Byet.host</a> (subdomains automatic, owned domains self-installed in the panel), <a href="../hosting/offers/googiehost/">GoogieHost</a> (auto-activated), <a href="../hosting/offers/freehostia/">FreeHostia</a> (Let’s Encrypt), <a href="../hosting/offers/tinkerhost/">TinkerHost</a> (free SSL). <a href="../hosting/offers/profreehost/">ProFreeHost</a> writes automatic self-signed SSL (whether it is a trusted CA certificate is not stated on the official site). <a href="../hosting/offers/freehosting-com/">FreeHosting.com</a> SSL is a $29.95 one-time add-on; the free tier includes none. SSL for <a href="../hosting/offers/x10hosting/">x10Hosting</a>, <a href="../hosting/offers/awardspace/">AwardSpace</a>, and <a href="../hosting/offers/heliohost/">HelioHost</a> is not stated on the official pages read — check the official page.</p>
+<p class="meta">Source: vendor official pages; verified 2026-11-13.</p>
+</details>
+<details><summary>What does the 50,000 hits/day cap mean?</summary>
+<p>A hit is every request for a website file, not a visit: a page with 2 CSS + 3 JS + 5 images produces 11 hits on one load (InfinityFree official KB example). <a href="../hosting/offers/infinityfree/">InfinityFree</a> caps hits at 50,000 per day; over the cap, the account goes offline for 24 hours. “Unlimited bandwidth” does not mean unlimited visits. <a href="../hosting/offers/heliohost/">HelioHost</a> uses load units instead: 200 GB of memory/day + 10,000 CPU/day, sampled every 60 seconds.</p>
+<p class="meta">Source: InfinityFree official forum KB and HelioHost Wiki; verified 2026-11-13.</p>
+</details>
+<details><summary>Can a site run on a free subdomain?</summary>
+<p>Free subdomains cost nothing to start: <a href="../hosting/offers/infinityfree/">InfinityFree</a> (25+ suffixes), <a href="../hosting/offers/byet-host/">Byet.host</a> (24 suffixes), <a href="../hosting/offers/x10hosting/">x10Hosting</a> (4 suffixes), <a href="../hosting/offers/googiehost/">GoogieHost</a> (suffixes written three ways), <a href="../hosting/offers/profreehost/">ProFreeHost</a> (free subdomain). An owned domain stays under its owner’s control and can move. <a href="../hosting/offers/freehosting-com/">FreeHosting.com</a> requires an owned domain and hosts no free subdomains. Cloudflare cannot be used on InfinityFree free subdomains, but can be used on an owned domain (forum guide).</p>
+<p class="meta">Source: vendor official pages; verified 2026-11-13.</p>
+</details>
 <p><b>Disclaimer:</b> answers follow the vendor official page content; allowances can change or end at any time — check the official page before claiming.</p>
 <div class="related"><h2>Related pages</h2>
 <ul>
@@ -592,6 +1067,6 @@ footer a { color:var(--accent); }
 </article>
 
 </div></main>
-<footer><div class="wrap"><p><a href="../">Home</a> · <a href="../vps/">Free VPS</a> · <a href="../wool/">VPS Deals</a> · <a href="../cheap/">Cheap VPS</a> · <a href="../deploy/">Deploy &amp; Hosting</a> · <a href="../database/">Databases</a> · <a href="../domain/">Domains &amp; DNS</a> · <a href="../offers/">Offer details</a> · <a href="../compare/">Comparisons</a> · <a href="./">FAQ</a> · <a href="../../faq/">中文</a></p><p>Data is for reference only — check the vendor’s official page. Allowances can change or end at any time; read the vendor’s terms before claiming, and turn on “stop when exhausted” where available to avoid charges. No invite links, API resellers, second-hand credits, or shared accounts. Data sources: Lanlan repo, freetokens.fyi. Allowance information per vendor official pages.</p></div></footer>
+<footer><div class="wrap"><p><a href="../">Home</a> · <a href="../vps/">Free VPS</a> · <a href="../wool/">VPS Deals</a> · <a href="../cheap/">Cheap VPS</a> · <a href="../deploy/">Deploy &amp; Hosting</a> · <a href="../database/">Databases</a> · <a href="../domain/">Domains &amp; DNS</a> · <a href="../code/">Code Hosting</a> · <a href="../auth/">Auth</a> · <a href="../storage/">Storage</a> · <a href="../email/">Email</a> · <a href="../monitoring/">Monitoring</a> · <a href="../payments/">Payments</a> · <a href="../hosting/">Web Hosting</a> · <a href="../workflow/">Workflow</a> · <a href="../offers/">Offer details</a> · <a href="../compare/">Comparisons</a> · <a href="./">FAQ</a> · <a href="../../faq/">中文</a></p><p>Data is for reference only — check the vendor’s official page. Allowances can change or end at any time; read the vendor’s terms before claiming, and turn on “stop when exhausted” where available to avoid charges. No invite links, API resellers, second-hand credits, or shared accounts. Data sources: Lanlan repo, freetokens.fyi. Allowance information per vendor official pages.</p></div></footer>
 </body>
 </html>
