@@ -431,23 +431,31 @@
 
 ## 认证与用户管理板块
 
-- [认证与用户管理](https://tokens.yangtokent.com/auth/): 2 个独立认证免费档（Clerk、Auth0）与 2 个数据库附带认证（Supabase Auth、Firebase Auth）交叉指引；含不在列表中的服务及原因与变化记录。
-- [认证与用户管理详情](https://tokens.yangtokent.com/auth/offers/): 2 篇认证详情页。
-- [认证与用户管理对比](https://tokens.yangtokent.com/auth/compare/): 3 篇对比：Clerk vs Auth0、数据库附带认证对照、总表。
-- [认证与用户管理指南](https://tokens.yangtokent.com/auth/guides/): 4 篇指南：认证选型、MRU 与 MAU、社交登录基础、超额规则。
-- [认证与用户管理常见问题](https://tokens.yangtokent.com/auth/faq/): 14 个常见问题与回答。
-- [认证与用户管理数据（JSON）](https://tokens.yangtokent.com/data/auth.json): 2 条独立认证的机器可读数据，含 MRU/MRO 与 MAU 额度、超额行为、核实日期；数据库附带认证见数据库数据文件。
+- [认证与用户管理](https://tokens.yangtokent.com/auth/): 8 个独立认证免费档（Clerk、Auth0、Stytch、Descope、WorkOS、Logto、Kinde、Frontegg）与 2 个数据库附带认证（Supabase Auth、Firebase Auth）交叉指引；含不在列表中的服务及原因与变化记录。
+- [认证与用户管理详情](https://tokens.yangtokent.com/auth/offers/): 8 篇认证详情页。
+- [认证与用户管理对比](https://tokens.yangtokent.com/auth/compare/): 5 篇对比：Clerk vs Auth0、Stytch vs Frontegg、Descope vs Kinde、数据库附带认证对照、总表。
+- [认证与用户管理指南](https://tokens.yangtokent.com/auth/guides/): 6 篇指南：认证选型、MRU 与 MAU、社交登录基础、超额规则、SSO/SCIM 连接计数、MFA 与自定义域名。
+- [认证与用户管理常见问题](https://tokens.yangtokent.com/auth/faq/): 21 个常见问题与回答。
+- [认证与用户管理数据（JSON）](https://tokens.yangtokent.com/data/auth.json): 8 条独立认证的机器可读数据，含 MRU/MRO 与 MAU 额度、超额行为、核实日期；数据库附带认证见数据库数据文件。
 
 ## 认证详情页
 
 - [Auth0 Free 详解：25,000 MAU、5 个组织、1 个企业连接、1 天日志保留](https://tokens.yangtokent.com/auth/offers/auth0/): Auth0 Free：$0、至多 25,000 MAU（External Active Users）、注册无需绑卡；1 个自定义域名（需绑卡验证）、5 个组织、1 个企业连接、1,000 个 M2M token、5 个 Actions、1 天日志保留。核实于 2026-11-13。
 - [Clerk Hobby 详解：50,000 MRUs、100 MROs、3 个社交登录、1 个月宽限期](https://tokens.yangtokent.com/auth/offers/clerk/): Clerk Hobby 免费版：50,000 MRUs/应用、100 MROs/应用、无限应用、3 个 dashboard seats、至多 3 个社交登录、固定 7 天 session、1 天日志保留；无需信用卡；超限须升级 Pro，1 个月宽限期。核实于 2026-11-13。
+- [Stytch 按量付费详解：10,000 月活用户、无限组织、5 个 SSO/SCIM 连接](https://tokens.yangtokent.com/auth/offers/stytch/): Stytch 按量付费计划 $0 起：始终免费 10,000 月活用户与 AI agent、无限组织、5 个 SSO 或 SCIM 连接、1,000 个 M2M token；超出 5 个的连接每个 $125；绑卡要求以官方页面为准。核实于 2026-11-14。
+- [Descope Free Forever 详解：7,500 MAU、10 个租户、3 个 SSO 连接、无超额计费](https://tokens.yangtokent.com/auth/offers/descope/): Descope Free Forever：$0、7,500 MAU、10 个月活租户、3 个 SSO 连接、1 个联合应用（OIDC）、5 个测试用户、10,000 次 M2M 交换、2,000 MACs、2,000 MATKs；无超额计费，超限须升级 Pro；无自定义域名。核实于 2026-11-14。
+- [WorkOS AuthKit 详解：1,000,000 MAU 免费、SSO 按连接收费、生产环境需绑卡](https://tokens.yangtokent.com/auth/offers/workos/): WorkOS AuthKit 用户管理：至多 1,000,000 MAU 免费，含社交登录、MFA、Passkey、RBAC；SSO 与 Directory Sync 各 $125/连接/月（官方博客）；自定义域名额外月费；开始免费，生产环境需加信用卡。核实于 2026-11-14。
+- [Logto Cloud Free 详解：50,000 MAU、50K tokens、3 个应用、无需信用卡](https://tokens.yangtokent.com/auth/offers/logto/): Logto Cloud Free：$0、至多 50,000 MAU、50K tokens（仅计 access token）、3 个应用、1 个 M2M 应用、1 个自定义域名、3 个社交连接、1 个 webhook、3 天审计日志保留；无需信用卡；无组织与 MFA。核实于 2026-11-14。
+- [Kinde Free 详解：10,500 MAU、5 个组织、1 个企业 SSO、无需信用卡](https://tokens.yangtokent.com/auth/offers/kinde/): Kinde Free：$0 forever、10,500 MAU、5 个月活组织、1 个企业 SSO 连接、2,000 个 M2M token、MFA、自定义域名、5 个自定义角色与 10 个权限、10 个 feature flags、1 个 webhook；无需信用卡；超出自动计超额费。核实于 2026-11-14。
+- [Frontegg 按量付费详解：7,500 MAU、5 个企业连接、无限组织、自定义域名](https://tokens.yangtokent.com/auth/offers/frontegg/): Frontegg 按量付费计划 $0/月：7,500 MAU、5 个企业连接（SSO/SCIM）、无限组织、自定义域名、完全自定义的托管登录、无限团队席位；开始不需要信用卡；超出单价以官方页面为准。核实于 2026-11-14。
 
 ## 认证对比
 
-- [认证总表：独立认证与附带认证一览（MRU、MAU、绑卡、超额）](https://tokens.yangtokent.com/auth/compare/all-auth-table/): 认证总表：Clerk、Auth0、Supabase Auth、Firebase Auth 一览：免费额度、口径、绑卡、超限规则、详情页链接。核实于 2026-11-13。
+- [认证总表：独立认证与附带认证一览（MRU、MAU、绑卡、超额）](https://tokens.yangtokent.com/auth/compare/all-auth-table/): 认证总表：Clerk、Auth0、Stytch、Descope、WorkOS、Logto、Kinde、Frontegg、Supabase Auth、Firebase Auth 一览：免费额度、口径、绑卡、超限规则、详情页链接。新 6 条核实于 2026-11-14。
 - [独立认证与数据库附带认证对照：Clerk、Auth0、Supabase Auth、Firebase Auth](https://tokens.yangtokent.com/auth/compare/auth-included/): 独立认证服务（Clerk、Auth0）与数据库附带认证（Supabase Auth 50,000 MAU、Firebase Auth 50K MAU）对照：额度口径、归属、详情页链接。核实于 2026-11-13。
 - [Clerk vs Auth0：MRU 与 MAU、社交登录、组织与超额对照](https://tokens.yangtokent.com/auth/compare/clerk-vs-auth0/): Clerk Hobby 与 Auth0 Free 逐项对照：50,000 MRUs 与 25,000 MAU 口径不同、社交登录与企业连接、组织数量、绑卡、日志保留、超限规则。核实于 2026-11-13。
+- [Stytch vs Frontegg：10,000 与 7,500 MAU、5 个连接、无限组织对照](https://tokens.yangtokent.com/auth/compare/stytch-vs-frontegg/): Stytch 与 Frontegg 逐项对照：10,000 月活用户与 7,500 MAU、5 个 SSO/SCIM 连接、无限组织、M2M token、自定义域名、绑卡、超限规则。核实于 2026-11-14。
+- [Descope vs Kinde：7,500 与 10,500 MAU、租户与组织、超限规则对照](https://tokens.yangtokent.com/auth/compare/descope-vs-kinde/): Descope Free Forever 与 Kinde Free 逐项对照：7,500 与 10,500 MAU、10 个租户与 5 个组织、3 个与 1 个 SSO 连接、硬上限与自动计费、自定义域名、M2M、审计保留。核实于 2026-11-14。
 
 ## 认证指南
 
@@ -455,53 +463,67 @@
 - [登录注册自己写还是用 Clerk/Auth0：认证选型对照](https://tokens.yangtokent.com/auth/guides/choosing-auth-provider/): 认证选型：自己写登录注册与用 Clerk、Auth0、数据库附带认证的对照：免费用户量、社交登录、组织、绑卡、超限规则。核实于 2026-11-13。
 - [MRU 与 MAU 有什么不同：Clerk 留存用户定义与 Auth0 外部活跃用户](https://tokens.yangtokent.com/auth/guides/mru-vs-mau/): MRU 与 MAU 口径对照：Clerk 的 MRU 定义（用户注册 24 小时后回访即计为 retained）、MRO 定义、Auth0 的 External Active Users 表述；数字不能直接比大小。核实于 2026-11-13。
 - [社交登录基础：Clerk 3 个社交登录与 Auth0 企业连接对照](https://tokens.yangtokent.com/auth/guides/social-login-basics/): 社交登录基础：通用配置步骤、Clerk Hobby 至多 3 个社交登录、Auth0 Free 1 个企业连接；各家数量以官网定价页为准。核实于 2026-11-13。
+- [SSO/SCIM 连接怎么计数：Stytch、Frontegg、Descope、Kinde、WorkOS、Auth0 对照](https://tokens.yangtokent.com/auth/guides/sso-connection-counting/): SSO 与 SCIM 连接的计数对照：免费包含数、SSO 与 SCIM 是否分开计数、超出单价；Stytch 与 Frontegg 各 5 个，Descope 3 个，Kinde 与 Auth0 各 1 个，WorkOS 按连接收费，Logto 为附加项。核实于 2026-11-14。
+- [MFA 与自定义域名：8 个免费档里哪些含、哪些要付费](https://tokens.yangtokent.com/auth/guides/mfa-custom-domain-gates/): MFA 与自定义域名在 8 个独立认证免费档中的对照：Descope、Kinde、WorkOS 含 MFA，Logto 的 MFA 为附加项，Auth0 无 Pro MFA；自定义域名 Clerk、Kinde、Logto、Frontegg 含，Descope 从 Pro 起，WorkOS 额外月费。核实于 2026-11-14。
 
 ## 对象存储板块
 
-- [对象存储](https://tokens.yangtokent.com/storage/): 1 个免费层（Cloudflare R2）、1 个按量付费（Backblaze B2）与 2 个数据库附带存储说明；含不在列表中的服务及原因与变化记录。
-- [对象存储详情](https://tokens.yangtokent.com/storage/offers/): 2 篇存储详情页。
-- [对象存储对比](https://tokens.yangtokent.com/storage/compare/): 4 篇对比：R2 vs B2、出站规则、数据库附带存储对照、总表。
-- [对象存储指南](https://tokens.yangtokent.com/storage/guides/): 3 篇指南：对象存储选型、R2 存储类别、存储与 CDN。
-- [对象存储常见问题](https://tokens.yangtokent.com/storage/faq/): 14 个常见问题与回答。
-- [对象存储数据（JSON）](https://tokens.yangtokent.com/data/storage.json): 2 条的机器可读数据，含免费额度与按量价格、出站规则、核实日期；数据库附带存储见数据库数据文件。
+- [对象存储](https://tokens.yangtokent.com/storage/): 4 个免费层/免费计划（Cloudflare R2、Tigris、Google Cloud Storage、UploadThing）、1 个按量付费（Backblaze B2）与 2 个数据库附带存储说明；含不在列表中的服务及原因与变化记录。
+- [对象存储详情](https://tokens.yangtokent.com/storage/offers/): 5 篇存储详情页。
+- [对象存储对比](https://tokens.yangtokent.com/storage/compare/): 6 篇对比：R2 vs B2、R2 vs Tigris、出站规则、免费层出站规则、数据库附带存储对照、总表。
+- [对象存储指南](https://tokens.yangtokent.com/storage/guides/): 5 篇指南：对象存储选型、R2 存储类别、存储与 CDN、免费档与试用区分、操作次数计费对照。
+- [对象存储常见问题](https://tokens.yangtokent.com/storage/faq/): 20 个常见问题与回答。
+- [对象存储数据（JSON）](https://tokens.yangtokent.com/data/storage.json): 5 条的机器可读数据，含免费额度与按量价格、出站规则、核实日期；数据库附带存储见数据库数据文件。
 
 ## 存储详情页
 
 - [Backblaze B2 详解：$6.95/TB 存储、出站 3 倍规则、合作 CDN 出站免费](https://tokens.yangtokent.com/storage/offers/backblaze-b2/): Backblaze B2 按量付费：存储 $6.95/TB/30 天；出站每月平均存储量 3 倍以内免费，超出 $0.01/GB；经合作 CDN 出站不限量免费；Overdrive $15/TB/月；没有免费层。核实于 2026-11-13。
 - [Cloudflare R2 免费层详解：10 GB-month、1M/10M 操作、出站免费、Infrequent Access 不适用免费层](https://tokens.yangtokent.com/storage/offers/cloudflare-r2/): Cloudflare R2 免费层：每月 10 GB-month 存储、1M Class A 操作、10M Class B 操作，出站免费；标准存储 $0.015/GB-month；Infrequent Access 不适用免费层、最短存储 30 天。核实于 2026-11-13。
+- [Tigris 免费层详解：5 GB 标准存储、10,000/100,000 次请求、出站免费、开始无需绑卡](https://tokens.yangtokent.com/storage/offers/tigris/): Tigris 免费层：每月 5 GB 标准存储、10,000 次 PUT/COPY/POST/LIST 请求、100,000 次 GET/SELECT 及其他请求，出站免费，开始无需绑卡；标准存储 $0.02/GB/月；四个存储类别、Infrequent Access 最短存储 30 天、Archive 类别最短存储 90 天。核实于 2026-11-14。
+- [Google Cloud Storage 免费层详解：5 GB-months、5,000/50,000 次操作、100 GB 出站，仅三个美国区域](https://tokens.yangtokent.com/storage/offers/google-cloud-storage/): Google Cloud Storage 免费层：每月 5 GB-months 区域存储、5,000 次 Class A 操作、50,000 次 Class B 操作、100 GB 自北美出站，仅 us-east1、us-west1、us-central1 三个区域；免费档没有结束日期，需要计费账户；$300 试用额度 90 天、与免费档是两回事。核实于 2026-11-14。
+- [UploadThing 2GB App 免费计划详解：$0/月、100GB App $10/月、Usage Based $25/月起](https://tokens.yangtokent.com/storage/offers/uploadthing/): UploadThing 2GB App 计划 $0/月，文件上传服务、不是 S3 桶 API；100GB App $10/月、含 100GB 存储；Usage Based $25/月起、含 250GB 存储、超出 $0.08/GB；2GB 计划功能细节与出站计费在官方已读页面中未述。核实于 2026-11-14。
 
 ## 存储对比
 
-- [对象存储总表：R2、B2 与数据库附带存储一览](https://tokens.yangtokent.com/storage/compare/all-storage-table/): 对象存储总表：R2 免费层、B2 按量付费、Supabase Storage 与 Firebase Storage 附带存储说明，含价格、出站规则与详情链接。核实于 2026-11-13。
+- [对象存储总表：R2、Tigris、Google Cloud Storage、UploadThing、B2 与数据库附带存储一览](https://tokens.yangtokent.com/storage/compare/all-storage-table/): 对象存储总表：R2、Tigris、Google Cloud Storage 免费层，UploadThing 免费计划，B2 按量付费，Supabase Storage 与 Firebase Storage 附带存储说明，含价格、出站规则与详情链接。R2 与 B2 核实于 2026-11-13，其余核实于 2026-11-14。
 - [对象存储出站规则对照：R2 出站免费、B2 3 倍规则与合作 CDN 出站](https://tokens.yangtokent.com/storage/compare/egress-rules/): 三组出站规则对照：R2 所有存储类出站不收费；B2 每月平均存储量 3 倍以内免费、超出 $0.01/GB；B2 经合作 CDN 出站不限量免费。核实于 2026-11-13。
 - [Cloudflare R2 vs Backblaze B2：免费层与按量付费对照](https://tokens.yangtokent.com/storage/compare/r2-vs-b2/): R2 与 B2 逐项对比：免费层、存储价、操作价、存储类别、出站规则、Overdrive。R2 每月免费层、出站免费；B2 按量付费、出站 3 倍规则。核实于 2026-11-13。
 - [独立对象存储 vs 数据库附带存储：R2、B2、Supabase Storage、Firebase Storage 对照](https://tokens.yangtokent.com/storage/compare/storage-included/): R2、B2 与数据库附带的 Supabase Storage、Firebase Storage 对照：独立服务与随套餐提供之分；Supabase 1 GB 文件存储；Firebase Storage Spark 列为 Not applicable、免费额度在 Blaze 列。核实于 2026-11-13。
+- [免费层出站规则对照：R2、Tigris 出站免费，GCS 每月 100 GB，UploadThing 未述](https://tokens.yangtokent.com/storage/compare/free-tier-egress/): 免费层出站规则对照：R2 与 Tigris 全部存储类出站免费；Google Cloud Storage 每月 100 GB 自北美出站免费、超出后起价 $0.08/GiB；UploadThing 出站计费在官方已读页面中未述；B2 按 3 倍规则计费。R2 与 B2 核实于 2026-11-13，其余核实于 2026-11-14。
+- [Cloudflare R2 vs Tigris：免费层、出站、存储类别与操作价对照](https://tokens.yangtokent.com/storage/compare/r2-vs-tigris/): R2 与 Tigris 逐项对比：免费层（10 GB-month/1M/10M 与 5 GB/10,000/100,000）、出站均免费、存储价、操作价、存储类别、绑卡。R2 核实于 2026-11-13，Tigris 核实于 2026-11-14。
 
 ## 存储指南
 
 - [怎么选对象存储：免费层、按量付费与数据库附带存储](https://tokens.yangtokent.com/storage/guides/choosing-object-storage/): 选对象存储的对照：R2 每月免费层与出站免费、B2 按量付费与出站 3 倍规则、数据库附带的 Supabase Storage 与 Firebase Storage。核实于 2026-11-13。
 - [R2 存储类别：Standard 与 Infrequent Access 对照（免费层不适用 IA、30 天最短存储）](https://tokens.yangtokent.com/storage/guides/r2-storage-classes/): R2 两个存储类别对照：Standard $0.015/GB-month；Infrequent Access $0.01/GB-month、取回 $0.01/GB、最短存储 30 天，免费层不适用；两类出站均不收费。核实于 2026-11-13。
 - [对象存储与 CDN：B2 合作 CDN 出站免费与 R2 出站免费](https://tokens.yangtokent.com/storage/guides/storage-with-cdn/): 对象存储与 CDN 搭配：B2 经 8 家合作 CDN 出站不限量免费；R2 所有存储类出站不收费；B2 直接出站按 3 倍规则计费。核实于 2026-11-13。
+- [免费档、试用与额度：怎么区分](https://tokens.yangtokent.com/storage/guides/free-tier-vs-trial/): 免费档按月重置、试用有固定天数、额度是抵扣金：Google Cloud 免费档没有结束日期、$300 额度 90 天，Storj 30 天试用不是免费档、每月 $5 最低费用不是使用额度。R2 与 B2 核实于 2026-11-13，其余核实于 2026-11-14。
+- [操作次数计费：Class A / Class B 对照](https://tokens.yangtokent.com/storage/guides/request-classes/): R2、Tigris、Google Cloud Storage 的免费操作次数与超出后操作价对照；Tigris 定价页 FAQ 列出两类请求包含的操作，R2 与 Google Cloud Storage 的归类在官方已读页面中未述。R2 与 B2 核实于 2026-11-13，其余核实于 2026-11-14。
 
 ## 代码托管与 CI板块
 
-- [代码托管与 CI](https://tokens.yangtokent.com/code/): GitHub Free 与 GitLab Free；含不在列表中的服务及原因与变化记录。
-- [代码托管与 CI详情](https://tokens.yangtokent.com/code/offers/): 2 篇代码托管详情页。
-- [代码托管与 CI对比](https://tokens.yangtokent.com/code/compare/): 3 篇对比：GitHub vs GitLab、CI 分钟数对照、总表。
-- [代码托管与 CI指南](https://tokens.yangtokent.com/code/guides/): 4 篇指南：代码托管选型、CI 分钟数基础、GitLab Runner、私有仓库限制。
-- [代码托管与 CI常见问题](https://tokens.yangtokent.com/code/faq/): 15 个常见问题与回答。
-- [代码托管与 CI数据（JSON）](https://tokens.yangtokent.com/data/code.json): 2 条的机器可读数据，含仓库、CI 分钟数、存储额度、核实日期。
+- [代码托管与 CI](https://tokens.yangtokent.com/code/): GitHub Free、GitLab Free、Bitbucket Free、Codeberg 免费托管与 Azure DevOps 免费额度；含不在列表中的服务及原因与变化记录。
+- [代码托管与 CI详情](https://tokens.yangtokent.com/code/offers/): 5 篇代码托管详情页。
+- [代码托管与 CI对比](https://tokens.yangtokent.com/code/compare/): 5 篇对比：GitHub vs GitLab、CI 分钟数对照、人数上限对照、构建分钟对照、总表。
+- [代码托管与 CI指南](https://tokens.yangtokent.com/code/guides/): 6 篇指南：代码托管选型、CI 分钟数基础、GitLab Runner、私有仓库限制、5 人团队、自托管与托管对照。
+- [代码托管与 CI常见问题](https://tokens.yangtokent.com/code/faq/): 21 个常见问题与回答。
+- [代码托管与 CI数据（JSON）](https://tokens.yangtokent.com/data/code.json): 5 条的机器可读数据，含仓库、CI 分钟数、存储额度、核实日期。
 
 ## 代码托管详情页
 
 - [GitHub Free 详解：无限仓库、2,000 CI/CD 分钟、500 MB Packages、Codespaces](https://tokens.yangtokent.com/code/offers/github-free/): GitHub Free $0：无限公开/私有仓库、2,000 CI/CD 分钟/月、500 MB Packages 存储、Issues & Projects、Dependabot、Codespaces 访问（$0 spend limit）；公开仓库 Actions 分钟与 Packages 免费；多项功能仅限公开仓库。核实于 2026-11-13。
 - [GitLab Free 详解：5 名用户、400 计算分钟、10 GiB 存储、共享 Runner 绑卡验证](https://tokens.yangtokent.com/code/offers/gitlab-free/): GitLab Free $0：注册无需信用卡、每个顶级组 5 名用户、400 计算分钟/月、10 GiB 可调存储、每月 5 GiB 传输数据；共享 Runner 须绑卡（$1 授权验证、不扣费）；Premium $29/用户/月，Ultimate 报价制。核实于 2026-11-13。
+- [Bitbucket Free 详解：5 名用户、无限仓库、每月 50 构建分钟、1 GB LFS 存储](https://tokens.yangtokent.com/code/offers/bitbucket-free/): Bitbucket Free $0：至多 5 名用户、无限公开/私有仓库、每月 50 构建分钟、1 GB LFS 文件存储（另有每仓库 1 GB 存储），构建分钟与存储由工作区共享；付费档价格在定价页与文档页说法不同。核实于 2026-11-14。
+- [Codeberg 免费托管详解：仅自由/开源软件、100 个仓库、私有内容 100 MB、CI 申请制](https://tokens.yangtokent.com/code/offers/codeberg/): Codeberg 免费托管：自由/开源软件项目免费，不要求为任何服务付费；公开仓库须附合适许可证，私有内容至多 100 MB；默认 100 个仓库，超 750 MiB Git 存储先申请；Woodpecker CI 按账户申请接入。核实于 2026-11-14。
+- [Azure DevOps 免费额度详解：前 5 名用户、1,800 流水线分钟、2 GiB Artifacts](https://tokens.yangtokent.com/code/offers/azure-devops-free/): Azure DevOps 免费额度：前 5 名 Basic 用户免费、无限私有 Git 仓库、每月 1,800 分钟 Microsoft-hosted 流水线、1 个分钟不限的 self-hosted 作业、每组织 2 GiB Artifacts；开始使用不需要信用卡。核实于 2026-11-14。
 
 ## 代码托管对比
 
-- [代码托管总表：GitHub Free 与 GitLab Free 一览](https://tokens.yangtokent.com/code/compare/all-code-table/): 代码托管 2 条总表：免费内容、关键限制、绑卡、付费计划一览。核实于 2026-11-13。
+- [代码托管总表：5 条免费层一览](https://tokens.yangtokent.com/code/compare/all-code-table/): 代码托管 5 条总表：免费内容、关键限制、绑卡、付费计划一览。核实于 2026-11-13 与 2026-11-14。
 - [CI 分钟数对照：GitHub 2,000 Actions 分钟 vs GitLab 400 计算分钟](https://tokens.yangtokent.com/code/compare/ci-minutes-compared/): GitHub Free 每月 2,000 CI/CD 分钟与 GitLab Free 每月 400 计算分钟对照：各自计划口径不同，不宜直接等同；公开仓库 Actions 分钟免费。核实于 2026-11-13。
 - [GitHub Free vs GitLab Free：仓库、CI 分钟、存储与人数对照](https://tokens.yangtokent.com/code/compare/github-vs-gitlab/): GitHub Free 与 GitLab Free 逐项对照：仓库与人数、CI 分钟、存储与传输、绑卡要求、付费计划、公开仓库限定。核实于 2026-11-13。
+- [人数上限对照：GitHub、GitLab、Bitbucket、Codeberg、Azure DevOps](https://tokens.yangtokent.com/code/compare/user-limits-compared/): 5 家代码托管人数上限对照：GitLab 每顶级组 5 名用户、Bitbucket 每工作区至多 5 名用户、Azure DevOps 前 5 名 Basic 用户免费；GitHub 与 Codeberg 人数上限在官网已读页面中未述。核实于 2026-11-13 与 2026-11-14。
+- [构建分钟对照：5 家 CI 分钟口径与免费量](https://tokens.yangtokent.com/code/compare/build-minutes-compared/): GitHub 2,000 CI/CD 分钟、GitLab 400 计算分钟、Bitbucket 50 构建分钟、Azure DevOps 1,800 流水线分钟对照，各家口径不同；Codeberg 无月度分钟数，CI 走申请制。核实于 2026-11-13 与 2026-11-14。
 
 ## 代码托管指南
 
@@ -509,6 +531,8 @@
 - [CI 分钟是什么：Actions 分钟与计算分钟的含义与免费量](https://tokens.yangtokent.com/code/guides/ci-minutes-basics/): CI 分钟的含义：代码提交后自动构建与测试任务占用的运行时间；GitHub Free 每月 2,000 分钟、GitLab Free 每月 400 分钟，各自口径不同。核实于 2026-11-13。
 - [GitLab Runner 说明：共享 Runner 绑卡验证与自带 Runner](https://tokens.yangtokent.com/code/guides/gitlab-runners/): GitLab 共享 Runner 须绑卡（$1 授权验证、不扣费），自带 Runner 或禁用共享 Runner 不需要绑卡；GitLab Free 每月 400 计算分钟、注册无需信用卡。核实于 2026-11-13。
 - [私有仓库限制说明：GitHub 公开仓库限定功能与 GitLab 5 用户上限](https://tokens.yangtokent.com/code/guides/private-repo-limits/): GitHub Free 对比表中 repository rules、code owners、草稿 PR、Pages/wikis、secret scanning 等功能仅限公开仓库；GitLab Free 每个顶级组 5 名用户。核实于 2026-11-13。
+- [5 人团队选哪家：Bitbucket、GitLab、Azure DevOps 免费档对照](https://tokens.yangtokent.com/code/guides/five-user-teams/): 5 人团队对照三家 5 用户免费档：Bitbucket Free、GitLab Free、Azure DevOps 前 5 名用户免费，从 CI 分钟、存储、绑卡、超出 5 人后的价格四方面对照。核实于 2026-11-13 与 2026-11-14。
+- [托管还是自托管：Forgejo、SourceHut 自托管与托管免费档对照](https://tokens.yangtokent.com/code/guides/self-hosted-vs-hosted/): 托管与自托管对照：Forgejo 与 SourceHut 可自托管运行，托管侧 5 条免费档各有适用范围；自托管自己负责服务器与运维，托管免费档按厂商规则与额度使用。核实于 2026-11-14。
 
 ## 工作流总览
 
@@ -516,6 +540,35 @@
 - [立项验证](https://tokens.yangtokent.com/guides/idea-validation/): 三种低成本验证方法：着陆页与等候名单、人工代办、访谈问过去的行为；判断信号与常见误区。
 - [周边能力](https://tokens.yangtokent.com/guides/peripheral-capabilities/): 定时任务、消息队列、搜索与缓存的概念与安排方式：主栈自带优先。
 - [上线运营](https://tokens.yangtokent.com/guides/launch-operations/): 上线前后检查清单：监控、状态页、备份与恢复、账单与用量、域名与证书、变更记录与反馈渠道。
+
+## 定时任务与队列板块
+
+- [定时任务与队列](https://tokens.yangtokent.com/schedule/): 6 项独立定时任务与队列服务（2 个定时任务、4 个队列与工作流）；含不在列表中的服务及原因与变化记录。
+- [定时任务与队列详情](https://tokens.yangtokent.com/schedule/offers/): 6 篇详情页。
+- [定时任务与队列对比](https://tokens.yangtokent.com/schedule/compare/): 3 篇对比：定时任务服务对照、队列与工作流服务对照、独立服务 vs 平台自带能力。
+- [定时任务与队列指南](https://tokens.yangtokent.com/schedule/guides/): 2 篇指南：cron 频率与执行次数怎么算、队列重试与延迟入门。
+- [定时任务与队列常见问题](https://tokens.yangtokent.com/schedule/faq/): 12 个常见问题与回答。
+- [定时任务与队列数据（JSON）](https://tokens.yangtokent.com/data/schedule.json): 6 条机器可读数据，含免费额度、频率下限、超时与重试规则、绑卡要求、超额行为、核实日期。
+
+## 定时任务与队列详情页
+
+- [QStash Free 详解：每天 1,000 条消息、10 个排程、重试计费说法冲突](https://tokens.yangtokent.com/schedule/offers/qstash/): QStash Free：每天 1,000 条消息、50 GB 带宽、消息最大 1 MB、10 个活跃排程、10 个队列、延迟最长 7 天、HTTP 响应最长 15 分钟；默认重试 3 次；定价页内重试计费说法冲突，并列呈现。核实于 2026-11-14。
+- [Upstash Workflow Free 详解：每天 1,000 步、重试与并行计步规则](https://tokens.yangtokent.com/schedule/offers/upstash-workflow/): Upstash Workflow Free：每天 1,000 步、消息最大 1 MB、最大并行度 10；一步是 QStash 服务器对 Workflow URL 或外部 URL 的一次调用；重试计为额外步骤，并行步骤计为两步。核实于 2026-11-14。
+- [Inngest Free 详解：每月 50,000 次执行、5 个并发步骤、30 天运行上限](https://tokens.yangtokent.com/schedule/offers/inngest/): Inngest Free：每月 50,000 次执行、每月 500,000 个事件、5 个并发步骤、3 个 Workers、24 小时 trace 与日志历史、事件最大 256 KiB、单步最长 2 小时、运行最长 30 天；无需信用卡。核实于 2026-11-14。
+- [Trigger.dev Free 详解：每月 $5 计算额度、20 个并发运行、10 个排程](https://tokens.yangtokent.com/schedule/offers/trigger-dev/): Trigger.dev Free：每月 $5 计算额度、20 个并发运行、无限任务、10 个排程、1 天日志保留；任务无最长运行时长；等待超过 5 秒不计计算用量；无需信用卡。核实于 2026-11-14。
+- [cron-job.org 详解：完全免费、每分钟排程、API 每天 100 次请求](https://tokens.yangtokent.com/schedule/offers/cron-job-org/): cron-job.org 免费服务：完全免费、无需付费；排程以分钟为单位、可设每分钟执行、每个任务可设时区；超时按任务以秒配置；REST API 默认每天 100 次请求。核实于 2026-11-14。
+- [EasyCron Free 详解：200 EPDs、20 分钟间隔、每月到期](https://tokens.yangtokent.com/schedule/offers/easycron/): EasyCron Free：200 EPDs、5 秒超时、20 分钟间隔、执行跟踪、10 条日志与预测；免费档每月到期；无邮件通知、无失败日志保留。核实于 2026-11-14。
+
+## 定时任务与队列对比
+
+- [定时任务服务对照：cron-job.org、EasyCron、QStash 排程、Inngest cron](https://tokens.yangtokent.com/schedule/compare/cron-services/): 定时任务服务对照：cron-job.org 完全免费、每分钟排程；EasyCron 200 EPDs、20 分钟间隔、每月到期；QStash 排程分辨率 1 分钟；Inngest cron 5 字段、默认 UTC。核实于 2026-11-14。
+- [队列与工作流服务对照：QStash、Workflow、Inngest、Trigger.dev](https://tokens.yangtokent.com/schedule/compare/queue-services/): 队列与工作流服务对照：QStash 每天 1,000 条消息、Workflow 每天 1,000 步、Inngest 每月 50,000 次执行、Trigger.dev 每月 $5 计算额度；延迟、超时、重试与死信队列对照。核实于 2026-11-14。
+- [独立定时与队列服务 vs 平台自带能力：归属、计量与选型对照](https://tokens.yangtokent.com/schedule/compare/standalone-vs-builtin/): 独立定时与队列服务与平台自带能力的对照：Cloudflare Cron Triggers / Queues、Vercel Cron、Render Cron Jobs、GitHub Actions 定时触发随部署与代码平台提供，独立服务另有重试、延迟与死信队列。核实于 2026-11-14。
+
+## 定时任务与队列指南
+
+- [cron 频率与执行次数怎么算：每分钟、每小时、每天各烧多少额度](https://tokens.yangtokent.com/schedule/guides/cron-frequency-and-volume/): cron 频率换算：每分钟 1,440 次/天、每 5 分钟 288 次/天、每小时 24 次/天；各家计量口径对照、时区与夏令时、重试对次数的影响。核实于 2026-11-14。
+- [队列重试与延迟入门：重试次数、退避、死信队列与超时](https://tokens.yangtokent.com/schedule/guides/queue-retries-and-delays/): 队列重试与延迟入门：QStash 默认重试 3 次、退避从 12 秒起；延迟最长 7 天；死信队列保留 3 天；超时对照与并发规则。核实于 2026-11-14。
 
 ## English edition
 
@@ -629,17 +682,17 @@ English P0 detail and comparison pages:
 - [Email (English)](https://tokens.yangtokent.com/en/email/): 5 entries: Resend, Mailgun, Brevo and Postmark allowances plus a SendGrid 60-day trial, in English.
 - [Monitoring & analytics (English)](https://tokens.yangtokent.com/en/monitoring/): 7 entries: UptimeRobot, Sentry, Umami, PostHog, Clarity and Google Analytics 4 free allowances, plus a Plausible trial, in English.
 - [Payments (English)](https://tokens.yangtokent.com/en/payments/): 4 fee schedules: Stripe, Paddle, Lemon Squeezy and Polar, in English.
-- [Authentication (English)](https://tokens.yangtokent.com/en/auth/): 2 entries: Clerk and Auth0, in English.
-- [Object storage (English)](https://tokens.yangtokent.com/en/storage/): 2 entries: Cloudflare R2 and Backblaze B2, in English.
-- [Code hosting (English)](https://tokens.yangtokent.com/en/code/): 2 entries: GitHub Free and GitLab Free, in English.
+- [Authentication (English)](https://tokens.yangtokent.com/en/auth/): 8 entries: Clerk, Auth0, Stytch, Descope, WorkOS, Logto, Kinde, and Frontegg, in English.
+- [Object storage (English)](https://tokens.yangtokent.com/en/storage/): 5 entries: Cloudflare R2, Tigris, Google Cloud Storage, UploadThing, and Backblaze B2, in English.
+- [Code hosting (English)](https://tokens.yangtokent.com/en/code/): 5 entries: GitHub Free, GitLab Free, Bitbucket Free, Codeberg free hosting, and Azure DevOps free allowances, in English.
 - [Web hosting (English)](https://tokens.yangtokent.com/en/hosting/): 11 entries: 8 verified free hosts, 2 conditional, 1 shutdown archive, in English.
 - [Workflow overview (English)](https://tokens.yangtokent.com/en/workflow/): 14-stage map from idea to launch, a 15-item checklist, and 3 $0 stacks, in English.
 - [Email offer details (English)](https://tokens.yangtokent.com/en/email/offers/): 5 English detail pages: Resend, Mailgun, Brevo, Twilio SendGrid, Postmark.
 - [Monitoring offer details (English)](https://tokens.yangtokent.com/en/monitoring/offers/): 7 English detail pages: UptimeRobot, Sentry, Umami, PostHog, Plausible, Microsoft, Google.
 - [Payment offer details (English)](https://tokens.yangtokent.com/en/payments/offers/): 4 English detail pages: Stripe, Paddle, Lemon Squeezy, Polar.
-- [Auth offer details (English)](https://tokens.yangtokent.com/en/auth/offers/): 2 English detail pages: Clerk, Auth0.
-- [Storage offer details (English)](https://tokens.yangtokent.com/en/storage/offers/): 2 English detail pages: Cloudflare, Backblaze.
-- [Code hosting offer details (English)](https://tokens.yangtokent.com/en/code/offers/): 2 English detail pages: GitHub, GitLab.
+- [Auth offer details (English)](https://tokens.yangtokent.com/en/auth/offers/): 8 English detail pages: Clerk, Auth0, Stytch, Descope, WorkOS, Logto, Kinde, Frontegg.
+- [Storage offer details (English)](https://tokens.yangtokent.com/en/storage/offers/): 5 English detail pages: Cloudflare, Tigris, Google Cloud, UploadThing, Backblaze.
+- [Code hosting offer details (English)](https://tokens.yangtokent.com/en/code/offers/): 5 English detail pages: GitHub, GitLab, Bitbucket, Codeberg, Azure DevOps.
 - [Web hosting offer details (English)](https://tokens.yangtokent.com/en/hosting/offers/): 11 English detail pages: InfinityFree, Byet.host, x10Hosting, AwardSpace, HelioHost, GoogieHost, FreeHosting.com, FreeHostia, ProFreeHost, TinkerHost, 000webhost（Hostinger）.
 
 English P3 detail and comparison pages:
@@ -662,10 +715,22 @@ English P3 detail and comparison pages:
 - [Polar fees (Polar)](https://tokens.yangtokent.com/en/payments/offers/polar/): Merchant of Record; international cards +1.5%; disputes $15 each; payout fees passed through at Stripe cost. Verified 2026-11-13.
 - [Clerk Hobby free tier (Clerk)](https://tokens.yangtokent.com/en/auth/offers/clerk/): 50,000 MRUs per app, 100 MROs per app, unlimited apps, 3 dashboard seats, up to 3 social logins, fixed 7-day session, 1-day log retention, API Keys 1,000 creations and 100,000 verifications per month, M2M Tokens 2,500 creations and 100,000 verifications per month, 5 user impersonations per month, custom domain. Verified 2026-11-13.
 - [Auth0 Free (Auth0)](https://tokens.yangtokent.com/en/auth/offers/auth0/): Up to 25,000 MAU (External Active Users), 1 custom domain (card verification required), 5 organizations, 1 enterprise connection, 1,000 M2M tokens, 5 Actions, 1-day log retention, no Pro MFA / role management. Verified 2026-11-13.
+- [Stytch pay as you go (Stytch)](https://tokens.yangtokent.com/en/auth/offers/stytch/): Always free 10,000 monthly active users and AI agents, unlimited organizations, 5 SSO or SCIM connections, 1,000 M2M tokens; $125 per connection beyond 5; card requirements follow the official page. Verified 2026-11-14.
+- [Descope Free Forever (Descope)](https://tokens.yangtokent.com/en/auth/offers/descope/): $0, 7,500 MAU, 10 monthly active tenants, 3 SSO connections, 1 federated app (OIDC), 5 test users, 10,000 M2M exchanges, 2,000 MACs, 2,000 MATKs; no overages, upgrade required past limits; no custom domain. Verified 2026-11-14.
+- [WorkOS AuthKit (WorkOS)](https://tokens.yangtokent.com/en/auth/offers/workos/): Free up to 1,000,000 MAU, including social login, MFA, passkeys, and RBAC; SSO and Directory Sync $125 per connection per month each (official blog); custom domains carry an extra monthly fee; free to start, card needed for production. Verified 2026-11-14.
+- [Logto Cloud Free (Logto)](https://tokens.yangtokent.com/en/auth/offers/logto/): $0, up to 50,000 MAU, 50K tokens (access tokens only), 3 applications, 1 machine-to-machine app, 1 custom domain, 3 social connectors, 1 webhook, 3-day audit log retention; no credit card required; no organizations or MFA. Verified 2026-11-14.
+- [Kinde Free (Kinde)](https://tokens.yangtokent.com/en/auth/offers/kinde/): $0 forever, 10,500 MAU, 5 monthly active organizations, 1 enterprise SSO connection, 2,000 M2M tokens, MFA, custom domain, 5 custom roles and 10 permissions, 10 feature flags, 1 webhook; no credit card required; overages billed automatically. Verified 2026-11-14.
+- [Frontegg pay as you go (Frontegg)](https://tokens.yangtokent.com/en/auth/offers/frontegg/): $0 per month, 7,500 MAU, 5 enterprise connections (SSO/SCIM), unlimited organizations, custom domain, fully customized hosted login, unlimited team seats; no credit card needed to start; overage prices follow the official page. Verified 2026-11-14.
 - [Cloudflare R2 free tier (Cloudflare)](https://tokens.yangtokent.com/en/storage/offers/cloudflare-r2/): Monthly: 10 GB-month storage, 1M Class A operations, 10M Class B operations, egress free; standard storage $0.015/GB-month; Class A $4.50/M requests; Class B $0.36/M requests. Verified 2026-11-13.
 - [Backblaze B2 (pay-as-you-go) (Backblaze)](https://tokens.yangtokent.com/en/storage/offers/backblaze-b2/): Storage $6.95/TB/30 days; egress free up to 3x average monthly stored data, $0.01/GB beyond that; Overdrive $15/TB/month. Verified 2026-11-13.
+- [Tigris free tier (Tigris)](https://tokens.yangtokent.com/en/storage/offers/tigris/): Monthly: 5 GB Standard storage, 10,000 PUT/COPY/POST/LIST requests, 100,000 GET/SELECT and other requests, egress free, no card to start; Standard storage $0.02/GB/month; Class A $0.005/1,000 requests; Class B $0.0005/1,000 requests; four storage classes. Verified 2026-11-14.
+- [Google Cloud Storage free tier (Google Cloud)](https://tokens.yangtokent.com/en/storage/offers/google-cloud-storage/): Monthly: 5 GB-months regional storage, 5,000 Class A operations, 50,000 Class B operations, 100 GB outbound transfer from North America; three US regions only; Free Tier has no end date; billing account required; $300 trial credit valid 90 days, separate from the Free Tier. Verified 2026-11-14.
+- [UploadThing 2GB App free plan (UploadThing)](https://tokens.yangtokent.com/en/storage/offers/uploadthing/): 2GB App plan $0/month, a file upload service, not an S3 bucket API; 100GB App $10/month with 100GB storage; Usage Based from $25/month with 250GB storage, $0.08/GB beyond 250GB. Verified 2026-11-14.
 - [GitHub Free (GitHub)](https://tokens.yangtokent.com/en/code/offers/github-free/): Unlimited public/private repositories; Dependabot; 2,000 CI/CD minutes/month; 500 MB Packages storage; Issues & Projects; community support; Codespaces access ($0 spend limit). Verified 2026-11-13.
 - [GitLab Free (GitLab)](https://tokens.yangtokent.com/en/code/offers/gitlab-free/): 5 users per top-level group; 400 compute minutes/month; 10 GiB adjustable storage; 5 GiB data transfer per month. Verified 2026-11-13.
+- [Bitbucket Free (Bitbucket)](https://tokens.yangtokent.com/en/code/offers/bitbucket-free/): Up to 5 users; unlimited public/private repositories; 50 build minutes per month; 1 GB LFS file storage (plus 1 GB storage per repository); build minutes and storage shared by all users in the workspace. Verified 2026-11-14.
+- [Codeberg free hosting (Codeberg)](https://tokens.yangtokent.com/en/code/offers/codeberg/): Free hosting for free/libre software projects; no payment required for any service; public repositories need a suitable license; private content capped at 100 MB; 100 repositories by default. Verified 2026-11-14.
+- [Azure DevOps free allowances (Azure DevOps)](https://tokens.yangtokent.com/en/code/offers/azure-devops-free/): First 5 Basic users free; unlimited private Git repositories; 1,800 Microsoft-hosted pipeline minutes per month; 1 self-hosted job with unlimited minutes; 2 GiB of Artifacts per organization. Verified 2026-11-14.
 - [InfinityFree free web hosting (InfinityFree)](https://tokens.yangtokent.com/en/hosting/offers/infinityfree/): 5 GB disk space; Unlimited bandwidth; 400 MySQL databases; PHP 8.4; free SSL certificate; free subdomain with 25+ suffixes or bring a domain; free DNS service; full .htaccess support. Verified 2026-11-13.
 - [Byet.host free web hosting (Byet.host)](https://tokens.yangtokent.com/en/hosting/offers/byet-host/): 5 GB NVMe disk; Unlimited bandwidth; unlimited MySQL databases; PHP 8.3; VistaPanel; free subdomain with 24 suffixes; unlimited addon/parked/subdomains; single file max 10 MB. Verified 2026-11-13.
 - [x10Hosting free web hosting (x10Hosting)](https://tokens.yangtokent.com/en/hosting/offers/x10hosting/): 500 MB starting space; 2 MySQL databases; 3 domains; 3 email accounts; DirectAdmin panel; 300+ app installer; free subdomains .x10.mx / .x10.bz / .elementfx.com / .x10.network or bring a domain. Verified 2026-11-13.
@@ -690,16 +755,22 @@ English P3 detail and comparison pages:
 - [Merchant of Record fees compared](https://tokens.yangtokent.com/en/compare/mor-fees-compared/): Merchant of Record fees compared: Paddle 5% + 50¢, Lemon Squeezy 5% + 50¢, Polar four tiers from 5% + 50¢, Stripe Managed Payments 3.5% + Payments fees; surcharges, dispute fees, payout fees, and tax compared item by item. Verified 2026-11-13.
 - [Polar tiers compared](https://tokens.yangtokent.com/en/compare/polar-tiers/): Polar tiers compared: Starter free 5% + 50¢, Pro $20/month 3.8% + 40¢, Growth $100/month 3.6% + 35¢, Scale $400/month 3.4% + 30¢; official break-even points about $1,379, $5,634, and $19,048/month; Early Member rule uses 2026-05-27 as the cutoff. Verified 2026-11-13.
 - [Stripe vs Paddle vs Lemon Squeezy](https://tokens.yangtokent.com/en/compare/stripe-paddle-lemon-squeezy/): Stripe, Paddle, and Lemon Squeezy compared from a mainland China perspective: mainland China is not on Stripe’s official supported-country list (50 entries), Hong Kong is on the list; Paddle and Lemon Squeezy are Merchant of Record services at 5% + 50¢; signup eligibility follows the official supported-country/verification pages. Verified 2026-11-13.
-- [All auth compared](https://tokens.yangtokent.com/en/compare/all-auth-table/): Clerk Hobby, Auth0 Free, Supabase Auth, and Firebase Auth compared: standalone auth services vs database-included auth, MRU vs MAU units, limits, cards, and overage rules. Verified 2026-11-13.
+- [All auth compared](https://tokens.yangtokent.com/en/compare/all-auth-table/): Clerk Hobby, Auth0 Free, Stytch, Descope, WorkOS, Logto, Kinde, Frontegg, Supabase Auth, and Firebase Auth compared: standalone auth services vs database-included auth, MRU vs MAU units, limits, cards, and overage rules. 6 new entries verified 2026-11-14.
 - [Standalone vs database-included auth](https://tokens.yangtokent.com/en/compare/auth-included/): Standalone auth services (Clerk Hobby, Auth0 Free) vs auth included with database free tiers (Supabase Auth 50,000 MAU, Firebase Auth 50K MAU): what belongs where, MRU vs MAU units, and how the numbers relate. Verified 2026-11-13.
 - [Clerk vs Auth0](https://tokens.yangtokent.com/en/compare/clerk-vs-auth0/): Clerk Hobby vs Auth0 Free: MRU vs MAU units, 50,000 MRUs vs 25,000 MAU, social logins vs enterprise connections, organizations, cards, custom domains, log retention, and overage rules. Verified 2026-11-13.
-- [All object storage compared](https://tokens.yangtokent.com/en/compare/all-storage-table/): All object storage in one table: Cloudflare R2 free tier, Backblaze B2 pay-as-you-go, and the Supabase Storage and Firebase Storage notes from the Databases section, with storage, prices, and egress rules from vendor official pages. Verified 2026-11-13.
+- [Stytch vs Frontegg](https://tokens.yangtokent.com/en/compare/stytch-vs-frontegg/): Stytch vs Frontegg: 10,000 monthly active users vs 7,500 MAU, 5 SSO/SCIM connections each, unlimited organizations, M2M tokens, custom domains, cards, and overage rules. Verified 2026-11-14.
+- [Descope vs Kinde](https://tokens.yangtokent.com/en/compare/descope-vs-kinde/): Descope Free Forever vs Kinde Free: 7,500 vs 10,500 MAU, 10 tenants vs 5 organizations, 3 vs 1 SSO connections, hard limits vs automatic overage billing, custom domains, M2M, and audit retention. Verified 2026-11-14.
+- [All object storage compared](https://tokens.yangtokent.com/en/compare/all-storage-table/): All object storage in one table: the Cloudflare R2, Tigris, and Google Cloud Storage free tiers, the UploadThing free plan, Backblaze B2 pay-as-you-go, and the Supabase Storage and Firebase Storage notes from the Databases section, with storage, prices, and egress rules from vendor official pages. R2 and B2 verified 2026-11-13, the rest verified 2026-11-14.
 - [Egress rules compared](https://tokens.yangtokent.com/en/compare/egress-rules/): Egress rules compared across three paths: R2 charges no egress for any storage class, B2 direct egress is free up to 3x average monthly stored data at $0.01/GB beyond that, and B2 egress via partner CDNs is unlimited free. Verified 2026-11-13.
 - [Cloudflare R2 vs Backblaze B2](https://tokens.yangtokent.com/en/compare/r2-vs-b2/): Cloudflare R2 vs Backblaze B2: R2 has a monthly free tier with egress free of charge; B2 is pay-as-you-go with no free tier and a 3x egress rule. Storage prices, operation prices, storage classes, and Overdrive compared. Verified 2026-11-13.
 - [Standalone vs database-bundled storage](https://tokens.yangtokent.com/en/compare/storage-included/): Standalone object storage vs database-bundled storage: R2 and B2 are standalone services; Supabase Storage comes with the Supabase plan with 1 GB file storage; Firebase Storage reads Not applicable in the Spark plan column, with free allowances in the Blaze column. Verified 2026-11-13.
-- [All code hosting compared](https://tokens.yangtokent.com/en/compare/all-code-table/): Code hosting, 2 entries at a glance: free tiers, key limits, card requirements, and paid plans for GitHub Free and GitLab Free. Neither pricing page states permanent wording on the official pages read. Verified 2026-11-13.
+- [Free-tier egress rules compared](https://tokens.yangtokent.com/en/compare/free-tier-egress/): R2 and Tigris egress free for all storage classes; Google Cloud Storage 100 GB of outbound transfer from North America free each month, general data transfer from $0.08/GiB beyond that; UploadThing egress charging unstated on the official pages read; B2 billed under the 3x rule. R2 and B2 verified 2026-11-13, the rest verified 2026-11-14.
+- [Cloudflare R2 vs Tigris](https://tokens.yangtokent.com/en/compare/r2-vs-tigris/): R2 vs Tigris item by item: free tier (10 GB-month/1M/10M vs 5 GB/10,000/100,000), egress free on both, storage prices, operation prices, storage classes, card requirement. R2 verified 2026-11-13, Tigris verified 2026-11-14.
+- [All code hosting compared](https://tokens.yangtokent.com/en/compare/all-code-table/): Code hosting, 5 entries at a glance: free tiers, key limits, card requirements, and paid plans for GitHub Free, GitLab Free, Bitbucket Free, Codeberg free hosting, and Azure DevOps free allowances. No pricing page states permanent wording on the official pages read. Verified 2026-11-13 and 2026-11-14.
 - [CI minutes compared](https://tokens.yangtokent.com/en/compare/ci-minutes-compared/): GitHub Free 2,000 CI/CD minutes/month and GitLab Free 400 compute minutes/month compared: each plan meters by its own rules, so the figures cannot be equated directly; public repository Actions minutes are free. Verified 2026-11-13.
 - [GitHub Free vs GitLab Free](https://tokens.yangtokent.com/en/compare/github-vs-gitlab/): GitHub Free and GitLab Free compared item by item: repositories and users, CI minutes, storage and transfer, card requirements, paid plans, and public-repository-only features. Verified 2026-11-13.
+- [User limits compared](https://tokens.yangtokent.com/en/compare/user-limits-compared/): User limits across 5 code hosting free tiers: GitLab 5 users per top-level group, Bitbucket up to 5 users per workspace, Azure DevOps first 5 Basic users free; GitHub and Codeberg user limits are not stated on the official pages read. Verified 2026-11-13 and 2026-11-14.
+- [Build minutes compared](https://tokens.yangtokent.com/en/compare/build-minutes-compared/): GitHub 2,000 CI/CD minutes, GitLab 400 compute minutes, Bitbucket 50 build minutes, and Azure DevOps 1,800 pipeline minutes compared, with different metering rules; Codeberg states no monthly minute figure and runs CI on a request basis. Verified 2026-11-13 and 2026-11-14.
 - [All free web hosts compared](https://tokens.yangtokent.com/en/compare/all-hosts-table/): 10 free web hosts in one table: space, traffic, databases, PHP, SSL, ads, domains, card requirements, idle policies, panels, and installers, transcribed from vendor official pages. Verified 2026-11-13.
 - [Four free web hosts compared](https://tokens.yangtokent.com/en/compare/four-hosts-overview/): InfinityFree, Byet.host, x10Hosting, and AwardSpace compared: space, databases, limit transparency, and idle rules; InfinityFree and Byet.host are both 5 GB, x10Hosting has 500 MB starting space, AwardSpace has the strictest traffic and database limits. Verified 2026-11-13.
 - [Web hosting vs VPS vs static hosting](https://tokens.yangtokent.com/en/compare/hosting-vs-vps-vs-static/): Web hosting, VPS, and static hosting compared: web hosting runs PHP + MySQL with no maintenance, a VPS gives root access with self-management, static hosting serves HTML/CSS/JS only and cannot run WordPress. Verified 2026-11-13.
@@ -708,10 +779,11 @@ English P3 detail and comparison pages:
 - [English data: email](https://tokens.yangtokent.com/data/email-en.json): 5 entries, English text, facts identical to data/email.json.
 - [English data: monitoring](https://tokens.yangtokent.com/data/monitoring-en.json): 7 entries, English text, facts identical to data/monitoring.json.
 - [English data: payments](https://tokens.yangtokent.com/data/payments-en.json): 4 entries, English text, facts identical to data/payments.json.
-- [English data: auth](https://tokens.yangtokent.com/data/auth-en.json): 2 entries, English text, facts identical to data/auth.json.
-- [English data: storage](https://tokens.yangtokent.com/data/storage-en.json): 2 entries, English text, facts identical to data/storage.json.
-- [English data: code](https://tokens.yangtokent.com/data/code-en.json): 2 entries, English text, facts identical to data/code.json.
+- [English data: auth](https://tokens.yangtokent.com/data/auth-en.json): 8 entries, English text, facts identical to data/auth.json.
+- [English data: storage](https://tokens.yangtokent.com/data/storage-en.json): 5 entries, English text, facts identical to data/storage.json.
+- [English data: code](https://tokens.yangtokent.com/data/code-en.json): 5 entries, English text, facts identical to data/code.json.
 - [English data: hosting](https://tokens.yangtokent.com/data/hosting-en.json): 11 entries, English text, facts identical to data/hosting.json.
 - [English data: deploy](https://tokens.yangtokent.com/data/deploy-en.json): 10 entries, English text, facts identical to data/deploy.json.
 - [English data: databases](https://tokens.yangtokent.com/data/database-en.json): 6 entries, English text, facts identical to data/database.json.
 - [English data: domains](https://tokens.yangtokent.com/data/domain-en.json): 6 entries, English text, facts identical to data/domain.json.
+- [English data: scheduled tasks & queues](https://tokens.yangtokent.com/data/schedule-en.json): 6 entries, English text, facts identical to data/schedule.json.
