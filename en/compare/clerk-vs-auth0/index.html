@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clerk vs Auth0: free tiers compared item by item</title>
+<meta name="description" content="Clerk Hobby vs Auth0 Free: MRU vs MAU units, 50,000 MRUs vs 25,000 MAU, social logins vs enterprise connections, organizations, cards, custom domains, log retention, and overage rules. Verified 2026-11-13.">
+<link rel="canonical" href="https://tokens.yangtokent.com/en/compare/clerk-vs-auth0/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/compare/clerk-vs-auth0/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/auth/compare/clerk-vs-auth0/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/auth/compare/clerk-vs-auth0/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Clerk vs Auth0",
+  "description": "Clerk Hobby vs Auth0 Free: MRU vs MAU units, 50,000 MRUs vs 25,000 MAU, social logins vs enterprise connections, organizations, cards, custom domains, log retention, and overage rules. Verified 2026-11-13.",
+  "inLanguage": "en",
+  "datePublished": "2026-11-14",
+  "dateModified": "2026-11-14",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/en/compare/clerk-vs-auth0/",
+  "author": {
+    "@type": "Organization",
+    "name": "Free Token Monitor",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Free Token Monitor",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Clerk’s 50,000 twice Auth0’s 25,000?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Clerk’s 50,000 is MRUs (retained users; a user counts as retained when returning 24 hours after signing up); Auth0’s 25,000 is MAU (External Active Users). The units differ, so the numbers cannot be compared directly by size. Verified 2026-11-13."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do both free tiers need a credit card?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Neither needs a card for sign-up: Clerk states No credit card required on the official site; Auth0 sign-up needs no card. The difference is custom domains: Auth0’s 1 custom domain requires card verification; card requirements for Clerk custom domains are not stated on the official pages read. Verified 2026-11-13."
+      }
+    }
+  ]
+}
+</script>
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../">Free Token Monitor</a></h1>
+<p>Free credits for agents: only vendor-verified offers. Check the official page before claiming.</p></div></header>
+<nav><div class="wrap"><a href="../../">Home</a><a href="../../vps/">Free VPS</a><a href="../../wool/">VPS Deals</a><a href="../../cheap/">Cheap VPS</a><a href="../../deploy/">Deploy &amp; Hosting</a><a href="../../database/">Databases</a><a href="../../domain/">Domains &amp; DNS</a><a href="../../code/">Code Hosting</a><a href="../../auth/">Auth</a><a href="../../storage/">Storage</a><a href="../../email/">Email</a><a href="../../monitoring/">Monitoring</a><a href="../../payments/">Payments</a><a href="../../hosting/">Web Hosting</a><a href="../../workflow/">Workflow</a><a href="../../offers/">Offer details</a><a href="../" aria-current="page">Comparisons</a><a href="../../faq/">FAQ</a><a href="../../../auth/compare/clerk-vs-auth0/">中文</a></div></nav>
+<main><div class="wrap">
+
+<article>
+<p class="crumb"><a href="../../">Home</a> / <a href="../">Comparisons</a> / Clerk vs Auth0</p>
+
+<h1>Clerk vs Auth0</h1>
+<p class="meta">Updated 2026-11-14 · Table data from vendor official pages (verified 2026-11-13)</p>
+<div class="answer"><p><b>Short answer:</b> the units differ: Clerk counts MRU (50,000 MRUs per app; a user counts as retained when returning 24 hours after signing up), Auth0 counts MAU (up to 25,000 MAU, officially worded External Active Users). The two numbers cannot be compared directly by size. Social logins: Clerk up to 3; Auth0 has 1 enterprise connection. Organizations: Clerk 100 MROs per app, Auth0 5 organizations. Cards: Clerk needs no credit card; Auth0 sign-up needs no card, custom domains require card verification. Log retention is 1 day for both. Overage: Clerk states required upgrades and a 1-month grace period; Auth0 overage behavior is not stated on the official pages read.</p></div>
+<h2>Comparison table</h2><div class="tablewrap"><table><thead><tr><th>Item</th><th><a href="../../auth/offers/clerk/">Clerk Hobby</a></th><th><a href="../../auth/offers/auth0/">Auth0 Free</a></th></tr></thead><tbody><tr><td><b>Free tier</b></td><td>Hobby Free</td><td>Free $0</td></tr><tr><td><b>Unit</b></td><td>MRU (monthly retained user)</td><td>MAU (External Active Users)</td></tr><tr><td><b>Free user count</b></td><td>50,000 MRUs per app</td><td>Up to 25,000 MAU</td></tr><tr><td><b>Organizations</b></td><td>100 MROs per app</td><td>5 organizations</td></tr><tr><td><b>Social logins / enterprise connections</b></td><td>Up to 3 social logins</td><td>1 enterprise connection</td></tr><tr><td><b>App count</b></td><td>Unlimited apps</td><td>Check the official page</td></tr><tr><td><b>Dashboard seats</b></td><td>3</td><td>Check the official page</td></tr><tr><td><b>Session</b></td><td>Fixed 7-day session</td><td>Check the official page</td></tr><tr><td><b>Log retention</b></td><td>1 day</td><td>1 day</td></tr><tr><td><b>API / M2M</b></td><td>API Keys 1,000 creations, 100,000 verifications per month; M2M Tokens 2,500 creations, 100,000 verifications per month; 5 user impersonations per month</td><td>1,000 M2M tokens; 5 Actions</td></tr><tr><td><b>Custom domain</b></td><td>Custom domain included</td><td>1, card verification required</td></tr><tr><td><b>Card</b></td><td>No credit card required</td><td>Sign-up needs no card; custom domain requires card verification</td></tr><tr><td><b>Not included</b></td><td>Check the official page</td><td>Pro MFA / role management</td></tr><tr><td><b>Overage rules</b></td><td>Exceeding 50,000 MRU requires upgrading to Pro; exceeding 100 MRO requires upgrading to the B2B add-on; 1-month grace period (FAQ)</td><td>Not stated on the official pages read — check the official page</td></tr><tr><td><b>Paid tiers</b></td><td>Pro $20/month (annual billing), including 50,000 MRUs, $0.02 each beyond that; Business $250/month (annual billing)</td><td>Essentials $35/month, Professional $240/month</td></tr><tr><td><b>Verified date</b></td><td>2026-11-13</td><td>2026-11-13</td></tr></tbody></table></div><h2>Units differ</h2><p>Clerk MRU definition: a user counts as retained when returning 24 hours after signing up. Official wording: “A user is counted as retained when they return 24+ hours after signing up.” Auth0 MAU is worded “External Active Users”; details of how activity is counted are not stated on the official pages read. The units differ, so 50,000 and 25,000 cannot be compared directly by size.</p><h2>Social logins and enterprise connections</h2><p>Clerk Hobby allows up to 3 social logins; Auth0 Free has 1 enterprise connection. Social logins and enterprise connections serve different sign-in scenarios.</p><h2>Organizations</h2><p>Clerk counts organizations in MRO: an organization has at least 2 members, with at least 1 being a retained user that month; Hobby allows 100 MROs per app. Auth0 Free has 5 organizations. The two units differ, so the numbers cannot be compared directly by size.</p><h2>Cards and custom domains</h2><p>Clerk states “No credit card required” on the official site, with a custom domain included. Auth0 sign-up needs no card; 1 custom domain requires card verification. Card requirements for Clerk custom domains are not stated on the official pages read — check the official page.</p><h2>Overage rules</h2><p>Clerk states overage rules: exceeding 50,000 MRU requires upgrading to Pro, exceeding 100 MRO requires upgrading to the B2B add-on, with a 1-month grace period stated in the FAQ. Auth0 behavior past 25,000 MAU is not stated on the official pages read — check the official page.</p><h2>How to choose</h2><p>By unit: Clerk counts retained users, Auth0 counts external active users; the definition wording is above. By social logins and enterprise connections: Clerk up to 3 social logins, Auth0 1 enterprise connection. By organizations: Clerk 100 MROs per app, Auth0 5 organizations. By card: neither needs a card for sign-up; Auth0 custom domains require card verification. By overage: Clerk states required upgrades and a grace period; Auth0 overage behavior follows the official page.</p>
+<h2>FAQ</h2>
+<details><summary>Is Clerk’s 50,000 twice Auth0’s 25,000?</summary>
+<p>No. Clerk’s 50,000 is MRUs (retained users; a user counts as retained when returning 24 hours after signing up); Auth0’s 25,000 is MAU (External Active Users). The units differ, so the numbers cannot be compared directly by size. Verified 2026-11-13.</p>
+</details>
+<details><summary>Do both free tiers need a credit card?</summary>
+<p>Neither needs a card for sign-up: Clerk states No credit card required on the official site; Auth0 sign-up needs no card. The difference is custom domains: Auth0’s 1 custom domain requires card verification; card requirements for Clerk custom domains are not stated on the official pages read. Verified 2026-11-13.</p>
+</details>
+<p><b>Disclaimer:</b> table data comes from vendor official pages; allowances can change or end at any time — check the official page before claiming.</p>
+<div class="related"><h2>Related pages</h2>
+<ul>
+<li><a href="../auth-included/">Standalone vs database-included auth</a></li><li><a href="../all-auth-table/">All auth compared</a></li><li><a href="../../auth/offers/clerk/">Clerk Hobby free tier</a></li><li><a href="../../auth/offers/auth0/">Auth0 Free</a></li><li><a href="../../auth/">Back to the Authentication list</a></li>
+</ul></div>
+
+</article>
+
+</div></main>
+<footer><div class="wrap"><p><a href="../../">Home</a> · <a href="../../vps/">Free VPS</a> · <a href="../../wool/">VPS Deals</a> · <a href="../../cheap/">Cheap VPS</a> · <a href="../../deploy/">Deploy &amp; Hosting</a> · <a href="../../database/">Databases</a> · <a href="../../domain/">Domains &amp; DNS</a> · <a href="../../code/">Code Hosting</a> · <a href="../../auth/">Auth</a> · <a href="../../storage/">Storage</a> · <a href="../../email/">Email</a> · <a href="../../monitoring/">Monitoring</a> · <a href="../../payments/">Payments</a> · <a href="../../hosting/">Web Hosting</a> · <a href="../../workflow/">Workflow</a> · <a href="../../offers/">Offer details</a> · <a href="../">Comparisons</a> · <a href="../../faq/">FAQ</a> · <a href="../../../auth/compare/clerk-vs-auth0/">中文</a></p><p>Data is for reference only — check the vendor’s official page. Every auth entry was verified against a vendor official page; verification dates are on each page. Free tiers and limits can change or end at any time; read the vendor’s terms before claiming. No invite links.</p></div></footer>
+</body>
+</html>
