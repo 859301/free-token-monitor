@@ -10,8 +10,8 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Object storage: R2 free tier, B2 pay-as-you-go, and database-bundled storage notes</title>
-<meta name="description" content="Object storage: Cloudflare R2 monthly free tier (10 GB-month, 1M/10M operations, egress free), Backblaze B2 pay-as-you-go ($6.95/TB/30 days, 3x egress rule, no free tier), plus Supabase Storage and Firebase Storage notes from the Databases section. Verified 2026-11-13.">
+<title>Object storage: R2, Tigris, and Google Cloud Storage free tiers, UploadThing free plan, B2 pay-as-you-go, and database-bundled storage notes</title>
+<meta name="description" content="Object storage: monthly free tiers from Cloudflare R2, Tigris, and Google Cloud Storage, the UploadThing 2GB App free plan, Backblaze B2 pay-as-you-go ($6.95/TB/30 days, 3x egress rule, no free tier), plus Supabase Storage and Firebase Storage notes from the Databases section. R2 and B2 verified 2026-11-13, the rest verified 2026-11-14.">
 <link rel="canonical" href="https://tokens.yangtokent.com/en/storage/">
 <link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/storage/">
 <link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/storage/">
@@ -20,8 +20,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Object storage: 1 free tier, 1 pay-as-you-go service, and 2 database-bundled storage notes",
-  "description": "Object storage: Cloudflare R2 monthly free tier (10 GB-month, 1M/10M operations, egress free), Backblaze B2 pay-as-you-go ($6.95/TB/30 days, 3x egress rule, no free tier), plus Supabase Storage and Firebase Storage notes from the Databases section. Verified 2026-11-13.",
+  "headline": "Object storage: 4 free tiers/free plans, 1 pay-as-you-go service, and 2 database-bundled storage notes",
+  "description": "Object storage: monthly free tiers from Cloudflare R2, Tigris, and Google Cloud Storage, the UploadThing 2GB App free plan, Backblaze B2 pay-as-you-go ($6.95/TB/30 days, 3x egress rule, no free tier), plus Supabase Storage and Firebase Storage notes from the Databases section. R2 and B2 verified 2026-11-13, the rest verified 2026-11-14.",
   "inLanguage": "en",
   "datePublished": "2026-11-14",
   "dateModified": "2026-11-14",
@@ -103,20 +103,23 @@ footer a { color:var(--accent); }
 <article>
 <p class="crumb"><a href="../">Home</a> / Object storage</p>
 
-<h1>Object storage: 1 free tier, 1 pay-as-you-go service, and 2 database-bundled storage notes</h1>
-<p class="meta">Updated 2026-11-14 · 2 entries (verified 2026-11-13) · Specs and terms transcribed from vendor official pages</p>
-<div class="answer"><p>1 free tier: <a href="offers/cloudflare-r2/">Cloudflare R2</a> (monthly 10 GB-month storage, 1M Class A operations, 10M Class B operations, egress free). 1 pay-as-you-go service: <a href="offers/backblaze-b2/">Backblaze B2</a> (storage $6.95/TB/30 days, egress free up to 3x average monthly stored data, $0.01/GB beyond that, no free tier). 2 database-bundled storage notes: Supabase Storage (1 GB file storage, provided with the Supabase plan) and Firebase Storage (the Spark plan column reads “Not applicable”; free allowances sit in the Blaze column), with details on the <a href="../database/offers/supabase/">Supabase</a> and <a href="../database/offers/firebase/">Firebase</a> detail pages.</p></div>
-<p>Object storage holds user-uploaded images, files, and similar content. Egress charges are the main difference between providers: R2 charges no egress for any storage class, while B2 bills egress under the 3x rule — see <a href="../compare/egress-rules/">Egress rules compared</a>. Database-bundled storage is covered in the section below, with details on the database detail pages.</p>
+<h1>Object storage: 4 free tiers/free plans, 1 pay-as-you-go service, and 2 database-bundled storage notes</h1>
+<p class="meta">Updated 2026-11-14 · 5 entries (R2 and B2 verified 2026-11-13, the rest verified 2026-11-14) · Specs and terms transcribed from vendor official pages</p>
+<div class="answer"><p>4 free tiers/free plans: <a href="offers/cloudflare-r2/">Cloudflare R2</a> (monthly 10 GB-month storage, 1M Class A operations, 10M Class B operations, egress free), <a href="offers/tigris/">Tigris</a> (monthly 5 GB Standard storage, 10,000/100,000 requests, egress free, no card to start), <a href="offers/google-cloud-storage/">Google Cloud Storage</a> (monthly 5 GB-months storage, 5,000/50,000 operations, 100 GB egress, three US regions only), and the <a href="offers/uploadthing/">UploadThing</a> 2GB App plan ($0/month, a file upload service). 1 pay-as-you-go service: <a href="offers/backblaze-b2/">Backblaze B2</a> (storage $6.95/TB/30 days, egress free up to 3x average monthly stored data, $0.01/GB beyond that, no free tier). 2 database-bundled storage notes: Supabase Storage (1 GB file storage, provided with the Supabase plan) and Firebase Storage (the Spark plan column reads “Not applicable”; free allowances sit in the Blaze column), with details on the <a href="../database/offers/supabase/">Supabase</a> and <a href="../database/offers/firebase/">Firebase</a> detail pages.</p></div>
+<p>Object storage holds user-uploaded images, files, and similar content. Egress charges are the main difference between providers: R2 and Tigris charge no egress for any storage class, Google Cloud Storage includes 100 GB of outbound transfer from North America each month, and B2 bills egress under the 3x rule — see <a href="../compare/free-tier-egress/">Free-tier egress rules compared</a>. Database-bundled storage is covered in the section below, with details on the database detail pages.</p>
 
-<p><button type="button" data-filter="all" aria-pressed="true" style="padding:7px 13px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;cursor:pointer;font-size:13px;">All 2</button><button type="button" data-filter="free" aria-pressed="false" style="padding:7px 13px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;cursor:pointer;font-size:13px;">Free tier</button><button type="button" data-filter="payg" aria-pressed="false" style="padding:7px 13px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;cursor:pointer;font-size:13px;">Pay-as-you-go</button></p>
+<p><button type="button" data-filter="all" aria-pressed="true" style="padding:7px 13px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;cursor:pointer;font-size:13px;">All 5</button><button type="button" data-filter="free" aria-pressed="false" style="padding:7px 13px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;cursor:pointer;font-size:13px;">Free tier</button><button type="button" data-filter="payg" aria-pressed="false" style="padding:7px 13px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;cursor:pointer;font-size:13px;">Pay-as-you-go</button></p>
 <p id="filter-note" class="meta"></p>
 
-<section class="group"><h2>Group 1: Free tier (1 entry)</h2>
+<section class="group"><h2>Group 1: Free tiers and free plans (4 entries)</h2>
 <p>The free allowance is metered monthly; prices beyond the allowance and the egress rule follow the official pricing page.</p>
 <div class="tablewrap"><table>
 <thead><tr><th>Service</th><th>Free allowance (monthly)</th><th>Beyond the free allowance</th><th>Egress rule</th><th>Verified</th></tr></thead>
 <tbody>
 <tr data-tags="free"><td><a href="offers/cloudflare-r2/">Cloudflare R2 free tier</a><br><span class="meta">Cloudflare</span></td><td>10 GB-month storage, 1M Class A operations, 10M Class B operations</td><td>Standard storage $0.015/GB-month; Class A $4.50/M requests; Class B $0.36/M requests</td><td>No charges for any storage class</td><td>2026-11-13 · <a href="https://developers.cloudflare.com/r2/pricing/" target="_blank" rel="noopener noreferrer">Official page</a></td></tr>
+<tr data-tags="free"><td><a href="offers/tigris/">Tigris free tier</a><br><span class="meta">Tigris</span></td><td>5 GB Standard storage, 10,000 PUT/COPY/POST/LIST requests, 100,000 GET/SELECT and other requests</td><td>Standard storage $0.02/GB/month; Class A $0.005/1,000 requests; Class B $0.0005/1,000 requests</td><td>Free for all four storage classes</td><td>2026-11-14 · <a href="https://www.tigrisdata.com/pricing/" target="_blank" rel="noopener noreferrer">Official page</a></td></tr>
+<tr data-tags="free"><td><a href="offers/google-cloud-storage/">Google Cloud Storage free tier</a><br><span class="meta">Google Cloud</span></td><td>5 GB-months regional storage (US regions only), 5,000 Class A operations, 50,000 Class B operations, 100 GB outbound transfer from North America</td><td>Standard storage from $0.02/GiB/month; operation charges from $0.0004/1,000 operations</td><td>100 GB of outbound transfer from North America free each month (excluding China and Australia destinations); general data transfer from $0.08/GiB beyond that</td><td>2026-11-14 · <a href="https://docs.cloud.google.com/free/docs/free-cloud-features" target="_blank" rel="noopener noreferrer">Official page</a></td></tr>
+<tr data-tags="free"><td><a href="offers/uploadthing/">UploadThing 2GB App free plan</a><br><span class="meta">UploadThing</span></td><td>2GB App plan $0/month; feature details: check the official page</td><td>100GB App $10/month; Usage Based from $25/month, 250GB included storage, $0.08/GB beyond 250GB</td><td>Check the official page</td><td>2026-11-14 · <a href="https://uploadthing.com/#pricing" target="_blank" rel="noopener noreferrer">Official page</a></td></tr>
 </tbody></table></div></section><section class="group"><h2>Group 2: Pay-as-you-go (1 entry)</h2>
 <p>No free tier; storage and egress are billed separately per the official pricing page.</p>
 <div class="tablewrap"><table>
@@ -130,6 +133,7 @@ footer a { color:var(--accent); }
 <p>The following services are not in the tables above, with the reason for each stated as a fact.</p>
 <ul>
 <li><b>The “Backblaze B2 10GB free” claim:</b> the official pricing page showed no such wording in either of two captures; B2 appears in the pay-as-you-go group above.</li>
+<li><b>Storj:</b> the official pricing page states a 30-day free trial (25 GB free storage for 30 days), not a monthly-reset free tier; after the trial, standard prices apply (storage $7/TB, egress $7/TB), and the $5 monthly minimum fee is not a usage credit.</li>
 <li><b>Self-built file storage on a VPS:</b> a server form, see <a href="../vps/">Free VPS</a>.</li>
 <li><b>File space bundled with free web hosting:</b> a PHP + MySQL form, different from object storage.</li>
 <li><b>Deploy and hosting platforms:</b> static and container hosting, see <a href="../deploy/">Deploy &amp; hosting</a>.</li>
@@ -141,10 +145,10 @@ footer a { color:var(--accent); }
 
 <div class="related"><h2>Related pages</h2>
 <ul>
-<li><a href="offers/">Storage offer details</a></li><li><a href="../compare/r2-vs-b2/">Cloudflare R2 vs Backblaze B2</a></li><li><a href="../compare/all-storage-table/">All object storage compared</a></li><li><a href="../compare/egress-rules/">Egress rules compared</a></li><li><a href="../database/">Databases</a></li><li><a href="../faq/">FAQ</a></li><li><a href="../">Home</a></li>
+<li><a href="offers/">Storage offer details</a></li><li><a href="../compare/r2-vs-b2/">Cloudflare R2 vs Backblaze B2</a></li><li><a href="../compare/r2-vs-tigris/">Cloudflare R2 vs Tigris</a></li><li><a href="../compare/free-tier-egress/">Free-tier egress rules compared</a></li><li><a href="../compare/all-storage-table/">All object storage compared</a></li><li><a href="../compare/egress-rules/">Egress rules compared</a></li><li><a href="../database/">Databases</a></li><li><a href="../faq/">FAQ</a></li><li><a href="../">Home</a></li>
 </ul></div>
 
-<p>Machine-readable data: <a href="../../data/storage-en.json">data/storage-en.json</a> (2 entries, English text, facts identical to the Chinese data file).</p>
+<p>Machine-readable data: <a href="../../data/storage-en.json">data/storage-en.json</a> (5 entries, English text, facts identical to the Chinese data file).</p>
 </article>
 
 <script>
@@ -153,8 +157,8 @@ footer a { color:var(--accent); }
   var groups = document.querySelectorAll('.group');
   var note = document.getElementById('filter-note');
   var notes = {
-    'all': 'Showing both entries: 1 free tier and 1 pay-as-you-go service. Database-bundled storage notes are in the section below.',
-    'free': 'Only the free-tier entry: Cloudflare R2.',
+    'all': 'Showing all 5 entries: 4 free tiers/free plans and 1 pay-as-you-go service. Database-bundled storage notes are in the section below.',
+    'free': 'Only the free-tier and free-plan entries: Cloudflare R2, Tigris, Google Cloud Storage, and UploadThing.',
     'payg': 'Only the pay-as-you-go entry: Backblaze B2.'
   };
   function paint(c, on) {
