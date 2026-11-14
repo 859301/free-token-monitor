@@ -10,8 +10,8 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>对象存储常见问题：14 问（出站收费、免费层、存储类别、CDN）</title>
-<meta name="description" content="对象存储 14 个常见问题：出站收费、R2 免费层、B2 有没有免费层、存储类别、Class A/B、合作 CDN、数据库附带存储。含 1 个英文问题原文。核实于 2026-11-13。">
+<title>对象存储常见问题：20 问（出站收费、免费层、存储类别、CDN、试用与绑卡）</title>
+<meta name="description" content="对象存储 20 个常见问题：出站收费、R2/Tigris/Google Cloud Storage 免费层、UploadThing 免费计划、B2 有没有免费层、存储类别、Class A/B、合作 CDN、数据库附带存储、Storj 试用、绑卡。含 1 个英文问题原文。R2 与 B2 核实于 2026-11-13，其余核实于 2026-11-14。">
 <link rel="canonical" href="https://tokens.yangtokent.com/storage/faq/">
 <style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
 * { box-sizing:border-box; }
@@ -72,11 +72,11 @@ footer a { color:var(--accent); }
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "对象存储常见问题：14 问（出站收费、免费层、存储类别、CDN）",
-  "description": "对象存储 14 个常见问题：出站收费、R2 免费层、B2 有没有免费层、存储类别、Class A/B、合作 CDN、数据库附带存储。含 1 个英文问题原文。核实于 2026-11-13。",
+  "headline": "对象存储常见问题：20 问（出站收费、免费层、存储类别、CDN、试用与绑卡）",
+  "description": "对象存储 20 个常见问题：出站收费、R2/Tigris/Google Cloud Storage 免费层、UploadThing 免费计划、B2 有没有免费层、存储类别、Class A/B、合作 CDN、数据库附带存储、Storj 试用、绑卡。含 1 个英文问题原文。R2 与 B2 核实于 2026-11-13，其余核实于 2026-11-14.",
   "inLanguage": "zh-CN",
   "datePublished": "2026-11-13",
-  "dateModified": "2026-11-13",
+  "dateModified": "2026-11-14",
   "mainEntityOfPage": "https://tokens.yangtokent.com/storage/faq/",
   "author": {
     "@type": "Organization",
@@ -201,6 +201,54 @@ footer a { color:var(--accent); }
     },
     {
       "@type": "Question",
+      "name": "Tigris 免费层每月包含什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "每月 5 GB 标准存储、10,000 次 PUT/COPY/POST/LIST 请求、100,000 次 GET/SELECT 及其他请求，出站免费，开始无需绑卡。超出后标准存储 $0.02/GB/月，Class A $0.005/1,000 次请求，Class B $0.0005/1,000 次请求。核实于 2026-11-14。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Google Cloud Storage 免费层适用于哪些区域？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "仅适用于 us-east1、us-west1、us-central1 三个区域的用量，用量合并计算。每月 5 GB-months 区域存储、5,000 次 Class A 操作、50,000 次 Class B 操作、100 GB 自北美出站（不含中国与澳大利亚目的地）。核实于 2026-11-14。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "UploadThing 免费计划包含什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2GB App 计划 $0/月。功能细节在官方已读页面中未完整呈现，以官方页面为准。100GB App 计划 $10/月、含 100GB 存储；Usage Based 计划 $25/月起、含 250GB 存储、超出 $0.08/GB。核实于 2026-11-14。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Storj 是免费档还是试用？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "试用。官方定价页写明 30 天免费、25 GB 免费存储 30 天，不是按月重置的免费档；试用结束按标准价格计费（存储 $7/TB、出口 $7/TB），每月 $5 最低费用不是使用额度。核实于 2026-11-14。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "哪些对象存储开始无需绑卡？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tigris：官方定价页写明开始无需绑卡。Google Cloud Storage：免费档需要计费账户，试用注册需要信用卡或其他支付方式。R2 与 UploadThing 的绑卡要求在官方已读页面中未述，以官方页面为准。核实于 2026-11-14。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "哪些对象存储出站免费？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "R2 与 Tigris：全部存储类出站均免费。Google Cloud Storage：每月 100 GB 自北美出站免费，超出后通用数据传输起价 $0.08/GiB。UploadThing 的出站计费在官方已读页面中未述。B2 直接出站按 3 倍规则计费。R2 与 B2 核实于 2026-11-13，其余核实于 2026-11-14。"
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Free object storage with free egress?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -218,11 +266,11 @@ footer a { color:var(--accent); }
 <article>
 <p class="crumb"><a href="../../">首页</a> / <a href="../">对象存储</a> / 常见问题</p>
 <h1>对象存储常见问题</h1>
-<p class="meta">核实于 2026-11-13 · 本页更新于 2026-11-13</p>
+<p class="meta">R2 与 B2 核实于 2026-11-13；其余核实于 2026-11-14 · 本页更新于 2026-11-14</p>
 <div class="answer"><p>14 个问题：13 个中文问题（1 条为调研中的归纳问法，其余按常见问法整理），1 个英文问题原文、中文回答。答案里的参数以各家官网为准，核实于 2026-11-13。</p></div>
-<h2 id="zh">中文问题</h2><details><summary>用户上传的图片/文件存哪？</summary><p>这是调研中的归纳问法。对象存储用来存放用户上传的图片、文件等内容：<a href="../offers/cloudflare-r2/">Cloudflare R2</a> 每月免费层、<a href="../offers/backblaze-b2/">Backblaze B2</a> 按量付费，数据库附带的 <a href="../../database/offers/supabase/">Supabase Storage</a> 与 <a href="../../database/offers/firebase/">Firebase Storage</a> 见数据库板块。出站规则见<a href="../compare/egress-rules/">出站规则对照</a>。</p></details><details><summary>R2 和 B2 哪个免费额度大？</summary><p>B2 没有免费层，无法按免费额度比较。R2 每月免费：10 GB-month 存储、1M Class A 操作、10M Class B 操作，出站免费。详情见<a href="../compare/r2-vs-b2/">R2 vs B2 对照</a>。</p></details><details><summary>出站流量（egress）收费吗？</summary><p>R2 不收费：所有存储类均不收出站带宽费用。B2 直接出站每月平均存储量 3 倍以内免费、超出 $0.01/GB，经合作 CDN 出站不限量免费。完整对照见<a href="../compare/egress-rules/">出站规则对照</a>。</p></details><details><summary>R2 免费层每月包含什么？</summary><p>每月 10 GB-month 存储、1M Class A 操作、10M Class B 操作，出站免费。官方定价页写明全部包含用量按月计量。详情见<a href="../offers/cloudflare-r2/">Cloudflare R2 详情页</a>。</p></details><details><summary>R2 超出免费额度后怎么收费？</summary><p>标准存储 $0.015/GB-month，Class A 操作 $4.50/M 请求，Class B 操作 $0.36/M 请求。出站不收费。详情见<a href="../offers/cloudflare-r2/">Cloudflare R2 详情页</a>。</p></details><details><summary>R2 免费层适用于 Infrequent Access 吗？</summary><p>不适用。官方定价页计费示例中，Infrequent Access 的免费层一栏为 NA。Infrequent Access 价格：$0.01/GB-month，Class A $9.00/M，Class B $0.90/M，数据取回 $0.01/GB，最短存储 30 天。见<a href="../guides/r2-storage-classes/">R2 存储类别指南</a>。</p></details><details><summary>Infrequent Access 的最短存储期是多久？</summary><p>30 天。未满 30 天删除或转出时的计费，以官方页面为准。见<a href="../guides/r2-storage-classes/">R2 存储类别指南</a>。</p></details><details><summary>R2 的 Class A 和 Class B 操作怎么区分？</summary><p>官方已读页面未述两类操作各包含哪些操作，以官方页面为准。两类操作的免费量与价格：免费层每月 1M Class A、10M Class B；超出后 Class A $4.50/M 请求，Class B $0.36/M 请求。</p></details><details><summary>Backblaze B2 有免费层吗？</summary><p>没有。官方定价页两次抓取均未出现“10GB 免费”表述。B2 按量付费：存储 $6.95/TB/30 天。详情见<a href="../offers/backblaze-b2/">Backblaze B2 详情页</a>。</p></details><details><summary>B2 存储和出站分别多少钱？</summary><p>存储 $6.95/TB/30 天。出站每月平均存储量 3 倍以内免费，超出 $0.01/GB；经合作 CDN 出站不限量免费。Overdrive $15/TB/月。详情见<a href="../offers/backblaze-b2/">Backblaze B2 详情页</a>。</p></details><details><summary>哪些合作 CDN 走 B2 出站免费？</summary><p>Fastly、Cloudflare、bunny.net、CacheFly、CoreWeave、Equinix Metal、Vultr、phoenixNAP。经这些合作 CDN 出站不限量免费。见<a href="../guides/storage-with-cdn/">对象存储与 CDN 指南</a>。</p></details><details><summary>Supabase Storage 包含多少文件存储？</summary><p>1 GB 文件存储，随 Supabase 套餐提供。详情见<a href="../../database/offers/supabase/">数据库板块 Supabase 详情页</a>。</p></details><details><summary>Firebase Storage 的免费额度在哪个计划列？</summary><p>定价页 Spark 计划列为“Not applicable”，免费额度在 Blaze 列。详情见<a href="../../database/offers/firebase/">数据库板块 Firebase 详情页</a>。</p></details><h2 id="en">English questions（中文回答）</h2><details><summary>Free object storage with free egress?</summary><p>这是调研中的归纳问法（英文）。Cloudflare R2：每月免费层（10 GB-month 存储、1M Class A 操作、10M Class B 操作），所有存储类出站不收费。Backblaze B2 没有免费层，出站按 3 倍规则计费。详情见<a href="../compare/egress-rules/">出站规则对照</a>。</p></details><h2 id="not-listed">不在列表中的服务</h2>
+<h2 id="zh">中文问题</h2><details><summary>用户上传的图片/文件存哪？</summary><p>这是调研中的归纳问法。对象存储用来存放用户上传的图片、文件等内容：<a href="../offers/cloudflare-r2/">Cloudflare R2</a> 每月免费层、<a href="../offers/backblaze-b2/">Backblaze B2</a> 按量付费，数据库附带的 <a href="../../database/offers/supabase/">Supabase Storage</a> 与 <a href="../../database/offers/firebase/">Firebase Storage</a> 见数据库板块。出站规则见<a href="../compare/egress-rules/">出站规则对照</a>。</p></details><details><summary>R2 和 B2 哪个免费额度大？</summary><p>B2 没有免费层，无法按免费额度比较。R2 每月免费：10 GB-month 存储、1M Class A 操作、10M Class B 操作，出站免费。详情见<a href="../compare/r2-vs-b2/">R2 vs B2 对照</a>。</p></details><details><summary>出站流量（egress）收费吗？</summary><p>R2 不收费：所有存储类均不收出站带宽费用。B2 直接出站每月平均存储量 3 倍以内免费、超出 $0.01/GB，经合作 CDN 出站不限量免费。完整对照见<a href="../compare/egress-rules/">出站规则对照</a>。</p></details><details><summary>R2 免费层每月包含什么？</summary><p>每月 10 GB-month 存储、1M Class A 操作、10M Class B 操作，出站免费。官方定价页写明全部包含用量按月计量。详情见<a href="../offers/cloudflare-r2/">Cloudflare R2 详情页</a>。</p></details><details><summary>R2 超出免费额度后怎么收费？</summary><p>标准存储 $0.015/GB-month，Class A 操作 $4.50/M 请求，Class B 操作 $0.36/M 请求。出站不收费。详情见<a href="../offers/cloudflare-r2/">Cloudflare R2 详情页</a>。</p></details><details><summary>R2 免费层适用于 Infrequent Access 吗？</summary><p>不适用。官方定价页计费示例中，Infrequent Access 的免费层一栏为 NA。Infrequent Access 价格：$0.01/GB-month，Class A $9.00/M，Class B $0.90/M，数据取回 $0.01/GB，最短存储 30 天。见<a href="../guides/r2-storage-classes/">R2 存储类别指南</a>。</p></details><details><summary>Infrequent Access 的最短存储期是多久？</summary><p>30 天。未满 30 天删除或转出时的计费，以官方页面为准。见<a href="../guides/r2-storage-classes/">R2 存储类别指南</a>。</p></details><details><summary>R2 的 Class A 和 Class B 操作怎么区分？</summary><p>官方已读页面未述两类操作各包含哪些操作，以官方页面为准。两类操作的免费量与价格：免费层每月 1M Class A、10M Class B；超出后 Class A $4.50/M 请求，Class B $0.36/M 请求。</p></details><details><summary>Backblaze B2 有免费层吗？</summary><p>没有。官方定价页两次抓取均未出现“10GB 免费”表述。B2 按量付费：存储 $6.95/TB/30 天。详情见<a href="../offers/backblaze-b2/">Backblaze B2 详情页</a>。</p></details><details><summary>B2 存储和出站分别多少钱？</summary><p>存储 $6.95/TB/30 天。出站每月平均存储量 3 倍以内免费，超出 $0.01/GB；经合作 CDN 出站不限量免费。Overdrive $15/TB/月。详情见<a href="../offers/backblaze-b2/">Backblaze B2 详情页</a>。</p></details><details><summary>哪些合作 CDN 走 B2 出站免费？</summary><p>Fastly、Cloudflare、bunny.net、CacheFly、CoreWeave、Equinix Metal、Vultr、phoenixNAP。经这些合作 CDN 出站不限量免费。见<a href="../guides/storage-with-cdn/">对象存储与 CDN 指南</a>。</p></details><details><summary>Supabase Storage 包含多少文件存储？</summary><p>1 GB 文件存储，随 Supabase 套餐提供。详情见<a href="../../database/offers/supabase/">数据库板块 Supabase 详情页</a>。</p></details><details><summary>Firebase Storage 的免费额度在哪个计划列？</summary><p>定价页 Spark 计划列为“Not applicable”，免费额度在 Blaze 列。详情见<a href="../../database/offers/firebase/">数据库板块 Firebase 详情页</a>。</p></details><details><summary>Tigris 免费层每月包含什么？</summary><p>每月 5 GB 标准存储、10,000 次 PUT/COPY/POST/LIST 请求、100,000 次 GET/SELECT 及其他请求，出站免费，开始无需绑卡。超出后标准存储 $0.02/GB/月，Class A $0.005/1,000 次请求，Class B $0.0005/1,000 次请求。核实于 2026-11-14。</p></details><details><summary>Google Cloud Storage 免费层适用于哪些区域？</summary><p>仅适用于 us-east1、us-west1、us-central1 三个区域的用量，用量合并计算。每月 5 GB-months 区域存储、5,000 次 Class A 操作、50,000 次 Class B 操作、100 GB 自北美出站（不含中国与澳大利亚目的地）。核实于 2026-11-14。</p></details><details><summary>UploadThing 免费计划包含什么？</summary><p>2GB App 计划 $0/月。功能细节在官方已读页面中未完整呈现，以官方页面为准。100GB App 计划 $10/月、含 100GB 存储；Usage Based 计划 $25/月起、含 250GB 存储、超出 $0.08/GB。核实于 2026-11-14。</p></details><details><summary>Storj 是免费档还是试用？</summary><p>试用。官方定价页写明 30 天免费、25 GB 免费存储 30 天，不是按月重置的免费档；试用结束按标准价格计费（存储 $7/TB、出口 $7/TB），每月 $5 最低费用不是使用额度。核实于 2026-11-14。</p></details><details><summary>哪些对象存储开始无需绑卡？</summary><p>Tigris：官方定价页写明开始无需绑卡。Google Cloud Storage：免费档需要计费账户，试用注册需要信用卡或其他支付方式。R2 与 UploadThing 的绑卡要求在官方已读页面中未述，以官方页面为准。核实于 2026-11-14。</p></details><details><summary>哪些对象存储出站免费？</summary><p>R2 与 Tigris：全部存储类出站均免费。Google Cloud Storage：每月 100 GB 自北美出站免费，超出后通用数据传输起价 $0.08/GiB。UploadThing 的出站计费在官方已读页面中未述。B2 直接出站按 3 倍规则计费。R2 与 B2 核实于 2026-11-13，其余核实于 2026-11-14。</p></details><h2 id="en">English questions（中文回答）</h2><details><summary>Free object storage with free egress?</summary><p>这是调研中的归纳问法（英文）。Cloudflare R2：每月免费层（10 GB-month 存储、1M Class A 操作、10M Class B 操作），所有存储类出站不收费。Backblaze B2 没有免费层，出站按 3 倍规则计费。详情见<a href="../compare/egress-rules/">出站规则对照</a>。</p></details><h2 id="not-listed">不在列表中的服务</h2>
 <p>不在列表中的服务及原因见<a href="../">对象存储列表</a>页末尾的说明框。</p>
-<div class="note"><b>信息来源：</b>厂商官方页；核实于 2026-11-13。条款随时可能调整或结束，领取前请以厂商官方页为准。</div>
+<div class="note"><b>信息来源：</b>厂商官方页；R2 与 B2 核实于 2026-11-13，其余核实于 2026-11-14。条款随时可能调整或结束，领取前请以厂商官方页为准。</div>
 <div class="related"><h2>相关页面</h2><ul><li><a href="../">对象存储列表</a></li><li><a href="../offers/">存储详情总览</a></li><li><a href="../compare/all-storage-table/">对象存储总表</a></li><li><a href="../guides/choosing-object-storage/">怎么选对象存储</a></li></ul></div>
 </article>
 </div></main>
