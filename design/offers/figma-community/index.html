@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Figma 社区资源详解：免费文件默认 CC BY 4.0 须署名，插件与小部件许可不同</title>
+<meta name="description" content="Figma 社区资源许可因资源类型与免费/付费而异：免费文件与幻灯片模板默认 CC BY 4.0，须署名，明确不是公有领域许可；免费插件与小部件默认 Community Free Resource License，不得转售或再分发；创作者可附加或替换条款。核实于 2026-11-14。">
+<link rel="canonical" href="https://tokens.yangtokent.com/design/offers/figma-community/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/design/offers/figma-community/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/design/offers/figma-community/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/design/offers/figma-community/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Figma 社区资源详解：免费文件默认 CC BY 4.0 须署名，插件与小部件许可不同",
+  "description": "Figma 社区资源许可因资源类型与免费/付费而异：免费文件与幻灯片模板默认 CC BY 4.0，须署名，明确不是公有领域许可；免费插件与小部件默认 Community Free Resource License，不得转售或再分发；创作者可附加或替换条款。核实于 2026-11-14。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-15",
+  "dateModified": "2026-11-15",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/design/offers/figma-community/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Figma 社区免费文件能商用吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "能。免费文件默认 CC BY 4.0，可为任何目的（包括商业目的）分享与改编，须向原作者署名；明确不是公有领域许可；创作者可附加其他许可类型。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "插件和文件是同一个许可吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不是。免费插件与小部件默认 Community Free Resource License，可在任何目的的文件中运行、不得转售或再分发；创作者可补充或替换为自有许可条款。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "买了付费文件能转售吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不能转售或再分发文件（超出允许范围的部分）。购买者可与至多五名编辑分享文件内容，并将内容并入不限数量的产出物，但产出物须显著不同且主要价值不得源自文件内容本身。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>设计素材授权信息，以官方页面为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">设计素材</a><a href="../" aria-current="page">详情</a><a href="../../compare/">对比</a><a href="../../guides/">指南</a><a href="../../faq/">问答</a></div></nav>
+<main><div class="wrap">
+<p class="crumb"><a href="../../../">首页</a> › <a href="../../">设计素材</a> › <a href="../">详情</a> › Figma 社区资源</p><h1>Figma 社区资源</h1><p class="meta">发布于 2026-11-15 · 更新于 2026-11-15 · 来源：<a href="https://help.figma.com/hc/en-us/articles/360042296374-Figma-Community-copyright-and-licensing">Figma 官网社区版权与许可帮助页</a> · 核实于 2026-11-14</p><p><span class="tag">社区资源</span><span class="tag">CC BY 4.0</span><span class="tag">按资源核对</span><span class="tag">须署名</span></p><div class="answer"><p>Figma 社区资源许可因资源类型与免费/付费而异：免费文件与幻灯片模板默认 CC BY 4.0，可为任何目的分享与改编、须署名，明确不是公有领域许可；免费插件与小部件默认 Community Free Resource License，可在任何目的的文件中运行、不得转售或再分发；创作者可附加或替换条款，以单个资源页的许可标注为准。核实于 2026-11-14，授权信息以官方页面为准。</p></div><div class="note"><p><b>按资源类型与作者条款核对：</b>免费文件默认 CC BY 4.0 须署名，插件与小部件默认许可不同，创作者可附加或替换条款。使用前以单个资源页的许可标注为准。</p></div><div class="toc"><strong>本页内容</strong><ul><li><a href="#snap">授权速览</a></li><li><a href="#types">按资源类型区分</a></li><li><a href="#freefiles">免费文件与模板</a></li><li><a href="#paid">付费资源</a></li><li><a href="#scope">免费范围与付费墙界限</a></li><li><a href="#banned">禁止事项</a></li><li><a href="#official">官方链接</a></li><li><a href="#risks">注意事项</a></li><li><a href="#faq">常见问题</a></li></ul></div><h2 id="snap">授权速览</h2><div class="tablewrap"><table class="fact"><tbody><tr><th>许可形态</th><td>按资源类型与免费/付费区分；创作者可附加或替换条款</td></tr><tr><th>免费文件</th><td>默认 CC BY 4.0，须署名，不是公有领域许可</td></tr><tr><th>幻灯片模板</th><td>默认 CC BY 4.0，须署名，不是公有领域许可</td></tr><tr><th>免费插件与小部件</th><td>默认 Community Free Resource License，不得转售或再分发</td></tr><tr><th>付费资源</th><td>Community Paid Resource License</td></tr><tr><th>可商用</th><td>按资源类型核对（免费文件可为任何目的分享与改编）</td></tr><tr><th>署名</th><td>免费文件与模板须署名；插件与小部件以官方页面为准</td></tr><tr><th>核实日期</th><td>2026-11-14</td></tr><tr><th>来源</th><td><a href="https://help.figma.com/hc/en-us/articles/360042296374-Figma-Community-copyright-and-licensing">Figma 官网社区版权与许可帮助页</a></td></tr></tbody></table></div><h2 id="types">按资源类型区分</h2><div class="tablewrap"><table><thead><tr><th>资源类型</th><th>默认许可</th><th>要点</th></tr></thead><tbody><tr><td>免费文件</td><td>CC BY 4.0</td><td>可为任何目的分享与改编，须向原作者署名；不是公有领域许可；创作者可附加其他许可类型</td></tr><tr><td>幻灯片模板</td><td>CC BY 4.0</td><td>与免费文件相同</td></tr><tr><td>免费插件</td><td>Community Free Resource License</td><td>可在用于任何目的的文件中运行；不得转售或再分发；创作者可补充或替换为自有许可条款</td></tr><tr><td>免费小部件</td><td>Community Free Resource License</td><td>与免费插件相同</td></tr><tr><td>付费文件/插件/小部件</td><td>Community Paid Resource License</td><td>见“付费资源”一节</td></tr></tbody></table></div><h2 id="freefiles">免费文件与模板</h2><p>CC BY 4.0 下，免费文件可为任何目的（包括商业目的）分享与改编：分享指以任何媒介或格式复制与再分发，改编指转换与基于该材料创作；社区成员须向原作者署名。创作者可在此之外选择附加其他许可类型。</p><h2 id="paid">付费资源</h2><p>购买付费文件的用户可与至多五名编辑分享文件内容、可将文件内容并入不限数量的产出物（设计、应用、网站等），但产出物须与原文件内容显著不同、须投入时间精力与技能、且主要价值不得源自文件内容本身；不得转售或再分发文件（超出允许范围的部分）。付费文件创作者不得以其他条款提供商业文件；插件与小部件创作者可补充该许可。付费 Figma Design 文件中包含的免费预览内容适用 CC BY 4.0。</p><h2 id="scope">免费范围与付费墙界限</h2><p>Figma 免费档（Starter）本身的范围未核实，以官方页面为准。插件与小部件的署名要求帮助页未写，以官方页面为准。禁止商标化使用帮助页未写，以官方页面为准。</p><h2 id="banned">禁止事项</h2><ul><li>插件与小部件：不得转售或再分发。</li><li>付费文件：不得转售或再分发文件（超出允许范围的部分）。</li></ul><h2 id="official">官方链接</h2><p><a class="btn" href="https://help.figma.com/hc/en-us/articles/360042296374-Figma-Community-copyright-and-licensing">去官网查看</a></p><p><a href="https://help.figma.com/hc/en-us/articles/360042296374-Figma-Community-copyright-and-licensing">Figma 官网社区版权与许可帮助页</a></p><h2 id="risks">注意事项</h2><ul><li>免费文件默认 CC BY 4.0，明确不是公有领域许可</li><li>插件与小部件的署名要求帮助页未写，以官方页面为准</li><li>禁止商标化使用帮助页未写，以官方页面为准</li><li>Figma 免费档（Starter）本身的范围未核实，以官方页面为准</li></ul><h2 id="faq">常见问题</h2><details><summary>Figma 社区免费文件能商用吗？</summary><p>能。免费文件默认 CC BY 4.0，可为任何目的（包括商业目的）分享与改编，须向原作者署名；明确不是公有领域许可；创作者可附加其他许可类型。</p></details><details><summary>插件和文件是同一个许可吗？</summary><p>不是。免费插件与小部件默认 Community Free Resource License，可在任何目的的文件中运行、不得转售或再分发；创作者可补充或替换为自有许可条款。</p></details><details><summary>买了付费文件能转售吗？</summary><p>不能转售或再分发文件（超出允许范围的部分）。购买者可与至多五名编辑分享文件内容，并将内容并入不限数量的产出物，但产出物须显著不同且主要价值不得源自文件内容本身。</p></details><div class="note"><p>以上内容为官方授权页文本的整理，授权信息以官方页面为准；具体使用情形请咨询执业律师。核实于 2026-11-14。</p></div><div class="related"><h3>相关页面</h3><p><a href="../iconify/">Iconify（图标聚合器）</a></p><p><a href="../../compare/single-vs-aggregator/">单一授权库 vs 聚合器与社区：为什么必须逐项核对</a></p><p><a href="../../guides/license-five-questions/">免费素材授权速读：商用、署名、修改、转售、商标五问</a></p><p><a href="../../">设计素材授权速查表</a></p></div>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">设计素材</a> · <a href="../">详情</a> · <a href="../../compare/">对比</a> · <a href="../../guides/">指南</a> · <a href="../../faq/">问答</a></p><p>授权信息以官方页面为准；条款随时可能调整，使用前请看清对方条款。</p></div></footer>
+</body>
+</html>
