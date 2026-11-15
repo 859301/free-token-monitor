@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>图标合规落地：声明保留怎么做、品牌图标只用于指代本身</title>
+<meta name="description" content="图标声明保留的落地做法：Font Awesome 嵌入注释勿删、Lucide 两部分声明都要保留、Heroicons 以 LICENSE 文件全文为准；构建工具去掉注释的提醒，以各许可文本为准。核实于 2026-11-14。">
+<link rel="canonical" href="https://tokens.yangtokent.com/design/guides/icon-compliance/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "图标合规落地：声明保留怎么做、品牌图标只用于指代本身",
+  "description": "图标声明保留的落地做法：Font Awesome 嵌入注释勿删、Lucide 两部分声明都要保留、Heroicons 以 LICENSE 文件全文为准；构建工具去掉注释的提醒，以各许可文本为准。核实于 2026-11-14。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-15",
+  "dateModified": "2026-11-15",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/design/guides/icon-compliance/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "图标声明要放在界面上吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lucide 与 Heroicons 的义务是声明随副本保留（源码与分发物中），非界面署名；Font Awesome 靠嵌入注释满足署名，许可页未要求界面可见署名。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "构建工具把注释去掉了怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "须按各许可文本检查声明是否保留，分发物中声明缺失的，按所用许可文本补齐。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>设计素材授权信息，以官方页面为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">设计素材</a><a href="../../offers/">详情</a><a href="../../compare/">对比</a><a href="../" aria-current="page">指南</a><a href="../../faq/">问答</a></div></nav>
+<main><div class="wrap">
+<p class="crumb"><a href="../../../">首页</a> › <a href="../../">设计素材</a> › <a href="../">指南</a> › 图标合规落地：声明保留怎么做</p><h1>图标合规落地：声明保留怎么做</h1><p class="meta">发布于 2026-11-15 · 更新于 2026-11-15 · 核实于 2026-11-14</p><div class="answer"><p>图标授权的合规动作不在界面上，在分发物里：声明要随副本保留，注释不要删，品牌图标只用于指代本身。做法按各许可文本执行。</p></div><div class="toc"><strong>本页内容</strong><ul><li><a href="#fa">Font Awesome：嵌入注释勿删</a></li><li><a href="#lucide">Lucide：两部分声明都要保留</a></li><li><a href="#heroicons">Heroicons：以 LICENSE 文件全文为准</a></li><li><a href="#build">构建工具与注释</a></li><li><a href="#brand">品牌图标只用于指代本身</a></li><li><a href="#iconify">Iconify：按集合核对</a></li></ul></div><h2 id="fa">Font Awesome：嵌入注释勿删</h2><p>下载的 Free 文件已含足够署名的嵌入注释，正常使用无需额外动作；许可页请求不要主动删除注释、尤其是代码中的注释。区分文件类型：图标 CC BY 4.0、字体 OFL 1.1、代码 MIT。</p><h2 id="lucide">Lucide：两部分声明都要保留</h2><p>ISC 部分与 Feather 派生图标的 MIT 部分，声明保留义务覆盖两部分：版权声明与许可声明出现在全部副本中（MIT 部分为全部副本或实质部分中）。</p><h2 id="heroicons">Heroicons：以 LICENSE 文件全文为准</h2><p>已读副本中 MIT 条件句缺失半句，声明保留义务以仓库 LICENSE 文件全文为准，不凭通用文本补写。</p><h2 id="build">构建工具与注释</h2><p>构建与打包工具可能去掉文件中的注释，须按各许可文本检查声明是否保留（此点提醒以各许可文本为准）。分发物中声明缺失的，按所用许可文本补齐。</p><h2 id="brand">品牌图标只用于指代本身</h2><p>Font Awesome 品牌图标只用于指代其所代表的公司、产品或服务，不得用于其他目的。Lucide 授权页与 Heroicons LICENSE 文件未提及品牌图标，以官方页面为准。</p><h2 id="iconify">Iconify：按集合核对</h2><p>Iconify 各集合许可不同：CC BY 4.0 集合涉及署名义务，MIT / Apache 2.0 集合涉及声明保留义务，具体以各集合许可文本为准；换集合时重新核对。</p><h2 id="faq">常见问题</h2><details><summary>图标声明要放在界面上吗？</summary><p>Lucide 与 Heroicons 的义务是声明随副本保留（源码与分发物中），非界面署名；Font Awesome 靠嵌入注释满足署名，许可页未要求界面可见署名。</p></details><details><summary>构建工具把注释去掉了怎么办？</summary><p>须按各许可文本检查声明是否保留，分发物中声明缺失的，按所用许可文本补齐。</p></details><div class="note"><p>以上内容为官方授权页文本的整理，授权信息以官方页面为准；具体使用情形请咨询执业律师。核实于 2026-11-14。</p></div><div class="related"><h3>相关页面</h3><p><a href="../../offers/font-awesome-free/">Font Awesome Free（图标）</a></p><p><a href="../../offers/lucide/">Lucide（图标）</a></p><p><a href="../../offers/heroicons/">Heroicons（图标）</a></p><p><a href="../../compare/icon-licenses/">图标授权对比：Lucide、Heroicons、Font Awesome Free</a></p><p><a href="../../">设计素材授权速查表</a></p></div>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">设计素材</a> · <a href="../../offers/">详情</a> · <a href="../../compare/">对比</a> · <a href="../">指南</a> · <a href="../../faq/">问答</a></p><p>授权信息以官方页面为准；条款随时可能调整，使用前请看清对方条款。</p></div></footer>
+</body>
+</html>
