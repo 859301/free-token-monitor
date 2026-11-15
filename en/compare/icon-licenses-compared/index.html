@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Icon licenses compared: Lucide, Heroicons, Font Awesome Free (ISC / MIT / three-license mix)</title>
+<meta name="description" content="Lucide (ISC + MIT), Heroicons (MIT), and Font Awesome Free (three-license mix) compared: commercial use, attribution and notice retention, modification, redistribution, brand icons, and free/paid boundaries. Icon counts not verified. Verified 2026-11-14.">
+<link rel="canonical" href="https://tokens.yangtokent.com/en/compare/icon-licenses-compared/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/compare/icon-licenses-compared/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/design/compare/icon-licenses/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/design/compare/icon-licenses/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Icon licenses compared: Lucide, Heroicons, Font Awesome Free (ISC / MIT / three-license mix)",
+  "description": "Lucide (ISC + MIT), Heroicons (MIT), and Font Awesome Free (three-license mix) compared: commercial use, attribution and notice retention, modification, redistribution, brand icons, and free/paid boundaries. Icon counts not verified. Verified 2026-11-14.",
+  "inLanguage": "en",
+  "datePublished": "2026-11-15",
+  "dateModified": "2026-11-15",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/en/compare/icon-licenses-compared/",
+  "author": {
+    "@type": "Organization",
+    "name": "Free Token Monitor",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Free Token Monitor",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can all three icon libraries be used commercially?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Lucide ISC text grants use for any purpose, the Heroicons MIT text grants dealing in the software without restriction, and the Font Awesome Free license page expressly allows commercial projects; notice retention requirements differ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which attribution route is simplest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Routes differ: Font Awesome Free relies on embedded comments in downloaded files, with nothing additional needed for normal use; Lucide requires notices retained with copies across both license parts; Heroicons follows the full LICENSE file in the repository."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many icons does each library have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not verified for any of the three. The Lucide license page, the Heroicons LICENSE file, and the Font Awesome license and pricing pages give no icon counts — check the official page."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">Free Token Monitor</a></h1>
+<p>Design asset license information — check the official page.</p></div></header>
+<nav><div class="wrap"><a href="../../../">Home</a><a href="../../vps/">Free VPS</a><a href="../../wool/">VPS Deals</a><a href="../../cheap/">Cheap VPS</a><a href="../../deploy/">Deploy &amp; Hosting</a><a href="../../database/">Databases</a><a href="../../domain/">Domains &amp; DNS</a><a href="../../code/">Code Hosting</a><a href="../../auth/">Auth</a><a href="../../storage/">Storage</a><a href="../../email/">Email</a><a href="../../monitoring/">Monitoring</a><a href="../../payments/">Payments</a><a href="../../hosting/">Web Hosting</a><a href="../../schedule/">Scheduled Tasks</a><a href="../../design/">Design Assets</a><a href="../../workflow/">Workflow</a><a href="../../offers/">Offer details</a><a href="../" aria-current="page">Comparisons</a><a href="../../faq/">FAQ</a><a href="../../../design/compare/icon-licenses/">中文</a></div></nav>
+<main><div class="wrap">
+
+<p class="crumb"><a href="../../../">Home</a> › <a href="../">Comparisons</a> › Icon licenses compared: Lucide, Heroicons, Font Awesome Free</p><h1>Icon licenses compared: Lucide, Heroicons, Font Awesome Free</h1><p class="meta">Published 2026-11-15 · Updated 2026-11-15 · Verified 2026-11-14</p><div class="answer"><p>All three icon libraries allow commercial use; differences sit in license structure and notice retention: Lucide is ISC plus MIT for some icons, Heroicons is MIT (condition sentence incomplete — follow the full LICENSE file), and Font Awesome Free is a three-license mix with embedded comments covering attribution. Icon counts are not verified for any of the three.</p></div><div class="toc"><strong>On this page</strong><ul><li><a href="#table">Comparison table</a></li><li><a href="#structure">License structure</a></li><li><a href="#notice">Notice retention differences</a></li><li><a href="#brand">Brand icon rules</a></li></ul></div><div class="tablewrap"><table><thead><tr><th>Item</th><th>Lucide</th><th>Heroicons</th><th>Font Awesome Free</th></tr></thead><tbody><tr><td>License</td><td>ISC + MIT (Feather-derived icons)</td><td>MIT</td><td>Icons CC BY 4.0, fonts OFL 1.1, code MIT</td></tr><tr><td>Commercial use</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Attribution / notice retention</td><td>Notices retained with all copies, covering both ISC and MIT parts</td><td>Follow the full LICENSE file in the repository</td><td>Embedded comments sufficient; do not remove comments</td></tr><tr><td>Modification</td><td>Yes</td><td>Yes</td><td>Check each license text</td></tr><tr><td>Redistribution</td><td>Redistribution with notices</td><td>Granted verbs include distribute, sublicense, sell; conditions follow the full file</td><td>Check the official page</td></tr><tr><td>Brand icons</td><td>Check the official page</td><td>Check the official page</td><td>Only to refer to the company, product, or service represented</td></tr><tr><td>Free / paid boundary</td><td>License page mentions no paid tier</td><td>LICENSE file mentions no paid tier</td><td>Free from $0/year; Pro/Pro+ in paid plans</td></tr><tr><td>Icon count</td><td>Not verified</td><td>Not verified</td><td>Not verified</td></tr></tbody></table></div><h2 id="structure">License structure</h2><p>Lucide and Heroicons each use one main license (plus the Feather-derived MIT part for Lucide); Font Awesome Free applies three licenses by file type, so the file type in use decides the applicable license. Attribution duties differ across the three structures and cannot be swapped between them.</p><h2 id="notice">Notice retention differences</h2><p>Lucide requires copyright and license notices in all copies, covering both the ISC and MIT parts; the Heroicons condition sentence is incomplete in the copy read, so the full LICENSE file governs; Font Awesome Free downloads already contain sufficient embedded attribution comments, and the license page asks users not to remove comments, especially in code.</p><h2 id="brand">Brand icon rules</h2><p>Font Awesome states that brand icons serve only to refer to the company, product, or service represented; the Lucide license page and the Heroicons LICENSE file do not address brand icons — check the official page. Brand icons involve trademark rights; an icon library license is not a trademark license.</p><h2 id="faq">FAQ</h2><details><summary>Can all three icon libraries be used commercially?</summary><p>Yes. The Lucide ISC text grants use for any purpose, the Heroicons MIT text grants dealing in the software without restriction, and the Font Awesome Free license page expressly allows commercial projects; notice retention requirements differ.</p></details><details><summary>Which attribution route is simplest?</summary><p>Routes differ: Font Awesome Free relies on embedded comments in downloaded files, with nothing additional needed for normal use; Lucide requires notices retained with copies across both license parts; Heroicons follows the full LICENSE file in the repository.</p></details><details><summary>How many icons does each library have?</summary><p>Not verified for any of the three. The Lucide license page, the Heroicons LICENSE file, and the Font Awesome license and pricing pages give no icon counts — check the official page.</p></details><div class="note"><p>The content above summarizes official license page text. License information is subject to the official page; consult a licensed attorney for a specific use case. Verified 2026-11-14.</p></div><div class="related"><h3>Related pages</h3><p><a href="../../design/offers/lucide/">Lucide (icons)</a></p><p><a href="../../design/offers/heroicons/">Heroicons (icons)</a></p><p><a href="../../design/offers/font-awesome-free/">Font Awesome Free (icons)</a></p><p><a href="../../design/">Design assets license quick-check</a></p></div>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">Home</a> · <a href="../../vps/">Free VPS</a> · <a href="../../wool/">VPS Deals</a> · <a href="../../cheap/">Cheap VPS</a> · <a href="../../deploy/">Deploy &amp; Hosting</a> · <a href="../../database/">Databases</a> · <a href="../../domain/">Domains &amp; DNS</a> · <a href="../../code/">Code Hosting</a> · <a href="../../auth/">Auth</a> · <a href="../../storage/">Storage</a> · <a href="../../email/">Email</a> · <a href="../../monitoring/">Monitoring</a> · <a href="../../payments/">Payments</a> · <a href="../../hosting/">Web Hosting</a> · <a href="../../schedule/">Scheduled Tasks</a> · <a href="../../design/">Design Assets</a> · <a href="../../workflow/">Workflow</a> · <a href="../../offers/">Offer details</a> · <a href="../">Comparisons</a> · <a href="../../faq/">FAQ</a> · <a href="../../../design/compare/icon-licenses/">中文</a></p><p>License information is subject to the official page; terms can change at any time. Check the official page before use.</p></div></footer>
+</body>
+</html>
