@@ -102,7 +102,7 @@
 
 ## 工作流总览
 
-- 工作流总览页在 `workflow/` 下：14 个环节的阶段地图、从零上线检查清单与 3 套 $0 组合，已加入 `sitemap.xml` 与 `llms.txt`。
+- 工作流总览页在 `workflow/` 下：15 个环节的阶段地图、从零上线检查清单与 3 套 $0 组合，已加入 `sitemap.xml` 与 `llms.txt`。
 - 方法论指南在 `guides/` 下新增 3 篇：`idea-validation`（立项验证）、`peripheral-capabilities`（周边能力）、`launch-operations`（上线运营），均为概念与检查清单，不含厂商参数。
 
 ## 使用方法

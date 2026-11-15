@@ -536,7 +536,7 @@
 
 ## 工作流总览
 
-- [工作流总览](https://tokens.yangtokent.com/workflow/): 14 个环节的阶段地图：立项验证、代码托管、模型 API、数据库、认证、部署托管、服务器、域名、对象存储、邮件、监控分析、周边能力、支付变现、上线运营；附从零上线检查清单与 3 套 $0 组合。
+- [工作流总览](https://tokens.yangtokent.com/workflow/): 15 个环节的阶段地图：立项验证、代码托管、模型 API、数据库、认证、部署托管、服务器、域名、对象存储、邮件、监控分析、周边能力、支付变现、上线运营、设计素材；附从零上线检查清单与 3 套 $0 组合。
 - [立项验证](https://tokens.yangtokent.com/guides/idea-validation/): 三种低成本验证方法：着陆页与等候名单、人工代办、访谈问过去的行为；判断信号与常见误区。
 - [周边能力](https://tokens.yangtokent.com/guides/peripheral-capabilities/): 定时任务、消息队列、搜索与缓存的概念与安排方式：主栈自带优先。
 - [上线运营](https://tokens.yangtokent.com/guides/launch-operations/): 上线前后检查清单：监控、状态页、备份与恢复、账单与用量、域名与证书、变更记录与反馈渠道。
@@ -570,6 +570,77 @@
 - [cron 频率与执行次数怎么算：每分钟、每小时、每天各烧多少额度](https://tokens.yangtokent.com/schedule/guides/cron-frequency-and-volume/): cron 频率换算：每分钟 1,440 次/天、每 5 分钟 288 次/天、每小时 24 次/天；各家计量口径对照、时区与夏令时、重试对次数的影响。核实于 2026-11-14。
 - [队列重试与延迟入门：重试次数、退避、死信队列与超时](https://tokens.yangtokent.com/schedule/guides/queue-retries-and-delays/): 队列重试与延迟入门：QStash 默认重试 3 次、退避从 12 秒起；延迟最长 7 天；死信队列保留 3 天；超时对照与并发规则。核实于 2026-11-14。
 
+## 客服工具板块
+
+- [客服工具](https://tokens.yangtokent.com/support/): 9 个客服工具条目（8 个服务：3 个在线聊天、4 个工单系统、1 个套件、1 个自托管），含 1 个限时 6 个月档；坐席数、会话与联系人上限、品牌标识、渠道逐条写明。
+- [客服工具详情](https://tokens.yangtokent.com/support/offers/): 9 篇详情页。
+- [客服工具对比](https://tokens.yangtokent.com/support/compare/): 4 篇对比。
+- [客服工具指南](https://tokens.yangtokent.com/support/guides/): 3 篇指南。
+- [客服工具常见问题](https://tokens.yangtokent.com/support/faq/): 14 个常见问题与回答。
+- [客服工具数据（JSON）](https://tokens.yangtokent.com/data/support.json): 9 条机器可读数据，含坐席数、上限、品牌标识、渠道、工单与知识库归属。
+
+## 客服工具详情页
+
+- [Tawk.to 免费核心详解：无限坐席、去品牌 $39/月、附加组件收费](https://tokens.yangtokent.com/support/offers/tawk-to/): Tawk.to 免费核心：无限坐席、无按坐席收费，含全渠道收件箱、工单平台与知识库；去品牌附加组件 $39/月或 $348/年；官方 llms.txt 与帮助页关于附加组件收费的说法并列呈现。核实于 2026-11-14。
+- [Crisp Free 详解：$0/月、2 坐席、客户档案 100 个、白标在 Plus 档](https://tokens.yangtokent.com/support/offers/crisp/): Crisp Free 档 $0/月：2 个坐席、客户档案 100 个、网站聊天小部件与联系表单；白标在 Plus 档，知识库在 Essentials 档，工单系统在 Plus 档；14 天试用与免费档分开。核实于 2026-11-14。
+- [Zoho Desk Free Edition 详解：3 个用户许可、邮件工单、15 天试用后自动降级](https://tokens.yangtokent.com/support/offers/zoho-desk/): Zoho Desk Free Edition：3 个用户许可，邮件工单为主，15 天免费试用结束后自动降级为免费档，免费档本身无账单；即时消息与知识库在 Standard 档。核实于 2026-11-14。
+- [Help Scout Free 详解：最多 5 用户、100 联系人/月、10 篇文章](https://tokens.yangtokent.com/support/offers/help-scout/): Help Scout Free 档：最多 5 个用户、100 个联系人/月、1 个收件箱、1 个 Docs 站点、10 篇文章，免费账号无需添加支付方式；30 天为报表历史，不是会话保留期。核实于 2026-11-14。
+- [Jira Service Management Free 详解：3 坐席、2GB、客户免费不限量、ITSM 偏重](https://tokens.yangtokent.com/support/offers/jira-service-management/): Jira Service Management Free 档永久免费：3 个坐席、2GB 存储、社区支持，客户免费且数量不限；现为 Atlassian Service Collection 的一部分，ITSM/服务管理偏重。核实于 2026-11-14。
+- [Chatwoot Cloud 免费档详解：2 坐席、覆盖在线聊天、会话上限以官方页面为准](https://tokens.yangtokent.com/support/offers/chatwoot-cloud/): Chatwoot Cloud 云端免费档：2 个坐席，覆盖在线聊天；15 天免费试用，付费档 $19/坐席/月起；会话上限与保留期以官方页面为准。核实于 2026-11-14。
+- [Chatwoot Community Edition 详解：自托管运行要求、价格与上限以官方页面为准](https://tokens.yangtokent.com/support/offers/chatwoot-selfhosted/): Chatwoot Community Edition 自托管：Linux + PostgreSQL + Redis，生产环境建议 4GB 内存与 2 核 CPU，文件上传需 S3 兼容存储；价格与上限以官方页面为准。核实于 2026-11-14。
+- [HubSpot Service Hub 免费工具详解：$0/月、最多 2 用户、知识库在 Professional 档](https://tokens.yangtokent.com/support/offers/hubspot-service-hub/): HubSpot Service Hub 免费工具 $0/月：最多 2 个用户，含共享收件箱、在线聊天与集中工单系统，须配合 HubSpot CRM 使用；知识库与客户门户在 Professional 档，去品牌在 Starter 档。核实于 2026-11-14。
+- [Freshdesk Free Program 详解：限时 6 个月、最多 2 坐席、期满须升级](https://tokens.yangtokent.com/support/offers/freshdesk/): Freshdesk Free Program 为限时免费计划：免费期 6 个月，最多 2 个坐席，仅适用于 Freshdesk，不适用于 Freshdesk Omni；期满或超过 2 个坐席须升级付费档。核实于 2026-11-14。
+
+## 客服工具对比
+
+- [免费在线聊天横比：Tawk.to、Crisp、Chatwoot Cloud](https://tokens.yangtokent.com/support/compare/live-chat/): 免费在线聊天横比：Tawk.to 无限坐席、Crisp 2 坐席与 100 个客户档案、Chatwoot Cloud 2 坐席；品牌标识、渠道与工单知识库归属对照。核实于 2026-11-14。
+- [工单系统横比：Zoho Desk、Help Scout、Jira Service Management、Freshdesk](https://tokens.yangtokent.com/support/compare/helpdesk-systems/): 工单系统横比：Zoho Desk 3 个用户许可、Help Scout 最多 5 用户与 100 联系人/月、Jira Service Management 3 坐席与 2GB、Freshdesk 限时 6 个月。核实于 2026-11-14。
+- [先触顶的上限：坐席、会话、联系人与品牌四维选型](https://tokens.yangtokent.com/support/compare/first-limits/): 客服工具四维选型：坐席上限、会话与联系人上限、品牌标识、知识库与文章上限对照，判断哪一条上限先触顶。核实于 2026-11-14。
+- [自托管 vs 托管：Chatwoot Community Edition vs Cloud 免费档](https://tokens.yangtokent.com/support/compare/selfhosted-vs-hosted/): Chatwoot 自托管与托管对照：Community Edition 运行要求、支持渠道、Captain AI 归属与数据迁移，云端免费档 2 个坐席、覆盖在线聊天。核实于 2026-11-14。
+
+## 客服工具指南
+
+- [免费客服选型：先算坐席与会话量，再看品牌与保留期](https://tokens.yangtokent.com/support/guides/choosing-support-tool/): 免费客服选型顺序：先数坐席、再估会话与联系人量，再看品牌标识、保留期、渠道与工单知识库归属；限时档单独算。核实于 2026-11-14。
+- [微信渠道接入要点：档位确认与官方页确认事项](https://tokens.yangtokent.com/support/guides/wechat-channel/): 微信渠道接入要点：Zoho Desk Standard 档即时消息含微信渠道；其余厂商微信渠道归属以官方页面为准；微信认证费用与接口权限以微信公众平台官方页为准。核实于 2026-11-14。
+- [从免费档升级的信号与换工具前的数据导出检查](https://tokens.yangtokent.com/support/guides/upgrade-signals/): 从免费档升级的信号：坐席、用量、功能、期限四类信号；换工具前的数据导出检查清单，导出规则以官方页面为准。核实于 2026-11-14。
+
+## 设计素材板块
+
+- [设计素材](https://tokens.yangtokent.com/design/): 10 条素材的授权速查（照片、插画、图标、字体、聚合器与社区），可商用、署名、修改、转售、商标逐项写明；2 条按项核对、无统一授权。
+- [设计素材详情](https://tokens.yangtokent.com/design/offers/): 10 篇详情页。
+- [设计素材对比](https://tokens.yangtokent.com/design/compare/): 5 篇对比。
+- [设计素材指南](https://tokens.yangtokent.com/design/guides/): 5 篇指南。
+- [设计素材常见问题](https://tokens.yangtokent.com/design/faq/): 19 个常见问题与回答。
+- [设计素材数据（JSON）](https://tokens.yangtokent.com/data/design.json): 10 条机器可读数据，含授权条款枚举与官方页原文引文。
+
+## 设计素材详情页
+
+- [Pexels 许可详解：可商用、无需署名、禁止原样销售，画面内权利不在授权内](https://tokens.yangtokent.com/design/offers/pexels/): Pexels License：可商用、无需署名、可修改；禁止原样（Standalone）销售与分发，禁止用作商标；画面内人物与商标权利不在授权内；帮助页与条款第 4 条关于 CC0 的说法不同，并列呈现。核实于 2026-11-14。
+- [unDraw 授权详解：可商用、无需署名、禁止打包分发与 AI 训练](https://tokens.yangtokent.com/design/offers/undraw/): unDraw 自有许可：可商用、可修改、无需署名；禁止汇编素材复制类似或竞争服务，禁止打包分发，明确禁止用于 AI 训练；插画中的品牌 Logo 仅以呈现品牌本身为目的提供。核实于 2026-11-14。
+- [Font Awesome Free 授权详解：图标 CC BY 4.0、字体 OFL 1.1、代码 MIT，嵌入注释满足署名](https://tokens.yangtokent.com/design/offers/font-awesome-free/): Font Awesome Free 三许可拼合：图标 CC BY 4.0、字体 SIL OFL 1.1、代码 MIT；可商用；下载文件已含足够署名的嵌入注释，正常使用无需额外动作；免费档 $0/年、1 个 Project Kit、每月 10k 页面浏览量。核实于 2026-11-14。
+- [Lucide 授权详解：ISC 许可，声明随副本保留，Feather 派生图标适用 MIT](https://tokens.yangtokent.com/design/offers/lucide/): Lucide 采用 ISC 许可，可出于任何目的使用、复制、修改与分发，包括收费使用，条件是版权声明与许可声明出现在全部副本中；一批源自 Feather 项目的图标适用 MIT 许可，声明保留义务覆盖两部分。核实于 2026-11-14。
+- [Heroicons 授权详解：MIT 许可，声明保留义务以仓库 LICENSE 文件全文为准](https://tokens.yangtokent.com/design/offers/heroicons/): Heroicons 采用 MIT 许可，授予免费使用、复制、修改、合并、发布、分发、转授与出售副本的权利；MIT 条件句在已读到的 LICENSE 文件副本中缺失半句，声明保留义务以仓库 LICENSE 文件全文为准。核实于 2026-11-14。
+- [Google Fonts 授权详解：全库开源免费，各字体许可不同须逐字体核对，可用于 Logo](https://tokens.yangtokent.com/design/offers/google-fonts/): Google Fonts FAQ：全部字体开源、无费用，可用于商业产品；各字体许可不同（最常见 OFL，部分适用 Apache 许可或 Ubuntu 字体许可），须逐字体核对；可在任何 Logo 中使用 Google Fonts；Product Sans 不可用。FAQ 副本日期 2026-11-03。核实于 2026-11-14。
+- [思源黑体授权详解：SIL OFL 1.1，可商用，改后换名，不得单独出售](https://tokens.yangtokent.com/design/offers/source-han-sans/): 思源黑体采用 SIL Open Font License 1.1：可商用、可修改、可再分发；设计作品无需署名，再分发字体文件须附版权声明与许可；修改版不得使用保留字体名称；字体软件不得单独出售；用字体创建的文档不受 OFL 再分发条件约束。核实于 2026-11-14。
+- [思源宋体授权详解：SIL OFL 1.1，可商用，改后换名，不得单独出售](https://tokens.yangtokent.com/design/offers/source-han-serif/): 思源宋体采用 SIL Open Font License 1.1：可商用、可修改、可再分发；设计作品无需署名，再分发字体文件须附版权声明与许可；修改版不得使用保留字体名称；字体软件不得单独出售；用字体创建的文档不受 OFL 再分发条件约束。核实于 2026-11-14。
+- [Iconify 详解：无统一授权，按集合逐项核对许可与许可 URL](https://tokens.yangtokent.com/design/offers/iconify/): Iconify 是图标集合的聚合清单与分发工具，不是单一授权的图标库；collections.md 按集合逐项列出许可，各集合许可不同，须逐项核对。本页结论仅基于已读的前 631 行（共 4,882 行）。核实于 2026-11-14。
+- [Figma 社区资源详解：免费文件默认 CC BY 4.0 须署名，插件与小部件许可不同](https://tokens.yangtokent.com/design/offers/figma-community/): Figma 社区资源许可因资源类型与免费/付费而异：免费文件与幻灯片模板默认 CC BY 4.0，须署名，明确不是公有领域许可；免费插件与小部件默认 Community Free Resource License，不得转售或再分发；创作者可附加或替换条款。核实于 2026-11-14。
+
+## 设计素材对比
+
+- [图标授权对比：Lucide、Heroicons、Font Awesome Free（ISC / MIT / 三许可拼合）](https://tokens.yangtokent.com/design/compare/icon-licenses/): Lucide（ISC + MIT）、Heroicons（MIT）、Font Awesome Free（三许可拼合）的授权对比：可商用、署名与声明保留、修改、再分发、品牌图标、免费与付费分界。图标数量均未核实。核实于 2026-11-14。
+- [字体授权对比：Google Fonts、思源黑体、思源宋体（逐字体许可 vs 统一 OFL）](https://tokens.yangtokent.com/design/compare/font-licenses/): Google Fonts（按字体逐项）、思源黑体与思源宋体（SIL OFL 1.1）的授权对比：可商用、Logo 文字、修改与换名、单独出售、署名、再分发。核实于 2026-11-14。
+- [Pexels vs unDraw：照片许可与插画许可的禁止事项对比](https://tokens.yangtokent.com/design/compare/pexels-undraw/): Pexels License 与 unDraw 自有许可的禁止事项对比：原样销售、打包分发、竞品服务、AI 训练、商标化、画面内权利。两者都可商用、无需署名、可修改，禁止事项各不相同。核实于 2026-11-14。
+- [单一授权库 vs 聚合器与社区：为什么 Iconify 与 Figma 社区资源必须逐项核对](https://tokens.yangtokent.com/design/compare/single-vs-aggregator/): 单一授权库（Pexels、unDraw、Lucide、Heroicons、思源字体）与聚合器（Iconify）、社区（Figma 社区资源）的对照：许可数量、核对单位、署名、禁止事项与核对方法。核实于 2026-11-14。
+- [字体许可类型对比：SIL OFL 1.1、Apache 许可与厂商自有许可](https://tokens.yangtokent.com/design/compare/font-license-types/): SIL OFL 1.1（以思源字体 LICENSE.txt 为据）与 Apache 许可、厂商自有许可的对照：Apache 许可文本未读、厂商自有许可官方授权页信息未能确认，相关单元格一律写以官方页面为准。核实于 2026-11-14。
+
+## 设计素材指南
+
+- [免费素材授权速读：商用、署名、修改、转售、商标五问](https://tokens.yangtokent.com/design/guides/license-five-questions/): 拿到一份免费素材先问五个问题：能商用吗、要署名吗、能修改吗、能转售或再分发吗、能用作商标或 Logo 吗；每问的查法与已核实示例，查不到的写以官方页面为准。核实于 2026-11-14。
+- [人像与商标：图库授权不覆盖什么（自查清单）](https://tokens.yangtokent.com/design/guides/depicted-rights/): 图库授权只解决摄影师的著作权，不解决被摄者的肖像权与画面内商标权：以 Pexels 条款第 5 条为据的自查清单，含可识别人物、商标与 Logo、建筑与商品、误导性使用四项检查。核实于 2026-11-14。
+- [中文字体避坑：系统字体、免费下载≠商用、修改与换名、Logo 用途](https://tokens.yangtokent.com/design/guides/chinese-font-pitfalls/): 中文字体四个避坑点：免费下载不等于免费商用；系统字体授权各不相同；OFL 修改版须换名、不得单独出售；Logo 文字用途须单独确认。未核实字体只列名、不写授权结论。核实于 2026-11-14。
+- [图标合规落地：声明保留怎么做、品牌图标只用于指代本身](https://tokens.yangtokent.com/design/guides/icon-compliance/): 图标声明保留的落地做法：Font Awesome 嵌入注释勿删、Lucide 两部分声明都要保留、Heroicons 以 LICENSE 文件全文为准；构建工具去掉注释的提醒，以各许可文本为准。核实于 2026-11-14。
+- [下载留存与条款变更：为什么要留存下载时间与授权页快照](https://tokens.yangtokent.com/design/guides/keep-download-evidence/): 条款会变：Pexels 条款保留随时修改条款的权利，包括取消或变更所授许可的权利。留存下载时间、授权页快照、许可名称与版本、来源 URL 与文件清单，是下载时的自保做法。核实于 2026-11-14。
 ## English edition
 
 - [Free Token Monitor (English)](https://tokens.yangtokent.com/en/): all 43 verified free credits in English, filterable; static listing, no claim ledger.
@@ -686,7 +757,7 @@ English P0 detail and comparison pages:
 - [Object storage (English)](https://tokens.yangtokent.com/en/storage/): 5 entries: Cloudflare R2, Tigris, Google Cloud Storage, UploadThing, and Backblaze B2, in English.
 - [Code hosting (English)](https://tokens.yangtokent.com/en/code/): 5 entries: GitHub Free, GitLab Free, Bitbucket Free, Codeberg free hosting, and Azure DevOps free allowances, in English.
 - [Web hosting (English)](https://tokens.yangtokent.com/en/hosting/): 11 entries: 8 verified free hosts, 2 conditional, 1 shutdown archive, in English.
-- [Workflow overview (English)](https://tokens.yangtokent.com/en/workflow/): 14-stage map from idea to launch, a 15-item checklist, and 3 $0 stacks, in English.
+- [Workflow overview (English)](https://tokens.yangtokent.com/en/workflow/): 15-stage map from idea to launch, a 15-item checklist, and 3 $0 stacks, in English.
 - [Email offer details (English)](https://tokens.yangtokent.com/en/email/offers/): 5 English detail pages: Resend, Mailgun, Brevo, Twilio SendGrid, Postmark.
 - [Monitoring offer details (English)](https://tokens.yangtokent.com/en/monitoring/offers/): 7 English detail pages: UptimeRobot, Sentry, Umami, PostHog, Plausible, Microsoft, Google.
 - [Payment offer details (English)](https://tokens.yangtokent.com/en/payments/offers/): 4 English detail pages: Stripe, Paddle, Lemon Squeezy, Polar.
@@ -787,3 +858,43 @@ English P3 detail and comparison pages:
 - [English data: databases](https://tokens.yangtokent.com/data/database-en.json): 6 entries, English text, facts identical to data/database.json.
 - [English data: domains](https://tokens.yangtokent.com/data/domain-en.json): 6 entries, English text, facts identical to data/domain.json.
 - [English data: scheduled tasks & queues](https://tokens.yangtokent.com/data/schedule-en.json): 6 entries, English text, facts identical to data/schedule.json.
+
+### Support tools and design assets (English)
+
+- [Customer support tools (English)](https://tokens.yangtokent.com/en/support/): 9 entries: Tawk.to, Crisp, Zoho Desk, Help Scout, Jira Service Management, Chatwoot Cloud, Chatwoot self-hosted, HubSpot Service Hub, Freshdesk, in English.
+- [Design assets (English)](https://tokens.yangtokent.com/en/design/): 10 entries: Pexels, unDraw, Font Awesome Free, Lucide, Heroicons, Google Fonts, Source Han Sans, Source Han Serif, Iconify, Figma Community, in English.
+- [Support offer details (English)](https://tokens.yangtokent.com/en/support/offers/): 9 English detail pages.
+- [Design offer details (English)](https://tokens.yangtokent.com/en/design/offers/): 10 English detail pages.
+- [English data: support](https://tokens.yangtokent.com/data/support-en.json): 9 entries, English text, facts identical to data/support.json.
+- [English data: design](https://tokens.yangtokent.com/data/design-en.json): 10 entries, English text, facts identical to data/design.json.
+
+English support/design detail and comparison pages:
+
+- [Tawk.to free core explained: unlimited seats, branding removal $39/month, paid add-ons](https://tokens.yangtokent.com/en/support/offers/tawk-to/): Tawk.to free core: unlimited seats, no per-seat fees, with an omnichannel inbox, ticketing platform, and knowledge base; branding removal add-on $39/month or $348/year; conflicting official wording on add-on charges shown both ways. Verified 2026-11-14.
+- [Crisp Free explained: $0/month, 2 seats, 100 customer profiles, white labelling in Plus](https://tokens.yangtokent.com/en/support/offers/crisp/): Crisp Free tier, $0/month: 2 seats, 100 customer profiles, website chat widget and contact form; white labelling in the Plus tier, knowledge base in Essentials, ticketing in Plus; the 14-day trial and the Free tier are separate. Verified 2026-11-14.
+- [Zoho Desk Free Edition explained: 3 user licenses, email ticketing, trial downgrades automatically](https://tokens.yangtokent.com/en/support/offers/zoho-desk/): Zoho Desk Free Edition: 3 user licenses, email ticketing as the core, with a 15-day free trial downgrading automatically to the Free Edition, which carries no billing; instant messaging and the knowledge base sit in the Standard tier. Verified 2026-11-14.
+- [Help Scout Free explained: up to 5 users, 100 contacts a month, 10 articles](https://tokens.yangtokent.com/en/support/offers/help-scout/): Help Scout Free tier: up to 5 users, 100 contacts a month, 1 inbox, 1 Docs site, 10 articles, with no payment method needed for a free account; 30 days is report history, not conversation retention. Verified 2026-11-14.
+- [Jira Service Management Free explained: 3 agents, 2GB, unlimited free customers, ITSM focus](https://tokens.yangtokent.com/en/support/offers/jira-service-management/): Jira Service Management Free tier, free forever: 3 agents, 2GB storage, community support, with customers free and unlimited in number; now part of the Atlassian Service Collection, with an ITSM and service management focus. Verified 2026-11-14.
+- [Chatwoot Cloud free tier explained: 2 agents, live chat, conversation cap on the official page](https://tokens.yangtokent.com/en/support/offers/chatwoot-cloud/): Chatwoot Cloud free tier: 2 agents, covering live chat; 15-day free trial, paid tiers from $19/agent/month; conversation cap and retention — check the official page. Verified 2026-11-14.
+- [Chatwoot Community Edition explained: self-hosted requirements, pricing and caps on the official page](https://tokens.yangtokent.com/en/support/offers/chatwoot-selfhosted/): Chatwoot Community Edition, self-hosted: Linux + PostgreSQL + Redis, with 4GB of memory and 2 CPU cores recommended for production, and S3-compatible storage for file uploads; pricing and caps — check the official page. Verified 2026-11-14.
+- [HubSpot Service Hub free tools explained: $0/month, up to 2 users, knowledge base in Professional](https://tokens.yangtokent.com/en/support/offers/hubspot-service-hub/): HubSpot Service Hub free tools, $0/month: up to 2 users, with a shared inbox, live chat, and a centralized ticketing system, for use with HubSpot CRM; knowledge base and customer portal in the Professional tier, branding removal in Starter. Verified 2026-11-14.
+- [Freshdesk Free Program explained: 6-month limit, up to 2 agents, upgrade required at expiry](https://tokens.yangtokent.com/en/support/offers/freshdesk/): Freshdesk Free Program is a time-limited free plan: 6 months free, up to 2 agents, applying to Freshdesk only, not to Freshdesk Omni; upgrading to a paid tier is required at expiry or past 2 agents. Verified 2026-11-14.
+- [Pexels license explained: commercial use allowed, no attribution, no standalone resale; depicted rights not covered](https://tokens.yangtokent.com/en/design/offers/pexels/): Pexels License: commercial use allowed, no attribution required, modification allowed; no standalone sale or distribution, no trademark use; rights in depicted people and trademarks are not covered; the help page and section 4 of the terms differ on CC0, shown both ways. Verified 2026-11-14.
+- [unDraw license explained: commercial use allowed, no attribution, no package redistribution or AI training](https://tokens.yangtokent.com/en/design/offers/undraw/): unDraw custom license: commercial use allowed, modification allowed, no attribution required; no compiling assets to replicate a similar or competing service, no package redistribution, and an express ban on AI training; brand logos in illustrations are provided only to present the brand itself. Verified 2026-11-14.
+- [Font Awesome Free license explained: icons CC BY 4.0, fonts OFL 1.1, code MIT; embedded comments cover attribution](https://tokens.yangtokent.com/en/design/offers/font-awesome-free/): Font Awesome Free combines three licenses: icons CC BY 4.0, fonts SIL OFL 1.1, code MIT; commercial use allowed; downloaded files already contain sufficient embedded attribution comments, so normal use needs nothing additional; Free plan $0/year, 1 Project Kit, 10k pageviews a month. Verified 2026-11-14.
+- [Lucide license explained: ISC license, notices retained with copies, Feather-derived icons under MIT](https://tokens.yangtokent.com/en/design/offers/lucide/): Lucide uses the ISC license: use, copy, modify, and distribute for any purpose with or without fee, with copyright and license notices in all copies; a set of Feather-derived icons uses the MIT license, and notice retention covers both parts. Verified 2026-11-14.
+- [Heroicons license explained: MIT license; notice duties follow the full LICENSE file in the repository](https://tokens.yangtokent.com/en/design/offers/heroicons/): Heroicons uses the MIT license, granting free use, copy, modify, merge, publish, distribute, sublicense, and sell rights; half of the MIT condition sentence is missing from the LICENSE copy read, so notice duties follow the full LICENSE file in the repository. Verified 2026-11-14.
+- [Google Fonts license explained: all fonts open source and free; licenses differ per font; logo use allowed](https://tokens.yangtokent.com/en/design/offers/google-fonts/): Google Fonts FAQ: all fonts are open source and without cost, usable in commercial products; licenses differ per font (most commonly OFL, some under the Apache license or Ubuntu Font License) — check each font; Google Fonts can be used within any logo; Product Sans is not available. FAQ copy dated 2026-11-03. Verified 2026-11-14.
+- [Source Han Sans license explained: SIL OFL 1.1, commercial use allowed, renamed after modification, no separate sale](https://tokens.yangtokent.com/en/design/offers/source-han-sans/): Source Han Sans uses the SIL Open Font License 1.1: commercial use, modification, and redistribution allowed; no credit needed in design work, while redistributed font files must carry the copyright notice and license; modified versions must not use a Reserved Font Name; font software must not be sold separately; documents created with the font are not bound by OFL redistribution conditions. Verified 2026-11-14.
+- [Source Han Serif license explained: SIL OFL 1.1, commercial use allowed, renamed after modification, no separate sale](https://tokens.yangtokent.com/en/design/offers/source-han-serif/): Source Han Serif uses the SIL Open Font License 1.1: commercial use, modification, and redistribution allowed; no credit needed in design work, while redistributed font files must carry the copyright notice and license; modified versions must not use a Reserved Font Name; font software must not be sold separately; documents created with the font are not bound by OFL redistribution conditions. Verified 2026-11-14.
+- [Iconify explained: no unified license; check the license and license URL of each set](https://tokens.yangtokent.com/en/design/offers/iconify/): Iconify is an aggregation catalog and distribution tool for icon sets, not a single-license icon library; collections.md gives a license for each set, and licenses differ across sets — check per set. Conclusions rest only on the first 631 lines read (4,882 lines total). Verified 2026-11-14.
+- [Figma Community resources explained: free files default to CC BY 4.0 with credit; plugins and widgets differ](https://tokens.yangtokent.com/en/design/offers/figma-community/): Figma Community licenses vary by resource type and free/paid status: free files and slide templates default to CC BY 4.0, require credit, and are expressly not a public domain license; free plugins and widgets default to the Community Free Resource License, with no resale or redistribution; creators can add or replace terms. Verified 2026-11-14.
+- [Free live chat compared: Tawk.to, Crisp, Chatwoot Cloud](https://tokens.yangtokent.com/en/compare/support-live-chat/): Free live chat compared: Tawk.to unlimited seats, Crisp 2 seats and 100 customer profiles, Chatwoot Cloud 2 agents; branding, channels, and ticketing and knowledge base coverage compared. Verified 2026-11-14.
+- [Help desk systems compared: Zoho Desk, Help Scout, Jira Service Management, Freshdesk](https://tokens.yangtokent.com/en/compare/support-helpdesk/): Help desk systems compared: Zoho Desk 3 user licenses, Help Scout up to 5 users and 100 contacts a month, Jira Service Management 3 agents and 2GB, Freshdesk 6-month limit. Verified 2026-11-14.
+- [Which limit hits first: seats, conversations, contacts, and branding](https://tokens.yangtokent.com/en/compare/support-first-limits/): Four-dimension support tool comparison: seat caps, conversation and contact caps, branding, and knowledge base and article caps, showing which limit hits first. Verified 2026-11-14.
+- [Self-hosted vs hosted: Chatwoot Community Edition vs Cloud free tier](https://tokens.yangtokent.com/en/compare/support-selfhosted-vs-hosted/): Chatwoot self-hosted vs hosted: Community Edition requirements, support channels, Captain AI placement, and data migration, against the Cloud free tier with 2 agents covering live chat. Verified 2026-11-14.
+- [Icon licenses compared: Lucide, Heroicons, Font Awesome Free (ISC / MIT / three-license mix)](https://tokens.yangtokent.com/en/compare/icon-licenses-compared/): Lucide (ISC + MIT), Heroicons (MIT), and Font Awesome Free (three-license mix) compared: commercial use, attribution and notice retention, modification, redistribution, brand icons, and free/paid boundaries. Icon counts not verified. Verified 2026-11-14.
+- [Font licenses compared: Google Fonts, Source Han Sans, Source Han Serif (per-font vs uniform OFL)](https://tokens.yangtokent.com/en/compare/font-licenses-compared/): Google Fonts (per-font licenses), Source Han Sans and Source Han Serif (SIL OFL 1.1) compared: commercial use, logo text, modification and renaming, separate sale, attribution, redistribution. Verified 2026-11-14.
+- [Pexels vs unDraw: photo license vs illustration license prohibitions compared](https://tokens.yangtokent.com/en/compare/pexels-vs-undraw/): Pexels License vs unDraw custom license prohibitions compared: standalone sale, package redistribution, competing services, AI training, trademark use, depicted rights. Both allow commercial use without attribution; prohibitions differ. Verified 2026-11-14.
+- [Single-license libraries vs aggregators and communities: why per-item checks are needed](https://tokens.yangtokent.com/en/compare/single-vs-aggregator-licenses/): Single-license libraries (Pexels, unDraw, Lucide, Heroicons, Source Han fonts) vs aggregators (Iconify) and communities (Figma Community) compared: license count, check unit, attribution, prohibitions, and check methods. Verified 2026-11-14.
+- [Font license types: SIL OFL 1.1, Apache license, and vendor licenses](https://tokens.yangtokent.com/en/compare/font-license-types/): SIL OFL 1.1 (from Source Han LICENSE.txt), the Apache license, and vendor licenses compared: the Apache license text was not read and vendor license page information could not be confirmed, so related cells read “Check the official page”. Verified 2026-11-14.

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://tokens.yangtokent.com/</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/offers/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/compare/</loc><lastmod>2026-11-12</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/guides/</loc><lastmod>2026-11-12</lastmod></url>
@@ -125,14 +125,14 @@
   <url><loc>https://tokens.yangtokent.com/cheap/guides/hidden-costs-checklist/</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/cheap/faq/</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/vps/offers/instabox/</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://tokens.yangtokent.com/en/</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/en/vps/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/en/wool/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/en/cheap/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/en/offers/</loc><lastmod>2026-11-14</lastmod></url>
-  <url><loc>https://tokens.yangtokent.com/en/compare/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/compare/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/en/vps/offers/</loc><lastmod>2026-11-14</lastmod></url>
-  <url><loc>https://tokens.yangtokent.com/en/faq/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/faq/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/en/offers/openrouter-free/</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/en/offers/gemini-free-tier/</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/en/offers/groq-free-plan/</loc><lastmod>2026-11-13</lastmod></url>
@@ -410,10 +410,10 @@
   <url><loc>https://tokens.yangtokent.com/code/offers/bitbucket-free/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/code/offers/codeberg/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/guides/dead-services/</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://tokens.yangtokent.com/workflow/</loc><lastmod>2026-11-14</lastmod></url>
-  <url><loc>https://tokens.yangtokent.com/guides/idea-validation/</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://tokens.yangtokent.com/guides/peripheral-capabilities/</loc><lastmod>2026-11-14</lastmod></url>
-  <url><loc>https://tokens.yangtokent.com/guides/launch-operations/</loc><lastmod>2026-11-13</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/workflow/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/guides/idea-validation/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/guides/peripheral-capabilities/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/guides/launch-operations/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/en/deploy/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/en/deploy/offers/vercel-hobby/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/en/deploy/offers/netlify-free/</loc><lastmod>2026-11-14</lastmod></url>
@@ -540,7 +540,7 @@
   <url><loc>https://tokens.yangtokent.com/en/compare/standalone-vs-builtin/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/en/compare/stytch-vs-frontegg/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/en/compare/user-limits-compared/</loc><lastmod>2026-11-14</lastmod></url>
-  <url><loc>https://tokens.yangtokent.com/en/workflow/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/workflow/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/en/schedule/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/en/schedule/offers/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/en/schedule/offers/cron-job-org/</loc><lastmod>2026-11-14</lastmod></url>
@@ -565,4 +565,82 @@
   <url><loc>https://tokens.yangtokent.com/schedule/offers/qstash/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/schedule/offers/trigger-dev/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/schedule/offers/upstash-workflow/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/compare/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/compare/font-license-types/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/compare/font-licenses/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/compare/icon-licenses/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/compare/pexels-undraw/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/compare/single-vs-aggregator/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/faq/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/guides/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/guides/chinese-font-pitfalls/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/guides/depicted-rights/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/guides/icon-compliance/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/guides/keep-download-evidence/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/guides/license-five-questions/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/offers/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/offers/figma-community/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/offers/font-awesome-free/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/offers/google-fonts/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/offers/heroicons/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/offers/iconify/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/offers/lucide/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/offers/pexels/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/offers/source-han-sans/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/offers/source-han-serif/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/design/offers/undraw/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/compare/font-license-types/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/compare/font-licenses-compared/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/compare/icon-licenses-compared/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/compare/pexels-vs-undraw/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/compare/single-vs-aggregator-licenses/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/compare/support-first-limits/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/compare/support-helpdesk/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/compare/support-live-chat/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/compare/support-selfhosted-vs-hosted/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/design/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/design/offers/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/design/offers/figma-community/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/design/offers/font-awesome-free/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/design/offers/google-fonts/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/design/offers/heroicons/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/design/offers/iconify/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/design/offers/lucide/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/design/offers/pexels/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/design/offers/source-han-sans/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/design/offers/source-han-serif/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/design/offers/undraw/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/support/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/support/offers/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/support/offers/chatwoot-cloud/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/support/offers/chatwoot-selfhosted/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/support/offers/crisp/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/support/offers/freshdesk/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/support/offers/help-scout/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/support/offers/hubspot-service-hub/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/support/offers/jira-service-management/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/support/offers/tawk-to/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/support/offers/zoho-desk/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/support/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/support/compare/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/support/compare/first-limits/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/support/compare/helpdesk-systems/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/support/compare/live-chat/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/support/compare/selfhosted-vs-hosted/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/support/faq/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/support/guides/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/support/guides/choosing-support-tool/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/support/guides/upgrade-signals/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/support/guides/wechat-channel/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/support/offers/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/support/offers/chatwoot-cloud/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/support/offers/chatwoot-selfhosted/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/support/offers/crisp/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/support/offers/freshdesk/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/support/offers/help-scout/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/support/offers/hubspot-service-hub/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/support/offers/jira-service-management/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/support/offers/tawk-to/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/support/offers/zoho-desk/</loc><lastmod>2026-11-15</lastmod></url>
 </urlset>
