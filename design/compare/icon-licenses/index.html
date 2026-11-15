@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>图标授权对比：Lucide、Heroicons、Font Awesome Free（ISC / MIT / 三许可拼合）</title>
+<meta name="description" content="Lucide（ISC + MIT）、Heroicons（MIT）、Font Awesome Free（三许可拼合）的授权对比：可商用、署名与声明保留、修改、再分发、品牌图标、免费与付费分界。图标数量均未核实。核实于 2026-11-14。">
+<link rel="canonical" href="https://tokens.yangtokent.com/design/compare/icon-licenses/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/compare/icon-licenses-compared/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/design/compare/icon-licenses/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/design/compare/icon-licenses/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "图标授权对比：Lucide、Heroicons、Font Awesome Free（ISC / MIT / 三许可拼合）",
+  "description": "Lucide（ISC + MIT）、Heroicons（MIT）、Font Awesome Free（三许可拼合）的授权对比：可商用、署名与声明保留、修改、再分发、品牌图标、免费与付费分界。图标数量均未核实。核实于 2026-11-14。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-15",
+  "dateModified": "2026-11-15",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/design/compare/icon-licenses/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "三家图标库都能商用吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "都能。Lucide 的 ISC 文本授予出于任何目的的使用权利，Heroicons 的 MIT 文本授予无限制地处理软件的权利，Font Awesome Free 许可页明确写可用于商业项目；各有不同的声明保留要求。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "哪个的署名最省事？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "履行方式不同：Font Awesome Free 靠下载文件中的嵌入注释，正常使用无需额外动作；Lucide 须把声明随副本保留且覆盖两部分许可；Heroicons 以仓库 LICENSE 文件全文为准。省事程度取决于使用方式与分发形态。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "三家各有多少个图标？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "均未核实。Lucide 授权页、Heroicons LICENSE 文件、Font Awesome 许可页与套餐页均未给图标数字，以官方页面为准。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>设计素材授权信息，以官方页面为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">设计素材</a><a href="../../offers/">详情</a><a href="../" aria-current="page">对比</a><a href="../../guides/">指南</a><a href="../../faq/">问答</a></div></nav>
+<main><div class="wrap">
+<p class="crumb"><a href="../../../">首页</a> › <a href="../../">设计素材</a> › <a href="../">对比</a> › 图标授权对比：Lucide、Heroicons、Font Awesome Free</p><h1>图标授权对比：Lucide、Heroicons、Font Awesome Free</h1><p class="meta">发布于 2026-11-15 · 更新于 2026-11-15 · 核实于 2026-11-14</p><div class="answer"><p>三家图标库都可商用，差异在许可结构与声明保留方式：Lucide 是 ISC 加部分 MIT，Heroicons 是 MIT（条件句缺失半句，以 LICENSE 文件全文为准），Font Awesome Free 是三许可拼合、嵌入注释满足署名。图标数量三家均未核实。</p></div><div class="toc"><strong>本页内容</strong><ul><li><a href="#table">对照表</a></li><li><a href="#structure">许可结构</a></li><li><a href="#notice">声明保留方式的差异</a></li><li><a href="#brand">品牌图标规则</a></li></ul></div><div class="tablewrap"><table><thead><tr><th>对照项</th><th>Lucide</th><th>Heroicons</th><th>Font Awesome Free</th></tr></thead><tbody><tr><td>许可</td><td>ISC + MIT（Feather 派生图标）</td><td>MIT</td><td>图标 CC BY 4.0、字体 OFL 1.1、代码 MIT</td></tr><tr><td>可商用</td><td>可以</td><td>可以</td><td>可以</td></tr><tr><td>署名与声明保留</td><td>声明随副本保留，覆盖 ISC 与 MIT 两部分</td><td>以仓库 LICENSE 文件全文为准</td><td>嵌入注释已足够，勿删注释</td></tr><tr><td>修改</td><td>可以</td><td>可以</td><td>以各许可文本为准</td></tr><tr><td>再分发</td><td>附声明可再分发</td><td>授权动词含分发、转授与出售，条件以全文为准</td><td>以官方页面为准</td></tr><tr><td>品牌图标</td><td>以官方页面为准</td><td>以官方页面为准</td><td>只用于指代所代表的公司、产品或服务</td></tr><tr><td>免费与付费分界</td><td>授权页未提及付费档</td><td>LICENSE 文件未提及付费档</td><td>Free $0/年起，Pro/Pro+ 在付费档</td></tr><tr><td>图标数量</td><td>未核实</td><td>未核实</td><td>未核实</td></tr></tbody></table></div><h2 id="structure">许可结构</h2><p>Lucide 与 Heroicons 各用一个主许可（另加 Lucide 的 Feather 派生部分）；Font Awesome Free 按文件类型适用三种许可，使用时须区分所用文件类型。三种结构下，署名义务的履行方式各不相同，不能互相套用。</p><h2 id="notice">声明保留方式的差异</h2><p>Lucide 要求版权声明与许可声明出现在全部副本中，且覆盖 ISC 与 MIT 两部分；Heroicons 的条件句在已读副本中缺失半句，以仓库 LICENSE 文件全文为准；Font Awesome Free 的下载文件已含足够署名的嵌入注释，正常使用无需额外动作，但许可页请求不要删除注释、尤其是代码中的注释。</p><h2 id="brand">品牌图标规则</h2><p>Font Awesome 明确写品牌图标只用于指代其所代表的公司、产品或服务；Lucide 授权页与 Heroicons LICENSE 文件均未提及品牌图标，以官方页面为准。品牌图标涉及商标权，图标库授权不等于商标授权。</p><h2 id="faq">常见问题</h2><details><summary>三家图标库都能商用吗？</summary><p>都能。Lucide 的 ISC 文本授予出于任何目的的使用权利，Heroicons 的 MIT 文本授予无限制地处理软件的权利，Font Awesome Free 许可页明确写可用于商业项目；各有不同的声明保留要求。</p></details><details><summary>哪个的署名最省事？</summary><p>履行方式不同：Font Awesome Free 靠下载文件中的嵌入注释，正常使用无需额外动作；Lucide 须把声明随副本保留且覆盖两部分许可；Heroicons 以仓库 LICENSE 文件全文为准。省事程度取决于使用方式与分发形态。</p></details><details><summary>三家各有多少个图标？</summary><p>均未核实。Lucide 授权页、Heroicons LICENSE 文件、Font Awesome 许可页与套餐页均未给图标数字，以官方页面为准。</p></details><div class="note"><p>以上内容为官方授权页文本的整理，授权信息以官方页面为准；具体使用情形请咨询执业律师。核实于 2026-11-14。</p></div><div class="related"><h3>相关页面</h3><p><a href="../../offers/lucide/">Lucide（图标）</a></p><p><a href="../../offers/heroicons/">Heroicons（图标）</a></p><p><a href="../../offers/font-awesome-free/">Font Awesome Free（图标）</a></p><p><a href="../../guides/icon-compliance/">图标合规落地：声明保留怎么做</a></p><p><a href="../../">设计素材授权速查表</a></p></div>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">设计素材</a> · <a href="../../offers/">详情</a> · <a href="../">对比</a> · <a href="../../guides/">指南</a> · <a href="../../faq/">问答</a></p><p>授权信息以官方页面为准；条款随时可能调整，使用前请看清对方条款。</p></div></footer>
+</body>
+</html>
