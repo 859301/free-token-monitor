@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-16",
+    "count": 2,
+    "sources": [
+      "Apple enrollment page, fee waivers page, App Review page, App Information help page, TestFlight overview page, Small Business Program page, Enrollment page",
+      "Google Play support pages (registration fee, closed testing and production access, service fees)"
+    ],
+    "note": "Fees and rules follow vendor official page text; fields absent from the official pages read “Check the official page”. group values: app-store (native app stores), mini-program (mini program platforms). status value: active. cardRequired null means the official pages do not state card terms. registrationFee amount and currency null means the official pages do not state a fee. China-specific platforms are covered on Chinese-language pages only."
+  },
+  "offers": [
+    {
+      "id": 1,
+      "slug": "apple-developer-program",
+      "title": "Apple Developer Program explained",
+      "provider": "Apple",
+      "category": "appstore",
+      "group": "app-store",
+      "status": "active",
+      "planName": "Apple Developer Program",
+      "specText": "Membership at 99 USD per membership year; fee waivers limited to nonprofits, accredited educational institutions, and government entities; individual enrollment shows the legal name, organization enrollment requires a D-U-N-S number; review typically at least 50% in less than 24 hours, 90% in less than 48 hours; TestFlight up to 10,000 external and 100 internal testers, builds unavailable after 90 days",
+      "durationText": "Billed per membership year; waiver eligibility confirmed at each annual renewal, renewal from 30 days before expiry",
+      "cardRequired": null,
+      "cardNote": "Payment methods are not stated on the pages read — check the official page.",
+      "limitsText": "TestFlight external testers up to 10,000 people, internal testers up to 100 people; builds unavailable after 90 days",
+      "overageBehavior": "Check the official page",
+      "risks": [
+        "Prices may vary by region and are shown in local currency during enrollment",
+        "An approved waiver removes the annual fee; fees already paid are not refunded",
+        "Individual enrollment shows the individual legal name as the seller name",
+        "Organization enrollment requires a legal entity; DBAs, fictitious business names, trade names, and branches are not accepted",
+        "An incomplete submission can delay review or fail review",
+        "Which apps fall under “some apps” for China mainland requirements — check the official page"
+      ],
+      "claimUrl": "https://developer.apple.com/programs/enroll/",
+      "verifiedAt": "2026-11-15",
+      "sourceName": "Apple enrollment and help pages",
+      "sourceUrl": "https://developer.apple.com/programs/enroll/",
+      "flags": [],
+      "notes": "Small Business Program: reduced rate of 15% on paid apps and Apple In-App Purchases; developers with up to 1 million USD in proceeds in the prior calendar year and developers new to the App Store can qualify; surpassing the 1 million USD threshold in the current calendar year brings the standard commission rate on future sales; EU alternative terms bring a further reduced rate of 10%. The standard rate figure is stated only as “standard commission rate” on the page read. Enterprise Program annual fee is 299 USD. Whether individual and organization fees are identical is not priced separately on the pages read. Enrollment review time, TestFlight fees, and the China mainland CNY price — check the official page. Further official pages: https://developer.apple.com/help/account/membership/fee-waivers/, https://developer.apple.com/distribute/app-review/, https://developer.apple.com/help/app-store-connect/reference/app-information/app-information/, https://developer.apple.com/help/app-store-connect/test-a-beta-version/testflight-overview, https://developer.apple.com/app-store/small-business-program/, https://developer.apple.com/help/account/membership/program-enrollment/",
+      "registrationFee": {
+        "amount": 99,
+        "currency": "USD",
+        "cycle": "per-membership-year",
+        "feeText": "99 USD per membership year"
+      },
+      "waiverText": "Nonprofit organizations, accredited educational institutions, and government entities meeting four conditions can apply for a fee waiver; an approved waiver removes the annual membership fee, with fees already paid not refunded; eligibility is confirmed at each annual renewal, with renewal from 30 days before expiry; after revocation, the 99 USD annual fee (or local-currency equivalent) applies",
+      "individualEligible": "yes",
+      "individualNote": "Individual enrollment is allowed; enrollment uses the legal name, and the seller name field shows the individual legal name; an Apple Account with two-factor authentication and the legal age in the region are required.",
+      "reviewTimeText": "Typically at least 50% of submissions in less than 24 hours, 90% in less than 48 hours; an incomplete submission can delay review or fail review",
+      "filingText": "Chinese law requires some apps to provide additional documentation for the China mainland App Store; some apps must hold a valid ICP filing number, with the number and metadata matching MIIT filing information; games require an edition number, and book, magazine, religious, and news content apps require the corresponding licenses; the scope of “some apps” — check the official page",
+      "verifiedScope": "Fees, fee waivers, individual and organization enrollment requirements, review time measures, common issues, appeals and expedited review, TestFlight rules, China mainland requirements, the Small Business Program 15% rate, and the Enterprise Program 299 USD fee are verified; the standard rate figure, identical pricing across account types, enrollment review time, and TestFlight fees — check the official page"
+    },
+    {
+      "id": 2,
+      "slug": "google-play-console",
+      "title": "Google Play Console explained",
+      "provider": "Google",
+      "category": "appstore",
+      "group": "app-store",
+      "status": "active",
+      "planName": "Google Play Console",
+      "specText": "US$25 one-time registration fee; prepaid cards are not accepted; personal accounts created after November 13, 2023 must run closed testing with at least 12 testers opted in continuously for at least 14 days; production access review usually takes 7 days or less",
+      "durationText": "One-time registration fee; annual renewal is not mentioned on the pages read",
+      "cardRequired": true,
+      "cardNote": "Mastercard, Visa, American Express, Discover (US only), Visa Electron (outside the US only) credit or debit cards are accepted; prepaid cards are not accepted; card acceptance varies by location.",
+      "limitsText": "Closed testing with a minimum of 12 testers opted in continuously for at least 14 days",
+      "overageBehavior": "Check the official page",
+      "risks": [
+        "Prepaid cards are not accepted; card acceptance varies by location",
+        "When identity information is found invalid, the registration fee is not refunded",
+        "Until testing requirements are met, Production and Pre-registration features stay disabled",
+        "When a tester opts out and opts back in, the 14 days must be consecutive to count",
+        "Review is not a debugging step; a non-compliant submission leads to rejection and delays"
+      ],
+      "claimUrl": "https://support.google.com/googleplay/android-developer/answer/6112435?hl=en",
+      "verifiedAt": "2026-11-15",
+      "sourceName": "Google Play support pages",
+      "sourceUrl": "https://support.google.com/googleplay/android-developer/answer/6112435?hl=en",
+      "flags": [],
+      "notes": "Service fees: other markets at 15% for the first $1M under the 15% tier, 30% above $1M, subscriptions at 15%; new-structure markets (Australia, European Economic Area, Japan, United Kingdom, United States) follow a separate table, with Standard auto-renewing at 10% plus a 5% billing fee, other transactions on new installs at 20% plus a 5% billing fee, and other transactions on existing installs at 25% plus a 5% billing fee or 20% for external web links; the new-structure table first-$1M row leaves other-transaction cells unstated — check the official page. Differing accounts: second-hand guides describe 20 testers, while the current official page states 12; a second-hand article describes a $99-per-year plan, while the official pages state only the US$25 one-time fee; the official page governs. General release review time, China mainland filing requirements, and additional organization requirements — check the official page. Further official pages: https://support.google.com/googleplay/android-developer/answer/14151465, https://support.google.com/googleplay/android-developer/answer/112622?hl=en",
+      "registrationFee": {
+        "amount": 25,
+        "currency": "USD",
+        "cycle": "one-time",
+        "feeText": "US$25 one-time registration fee"
+      },
+      "waiverText": "Waiver terms are not stated on the pages read — check the official page",
+      "individualEligible": "yes",
+      "individualNote": "Individual enrollment is allowed with a personal account; personal accounts created after November 13, 2023 must run closed testing before the app becomes eligible for distribution.",
+      "reviewTimeText": "Production access review usually takes seven days or less, but can occasionally take longer; general release review time is not stated on the pages read — check the official page",
+      "filingText": "The pages read do not mention China mainland ICP filing or app filing requirements — check the official page",
+      "verifiedScope": "Registration fee and card terms, enrollment steps and account types, closed testing rules, production access flow and review time, and the service fee tables are verified; general release review time, China mainland filing requirements, individual new-structure table cells, and additional organization requirements — check the official page"
+    }
+  ]
+}
