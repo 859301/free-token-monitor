@@ -130,9 +130,9 @@
   <url><loc>https://tokens.yangtokent.com/en/wool/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/en/cheap/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/en/offers/</loc><lastmod>2026-11-14</lastmod></url>
-  <url><loc>https://tokens.yangtokent.com/en/compare/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/compare/</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/en/vps/offers/</loc><lastmod>2026-11-14</lastmod></url>
-  <url><loc>https://tokens.yangtokent.com/en/faq/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/faq/</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/en/offers/openrouter-free/</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/en/offers/gemini-free-tier/</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/en/offers/groq-free-plan/</loc><lastmod>2026-11-13</lastmod></url>
@@ -643,4 +643,86 @@
   <url><loc>https://tokens.yangtokent.com/support/offers/jira-service-management/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/support/offers/tawk-to/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://tokens.yangtokent.com/support/offers/zoho-desk/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/appstore/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/appstore/compare/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/appstore/compare/apple-vs-google-play/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/appstore/faq/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/appstore/guides/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/appstore/guides/app-filing-process/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/appstore/guides/app-store-rejection-check/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/appstore/guides/google-play-closed-testing/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/appstore/guides/pre-submission-checklist/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/appstore/offers/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/appstore/offers/alipay-mini-program/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/appstore/offers/apple-developer-program/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/appstore/offers/douyin-mini-program/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/appstore/offers/google-play-console/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/appstore/offers/huawei-appgallery/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/appstore/offers/xiaomi-app-store/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/beian/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/beian/compare/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/beian/compare/icp-vs-license/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/beian/compare/icp-vs-psb/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/beian/compare/personal-vs-entity/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/beian/faq/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/beian/guides/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/beian/guides/after-filing/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/beian/guides/icp-process/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/beian/guides/materials-checklist/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/beian/guides/name-rules/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/beian/guides/overseas-tradeoff/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/beian/guides/rejection-selfcheck/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/beian/types/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/beian/types/app.html</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/beian/types/icp-website.html</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/beian/types/miniprogram.html</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/beian/types/psb.html</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/appstore/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/appstore/china-platforms/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/appstore/offers/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/appstore/offers/apple-developer-program/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/appstore/offers/google-play-console/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/beian/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/compare/appstore-apple-vs-google-play/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/compare/sms-china-cloud-sms/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/compare/sms-trial-allowances/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/compare/sms-us-pricing/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/compare/sms-verify-billing/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/sms/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/sms/offers/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/sms/offers/aliyun-sms/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/sms/offers/aws-sns/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/sms/offers/bird/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/sms/offers/gcp-identity-platform/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/sms/offers/plivo/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/sms/offers/sinch/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/sms/offers/telnyx/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/sms/offers/tencent-sms/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/sms/offers/textbelt/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/sms/offers/twilio/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/en/sms/offers/vonage/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/compare/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/compare/china-cloud-sms/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/compare/trial-allowances/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/compare/us-pricing/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/compare/verify-billing/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/faq/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/guides/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/guides/anti-abuse/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/guides/international-pricing-segments/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/guides/signature-template-review/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/guides/verify-billing-breakdown/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/offers/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/offers/aliyun-sms/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/offers/aws-sns/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/offers/bird/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/offers/gcp-identity-platform/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/offers/plivo/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/offers/sinch/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/offers/telnyx/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/offers/tencent-sms/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/offers/textbelt/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/offers/twilio/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://tokens.yangtokent.com/sms/offers/vonage/</loc><lastmod>2026-11-16</lastmod></url>
 </urlset>

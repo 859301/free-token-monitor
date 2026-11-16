@@ -100,6 +100,24 @@
 - 板块页面在 `code/` 下：列表页、2 篇详情页、3 篇对比、4 篇指南、1 个问答页（15 问），均已加入 `sitemap.xml` 与 `llms.txt`。
 - 已死服务指南在 `guides/dead-services/` 下：Heroku、PlanetScale、SendGrid 永久免费计划、Freenom、Upstash Kafka、Google Domains 的现状与替代，时间线来自多家公开报道。
 
+## 短信验证板块
+
+- 共 10 条（核实于 2026-11-15）：Twilio、Vonage、Plivo、Sinch、Telnyx、Bird、阿里云短信、腾讯云短信、GCP Identity Platform、Textbelt；另有 1 篇 AWS SNS 澄清说明（Free Tier 不含短信，不列为免费资源）。
+- 数据在 `data/sms.json` 里，字段与 `data/hosting.json` 对应（另有 `trialAmount`、`verifyFee`、`channelFeeSeparate`、`smsPriceUS`、`smsPriceCN`、`evidenceLevel`、`conflicts` 字段；官方页未说明的字段写「以官方页面为准」，说法冲突并列呈现）。
+- 板块页面在 `sms/` 下：列表页、11 篇详情页与澄清说明、4 篇对比、4 篇指南、1 个问答页（14 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+
+## 应用商店与小程序上架板块
+
+- 共 6 个平台（核实于 2026-11-14、2026-11-15）：Apple Developer Program、Google Play Console、支付宝小程序、抖音小程序、小米应用商店、华为应用市场。
+- 数据在 `data/appstore.json` 里，字段与 `data/hosting.json` 对应（另有 `registrationFee`、`waiverText`、`individualEligible`、`reviewTimeText`、`filingText`、`verifiedScope` 字段；官方页未说明的字段写「以官方页面为准」）。
+- 板块页面在 `appstore/` 下：列表页、6 篇详情页、1 篇对比、4 篇指南、1 个问答页（19 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+
+## 备案板块
+
+- 4 张事实卡、6 篇指南、3 篇对比、1 个问答页（20 问），事实依据为 2024 年修订版《非经营性互联网信息服务备案管理办法》、公安部令第 33 号、工信部 105 号通知与阿里云/腾讯云备案文档（核实于 2026-11-14、2026-11-15）。
+- 无额度数据文件（备案无免费额度、价格、用量字段）；事实卡为静态页。
+- 板块页面在 `beian/` 下：总览页、4 张事实卡（`types/`）、6 篇指南、3 篇对比、1 个问答页，均已加入 `sitemap.xml` 与 `llms.txt`。
+
 ## 工作流总览
 
 - 工作流总览页在 `workflow/` 下：15 个环节的阶段地图、从零上线检查清单与 3 套 $0 组合，已加入 `sitemap.xml` 与 `llms.txt`。
@@ -179,3 +197,9 @@ MIT License，见 [LICENSE](LICENSE)。
 - 新增 76 页英文：7 个板块列表页（邮件、监控分析、支付变现、认证、对象存储、代码托管、免费虚拟主机）+ 工作流总览页、33 篇详情页、28 篇对比、7 个 Hub 页；问答页由 41 问扩充至 80 问；对比 Hub 增至 40 篇。
 - 新增英文数据文件 `data/email-en.json`、`data/monitoring-en.json`、`data/payments-en.json`、`data/auth-en.json`、`data/storage-en.json`、`data/code-en.json`、`data/hosting-en.json`：规则同前批（文本译为英文，事实与中文数据文件完全一致）。
 - 英文页导航与页脚新增八个板块链接；76 个中文对应页加 hreflang 回链（仅 head 三行）；对比页英文版集中在 `en/compare/` 下；英文版至此覆盖全部内容板块（指南不译）。
+
+### 短信、上架与备案（2026-11-16）
+
+- 新增 24 页英文：短信列表页、11 篇详情页与澄清说明、4 篇对比，上架列表页、2 篇详情页、1 篇中国平台总览、1 篇对比，备案总览 1 页；问答页由 143 问扩充至 176 问；对比 Hub 增至 63 篇。
+- 新增英文数据文件 `data/sms-en.json`（10 条，事实与中文数据文件完全一致）、`data/appstore-en.json`（2 条，Apple 与 Google Play，与中文数据文件对应条目事实一致）；备案无英文数据文件。
+- 英文指南与分板块问答不单独建页，内容并入英文综合问答页；对比页英文版集中在 `en/compare/` 下；备案英文版只做总览 1 页；上架英文版只覆盖全球平台与 1 篇中国平台总览，中国平台详情页仅中文版。
