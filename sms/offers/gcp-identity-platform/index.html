@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GCP Identity Platform / Firebase Phone Auth 详解：每天前 10 条短信不计费，超出美国与中国 $0.01/条</title>
+<meta name="description" content="Identity Platform 每天前 10 条短信不计费，超出部分美国与中国 $0.01/条、印度 $0.07/条、英国 $0.04/条；月活用户 5 万以内免费，与短信条数分开计；绑卡要求以官方页面为准。核实于 2026-11-15。">
+<link rel="canonical" href="https://tokens.yangtokent.com/sms/offers/gcp-identity-platform/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/sms/offers/gcp-identity-platform/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/sms/offers/gcp-identity-platform/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/sms/offers/gcp-identity-platform/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "GCP Identity Platform / Firebase Phone Auth 详解：每天前 10 条短信不计费，超出美国与中国 $0.01/条",
+  "description": "Identity Platform 每天前 10 条短信不计费，超出部分美国与中国 $0.01/条、印度 $0.07/条、英国 $0.04/条；月活用户 5 万以内免费，与短信条数分开计；绑卡要求以官方页面为准。核实于 2026-11-15。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-16",
+  "dateModified": "2026-11-16",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/sms/offers/gcp-identity-platform/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "每天前 10 条有什么条件？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "定价页原文为每天前 10 条短信不计费；绑卡要求在已读官方页中未明示，以官方页面为准。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "月活 5 万免费和短信额度是一回事吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不是。月活 5 万免费针对月活用户数，与短信条数分开计。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "需要绑卡吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "以官方页面为准。FAQ 页与定价页均未写明需绑卡的要求，2024 年 9 月须关联 Cloud Billing 账号的说法未在官方文本中确认。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">短信验证</a><a href="../../offers/" aria-current="page">详情</a><a href="../../compare/">对比</a><a href="../../guides/">指南</a><a href="../../faq/">问答</a></div></nav>
+<main><div class="wrap">
+<p class="crumb"><a href="../../../">首页</a> › <a href="../../">短信验证</a> › <a href="../">详情</a> › GCP Identity Platform / Firebase Phone Auth 详解</p><h1>GCP Identity Platform / Firebase Phone Auth 详解</h1><p class="meta">发布于 2026-11-16 · 更新于 2026-11-16 · 来源：<a href="https://cloud.google.com/identity-platform/pricing">GCP Identity Platform 官方定价页</a> · 核实于 2026-11-15</p><p><span class="tag">每天前 10 条不计费</span><span class="tag">美国与中国 $0.01/条</span><span class="tag">月活 5 万免费</span><span class="tag">模板由平台托管</span></p><div class="answer"><p>GCP Identity Platform 定价页原文：每天前 10 条短信不计费。超出部分美国 $0.01、中国 $0.01、加拿大 $0.01、印度 $0.07、英国 $0.04。Identity Platform 月活用户 5 万以内免费，与短信条数分开计。Firebase Phone Auth 按发送短信计费，模板由平台托管。绑卡要求在已读官方页中未明示，以官方页面为准。核实于 2026-11-15。</p></div><div class="toc"><strong>本页内容</strong><ul><li><a href="#spec">规格速览</a></li><li><a href="#s0">每天前 10 条不计费</a></li><li><a href="#s1">按条价与示例</a></li><li><a href="#s2">月活免费档分开计</a></li><li><a href="#s3">绑卡要求</a></li><li><a href="#overage">超限规则与付费档</a></li><li><a href="#unconfirmed">未确认的信息</a></li><li><a href="#official">官方链接</a></li><li><a href="#risks">注意事项</a></li><li><a href="#faq">常见问题</a></li></ul></div><h2 id="spec">规格速览</h2><div class="tablewrap"><table class="fact"><tbody><tr><th>试用内容</th><td>每天前 10 条短信不计费，可每日重复使用</td></tr><tr><th>提供方</th><td>Google Cloud（Identity Platform）/ Firebase</td></tr><tr><th>计划名称</th><td>Identity Platform 定价 / Phone Auth</td></tr><tr><th>时长</th><td>每天前 10 条不计费，长期有效</td></tr><tr><th>绑卡与验证</th><td>以官方页面为准（FAQ 页无 Phone Auth 与短信绑卡表述；定价页未写明需绑卡要求）</td></tr><tr><th>Verify 平台费</th><td>无单独验证平台费表述，按短信条数计费</td></tr><tr><th>通道费是否另计</th><td>按发送短信计费，见按条价</td></tr><tr><th>美国短信单价</th><td>$0.01/条（超出每天前 10 条部分）</td></tr><tr><th>发往中国单价</th><td>$0.01/条（超出每天前 10 条部分；定价表中国 CN 为 US$0.01 / 1 count）</td></tr><tr><th>运营商附加费</th><td>以官方页面为准</td></tr><tr><th>签名与模板审核</th><td>Firebase Phone Auth 由平台托管模板，开发者不自建签名与模板；国内短信合规细节以官方页面为准</td></tr><tr><th>地域限制</th><td>按国家定价：美国 $0.01、中国 $0.01、加拿大 $0.01、印度 $0.07、英国 $0.04</td></tr><tr><th>核实日期</th><td>2026-11-15</td></tr><tr><th>来源</th><td><a href="https://cloud.google.com/identity-platform/pricing">GCP Identity Platform 官方定价页</a></td></tr></tbody></table></div><h2 id="s0">每天前 10 条不计费</h2><p>定价页原文：The first ten SMS that you send per day are not billed.（每天前 10 条短信不计费。）中文定价页原文：您每天发送的前十条短信将不计费。该额度可每日重复使用，是本次核实中最接近长期免费档的短信额度。</p><h2 id="s1">按条价与示例</h2><p>超出部分：美国 $0.01、中国 $0.01、加拿大 $0.01、印度 $0.07、英国 $0.04。定价表中国（CN）短信价为 US$0.01 / 1 count，美国（US）同为 US$0.01 / 1 count。定价页价格示例：发送 1,300 条短信，300 条免费计 $0，1,000 条按 0.01 计 $10。</p><h2 id="s2">月活免费档分开计</h2><p>Identity Platform 月活用户 5 万以内免费，该免费档针对月活用户数，与短信条数分开计，不得混淆。Firebase 定价页：Phone Auth 按发送短信计费，50K MAU no-cost（5 万月活用户不收费）。</p><h2 id="s3">绑卡要求</h2><p>绑卡要求未核实。Firebase FAQ 页无 Phone Auth 与短信绑卡要求表述，Authentication 仅有一句指向另一 FAQ 页的链接；Pricing 一节仅提及 Blaze 方案与预算提醒，未提绑卡。Identity Platform 定价页未写明需绑卡或信用卡的要求，结算仅在“在 API 控制台中打开结算页面”一句中出现。2024 年 9 月须关联 Cloud Billing 账号的说法在已读官方文本中未得到确认，不得写成事实，以官方页面为准。</p><h2 id="overage">超限规则与付费档</h2><p>超出每天前 10 条部分按条计费。超限细则以官方页面为准。</p><h2 id="unconfirmed">未确认的信息</h2><ul><li>绑卡要求：FAQ 页与定价页均未写明，2024 年 9 月说法未在官方文本中确认。</li><li>国内短信合规细节：未核实。</li></ul><h2 id="official">官方链接</h2><p><a class="btn" href="https://cloud.google.com/identity-platform/pricing">去官网查看</a></p><ul><li><a href="https://cloud.google.com/identity-platform/pricing">GCP Identity Platform 官方定价页</a></li><li><a href="https://firebase.google.com/pricing/">Firebase 官方定价页</a></li><li><a href="https://firebase.google.com/support/faq/">Firebase 官方 FAQ 页</a></li></ul><h2 id="risks">注意事项</h2><ul><li>每天前 10 条不计费，超出部分按条计费</li><li>月活 5 万免费与短信条数分开计，不得混淆</li><li>绑卡要求以官方页面为准，2024 年 9 月说法未确认</li><li>模板由平台托管，国内合规细节以官方页面为准</li></ul><h2 id="faq">常见问题</h2><details><summary>每天前 10 条有什么条件？</summary><p>定价页原文为每天前 10 条短信不计费；绑卡要求在已读官方页中未明示，以官方页面为准。</p></details><details><summary>月活 5 万免费和短信额度是一回事吗？</summary><p>不是。月活 5 万免费针对月活用户数，与短信条数分开计。</p></details><details><summary>需要绑卡吗？</summary><p>以官方页面为准。FAQ 页与定价页均未写明需绑卡的要求，2024 年 9 月须关联 Cloud Billing 账号的说法未在官方文本中确认。</p></details><div class="note"><p>以上信息核实于 2026-11-15，来源为厂商官方页面。免费额度与条款可能调整或结束，领取前请以厂商官方页为准。</p></div><div class="related"><h3>相关页面</h3><p><a href="../textbelt/">Textbelt 详解</a></p><p><a href="../../compare/trial-allowances/">试用额度对比</a></p><p><a href="../../guides/verify-billing-breakdown/">Verify 计费拆解：平台费、通道费与运营商附加费</a></p></div>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">短信验证</a> · <a href="../../offers/">详情</a> · <a href="../../compare/">对比</a> · <a href="../../guides/">指南</a> · <a href="../../faq/">问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
