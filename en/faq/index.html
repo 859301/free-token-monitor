@@ -10,8 +10,8 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FAQ: 143 questions about free AI APIs, VPS, hosting, databases, domains, email, monitoring &amp; payments</title>
-<meta name="description" content="143 questions in English users’ own wording: Are free LLM APIs really free? Do they need a credit card? What happens at the limit? Can Vercel Hobby be used commercially? Do free instances sleep? Which free database? Cheapest .com registrar? Does SendGrid still have a free plan? Does the UptimeRobot free tier include SSL monitoring? Does Backblaze B2 have a free tier? Which free web hosts include free SSL? Answer-first, with sources and verification dates.">
+<title>FAQ: 176 questions about free AI APIs, VPS, hosting, databases, domains, email, monitoring &amp; payments</title>
+<meta name="description" content="176 questions in English users’ own wording: Are free LLM APIs really free? Do they need a credit card? What happens at the limit? Can Vercel Hobby be used commercially? Do free instances sleep? Which free database? Cheapest .com registrar? Does SendGrid still have a free plan? Does the UptimeRobot free tier include SSL monitoring? Does Backblaze B2 have a free tier? Which free web hosts include free SSL? Answer-first, with sources and verification dates.">
 <link rel="canonical" href="https://tokens.yangtokent.com/en/faq/">
 <link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/faq/">
 <link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/faq/">
@@ -19,11 +19,11 @@
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "FAQ: 143 questions about free AI APIs, VPS, hosting, databases, domains, email, monitoring and payments",
-  "description": "143 questions in English users’ own wording: Are free LLM APIs really free? Do they need a credit card? What happens at the limit? Can Vercel Hobby be used commercially? Do free instances sleep? Which free database? Cheapest .com registrar? Does SendGrid still have a free plan? Does the UptimeRobot free tier include SSL monitoring? Does Backblaze B2 have a free tier? Which free web hosts include free SSL? Answer-first, with sources and verification dates.",
+  "headline": "FAQ: 176 questions about free AI APIs, VPS, hosting, databases, domains, email, monitoring and payments",
+  "description": "176 questions in English users’ own wording: Are free LLM APIs really free? Do they need a credit card? What happens at the limit? Can Vercel Hobby be used commercially? Do free instances sleep? Which free database? Cheapest .com registrar? Does SendGrid still have a free plan? Does the UptimeRobot free tier include SSL monitoring? Does Backblaze B2 have a free tier? Which free web hosts include free SSL? Answer-first, with sources and verification dates.",
   "inLanguage": "en",
   "datePublished": "2026-11-13",
-  "dateModified": "2026-11-15",
+  "dateModified": "2026-11-16",
   "mainEntityOfPage": "https://tokens.yangtokent.com/en/faq/",
   "author": {
     "@type": "Organization",
@@ -1185,6 +1185,270 @@
         "@type": "Answer",
         "text": "Terms can change: the Pexels terms reserve the right to modify the terms at any time, including the right to cancel or change the license granted. Keep the download date, license page snapshot, license name and version, and source URL; after a change, applicable rules follow the official page and the terms text — no case-specific conclusions here."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Which services offer free trial SMS allowances?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three shapes exist: daily repeating allowances (GCP Identity Platform first 10 SMS per day not billed, Textbelt public key 1 text per day), time-limited trials (Twilio 30 days, Sinch 14 days, Vonage trial mode, Plivo trial credits), and one-time first-activation allowances (Alibaba Cloud trial pack 100/200 messages, Tencent Cloud first-activation gift 200/100 messages, both 3 months). Bird official pricing pages state no free SMS allowance, Telnyx trial wording conflicts, and AWS SNS has no verified free SMS allowance. Another official page states 150 messages for the Twilio trial; both wordings are shown side by side on the detail page.Source: vendor official pages; verified 2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who can receive trial messages?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Several services only send to verified numbers: Twilio verified numbers only with at most 5 recipients per account, Vonage at most 5 verified test numbers, Sinch test messages only to yourself; Telnyx developer docs state a 1 verified number limit, conflicting with the support article.Source: vendor official pages; verified 2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does trial SMS carry a demo label?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vonage trial-mode SMS carries a *[FREE SMS DEMO, TEST MESSAGE]* label; topping up and upgrading removes it. Twilio trials must use Twilio-provided templates, with no custom content.Source: vendor official pages; verified 2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does Verify bill twice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The platform fee covers the verification service itself and the channel fee covers SMS delivery, billed separately: Twilio $0.05 per successful verification plus channel fees, Vonage $0.06084 plus message and voice rates. Plivo and Bird charge no verification platform fee, billing per channel and destination only.Source: vendor official pages; verified 2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are failed verifications billed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Twilio skips the $0.05 base fee for failed, expired, or incomplete verifications, but SMS attempts are always billed. Failed-attempt billing for other services is on the official page.Source: vendor official pages; verified 2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does US SMS cost per message?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per-message billing: Plivo $0.0077, Sinch $0.0078, Vonage SMS API from $0.00860, Alibaba Cloud pay-as-you-go $0.0086, Tencent Cloud $0.012 (excluding tax), GCP $0.01 beyond the first 10 per day. Per-segment billing: Bird from $0.0035, Telnyx from $0.004, Twilio from $0.0083. Carrier surcharges are billed separately by most services, and metering differences rule out direct ranking.Source: vendor official pages; verified 2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does SMS to China cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plivo long-code sending $0.1082 per message, Bird $0.035 per segment (Alphanumeric only), Telnyx $0.038 per segment (Alphanumeric Sender ID only), GCP $0.01 per message beyond the first 10 per day. Alibaba Cloud international pay-as-you-go $0.0500 per message with mainland packages at CNY 0.041–0.05; Tencent Cloud mainland packages at CNY 0.041–0.05. Twilio, Vonage, Sinch, and Textbelt prices to China are on the official page.Source: vendor official pages; verified 2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can individuals send domestic SMS in China?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Verification and notification messages, with limits: Alibaba Cloud individual self-use qualifications fail real-name signature registration, requiring a third-party qualification or an enterprise upgrade, and individually verified users cannot apply for promotion templates; Tencent Cloud individuals may only send verification and notification messages, not marketing, with only enterprise-verified users able to send domestic marketing SMS.Source: vendor official pages; verified 2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does signature review take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Alibaba Cloud qualification review usually completes within 2 working days, with carrier real-name registration averaging 5–7 working days and 7–10 for some carriers, with no timing guarantee from carriers. Tencent Cloud signature and template review normally returns feedback in about 2 hours (9:00–23:00), with carrier filing after approval generally taking 7–10 working days.Source: vendor official pages; verified 2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are template variables declared?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Signatures and body templates must pass review before use. Tencent Cloud variable format is {1}, with verification-code variables limited to 0–6 digit numbers; domestic signatures run 2–12 characters, international/Hong Kong/Macao/Taiwan signatures 2–15, with at most 50 signatures. Alibaba Cloud template review requirements are on the official page.Source: vendor official pages; verified 2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is 10DLC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10DLC is brand and campaign registration for US A2P messaging. Current Twilio prices (after the 2025-08-01 increase): brand registration $4.50 or $46 one-time, campaigns $15 review fee plus $1.50–$10 per month. Sinch Engage 10DLC costs $25/month. The Bird 10DLC fees section carries no amounts — check the official page.Source: vendor official pages; verified 2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are long messages billed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Long messages bill per split segment: GSM pure English 160 characters per message splitting at 153, Chinese 70 characters per message splitting at 67. Tencent Cloud single sends must not exceed 500 characters. Message length counts signature plus body text.Source: vendor official pages; verified 2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do SMS codes sometimes not arrive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common causes include peak-hour delays, carrier filtering, grey routes, and number-type mismatches. No delivery-rate figures are cited. Backup channels and fallback options take over when the primary channel fails.Source: vendor official pages; verified 2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What conditions apply to the first 10 SMS per day on Firebase?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The GCP Identity Platform pricing page states the first 10 SMS per day are not billed, repeatable daily, with US and China at $0.01 per message beyond that. Card requirements are not stated on the official pages read — check the official page; the September 2024 Cloud Billing association claim is unconfirmed in official text. The 50K monthly active user free tier is counted separately from SMS volume.Source: vendor official pages; verified 2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does Apple Developer Program membership cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "99 USD per membership year. Prices may vary by region and are shown in local currency during enrollment. The pages read do not state a China mainland CNY price; no conversion applies — check the official page. The Apple Developer Enterprise Program annual fee is 299 USD.Source: vendor and MIIT official pages; verification dates 2026-11-14–2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who can apply for an Apple fee waiver?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nonprofit organizations, accredited educational institutions, and government entities that meet four conditions: status as a legal entity of the qualifying type; not an individual, sole proprietor, or single-person business; no signed Paid Applications Agreement; and no sale of digital goods or services through any app. An approved waiver removes the annual fee; fees already paid are not refunded. Eligibility is confirmed at each annual renewal, with renewal from 30 days before expiry.Source: vendor and MIIT official pages; verification dates 2026-11-14–2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does App Store review usually take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typically at least 50% of submissions in less than 24 hours and 90% in less than 48 hours. An incomplete submission can delay review or fail review. On average, more than 40% of unresolved issues relate to guideline 2.1 App Completeness, covering crashes, placeholder content, and incomplete information.Source: vendor and MIIT official pages; verification dates 2026-11-14–2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many testers can TestFlight cover, and how long does a build last?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "External testers number up to 10,000 people and internal testers up to 100 App Store Connect users with access to the content. Only the first build added to a group requires review. A build becomes unavailable for testers after 90 days.Source: vendor and MIIT official pages; verification dates 2026-11-14–2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does Google Play Console registration cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A US$25 one-time fee, payable by credit or debit card (Mastercard, Visa, American Express, Discover US only, Visa Electron outside the US only). Prepaid cards are not accepted. When identity information is found invalid, the registration fee is not refunded. Annual renewal is not mentioned on the pages read — check the official page.Source: vendor and MIIT official pages; verification dates 2026-11-14–2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What closed testing must a new Google Play personal account complete?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Personal developer accounts created after November 13, 2023 must run a closed test with a minimum of 12 testers who have been opted in continuously for at least 14 days. At the time of the production access application, at least 12 testers must be opted in and must have been opted in continuously for the 14 days before the application. When a tester opts out and opts back in later, the 14 days must be consecutive to count.Source: vendor and MIIT official pages; verification dates 2026-11-14–2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does Google Play production access review take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Review usually takes seven days or less, but can occasionally take longer; the account owner receives an email when review completes. An app can require further testing when fewer than 12 testers are opted in or tester engagement is insufficient. General release review time is not stated on the pages read — check the official page.Source: vendor and MIIT official pages; verification dates 2026-11-14–2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do Google Play service fees work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Other markets: developers enrolled in the 15% service fee tier pay 15% for the first $1M (USD) revenue earned each year and 30% above $1M; subscriptions pay 15% for automatically renewing subscription products. New-structure markets (Australia, European Economic Area, Japan, United Kingdom, United States) follow a separate table with rollout dates June 30, 2026 (EEA/UK/US) and September 30, 2026 (AU/JP). The new-structure table row for the first $1M of annual earnings shows only the auto-renewing column in the captured text; rates for the other two transaction columns — check the official page.Source: vendor and MIIT official pages; verification dates 2026-11-14–2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does MIIT app filing require?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under MIIT notice Xin Guan [2023] No. 105, organizers of apps providing internet information services inside China must complete filing; apps without filing must not provide app internet information services. Filing runs through a network access provider or app distribution platform via the national internet basic resources management system, addressed to the communications administration of the organizer domicile. Complete and accurate materials receive filing within twenty working days, with a filing number issued. Filing fees, the materials checklist, and SMS verification details are not covered in the notice text — check the official page.Source: vendor and MIIT official pages; verification dates 2026-11-14–2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What belongs on a pre-submission checklist?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Account and entity details (Apple legal name and D-U-N-S number for organizations; Google active account and age 18 or older); fees (Apple 99 USD per membership year; Google US$25 one-time); test preparation (Apple demo account and special configuration notes; Google valid, working login credentials for reviewers); metadata consistency (Apple ICP filing number matching MIIT filing information); privacy policy (Xiaomi requires a complete privacy policy URL, per the older submission tutorial pages — check the current official page); filing and qualifications (filing before launch under the MIIT notice); and build completeness (no crashes, placeholder content, or incomplete information).Source: vendor and MIIT official pages; verification dates 2026-11-14–2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are the China-specific platform rules documented?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Alipay Mini Programs, Douyin Mini Programs, Huawei AppGallery, and Xiaomi App Store publish under rules documented on Chinese-language official pages; detail pages for these platforms are available in Chinese only. See the China-specific platforms overview.Source: vendor and MIIT official pages; verification dates 2026-11-14–2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is ICP filing, and who needs it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Filing (beian) is a Mainland-China-only compliance process. Providing non-commercial internet information services within the territory of the People's Republic of China requires filing. A server located in mainland China requires ICP filing through the access provider's platform; a server outside mainland China, including Hong Kong, does not require filing (Alibaba Cloud). Resolving a domain name to a mainland China server IP creates the filing obligation regardless of purpose.Source: MIIT Order No. 68, MIIT Notice No. 105, and Alibaba Cloud/Tencent Cloud documentation; verification dates 2026-11-14–2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does ICP filing take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By stage: access-provider preliminary review takes 1-2 working days; SMS verification must be completed within 24 hours; administration review takes 1-20 working days, with a statutory limit of 20 working days. Alibaba Cloud states that administration review cannot be expedited. After a rejection, about 1 working day is needed for the status to sync to Alibaba Cloud.Source: MIIT Order No. 68, MIIT Notice No. 105, and Alibaba Cloud/Tencent Cloud documentation; verification dates 2026-11-14–2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is filing free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fees are stated separately. Tencent Cloud documentation states that Tencent Cloud ICP filing is free of charge, and that filing with Tencent Cloud requires purchasing a qualifying Tencent Cloud service resource. The Alibaba Cloud pages read state no free-of-charge or fee statement for filing itself, and Alibaba Cloud operates a filing service-code mechanism that includes paid service codes; purchasing a service code alone cannot complete filing. No fee statement was found in the MIIT interpretation or the Filing Measures text read; check the official page.Source: MIIT Order No. 68, MIIT Notice No. 105, and Alibaba Cloud/Tencent Cloud documentation; verification dates 2026-11-14–2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can an individual file, and how does individual filing differ from entity filing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Individuals can file. An individual filing order can add at most 1 website with 1 domain name, or at most 1 app service; an entity filing order can add at most 10 websites or 10 services (Tencent Cloud). Where website content relates to an industry or enterprise, filing must be made in the name of an organization. Individual filing carries extra naming restrictions and requires the website or app manager to be the same person as the entity manager.Source: MIIT Order No. 68, MIIT Notice No. 105, and Alibaba Cloud/Tencent Cloud documentation; verification dates 2026-11-14–2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between ICP filing and public security (PSB) filing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two separate systems. ICP filing is managed through the communications administration system, submitted via the access provider, and completed before access is opened. PSB filing is submitted through the National Internet Security Management Service Platform within 30 days after the service is launched. Completing ICP filing does not complete PSB filing automatically. PSB review duration: check the official page.Source: MIIT Order No. 68, MIIT Notice No. 105, and Alibaba Cloud/Tencent Cloud documentation; verification dates 2026-11-14–2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where must the filing number be displayed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Upon launch, the filing number must be shown at the center of the bottom of the website homepage, with a link below the number to the MIIT filing management system website for public verification. For filings in Guangdong Province, the entity filing number is displayed; for filings elsewhere, the website filing number is displayed (Alibaba Cloud). An app must show the filing number in a prominent position and link the filing system website below the number. The 2024 revision deleted the requirement to place an electronic filing verification mark.Source: MIIT Order No. 68, MIIT Notice No. 105, and Alibaba Cloud/Tencent Cloud documentation; verification dates 2026-11-14–2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if the filing information changes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Changes to filing information must be filed at least 30 days in advance through the filing system with the original filing authority. Termination of service requires a cancellation filing on the date of termination. Changing access providers requires an access filing with the new provider.Source: MIIT Order No. 68, MIIT Notice No. 105, and Alibaba Cloud/Tencent Cloud documentation; verification dates 2026-11-14–2026-11-15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between ICP filing and an ICP license?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Filing applies to non-commercial internet information services; a license applies to commercial internet information services, such as commercial websites or apps providing paid information or services. The license is applied for after ICP filing is completed (Alibaba Cloud).Source: MIIT Order No. 68, MIIT Notice No. 105, and Alibaba Cloud/Tencent Cloud documentation; verification dates 2026-11-14–2026-11-15."
+      }
     }
   ]
 }</script>
@@ -1253,8 +1517,8 @@ footer a { color:var(--accent); }
 <article>
 <p class="crumb"><a href="../">Home</a> / FAQ</p>
 
-<h1>FAQ: 143 questions about free AI APIs, VPS, hosting, databases, domains, email, monitoring &amp; payments</h1>
-<p class="meta">Updated 2026-11-15 · 143 questions</p>
+<h1>FAQ: 176 questions about free AI APIs, VPS, hosting, databases, domains, email, monitoring &amp; payments</h1>
+<p class="meta">Updated 2026-11-16 · 176 questions</p>
 <p>The questions below use English users’ actual wording, gathered from search, forum, and community demand research. Answers are answer-first, based on vendor official pages; where an answer relies on community sources rather than a vendor official page, that is stated. Check the official page before claiming.</p>
 <details><summary>Are free LLM APIs really free?</summary>
 <p><b>Some are genuinely free long-term; most are capped allowances, not unlimited usage.</b> The 43 verified offers split into four shapes: 2 long-term free tiers, 18 one-time signup credits, 23 periodic resets (13 daily, 1 weekly, 9 monthly), and 2 with fixed end dates. “Free” always comes with conditions — an account, rate limits, an expiry, or all three. See the <a href="../compare/free-tier-types/">free-tier types comparison</a> for the full grouping.</p><p class="meta">Source: verified listings, 43 offers; verification dates 2026-10-09–2026-11-08.</p>
@@ -1818,6 +2082,141 @@ footer a { color:var(--accent); }
 <details><summary>What happens to already-downloaded assets when terms change?</summary>
 <p>Terms can change: the Pexels terms reserve the right to modify the terms at any time, including the right to cancel or change the license granted. Keep the download date, license page snapshot, license name and version, and source URL; after a change, applicable rules follow the official page and the terms text — no case-specific conclusions here.</p>
 <p class="meta">Source: Pexels official Terms of Service; verified 2026-11-14.</p>
+</details>
+<h2>SMS verification</h2>
+<details><summary>Which services offer free trial SMS allowances?</summary>
+<p>Three shapes exist: daily repeating allowances (GCP Identity Platform first 10 SMS per day not billed, Textbelt public key 1 text per day), time-limited trials (Twilio 30 days, Sinch 14 days, Vonage trial mode, Plivo trial credits), and one-time first-activation allowances (Alibaba Cloud trial pack 100/200 messages, Tencent Cloud first-activation gift 200/100 messages, both 3 months). Bird official pricing pages state no free SMS allowance, Telnyx trial wording conflicts, and AWS SNS has no verified free SMS allowance. Another official page states 150 messages for the Twilio trial; both wordings are shown side by side on the detail page.</p>
+<p class="meta">Source: vendor official pages; verified 2026-11-15.</p>
+</details>
+<details><summary>Who can receive trial messages?</summary>
+<p>Several services only send to verified numbers: Twilio verified numbers only with at most 5 recipients per account, Vonage at most 5 verified test numbers, Sinch test messages only to yourself; Telnyx developer docs state a 1 verified number limit, conflicting with the support article.</p>
+<p class="meta">Source: vendor official pages; verified 2026-11-15.</p>
+</details>
+<details><summary>Why does trial SMS carry a demo label?</summary>
+<p>Vonage trial-mode SMS carries a *[FREE SMS DEMO, TEST MESSAGE]* label; topping up and upgrading removes it. Twilio trials must use Twilio-provided templates, with no custom content.</p>
+<p class="meta">Source: vendor official pages; verified 2026-11-15.</p>
+</details>
+<details><summary>Why does Verify bill twice?</summary>
+<p>The platform fee covers the verification service itself and the channel fee covers SMS delivery, billed separately: Twilio $0.05 per successful verification plus channel fees, Vonage $0.06084 plus message and voice rates. Plivo and Bird charge no verification platform fee, billing per channel and destination only.</p>
+<p class="meta">Source: vendor official pages; verified 2026-11-15.</p>
+</details>
+<details><summary>Are failed verifications billed?</summary>
+<p>Twilio skips the $0.05 base fee for failed, expired, or incomplete verifications, but SMS attempts are always billed. Failed-attempt billing for other services is on the official page.</p>
+<p class="meta">Source: vendor official pages; verified 2026-11-15.</p>
+</details>
+<details><summary>How much does US SMS cost per message?</summary>
+<p>Per-message billing: Plivo $0.0077, Sinch $0.0078, Vonage SMS API from $0.00860, Alibaba Cloud pay-as-you-go $0.0086, Tencent Cloud $0.012 (excluding tax), GCP $0.01 beyond the first 10 per day. Per-segment billing: Bird from $0.0035, Telnyx from $0.004, Twilio from $0.0083. Carrier surcharges are billed separately by most services, and metering differences rule out direct ranking.</p>
+<p class="meta">Source: vendor official pages; verified 2026-11-15.</p>
+</details>
+<details><summary>How much does SMS to China cost?</summary>
+<p>Plivo long-code sending $0.1082 per message, Bird $0.035 per segment (Alphanumeric only), Telnyx $0.038 per segment (Alphanumeric Sender ID only), GCP $0.01 per message beyond the first 10 per day. Alibaba Cloud international pay-as-you-go $0.0500 per message with mainland packages at CNY 0.041–0.05; Tencent Cloud mainland packages at CNY 0.041–0.05. Twilio, Vonage, Sinch, and Textbelt prices to China are on the official page.</p>
+<p class="meta">Source: vendor official pages; verified 2026-11-15.</p>
+</details>
+<details><summary>Can individuals send domestic SMS in China?</summary>
+<p>Verification and notification messages, with limits: Alibaba Cloud individual self-use qualifications fail real-name signature registration, requiring a third-party qualification or an enterprise upgrade, and individually verified users cannot apply for promotion templates; Tencent Cloud individuals may only send verification and notification messages, not marketing, with only enterprise-verified users able to send domestic marketing SMS.</p>
+<p class="meta">Source: vendor official pages; verified 2026-11-15.</p>
+</details>
+<details><summary>How long does signature review take?</summary>
+<p>Alibaba Cloud qualification review usually completes within 2 working days, with carrier real-name registration averaging 5–7 working days and 7–10 for some carriers, with no timing guarantee from carriers. Tencent Cloud signature and template review normally returns feedback in about 2 hours (9:00–23:00), with carrier filing after approval generally taking 7–10 working days.</p>
+<p class="meta">Source: vendor official pages; verified 2026-11-15.</p>
+</details>
+<details><summary>How are template variables declared?</summary>
+<p>Signatures and body templates must pass review before use. Tencent Cloud variable format is {1}, with verification-code variables limited to 0–6 digit numbers; domestic signatures run 2–12 characters, international/Hong Kong/Macao/Taiwan signatures 2–15, with at most 50 signatures. Alibaba Cloud template review requirements are on the official page.</p>
+<p class="meta">Source: vendor official pages; verified 2026-11-15.</p>
+</details>
+<details><summary>What is 10DLC?</summary>
+<p>10DLC is brand and campaign registration for US A2P messaging. Current Twilio prices (after the 2025-08-01 increase): brand registration $4.50 or $46 one-time, campaigns $15 review fee plus $1.50–$10 per month. Sinch Engage 10DLC costs $25/month. The Bird 10DLC fees section carries no amounts — check the official page.</p>
+<p class="meta">Source: vendor official pages; verified 2026-11-15.</p>
+</details>
+<details><summary>How are long messages billed?</summary>
+<p>Long messages bill per split segment: GSM pure English 160 characters per message splitting at 153, Chinese 70 characters per message splitting at 67. Tencent Cloud single sends must not exceed 500 characters. Message length counts signature plus body text.</p>
+<p class="meta">Source: vendor official pages; verified 2026-11-15.</p>
+</details>
+<details><summary>Why do SMS codes sometimes not arrive?</summary>
+<p>Common causes include peak-hour delays, carrier filtering, grey routes, and number-type mismatches. No delivery-rate figures are cited. Backup channels and fallback options take over when the primary channel fails.</p>
+<p class="meta">Source: vendor official pages; verified 2026-11-15.</p>
+</details>
+<details><summary>What conditions apply to the first 10 SMS per day on Firebase?</summary>
+<p>The GCP Identity Platform pricing page states the first 10 SMS per day are not billed, repeatable daily, with US and China at $0.01 per message beyond that. Card requirements are not stated on the official pages read — check the official page; the September 2024 Cloud Billing association claim is unconfirmed in official text. The 50K monthly active user free tier is counted separately from SMS volume.</p>
+<p class="meta">Source: vendor official pages; verified 2026-11-15.</p>
+</details>
+<h2>App Store Publishing</h2>
+<details><summary>How much does Apple Developer Program membership cost?</summary>
+<p>99 USD per membership year. Prices may vary by region and are shown in local currency during enrollment. The pages read do not state a China mainland CNY price; no conversion applies — check the official page. The Apple Developer Enterprise Program annual fee is 299 USD.</p>
+<p class="meta">Source: vendor and MIIT official pages; verification dates 2026-11-14–2026-11-15.</p>
+</details>
+<details><summary>Who can apply for an Apple fee waiver?</summary>
+<p>Nonprofit organizations, accredited educational institutions, and government entities that meet four conditions: status as a legal entity of the qualifying type; not an individual, sole proprietor, or single-person business; no signed Paid Applications Agreement; and no sale of digital goods or services through any app. An approved waiver removes the annual fee; fees already paid are not refunded. Eligibility is confirmed at each annual renewal, with renewal from 30 days before expiry.</p>
+<p class="meta">Source: vendor and MIIT official pages; verification dates 2026-11-14–2026-11-15.</p>
+</details>
+<details><summary>How long does App Store review usually take?</summary>
+<p>Typically at least 50% of submissions in less than 24 hours and 90% in less than 48 hours. An incomplete submission can delay review or fail review. On average, more than 40% of unresolved issues relate to guideline 2.1 App Completeness, covering crashes, placeholder content, and incomplete information.</p>
+<p class="meta">Source: vendor and MIIT official pages; verification dates 2026-11-14–2026-11-15.</p>
+</details>
+<details><summary>How many testers can TestFlight cover, and how long does a build last?</summary>
+<p>External testers number up to 10,000 people and internal testers up to 100 App Store Connect users with access to the content. Only the first build added to a group requires review. A build becomes unavailable for testers after 90 days.</p>
+<p class="meta">Source: vendor and MIIT official pages; verification dates 2026-11-14–2026-11-15.</p>
+</details>
+<details><summary>How much does Google Play Console registration cost?</summary>
+<p>A US$25 one-time fee, payable by credit or debit card (Mastercard, Visa, American Express, Discover US only, Visa Electron outside the US only). Prepaid cards are not accepted. When identity information is found invalid, the registration fee is not refunded. Annual renewal is not mentioned on the pages read — check the official page.</p>
+<p class="meta">Source: vendor and MIIT official pages; verification dates 2026-11-14–2026-11-15.</p>
+</details>
+<details><summary>What closed testing must a new Google Play personal account complete?</summary>
+<p>Personal developer accounts created after November 13, 2023 must run a closed test with a minimum of 12 testers who have been opted in continuously for at least 14 days. At the time of the production access application, at least 12 testers must be opted in and must have been opted in continuously for the 14 days before the application. When a tester opts out and opts back in later, the 14 days must be consecutive to count.</p>
+<p class="meta">Source: vendor and MIIT official pages; verification dates 2026-11-14–2026-11-15.</p>
+</details>
+<details><summary>How long does Google Play production access review take?</summary>
+<p>Review usually takes seven days or less, but can occasionally take longer; the account owner receives an email when review completes. An app can require further testing when fewer than 12 testers are opted in or tester engagement is insufficient. General release review time is not stated on the pages read — check the official page.</p>
+<p class="meta">Source: vendor and MIIT official pages; verification dates 2026-11-14–2026-11-15.</p>
+</details>
+<details><summary>How do Google Play service fees work?</summary>
+<p>Other markets: developers enrolled in the 15% service fee tier pay 15% for the first $1M (USD) revenue earned each year and 30% above $1M; subscriptions pay 15% for automatically renewing subscription products. New-structure markets (Australia, European Economic Area, Japan, United Kingdom, United States) follow a separate table with rollout dates June 30, 2026 (EEA/UK/US) and September 30, 2026 (AU/JP). The new-structure table row for the first $1M of annual earnings shows only the auto-renewing column in the captured text; rates for the other two transaction columns — check the official page.</p>
+<p class="meta">Source: vendor and MIIT official pages; verification dates 2026-11-14–2026-11-15.</p>
+</details>
+<details><summary>What does MIIT app filing require?</summary>
+<p>Under MIIT notice Xin Guan [2023] No. 105, organizers of apps providing internet information services inside China must complete filing; apps without filing must not provide app internet information services. Filing runs through a network access provider or app distribution platform via the national internet basic resources management system, addressed to the communications administration of the organizer domicile. Complete and accurate materials receive filing within twenty working days, with a filing number issued. Filing fees, the materials checklist, and SMS verification details are not covered in the notice text — check the official page.</p>
+<p class="meta">Source: vendor and MIIT official pages; verification dates 2026-11-14–2026-11-15.</p>
+</details>
+<details><summary>What belongs on a pre-submission checklist?</summary>
+<p>Account and entity details (Apple legal name and D-U-N-S number for organizations; Google active account and age 18 or older); fees (Apple 99 USD per membership year; Google US$25 one-time); test preparation (Apple demo account and special configuration notes; Google valid, working login credentials for reviewers); metadata consistency (Apple ICP filing number matching MIIT filing information); privacy policy (Xiaomi requires a complete privacy policy URL, per the older submission tutorial pages — check the current official page); filing and qualifications (filing before launch under the MIIT notice); and build completeness (no crashes, placeholder content, or incomplete information).</p>
+<p class="meta">Source: vendor and MIIT official pages; verification dates 2026-11-14–2026-11-15.</p>
+</details>
+<details><summary>Where are the China-specific platform rules documented?</summary>
+<p>Alipay Mini Programs, Douyin Mini Programs, Huawei AppGallery, and Xiaomi App Store publish under rules documented on Chinese-language official pages; detail pages for these platforms are available in Chinese only. See the <a href="../appstore/china-platforms/">China-specific platforms overview</a>.</p>
+<p class="meta">Source: vendor and MIIT official pages; verification dates 2026-11-14–2026-11-15.</p>
+</details>
+<h2>China ICP filing</h2>
+<details><summary>What is ICP filing, and who needs it?</summary>
+<p>Filing (beian) is a Mainland-China-only compliance process. Providing non-commercial internet information services within the territory of the People's Republic of China requires filing. A server located in mainland China requires ICP filing through the access provider's platform; a server outside mainland China, including Hong Kong, does not require filing (Alibaba Cloud). Resolving a domain name to a mainland China server IP creates the filing obligation regardless of purpose.</p>
+<p class="meta">Source: MIIT Order No. 68, MIIT Notice No. 105, and Alibaba Cloud/Tencent Cloud documentation; verification dates 2026-11-14–2026-11-15.</p>
+</details>
+<details><summary>How long does ICP filing take?</summary>
+<p>By stage: access-provider preliminary review takes 1-2 working days; SMS verification must be completed within 24 hours; administration review takes 1-20 working days, with a statutory limit of 20 working days. Alibaba Cloud states that administration review cannot be expedited. After a rejection, about 1 working day is needed for the status to sync to Alibaba Cloud.</p>
+<p class="meta">Source: MIIT Order No. 68, MIIT Notice No. 105, and Alibaba Cloud/Tencent Cloud documentation; verification dates 2026-11-14–2026-11-15.</p>
+</details>
+<details><summary>Is filing free?</summary>
+<p>Fees are stated separately. Tencent Cloud documentation states that Tencent Cloud ICP filing is free of charge, and that filing with Tencent Cloud requires purchasing a qualifying Tencent Cloud service resource. The Alibaba Cloud pages read state no free-of-charge or fee statement for filing itself, and Alibaba Cloud operates a filing service-code mechanism that includes paid service codes; purchasing a service code alone cannot complete filing. No fee statement was found in the MIIT interpretation or the Filing Measures text read; check the official page.</p>
+<p class="meta">Source: MIIT Order No. 68, MIIT Notice No. 105, and Alibaba Cloud/Tencent Cloud documentation; verification dates 2026-11-14–2026-11-15.</p>
+</details>
+<details><summary>Can an individual file, and how does individual filing differ from entity filing?</summary>
+<p>Individuals can file. An individual filing order can add at most 1 website with 1 domain name, or at most 1 app service; an entity filing order can add at most 10 websites or 10 services (Tencent Cloud). Where website content relates to an industry or enterprise, filing must be made in the name of an organization. Individual filing carries extra naming restrictions and requires the website or app manager to be the same person as the entity manager.</p>
+<p class="meta">Source: MIIT Order No. 68, MIIT Notice No. 105, and Alibaba Cloud/Tencent Cloud documentation; verification dates 2026-11-14–2026-11-15.</p>
+</details>
+<details><summary>What is the difference between ICP filing and public security (PSB) filing?</summary>
+<p>Two separate systems. ICP filing is managed through the communications administration system, submitted via the access provider, and completed before access is opened. PSB filing is submitted through the National Internet Security Management Service Platform within 30 days after the service is launched. Completing ICP filing does not complete PSB filing automatically. PSB review duration: check the official page.</p>
+<p class="meta">Source: MIIT Order No. 68, MIIT Notice No. 105, and Alibaba Cloud/Tencent Cloud documentation; verification dates 2026-11-14–2026-11-15.</p>
+</details>
+<details><summary>Where must the filing number be displayed?</summary>
+<p>Upon launch, the filing number must be shown at the center of the bottom of the website homepage, with a link below the number to the MIIT filing management system website for public verification. For filings in Guangdong Province, the entity filing number is displayed; for filings elsewhere, the website filing number is displayed (Alibaba Cloud). An app must show the filing number in a prominent position and link the filing system website below the number. The 2024 revision deleted the requirement to place an electronic filing verification mark.</p>
+<p class="meta">Source: MIIT Order No. 68, MIIT Notice No. 105, and Alibaba Cloud/Tencent Cloud documentation; verification dates 2026-11-14–2026-11-15.</p>
+</details>
+<details><summary>What happens if the filing information changes?</summary>
+<p>Changes to filing information must be filed at least 30 days in advance through the filing system with the original filing authority. Termination of service requires a cancellation filing on the date of termination. Changing access providers requires an access filing with the new provider.</p>
+<p class="meta">Source: MIIT Order No. 68, MIIT Notice No. 105, and Alibaba Cloud/Tencent Cloud documentation; verification dates 2026-11-14–2026-11-15.</p>
+</details>
+<details><summary>What is the difference between ICP filing and an ICP license?</summary>
+<p>Filing applies to non-commercial internet information services; a license applies to commercial internet information services, such as commercial websites or apps providing paid information or services. The license is applied for after ICP filing is completed (Alibaba Cloud).</p>
+<p class="meta">Source: MIIT Order No. 68, MIIT Notice No. 105, and Alibaba Cloud/Tencent Cloud documentation; verification dates 2026-11-14–2026-11-15.</p>
 </details>
 <div class="related"><h2>Related pages</h2>
 <ul>
