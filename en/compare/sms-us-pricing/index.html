@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>US SMS prices compared: Twilio, Vonage, Plivo, Sinch, Telnyx, Bird, and China cloud vendors</title>
+<meta name="description" content="US SMS prices compared: Twilio from $0.0083 per segment, Vonage from $0.00860 per message, Plivo $0.0077 per message, Sinch $0.0078, Telnyx from $0.004 per part, Bird from $0.0035 per segment, with carrier surcharges and per-message vs per-segment metering notes. Verified 2026-11-15.">
+<link rel="canonical" href="https://tokens.yangtokent.com/en/compare/sms-us-pricing/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/compare/sms-us-pricing/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/sms/compare/us-pricing/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/sms/compare/us-pricing/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "US SMS prices compared: Twilio, Vonage, Plivo, Sinch, Telnyx, Bird, and China cloud vendors",
+  "description": "US SMS prices compared: Twilio from $0.0083 per segment, Vonage from $0.00860 per message, Plivo $0.0077 per message, Sinch $0.0078, Telnyx from $0.004 per part, Bird from $0.0035 per segment, with carrier surcharges and per-message vs per-segment metering notes. Verified 2026-11-15.",
+  "inLanguage": "en",
+  "datePublished": "2026-11-16",
+  "dateModified": "2026-11-16",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/en/compare/sms-us-pricing/",
+  "author": {
+    "@type": "Organization",
+    "name": "Free Token Monitor",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Free Token Monitor",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which US SMS price is cheapest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Metering differs, so no direct ranking applies: Bird from $0.0035 per segment and Telnyx from $0.004 per part bill per segment, while Plivo at $0.0077 per message bills per message, all plus carrier fees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do prices include carrier surcharges?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most bill surcharges separately: Twilio, Sinch, Telnyx, and Bird prices add carrier fees on top, and Plivo publishes per-carrier details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are long messages billed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Long messages bill per split segment, with segment counts depending on character set and length; GSM pure English splits at 160/153, Chinese at 70/67 — see the FAQ."
+      }
+    }
+  ]
+}
+</script>
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../">Free Token Monitor</a></h1>
+<p>Free credits for agents: only vendor-verified offers. Check the official page before claiming.</p></div></header>
+<nav><div class="wrap"><a href="../../">Home</a><a href="../../vps/">Free VPS</a><a href="../../wool/">VPS Deals</a><a href="../../cheap/">Cheap VPS</a><a href="../../deploy/">Deploy &amp; Hosting</a><a href="../../database/">Databases</a><a href="../../domain/">Domains &amp; DNS</a><a href="../../code/">Code Hosting</a><a href="../../auth/">Auth</a><a href="../../sms/">SMS Verification</a><a href="../../storage/">Storage</a><a href="../../email/">Email</a><a href="../../monitoring/">Monitoring</a><a href="../../payments/">Payments</a><a href="../../hosting/">Web Hosting</a><a href="../../schedule/">Scheduled Tasks</a><a href="../../support/">Customer Support</a><a href="../../workflow/">Workflow</a><a href="../../offers/">Offer details</a><a href="../../compare/" aria-current="page">Comparisons</a><a href="../../faq/">FAQ</a><a href="../../../sms/compare/us-pricing/">中文</a></div></nav>
+<main><div class="wrap">
+<p class="crumb"><a href="../../">Home</a> › <a href="../">Comparisons</a> › US SMS prices compared</p><h1>US SMS prices compared</h1><p class="meta">Published 2026-11-16 · Updated 2026-11-16 · Verified 2026-11-15</p><div class="answer"><p>Per-segment prices start at $0.0035 (Bird) and per-message prices start at $0.0077 (Plivo, SMS API); the Vonage Messages API starts lower at $0.00129 per message, and Textbelt bills per tier bundle — metering differs, so no direct ranking applies. Number and 10DLC fees are separate, as shown below. Verified 2026-11-15.</p></div><div class="tablewrap"><table><thead><tr><th>Service</th><th>US SMS price</th><th>Metering</th><th>Carrier surcharges</th><th>Number and 10DLC fees</th><th>Details</th></tr></thead><tbody><tr><td>Twilio</td><td>From $0.0083</td><td>Per segment (FAQ); overview says per message</td><td>Standard carrier passthrough fees on top</td><td>10DLC brand $4.50/$46, campaigns $15 review plus monthly fees</td><td><a href="../../sms/offers/twilio/">Details</a></td></tr><tr><td>Vonage</td><td>SMS API from $0.00860; Messages API from $0.00129</td><td>Per message</td><td>Check the official page</td><td>Check the official page</td><td><a href="../../sms/offers/vonage/">Details</a></td></tr><tr><td>Plivo</td><td>Long and short codes $0.0077, toll-free $0.0079</td><td>Per message</td><td>AT&T $0.0035, T-Mobile sending $0.0045 / receiving $0.0025, Verizon sending $0.0050</td><td>Long code $0.50/month, short code from $500/month plus $1,500 one-time fee</td><td><a href="../../sms/offers/plivo/">Details</a></td></tr><tr><td>Sinch</td><td>10DLC and toll-free $0.0078, short code $0.009</td><td>Per message (calculator)</td><td>Carrier fees on top</td><td>10DLC $1/month, short code from $500/month; Engage 10DLC $25/month</td><td><a href="../../sms/offers/sinch/">Details</a></td></tr><tr><td>Telnyx</td><td>Local incl. 10DLC $0.004, toll-free $0.0055, short code $0.007</td><td>Per part</td><td>Carrier fee on top of sending prices</td><td>Check the official page</td><td><a href="../../sms/offers/telnyx/">Details</a></td></tr><tr><td>Bird</td><td>Sending $0.0035/$0.0035/$0.0070, receiving $0.0010</td><td>Per segment</td><td>On top</td><td>10DLC fees section carries no amounts</td><td><a href="../../sms/offers/bird/">Details</a></td></tr><tr><td>Alibaba Cloud SMS</td><td>Pay-as-you-go $0.0086</td><td>Per message</td><td>Check the official page</td><td>Sender ID: long code registration 9 plus monthly fee 9 (currency unlabeled)</td><td><a href="../../sms/offers/aliyun-sms/">Details</a></td></tr><tr><td>Tencent Cloud SMS</td><td>$0.012 (excluding tax)</td><td>Per message</td><td>Check the official page</td><td>Check the official page</td><td><a href="../../sms/offers/tencent-sms/">Details</a></td></tr><tr><td>GCP Identity Platform</td><td>$0.01 (beyond the first 10 per day)</td><td>Per message</td><td>Check the official page</td><td>Templates hosted by the platform</td><td><a href="../../sms/offers/gcp-identity-platform/">Details</a></td></tr><tr><td>Textbelt</td><td>$3/50 texts (US/Canada tier)</td><td>Per tier bundle</td><td>Check the official page</td><td>Check the official page</td><td><a href="../../sms/offers/textbelt/">Details</a></td></tr></tbody></table></div><h2>Per-message and per-segment metering differ</h2><p>Twilio bills per segment on the FAQ wording (the overview says per message); Telnyx and Bird bill per segment; Vonage, Plivo, Sinch, Alibaba Cloud, Tencent Cloud, and GCP bill per message; Textbelt bills per tier bundle. Long messages bill per split segment, with segment counts depending on character set and length; see the FAQ. Cross-metering rankings mislead: a segment and a message are not the same unit for long messages.</p><h2>Carrier surcharges are billed separately</h2><p>Twilio, Sinch, Telnyx, and Bird prices all add carrier fees on top; Plivo publishes per-carrier surcharge details. Surcharge amounts vary by carrier and number type and belong in total cost comparisons.</p><h2>Number and 10DLC fees</h2><p>Number rental and 10DLC registration are fixed costs beyond per-message prices: Twilio 10DLC brand registration $4.50 or $46 one-time, with campaign review and monthly fees on top; Sinch Engage 10DLC $25/month; Plivo short code rental from $500 per month. The Bird 10DLC fees section carries no amounts — check the official page.</p><h2>Packages vs pay-as-you-go</h2><p>Sinch Engage is plan-based ($99/month with 3,000 messages and up), Alibaba Cloud and Tencent Cloud use package bundles (Alibaba Cloud in-package per-message prices below pay-as-you-go rates), and the rest are mostly pay-as-you-go. Package validity and coverage appear on each detail page.</p><h2>FAQ</h2><details><summary>Which US SMS price is cheapest?</summary><p>Metering differs, so no direct ranking applies: Bird from $0.0035 per segment and Telnyx from $0.004 per part bill per segment, while Plivo at $0.0077 per message bills per message, all plus carrier fees.</p></details><details><summary>Do prices include carrier surcharges?</summary><p>Most bill surcharges separately: Twilio, Sinch, Telnyx, and Bird prices add carrier fees on top, and Plivo publishes per-carrier details.</p></details><details><summary>How are long messages billed?</summary><p>Long messages bill per split segment, with segment counts depending on character set and length; GSM pure English splits at 160/153, Chinese at 70/67 — see the FAQ.</p></details><div class="note"><p>Information above was verified 2026-11-15 against vendor official pages. Free allowances and terms can change or end at any time; check the official page before claiming.</p></div><div class="related"><h3>Related pages</h3><p><a href="../../sms/offers/bird/">Bird explained</a></p><p><a href="../../sms/offers/telnyx/">Telnyx explained</a></p><p><a href="../sms-verify-billing/">Verify billing compared</a></p><p><a href="../../sms/">SMS verification list</a></p></div>
+</div></main>
+<footer><div class="wrap"><p><a href="../../">Home</a> · <a href="../../vps/">Free VPS</a> · <a href="../../wool/">VPS Deals</a> · <a href="../../cheap/">Cheap VPS</a> · <a href="../../deploy/">Deploy &amp; Hosting</a> · <a href="../../database/">Databases</a> · <a href="../../domain/">Domains &amp; DNS</a> · <a href="../../code/">Code Hosting</a> · <a href="../../auth/">Auth</a> · <a href="../../sms/">SMS Verification</a> · <a href="../../storage/">Storage</a> · <a href="../../email/">Email</a> · <a href="../../monitoring/">Monitoring</a> · <a href="../../payments/">Payments</a> · <a href="../../hosting/">Web Hosting</a> · <a href="../../schedule/">Scheduled Tasks</a> · <a href="../../support/">Customer Support</a> · <a href="../../workflow/">Workflow</a> · <a href="../../offers/">Offer details</a> · <a href="../../compare/" aria-current="page">Comparisons</a> · <a href="../../faq/">FAQ</a> · <a href="../../../sms/compare/us-pricing/">中文</a></p><p>Data is for reference only — check the vendor’s official page. Every SMS entry was verified against a vendor official page; verification dates are on each page. Free tiers and limits can change or end at any time; read the vendor’s terms before claiming. No invite links.</p></div></footer>
+</body>
+</html>
