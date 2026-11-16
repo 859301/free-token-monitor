@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>试用额度对比：额度、有效期、收件人限制与演示字样</title>
+<meta name="description" content="试用额度对比：Twilio 30 天 100 条、Sinch 14 天、Vonage 试用模式、Plivo 试用额度、GCP 每天 10 条、Textbelt 每天 1 条、阿里云试用包与腾讯云首开赠送，含收件人限制与演示字样对照。核实于 2026-11-15。">
+<link rel="canonical" href="https://tokens.yangtokent.com/sms/compare/trial-allowances/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/compare/sms-trial-allowances/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/sms/compare/trial-allowances/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/sms/compare/trial-allowances/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "试用额度对比：额度、有效期、收件人限制与演示字样",
+  "description": "试用额度对比：Twilio 30 天 100 条、Sinch 14 天、Vonage 试用模式、Plivo 试用额度、GCP 每天 10 条、Textbelt 每天 1 条、阿里云试用包与腾讯云首开赠送，含收件人限制与演示字样对照。核实于 2026-11-15。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-16",
+  "dateModified": "2026-11-16",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/sms/compare/trial-allowances/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "试用额度能发给谁？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "多家仅能发给已验证号码：Twilio 最多 5 个收件人，Vonage 最多 5 个已验证测试号码，Sinch 仅能向自己发测试消息。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "试用短信为什么带字样？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vonage 试用短信附加演示字样，充值升级后解除；Twilio 试用须用官方模板。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "试用结束后怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "试用额度过期后按按量付费或套餐包计费：Twilio 升级后获得全新一套额度，阿里云与腾讯云试用包超量或超期按标准价计费。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">短信验证</a><a href="../../offers/">详情</a><a href="../../compare/" aria-current="page">对比</a><a href="../../guides/">指南</a><a href="../../faq/">问答</a></div></nav>
+<main><div class="wrap">
+<p class="crumb"><a href="../../../">首页</a> › <a href="../../">短信验证</a> › <a href="../">对比</a> › 试用额度对比</p><h1>试用额度对比</h1><p class="meta">发布于 2026-11-16 · 更新于 2026-11-16 · 核实于 2026-11-15</p><div class="answer"><p>试用额度分三类：每日重复额度（GCP 每天前 10 条、Textbelt 每天 1 条）、限时试用（Twilio 30 天、Sinch 14 天、Vonage 试用模式、Plivo 试用额度）、一次性首开额度（阿里云试用包、腾讯云首开赠送，均为 3 个月）。收件人限制普遍存在：多家仅能发给已验证号码，Sinch 试用仅能向自己发测试消息。核实于 2026-11-15。</p></div><div class="tablewrap"><table><thead><tr><th>服务</th><th>额度</th><th>有效期</th><th>收件人限制</th><th>演示字样或模板限制</th><th>绑卡</th><th>详情页</th></tr></thead><tbody><tr><td>Twilio</td><td>100 条短信、40 次 Verify 等</td><td>30 天</td><td>仅已验证号码，最多 5 个收件人</td><td>须用 Twilio 模板，不支持自定义内容</td><td>试用无需信用卡</td><td><a href="../../offers/twilio/">详情</a></td></tr><tr><td>Vonage</td><td>试用模式，金额以官方页面为准</td><td>以官方页面为准</td><td>最多 5 个已验证测试号码</td><td>附加 *[FREE SMS DEMO, TEST MESSAGE]* 字样</td><td>以官方页面为准</td><td><a href="../../offers/vonage/">详情</a></td></tr><tr><td>Plivo</td><td>试用额度（$10 见语音定价页页脚）</td><td>14 天见 Voice AI 对比页，适用范围须标注</td><td>以官方页面为准</td><td>以官方页面为准</td><td>试用无需信用卡</td><td><a href="../../offers/plivo/">详情</a></td></tr><tr><td>Sinch</td><td>Engage 试用，金额以官方页面为准</td><td>14 天</td><td>仅能向自己发测试消息</td><td>以官方页面为准</td><td>Engage 试用无需信用卡</td><td><a href="../../offers/sinch/">详情</a></td></tr><tr><td>Telnyx</td><td>说法冲突：开发者文档称 $5，支持文章称当前无促销</td><td>试用号码 30 天内未升级将被收回（开发者文档）</td><td>开发者文档称限 1 个已验证号码</td><td>以官方页面为准</td><td>Card on file</td><td><a href="../../offers/telnyx/">详情</a></td></tr><tr><td>Bird</td><td>官方定价页未述及 SMS 免费额度</td><td>—</td><td>—</td><td>—</td><td>以官方页面为准</td><td><a href="../../offers/bird/">详情</a></td></tr><tr><td>阿里云短信</td><td>试用包个人 100 条、企业 200 条</td><td>3 个月</td><td>仅验证码与通知</td><td>须通过资质、签名与模板审核</td><td>以官方页面为准</td><td><a href="../../offers/aliyun-sms/">详情</a></td></tr><tr><td>腾讯云短信</td><td>首开赠送企业 200 条、个人 100 条</td><td>3 个月</td><td>个人仅验证码与通知</td><td>须通过签名与模板审核</td><td>以官方页面为准</td><td><a href="../../offers/tencent-sms/">详情</a></td></tr><tr><td>GCP Identity Platform</td><td>每天前 10 条不计费</td><td>每天重复</td><td>以官方页面为准</td><td>模板由平台托管</td><td>以官方页面为准</td><td><a href="../../offers/gcp-identity-platform/">详情</a></td></tr><tr><td>Textbelt</td><td>公共 key 每天 1 条</td><td>每天重复</td><td>以官方页面为准</td><td>以官方页面为准</td><td>以官方页面为准</td><td><a href="../../offers/textbelt/">详情</a></td></tr></tbody></table></div><h2>每日重复额度</h2><p>GCP Identity Platform 每天前 10 条短信不计费，Textbelt 公共 key 每天 1 条免费文本消息，两者都可每日重复使用，适合长期低量场景。超出部分按条计费。</p><h2>一次性试用与赠送</h2><p>Twilio 30 天试用含 100 条短信与 40 次 Verify 验证，Sinch Engage 14 天试用仅能向自己发测试消息，Vonage 试用模式金额与有效期以官方页面为准，Plivo 试用额度的 $10 与 14 天须按出处与适用范围理解。阿里云试用包与腾讯云首开赠送均为一次性 3 个月额度，同一用户或同一认证主体仅可参与或享受一次。</p><h2>试用限制</h2><p>收件人限制是试用的普遍条件：Twilio 仅已验证号码、最多 5 个收件人，Vonage 最多 5 个已验证测试号码，Sinch 仅能向自己发测试消息。演示字样方面，Vonage 试用短信附加演示字样，Twilio 试用须用官方模板。国内云短信试用须先通过资质、签名与模板审核。</p><h2>说法冲突项</h2><p>Telnyx 试用额度两处官方页说法直接冲突，并列呈现。Twilio 试用短信条数两处官方页说法不同（100 条与 150 条），详情页并列呈现。Bird 官方定价页未述及 SMS 免费额度，二手说法冲突，未解。AWS SNS 无已核实的短信免费额度，见澄清说明。</p><h2>常见问题</h2><details><summary>试用额度能发给谁？</summary><p>多家仅能发给已验证号码：Twilio 最多 5 个收件人，Vonage 最多 5 个已验证测试号码，Sinch 仅能向自己发测试消息。</p></details><details><summary>试用短信为什么带字样？</summary><p>Vonage 试用短信附加演示字样，充值升级后解除；Twilio 试用须用官方模板。</p></details><details><summary>试用结束后怎么办？</summary><p>试用额度过期后按按量付费或套餐包计费：Twilio 升级后获得全新一套额度，阿里云与腾讯云试用包超量或超期按标准价计费。</p></details><div class="note"><p>以上信息核实于 2026-11-15，来源为厂商官方页面。免费额度与条款可能调整或结束，领取前请以厂商官方页为准。</p></div><div class="related"><h3>相关页面</h3><p><a href="../../offers/twilio/">Twilio 试用与 Verify 详解</a></p><p><a href="../../offers/gcp-identity-platform/">GCP Identity Platform 详解</a></p><p><a href="../../offers/aws-sns/">AWS SNS 澄清说明</a></p><p><a href="../verify-billing/">Verify 计费对比</a></p></div>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">短信验证</a> · <a href="../../offers/">详情</a> · <a href="../../compare/">对比</a> · <a href="../../guides/">指南</a> · <a href="../../faq/">问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
