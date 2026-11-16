@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>短信验证：试用额度与单价一览（10 项，官网核实）</title>
+<meta name="description" content="短信验证试用额度与单价一览：Twilio、Vonage、Plivo、Sinch、Telnyx、Bird、阿里云短信、腾讯云短信、GCP Identity Platform、Textbelt，含试用额度、Verify 计费、美国与中国单价、签名与模板审核。核实于 2026-11-15。">
+<link rel="canonical" href="https://tokens.yangtokent.com/sms/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/sms/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/sms/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/sms/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "短信验证：试用额度与单价一览（10 项，官网核实）",
+  "description": "短信验证试用额度与单价一览：Twilio、Vonage、Plivo、Sinch、Telnyx、Bird、阿里云短信、腾讯云短信、GCP Identity Platform、Textbelt，含试用额度、Verify 计费、美国与中国单价、签名与模板审核。核实于 2026-11-15。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-16",
+  "dateModified": "2026-11-16",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/sms/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../">首页</a><a href="./" aria-current="page">短信验证</a><a href="./offers/">详情</a><a href="./compare/">对比</a><a href="./guides/">指南</a><a href="./faq/">问答</a></div></nav>
+<main><div class="wrap">
+<p class="crumb"><a href="../">首页</a> › 短信验证</p><h1>短信验证</h1><p class="meta">10 项 · 官网核实 · 更新于 2026-11-16</p><div class="answer"><p>多数服务为限时试用或按量付费，没有一家提供可长期、不限收件人的永久免费档；最接近长期额度的每天重复的少量额度：GCP Identity Platform 每天前 10 条不计费，Textbelt 公共 key 每天 1 条。计费分三层：验证平台费、通道费、运营商附加费，分开算。以下 10 项按服务类型分组，AWS SNS 澄清说明见详情页。</p></div><div class="chips"><button class="chip on" data-filter="all">全部 10 项</button><button class="chip" data-filter="nocard">无需绑卡</button><button class="chip" data-filter="intl">国际短信 API</button><button class="chip" data-filter="china">国内云短信</button><button class="chip" data-filter="platform">平台验证</button><button class="chip" data-filter="simple">简易 API</button></div><div class="offer-group"><h2>国际短信 API（6 项）</h2><div class="tablewrap"><table><thead><tr><th>服务</th><th>额度或试用</th><th>关键限制</th><th>美国单价</th><th>发往中国</th><th>绑卡？</th><th>核实</th></tr></thead><tbody><tr data-group="intl" data-card="no"><td><a href="./offers/twilio/">Twilio 试用与 Verify</a></td><td>30 天试用：100 条短信、40 次 Verify</td><td>仅已验证号码，最多 5 个收件人</td><td>$0.0083/段起</td><td>以官方页面为准</td><td>无需绑卡（试用）</td><td>2026-11-15</td></tr><tr data-group="intl" data-card="unknown"><td><a href="./offers/vonage/">Vonage 试用与 Verify</a></td><td>试用模式，金额以官方页面为准</td><td>最多 5 个已验证号码，短信带演示字样</td><td>$0.00860/条起</td><td>以官方页面为准</td><td>以官方页面为准</td><td>2026-11-15</td></tr><tr data-group="intl" data-card="no"><td><a href="./offers/plivo/">Plivo</a></td><td>试用额度（$10 与 14 天须标注出处）</td><td>Verify 零验证费，只收通道费</td><td>$0.0077/条</td><td>$0.1082/条</td><td>无需绑卡（试用）</td><td>2026-11-15</td></tr><tr data-group="intl" data-card="no"><td><a href="./offers/sinch/">Sinch</a></td><td>Engage 14 天试用</td><td>仅能向自己发测试消息</td><td>$0.0078/条</td><td>以官方页面为准</td><td>无需绑卡（Engage 试用）</td><td>2026-11-15</td></tr><tr data-group="intl" data-card="yes"><td><a href="./offers/telnyx/">Telnyx</a></td><td>试用额度说法冲突，并列呈现</td><td>须商业邮箱与 KYC</td><td>$0.004/段起</td><td>$0.038/段</td><td>Card on file</td><td>2026-11-15</td></tr><tr data-group="intl" data-card="unknown"><td><a href="./offers/bird/">Bird</a></td><td>按量付费，官方定价页未述及 SMS 免费额度</td><td>月度预存档 $15/$500/$2500</td><td>$0.0035/段起</td><td>$0.035/段</td><td>以官方页面为准</td><td>2026-11-15</td></tr></tbody></table></div></div><div class="offer-group"><h2>国内云短信（2 项）</h2><div class="tablewrap"><table><thead><tr><th>服务</th><th>额度或试用</th><th>关键限制</th><th>美国单价</th><th>发往中国</th><th>绑卡？</th><th>核实</th></tr></thead><tbody><tr data-group="china" data-card="unknown"><td><a href="./offers/aliyun-sms/">阿里云短信</a></td><td>免费试用包个人 100 条/企业 200 条，3 个月</td><td>个人自用资质通不过签名实名注册</td><td>$0.0086/条（国际站按量）</td><td>套餐包 ¥0.041–¥0.05/条</td><td>以官方页面为准</td><td>2026-11-15</td></tr><tr data-group="china" data-card="unknown"><td><a href="./offers/tencent-sms/">腾讯云短信</a></td><td>首开赠送企业 200 条/个人 100 条，3 个月</td><td>个人仅验证码与通知</td><td>$0.012/条（国际，不含税）</td><td>套餐包 ¥0.041–¥0.05/条</td><td>以官方页面为准</td><td>2026-11-15</td></tr></tbody></table></div></div><div class="offer-group"><h2>平台验证（1 项）</h2><div class="tablewrap"><table><thead><tr><th>服务</th><th>额度或试用</th><th>关键限制</th><th>美国单价</th><th>发往中国</th><th>绑卡？</th><th>核实</th></tr></thead><tbody><tr data-group="platform" data-card="unknown"><td><a href="./offers/gcp-identity-platform/">GCP Identity Platform / Firebase Phone Auth</a></td><td>每天前 10 条不计费</td><td>超出按条计费，月活 5 万免费分开计</td><td>$0.01/条</td><td>$0.01/条</td><td>以官方页面为准</td><td>2026-11-15</td></tr></tbody></table></div></div><div class="offer-group"><h2>简易 API（1 项）</h2><div class="tablewrap"><table><thead><tr><th>服务</th><th>额度或试用</th><th>关键限制</th><th>美国单价</th><th>发往中国</th><th>绑卡？</th><th>核实</th></tr></thead><tbody><tr data-group="simple" data-card="unknown"><td><a href="./offers/textbelt/">Textbelt</a></td><td>公共 key 每天 1 条</td><td>自建 key 后可发更多</td><td>$3/50 条（US/Canada 档位）</td><td>以官方页面为准</td><td>以官方页面为准</td><td>2026-11-15</td></tr></tbody></table></div></div><h2>三层计费结构</h2><p>验证平台费：Verify 类服务按成功验证收费（如 Twilio $0.05/次、Vonage $0.06084/次），或零验证费只收通道费（如 Plivo、Bird 无平台费）。通道费：按条或按段计费，另加运营商附加费；长短信按段拆分后计费。运营商附加费：按运营商与号码类型另计，金额见各详情页。失败尝试是否计费因服务而异：Twilio 失败或过期不收基础费，但短信尝试始终计费。见 <a href="./guides/verify-billing-breakdown/">Verify 计费拆解指南</a>与 <a href="./compare/verify-billing/">Verify 计费对比</a>。</p><h2>AWS SNS 澄清说明</h2><div class="note"><p>AWS SNS Free Tier 不含短信，旧称每月 100 条免费无官方依据。见 <a href="./offers/aws-sns/">AWS SNS 澄清说明</a>。</p></div><h2>停服与类别说明</h2><div class="note"><p>华为云短信已于 2025-04-25 停止短信发送服务。互亿无线价格与测试条数以官方页面为准。接码平台是接收验证码的虚拟号服务，与发送验证码的短信 API 不是同一类服务。</p></div><h2>变化记录</h2><ul><li>2026-11-16：新开分区，10 项经厂商官方页核实，核实日期 2026-11-15；AWS SNS 澄清说明 1 篇。</li></ul><div class="related"><h3>相关页面</h3><p><a href="./offers/">全部详情页</a></p><p><a href="./compare/">全部对比页</a></p><p><a href="./guides/">全部指南</a></p><p><a href="./faq/">常见问题</a></p><p><a href="../auth/">认证</a></p><p><a href="../workflow/">工作流总览</a></p></div><p><a href="../data/sms.json">机器可读数据（JSON）</a></p><script>
+document.querySelectorAll('.chip').forEach(function(chip){
+  chip.addEventListener('click',function(){
+    document.querySelectorAll('.chip').forEach(function(c){c.classList.remove('on');});
+    chip.classList.add('on');
+    var f=chip.getAttribute('data-filter');
+    document.querySelectorAll('tbody tr[data-group]').forEach(function(tr){
+      var show = (f==='all') || (f==='nocard' && tr.getAttribute('data-card')==='no') || (tr.getAttribute('data-group')===f);
+      tr.style.display = show ? '' : 'none';
+    });
+    document.querySelectorAll('.offer-group').forEach(function(g){
+      var any=false;
+      g.querySelectorAll('tbody tr').forEach(function(tr){ if(tr.style.display!=='none'){any=true;} });
+      g.style.display = any ? '' : 'none';
+    });
+  });
+});
+</script>
+</div></main>
+<footer><div class="wrap"><p><a href="../">首页</a> · <a href="./">短信验证</a> · <a href="./offers/">详情</a> · <a href="./compare/">对比</a> · <a href="./guides/">指南</a> · <a href="./faq/">问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
