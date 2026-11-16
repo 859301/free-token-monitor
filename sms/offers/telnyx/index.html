@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telnyx 详解：美国短信 $0.004/段起、发往中国 $0.038/段、Verify 与试用额度说法并列</title>
+<meta name="description" content="Telnyx 美国短信 Local 含 10DLC $0.004/段、Toll-Free $0.0055/段、短码 $0.007/段，均另加运营商费；发往中国 $0.038/段；Verify 页头 $0.05/次与表内 $0.03/次另加通道费并列，试用 $5 与无额度说法并列。核实于 2026-11-15。">
+<link rel="canonical" href="https://tokens.yangtokent.com/sms/offers/telnyx/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/sms/offers/telnyx/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/sms/offers/telnyx/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/sms/offers/telnyx/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Telnyx 详解：美国短信 $0.004/段起、发往中国 $0.038/段、Verify 与试用额度说法并列",
+  "description": "Telnyx 美国短信 Local 含 10DLC $0.004/段、Toll-Free $0.0055/段、短码 $0.007/段，均另加运营商费；发往中国 $0.038/段；Verify 页头 $0.05/次与表内 $0.03/次另加通道费并列，试用 $5 与无额度说法并列。核实于 2026-11-15。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-16",
+  "dateModified": "2026-11-16",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/sms/offers/telnyx/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Verify 到底多少钱一次？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "页头称 $0.05/次且递送成本已含在内，表内称 $0.03/次成功验证另加短信 API 费用，两处不一致，并列呈现，以官方页面为准。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "有试用额度吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "开发者文档称提供 $5 测试额度，支持文章称当前无提供免费试用额度的促销，两处直接冲突，以官方页面为准。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "需要绑卡吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "按量付费 $0 档与 Verify 定价页均写 Card on file；开发者文档称试用付款方式限信用卡。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">短信验证</a><a href="../../offers/" aria-current="page">详情</a><a href="../../compare/">对比</a><a href="../../guides/">指南</a><a href="../../faq/">问答</a></div></nav>
+<main><div class="wrap">
+<p class="crumb"><a href="../../../">首页</a> › <a href="../../">短信验证</a> › <a href="../">详情</a> › Telnyx 详解</p><h1>Telnyx 详解</h1><p class="meta">发布于 2026-11-16 · 更新于 2026-11-16 · 来源：<a href="https://telnyx.com/pricing/messaging">Telnyx 官方消息定价页</a> · 核实于 2026-11-15</p><p><span class="tag">美国 $0.004/段起</span><span class="tag">中国 $0.038/段</span><span class="tag">须绑卡</span><span class="tag">说法冲突并列</span></p><div class="answer"><p>Telnyx 美国短信按段计费：Local 含 10DLC 发送 $0.004/段、Toll-Free $0.0055/段、短码 $0.007/段，均另加运营商费；发往中国仅 Alphanumeric Sender ID，发送 $0.038/段。按量付费 $0 档写 Card on file。Verify 定价与试用额度在官方页内说法不一致，并列呈现，以官方页面为准。核实于 2026-11-15。</p></div><div class="toc"><strong>本页内容</strong><ul><li><a href="#spec">规格速览</a></li><li><a href="#s0">短信单价</a></li><li><a href="#s1">MMS 与阶梯降价</a></li><li><a href="#conflicts">说法并列</a></li><li><a href="#overage">超限规则与付费档</a></li><li><a href="#unconfirmed">未确认的信息</a></li><li><a href="#official">官方链接</a></li><li><a href="#risks">注意事项</a></li><li><a href="#faq">常见问题</a></li></ul></div><h2 id="spec">规格速览</h2><div class="tablewrap"><table class="fact"><tbody><tr><th>试用内容</th><td>说法冲突，并列呈现（见说法并列一节）；开发者文档称 $5 测试额度，支持文章称当前无提供免费试用额度的促销</td></tr><tr><th>提供方</th><td>Telnyx</td></tr><tr><th>计划名称</th><td>按量付费（Pay as you go）</td></tr><tr><th>时长</th><td>试用号码 30 天内未升级将被收回（开发者文档表述）</td></tr><tr><th>绑卡与验证</th><td>Card on file（按量付费 $0 档与 Verify 定价页均有此表述）；注册须用商业邮箱，有 KYC 流程</td></tr><tr><th>Verify 平台费</th><td>说法冲突，并列呈现：页头 $0.05/次，表内 $0.03/次成功验证另加短信 API 费用</td></tr><tr><th>通道费是否另计</th><td>说法冲突，并列呈现：页头称递送成本已含在内，表内称另加短信 API 费用</td></tr><tr><th>美国短信单价</th><td>Local 含 10DLC 发送 $0.004/段加运营商费、接收 $0.004/段；Toll-Free 发送 $0.0055/段加运营商费、接收 $0.0055/段；短码发送 $0.007/段加运营商费、接收 $0.007/段</td></tr><tr><th>发往中国单价</th><td>Alphanumeric Sender ID 发送 $0.038/段；MMS 与接收均为 N/A</td></tr><tr><th>运营商附加费</th><td>发送价另加运营商费；示例 Verizon $0.0045/段（外发）</td></tr><tr><th>签名与模板审核</th><td>以官方页面为准</td></tr><tr><th>地域限制</th><td>国际价须查全球价目文件；中国发送方类型仅 Alphanumeric Sender ID</td></tr><tr><th>核实日期</th><td>2026-11-15</td></tr><tr><th>来源</th><td><a href="https://telnyx.com/pricing/messaging">Telnyx 官方消息定价页</a></td></tr></tbody></table></div><h2 id="s0">短信单价</h2><p>消息定价页 RATES 区有发送方类型选择，短信类为三组：Local 含 10DLC、Toll-Free、Short Code（另有一个 RCS 标签，属 RCS 消息而非短信）。美国（国家 United States，货币 USD）：Local 含 10DLC 发送 $0.004/段加运营商费、接收 $0.004/段；Toll-Free 发送 $0.0055/段加运营商费、接收 $0.0055/段；短码发送 $0.007/段加运营商费、接收 $0.007/段。中国（国家切换为 China 后，发送方类型变为唯一的 Alphanumeric Sender ID）：发送 $0.038/段，MMS 与接收均为 N/A。</p><h2 id="s1">MMS 与阶梯降价</h2><p>MMS 发送 $0.015/段、接收 $0.005/段，均另加运营商费。月超 1 亿段自动阶梯降价。运营商费示例：Verizon 外发 $0.0045/段。</p><h2 id="conflicts">说法并列</h2><ul><li>Verify 定价：页头称 From $0.05 a verification，Delivery cost is inside the rate; no separate messaging line for verify.（递送成本已含在内，验证无单独消息费用行。）费率表 Services 行称 Use Verify API via SMS $0.03 per successful verification + SMS API pricing.（每次成功验证 $0.03 加短信 API 费用。）语音、Flash、WhatsApp 三行同为 $0.03 加对应 API 费用。两处不一致，并列呈现，不裁决。</li><li>试用额度：开发者文档（Updated 2026-10-16）称 USD $5 in testing credit is provided.（提供 $5 测试额度。）限 1 个已验证号码、终身 10 次更改、终身 15 次投递尝试、消息限长码仅发已验证号码每天 100 条、Verify 仅短信每天最多 50 次、试用号码 30 天内未升级将被收回、付款方式限信用卡。支持文章（Updated 2026-10-14）称 Telnyx may provide free trial credit from time to time... however at this moment in time there are no promotions that provide free trial credit.（Telnyx 有时会提供免费试用额度，但当前没有提供免费试用额度的促销。）开发者文档新 2 天这一事实可注明，不裁决。支持文章内部亦不一致：同一文章又提到 SIP Trunking 用例 purchased using their free sign-up credit.（用免费注册额度购买。）</li></ul><h2 id="overage">超限规则与付费档</h2><p>按量付费，月超 1 亿段自动阶梯降价。超限细则以官方页面为准。</p><h2 id="unconfirmed">未确认的信息</h2><ul><li>签名与模板审核：已读官方页未述及。</li><li>试用额度与 Verify 定价：官方页内说法冲突，并列呈现，以官方页面为准。</li></ul><h2 id="official">官方链接</h2><p><a class="btn" href="https://telnyx.com/pricing/messaging">去官网查看</a></p><ul><li><a href="https://telnyx.com/pricing/messaging">Telnyx 官方消息定价页</a></li><li><a href="https://telnyx.com/pricing/verify-api">Telnyx 官方 Verify 定价页</a></li><li><a href="https://developers.telnyx.com/docs/account-setup/levels-and-capabilities/trial">Telnyx 开发者文档：试用（Updated 2026-10-16）</a></li><li><a href="https://support.telnyx.com/en/articles/5295540-how-to-sign-up-for-a-telnyx-account">Telnyx 支持文章：注册（Updated 2026-10-14）</a></li></ul><h2 id="risks">注意事项</h2><ul><li>Verify 定价页头与表内说法不一致，以官方页面为准</li><li>试用额度两处官方页说法直接冲突，以官方页面为准</li><li>注册须用商业邮箱，有 KYC 流程</li><li>按量付费 $0 档写 Card on file</li><li>发往中国仅 Alphanumeric Sender ID，MMS 与接收为 N/A</li></ul><h2 id="faq">常见问题</h2><details><summary>Verify 到底多少钱一次？</summary><p>页头称 $0.05/次且递送成本已含在内，表内称 $0.03/次成功验证另加短信 API 费用，两处不一致，并列呈现，以官方页面为准。</p></details><details><summary>有试用额度吗？</summary><p>开发者文档称提供 $5 测试额度，支持文章称当前无提供免费试用额度的促销，两处直接冲突，以官方页面为准。</p></details><details><summary>需要绑卡吗？</summary><p>按量付费 $0 档与 Verify 定价页均写 Card on file；开发者文档称试用付款方式限信用卡。</p></details><div class="note"><p>以上信息核实于 2026-11-15，来源为厂商官方页面。免费额度与条款可能调整或结束，领取前请以厂商官方页为准。</p></div><div class="related"><h3>相关页面</h3><p><a href="../sinch/">Sinch 详解</a></p><p><a href="../bird/">Bird 详解</a></p><p><a href="../../compare/us-pricing/">美国短信单价对比</a></p><p><a href="../../compare/verify-billing/">Verify 计费对比：按成功验证收费与只收通道费</a></p></div>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">短信验证</a> · <a href="../../offers/">详情</a> · <a href="../../compare/">对比</a> · <a href="../../guides/">指南</a> · <a href="../../faq/">问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
