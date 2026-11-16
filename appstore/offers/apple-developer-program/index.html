@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apple Developer Program 详解：99 美元/会员年、费用减免、审核时长与 TestFlight 规则</title>
+<meta name="description" content="Apple Developer Program 会员费 99 USD per membership year，费用减免限非营利组织、经认证的教育机构与政府实体；个人注册显示法定姓名，组织注册须 D-U-N-S 编号；审核通常至少 50% 不到 24 小时、90% 不到 48 小时；TestFlight 外部测试者至多 10,000 人。核实于 2026-11-15。">
+<link rel="canonical" href="https://tokens.yangtokent.com/appstore/offers/apple-developer-program/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/appstore/offers/apple-developer-program/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/appstore/offers/apple-developer-program/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/appstore/offers/apple-developer-program/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Apple Developer Program 详解：99 美元/会员年、费用减免、审核时长与 TestFlight 规则",
+  "description": "Apple Developer Program 会员费 99 USD per membership year，费用减免限非营利组织、经认证的教育机构与政府实体；个人注册显示法定姓名，组织注册须 D-U-N-S 编号；审核通常至少 50% 不到 24 小时、90% 不到 48 小时；TestFlight 外部测试者至多 10,000 人。核实于 2026-11-15。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-16",
+  "dateModified": "2026-11-16",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/appstore/offers/apple-developer-program/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "个人开发者能注册 Apple Developer Program 吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "能。个人或独资经营者注册时需要开启双重认证的 Apple Account，并达到所在地区的法定成年年龄；须使用法定姓名，卖家姓名栏显示个人法定姓名。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "费用减免谁能申请？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "非营利组织、经认证的教育机构或政府实体，符合四项条件的可申请费用减免：须为具有相应身份的法律实体；不得为个人、独资经营者或一人企业；不得已签署《付费应用协议》；不得通过任何应用以其他方式销售数字商品或服务。减免获批后无需缴纳年度会员费，此前已缴纳的会员费不退。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "TestFlight 构建能用多久？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "构建在 90 天后对测试者不可用。外部测试者至多 10,000 人，内部测试者至多 100 名有内容访问权限的 App Store Connect 用户；向群组添加的首个构建会送交审核，仅首个构建要求审核。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">应用上架</a><a href="../../offers/" aria-current="page">详情</a><a href="../../compare/">对比</a><a href="../../guides/">指南</a><a href="../../faq/">问答</a></div></nav>
+<main><div class="wrap">
+<p class="crumb"><a href="../../../">首页</a> › <a href="../../">应用商店与小程序上架</a> › <a href="../">详情</a> › Apple Developer Program 详解</p><h1>Apple Developer Program 详解</h1><p class="meta">发布于 2026-11-16 · 更新于 2026-11-16 · 来源：<a href="https://developer.apple.com/programs/enroll/">Apple 官方注册页</a> · 核实于 2026-11-15</p><p><span class="tag">99 USD/会员年</span><span class="tag">费用减免</span><span class="tag">D-U-N-S 编号</span><span class="tag">TestFlight</span></p><div class="answer"><p>Apple Developer Program 会员费 99 USD per membership year，价格可能因地区而异，注册流程中以当地货币显示。费用减免仅非营利组织、经认证的教育机构或政府实体可申请。个人注册须使用法定姓名，卖家栏显示个人法定姓名；组织注册须为法律实体并提供 D-U-N-S 编号。审核通常至少 50% 的提交在不到 24 小时内完成，90% 在不到 48 小时内完成。核实于 2026-11-15，注册前请以厂商官方页为准。</p></div><div class="toc"><strong>本页内容</strong><ul><li><a href="#spec">规格速览</a></li><li><a href="#s0">费用</a></li><li><a href="#s1">费用减免</a></li><li><a href="#s2">个人与组织注册</a></li><li><a href="#s3">审核时长与常见问题</a></li><li><a href="#s4">申诉与加急</a></li><li><a href="#s5">服务费：小企业计划</a></li><li><a href="#s6">TestFlight</a></li><li><a href="#s7">中国大陆要求</a></li><li><a href="#unconfirmed">未确认的信息</a></li><li><a href="#official">官方链接</a></li><li><a href="#risks">注意事项</a></li><li><a href="#faq">常见问题</a></li></ul></div><h2 id="spec">规格速览</h2><div class="tablewrap"><table class="fact"><tbody><tr><th>注册费用</th><td>99 USD per membership year；价格可能因地区而异，注册流程中以当地货币显示</td></tr><tr><th>提供方</th><td>Apple</td></tr><tr><th>计划名称</th><td>Apple Developer Program</td></tr><tr><th>个人主体资格</th><td>个人可注册，须使用法定姓名，卖家栏显示个人法定姓名</td></tr><tr><th>审核时长</th><td>通常至少 50% 的提交在不到 24 小时内完成审核，90% 在不到 48 小时内完成审核</td></tr><tr><th>备案与资质要求</th><td>中国法律要求部分应用提供额外文件才能在中国大陆 App Store 上架；部分应用须持有效 ICP 备案号；游戏须取得版号，图书杂志、宗教、新闻内容应用须取得相应许可证</td></tr><tr><th>绑卡与支付</th><td>已读页未说明支付方式，以官方页面为准</td></tr><tr><th>服务费</th><td>小企业计划减免后费率为 15%；标准费率数字以官方页面为准</td></tr><tr><th>核实日期</th><td>2026-11-15</td></tr><tr><th>来源</th><td><a href="https://developer.apple.com/programs/enroll/">Apple 官方注册页</a></td></tr></tbody></table></div><h2 id="s0">费用</h2><p>Apple Developer Program 会员费为 99 USD per membership year。价格可能因地区而异，注册流程中以当地货币显示。已读页未写明中国大陆人民币价，不作换算，以官方页面为准。Apple Developer Enterprise Program 年费为 299 USD，价格可能因地区而异，企业计划须单独身份验证、通过网页注册组织。个人与组织的费用是否相同，已读页未分开标价，同一句 99 USD per membership year 适用于会员制整体，以官方页面为准。</p><h2 id="s1">费用减免</h2><p>非营利组织、经认证的教育机构或政府实体，符合要求的可申请费用减免。减免资格条件共四项：须为具有非营利组织、经认证的教育机构或政府实体身份的法律实体；不得为个人、独资经营者或一人企业；不得已签署《付费应用协议》以提供付费应用或 App 内购买（或已终止该协议）；不得通过任何应用以其他方式销售数字商品或服务。减免获批后无需缴纳年度会员费；此前已缴纳的会员费不退，全额或部分退款均无。减免资格须在每年续期时由账户持有人确认仍符合条件；续期可自到期前 30 天起办理。减免资格被取消后，须按 99 USD（或当地货币）的年度会员费缴纳。</p><h2 id="s2">个人与组织注册</h2><p>可注册为个人或注册组织。个人或独资经营者注册时，需要开启双重认证的 Apple Account，并达到所在地区的法定成年年龄；须使用法定姓名，卖家姓名栏显示个人法定姓名。注册组织时，注册人须有约束组织的法律授权；组织须为可与 Apple 签订合同的法律实体，不接受 DBA、虚构商号、商号或分支机构；组织名称显示为卖家姓名；组织（政府实体除外）须有 D-U-N-S 编号，即 Dun &amp; Bradstreet 分配的九位数字编号；工作邮箱须与组织域名关联；组织网站须公开可用、功能正常且域名与组织关联。</p><h2 id="s3">审核时长与常见问题</h2><p>App Review 全天候工作，通常至少 50% 的提交在不到 24 小时内完成审核，90% 在不到 48 小时内完成审核。提交不完整时，审核时间可能延迟或提交可能不通过。平均而言，超过 40% 的未解决问题与指南 2.1 App Completeness 有关，涵盖崩溃、占位内容、信息不完整等。官方页列出的常见问题包括：崩溃与 Bug、失效链接、占位内容、信息不完整（须提供演示账号、特殊配置说明）、隐私政策问题、数据访问请求说明不清、截图不准确、界面质量不达标、网页剪报/内容聚合/链接集合（指南 4.2）、重复提交相似应用（指南 4.3）、仿冒、误导用户、持久价值不足、提交主体不正确（银行金融、加密货币、医疗、赌博、航空旅行等高度监管领域的某些应用须由提供服务的法律实体提交，而非个人开发者）。</p><h2 id="s4">申诉与加急</h2><p>审核未通过可向 App Review Board 申诉，每个未通过的提交只能申诉一次。遇特殊情况（如修复严重 Bug、配合活动上线）可申请加急审核。可预约 30 分钟视频咨询，讨论审核指南与常见被拒原因。</p><h2 id="s5">服务费：小企业计划</h2><p>App Store Small Business Program 提供 15% 的减免后费率，适用于付费应用与 Apple App 内购买。在上一日历年全部应用收益不超过 100 万美元的现有开发者，以及 App Store 新开发者，可以获得该计划资格与减免后费率。参与开发者在当前日历年超过 100 万美元门槛后，标准费率适用于后续销售。收益在注册获批的日历财月结束后的 15 天调整。对于欧盟另类条款下的 App Store 小企业计划开发者，以及订阅满一年后的订阅，Apple 提供进一步减免至 10% 的费率。标准费率数字在已读页中只写为 standard commission rate，未给出数字，以官方页面为准；一般情形下订阅满一年后的费率在已读页中未展开，以官方页面为准。</p><h2 id="s6">TestFlight</h2><p>可添加外部测试者（至多 10,000 人）与内部测试者（至多 100 名有内容访问权限的 App Store Connect 用户）。邀请外部测试者时，Beta 构建可能需要审核：向群组添加的首个构建会送交 App Review 以确认符合《App Review Guidelines》，仅首个构建要求审核，后续构建可能不需要完整审核；构建获批后方可开始测试。构建在 90 天后对测试者不可用。测试者安装免费的 TestFlight 应用，通过邀请邮件或公开链接接受邀请。已读 TestFlight 概览页未单独标价，费用以官方页面为准。</p><h2 id="s7">中国大陆要求</h2><p>中国法律要求部分应用提供额外文件才能在中国大陆 App Store 上架；中国工业和信息化部（MIIT）要求部分应用持有有效的互联网内容提供者（ICP）备案号；App Information 页上的 ICP 备案号与元数据应与向 MIIT 备案的信息一致；ICP 备案号经验证保存后会显示在 App Store 产品页上。官方页未给出“部分应用”的具体名单，以官方页面为准。游戏须取得版号，图书杂志内容应用须取得国家新闻出版署的互联网出版许可证，宗教内容应用须取得国家宗教事务局的互联网宗教信息许可证，新闻内容应用须取得国家互联网信息办公室的互联网新闻信息许可证。以上均为该帮助页原文所列，办理细节未写明，以官方页面为准。</p><h2 id="unconfirmed">未确认的信息</h2><ul><li>注册审核耗时：官方页未写明。</li><li>个人与组织费用是否相同：已读页未分开标价。</li><li>标准服务费率数字：已读页只写 standard commission rate，未给出数字。</li><li>一般情形下订阅满一年后的费率：已读页未展开。</li><li>TestFlight 费用：已读页未单独标价。</li><li>中国大陆人民币价：已读页未写明。</li></ul><h2 id="official">官方链接</h2><p><a class="btn" href="https://developer.apple.com/programs/enroll/">去官网查看</a></p><p><a href="https://developer.apple.com/help/account/membership/fee-waivers/">费用减免官方页</a> · <a href="https://developer.apple.com/distribute/app-review/">App Review 官方页</a> · <a href="https://developer.apple.com/help/app-store-connect/reference/app-information/app-information/">App Information 帮助页</a> · <a href="https://developer.apple.com/help/app-store-connect/test-a-beta-version/testflight-overview">TestFlight 概览页</a> · <a href="https://developer.apple.com/app-store/small-business-program/">Small Business Program 官方页</a> · <a href="https://developer.apple.com/help/account/membership/program-enrollment/">Enrollment 官方页</a></p><h2 id="risks">注意事项</h2><ul><li>会员费价格可能因地区而异，注册流程中以当地货币显示</li><li>费用减免获批后无需缴纳年度会员费，此前已缴纳的会员费不退</li><li>个人注册的卖家栏显示个人法定姓名</li><li>组织注册须为法律实体，不接受 DBA、虚构商号、商号或分支机构</li><li>提交不完整时，审核时间可能延迟或提交可能不通过</li><li>中国大陆“部分应用”的具体名单以官方页面为准</li></ul><h2 id="faq">常见问题</h2><details><summary>个人开发者能注册 Apple Developer Program 吗？</summary><p>能。个人或独资经营者注册时需要开启双重认证的 Apple Account，并达到所在地区的法定成年年龄；须使用法定姓名，卖家姓名栏显示个人法定姓名。</p></details><details><summary>费用减免谁能申请？</summary><p>非营利组织、经认证的教育机构或政府实体，符合四项条件的可申请费用减免：须为具有相应身份的法律实体；不得为个人、独资经营者或一人企业；不得已签署《付费应用协议》；不得通过任何应用以其他方式销售数字商品或服务。减免获批后无需缴纳年度会员费，此前已缴纳的会员费不退。</p></details><details><summary>TestFlight 构建能用多久？</summary><p>构建在 90 天后对测试者不可用。外部测试者至多 10,000 人，内部测试者至多 100 名有内容访问权限的 App Store Connect 用户；向群组添加的首个构建会送交审核，仅首个构建要求审核。</p></details><div class="note"><p>以上信息核实于 2026-11-15，来源为厂商官方页面。费用与条款可能调整或结束，注册前请以厂商官方页为准。</p></div><div class="related"><h3>相关页面</h3><p><a href="../google-play-console/">Google Play Console 详解</a></p><p><a href="../../compare/apple-vs-google-play/">Apple vs Google Play：注册费、个人账号门槛与审核口径对照</a></p><p><a href="../../guides/app-store-rejection-check/">App Store 审核被拒自查</a></p><p><a href="../../guides/app-filing-process/">App 备案流程说明</a></p></div>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">应用上架</a> · <a href="../../offers/">详情</a> · <a href="../../compare/">对比</a> · <a href="../../guides/">指南</a> · <a href="../../faq/">问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
