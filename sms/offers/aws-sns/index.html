@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AWS SNS 说明：Free Tier 不含短信，旧称每月 100 条免费无官方依据</title>
+<meta name="description" content="AWS SNS Free Tier 仅含 100 万次发布、10 万次 HTTPS 投递与 1000 次邮件投递，无短信条目；旧称每月前 100 条美国短信免费仅见二手说法，与 2026-10 核查冲突。核实于 2026-11-15。">
+<link rel="canonical" href="https://tokens.yangtokent.com/sms/offers/aws-sns/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/sms/offers/aws-sns/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/sms/offers/aws-sns/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/sms/offers/aws-sns/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AWS SNS 说明：Free Tier 不含短信，旧称每月 100 条免费无官方依据",
+  "description": "AWS SNS Free Tier 仅含 100 万次发布、10 万次 HTTPS 投递与 1000 次邮件投递，无短信条目；旧称每月前 100 条美国短信免费仅见二手说法，与 2026-10 核查冲突。核实于 2026-11-15。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-16",
+  "dateModified": "2026-11-16",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/sms/offers/aws-sns/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "SNS Free Tier 含短信吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不含。Free Tier 列表仅含发布、HTTPS 投递与邮件投递，无短信条目。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "每月 100 条免费是真的吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "无官方依据。该说法仅见二手来源，与 2026-10 的核查冲突。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "SNS 短信多少钱？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "按量付费，价格因目的地而异，以官方页面为准。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">短信验证</a><a href="../../offers/" aria-current="page">详情</a><a href="../../compare/">对比</a><a href="../../guides/">指南</a><a href="../../faq/">问答</a></div></nav>
+<main><div class="wrap">
+<p class="crumb"><a href="../../../">首页</a> › <a href="../../">短信验证</a> › <a href="../">详情</a> › AWS SNS：Free Tier 不含短信</p><h1>AWS SNS：Free Tier 不含短信</h1><p class="meta">发布于 2026-11-16 · 更新于 2026-11-16 · 来源：<a href="https://aws.amazon.com/pm/sns/">AWS SNS 官方产品页</a> · 核实于 2026-11-15</p><p><span class="tag">澄清说明</span><span class="tag">Free Tier 不含短信</span><span class="tag">不作为免费资源</span></p><div class="answer"><p>AWS SNS 官方 Free Tier 列表仅含 100 万次发布、10 万次 HTTPS 投递与 1000 次邮件投递，无短信条目。旧称每月前 100 条美国短信免费仅见二手说法，与 2026-10 的核查冲突，无已核实的短信免费额度。短信按量付费，价格因目的地而异。以下内容为澄清说明，不作为免费资源。核实于 2026-11-15。</p></div><div class="toc"><strong>本页内容</strong><ul><li><a href="#spec">规格速览</a></li><li><a href="#s0">Free Tier 列表</a></li><li><a href="#s1">旧说法与核查冲突</a></li><li><a href="#s2">定价页表述</a></li><li><a href="#overage">超限规则与付费档</a></li><li><a href="#unconfirmed">未确认的信息</a></li><li><a href="#official">官方链接</a></li><li><a href="#risks">注意事项</a></li><li><a href="#faq">常见问题</a></li></ul></div><h2 id="spec">规格速览</h2><div class="tablewrap"><table class="fact"><tbody><tr><th>Free Tier 列表</th><td>100 万次发布、10 万次 HTTPS 投递、1000 次邮件投递</td></tr><tr><th>短信条目</th><td>无</td></tr><tr><th>旧说法</th><td>每月前 100 条美国短信免费：仅见二手说法，与 2026-10 核查冲突</td></tr><tr><th>定价页表述</th><td>Worldwide SMS 按量付费，价格因目的地而异；价目细节以官方页面为准</td></tr><tr><th>提供方</th><td>AWS</td></tr><tr><th>核实日期</th><td>2026-11-15</td></tr><tr><th>来源</th><td><a href="https://aws.amazon.com/pm/sns/">AWS SNS 官方产品页</a></td></tr></tbody></table></div><h2 id="s0">Free Tier 列表</h2><p>官方产品页 Free Tier 列表仅含 1,000,000 Publishes（100 万次发布）、100,000 HTTPS Deliveries（10 万次 HTTPS 投递）、1,000 Email Deliveries（1000 次邮件投递），无短信条目。澄清依据成立。</p><h2 id="s1">旧说法与核查冲突</h2><p>旧称每月前 100 条美国短信免费仅见二手说法，且与 2026-10 的核查（称不再列短信免费额度）冲突。结论：无已核实的短信免费额度。澄清范围限于 Free Tier 不含短信这一易误解点，不写价目细节。</p><h2 id="s2">定价页表述</h2><p>定价页称 Worldwide SMS 按量付费，价格因目的地而异，价目以官方页面为准。</p><h2 id="overage">超限规则与付费档</h2><p>短信按量付费，价格因目的地而异，以官方页面为准。</p><h2 id="unconfirmed">未确认的信息</h2><ul><li>短信价目细节：以官方页面为准。</li></ul><h2 id="official">官方链接</h2><p><a class="btn" href="https://aws.amazon.com/pm/sns/">去官网查看</a></p><ul><li><a href="https://aws.amazon.com/pm/sns/">AWS SNS 官方产品页</a></li><li><a href="https://aws.amazon.com/sns/pricing/">AWS SNS 官方定价页</a></li></ul><h2 id="risks">注意事项</h2><ul><li>Free Tier 不含短信，不要把 SNS 当作不用付费的短信渠道</li><li>旧称每月 100 条免费无官方依据</li><li>短信价格因目的地而异，以官方页面为准</li></ul><h2 id="faq">常见问题</h2><details><summary>SNS Free Tier 含短信吗？</summary><p>不含。Free Tier 列表仅含发布、HTTPS 投递与邮件投递，无短信条目。</p></details><details><summary>每月 100 条免费是真的吗？</summary><p>无官方依据。该说法仅见二手来源，与 2026-10 的核查冲突。</p></details><details><summary>SNS 短信多少钱？</summary><p>按量付费，价格因目的地而异，以官方页面为准。</p></details><div class="note"><p>以上信息核实于 2026-11-15，来源为厂商官方页面。免费额度与条款可能调整或结束，领取前请以厂商官方页为准。</p></div><div class="related"><h3>相关页面</h3><p><a href="../gcp-identity-platform/">GCP Identity Platform / Firebase Phone Auth 详解</a></p><p><a href="../textbelt/">Textbelt 详解</a></p><p><a href="../../compare/trial-allowances/">试用额度对比</a></p><p><a href="../../">短信验证列表</a></p></div>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">短信验证</a> · <a href="../../offers/">详情</a> · <a href="../../compare/">对比</a> · <a href="../../guides/">指南</a> · <a href="../../faq/">问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
