@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Twilio 试用与 Verify 详解：30 天试用、100 条短信、Verify $0.05/次成功验证另加通道费</title>
+<meta name="description" content="Twilio 30 天试用：100 条短信、40 次 Verify 验证、最多 5 个已验证收件人；Verify $0.05/次成功验证另加通道费，美国短信 $0.0083/段起另加运营商附加费；10DLC 现行价以 2025-08-01 调价后支持文章为准。核实于 2026-11-15。">
+<link rel="canonical" href="https://tokens.yangtokent.com/sms/offers/twilio/">
+<link rel="alternate" hreflang="en" href="https://tokens.yangtokent.com/en/sms/offers/twilio/">
+<link rel="alternate" hreflang="zh-CN" href="https://tokens.yangtokent.com/sms/offers/twilio/">
+<link rel="alternate" hreflang="x-default" href="https://tokens.yangtokent.com/sms/offers/twilio/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Twilio 试用与 Verify 详解：30 天试用、100 条短信、Verify $0.05/次成功验证另加通道费",
+  "description": "Twilio 30 天试用：100 条短信、40 次 Verify 验证、最多 5 个已验证收件人；Verify $0.05/次成功验证另加通道费，美国短信 $0.0083/段起另加运营商附加费；10DLC 现行价以 2025-08-01 调价后支持文章为准。核实于 2026-11-15。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-16",
+  "dateModified": "2026-11-16",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/sms/offers/twilio/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-CN",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "试用能发给谁？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "仅能发给已验证号码，每账号最多 5 个收件人；短信与语音仅限注册国家。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Verify 失败收不收费？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "失败、过期或未完成的验证不收 $0.05 基础费，但短信尝试始终计费。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "10DLC 注册要多少钱？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "品牌注册 $4.50 或 $46 一次性（按类型），活动 $15 审核费加 $1.50–$10/月月费，均为 2025-08-01 调价后现行价。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">短信验证</a><a href="../../offers/" aria-current="page">详情</a><a href="../../compare/">对比</a><a href="../../guides/">指南</a><a href="../../faq/">问答</a></div></nav>
+<main><div class="wrap">
+<p class="crumb"><a href="../../../">首页</a> › <a href="../../">短信验证</a> › <a href="../">详情</a> › Twilio 试用与 Verify 详解</p><h1>Twilio 试用与 Verify 详解</h1><p class="meta">发布于 2026-11-16 · 更新于 2026-11-16 · 来源：<a href="https://www.twilio.com/docs/usage/trials">Twilio 官方试用文档</a> · 核实于 2026-11-15</p><p><span class="tag">30 天试用</span><span class="tag">100 条短信</span><span class="tag">Verify $0.05/次</span><span class="tag">美国短信 $0.0083/段起</span></p><div class="answer"><p>Twilio 提供 30 天免费试用，无需信用卡，含 100 条短信、100 条 WhatsApp 消息、75 分钟语音、3000 封邮件、40 次 Verify 验证与 100 次 Lookup，30 天后过期。试用仅能发给已验证号码，每账号最多 5 个收件人。Verify 按每次成功验证 $0.05 另加通道费，美国短信通道费为每条 $0.0083；失败或过期不收 $0.05 基础费，短信尝试始终计费。核实于 2026-11-15，领取前请以厂商官方页为准。</p></div><div class="toc"><strong>本页内容</strong><ul><li><a href="#spec">规格速览</a></li><li><a href="#s0">试用额度与限制</a></li><li><a href="#s1">Verify 计费</a></li><li><a href="#s2">短信单价与覆盖</a></li><li><a href="#s3">10DLC 注册费用</a></li><li><a href="#conflicts">说法并列</a></li><li><a href="#overage">超限规则与付费档</a></li><li><a href="#unconfirmed">未确认的信息</a></li><li><a href="#official">官方链接</a></li><li><a href="#risks">注意事项</a></li><li><a href="#faq">常见问题</a></li></ul></div><h2 id="spec">规格速览</h2><div class="tablewrap"><table class="fact"><tbody><tr><th>试用内容</th><td>30 天试用，无需信用卡；100 条短信、100 条 WhatsApp 消息、75 分钟语音、3000 封邮件、40 次 Verify 验证、100 次 Lookup；30 天后过期</td></tr><tr><th>提供方</th><td>Twilio</td></tr><tr><th>计划名称</th><td>试用（Trial）</td></tr><tr><th>时长</th><td>30 天；升级后自动获得全新一套免费额度（100 条消息、40 次验证等）；注册时直接升级另有 30% 加成（Conversations 产品与首月免费号码除外）</td></tr><tr><th>绑卡与验证</th><td>试用无需信用卡；升级后付费方式以官方页面为准</td></tr><tr><th>Verify 平台费</th><td>$0.05/次成功验证，另加通道费；定制价通常在每月 10 万次以上验证时评估</td></tr><tr><th>通道费是否另计</th><td>是；美国短信为 $0.05 加每条 $0.0083</td></tr><tr><th>美国短信单价</th><td>$0.0083/段起，另加标准运营商附加费（定价页 FAQ 表述；总览页写每条 $0.0083 起）</td></tr><tr><th>发往中国单价</th><td>以官方页面为准（支持国家表含 China，单价未在已读页面中明示）</td></tr><tr><th>运营商附加费</th><td>美国短信费率另加标准运营商附加费，金额以官方页面为准</td></tr><tr><th>签名与模板审核</th><td>试用须用 Twilio 提供的模板，不支持自定义内容；10DLC 注册费用见 10DLC 一节</td></tr><tr><th>地域限制</th><td>短信与语音仅限注册国家；覆盖 180+ 国家</td></tr><tr><th>核实日期</th><td>2026-11-15</td></tr><tr><th>来源</th><td><a href="https://www.twilio.com/docs/usage/trials">Twilio 官方试用文档</a></td></tr></tbody></table></div><h2 id="s0">试用额度与限制</h2><p>试用期 30 天，无需信用卡，含 100 条短信、100 条 WhatsApp 消息、75 分钟语音、3000 封邮件、40 次 Verify 验证与 100 次 Lookup，30 天后过期。短信与语音仅限注册国家，仅能发给已验证号码，每账号最多 5 个收件人；须用 Twilio 提供的模板，不支持自定义内容；试用号码为共享号码，升级后不能保留。</p><p>升级后自动获得全新一套免费额度（100 条消息、40 次验证等）；注册时直接升级另有 30% 加成，Conversations 产品与首月免费号码除外。</p><h2 id="s1">Verify 计费</h2><p>Verify 按每次成功验证 $0.05 另加标准通道费；短信通道为每次成功验证 $0.05 加每条 $0.0083（美国）。失败、过期或未完成的验证不收 $0.05 基础费，但短信尝试始终计费。定制价通常在每月 10 万次以上验证时评估。</p><h2 id="s2">短信单价与覆盖</h2><p>短信按量付费价自 $0.0083 起，覆盖 180+ 国家；定价页 FAQ 写美国短信费率自 $0.0083/段起，另加标准运营商附加费。总览页写按条计费，FAQ 写按段计费，两种表述并存，单价行按 FAQ 表述写每段，另加运营商附加费。支持国家表含 China，发往中国单价以官方页面为准。</p><h2 id="s3">10DLC 注册费用</h2><p>以下为支持文章现行价，TCR 于 2025-08-01 上调后生效，营销页旧价 $4/$44 为调价前数字，以支持文章现行价为准。品牌注册：Sole Proprietor $4.50 一次性、低量标准 $4.50 一次性、标准 $46 一次性（含二次审核）。活动费用：$15 审核费加月费，Sole Proprietor $2、标准 $10、低量混合 $1.50、慈善 $3、应急 $5。注册费与运营商费均由运营商收取，Twilio 原价转嫁。</p><h2 id="conflicts">说法并列</h2><ul><li>免费消息条数：Twilio 帮助中心文章称 Messaging 含 150 条免费消息、每日上限 10 条，与试用文档页的 100 条不一致，并列呈现，不裁决。</li><li>WhatsApp 认证模板消息：Verify 定价页表格中为 $0.0034，FAQ 文字中为 $0.0147，均为美国价，并列呈现，不裁决。</li></ul><h2 id="overage">超限规则与付费档</h2><p>试用额度 30 天后过期，升级后自动获得全新一套免费额度。按量付费价见短信单价一节，试用额度之外的计费细则以官方页面为准。</p><h2 id="unconfirmed">未确认的信息</h2><ul><li>升级后付费方式：已读页面未述及。</li><li>发往中国单价：支持国家表含 China，单价未在已读页面中明示。</li><li>运营商附加费金额：已读页面只写另加标准运营商附加费。</li></ul><h2 id="official">官方链接</h2><p><a class="btn" href="https://www.twilio.com/docs/usage/trials">去官网查看</a></p><ul><li><a href="https://www.twilio.com/docs/usage/trials">Twilio 官方试用文档（页内 Updated 2026-11-13）</a></li><li><a href="https://www.twilio.com/en-us/verify/pricing">Twilio Verify 官方定价页（Pricing current as of October 2026）</a></li><li><a href="https://www.twilio.com/en-us/messaging/channels/sms">Twilio 短信官方页</a></li><li><a href="https://support.twilio.com/hc/en-us/articles/1260803965530-Pricing-and-Fees-for-A2P-10DLC-Service">Twilio 10DLC 费用支持文章</a></li></ul><h2 id="risks">注意事项</h2><ul><li>试用仅能发给已验证号码，每账号最多 5 个收件人</li><li>试用须用 Twilio 提供的模板，不支持自定义内容</li><li>试用号码为共享号码，升级后不能保留</li><li>Verify 失败或过期不收基础费，但短信尝试始终计费</li><li>10DLC 费用以调价后支持文章现行价为准</li></ul><h2 id="faq">常见问题</h2><details><summary>试用能发给谁？</summary><p>仅能发给已验证号码，每账号最多 5 个收件人；短信与语音仅限注册国家。</p></details><details><summary>Verify 失败收不收费？</summary><p>失败、过期或未完成的验证不收 $0.05 基础费，但短信尝试始终计费。</p></details><details><summary>10DLC 注册要多少钱？</summary><p>品牌注册 $4.50 或 $46 一次性（按类型），活动 $15 审核费加 $1.50–$10/月月费，均为 2025-08-01 调价后现行价。</p></details><div class="note"><p>以上信息核实于 2026-11-15，来源为厂商官方页面。免费额度与条款可能调整或结束，领取前请以厂商官方页为准。</p></div><div class="related"><h3>相关页面</h3><p><a href="../vonage/">Vonage 试用与 Verify 详解</a></p><p><a href="../plivo/">Plivo 详解</a></p><p><a href="../../compare/verify-billing/">Verify 计费对比：按成功验证收费与只收通道费</a></p><p><a href="../../compare/us-pricing/">美国短信单价对比</a></p><p><a href="../../guides/verify-billing-breakdown/">Verify 计费拆解：平台费、通道费与运营商附加费</a></p></div>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">短信验证</a> · <a href="../../offers/">详情</a> · <a href="../../compare/">对比</a> · <a href="../../guides/">指南</a> · <a href="../../faq/">问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
