@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=G-FF7N1FHBD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Play 新个人账号封闭测试实操：12 名测试者、14 天与正式版申请</title>
+<meta name="description" content="Google Play 新个人账号封闭测试：2023 年 11 月 13 日之后创建的个人账号，须运行封闭测试，至少 12 名测试者连续选择加入至少 14 天，满足标准后在 Play Console 申请正式版访问权限，审核通常 7 天或更短。核实于 2026-11-15。">
+<link rel="canonical" href="https://tokens.yangtokent.com/appstore/guides/google-play-closed-testing/">
+<style>:root { --bg:#f6f7f9; --card:#fff; --text:#1a1d21; --muted:#6b7280; --border:#e5e7eb; --accent:#2563eb; --accent-soft:#eff6ff; --warn:#b45309; --warn-bg:#fef3c7; --danger:#b91c1c; --danger-bg:#fee2e2; --ok:#15803d; --ok-bg:#dcfce7; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { background:#111827; color:#fff; padding:24px 20px 20px; }
+header .wrap, main .wrap, footer .wrap, nav .wrap { max-width:1080px; margin:0 auto; }
+header h1 { margin:0 0 6px; font-size:24px; }
+header h1 a { color:#fff; text-decoration:none; }
+header p { margin:0; color:#d1d5db; font-size:14px; }
+nav { background:#fff; border-bottom:1px solid var(--border); padding:0 20px; }
+nav .wrap { display:flex; flex-wrap:wrap; gap:4px; }
+nav a { padding:11px 14px; font-size:14px; color:var(--text); text-decoration:none; border-bottom:2px solid transparent; }
+nav a:hover { color:var(--accent); }
+nav a[aria-current="page"] { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+main { padding:20px; }
+article { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:26px 28px; }
+article h1 { margin:0 0 10px; font-size:26px; line-height:1.35; }
+article h2 { margin:30px 0 10px; font-size:20px; padding-bottom:6px; border-bottom:1px solid var(--border); }
+article h3 { margin:22px 0 8px; font-size:17px; }
+article p { margin:10px 0; }
+article ul, article ol { margin:10px 0; padding-left:24px; }
+article li { margin:5px 0; }
+article a { color:var(--accent); }
+.answer { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:16px; }
+.answer p { margin:0; }
+.note { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 14px; margin:14px 0; font-size:14px; }
+.note b { color:var(--warn); }
+.crumb { font-size:13px; color:var(--muted); margin:0 0 14px; }
+.crumb a { color:var(--muted); }
+.meta { font-size:13px; color:var(--muted); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:14px; }
+th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+th { background:#f9fafb; }
+.tablewrap { overflow-x:auto; }
+.fact th { width:150px; background:#f9fafb; white-space:nowrap; }
+.tag { font-size:12px; background:var(--accent-soft); color:#1d4ed8; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+.tag.gray { background:#f3f4f6; color:#4b5563; }
+.tag.ok { background:var(--ok-bg); color:var(--ok); }
+.tag.warn { background:var(--warn-bg); color:var(--warn); }
+details { border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin:8px 0; background:#fff; }
+details summary { cursor:pointer; font-weight:600; }
+details p, details div { margin:8px 0 2px; font-size:14px; color:#374151; }
+code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+pre { background:#111827; color:#e5e7eb; padding:14px 16px; border-radius:8px; overflow-x:auto; font-size:13px; line-height:1.6; }
+code { background:#f3f4f6; padding:1px 5px; border-radius:4px; font-size:13px; }
+pre code { background:none; padding:0; color:inherit; }
+.toc { background:#f9fafb; border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin:16px 0; font-size:14px; }
+.toc b { display:block; margin-bottom:4px; }
+.toc ul { margin:0; }
+.related { margin-top:28px; border-top:1px solid var(--border); padding-top:14px; }
+.related h2 { border:none; margin-top:0; }
+.btn { display:inline-block; background:var(--accent); color:#fff !important; padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14px; }
+.btn:hover { background:#1d4ed8; }
+footer { padding:20px; font-size:13px; color:var(--muted); }
+footer a { color:var(--accent); }
+@media (max-width:560px) { article { padding:18px; } article h1 { font-size:21px; } }</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Google Play 新个人账号封闭测试实操：12 名测试者、14 天与正式版申请",
+  "description": "Google Play 新个人账号封闭测试：2023 年 11 月 13 日之后创建的个人账号，须运行封闭测试，至少 12 名测试者连续选择加入至少 14 天，满足标准后在 Play Console 申请正式版访问权限，审核通常 7 天或更短。核实于 2026-11-15。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-11-16",
+  "dateModified": "2026-11-16",
+  "mainEntityOfPage": "https://tokens.yangtokent.com/appstore/guides/google-play-closed-testing/",
+  "author": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "免费 Token 监控平台",
+    "url": "https://tokens.yangtokent.com/"
+  }
+}
+</script>
+</head>
+<body>
+<header><div class="wrap"><h1><a href="../../../">免费 Token 监控平台</a></h1><p>免费额度与免费主机信息，领取前请以厂商官方页为准。</p></div></header>
+<nav><div class="wrap"><a href="../../../">首页</a><a href="../../">应用上架</a><a href="../../offers/">详情</a><a href="../../compare/">对比</a><a href="../../guides/" aria-current="page">指南</a><a href="../../faq/">问答</a></div></nav>
+<main><div class="wrap">
+<p class="crumb"><a href="../../../">首页</a> › <a href="../../">应用商店与小程序上架</a> › <a href="../">指南</a> › Google Play 新个人账号封闭测试实操：12 名测试者、14 天与正式版申请</p><h1>Google Play 新个人账号封闭测试实操：12 名测试者、14 天与正式版申请</h1><p class="meta">发布于 2026-11-16 · 更新于 2026-11-16 · 核实于 2026-11-15</p><h2>谁须完成封闭测试</h2><p>Google Play 要求 2023 年 11 月 13 日之后创建的个人开发者账号，在应用有资格在 Google Play 分发前先测试应用。未满足测试要求前，Play Console 中的 Production 与 Pre-registration 等功能保持禁用。</p><h2>12 人 14 天规则</h2><p>须为应用运行封闭测试，至少 12 名测试者连续选择加入至少 14 天。申请正式版访问权限时，至少 12 名测试者须处于封闭测试选择加入状态，且在申请前 14 天内连续选择加入。测试者退出后再重新加入，14 天须连续计算才计入。测试期间测试者参与不足，可能导致应用需要更多测试。</p><h2>测试类型</h2><p>内部测试为可选项，构建通常在加入后数秒内可供测试者使用。封闭测试须在完成应用设置后开始。开放测试在获得正式版访问权限后可用。三种测试类型按官方页的顺序安排：先完成应用设置，再运行封闭测试，获得正式版访问权限后开放测试可用。</p><h2>申请正式版访问权限</h2><p>满足标准后在 Play Console 的 Dashboard 点击 Apply for production，并回答关于封闭测试、应用与正式版准备情况的三部分问题。申请提交后 Google 会审核，审核完成时向账号所有者发送邮件通知；审核通常在 7 天或更短时间内完成，但偶尔可能更长。如应用需要更多测试，可能须继续运行封闭测试，原因包括选择加入的测试者少于 12 人或测试期间测试者参与不足。</p><h2>合规提醒</h2><p>开发者有责任确保应用在提交正式版访问权限前完全符合 Google Play 开发者内容政策；审核不是排错步骤，提交不合规应用会导致被拒、审核延迟与更长的申诉流程。常见注意点包括应用内容与功能、目标人群与内容分级、功能可靠性、测试凭据（须提供有效可用的登录凭据供审核者完整测试）。</p><div class="note"><p>以上信息核实于 2026-11-15，来源为 Google Play 官方支持页。规则可能调整，操作前请以官方页面为准。</p></div><div class="related"><h3>相关页面</h3><p><a href="../../offers/google-play-console/">Google Play Console 详解</a></p><p><a href="../../compare/apple-vs-google-play/">Apple vs Google Play 对照</a></p><p><a href="../../guides/pre-submission-checklist/">上架前检查清单</a></p><p><a href="../../">应用商店与小程序上架列表</a></p></div>
+</div></main>
+<footer><div class="wrap"><p><a href="../../../">首页</a> · <a href="../../">应用上架</a> · <a href="../../offers/">详情</a> · <a href="../../compare/">对比</a> · <a href="../../guides/">指南</a> · <a href="../../faq/">问答</a></p><p>信息以厂商官方页为准；条款随时可能调整或结束，领取前请看清对方条款。</p></div></footer>
+</body>
+</html>
