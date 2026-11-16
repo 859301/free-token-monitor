@@ -272,23 +272,23 @@
       "group": "suite",
       "status": "active",
       "planName": "Service Hub Free",
-      "specText": "Service Hub Free, $0/month; up to 2 users; shared inbox, HubSpot Smart CRM contact management, live chat and conversational bots (limited features), a centralized ticketing system, and basic reports and dashboards; for use with HubSpot CRM",
+      "specText": "Service Hub Free, $0/month; up to 2 users; shared inbox, HubSpot Smart CRM contact management, live chat and conversational bots (limited features), a centralized ticketing system, and basic reports and dashboards",
       "durationText": "Service Hub Free, $0/month (the official pages read do not state permanent wording — check the official page)",
       "cardRequired": null,
       "cardNote": "Card requirements are not stated on the official pages read — check the official page.",
       "limitsText": "Up to 2 users; conversation and ticket caps — check the official page",
       "overageBehavior": "Check the official page",
       "risks": [
-        "For use with HubSpot CRM",
+        "The free tools include HubSpot Smart CRM contact management; the official blog does not say CRM use is mandatory",
         "The knowledge base and customer portal sit in the Professional tier, absent from the free tools",
         "The free tools carry HubSpot branding; branding removal starts in the Starter tier",
         "Conversation and ticket caps and retention — check the official page"
       ],
       "claimUrl": "https://blog.hubspot.com/service/hubspot-service-hub-pricing",
-      "verifiedAt": "2026-11-14",
+      "verifiedAt": "2026-11-15",
       "sourceName": "HubSpot official blog pricing guide",
       "sourceUrl": "https://blog.hubspot.com/service/hubspot-service-hub-pricing",
-      "notes": "Paid tiers (official blog summary, annual billing): Starter from $7/seat/month; Professional from $90/seat/month, plus a $1,500 one-time onboarding fee; Enterprise from $150/seat/month, plus a $3,500 one-time onboarding fee. HubSpot Credits: 500 a month on Starter, 3,000 on Professional, 5,000 on Enterprise.",
+      "notes": "Paid tiers (official blog summary): Starter from $7/seat/month (annual billing); Professional from $90/seat/month (annual billing), plus a $1,500 one-time onboarding fee; Enterprise from $150/seat/month (the page does not state whether annual billing applies), plus a $3,500 one-time onboarding fee. HubSpot Credits: 500 a month on Starter, 3,000 on Professional, 5,000 on Enterprise.",
       "seatsFree": 2,
       "conversationLimit": null,
       "contactLimit": null,
@@ -316,22 +316,23 @@
       "risks": [
         "A time-limited free plan, not a permanent free tier",
         "Applies to Freshdesk only, not to Freshdesk Omni",
-        "Feature list, ticket caps, retention, and branding — check the official page",
-        "Paid tier prices — check the official page"
+        "Ticket caps, retention, and branding — check the official page",
+        "Paid tier prices — check the official page",
+        "Once you upgrade to a paid tier, you cannot switch back to the Free Program"
       ],
       "claimUrl": "https://support.freshdesk.com/support/solutions/articles/50000010099-explore-freshdesk-free-plan",
-      "verifiedAt": "2026-11-14",
+      "verifiedAt": "2026-11-15",
       "sourceName": "Freshworks official help center",
       "sourceUrl": "https://support.freshdesk.com/support/solutions/articles/50000010099-explore-freshdesk-free-plan",
-      "notes": "How to join (official help page): inside a Freshdesk account, go to Admin > Plans and Billing > Switch plan > Try out our Free Program. Paid tier prices — check the official page; a 14-day trial claim was not read in official text — check the official page.",
+      "notes": "How to join (official help page): inside a Freshdesk account, go to Admin > Account > Plans and Billing, click Switch plan, click Try out our Free Program, review the changes and click Yes, Proceed. Paid tier prices — check the official page; the 14-day trial is a trial of higher plans (existing and new Free Program users can try higher plans for 14 days), not a trial of the Free Program itself; once you upgrade to a paid tier, you cannot switch back to the Free Program.",
       "seatsFree": 2,
       "conversationLimit": null,
       "contactLimit": null,
       "retentionText": "Check the official page",
       "brandingText": "Check the official page",
-      "channelsText": "Check the official page",
-      "ticketIncluded": null,
-      "kbIncluded": null
+      "channelsText": "Email and social ticketing, ticket dispatch, knowledge base, ticket trend report, out-of-the-box analytics and reporting, team collaboration, 24x5 email support",
+      "ticketIncluded": true,
+      "kbIncluded": true
     }
   ]
 }

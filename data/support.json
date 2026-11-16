@@ -271,23 +271,23 @@
       "group": "suite",
       "status": "active",
       "planName": "Service Hub Free",
-      "specText": "Service Hub Free，$0/月；最多 2 个用户；共享收件箱、HubSpot Smart CRM 联系人管理、在线聊天与会话机器人（功能有限）、集中工单系统、基础报表与仪表板；须配合 HubSpot CRM 使用",
+      "specText": "Service Hub Free，$0/月；最多 2 个用户；共享收件箱、HubSpot Smart CRM 联系人管理、在线聊天与会话机器人（功能有限）、集中工单系统、基础报表与仪表板",
       "durationText": "Service Hub Free，$0/月（官网已读页面未明示永久，以官方页面为准）",
       "cardRequired": null,
       "cardNote": "官网已读页面未说明绑卡要求，以官方页面为准。",
       "limitsText": "最多 2 个用户；会话与工单数量上限以官方页面为准",
       "overageBehavior": "以官方页面为准",
       "risks": [
-        "须配合 HubSpot CRM 使用",
+        "免费档含 HubSpot Smart CRM 联系人管理，官方博客未写必须配合 CRM 使用",
         "知识库与客户门户在 Professional 档，免费档未见",
         "免费档带 HubSpot 品牌标识，去品牌在 Starter 档起",
         "会话与工单数量上限、保留期以官方页面为准"
       ],
       "claimUrl": "https://blog.hubspot.com/service/hubspot-service-hub-pricing",
-      "verifiedAt": "2026-11-14",
+      "verifiedAt": "2026-11-15",
       "sourceName": "HubSpot 官方博客定价指南",
       "sourceUrl": "https://blog.hubspot.com/service/hubspot-service-hub-pricing",
-      "notes": "付费档（官方博客摘要，年付口径）：Starter $7/席/月起；Professional $90/席/月起，另有 $1,500 一次性入职费；Enterprise $150/席/月起，另有 $3,500 一次性入职费。HubSpot Credits：Starter 每月 500、Professional 每月 3,000、Enterprise 每月 5,000。",
+      "notes": "付费档（官方博客摘要）：Starter $7/席/月起（年付口径）；Professional $90/席/月起（年付口径），另有 $1,500 一次性入职费；Enterprise $150/席/月起（该页未写是否年付），另有 $3,500 一次性入职费。HubSpot Credits：Starter 每月 500、Professional 每月 3,000、Enterprise 每月 5,000。",
       "seatsFree": 2,
       "conversationLimit": null,
       "contactLimit": null,
@@ -315,22 +315,23 @@
       "risks": [
         "限时免费计划，不是永久免费档",
         "仅适用于 Freshdesk，不适用于 Freshdesk Omni",
-        "功能清单、工单上限、保留期、品牌标识以官方页面为准",
-        "付费档价格以官方页面为准"
+        "工单上限、保留期、品牌标识以官方页面为准",
+        "付费档价格以官方页面为准",
+        "升级付费档后不可再切回 Free Program"
       ],
       "claimUrl": "https://support.freshdesk.com/support/solutions/articles/50000010099-explore-freshdesk-free-plan",
-      "verifiedAt": "2026-11-14",
+      "verifiedAt": "2026-11-15",
       "sourceName": "Freshworks 官方帮助中心",
       "sourceUrl": "https://support.freshdesk.com/support/solutions/articles/50000010099-explore-freshdesk-free-plan",
-      "notes": "加入方式（官方帮助页）：在 Freshdesk 账号内经 Admin > Plans and Billing > Switch plan > Try out our Free Program 加入。付费档价格以官方页面为准；14 天试用的说法未在官方文本中读到，以官方页面为准。",
+      "notes": "加入方式（官方帮助页）：在 Freshdesk 账号内经 Admin > Account > Plans and Billing > Switch plan > Try out our Free Program，确认变更后点 Yes, Proceed 加入。付费档价格以官方页面为准；14 天试用指高阶档试用（Free Program 用户与新用户均可试用高阶档 14 天），不是 Free Program 本身的试用；升级付费档后不可再切回 Free Program。",
       "seatsFree": 2,
       "conversationLimit": null,
       "contactLimit": null,
       "retentionText": "以官方页面为准",
       "brandingText": "以官方页面为准",
-      "channelsText": "以官方页面为准",
-      "ticketIncluded": null,
-      "kbIncluded": null
+      "channelsText": "邮件与社交渠道工单、工单分派、知识库、工单趋势报表、开箱即用分析报表、团队协作、24x5 邮件支持",
+      "ticketIncluded": true,
+      "kbIncluded": true
     }
   ]
 }
