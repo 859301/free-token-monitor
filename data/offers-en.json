@@ -1,7 +1,7 @@
 {
   "meta": {
     "generatedAt": "2026-11-09",
-    "count": 43,
+    "count": 42,
     "language": "en",
     "sources": [
       "Lanlan repo",
@@ -666,33 +666,6 @@
       "sourceUrl": "https://freetokens.fyi/zh/offers",
       "endsAt": null,
       "daysLeft": null,
-      "status": "active"
-    },
-    {
-      "id": 25,
-      "slug": "workbuddy-hy4-limited",
-      "title": "Hunyuan Hy4 limited-time free access",
-      "provider": "WorkBuddy / CodeBuddy",
-      "category": "coding",
-      "accessType": "client",
-      "cadence": "daily",
-      "quotaText": "Free credits gifted daily, Nov 4–15",
-      "claimUrl": "https://www.workbuddy.cn/",
-      "openaiCompat": false,
-      "region": "cn",
-      "requirements": [
-        "Account"
-      ],
-      "risks": [
-        "Limited-time campaign, ends Nov 15"
-      ],
-      "steps": "Download WorkBuddy or CodeBuddy → log in → pick “Hunyuan Hy4” in the model selector to use the free credits.",
-      "resetNote": "Gifted daily during the campaign; subscribers get more",
-      "verifiedAt": "2026-11-04",
-      "sourceName": "Lanlan repo · verified against official page",
-      "sourceUrl": "https://llck.top/free",
-      "endsAt": "2026-11-15",
-      "daysLeft": 6,
       "status": "active"
     },
     {

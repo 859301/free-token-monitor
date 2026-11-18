@@ -1,7 +1,7 @@
 {
   "meta": {
     "generatedAt": "2026-11-09",
-    "count": 43,
+    "count": 42,
     "sources": [
       "蓝蓝仓库",
       "freetokens.fyi"
@@ -561,29 +561,6 @@
       "sourceUrl": "https://freetokens.fyi/zh/offers",
       "endsAt": null,
       "daysLeft": null,
-      "status": "active"
-    },
-    {
-      "id": 25,
-      "slug": "workbuddy-hy4-limited",
-      "title": "混元 Hy4 限时免费",
-      "provider": "WorkBuddy / CodeBuddy",
-      "category": "coding",
-      "accessType": "client",
-      "cadence": "daily",
-      "quotaText": "11 月 4 日–15 日每日赠免费额度",
-      "claimUrl": "https://www.workbuddy.cn/",
-      "openaiCompat": false,
-      "region": "cn",
-      "requirements": ["账号"],
-      "risks": ["限时活动，11 月 15 日结束"],
-      "steps": "下载 WorkBuddy 或 CodeBuddy → 登录 → 在模型选择里选「混元 Hy4」即享免费额度。",
-      "resetNote": "活动期内每日赠送，订阅用户额度更高",
-      "verifiedAt": "2026-11-04",
-      "sourceName": "蓝蓝仓库 · 官方核对",
-      "sourceUrl": "https://llck.top/free",
-      "endsAt": "2026-11-15",
-      "daysLeft": 6,
       "status": "active"
     },
     {
