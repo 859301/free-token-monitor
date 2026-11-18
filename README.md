@@ -6,7 +6,8 @@
 
 ## 在架数据
 
-- 共 43 条（生成于 2026-11-09），覆盖大模型、编程、搜索、算力、浏览器、数据、语音七类。
+- 共 42 条（生成于 2026-11-09），覆盖大模型、编程、搜索、算力、浏览器、数据、语音七类。
+- 混元 Hy4 限时免费已于 2026-11-15 结束，2026-11-18 从数据中删除；详情页保留作已结束档案，不计入 42 条。
 - 数据来源：蓝蓝仓库、freetokens.fyi，均经厂商官方页核对。
 - 每条数据只照录官方原文，不做自创人民币折算。额度原文、领取链接、门槛、风险、领取步骤、核实日期都在 `data/offers.json` 里。
 - 本站不含邀请链接、API 中转站、二手积分、共享账号、接码多开等内容。
@@ -83,22 +84,43 @@
 
 ## 认证板块
 
-- 共 2 条独立认证（核实于 2026-11-13）：Clerk、Auth0；Supabase Auth 与 Firebase Auth 随数据库免费档提供，只作交叉指引，不重复列出。
+- 共 8 条独立认证（Clerk、Auth0 核实于 2026-11-13；Stytch、Descope、WorkOS、Logto、Kinde、Frontegg 核实于 2026-11-14）：Clerk、Auth0、Stytch、Descope、WorkOS、Logto、Kinde、Frontegg；Supabase Auth 与 Firebase Auth 随数据库免费档提供，只作交叉指引，不重复列出。
 - 数据在 `data/auth.json` 里，字段与 `data/hosting.json` 对应（另有 `planName`、`limitsText`、`overageBehavior` 字段；`group` 取值：`standalone`；`status` 取值：`active`；`cardRequired` 为 `null` 表示官方页未说明）。
-- 板块页面在 `auth/` 下：列表页、2 篇详情页、3 篇对比、4 篇指南、1 个问答页（14 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+- 板块页面在 `auth/` 下：列表页、8 篇详情页、5 篇对比、6 篇指南、1 个问答页（21 问），均已加入 `sitemap.xml` 与 `llms.txt`。
 
 ## 对象存储板块
 
-- 共 2 条（核实于 2026-11-13）：1 个免费层（Cloudflare R2）+ 1 个按量付费（Backblaze B2，无免费层）；Supabase Storage 与 Firebase Storage 只作交叉指引，不重复列出。
+- 共 5 条（Cloudflare R2、Backblaze B2 核实于 2026-11-13；Tigris、Google Cloud Storage、UploadThing 核实于 2026-11-14）：3 个免费层（Cloudflare R2、Tigris、Google Cloud Storage）+ 1 个免费计划（UploadThing 2GB App）+ 1 个按量付费（Backblaze B2，无免费层）；Supabase Storage 与 Firebase Storage 只作交叉指引，不重复列出。
 - 数据在 `data/storage.json` 里，字段与 `data/hosting.json` 对应（另有 `limitsText`、`overageBehavior`、`egressText` 字段；`group` / `status` 取值：`free` / `pay-as-you-go`；`cardRequired` 为 `null` 表示官方页未说明）。
-- 板块页面在 `storage/` 下：列表页、2 篇详情页、4 篇对比、3 篇指南、1 个问答页（14 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+- 板块页面在 `storage/` 下：列表页、5 篇详情页、6 篇对比、5 篇指南、1 个问答页（20 问），均已加入 `sitemap.xml` 与 `llms.txt`。
 
 ## 代码托管板块
 
-- 共 2 条（核实于 2026-11-13）：GitHub Free、GitLab Free。
+- 共 5 条（GitHub Free、GitLab Free 核实于 2026-11-13；Bitbucket Free、Codeberg、Azure DevOps 核实于 2026-11-14）：GitHub Free、GitLab Free、Bitbucket Free、Codeberg、Azure DevOps。
 - 数据在 `data/code.json` 里，字段与 `data/hosting.json` 对应（另有 `planKind`、`planName`、`limitsText` 字段；`group` 取值：`free`；`status` 取值：`active`；`cardRequired` 为 `null` 表示官方页未说明，为 `false` 表示官网写明无需信用卡）。
-- 板块页面在 `code/` 下：列表页、2 篇详情页、3 篇对比、4 篇指南、1 个问答页（15 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+- 板块页面在 `code/` 下：列表页、5 篇详情页、5 篇对比、6 篇指南、1 个问答页（21 问），均已加入 `sitemap.xml` 与 `llms.txt`。
 - 已死服务指南在 `guides/dead-services/` 下：Heroku、PlanetScale、SendGrid 永久免费计划、Freenom、Upstash Kafka、Google Domains 的现状与替代，时间线来自多家公开报道。
+
+## 定时任务与队列板块
+
+- 共 6 条（核实于 2026-11-14）：2 个定时任务服务（cron-job.org、EasyCron）+ 4 个队列与工作流（QStash、Upstash Workflow、Inngest、Trigger.dev）。
+- 数据在 `data/schedule.json` 里，字段与 `data/hosting.json` 对应（另有 `planName`、`limitsText`、`overageBehavior` 字段；`group` 取值：`cron` / `queue`；`status` 取值：`active`；`cardRequired` 为 `null` 表示官方页未说明；QStash 定价页内重试计费说法冲突，记在 `notes` 里）。
+- 板块页面在 `schedule/` 下：列表页、6 篇详情页、3 篇对比、2 篇指南、1 个问答页（12 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+- Cloudflare Cron Triggers / Queues、Vercel Cron、Render Cron Jobs、GitHub Actions 定时触发随部署/代码平台提供，只作交叉指引，不重复列出。
+
+## 客服工具板块
+
+- 共 9 条（核实于 2026-11-14、2026-11-15）：Tawk.to、Crisp、Zoho Desk、Help Scout、Jira Service Management、Chatwoot 云端与自托管、HubSpot Service Hub、Freshdesk（限时 6 个月档）。
+- 数据在 `data/support.json` 里，字段与 `data/hosting.json` 对应（另有 `planName`、`limitsText`、`overageBehavior`、`seatsFree`、`conversationLimit`、`contactLimit`、`ticketIncluded`、`kbIncluded` 字段；`group` 取值：`chat` / `ticketing` / `suite` / `selfhosted`；`status` 取值：`active` / `limited`；`cardRequired` 为 `null` 表示官方页未说明；Freshdesk Free Program 为限时 6 个月计划，不与永久免费档混标）。
+- 板块页面在 `support/` 下：列表页、9 篇详情页、4 篇对比、3 篇指南、1 个问答页（14 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+- Tawk.to 官方页内附加组件收费说法冲突，并列记在条目 `notes` 里；客服工具挂在上线运营环节下。
+
+## 设计素材板块
+
+- 共 10 条（核实于 2026-11-14）：照片与视频 1 条（Pexels）、插画 1 条（unDraw）、图标 3 条（Font Awesome Free、Lucide、Heroicons）、字体 3 条（Google Fonts、思源黑体、思源宋体）、聚合器与社区 2 条（Iconify、Figma 社区资源）。
+- 数据在 `data/design.json` 里，字段与 `data/hosting.json` 对应（另有 `license` 对象：授权范围、署名要求、证据原文、说法冲突；`cardRequired` 恒为 `null`，素材下载不涉及绑卡；无用量额度字段）。
+- 板块页面在 `design/` 下：列表页、10 篇详情页、5 篇对比、5 篇指南、1 个问答页（19 问），均已加入 `sitemap.xml` 与 `llms.txt`。
+- 设计素材是授权参考，不进领取台账；Iconify 与 Figma 无统一授权结论，按项核对。
 
 ## 短信验证板块
 

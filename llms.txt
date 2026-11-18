@@ -1,15 +1,15 @@
 # 免费 Token 监控平台
 
-> 给 Agent 的免费口粮：43 条经厂商官方核对的免费额度，含领取步骤、到期倒计时与领取台账。额度随时可能调整或结束，领取前请以厂商官方页为准。
+> 给 Agent 的免费口粮：42 条经厂商官方核对的免费额度，含领取步骤、到期倒计时与领取台账。额度随时可能调整或结束，领取前请以厂商官方页为准。
 
 ## 主要页面
 
-- [首页](https://tokens.yangtokent.com/): 全部 43 条额度的筛选总览与领取台账。
-- [额度详情](https://tokens.yangtokent.com/offers/): 全部 43 条额度的详情页。
+- [首页](https://tokens.yangtokent.com/): 全部 42 条额度的筛选总览与领取台账。
+- [额度详情](https://tokens.yangtokent.com/offers/): 全部 42 条额度的详情页。
 - [对比](https://tokens.yangtokent.com/compare/): 8 篇对比：不绑卡大模型 API、额度形态、国内直连、编程工具、搜索、语音、沙箱、向量。
 - [指南](https://tokens.yangtokent.com/guides/): 领取第一个免费 Key、401/402/429 报错排查、接入编程工具。
 - [常见问题](https://tokens.yangtokent.com/faq/): 18 个常见问题与回答。
-- [额度数据（JSON）](https://tokens.yangtokent.com/data/offers.json): 全部 43 条额度的机器可读数据，含额度原文、门槛、步骤、重置时间、核实日期。
+- [额度数据（JSON）](https://tokens.yangtokent.com/data/offers.json): 全部 42 条额度的机器可读数据，含额度原文、门槛、步骤、重置时间、核实日期。
 
 ## 额度详情页
 
@@ -44,7 +44,6 @@
 - [免费公网翻译 API（哔哩哔哩 Index-Translate）](https://tokens.yangtokent.com/offers/bilibili-index-translate/): 免注册直接调用，官网未写上限。门槛：无。核实于 2026-11-03。
 - [桌面端每日领 Credits（Qoder）](https://tokens.yangtokent.com/offers/qoder-daily-credits/): 每天 100 Credits，每份 30 天有效。门槛：账号。核实于 2026-10-27。
 - [体验版免费积分（WorkBuddy（腾讯））](https://tokens.yangtokent.com/offers/workbuddy-monthly-500/): 500 积分/月，当月有效不结转。门槛：账号。核实于 2026-10-28。
-- [混元 Hy4 限时免费（WorkBuddy / CodeBuddy）](https://tokens.yangtokent.com/offers/workbuddy-hy4-limited/): 11 月 4 日–15 日每日赠免费额度。门槛：账号。核实于 2026-11-04。
 - [新用户 Credits（CodeBuddy（国际版））](https://tokens.yangtokent.com/offers/codebuddy-newuser-250/): 首次登录 250 Credits，14 天有效。门槛：账号。核实于 2026-10-28。
 - [每日签到积分（TRAE CN（字节跳动））](https://tokens.yangtokent.com/offers/trae-daily-checkin/): 每日签到 100 + 每月登录 500 + 注册 2000。门槛：账号。核实于 2026-10-27。
 - [学生计划免费一年（Amazon Kiro）](https://tokens.yangtokent.com/offers/kiro-student/): 每月 1,000 Credits × 12 个月，不结转。门槛：账号、学生、实名。核实于 2026-11-01。
@@ -60,9 +59,9 @@
 ## 对比
 
 - [不绑卡的最佳免费大模型 API 对比](https://tokens.yangtokent.com/compare/best-free-llm-api-no-card/): 6 条不绑卡的免费大模型 API 对比：Gemini、Groq、OpenRouter、Cloudflare、智谱 GLM Flash、硅基流动。额度、限速、重置时间均来自厂商官方页。
-- [免费额度形态对比：长期免费层 vs 注册赠金 vs 周期重置 vs 限时活动](https://tokens.yangtokent.com/compare/free-tier-types/): 免费额度分四种形态：长期免费层、注册赠金、周期重置、限时活动。43 条额度的完整分组，数据来自厂商官方页。
-- [国内可直连的免费额度对比](https://tokens.yangtokent.com/compare/china-accessible/): 18 条标注国内直连的免费额度完整清单，含大模型、编程、搜索、算力；海外厂商可用性说法不一，需要实时测试。
-- [免费编程工具额度对比：Qoder / WorkBuddy / TRAE / Kiro / Dify](https://tokens.yangtokent.com/compare/free-coding-tools/): 7 条编程类免费额度对比：Qoder、WorkBuddy、CodeBuddy、TRAE、Kiro 学生计划、Dify Cloud。均为客户端或云端内积分，数据来自厂商官方页。
+- [免费额度形态对比：长期免费层 vs 注册赠金 vs 周期重置 vs 限时活动](https://tokens.yangtokent.com/compare/free-tier-types/): 免费额度分四种形态：长期免费层、注册赠金、周期重置、限时活动。42 条额度的完整分组，数据来自厂商官方页。
+- [国内可直连的免费额度对比](https://tokens.yangtokent.com/compare/china-accessible/): 17 条标注国内直连的免费额度完整清单，含大模型、编程、搜索、算力；海外厂商可用性说法不一，需要实时测试。
+- [免费编程工具额度对比：Qoder / WorkBuddy / TRAE / Kiro / Dify](https://tokens.yangtokent.com/compare/free-coding-tools/): 6 条编程类免费额度对比：Qoder、WorkBuddy、CodeBuddy、TRAE、Kiro 学生计划、Dify Cloud。均为客户端或云端内积分，数据来自厂商官方页。
 - [免费搜索与抓取 API 对比：Tavily / Exa / Firecrawl / You.com](https://tokens.yangtokent.com/compare/free-search-apis/): 4 条搜索与抓取类免费额度对比：Tavily、Exa、Firecrawl、You.com。每月额度与每日额度的区别，数据来自厂商官方页。
 - [免费语音 API 对比：Deepgram / AssemblyAI](https://tokens.yangtokent.com/compare/free-speech-apis/): 2 条语音类免费额度对比：Deepgram（$200，不过期）与 AssemblyAI（$50）。均为一次性额度、免绑卡，数据来自厂商官方页。
 - [免费沙箱与浏览器自动化额度对比：E2B / Modal / Steel](https://tokens.yangtokent.com/compare/free-sandbox-browser/): 3 条沙箱与浏览器类免费额度对比：E2B（$100 一次性）、Modal（每月 $30）、Steel（$30 一次性）。均免绑卡，数据来自厂商官方页。
@@ -738,15 +737,15 @@
 - [备案通过后要做的事：挂备案号、公安备案、变更与注销、接入备案](https://tokens.yangtokent.com/beian/guides/after-filing/): 备案通过后：主页底部挂备案号并链接备案管理系统、开通后 30 日内办公安联网备案、变更提前 30 日、服务终止之日注销、换接入商办接入备案、年度审核。核实于 2026-11-14、2026-11-15。
 ## English edition
 
-- [Free Token Monitor (English)](https://tokens.yangtokent.com/en/): all 43 verified free credits in English, filterable; static listing, no claim ledger.
+- [Free Token Monitor (English)](https://tokens.yangtokent.com/en/): all 42 verified free credits in English, filterable; static listing, no claim ledger.
 - [Free VPS (English)](https://tokens.yangtokent.com/en/vps/): 9 verified free cloud servers in English.
 - [VPS Deals (English)](https://tokens.yangtokent.com/en/wool/): trial credits, task-renewal hosts, and promo archives in English.
 - [Cheap VPS (English)](https://tokens.yangtokent.com/en/cheap/): standing-price cheap VPS picks in English.
-- [Offer details (English)](https://tokens.yangtokent.com/en/offers/): 43 English detail pages, one per verified offer.
+- [Offer details (English)](https://tokens.yangtokent.com/en/offers/): 42 English detail pages, one per verified offer.
 - [Comparisons (English)](https://tokens.yangtokent.com/en/compare/): 3 English comparisons: no-card LLM APIs, free-tier types, search APIs.
 - [Free VPS offer details (English)](https://tokens.yangtokent.com/en/vps/offers/): Oracle Always Free and GCP Free Tier detail pages.
 - [FAQ (English)](https://tokens.yangtokent.com/en/faq/): 23 questions in English users’ own wording, answer-first with sources and dates.
-- [English data: offers](https://tokens.yangtokent.com/data/offers-en.json): all 43 offers, English text, facts identical to data/offers.json.
+- [English data: offers](https://tokens.yangtokent.com/data/offers-en.json): all 42 offers, English text, facts identical to data/offers.json.
 - [English data: VPS](https://tokens.yangtokent.com/data/vps-en.json): 9 VPS entries, English text, facts identical to data/vps.json.
 - [English data: deals](https://tokens.yangtokent.com/data/wool-en.json): 7 deal entries, English text, facts identical to data/wool.json.
 - [English data: cheap](https://tokens.yangtokent.com/data/cheap-en.json): 4 cheap entries, English text, facts identical to data/cheap.json.
@@ -779,7 +778,6 @@ English detail and comparison pages:
 - [Free public translation API (Bilibili Index-Translate)](https://tokens.yangtokent.com/en/offers/bilibili-index-translate/): call directly with no registration; no cap stated on the official site. Verified 2026-11-03.
 - [Daily credits in the desktop app (Qoder)](https://tokens.yangtokent.com/en/offers/qoder-daily-credits/): 100 credits per day, each batch valid 30 days. Verified 2026-10-27.
 - [Trial edition free credits (WorkBuddy (Tencent))](https://tokens.yangtokent.com/en/offers/workbuddy-monthly-500/): 500 credits/month, valid within the month, no rollover. Verified 2026-10-28.
-- [Hunyuan Hy4 limited-time free access (WorkBuddy / CodeBuddy)](https://tokens.yangtokent.com/en/offers/workbuddy-hy4-limited/): free credits gifted daily, Nov 4–15. Verified 2026-11-04.
 - [New-user credits (CodeBuddy (International))](https://tokens.yangtokent.com/en/offers/codebuddy-newuser-250/): 250 credits on first login, valid 14 days. Verified 2026-10-28.
 - [Daily check-in credits (TRAE CN (ByteDance))](https://tokens.yangtokent.com/en/offers/trae-daily-checkin/): 100 per daily check-in + 500 per monthly login + 2,000 on registration. Verified 2026-10-27.
 - [Student plan free for one year (Amazon Kiro)](https://tokens.yangtokent.com/en/offers/kiro-student/): 1,000 credits/month × 12 months, no rollover. Verified 2026-11-01.
@@ -801,7 +799,7 @@ English detail and comparison pages:
 - [Vultr deposit match + free credits](https://tokens.yangtokent.com/en/wool/offers/vultr-credits/): match up to $100, 12-month expiry, 50/50 offset, new customers only. Verified 2026-11-13.
 - [RackNerd VPS Specials](https://tokens.yangtokent.com/en/cheap/offers/racknerd-specials/): 5 annual tiers, official FAQ promises lifetime same-rate renewal. Verified 2026-11-13.
 - [Best free LLM APIs with no credit card](https://tokens.yangtokent.com/en/compare/best-free-llm-api-no-card/): 6 no-card LLM APIs compared.
-- [Free-tier types compared](https://tokens.yangtokent.com/en/compare/free-tier-types/): long-term free tier vs signup credit vs periodic reset vs limited-time; all 43 offers grouped.
+- [Free-tier types compared](https://tokens.yangtokent.com/en/compare/free-tier-types/): long-term free tier vs signup credit vs periodic reset vs limited-time; all 42 offers grouped.
 - [Free search & scraping APIs compared](https://tokens.yangtokent.com/en/compare/free-search-apis/): Tavily / Exa / Firecrawl / You.com.
 - [Oracle vs GCP](https://tokens.yangtokent.com/en/vps/compare/oracle-vs-gcp/): the two always-free VMs, item by item.
 - [Trial credits compared](https://tokens.yangtokent.com/en/wool/compare/trial-credits-compared/): Vultr / DigitalOcean / Akamai / Hetzner.
