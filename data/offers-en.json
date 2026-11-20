@@ -1,7 +1,7 @@
 {
   "meta": {
     "generatedAt": "2026-11-09",
-    "count": 42,
+    "count": 43,
     "language": "en",
     "sources": [
       "Lanlan repo",
@@ -457,7 +457,7 @@
       "category": "llm",
       "accessType": "api",
       "cadence": "daily",
-      "quotaText": "Free tier for Gemini Flash, Gemini 4 Hydrogen and other models, 5–30 RPM / per-model daily caps",
+      "quotaText": "Free tier for Gemini Flash, Gemini 4 Hydrogen, Gemini Decision 1 and other models, 5–30 RPM / per-model daily caps; Decision 1 free tier: 200 RPM / 50,000 TPM / 10,000 requests/day",
       "claimUrl": "https://aistudio.google.com/",
       "openaiCompat": true,
       "region": "global",
@@ -468,9 +468,9 @@
         "Free-tier data may be used to improve Google products",
         "Requires network access to Google"
       ],
-      "steps": "Log in to AI Studio → create an API key → call Gemini Flash / Flash-Lite or Gemini 4 Hydrogen; long context up to 1M.",
+      "steps": "Log in to AI Studio → create an API key → call Gemini Flash / Flash-Lite, Gemini 4 Hydrogen or Gemini Decision 1 (Decisions API, v1beta); long context up to 1M; Decision 1 only makes judgments, it does not generate text.",
       "resetNote": "Resets daily; actual limits as shown in the AI Studio quota panel",
-      "verifiedAt": "2026-11-14",
+      "verifiedAt": "2026-11-20",
       "sourceName": "Lanlan repo · verified against official page",
       "sourceUrl": "https://llck.top/free",
       "endsAt": null,
@@ -1129,6 +1129,35 @@
       "sourceUrl": "https://llck.top/free",
       "endsAt": null,
       "daysLeft": null,
+      "status": "active"
+    },
+    {
+      "id": 44,
+      "slug": "workbuddy-hy4-flash",
+      "title": "Hunyuan Hy4 flash limited-time free access",
+      "provider": "WorkBuddy (Tencent)",
+      "category": "llm",
+      "accessType": "client",
+      "cadence": "once",
+      "quotaText": "Free in the WorkBuddy client until Nov 30, 2026 (limited-time)",
+      "claimUrl": "https://www.workbuddy.cn/",
+      "openaiCompat": false,
+      "region": "cn",
+      "requirements": [
+        "Account"
+      ],
+      "risks": [
+        "Usable only inside the client",
+        "TokenHub API is 50% off for a limited time, not free",
+        "Daily limits and the exact end time on Nov 30 are not published"
+      ],
+      "steps": "Download WorkBuddy → in the client, select Hy4 flash to use it.",
+      "resetNote": "Limited-time campaign, available before Nov 30; daily limits not published",
+      "verifiedAt": "2026-11-20",
+      "sourceName": "Tencent official site",
+      "sourceUrl": "https://www.tencent.com/zh-cn/tencent-launches-hy4-flash-to-power-high-speed-cost-efficient-ai-deployment-for-everyday-workflows/",
+      "endsAt": "2026-11-30",
+      "daysLeft": 10,
       "status": "active"
     }
   ]
